@@ -185,6 +185,7 @@ use HiEvents\Http\Actions\Organizers\Public\GetPublishedChildStorySubmissionsPub
 use HiEvents\Http\Actions\Organizers\Public\SendOrganizerContactMessagePublicAction;
 use HiEvents\Http\Actions\Organizers\Public\SubmitChildStorySubmissionPublicAction;
 use HiEvents\Http\Actions\Public\SubmitSiteContactMessageAction;
+use HiEvents\Http\Actions\Public\SubmitVolunteerSignupAction;
 use HiEvents\Http\Actions\Organizers\Settings\GetOrganizerSettingsAction;
 use HiEvents\Http\Actions\Organizers\Settings\PartialUpdateOrganizerSettingsAction;
 use HiEvents\Http\Actions\Organizers\Stats\GetOrganizerStatsAction;
@@ -629,6 +630,8 @@ $router->prefix('/public')->group(
         $router->get('/organizers/{organizerId}/child-story-submissions', GetPublishedChildStorySubmissionsPublicAction::class);
 
         $router->post('/contact', SubmitSiteContactMessageAction::class)
+            ->middleware('throttle:5,1');
+        $router->post('/volunteer', SubmitVolunteerSignupAction::class)
             ->middleware('throttle:5,1');
 
         // Products
