@@ -11,9 +11,11 @@ import classes from '../OrganizerHomepage.module.scss';
 
 interface OrganizerProfileCardProps {
     organizer: Organizer;
+    showContactButton?: boolean;
+    children?: React.ReactNode;
 }
 
-export const OrganizerProfileCard: React.FC<OrganizerProfileCardProps> = ({organizer}) => {
+export const OrganizerProfileCard: React.FC<OrganizerProfileCardProps> = ({organizer, showContactButton = true, children}) => {
     const [contactModalOpen, setContactModalOpen] = useState(false);
 
     const socialLinks = organizer.settings?.social_media_handles ? Object.entries(organizer.settings.social_media_handles)
@@ -103,13 +105,15 @@ export const OrganizerProfileCard: React.FC<OrganizerProfileCardProps> = ({organ
                                                 })}
                                             </div>
                                         )}
-                                        <button
-                                            onClick={() => setContactModalOpen(true)}
-                                            className={classes.contactButton}
-                                        >
-                                            <IconMail size={14} style={{marginRight: 6}}/>
-                                            {t`Contact`}
-                                        </button>
+                                        {showContactButton && (
+                                            <button
+                                                onClick={() => setContactModalOpen(true)}
+                                                className={classes.contactButton}
+                                            >
+                                                <IconMail size={14} style={{marginRight: 6}}/>
+                                                {t`Contact`}
+                                            </button>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -120,6 +124,7 @@ export const OrganizerProfileCard: React.FC<OrganizerProfileCardProps> = ({organ
                                 html={organizer.description}
                             />
                         )}
+                        {children}
                     </div>
                 </div>
             </div>

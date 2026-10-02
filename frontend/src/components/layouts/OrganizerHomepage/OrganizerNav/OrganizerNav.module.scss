@@ -34,10 +34,10 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 }
 
 .brandLogo {
-  height: 36px;
-  width: auto;
-  max-width: 140px;
-  object-fit: contain;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .brandName {

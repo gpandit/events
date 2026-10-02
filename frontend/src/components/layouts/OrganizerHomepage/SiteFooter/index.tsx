@@ -150,6 +150,9 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <h3 className={classes.columnTitle}>
                             <IconMail size={16}/> {t`Contact Us`}
                         </h3>
+                        <a href="mailto:friendsofreptonalbarsha@gmail.com" className={classes.footerNavLink}>
+                            friendsofreptonalbarsha@gmail.com
+                        </a>
                         <ContactForm/>
                     </div>
                 </div>

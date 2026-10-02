@@ -4,6 +4,7 @@ return [
     'rate_limit_per_second' => env('MAIL_RATE_LIMIT_PER_SECOND', 14),
 
     'site_contact_email' => env('SITE_CONTACT_EMAIL', 'fos@aqualeo.co'),
+    'site_contact_cc_email' => env('SITE_CONTACT_CC_EMAIL', 'friendsofreptonalbarsha@gmail.com'),
     'site_contact_subject_tag' => env('SITE_CONTACT_SUBJECT_TAG', 'Friends of Repton'),
 
     /*
@@ -17,7 +18,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => strtolower((string) env('MAIL_MAILER', 'smtp')),
 
     /*
     |--------------------------------------------------------------------------

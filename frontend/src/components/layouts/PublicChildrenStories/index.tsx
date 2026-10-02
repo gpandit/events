@@ -16,7 +16,7 @@ export const PublicChildrenStories = () => {
     }
 
     return (
-        <OrganizerPageShell organizer={loaderData.organizer} activeNav="home">
+        <OrganizerPageShell organizer={loaderData.organizer} activeNav="stories">
             <ChildrenStoriesSection organizer={loaderData.organizer}/>
         </OrganizerPageShell>
     );

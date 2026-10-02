@@ -7,7 +7,7 @@ import classes from './OrganizerNav.module.scss';
 
 interface OrganizerNavProps {
     organizer: Organizer;
-    active?: 'home' | 'events' | 'about';
+    active?: 'home' | 'events' | 'about' | 'stories';
 }
 
 export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) => {
@@ -38,16 +38,16 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                         {t`Events`}
                     </Link>
                     <Link
+                        to={`${organizerHomepagePath(organizer)}/stories`}
+                        className={`${classes.link} ${active === 'stories' ? classes.linkActive : ''}`}
+                    >
+                        {t`Prose & Poetry`}
+                    </Link>
+                    <Link
                         to={`${organizerHomepagePath(organizer)}/about`}
                         className={`${classes.link} ${active === 'about' ? classes.linkActive : ''}`}
                     >
                         {t`About Us`}
-                    </Link>
-                    <Link
-                        to={`${organizerHomepagePath(organizer)}#resources-for-children`}
-                        className={classes.link}
-                    >
-                        {t`Children's Resources`}
                     </Link>
                     <Link to="/auth/login" className={classes.link}>
                         {t`My Account`}

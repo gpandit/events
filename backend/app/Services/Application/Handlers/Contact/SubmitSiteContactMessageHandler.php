@@ -23,6 +23,7 @@ class SubmitSiteContactMessageHandler
 
         $this->mailer
             ->to($recipient)
+            ->cc(config('mail.site_contact_cc_email'))
             ->send(new SiteContactEmail(
                 senderName: $dto->name,
                 senderEmail: $dto->email,
