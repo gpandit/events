@@ -435,6 +435,10 @@ msgstr "검색엔진 결과와 소셜 미디어 공유 시 표시될 이벤트�
 msgid "A short description of your organizer that will be displayed to your users."
 msgstr "사용자에게 표시될 주최자에 대한 짧은 설명입니다."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:318
+msgid "A short line about what you do"
+msgstr "하는 일에 대한 짧은 소개"
+
 #: src/components/forms/QuestionForm/index.tsx:102
 msgid "A single line text input"
 msgstr "한 줄 텍스트 입력"
@@ -1810,7 +1814,7 @@ msgid "Background Color"
 msgstr "배경색"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:372
 msgid "Background Type"
 msgstr "배경 유형"
 
@@ -1830,6 +1834,10 @@ msgstr "배너"
 #: src/components/routes/admin/Announcements/index.tsx:303
 msgid "Banner content must be 200 characters or less"
 msgstr "배너 내용은 200자 이하여야 합니다"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:292
+msgid "Banner Type"
+msgstr "배너 유형"
 
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:306
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:87
@@ -1924,7 +1932,12 @@ msgstr "버튼 라벨"
 msgid "Button Label"
 msgstr "버튼 레이블"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:335
+msgid "Button Link"
+msgstr "버튼 링크"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:271
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:327
 msgid "Button Text"
 msgstr "버튼 텍스트"
 
@@ -2392,7 +2405,7 @@ msgid "Chinese (Traditional)"
 msgstr "중국어(번체)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:362
 msgid "Choose a color for your background"
 msgstr "배경 색상을 선택하세요"
 
@@ -2567,7 +2580,7 @@ msgid "Collect details per ticket"
 msgstr "티켓당 정보 수집"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:360
 msgid "Color"
 msgstr "색상"
 
@@ -2831,7 +2844,7 @@ msgstr "온라인 이벤트에는 접속 정보가 필요합니다"
 
 #: src/components/common/WaitlistTable/index.tsx:152
 #: src/components/layouts/EventHomepage/index.tsx:684
-#: src/components/layouts/OrganizerHomepage/index.tsx:259
+#: src/components/layouts/OrganizerHomepage/OrganizerProfileCard/index.tsx:111
 msgid "Contact"
 msgstr "연락처"
 
@@ -3039,7 +3052,7 @@ msgid "Cover"
 msgstr "커버"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:221
 msgid "Cover Image"
 msgstr "커버 이미지"
 
@@ -3051,7 +3064,7 @@ msgstr "커버 이미지 추가됨"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "커버 이미지는 이벤트 페이지 상단에 표시됩니다"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:236
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "커버 이미지는 주최자 페이지 상단에 표시됩니다"
 
@@ -3418,7 +3431,7 @@ msgstr "Liquid 템플릿을 사용해 이메일 템플릿을 맞춤 설정하세
 msgid "Customize your event page"
 msgstr "이벤트 페이지 맞춤 설정"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:203
 msgid "Customize your organizer page appearance"
 msgstr "주최자 페이지 화면을 맞춤 설정하세요"
 
@@ -3792,6 +3805,10 @@ msgstr "코드를 받지 못하셨나요?"
 msgid "Different location"
 msgstr "다른 위치"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:302
+msgid "Direct link to an .mp4 video file"
+msgstr "mp4 비디오 파일에 대한 직접 링크"
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:403
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:411
 msgid "Disabled"
@@ -3838,6 +3855,10 @@ msgstr "{0} 할인"
 #: src/components/forms/PromoCodeForm/index.tsx:90
 msgid "Discount Type"
 msgstr "할인 유형"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:22
+msgid "Discover our upcoming events and get your tickets today"
+msgstr "다가오는 이벤트를 둘러보고 지금 티켓을 예매하세요"
 
 #: src/components/common/Callout/index.tsx:54
 msgid "Dismiss"
@@ -4734,6 +4755,7 @@ msgstr "이벤트 수정됨"
 
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
@@ -5446,6 +5468,7 @@ msgstr "넷째"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:133
 #: src/components/forms/ProductForm/index.tsx:289
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:191
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:148
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
 msgid "Free"
@@ -5554,6 +5577,7 @@ msgid "Get started"
 msgstr "시작하기"
 
 #: src/components/layouts/EventHomepage/index.tsx:209
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:157
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "티켓 구매하기"
@@ -5667,6 +5691,10 @@ msgstr "영구 삭제"
 msgid "Have a promo code?"
 msgstr "프로모션 코드가 있으신가요?"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:309
+msgid "Heading"
+msgstr "제목"
+
 #: src/components/routes/admin/Dashboard/index.tsx:74
 msgid "Hello {0}, manage your platform from here."
 msgstr "{0}님, 안녕하세요. 여기서 플랫폼을 관리하세요."
@@ -5699,6 +5727,10 @@ msgstr "애플리케이션에 위젯을 삽입할 때 사용할 수 있는 React
 #: src/components/common/AffiliateTable/index.tsx:230
 msgid "Here is your affiliate link"
 msgstr "제휴 링크입니다"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:267
+msgid "Hero Banner"
+msgstr "히어로 배너"
 
 #: src/components/routes/event/EventDashboard/index.tsx:204
 msgid "Hi {0} 👋"
@@ -5841,8 +5873,12 @@ msgstr "강조된 상품은 배경색이 달라져 이벤트 페이지에서 눈
 msgid "Hobbies"
 msgstr "취미"
 
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:32
+msgid "Home"
+msgstr "홈"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:202
 msgid "Homepage Design"
 msgstr "홈페이지 디자인"
 
@@ -5852,7 +5888,7 @@ msgid "Homepage Designer"
 msgstr "홈페이지 디자이너"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:422
 msgid "Homepage Preview"
 msgstr "홈페이지 미리보기"
 
@@ -5959,6 +5995,10 @@ msgstr "이 변경을 요청하지 않으셨다면 즉시 비밀번호를 변경
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "저희 서비스에 계정이 있으시다면 비밀번호 재설정 방법을 안내하는 이메일을 받으실 것입니다."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
+msgid "Image"
+msgstr "이미지"
+
 #: src/components/common/ImageUploadDropzone/index.tsx:124
 msgid "Image deleted successfully"
 msgstr "이미지가 성공적으로 삭제되었습니다"
@@ -5972,7 +6012,7 @@ msgid "Image URL"
 msgstr "이미지 URL"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
 msgid "Images"
 msgstr "이미지"
 
@@ -6442,6 +6482,10 @@ msgstr "최근 체크인"
 msgid "Leave “from” as today to start right away."
 msgstr "바로 시작하려면 “시작”을 오늘로 두세요."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:336
+msgid "Leave blank to link to your events page"
+msgstr "비워두면 이벤트 페이지로 연결됩니다"
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:201
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "기본 단어 \"인보이스\"를 사용하려면 비워 두세요"
@@ -6596,7 +6640,7 @@ msgid "Logging in"
 msgstr "로그인 중"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:243
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "로고"
@@ -6609,7 +6653,7 @@ msgstr "로고 및 커버"
 msgid "Logo and cover image for your organizer"
 msgstr "주최자의 로고 및 커버 이미지"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
 msgid "Logo will be displayed in the header"
 msgstr "로고가 헤더에 표시됩니다"
 
@@ -6961,6 +7005,7 @@ msgstr "여러 줄 텍스트 상자"
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/EventHomepage/index.tsx:181
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
 msgid "Multiple locations"
 msgstr "여러 위치"
 
@@ -6971,6 +7016,10 @@ msgstr "여러 티켓 유형"
 #: src/constants/eventCategories.ts:8
 msgid "Music"
 msgstr "음악"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
+msgid "My Account"
+msgstr "내 계정"
 
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:71
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:71
@@ -7068,6 +7117,10 @@ msgstr "신규 가입"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:53
 msgid "New time:"
 msgstr "새 시간:"
+
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:106
+msgid "Next Event"
+msgstr "다음 이벤트"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:430
 msgid "Next month"
@@ -7344,7 +7397,7 @@ msgstr "이용 가능한 다른 주최자가 없습니다"
 msgid "No Paid Orders"
 msgstr "결제된 주문 없음"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:300
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:59
 msgid "No past events"
 msgstr "지난 이벤트가 없습니다"
 
@@ -7452,7 +7505,7 @@ msgstr "판매할 티켓이 없습니다"
 msgid "No upcoming dates"
 msgstr "예정된 날짜가 없습니다"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:300
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:59
 msgid "No upcoming events"
 msgstr "예정된 이벤트가 없습니다"
 
@@ -7746,6 +7799,7 @@ msgstr "진행 중"
 
 #: src/components/common/EventCard/index.tsx:111
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:50
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:43
 #: src/components/routes/event/OccurrencesTab/index.tsx:333
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:478
 #: src/components/routes/my-tickets/index.tsx:56
@@ -7762,6 +7816,7 @@ msgstr "온라인 — 접속 정보 제공"
 
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
 msgid "Online & in-person"
 msgstr "온라인 및 오프라인"
 
@@ -7776,6 +7831,7 @@ msgstr "온라인 이벤트"
 
 #: src/components/layouts/EventHomepage/index.tsx:411
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:132
 msgid "Online Event"
 msgstr "온라인 이벤트"
 
@@ -8328,7 +8384,7 @@ msgstr "비밀번호가 성공적으로 재설정되었습니다. 새 비밀번�
 msgid "Passwords are not the same"
 msgstr "비밀번호가 일치하지 않습니다"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:292
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:51
 #: src/components/routes/event/OccurrencesTab/index.tsx:514
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:30
 msgid "Past"
@@ -8338,7 +8394,7 @@ msgstr "지난"
 msgid "Past due"
 msgstr "기한 초과"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:279
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:38
 msgid "Past Events"
 msgstr "지난 이벤트"
 
@@ -8858,7 +8914,7 @@ msgstr "PDF로 인쇄"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/index.tsx:342
+#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:125
 msgid "Privacy Policy"
 msgstr "개인정보 처리방침"
 
@@ -9760,7 +9816,7 @@ msgstr "저장"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:416
 msgid "Save Changes"
 msgstr "변경사항 저장"
 
@@ -10937,6 +10993,10 @@ msgstr "Stripe에서 곧 몇 가지 추가 정보가 필요합니다"
 msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe에서 몇 가지 간단한 질문을 통해 설정을 완료하도록 안내합니다."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+msgid "Subheading"
+msgstr "부제목"
+
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
 #: src/components/modals/SendMessageModal/index.tsx:438
 #: src/components/routes/admin/Messages/index.tsx:162
@@ -11050,7 +11110,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "이벤트 기본값이 성공적으로 수정되었습니다"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:109
 msgid "Successfully Updated Homepage Design"
 msgstr "홈페이지 디자인이 성공적으로 수정되었습니다"
 
@@ -11309,7 +11369,7 @@ msgid "Term"
 msgstr "기간"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/index.tsx:349
+#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:132
 msgid "Terms of Service"
 msgstr "서비스 약관"
 
@@ -11393,6 +11453,10 @@ msgstr "전체 주문 금액이 고객의 원래 결제 수단으로 환불됩�
 #: src/components/modals/CreateAttendeeModal/index.tsx:237
 msgid "The language the attendee will receive emails in."
 msgstr "참가자가 이메일을 받을 언어입니다."
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:274
+msgid "The large banner at the top of your homepage. Leave fields blank to use sensible defaults."
+msgstr "홈페이지 상단의 큰 배너입니다. 필드를 비워두면 기본값이 사용됩니다."
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/LinkExpiredMessage/index.tsx:30
 msgid "The link you are trying to access has expired or is no longer valid. Please check your email for an updated link to manage your order."
@@ -11494,7 +11558,7 @@ msgid "Theatre with sections"
 msgstr "구역이 있는 극장"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
 msgid "Theme & Colors"
 msgstr "테마 및 색상"
 
@@ -12256,7 +12320,7 @@ msgid "Type to search..."
 msgstr "입력하여 검색..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:391
 msgid "Typography"
 msgstr "타이포그래피"
 
@@ -12419,7 +12483,7 @@ msgstr "날짜당 최대 {perDateAllocation}"
 
 #: src/components/common/EventsDashboardStatusButtons/index.tsx:20
 #: src/components/common/EventStatusBadge/index.tsx:16
-#: src/components/layouts/OrganizerHomepage/index.tsx:286
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:45
 #: src/components/routes/event/OccurrencesTab/index.tsx:513
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:33
 msgid "Upcoming"
@@ -12429,7 +12493,7 @@ msgstr "예정됨"
 msgid "Upcoming events"
 msgstr "예정된 이벤트"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:279
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:38
 msgid "Upcoming Events"
 msgstr "예정된 이벤트"
 
@@ -12561,12 +12625,16 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "<0>Liquid 템플릿</0>을 사용해 이메일을 개인화하세요"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:368
 msgid "Use a blurred version of the cover image as the background"
 msgstr "흐릿하게 처리된 커버 이미지를 배경으로 사용"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:289
+msgid "Use a looping background video instead"
+msgstr "대신 반복 재생되는 배경 동영상 사용"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:366
 msgid "Use cover image"
 msgstr "커버 이미지 사용"
 
@@ -12586,6 +12654,10 @@ msgstr "모든 참가자에게 구매자 정보 사용"
 #: src/components/common/LocationPicker/index.tsx:285
 msgid "Use this address"
 msgstr "이 주소 사용"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:283
+msgid "Use your cover image as the banner background"
+msgstr "커버 이미지를 배너 배경으로 사용"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:134
 msgid "Used for borders, highlights, and QR code styling"
@@ -12770,6 +12842,14 @@ msgstr "참가자가 티켓을 받을 수 있도록 이메일을 인증하세요
 msgid "Verifying..."
 msgstr "인증 중..."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:287
+msgid "Video"
+msgstr "동영상"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:300
+msgid "Video URL"
+msgstr "동영상 URL"
+
 #: src/components/common/LanguageSwitcher/index.tsx:38
 msgid "Vietnamese"
 msgstr "베트남어"
@@ -12830,6 +12910,11 @@ msgstr "이벤트 페이지 보기"
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:93
 msgid "View Event Page"
 msgstr "이벤트 페이지 보기"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:25
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
+msgid "View Events"
+msgstr "이벤트 보기"
 
 #: src/components/common/OrganizerWebhookTable/index.tsx:113
 #: src/components/common/WebhookTable/index.tsx:113
@@ -13010,11 +13095,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "최소 200x200px 크기의 정사각형 로고를 권장합니다"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:223
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "1950px x 650px 크기, 3:1 비율, 최대 5MB 파일 크기를 권장합니다"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:244
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "400px x 400px 크기와 최대 5MB 파일 크기를 권장합니다"
 
@@ -13703,6 +13788,10 @@ msgstr "주문이 성공적으로 내보내기되었습니다."
 #: src/components/common/OrdersTable/index.tsx:380
 msgid "Your orders will appear here once they start rolling in."
 msgstr "주문이 들어오기 시작하면 여기에 표시됩니다."
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:310
+msgid "Your organization name"
+msgstr "조직 이름"
 
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:104
 msgid "Your organizer address"

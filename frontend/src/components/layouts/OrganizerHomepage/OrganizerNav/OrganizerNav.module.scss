@@ -1,0 +1,82 @@
+@use "../../../../styles/mixins.scss";
+
+$font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--organizer-content-bg-color, #ffffff);
+  border-bottom: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
+}
+
+.navInner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  @include mixins.respond-below(md) {
+    padding: 12px 20px;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.brandLogo {
+  height: 36px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+}
+
+.brandName {
+  font-family: $font-display;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--organizer-primary-text-color, #1a1a1a);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link {
+  font-family: $font-display;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--organizer-secondary-text-color, #525252);
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--organizer-primary-text-color, #1a1a1a);
+    background-color: var(--organizer-accent-soft, rgba(0, 0, 0, 0.04));
+  }
+
+  @include mixins.respond-below(sm) {
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+}
+
+.linkActive {
+  color: var(--organizer-primary-color, #8b5cf6);
+  background-color: var(--organizer-accent-soft, rgba(139, 92, 246, 0.08));
+}

@@ -19,7 +19,8 @@ export const publicOrganizerRouteLoader = async ({params, request}: LoaderFuncti
 
         if (organizer && organizer.slug && organizerSlug !== organizer.slug) {
             const searchString = queryParams.toString();
-            const pathSuffix = isPastEvents ? '/past-events' : '';
+            const pathMatch = url.pathname.match(/^\/events\/[^/]+\/[^/]+(\/.*)?$/);
+            const pathSuffix = pathMatch?.[1] || '';
             throw redirect(
                 `/events/${organizer.id}/${organizer.slug}${pathSuffix}${searchString ? `?${searchString}` : ''}`
             );

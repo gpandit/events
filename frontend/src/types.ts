@@ -79,6 +79,12 @@ export interface HomepageThemeSettings {
     mode: 'light' | 'dark';
     background_type: 'COLOR' | 'MIRROR_COVER_IMAGE';
     font_family?: string;
+    hero_media_type?: 'IMAGE' | 'VIDEO';
+    hero_video_url?: string;
+    hero_heading?: string;
+    hero_subheading?: string;
+    hero_cta_text?: string;
+    hero_cta_url?: string;
 }
 
 export interface LoginResponse {

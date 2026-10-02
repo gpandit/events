@@ -435,6 +435,10 @@ msgstr "Krótki opis wydarzenia, który będzie wyświetlany w wynikach wyszukiw
 msgid "A short description of your organizer that will be displayed to your users."
 msgstr "Krótki opis organizatora, widoczny dla użytkowników."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:318
+msgid "A short line about what you do"
+msgstr "Krótkie zdanie o tym, czym się zajmujesz"
+
 #: src/components/forms/QuestionForm/index.tsx:102
 msgid "A single line text input"
 msgstr "Krótka odpowiedź"
@@ -1810,7 +1814,7 @@ msgid "Background Color"
 msgstr "Kolor tła"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:372
 msgid "Background Type"
 msgstr "Typ tła"
 
@@ -1830,6 +1834,10 @@ msgstr "Baner"
 #: src/components/routes/admin/Announcements/index.tsx:303
 msgid "Banner content must be 200 characters or less"
 msgstr "Treść banera może mieć maksymalnie 200 znaków"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:292
+msgid "Banner Type"
+msgstr "Typ banera"
 
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:306
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:87
@@ -1924,7 +1932,12 @@ msgstr "Etykieta przycisku"
 msgid "Button Label"
 msgstr "Etykieta przycisku"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:335
+msgid "Button Link"
+msgstr "Link przycisku"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:271
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:327
 msgid "Button Text"
 msgstr "Tekst przycisku"
 
@@ -2392,7 +2405,7 @@ msgid "Chinese (Traditional)"
 msgstr "Chiński (tradycyjny)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:362
 msgid "Choose a color for your background"
 msgstr "Wybierz kolor tła"
 
@@ -2567,7 +2580,7 @@ msgid "Collect details per ticket"
 msgstr "Zbieraj dane dla każdego biletu"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:360
 msgid "Color"
 msgstr "Kolor"
 
@@ -2831,7 +2844,7 @@ msgstr "Szczegóły połączenia są wymagane dla wydarzeń online"
 
 #: src/components/common/WaitlistTable/index.tsx:152
 #: src/components/layouts/EventHomepage/index.tsx:684
-#: src/components/layouts/OrganizerHomepage/index.tsx:259
+#: src/components/layouts/OrganizerHomepage/OrganizerProfileCard/index.tsx:111
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -3039,7 +3052,7 @@ msgid "Cover"
 msgstr "Okładka"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:221
 msgid "Cover Image"
 msgstr "Obraz okładki"
 
@@ -3051,7 +3064,7 @@ msgstr "Dodano obraz w tle"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "Obraz okładki będzie wyświetlany na górze strony wydarzenia"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:236
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "Obraz okładki będzie wyświetlany na górze strony organizatora"
 
@@ -3418,7 +3431,7 @@ msgstr "Dostosuj swój szablon e-mail za pomocą szablonów Liquid"
 msgid "Customize your event page"
 msgstr "Dostosuj stronę wydarzenia"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:203
 msgid "Customize your organizer page appearance"
 msgstr "Dostosuj wygląd strony organizatora"
 
@@ -3792,6 +3805,10 @@ msgstr "Nie otrzymałeś kodu?"
 msgid "Different location"
 msgstr "Inne miejsce"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:302
+msgid "Direct link to an .mp4 video file"
+msgstr "Bezpośredni link do pliku wideo .mp4"
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:403
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:411
 msgid "Disabled"
@@ -3838,6 +3855,10 @@ msgstr "Zniżka w {0}"
 #: src/components/forms/PromoCodeForm/index.tsx:90
 msgid "Discount Type"
 msgstr "Typ zniżki"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:22
+msgid "Discover our upcoming events and get your tickets today"
+msgstr "Odkryj nasze nadchodzące wydarzenia i kup bilety już dziś"
 
 #: src/components/common/Callout/index.tsx:54
 msgid "Dismiss"
@@ -4734,6 +4755,7 @@ msgstr "Wydarzenie zaktualizowane"
 
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
@@ -5446,6 +5468,7 @@ msgstr "Czwarty"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:133
 #: src/components/forms/ProductForm/index.tsx:289
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:191
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:148
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
 msgid "Free"
@@ -5554,6 +5577,7 @@ msgid "Get started"
 msgstr "Zacznij"
 
 #: src/components/layouts/EventHomepage/index.tsx:209
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:157
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "Zdobądź bilety"
@@ -5667,6 +5691,10 @@ msgstr "Trwałe usunięcie"
 msgid "Have a promo code?"
 msgstr "Masz kod promocyjny?"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:309
+msgid "Heading"
+msgstr "Nagłówek"
+
 #: src/components/routes/admin/Dashboard/index.tsx:74
 msgid "Hello {0}, manage your platform from here."
 msgstr "Cześć {0}, zarządzaj swoją platformą stąd."
@@ -5699,6 +5727,10 @@ msgstr "Oto komponent React, którego możesz użyć do osadzenia widżetu w swo
 #: src/components/common/AffiliateTable/index.tsx:230
 msgid "Here is your affiliate link"
 msgstr "Oto Twój link partnerski"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:267
+msgid "Hero Banner"
+msgstr "Baner główny"
 
 #: src/components/routes/event/EventDashboard/index.tsx:204
 msgid "Hi {0} 👋"
@@ -5841,8 +5873,12 @@ msgstr "Wyróżnione produkty będą miały inny kolor tła w celu wyróżnienia
 msgid "Hobbies"
 msgstr "Hobby"
 
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:32
+msgid "Home"
+msgstr "Strona główna"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:202
 msgid "Homepage Design"
 msgstr "Projekt strony głównej"
 
@@ -5852,7 +5888,7 @@ msgid "Homepage Designer"
 msgstr "Projektant strony głównej"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:422
 msgid "Homepage Preview"
 msgstr "Podgląd strony głównej"
 
@@ -5959,6 +5995,10 @@ msgstr "Jeśli nie zażądałeś tej zmiany, natychmiast zmień hasło."
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "Jeśli masz konto u nas, otrzymasz e-mail z instrukcjami dotyczącymi resetowania hasła."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
+msgid "Image"
+msgstr "Obraz"
+
 #: src/components/common/ImageUploadDropzone/index.tsx:124
 msgid "Image deleted successfully"
 msgstr "Obraz został pomyślnie usunięty"
@@ -5972,7 +6012,7 @@ msgid "Image URL"
 msgstr "URL obrazu"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
 msgid "Images"
 msgstr "Obrazy"
 
@@ -6442,6 +6482,10 @@ msgstr "Ostatnie weryfikacje"
 msgid "Leave “from” as today to start right away."
 msgstr "Pozostaw „Od” jako dziś, aby zacząć od razu."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:336
+msgid "Leave blank to link to your events page"
+msgstr "Pozostaw puste, aby połączyć ze stroną wydarzeń"
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:201
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "Pozostaw puste, aby użyć domyślnego słowa \"Faktura\""
@@ -6596,7 +6640,7 @@ msgid "Logging in"
 msgstr "Logowanie"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:243
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "Logo"
@@ -6609,7 +6653,7 @@ msgstr "Logo i okładka"
 msgid "Logo and cover image for your organizer"
 msgstr "Logo i obraz okładki dla organizatora"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
 msgid "Logo will be displayed in the header"
 msgstr "Logo będzie widoczne w nagłówku"
 
@@ -6961,6 +7005,7 @@ msgstr "Długa odpowiedź"
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/EventHomepage/index.tsx:181
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
 msgid "Multiple locations"
 msgstr "Wiele miejsc"
 
@@ -6971,6 +7016,10 @@ msgstr "Wiele typów biletów"
 #: src/constants/eventCategories.ts:8
 msgid "Music"
 msgstr "Muzyka"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
+msgid "My Account"
+msgstr "Moje konto"
 
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:71
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:71
@@ -7068,6 +7117,10 @@ msgstr "Nowe rejestracje"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:53
 msgid "New time:"
 msgstr "Nowa godzina:"
+
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:106
+msgid "Next Event"
+msgstr "Następne wydarzenie"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:430
 msgid "Next month"
@@ -7344,7 +7397,7 @@ msgstr "Brak innych dostępnych organizatorów"
 msgid "No Paid Orders"
 msgstr "Brak opłaconych zamówień"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:300
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:59
 msgid "No past events"
 msgstr "Brak przeszłych wydarzeń"
 
@@ -7452,7 +7505,7 @@ msgstr "Brak biletów do sprzedaży"
 msgid "No upcoming dates"
 msgstr "Brak nadchodzących terminów"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:300
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:59
 msgid "No upcoming events"
 msgstr "Brak nadchodzących wydarzeń"
 
@@ -7746,6 +7799,7 @@ msgstr "Trwający"
 
 #: src/components/common/EventCard/index.tsx:111
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:50
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:43
 #: src/components/routes/event/OccurrencesTab/index.tsx:333
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:478
 #: src/components/routes/my-tickets/index.tsx:56
@@ -7762,6 +7816,7 @@ msgstr "Online — podaj dane dostępowe"
 
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
 msgid "Online & in-person"
 msgstr "Online i stacjonarnie"
 
@@ -7776,6 +7831,7 @@ msgstr "Wydarzenie online"
 
 #: src/components/layouts/EventHomepage/index.tsx:411
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:132
 msgid "Online Event"
 msgstr "Wydarzenie online"
 
@@ -8328,7 +8384,7 @@ msgstr "Hasło zostało pomyślnie zresetowane. Zaloguj się nowym hasłem."
 msgid "Passwords are not the same"
 msgstr "Hasła nie są takie same"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:292
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:51
 #: src/components/routes/event/OccurrencesTab/index.tsx:514
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:30
 msgid "Past"
@@ -8338,7 +8394,7 @@ msgstr "Przeszłe"
 msgid "Past due"
 msgstr "Zaległe"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:279
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:38
 msgid "Past Events"
 msgstr "Przeszłe wydarzenia"
 
@@ -8858,7 +8914,7 @@ msgstr "Drukuj do PDF"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/index.tsx:342
+#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:125
 msgid "Privacy Policy"
 msgstr "Polityka prywatności"
 
@@ -9760,7 +9816,7 @@ msgstr "Zapisz"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:416
 msgid "Save Changes"
 msgstr "Zapisz zmiany"
 
@@ -10937,6 +10993,10 @@ msgstr "Stripe wkrótce poprosi o kilka dodatkowych danych"
 msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe przeprowadzi Cię przez kilka krótkich pytań, aby dokończyć konfigurację."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+msgid "Subheading"
+msgstr "Podtytuł"
+
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
 #: src/components/modals/SendMessageModal/index.tsx:438
 #: src/components/routes/admin/Messages/index.tsx:162
@@ -11050,7 +11110,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "Pomyślnie zaktualizowano domyślne ustawienia wydarzenia"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:109
 msgid "Successfully Updated Homepage Design"
 msgstr "Pomyślnie zaktualizowano projekt strony głównej"
 
@@ -11309,7 +11369,7 @@ msgid "Term"
 msgstr "Fraza"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/index.tsx:349
+#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:132
 msgid "Terms of Service"
 msgstr "Warunki korzystania z usługi"
 
@@ -11393,6 +11453,10 @@ msgstr "Pełna kwota zamówienia zostanie zwrócona do oryginalnej metody płatn
 #: src/components/modals/CreateAttendeeModal/index.tsx:237
 msgid "The language the attendee will receive emails in."
 msgstr "Język, w którym uczestnik będzie otrzymywać e-maile."
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:274
+msgid "The large banner at the top of your homepage. Leave fields blank to use sensible defaults."
+msgstr "Duży baner na górze strony głównej. Pozostaw pola puste, aby użyć wartości domyślnych."
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/LinkExpiredMessage/index.tsx:30
 msgid "The link you are trying to access has expired or is no longer valid. Please check your email for an updated link to manage your order."
@@ -11494,7 +11558,7 @@ msgid "Theatre with sections"
 msgstr "Teatr z sektorami"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
 msgid "Theme & Colors"
 msgstr "Motyw i kolory"
 
@@ -12256,7 +12320,7 @@ msgid "Type to search..."
 msgstr "Wpisz, aby wyszukać..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:391
 msgid "Typography"
 msgstr "Typografia"
 
@@ -12419,7 +12483,7 @@ msgstr "do {perDateAllocation} na datę"
 
 #: src/components/common/EventsDashboardStatusButtons/index.tsx:20
 #: src/components/common/EventStatusBadge/index.tsx:16
-#: src/components/layouts/OrganizerHomepage/index.tsx:286
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:45
 #: src/components/routes/event/OccurrencesTab/index.tsx:513
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:33
 msgid "Upcoming"
@@ -12429,7 +12493,7 @@ msgstr "Nadchodzące"
 msgid "Upcoming events"
 msgstr "Nadchodzące wydarzenia"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:279
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:38
 msgid "Upcoming Events"
 msgstr "Nadchodzące wydarzenia"
 
@@ -12561,12 +12625,16 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Użyj <0>szablonów Liquid</0> do personalizacji e-maili"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:368
 msgid "Use a blurred version of the cover image as the background"
 msgstr "Użyj rozmytej wersji zdjęcia okładki jako tła"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:289
+msgid "Use a looping background video instead"
+msgstr "Użyj zamiast tego zapętlonego wideo w tle"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:366
 msgid "Use cover image"
 msgstr "Użyj obrazu okładki"
 
@@ -12586,6 +12654,10 @@ msgstr "Użyj danych kupującego dla wszystkich uczestników"
 #: src/components/common/LocationPicker/index.tsx:285
 msgid "Use this address"
 msgstr "Użyj tego adresu"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:283
+msgid "Use your cover image as the banner background"
+msgstr "Użyj obrazu okładki jako tła banera"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:134
 msgid "Used for borders, highlights, and QR code styling"
@@ -12770,6 +12842,14 @@ msgstr "Zweryfikuj swój e-mail, aby uczestnicy mogli otrzymywać bilety"
 msgid "Verifying..."
 msgstr "Weryfikowanie..."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:287
+msgid "Video"
+msgstr "Wideo"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:300
+msgid "Video URL"
+msgstr "Adres URL wideo"
+
 #: src/components/common/LanguageSwitcher/index.tsx:38
 msgid "Vietnamese"
 msgstr "Wietnamski"
@@ -12830,6 +12910,11 @@ msgstr "Wyświetl stronę wydarzenia"
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:93
 msgid "View Event Page"
 msgstr "Wyświetl stronę wydarzenia"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:25
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
+msgid "View Events"
+msgstr "Zobacz Wydarzenia"
 
 #: src/components/common/OrganizerWebhookTable/index.tsx:113
 #: src/components/common/WebhookTable/index.tsx:113
@@ -13010,11 +13095,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "Zalecamy kwadratowe logo o minimalnych wymiarach 200x200px"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:223
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "Zalecane wymiary to 1950x650 px, proporcje 3:1 i maksymalny rozmiar pliku 5 MB"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:244
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Zalecamy wymiary 400px na 400px i maksymalny rozmiar pliku 5MB"
 
@@ -13703,6 +13788,10 @@ msgstr "Twoje zamówienia zostały pomyślnie wyeksportowane."
 #: src/components/common/OrdersTable/index.tsx:380
 msgid "Your orders will appear here once they start rolling in."
 msgstr "Twoje zamówienia pojawią się tutaj, gdy tylko zaczną spływać."
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:310
+msgid "Your organization name"
+msgstr "Nazwa Twojej organizacji"
 
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:104
 msgid "Your organizer address"

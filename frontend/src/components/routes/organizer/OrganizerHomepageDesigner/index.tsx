@@ -8,8 +8,16 @@ import {HomepageThemeSettings, IdParam, OrganizerSettings} from "../../../../typ
 import {showSuccess} from "../../../../utilites/notifications.tsx";
 import {t} from "@lingui/macro";
 import {useForm} from "@mantine/form";
-import {Accordion, Button, Group, Stack, Text} from "@mantine/core";
-import {IconColorPicker, IconHelp, IconPalette, IconPhoto, IconTypography} from "@tabler/icons-react";
+import {Accordion, Button, Group, Stack, Text, TextInput, Textarea} from "@mantine/core";
+import {
+    IconColorPicker,
+    IconHelp,
+    IconPalette,
+    IconPhoto,
+    IconPhotoVideo,
+    IconTypography,
+    IconVideo,
+} from "@tabler/icons-react";
 import {Tooltip} from "../../../common/Tooltip";
 import {LoadingMask} from "../../../common/LoadingMask";
 import {CustomSelect} from "../../../common/CustomSelect";
@@ -40,7 +48,7 @@ const OrganizerHomepageDesigner = () => {
 
     const [iframeSrc, setIframeSrc] = useState<string | null>(null);
     const [iframeLoaded, setIframeLoaded] = useState(false);
-    const [accordionValue, setAccordionValue] = useState<string[]>(['images', 'theme', 'typography']);
+    const [accordionValue, setAccordionValue] = useState<string[]>(['images', 'hero', 'theme', 'typography']);
     const [lastCoverId, setLastCoverId] = useState<IdParam | null>(null);
     const [lastLogoId, setLastLogoId] = useState<IdParam | null>(null);
 
@@ -55,6 +63,12 @@ const OrganizerHomepageDesigner = () => {
                 mode: 'light',
                 background_type: 'COLOR',
                 font_family: DEFAULT_HOMEPAGE_FONT,
+                hero_media_type: 'IMAGE',
+                hero_video_url: '',
+                hero_heading: '',
+                hero_subheading: '',
+                hero_cta_text: '',
+                hero_cta_url: '',
             },
         }
     });
@@ -165,6 +179,21 @@ const OrganizerHomepageDesigner = () => {
         });
     };
 
+    const updateHeroField = (field: keyof HomepageThemeSettings, value: string) => {
+        form.setFieldValue('homepage_theme_settings', {
+            ...form.values.homepage_theme_settings,
+            [field]: value,
+        });
+    };
+
+    const handleHeroMediaTypeChange = (mediaType: string | string[]) => {
+        const value = Array.isArray(mediaType) ? mediaType[0] : mediaType;
+        form.setFieldValue('homepage_theme_settings', {
+            ...form.values.homepage_theme_settings,
+            hero_media_type: value as 'IMAGE' | 'VIDEO',
+        });
+    };
+
     return (
         <div className={classes.container}>
             <div className={classes.sidebar}>
@@ -230,6 +259,88 @@ const OrganizerHomepageDesigner = () => {
                                         />
                                     </div>
                                 </Stack>
+                            </Accordion.Panel>
+                        </Accordion.Item>
+
+                        <Accordion.Item value="hero" className={classes.accordionItem}>
+                            <Accordion.Control icon={<IconPhotoVideo size={20}/>}>
+                                <Text fw={500}>{t`Hero Banner`}</Text>
+                            </Accordion.Control>
+                            <Accordion.Panel>
+                                <fieldset disabled={organizerSettingsQuery.isLoading || updateMutation.isPending}
+                                          className={classes.fieldset}>
+                                    <Stack gap="md">
+                                        <Text c="dimmed" size="sm">
+                                            {t`The large banner at the top of your homepage. Leave fields blank to use sensible defaults.`}
+                                        </Text>
+
+                                        <CustomSelect
+                                            optionList={[
+                                                {
+                                                    icon: <IconPhoto/>,
+                                                    label: t`Image`,
+                                                    value: 'IMAGE',
+                                                    description: t`Use your cover image as the banner background`,
+                                                },
+                                                {
+                                                    icon: <IconVideo/>,
+                                                    label: t`Video`,
+                                                    value: 'VIDEO',
+                                                    description: t`Use a looping background video instead`,
+                                                },
+                                            ]}
+                                            label={t`Banner Type`}
+                                            name={'homepage_theme_settings.hero_media_type'}
+                                            value={form.values.homepage_theme_settings.hero_media_type || 'IMAGE'}
+                                            onChange={handleHeroMediaTypeChange}
+                                        />
+
+                                        {form.values.homepage_theme_settings.hero_media_type === 'VIDEO' && (
+                                            <TextInput
+                                                label={t`Video URL`}
+                                                placeholder="https://example.com/banner.mp4"
+                                                description={t`Direct link to an .mp4 video file`}
+                                                value={form.values.homepage_theme_settings.hero_video_url || ''}
+                                                onChange={(event) => updateHeroField('hero_video_url', event.currentTarget.value)}
+                                            />
+                                        )}
+
+                                        <TextInput
+                                            label={t`Heading`}
+                                            placeholder={organizerData?.name || t`Your organization name`}
+                                            value={form.values.homepage_theme_settings.hero_heading || ''}
+                                            onChange={(event) => updateHeroField('hero_heading', event.currentTarget.value)}
+                                            maxLength={150}
+                                        />
+
+                                        <Textarea
+                                            label={t`Subheading`}
+                                            placeholder={t`A short line about what you do`}
+                                            value={form.values.homepage_theme_settings.hero_subheading || ''}
+                                            onChange={(event) => updateHeroField('hero_subheading', event.currentTarget.value)}
+                                            maxLength={300}
+                                            autosize
+                                            minRows={2}
+                                        />
+
+                                        <TextInput
+                                            label={t`Button Text`}
+                                            placeholder={t`View Events`}
+                                            value={form.values.homepage_theme_settings.hero_cta_text || ''}
+                                            onChange={(event) => updateHeroField('hero_cta_text', event.currentTarget.value)}
+                                            maxLength={50}
+                                        />
+
+                                        <TextInput
+                                            label={t`Button Link`}
+                                            description={t`Leave blank to link to your events page`}
+                                            placeholder="https://example.com"
+                                            value={form.values.homepage_theme_settings.hero_cta_url || ''}
+                                            onChange={(event) => updateHeroField('hero_cta_url', event.currentTarget.value)}
+                                            maxLength={2048}
+                                        />
+                                    </Stack>
+                                </fieldset>
                             </Accordion.Panel>
                         </Accordion.Item>
 

@@ -435,6 +435,10 @@ msgstr "Krátky popis udalosti, ktorý sa zobrazí vo výsledkoch vyhľadávania
 msgid "A short description of your organizer that will be displayed to your users."
 msgstr "Krátky popis vášho organizátora, ktorý sa zobrazí používateľom."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:318
+msgid "A short line about what you do"
+msgstr "Krátka veta o tom, čím sa zaoberáte"
+
 #: src/components/forms/QuestionForm/index.tsx:102
 msgid "A single line text input"
 msgstr "Jednoriadkový textový vstup"
@@ -1810,7 +1814,7 @@ msgid "Background Color"
 msgstr "Farba pozadia"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:372
 msgid "Background Type"
 msgstr "Typ pozadia"
 
@@ -1830,6 +1834,10 @@ msgstr "Banner"
 #: src/components/routes/admin/Announcements/index.tsx:303
 msgid "Banner content must be 200 characters or less"
 msgstr "Obsah bannera môže mať najviac 200 znakov"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:292
+msgid "Banner Type"
+msgstr "Typ banera"
 
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:306
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:87
@@ -1924,7 +1932,12 @@ msgstr "Označenie tlačidla"
 msgid "Button Label"
 msgstr "Popis tlačidla"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:335
+msgid "Button Link"
+msgstr "Odkaz tlačidla"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:271
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:327
 msgid "Button Text"
 msgstr "Text tlačidla"
 
@@ -2392,7 +2405,7 @@ msgid "Chinese (Traditional)"
 msgstr "Čínština (tradičná)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:251
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:362
 msgid "Choose a color for your background"
 msgstr "Vyberte farbu pozadia"
 
@@ -2567,7 +2580,7 @@ msgid "Collect details per ticket"
 msgstr "Zbierať údaje na lístok"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:249
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:360
 msgid "Color"
 msgstr "Farba"
 
@@ -2831,7 +2844,7 @@ msgstr "Pre online podujatia sú povinné údaje o pripojení"
 
 #: src/components/common/WaitlistTable/index.tsx:152
 #: src/components/layouts/EventHomepage/index.tsx:684
-#: src/components/layouts/OrganizerHomepage/index.tsx:259
+#: src/components/layouts/OrganizerHomepage/OrganizerProfileCard/index.tsx:111
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -3039,7 +3052,7 @@ msgid "Cover"
 msgstr "Obal"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:192
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:221
 msgid "Cover Image"
 msgstr "Obrázok obalu"
 
@@ -3051,7 +3064,7 @@ msgstr "Titulný obrázok pridaný"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "Obrázok obalu sa zobrazí v hornej časti stránky udalosti"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:207
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:236
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "Obrázok obalu sa zobrazí v hornej časti stránky organizátora"
 
@@ -3418,7 +3431,7 @@ msgstr "Prispôsobte svoju e-mailovú šablónu pomocou Liquid šablonovania"
 msgid "Customize your event page"
 msgstr "Prispôsobte stránku svojej udalosti"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:174
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:203
 msgid "Customize your organizer page appearance"
 msgstr "Prispôsobte vzhľad stránky organizátora"
 
@@ -3792,6 +3805,10 @@ msgstr "Nedostali ste kód?"
 msgid "Different location"
 msgstr "Iné miesto"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:302
+msgid "Direct link to an .mp4 video file"
+msgstr "Priamy odkaz na video súbor .mp4"
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:403
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:411
 msgid "Disabled"
@@ -3838,6 +3855,10 @@ msgstr "Zľava v {0}"
 #: src/components/forms/PromoCodeForm/index.tsx:90
 msgid "Discount Type"
 msgstr "Typ zľavy"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:22
+msgid "Discover our upcoming events and get your tickets today"
+msgstr "Objavte naše nadchádzajúce podujatia a kúpte si lístky ešte dnes"
 
 #: src/components/common/Callout/index.tsx:54
 msgid "Dismiss"
@@ -4734,6 +4755,7 @@ msgstr "Udalosť aktualizovaná"
 
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
@@ -5446,6 +5468,7 @@ msgstr "Štvrtý"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:133
 #: src/components/forms/ProductForm/index.tsx:289
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:191
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:148
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
 msgid "Free"
@@ -5554,6 +5577,7 @@ msgid "Get started"
 msgstr "Začať"
 
 #: src/components/layouts/EventHomepage/index.tsx:209
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:157
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "Získať lístky"
@@ -5667,6 +5691,10 @@ msgstr "Trvalé vymazanie"
 msgid "Have a promo code?"
 msgstr "Máte promo kód?"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:309
+msgid "Heading"
+msgstr "Nadpis"
+
 #: src/components/routes/admin/Dashboard/index.tsx:74
 msgid "Hello {0}, manage your platform from here."
 msgstr "Ahoj {0}, spravujte svoju platformu odtiaľto."
@@ -5699,6 +5727,10 @@ msgstr "Tu je React komponent, ktorý môžete použiť na vloženie widgetu do 
 #: src/components/common/AffiliateTable/index.tsx:230
 msgid "Here is your affiliate link"
 msgstr "Tu je váš partnerský odkaz"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:267
+msgid "Hero Banner"
+msgstr "Hlavný banner"
 
 #: src/components/routes/event/EventDashboard/index.tsx:204
 msgid "Hi {0} 👋"
@@ -5841,8 +5873,12 @@ msgstr "Zvýraznené produkty budú mať inú farbu pozadia, aby vynikli na str�
 msgid "Hobbies"
 msgstr "Záľuby"
 
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:32
+msgid "Home"
+msgstr "Domov"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:173
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:202
 msgid "Homepage Design"
 msgstr "Dizajn domovskej stránky"
 
@@ -5852,7 +5888,7 @@ msgid "Homepage Designer"
 msgstr "Návrhár domovskej stránky"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:422
 msgid "Homepage Preview"
 msgstr "Náhľad domovskej stránky"
 
@@ -5959,6 +5995,10 @@ msgstr "Ak ste túto zmenu nepožadovali, okamžite zmeňte heslo."
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "Ak máte u nás účet, dostanete e-mail s pokynmi na obnovenie hesla."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
+msgid "Image"
+msgstr "Obrázok"
+
 #: src/components/common/ImageUploadDropzone/index.tsx:124
 msgid "Image deleted successfully"
 msgstr "Obrázok bol úspešne odstránený"
@@ -5972,7 +6012,7 @@ msgid "Image URL"
 msgstr "URL obrázka"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:186
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
 msgid "Images"
 msgstr "Obrázky"
 
@@ -6442,6 +6482,10 @@ msgstr "Najnovšie check-iny"
 msgid "Leave “from” as today to start right away."
 msgstr "Ponechajte „Od“ na dnešku, ak chcete začať hneď."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:336
+msgid "Leave blank to link to your events page"
+msgstr "Nechajte prázdne pre prepojenie na stránku podujatí"
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:201
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "Nechajte prázdne pre použitie predvoleného slova \"Faktúra\""
@@ -6596,7 +6640,7 @@ msgid "Logging in"
 msgstr "Prihlasovanie"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:214
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:243
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "Logo"
@@ -6609,7 +6653,7 @@ msgstr "Logo a obal"
 msgid "Logo and cover image for your organizer"
 msgstr "Logo a obrázok obalu pre vášho organizátora"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:228
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
 msgid "Logo will be displayed in the header"
 msgstr "Logo sa zobrazí v hlavičke"
 
@@ -6961,6 +7005,7 @@ msgstr "Viacriadkové textové pole"
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/EventHomepage/index.tsx:181
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
 msgid "Multiple locations"
 msgstr "Viacero miest"
 
@@ -6971,6 +7016,10 @@ msgstr "Viacero typov lístkov"
 #: src/constants/eventCategories.ts:8
 msgid "Music"
 msgstr "Hudba"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
+msgid "My Account"
+msgstr "Môj účet"
 
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:71
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:71
@@ -7068,6 +7117,10 @@ msgstr "Nové registrácie"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:53
 msgid "New time:"
 msgstr "Nový čas:"
+
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:106
+msgid "Next Event"
+msgstr "Najbližšia udalosť"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:430
 msgid "Next month"
@@ -7344,7 +7397,7 @@ msgstr "Žiadni ďalší organizátori nie sú dostupní"
 msgid "No Paid Orders"
 msgstr "Žiadne zaplatené objednávky"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:300
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:59
 msgid "No past events"
 msgstr "Žiadne minulé udalosti"
 
@@ -7452,7 +7505,7 @@ msgstr "Žiadne vstupenky na predaj"
 msgid "No upcoming dates"
 msgstr "Žiadne nadchádzajúce termíny"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:300
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:59
 msgid "No upcoming events"
 msgstr "Žiadne nadchádzajúce udalosti"
 
@@ -7746,6 +7799,7 @@ msgstr "Prebiehajúce"
 
 #: src/components/common/EventCard/index.tsx:111
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:50
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:43
 #: src/components/routes/event/OccurrencesTab/index.tsx:333
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:478
 #: src/components/routes/my-tickets/index.tsx:56
@@ -7762,6 +7816,7 @@ msgstr "Online — zadajte údaje na pripojenie"
 
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
 msgid "Online & in-person"
 msgstr "Online aj osobne"
 
@@ -7776,6 +7831,7 @@ msgstr "Online podujatie"
 
 #: src/components/layouts/EventHomepage/index.tsx:411
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:132
 msgid "Online Event"
 msgstr "Online udalosť"
 
@@ -8328,7 +8384,7 @@ msgstr "Heslo bolo úspešne obnovené. Prihláste sa novým heslom."
 msgid "Passwords are not the same"
 msgstr "Heslá sa nezhodujú"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:292
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:51
 #: src/components/routes/event/OccurrencesTab/index.tsx:514
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:30
 msgid "Past"
@@ -8338,7 +8394,7 @@ msgstr "Minulé"
 msgid "Past due"
 msgstr "Po splatnosti"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:279
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:38
 msgid "Past Events"
 msgstr "Minulé udalosti"
 
@@ -8858,7 +8914,7 @@ msgstr "Tlačiť do PDF"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/index.tsx:342
+#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:125
 msgid "Privacy Policy"
 msgstr "Zásady ochrany osobných údajov"
 
@@ -9760,7 +9816,7 @@ msgstr "Uložiť"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:305
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:416
 msgid "Save Changes"
 msgstr "Uložiť zmeny"
 
@@ -10937,6 +10993,10 @@ msgstr "Stripe bude čoskoro potrebovať ďalšie údaje"
 msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe vás prevedie niekoľkými rýchlymi otázkami a nastavenie dokončíte."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+msgid "Subheading"
+msgstr "Podnadpis"
+
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
 #: src/components/modals/SendMessageModal/index.tsx:438
 #: src/components/routes/admin/Messages/index.tsx:162
@@ -11050,7 +11110,7 @@ msgid "Successfully Updated Event Defaults"
 msgstr "Predvolené nastavenia udalosti boli úspešne aktualizované"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:95
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:109
 msgid "Successfully Updated Homepage Design"
 msgstr "Dizajn domovskej stránky bol úspešne aktualizovaný"
 
@@ -11309,7 +11369,7 @@ msgid "Term"
 msgstr "Výraz"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/index.tsx:349
+#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:132
 msgid "Terms of Service"
 msgstr "Podmienky služby"
 
@@ -11393,6 +11453,10 @@ msgstr "Celá suma objednávky bude vrátená na pôvodný platobný prostriedok
 #: src/components/modals/CreateAttendeeModal/index.tsx:237
 msgid "The language the attendee will receive emails in."
 msgstr "Jazyk, v ktorom bude účastník dostávať e-maily."
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:274
+msgid "The large banner at the top of your homepage. Leave fields blank to use sensible defaults."
+msgstr "Veľký banner v hornej časti vašej domovskej stránky. Ponechajte polia prázdne pre použitie predvolených hodnôt."
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/LinkExpiredMessage/index.tsx:30
 msgid "The link you are trying to access has expired or is no longer valid. Please check your email for an updated link to manage your order."
@@ -11494,7 +11558,7 @@ msgid "Theatre with sections"
 msgstr "Divadlo so sekciami"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
 msgid "Theme & Colors"
 msgstr "Téma a farby"
 
@@ -12256,7 +12320,7 @@ msgid "Type to search..."
 msgstr "Píšte pre vyhľadávanie..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:391
 msgid "Typography"
 msgstr "Typografia"
 
@@ -12419,7 +12483,7 @@ msgstr "najviac {perDateAllocation} na dátum"
 
 #: src/components/common/EventsDashboardStatusButtons/index.tsx:20
 #: src/components/common/EventStatusBadge/index.tsx:16
-#: src/components/layouts/OrganizerHomepage/index.tsx:286
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:45
 #: src/components/routes/event/OccurrencesTab/index.tsx:513
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:33
 msgid "Upcoming"
@@ -12429,7 +12493,7 @@ msgstr "Nadchádzajúce"
 msgid "Upcoming events"
 msgstr "Nadchádzajúce podujatia"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:279
+#: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:38
 msgid "Upcoming Events"
 msgstr "Nadchádzajúce udalosti"
 
@@ -12561,12 +12625,16 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Použite <0>Liquid šablonovanie</0> na personalizáciu e-mailov"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:368
 msgid "Use a blurred version of the cover image as the background"
 msgstr "Použiť rozmazanú verziu obrázka obalu ako pozadie"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:289
+msgid "Use a looping background video instead"
+msgstr "Namiesto toho použiť opakujúce sa video na pozadí"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:255
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:366
 msgid "Use cover image"
 msgstr "Použiť obrázok obalu"
 
@@ -12586,6 +12654,10 @@ msgstr "Použiť údaje kupujúceho pre všetkých účastníkov"
 #: src/components/common/LocationPicker/index.tsx:285
 msgid "Use this address"
 msgstr "Použiť túto adresu"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:283
+msgid "Use your cover image as the banner background"
+msgstr "Použiť váš obrázok na obálke ako pozadie banera"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:134
 msgid "Used for borders, highlights, and QR code styling"
@@ -12770,6 +12842,14 @@ msgstr "Overte si e-mail, aby účastníci mohli dostávať lístky"
 msgid "Verifying..."
 msgstr "Overovanie..."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:287
+msgid "Video"
+msgstr "Video"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:300
+msgid "Video URL"
+msgstr "URL videa"
+
 #: src/components/common/LanguageSwitcher/index.tsx:38
 msgid "Vietnamese"
 msgstr "Vietnamčina"
@@ -12830,6 +12910,11 @@ msgstr "Zobraziť stránku udalosti"
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:93
 msgid "View Event Page"
 msgstr "Zobraziť stránku udalosti"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:25
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
+msgid "View Events"
+msgstr "Zobraziť podujatia"
 
 #: src/components/common/OrganizerWebhookTable/index.tsx:113
 #: src/components/common/WebhookTable/index.tsx:113
@@ -13010,11 +13095,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "Odporúčame štvorcové logo s minimálnymi rozmermi 200x200px"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:194
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:223
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "Odporúčame rozmery 1950px x 650px, pomer 3:1 a maximálnu veľkosť súboru 5 MB"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:244
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Odporúčame rozmery 400px x 400px a maximálnu veľkosť súboru 5 MB"
 
@@ -13703,6 +13788,10 @@ msgstr "Vaše objednávky boli úspešne exportované."
 #: src/components/common/OrdersTable/index.tsx:380
 msgid "Your orders will appear here once they start rolling in."
 msgstr "Vaše objednávky sa zobrazia tu, keď začnú prichádzať."
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:310
+msgid "Your organization name"
+msgstr "Názov vašej organizácie"
 
 #: src/components/routes/organizer/Settings/Sections/AddressSettings/index.tsx:104
 msgid "Your organizer address"
