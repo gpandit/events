@@ -9,6 +9,7 @@ use HiEvents\Http\Actions\BaseAction;
 use HiEvents\Resources\ChildStorySubmission\ChildStorySubmissionResource;
 use HiEvents\Services\Application\Handlers\ChildStorySubmission\DTO\SubmitChildStorySubmissionDTO;
 use HiEvents\Services\Application\Handlers\ChildStorySubmission\SubmitChildStorySubmissionHandler;
+use HiEvents\Services\Infrastructure\Turnstile\TurnstileVerifier;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -18,6 +19,7 @@ class SubmitChildStorySubmissionPublicAction extends BaseAction
 {
     public function __construct(
         private readonly SubmitChildStorySubmissionHandler $handler,
+        private readonly TurnstileVerifier $turnstileVerifier,
     ) {}
 
     /**
@@ -34,7 +36,14 @@ class SubmitChildStorySubmissionPublicAction extends BaseAction
             'original_filename' => 'nullable|string|max:255',
             'consent_own_work' => 'required|accepted',
             'consent_publish' => 'required|boolean',
+            'turnstile_token' => 'nullable|string|max:2048',
         ]);
+
+        if (!$this->turnstileVerifier->verify($data['turnstile_token'] ?? null, $request->ip())) {
+            throw ValidationException::withMessages([
+                'turnstile_token' => __('Please complete the security check and try again.'),
+            ]);
+        }
 
         $submission = $this->handler->handle(SubmitChildStorySubmissionDTO::from([
             'organizer_id' => $organizerId,
