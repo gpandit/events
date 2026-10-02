@@ -1,6 +1,7 @@
 import {useLocation, useNavigate} from "react-router";
 import {ActionIcon, Anchor} from '@mantine/core';
 import {EventCard} from './EventCard';
+import {NextEventSpotlight} from './NextEventSpotlight';
 import classes from './OrganizerHomepage.module.scss';
 import React, {useEffect, useState} from 'react';
 import {Event, GenericPaginatedResponse, Organizer} from "../../../types.ts";
@@ -86,6 +87,9 @@ export const OrganizerHomepage = ({
     const organizerCover = organizer.images?.find(img => img.type === 'ORGANIZER_COVER');
 
     const events = eventsData?.data || [];
+    const isFirstPage = (eventsData?.meta.current_page ?? 1) === 1;
+    const nextEvent = (!isPastEvents && isFirstPage) ? events[0] : undefined;
+    const remainingEvents = nextEvent ? events.slice(1) : events;
 
     // Theme settings
     const rawThemeSettings = organizer?.settings?.homepage_theme_settings;
@@ -272,6 +276,14 @@ export const OrganizerHomepage = ({
                             </div>
                         </div>
 
+                        {/* Next Event Spotlight */}
+                        {nextEvent && (
+                            <NextEventSpotlight
+                                event={nextEvent as Event}
+                                primaryColor={themeSettings.accent}
+                            />
+                        )}
+
                         {/* Events Section */}
                         <div className={classes.eventsSection}>
                             <div className={classes.eventsHeader}>
@@ -295,13 +307,15 @@ export const OrganizerHomepage = ({
                             </div>
 
                             <div className={classes.eventsList}>
-                                {events.length === 0 ? (
-                                    <div className={classes.noEvents}>
-                                        <p>{isPastEvents ? t`No past events` : t`No upcoming events`}</p>
-                                    </div>
+                                {remainingEvents.length === 0 ? (
+                                    events.length === 0 && (
+                                        <div className={classes.noEvents}>
+                                            <p>{isPastEvents ? t`No past events` : t`No upcoming events`}</p>
+                                        </div>
+                                    )
                                 ) : (
                                     <div className={classes.eventsContainer}>
-                                        {events.map((event) => (
+                                        {remainingEvents.map((event) => (
                                             <EventCard
                                                 key={event.id}
                                                 event={event as Event}
