@@ -1,22 +1,62 @@
-import {IconDownload, IconExternalLink} from '@tabler/icons-react';
+import {useRef} from 'react';
+import {IconChevronLeft, IconChevronRight, IconDownload, IconExternalLink, IconHeart, IconPalette, IconSparkles, IconSun} from '@tabler/icons-react';
 import {t} from '@lingui/macro';
 import {colouringPages} from '../colouringPagesData.ts';
 import classes from '../ResourcesForChildren.module.scss';
 
+const TILE_ICONS = [IconPalette, IconHeart, IconSparkles, IconSun];
+
 export const ColouringPagesTab = () => {
+    const trackRef = useRef<HTMLDivElement>(null);
+
+    const scrollByCard = (direction: 1 | -1) => {
+        const track = trackRef.current;
+        if (!track) {
+            return;
+        }
+        const card = track.querySelector<HTMLElement>(`.${classes.colouringCard}`);
+        const step = (card?.offsetWidth ?? 260) + 16;
+        track.scrollBy({left: step * direction, behavior: 'smooth'});
+    };
+
     return (
         <div className={classes.tabPanel}>
             {colouringPages.length > 0 ? (
-                <div className={classes.carousel}>
-                    {colouringPages.map((page) => (
-                        <div key={page.title} className={classes.colouringCard}>
-                            <img src={page.imageUrl} alt={page.title} className={classes.colouringImage}/>
-                            <p className={classes.colouringTitle}>{page.title}</p>
-                            <a href={page.pdfUrl} download className={classes.downloadLink}>
-                                <IconDownload size={16}/> {t`Download PDF`}
-                            </a>
-                        </div>
-                    ))}
+                <div className={classes.carouselWrapper}>
+                    <button
+                        type="button"
+                        className={classes.carouselNav}
+                        onClick={() => scrollByCard(-1)}
+                        aria-label={t`Scroll to previous colouring page`}
+                    >
+                        <IconChevronLeft size={18}/>
+                    </button>
+
+                    <div className={classes.carousel} ref={trackRef}>
+                        {colouringPages.map((page, index) => {
+                            const Icon = TILE_ICONS[index % TILE_ICONS.length];
+                            return (
+                                <div key={page.title} className={classes.colouringCard}>
+                                    <div className={`${classes.colouringTile} ${classes[`tint-${page.tint}`]}`}>
+                                        <Icon size={40} strokeWidth={1.5}/>
+                                    </div>
+                                    <p className={classes.colouringTitle}>{page.title}</p>
+                                    <a href={page.pdfUrl} download className={classes.downloadLink}>
+                                        <IconDownload size={16}/> {t`Download PDF`}
+                                    </a>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <button
+                        type="button"
+                        className={classes.carouselNav}
+                        onClick={() => scrollByCard(1)}
+                        aria-label={t`Scroll to next colouring page`}
+                    >
+                        <IconChevronRight size={18}/>
+                    </button>
                 </div>
             ) : (
                 <p className={classes.comingSoon}>

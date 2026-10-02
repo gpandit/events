@@ -8,7 +8,7 @@
 }
 
 .headerIcon {
-    color: var(--organizer-primary-color, #E4405F);
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #E4405F));
     margin-bottom: 8px;
 }
 
@@ -22,7 +22,7 @@
     opacity: .75;
 
     a {
-        color: var(--organizer-primary-color);
+        color: var(--organizer-accent-text, var(--organizer-primary-color));
         font-weight: 600;
     }
 }

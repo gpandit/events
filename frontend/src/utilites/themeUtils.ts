@@ -19,6 +19,7 @@ export interface ThemeCSSVariables {
     '--theme-text-tertiary': string;
     '--theme-border': string;
     '--theme-accent-contrast': string;
+    '--theme-accent-text': string;
     '--theme-accent-soft': string;
     '--theme-accent-muted': string;
     '--theme-accent-tint-10': string;
@@ -111,9 +112,40 @@ export function getDerivedColors(mode: 'light' | 'dark'): Omit<DerivedThemeColor
         surface: '#1f1f1f',
         textPrimary: '#ffffff',
         textSecondary: '#a3a3a3',
-        textTertiary: '#737373',
+        textTertiary: '#8c8c8c',
         border: 'rgba(255, 255, 255, 0.1)',
     };
+}
+
+/**
+ * Nudges `accent` toward white (dark mode) or black (light mode) until it
+ * clears WCAG AA (4.5:1) against `surface`, for places accent is used as
+ * text rather than a button fill (badges, links, icons on a card).
+ */
+export function getAccentTextColor(accent: string, surface: string, mode: 'light' | 'dark'): string {
+    if (checkContrast(accent, surface).passesAA) {
+        return accent;
+    }
+
+    const rgb = hexToRgb(accent);
+    if (!rgb) {
+        return mode === 'dark' ? '#ffffff' : '#1a1a1a';
+    }
+
+    const target = mode === 'dark' ? 255 : 0;
+    for (let amount = 20; amount <= 100; amount += 20) {
+        const mixed = {
+            r: Math.round(rgb.r + (target - rgb.r) * (amount / 100)),
+            g: Math.round(rgb.g + (target - rgb.g) * (amount / 100)),
+            b: Math.round(rgb.b + (target - rgb.b) * (amount / 100)),
+        };
+        const mixedHex = `#${[mixed.r, mixed.g, mixed.b].map((c) => c.toString(16).padStart(2, '0')).join('')}`;
+        if (checkContrast(mixedHex, surface).passesAA) {
+            return mixedHex;
+        }
+    }
+
+    return mode === 'dark' ? '#ffffff' : '#1a1a1a';
 }
 
 export function getAccentSoft(accent: string, mode: 'light' | 'dark'): string {
@@ -137,6 +169,7 @@ export function getAccentMuted(accent: string, mode: 'light' | 'dark'): string {
 export function computeThemeVariables(settings: HomepageThemeSettings): ThemeCSSVariables {
     const derived = getDerivedColors(settings.mode);
     const accentContrast = getContrastColor(settings.accent);
+    const accentText = getAccentTextColor(settings.accent, derived.surface, settings.mode);
     const accentSoft = getAccentSoft(settings.accent, settings.mode);
     const accentMuted = getAccentMuted(settings.accent, settings.mode);
 
@@ -149,6 +182,7 @@ export function computeThemeVariables(settings: HomepageThemeSettings): ThemeCSS
         '--theme-text-tertiary': derived.textTertiary,
         '--theme-border': derived.border,
         '--theme-accent-contrast': accentContrast,
+        '--theme-accent-text': accentText,
         '--theme-accent-soft': accentSoft,
         '--theme-accent-muted': accentMuted,
         '--theme-accent-tint-10': `color-mix(in srgb, ${settings.accent} 10%, ${derived.surface})`,

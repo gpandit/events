@@ -3,29 +3,7 @@ import type {LinguiConfig} from "@lingui/conf";
 const config: LinguiConfig = {
     locales: [
         "en", // English
-        "zh-cn", // Mandarin Chinese (Simplified)
-        "es", // Spanish
-        "fi", // Finnish
-        "fr", // French
-        "nl", // Dutch
-		"hu", // Hungarian
-        "pt-br", // Portuguese (Brazil)
-        "ru", // Russian
-        "de", // German
-        "pt", // Portuguese (Portugal)
-        "vi", // Vietnamese
-        "tr", // Turkish
-        "se", // Swedish
-        "it", // Italian
-        "pl", // Polish
-        "sk", // Slovak
-        "el", // Greek
-        // "ja", // Japanese
-        "ko", // Korean
-        // "id", // Indonesian
-        "zh-hk", // Cantonese Chinese (Hong Kong)
-        // "cs", // Czech
-        // "ga", // Irish
+        "ar", // Arabic
     ],
     catalogs: [
         {

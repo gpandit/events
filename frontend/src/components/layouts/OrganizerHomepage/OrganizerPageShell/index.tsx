@@ -9,7 +9,7 @@ import {useOrganizerThemeStyles} from "../../../../hooks/useOrganizerThemeStyles
 import {removeTransparency} from "../../../../utilites/colorHelper.ts";
 import {OrganizerNav} from "../OrganizerNav";
 import {SiteFooter} from "../SiteFooter";
-import {ThemeToggle} from "../../../common/ThemeToggle";
+import {FloatingSiteControls} from "../../../common/FloatingSiteControls";
 import classes from '../OrganizerHomepage.module.scss';
 
 interface OrganizerPageShellProps {
@@ -99,7 +99,7 @@ export const OrganizerPageShell: React.FC<OrganizerPageShellProps> = ({organizer
                 </div>
 
                 <SiteFooter organizer={organizer}/>
-                <ThemeToggle/>
+                <FloatingSiteControls/>
             </main>
         </>
     );

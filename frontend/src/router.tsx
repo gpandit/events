@@ -598,6 +598,14 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/cookie-policy",
+        async lazy() {
+            const CookiePolicy = await import("./components/routes/legal/CookiePolicy");
+            return { Component: CookiePolicy.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/e/:eventId/:eventSlug",
         async lazy() {
             const EventHomepage = await import("./components/layouts/EventHomepage");

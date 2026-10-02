@@ -116,7 +116,7 @@ $radius-md: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--primary-color);
+  color: var(--accent-text);
 }
 
 .dateBadgeDay {
@@ -157,7 +157,7 @@ $radius-md: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--primary-color);
+  color: var(--accent-text);
 }
 
 .title {
@@ -190,7 +190,7 @@ $radius-md: 14px;
 
   svg {
     flex-shrink: 0;
-    color: var(--primary-color);
+    color: var(--accent-text);
   }
 }
 

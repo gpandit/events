@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {t} from '@lingui/macro';
+import {t, Trans} from '@lingui/macro';
 import {Switch} from '@mantine/core';
 import {IconCookie} from '@tabler/icons-react';
 import classNames from 'classnames';
@@ -50,6 +50,7 @@ export const CookieConsentBanner = () => {
         t`We use cookies to help us understand how the site is used and to improve your experience.`
     );
     const privacyUrl = getConfig('VITE_PRIVACY_URL', '/privacy-policy');
+    const cookiePolicyUrl = '/cookie-policy';
 
     const save = (next: ConsentPreferences) => {
         writeConsent(next);
@@ -75,14 +76,17 @@ export const CookieConsentBanner = () => {
                 </div>
                 <p className={classes.text}>
                     {text}
-                    {privacyUrl && (
-                        <>
-                            {' '}
-                            <a href={privacyUrl} target="_blank" rel="noopener noreferrer" className={classes.privacyLink}>
-                                {t`Privacy Policy`}
-                            </a>
-                        </>
-                    )}
+                    {' '}
+                    <Trans>
+                        Read our{' '}
+                        <a href={privacyUrl} target="_blank" rel="noopener noreferrer" className={classes.privacyLink}>
+                            Privacy Policy
+                        </a>{' '}
+                        and{' '}
+                        <a href={cookiePolicyUrl} target="_blank" rel="noopener noreferrer" className={classes.privacyLink}>
+                            Cookie Policy
+                        </a>.
+                    </Trans>
                 </p>
             </div>
 

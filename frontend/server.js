@@ -11,7 +11,7 @@ import * as nodePath from "node:path";
 import * as nodeUrl from "node:url";
 import "dotenv/config";
 import * as Sentry from "@sentry/node";
-import {sitemapIndexHandler, sitemapEventsHandler, sitemapOrganizersHandler} from "./src/sitemap/proxy.js";
+import {sitemapIndexHandler, sitemapEventsHandler, sitemapOrganizersHandler, sitemapTxtHandler} from "./src/sitemap/proxy.js";
 import {htmlSafeJsonStringify} from "./src/utilites/safeScriptJson.js";
 
 installGlobals();
@@ -111,6 +111,7 @@ async function main() {
 Allow: /
 
 Sitemap: ${frontendUrl}/sitemap.xml
+Sitemap: ${frontendUrl}/sitemap.txt
 `;
         res.setHeader('Content-Type', 'text/plain');
         res.setHeader('Cache-Control', 'public, max-age=86400');
@@ -120,6 +121,7 @@ Sitemap: ${frontendUrl}/sitemap.xml
     app.get('/sitemap.xml', sitemapIndexHandler);
     app.get('/sitemap-events-:page.xml', sitemapEventsHandler);
     app.get('/sitemap-organizers-:page.xml', sitemapOrganizersHandler);
+    app.get('/sitemap.txt', sitemapTxtHandler);
 
     const nonRenderablePathPattern = /(^|\/)\.[^/]|\.(php|asp|aspx|jsp|cgi|sql|bak|old|zip|tar|gz|rar|7z|env|ini|yml|yaml|conf|log|sh|exe|dll)$/i;
 

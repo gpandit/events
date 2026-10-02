@@ -6,8 +6,10 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: #f49f29;
-  border-bottom: 1px solid rgba(4, 77, 84, 0.15);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid rgba(17, 20, 23, 0.07);
 }
 
 .navInner {
@@ -42,7 +44,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
   font-family: $font-display;
   font-weight: 700;
   font-size: 1.05rem;
-  color: #044d54;
+  color: #15171a;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -59,15 +61,15 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
-  color: rgba(4, 77, 84, 0.75);
+  color: rgba(21, 23, 26, 0.68);
   padding: 8px 14px;
   border-radius: 10px;
   transition: color 0.15s ease, background-color 0.15s ease;
   white-space: nowrap;
 
   &:hover {
-    color: #044d54;
-    background-color: rgba(4, 77, 84, 0.08);
+    color: var(--organizer-primary-color, #15171a);
+    background-color: rgba(21, 23, 26, 0.06);
   }
 
   @include mixins.respond-below(sm) {
@@ -77,6 +79,6 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 }
 
 .linkActive {
-  color: #044d54;
-  background-color: rgba(4, 77, 84, 0.1);
+  color: var(--organizer-primary-color, #15171a);
+  background-color: rgba(21, 23, 26, 0.07);
 }
