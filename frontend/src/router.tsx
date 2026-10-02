@@ -1,10 +1,9 @@
 import { Navigate, RouteObject, useParams } from "react-router";
 import ErrorPage from "./error-page.tsx";
-import { useEffect, useState } from "react";
-import { useGetMe } from "./queries/useGetMe.ts";
 import { publicEventRouteLoader } from "./routeLoaders/publicEventRouteLoader.ts";
 import { publicOrganizerRouteLoader } from "./routeLoaders/publicOrganizerRouteLoader.ts";
 import { organizerPreviewRouteLoader } from "./routeLoaders/organizerPreviewRouteLoader.ts";
+import { defaultHomeRouteLoader } from "./routeLoaders/defaultHomeRouteLoader.ts";
 
 const RedirectToOrganizerEvents = ({pastEvents}: {pastEvents?: boolean}) => {
     const {organizerId, organizerSlug} = useParams();
@@ -12,27 +11,14 @@ const RedirectToOrganizerEvents = ({pastEvents}: {pastEvents?: boolean}) => {
     return <Navigate to={`/events/${organizerId}/${organizerSlug}${suffix}`} replace={true} />;
 };
 
-const Root = () => {
-    const [redirectPath, setRedirectPath] = useState<string | null>(null);
-    const me = useGetMe();
-
-    useEffect(() => {
-        if (me.isFetched) {
-            const searchParams = typeof window !== 'undefined' ? window.location.search : '';
-            const basePath = me.isSuccess ? "/manage/events" : "/auth/login";
-            setRedirectPath(basePath + searchParams);
-        }
-    }, [me.isFetched]);
-
-    if (redirectPath) {
-        return <Navigate to={redirectPath} replace={true} />;
-    }
-};
-
 export const router: RouteObject[] = [
     {
         path: "",
-        element: <Root />,
+        loader: defaultHomeRouteLoader,
+        async lazy() {
+            const Root = await import("./components/routes/Root");
+            return { Component: Root.default };
+        },
         errorElement: <ErrorPage />
     },
     {
