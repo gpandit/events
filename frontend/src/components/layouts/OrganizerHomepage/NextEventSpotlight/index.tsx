@@ -15,9 +15,16 @@ import classes from './NextEventSpotlight.module.scss';
 interface NextEventSpotlightProps {
     event: Event;
     primaryColor?: string;
+    compact?: boolean;
+    eyebrowLabel?: string;
 }
 
-export const NextEventSpotlight: React.FC<NextEventSpotlightProps> = ({event, primaryColor = '#8b5cf6'}) => {
+export const NextEventSpotlight: React.FC<NextEventSpotlightProps> = ({
+    event,
+    primaryColor = '#8b5cf6',
+    compact = false,
+    eyebrowLabel,
+}) => {
     const dateTextColor = isLightColor(primaryColor) ? '#000000' : '#ffffff';
 
     const hasStartDate = !!event.start_date;
@@ -79,8 +86,8 @@ export const NextEventSpotlight: React.FC<NextEventSpotlightProps> = ({event, pr
 
     return (
         <Link to={eventPath} className={classes.spotlightLink}>
-            <article className={classes.spotlight}>
-                <div className={classes.imageWrapper}>
+            <article className={`${classes.spotlight} ${compact ? classes.spotlightCompact : ''}`}>
+                <div className={`${classes.imageWrapper} ${compact ? classes.imageWrapperCompact : ''}`}>
                     {coverImage ? (
                         <img
                             src={coverImage.url}
@@ -103,7 +110,7 @@ export const NextEventSpotlight: React.FC<NextEventSpotlightProps> = ({event, pr
                 </div>
 
                 <div className={classes.content}>
-                    <span className={classes.eyebrow}>{t`Next Event`}</span>
+                    <span className={classes.eyebrow}>{eyebrowLabel ?? t`Next Event`}</span>
                     <h2 className={classes.title}>{event.title}</h2>
 
                     <div className={classes.metaRow}>

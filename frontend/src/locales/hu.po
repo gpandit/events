@@ -1028,6 +1028,10 @@ msgstr "Minden időpont"
 msgid "All Products"
 msgstr "Minden termék"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
+msgid "All rights reserved."
+msgstr "Minden jog fenntartva."
+
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:109
 msgid "All Statuses"
 msgstr "Minden állapot"
@@ -1789,6 +1793,10 @@ msgstr "Vissza az eseményhez"
 #: src/components/layouts/Checkout/index.tsx:309
 msgid "Back to event page"
 msgstr "Vissza az esemény oldalára"
+
+#: src/components/common/LegalPageLayout/index.tsx:22
+msgid "Back to home"
+msgstr "Vissza a főoldalra"
 
 #: src/components/routes/auth/ForgotPassword/index.tsx:48
 #: src/components/routes/auth/ForgotPassword/index.tsx:74
@@ -2856,6 +2864,10 @@ msgstr "Kapcsolatfelvétel {0}"
 msgid "Contact Email"
 msgstr "Kapcsolattartási e-mail"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+msgid "Contact Us"
+msgstr "Kapcsolat"
+
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
@@ -2917,7 +2929,7 @@ msgid "Control who gets in, and when"
 msgstr "Szabályozza, ki és mikor léphet be"
 
 #: src/components/common/CookieConsentBanner/index.tsx:71
-#: src/components/common/CookieSettingsLink/index.tsx:17
+#: src/components/common/CookieSettingsLink/index.tsx:18
 msgid "Cookie settings"
 msgstr "Cookie-beállítások"
 
@@ -4756,6 +4768,7 @@ msgstr "Esemény frissítve"
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
 #: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
@@ -4769,6 +4782,10 @@ msgstr "Események"
 #: src/components/routes/organizer/Reports/index.tsx:23
 msgid "Events Performance"
 msgstr "Események teljesítménye"
+
+#: src/components/common/PoweredByFooter/index.tsx:60
+msgid "Events powered by"
+msgstr "Az eseményeket üzemelteti:"
 
 #: src/components/routes/admin/Dashboard/index.tsx:450
 msgid "Events Starting in Next 24 Hours"
@@ -5145,6 +5162,7 @@ msgid "Failed to save VAT settings. Please try again."
 msgstr "Az ÁFA beállítások mentése sikertelen. Kérjük, próbálja újra."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:39
 msgid "Failed to send message. Please try again."
 msgstr "Üzenet küldése sikertelen. Kérjük, próbálja újra."
 
@@ -5431,6 +5449,10 @@ msgstr "Vaku ki"
 msgid "Flash on"
 msgstr "Vaku be"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:15
+msgid "Follow us on Instagram"
+msgstr "Kövess minket az Instagramon"
+
 #: src/components/common/ThemeFontControl/index.tsx:65
 msgid "Font Family"
 msgstr "Betűcsalád"
@@ -5468,7 +5490,7 @@ msgstr "Negyedik"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:133
 #: src/components/forms/ProductForm/index.tsx:289
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:191
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:148
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:155
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
 msgid "Free"
@@ -5486,6 +5508,10 @@ msgstr "Pén"
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:27
 msgid "Friday"
 msgstr "Péntek"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
+msgid "Friends of School"
+msgstr "Friends of School"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1067
 msgid "From"
@@ -5577,7 +5603,7 @@ msgid "Get started"
 msgstr "Kezdés"
 
 #: src/components/layouts/EventHomepage/index.tsx:209
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:157
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:164
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "Jegyek vásárlása"
@@ -5874,6 +5900,7 @@ msgid "Hobbies"
 msgstr "Hobbik"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:32
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:110
 msgid "Home"
 msgstr "Kezdőlap"
 
@@ -5901,6 +5928,10 @@ msgstr "Homer"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:412
 msgid "Hours"
 msgstr "Óra"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:63
+msgid "How can we help?"
+msgstr "Miben segíthetünk?"
 
 #: src/components/common/CapacityHelp/index.tsx:110
 #: src/components/common/CapacityHelp/index.tsx:165
@@ -6134,9 +6165,14 @@ msgstr "Kép beszúrása"
 msgid "Insert Liquid Token"
 msgstr "Liquid token beszúrása"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:116
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:53
 msgid "Instagram"
 msgstr "Instagram"
+
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:26
+msgid "Instagram feed"
+msgstr "Instagram hírfolyam"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
 msgid "Instant Stripe payouts"
@@ -6466,6 +6502,10 @@ msgstr "Utolsó válasz"
 msgid "Last Triggered"
 msgstr "Utoljára aktiválva"
 
+#: src/components/common/LegalPageLayout/index.tsx:26
+msgid "Last updated: {updatedDate}"
+msgstr "Utolsó frissítés: {updatedDate}"
+
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:70
 msgid "Last Used"
 msgstr "Utoljára használva"
@@ -6501,6 +6541,10 @@ msgstr "Hagyja üresen, ha ez a beléptetési lista minden időpontra vonatkozzo
 #: src/components/forms/CheckInListForm/index.tsx:106
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "Hagyja bekapcsolva, hogy az esemény minden jegyére vonatkozzon. Kapcsolja ki, ha konkrét jegyeket szeretne választani."
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+msgid "Legal"
+msgstr "Jogi információk"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:305
 msgid "Let them know about the change"
@@ -6825,6 +6869,7 @@ msgstr "Médium"
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:155
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:68
 #: src/components/modals/SendMessageModal/index.tsx:444
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:60
 msgid "Message"
@@ -7005,7 +7050,7 @@ msgstr "Többsoros szövegdoboz"
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/EventHomepage/index.tsx:181
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:47
 msgid "Multiple locations"
 msgstr "Több helyszín"
 
@@ -7018,6 +7063,7 @@ msgid "Music"
 msgstr "Zene"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
 msgid "My Account"
 msgstr "Fiókom"
 
@@ -7118,7 +7164,9 @@ msgstr "Új regisztrációk"
 msgid "New time:"
 msgstr "Új időpont:"
 
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:106
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:113
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:22
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:35
 msgid "Next Event"
 msgstr "Következő esemény"
 
@@ -7799,7 +7847,7 @@ msgstr "Folyamatban"
 
 #: src/components/common/EventCard/index.tsx:111
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:50
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:43
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:50
 #: src/components/routes/event/OccurrencesTab/index.tsx:333
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:478
 #: src/components/routes/my-tickets/index.tsx:56
@@ -7816,7 +7864,7 @@ msgstr "Online – adja meg a csatlakozási adatokat"
 
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:47
 msgid "Online & in-person"
 msgstr "Online és személyesen"
 
@@ -7831,7 +7879,7 @@ msgstr "Online esemény"
 
 #: src/components/layouts/EventHomepage/index.tsx:411
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:132
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:139
 msgid "Online Event"
 msgstr "Online esemény"
 
@@ -8272,6 +8320,10 @@ msgstr "Egyéb"
 #: src/components/common/CheckInStatusModal/index.tsx:177
 msgid "Other Lists (Ticket Not Included)"
 msgstr "Egyéb listák (Jegy nem szerepel)"
+
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
+msgid "Our latest posts are on Instagram — tap below to see them."
+msgstr "Legújabb bejegyzéseink az Instagramon vannak – koppints alább, hogy megnézd őket."
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:121
 msgid "Outcome"
@@ -8738,6 +8790,10 @@ msgstr "Kérjük, adja meg az 5 jegyű kódot."
 msgid "Please enter your VAT number"
 msgstr "Kérjük, adja meg ÁFA számát"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:28
+msgid "Please fill in all fields"
+msgstr "Kérjük, töltsön ki minden mezőt"
+
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
 msgstr "Kérjük, vegye figyelembe"
@@ -8822,8 +8878,12 @@ msgid "Post Checkout message"
 msgstr "Fizetés utáni üzenet"
 
 #: src/components/common/PoweredByFooter/index.tsx:60
-msgid "Powered by"
-msgstr "Üzemelteti"
+#~ msgid "Powered by"
+#~ msgstr "Üzemelteti"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:97
+msgid "Powered by Friends of School, an initiative by"
+msgstr "Üzemelteti a Friends of School, amely a következő kezdeményezése:"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:90
 msgid "Pre Checkout message"
@@ -8914,7 +8974,7 @@ msgstr "Nyomtatás PDF-be"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:125
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
 msgid "Privacy Policy"
 msgstr "Adatvédelmi irányelvek"
 
@@ -9207,6 +9267,10 @@ msgstr "Kérdések átrendezve"
 #: src/components/routes/admin/FailedJobs/index.tsx:257
 msgid "Queue"
 msgstr "Várakozási sor"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:108
+msgid "Quick Links"
+msgstr "Gyors linkek"
 
 #: src/components/forms/PromoCodeForm/index.tsx:145
 msgid "Quick Tip"
@@ -10085,6 +10149,10 @@ msgstr "Biztonságos pénztár"
 msgid "See schedule"
 msgstr "Ütemterv megtekintése"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:17
+msgid "See the latest photos and updates from"
+msgstr "Nézd meg a legújabb fotókat és híreket itt:"
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:310
 msgid "See what Stripe still needs"
 msgstr "Nézze meg, mire van még szüksége a Stripe-nak"
@@ -10307,6 +10375,10 @@ msgstr "E-mailek küldése résztvevőknek, jegytulajdonosoknak vagy rendelés t
 #: src/components/modals/SendMessageModal/index.tsx:568
 msgid "Send me a copy"
 msgstr "Küldjön nekem egy másolatot"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:74
+msgid "Send message"
+msgstr "Üzenet küldése"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:112
 #: src/components/modals/SendMessageModal/index.tsx:542
@@ -11369,7 +11441,7 @@ msgid "Term"
 msgstr "Kulcsszó"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:132
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
 msgid "Terms of Service"
 msgstr "Szolgáltatási feltételek"
 
@@ -12141,6 +12213,11 @@ msgstr "Ma"
 msgid "Toggle columns"
 msgstr "Oszlopok kapcsolása"
 
+#: src/components/common/ThemeToggle/index.tsx:21
+#: src/components/common/ThemeToggle/index.tsx:22
+msgid "Toggle light and dark theme"
+msgstr "Váltás világos és sötét téma között"
+
 #: src/components/routes/event/OccurrencesTab/GroupedOccurrenceTable/index.tsx:46
 msgid "Tomorrow"
 msgstr "Holnap"
@@ -12484,6 +12561,7 @@ msgstr "legfeljebb {perDateAllocation} dátumonként"
 #: src/components/common/EventsDashboardStatusButtons/index.tsx:20
 #: src/components/common/EventStatusBadge/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:45
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:35
 #: src/components/routes/event/OccurrencesTab/index.tsx:513
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:33
 msgid "Upcoming"
@@ -12854,6 +12932,10 @@ msgstr "Videó URL"
 msgid "Vietnamese"
 msgstr "Vietnámi"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:36
+msgid "View @{handle} on Instagram"
+msgstr "@{handle} megtekintése az Instagramon"
+
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:70
 msgid "View All"
 msgstr "Összes megtekintése"
@@ -13029,6 +13111,10 @@ msgstr "Figyelem: Ez a(z) {0} alapértelmezett konfiguráció. A módosítások 
 #: src/components/routes/admin/Configurations/index.tsx:211
 msgid "Warning: This is the system default configuration. Changes will affect all accounts that don't have a specific configuration assigned."
 msgstr "Figyelmeztetés: Ez a rendszer alapértelmezett konfigurációja. A módosítások minden olyan fiókot érintenek, amelyhez nincs konkrét konfiguráció hozzárendelve."
+
+#: src/components/common/PaymentIcons/index.tsx:62
+msgid "We accept"
+msgstr "Elfogadjuk"
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
@@ -13733,6 +13819,11 @@ msgstr "A jelenlegi rendelésed el fog veszni."
 msgid "Your Details"
 msgstr "Az Ön adatai"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:56
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:60
+msgid "Your email"
+msgstr "E-mail-címed"
+
 #: src/components/common/ContactOrganizerModal/index.tsx:79
 msgid "Your Email"
 msgstr "Az Ön e-mail címe"
@@ -13753,9 +13844,18 @@ msgstr "Üzenetét elküldtük."
 msgid "Your message has been sent successfully!"
 msgstr "Üzenetét sikeresen elküldtük!"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:35
+msgid "Your message has been sent. We'll be in touch soon!"
+msgstr "Üzenetét elküldtük. Hamarosan jelentkezünk!"
+
 #: src/components/routes/event/messages.tsx:275
 msgid "Your messages will appear here"
 msgstr "Az üzenetei itt fognak megjelenni"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:48
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:52
+msgid "Your name"
+msgstr "Az Ön neve"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:73
 msgid "Your Name"

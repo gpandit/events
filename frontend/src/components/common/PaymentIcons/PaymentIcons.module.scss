@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    opacity: .65;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.icon {
+    width: 44px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .06);
+}

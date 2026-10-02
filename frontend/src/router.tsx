@@ -557,6 +557,31 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/events/:organizerId/:organizerSlug/instagram",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicOrganizerInstagram = await import("./components/layouts/PublicOrganizerInstagram");
+            return { Component: PublicOrganizerInstagram.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/privacy-policy",
+        async lazy() {
+            const PrivacyPolicy = await import("./components/routes/legal/PrivacyPolicy");
+            return { Component: PrivacyPolicy.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/terms-of-service",
+        async lazy() {
+            const TermsOfService = await import("./components/routes/legal/TermsOfService");
+            return { Component: TermsOfService.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/e/:eventId/:eventSlug",
         async lazy() {
             const EventHomepage = await import("./components/layouts/EventHomepage");

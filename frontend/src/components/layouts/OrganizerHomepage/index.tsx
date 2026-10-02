@@ -1,7 +1,7 @@
 import {Event, GenericPaginatedResponse, Organizer} from "../../../types.ts";
 import {OrganizerPageShell} from "./OrganizerPageShell";
 import {OrganizerHero} from "./OrganizerHero";
-import {NextEventSpotlight} from './NextEventSpotlight';
+import {UpcomingEventsSpotlight} from './UpcomingEventsSpotlight';
 import {OrganizerProfileCard} from "./OrganizerProfileCard";
 import {organizerEventsPath} from "../../../utilites/urlHelper.ts";
 import {validateThemeSettings} from "../../../utilites/themeUtils.ts";
@@ -23,7 +23,7 @@ export const OrganizerHomepage = ({
 
     const events = eventsData?.data || [];
     const isFirstPage = (eventsData?.meta.current_page ?? 1) === 1;
-    const nextEvent = (!isPastEvents && isFirstPage) ? events[0] : undefined;
+    const upcomingEvents = (!isPastEvents && isFirstPage) ? events.slice(0, 3) as Event[] : [];
 
     const themeSettings = validateThemeSettings(organizer.settings?.homepage_theme_settings);
 
@@ -39,9 +39,9 @@ export const OrganizerHomepage = ({
                 />
             }
         >
-            {nextEvent && (
-                <NextEventSpotlight
-                    event={nextEvent as Event}
+            {upcomingEvents.length > 0 && (
+                <UpcomingEventsSpotlight
+                    events={upcomingEvents}
                     primaryColor={themeSettings.accent}
                 />
             )}
