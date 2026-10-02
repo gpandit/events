@@ -618,7 +618,6 @@ $router->prefix('/public')->group(
         $router->post('/organizers/{organizer_id}/contact', SendOrganizerContactMessagePublicAction::class)
             ->middleware('throttle:5,1');
 
-        // Site-wide contact form (footer)
         $router->post('/contact', SubmitSiteContactMessageAction::class)
             ->middleware('throttle:5,1');
 

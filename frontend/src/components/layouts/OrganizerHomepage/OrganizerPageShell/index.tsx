@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {useLocation} from "react-router";
+import {useComputedColorScheme} from "@mantine/core";
 import {Organizer} from "../../../../types.ts";
 import {OrganizerDocumentHead} from "../../../common/OrganizerDocumentHead";
 import {StatusToggle} from "../../../common/StatusToggle";
@@ -34,8 +35,11 @@ const ScrollToTop = () => {
 export const OrganizerPageShell: React.FC<OrganizerPageShellProps> = ({organizer, activeNav, hero, children}) => {
     useOrganizerTrackingPixels(organizer?.settings?.tracking_pixels);
 
+    const computedColorScheme = useComputedColorScheme('light');
+
     const rawThemeSettings = organizer?.settings?.homepage_theme_settings;
-    const themeSettings = validateThemeSettings(rawThemeSettings);
+    const organizerThemeSettings = validateThemeSettings(rawThemeSettings);
+    const themeSettings = {...organizerThemeSettings, mode: computedColorScheme};
     const cssVars = computeThemeVariables(themeSettings);
     const backgroundType = themeSettings.background_type;
 

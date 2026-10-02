@@ -342,6 +342,15 @@ msgstr "1 tijdstip beschikbaar"
 msgid "1 week before event"
 msgstr "1 week voor het evenement"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:18
+#: src/components/routes/legal/TermsOfService/index.tsx:17
+msgid "1. Who we are"
+msgstr "1. Wie wij zijn"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:113
+msgid "10. Changes to this policy"
+msgstr "10. Wijzigingen in dit beleid"
+
 #: src/components/common/CapacityHelp/index.tsx:28
 msgid "12 mats in the studio and one Drop-in ticket."
 msgstr "12 matten in de studio en één losse les."
@@ -355,6 +364,14 @@ msgstr "Voorbeeldstraat 123"
 msgid "135+ currencies & 40+ payment methods"
 msgstr "Meer dan 135 valuta's en meer dan 40 betaalmethoden"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:25
+msgid "2. Event registrations and tickets"
+msgstr "2. Evenementregistraties en tickets"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:27
+msgid "2. Information we collect"
+msgstr "2. Informatie die wij verzamelen"
+
 #: src/components/common/WidgetEditor/index.tsx:230
 msgid "20"
 msgstr "20"
@@ -362,6 +379,59 @@ msgstr "20"
 #: src/components/common/CapacityHelp/index.tsx:61
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 plaatsen per datum, plus 30 T-shirts voor de hele reeks."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:51
+msgid "3. How we use your information"
+msgstr "3. Hoe wij uw informatie gebruiken"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:34
+msgid "3. Payments"
+msgstr "3. Betalingen"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+msgid "4. Payment processing"
+msgstr "4. Betalingsverwerking"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:43
+msgid "4. Refunds and cancellations"
+msgstr "4. Terugbetalingen en annuleringen"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:52
+msgid "5. Acceptable use"
+msgstr "5. Aanvaardbaar gebruik"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:71
+msgid "5. Cookies"
+msgstr "5. Cookies"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:61
+msgid "6. Intellectual property"
+msgstr "6. Intellectueel eigendom"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:80
+msgid "6. Sharing your information"
+msgstr "6. Het delen van uw informatie"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
+msgid "7. Data retention"
+msgstr "7. Gegevensbewaring"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:70
+msgid "7. Limitation of liability"
+msgstr "7. Beperking van aansprakelijkheid"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:79
+msgid "8. Changes to these Terms"
+msgstr "8. Wijzigingen in deze Voorwaarden"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:97
+msgid "8. Your rights"
+msgstr "8. Uw rechten"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:105
+#: src/components/routes/legal/TermsOfService/index.tsx:87
+msgid "9. Contact us"
+msgstr "9. Contact met ons opnemen"
 
 #: src/components/routes/admin/Announcements/index.tsx:319
 msgid "A button label is required when a URL is set"
@@ -1216,6 +1286,10 @@ msgstr "Antwoorden gegeven tijdens het afrekenen (bijv. maaltijdkeuze)"
 msgid "Any dates you've manually customized will be kept."
 msgstr "Datums die je handmatig hebt aangepast, blijven behouden."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:39
+msgid "Any messages or information you submit through our contact forms."
+msgstr "Alle berichten of informatie die u via onze contactformulieren indient."
+
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:62
 msgid "Any queries from product holders will be sent to this email address. This will also be used as the \"reply-to\" address for all emails sent from this event"
 msgstr "Vragen van producthouders worden naar dit e-mailadres gestuurd. Dit e-mailadres wordt ook gebruikt als"
@@ -1875,6 +1949,10 @@ msgstr "Omdat dit account voltooide bestellingen heeft, worden transactiegegeven
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:293
 msgid "Billing Address"
 msgstr "Factuuradres"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:35
+msgid "Billing information necessary to process ticket purchases (handled securely by our payment processor — see Section 4)."
+msgstr "Factuurgegevens die nodig zijn om ticketaankopen te verwerken (veilig verwerkt door onze betalingsverwerker — zie Sectie 4)."
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
 msgid "Billing Settings"
@@ -4779,6 +4857,10 @@ msgstr "Evenement bijgewerkt"
 msgid "Events"
 msgstr "Evenementen"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:27
+msgid "Events listed on this site are organized by Friends of School and affiliated community organizers. Ticket availability, pricing, and event details are set by the organizer and may change without notice. Please review each event's details carefully before registering."
+msgstr "Evenementen op deze site worden georganiseerd door Friends of School en aangesloten community-organisatoren. Beschikbaarheid, prijzen en details van tickets worden door de organisator bepaald en kunnen zonder kennisgeving wijzigen. Bekijk de details van elk evenement zorgvuldig voordat u zich aanmeldt."
+
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:120
 #: src/components/routes/organizer/Reports/index.tsx:23
 msgid "Events Performance"
@@ -6026,6 +6108,10 @@ msgstr "Als je deze wijziging niet hebt aangevraagd, verander dan onmiddellijk j
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "Als u een account bij ons heeft, ontvangt u een e-mail met instructies over hoe u uw wachtwoord opnieuw kunt instellen."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:107
+msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
+msgstr "Als u vragen heeft over dit privacybeleid, neem dan contact op met Aqualeo Digecom FZ LLC via <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
 msgid "Image"
@@ -8551,6 +8637,10 @@ msgstr "Betaling gelukt!"
 msgid "Payment Terms"
 msgstr "Betalingsvoorwaarden"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:36
+msgid "Payments are processed securely through Stripe. By completing a purchase, you authorize us (via our payment processor) to charge the payment method you provide for the applicable ticket price and any associated fees."
+msgstr "Betalingen worden veilig verwerkt via Stripe. Door een aankoop te voltooien, machtigt u ons (via onze betalingsverwerker) om de door u opgegeven betaalmethode te belasten voor de toepasselijke ticketprijs en eventuele bijkomende kosten."
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "Betalingen niet beschikbaar"
@@ -8976,6 +9066,7 @@ msgstr "Afdrukken naar PDF"
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "Privacybeleid"
 
@@ -9260,6 +9351,10 @@ msgstr "Vragen"
 msgid "Questions & Answers"
 msgstr "Vragen en antwoorden"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:89
+msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
+msgstr "Vragen over deze Voorwaarden kunnen worden gestuurd naar <0>fos@aqualeo.co</0>."
+
 #: src/components/common/QuestionsTable/index.tsx:183
 msgid "Questions reordered"
 msgstr "Vragen herschikt"
@@ -9426,6 +9521,10 @@ msgstr "Alle bestellingen voor deze datum terugbetalen"
 #: src/components/modals/RefundOrderModal/index.tsx:115
 msgid "Refund amount"
 msgstr "Terugbetalingsbedrag"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:45
+msgid "Refund and cancellation terms are set by the individual event organizer and will be stated on the event page where applicable. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
+msgstr "Terugbetalings- en annuleringsvoorwaarden worden bepaald door de individuele evenementorganisator en worden indien van toepassing vermeld op de evenementpagina. Als een evenement door de organisator wordt geannuleerd, zullen wij redelijke inspanningen leveren om geregistreerde deelnemers op de hoogte te stellen."
 
 #: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund failed"
@@ -11443,6 +11542,7 @@ msgstr "Zoekterm"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "Servicevoorwaarden"
 
@@ -11518,6 +11618,10 @@ msgstr "Het e-mailadres is gewijzigd. De deelnemer ontvangt een nieuw ticket op 
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:12
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "Het evenement dat je zoekt is momenteel niet beschikbaar. Mogelijk is het verwijderd, verlopen of is de URL onjuist."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:63
+msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
+msgstr "De naam, het logo en de inhoud van Friends of School zijn eigendom van Aqualeo Digecom FZ LLC en mogen niet zonder toestemming worden gebruikt. Evenementinhoud (zoals beschrijvingen en afbeeldingen) blijft eigendom van de betreffende organisator."
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -11694,6 +11798,10 @@ msgstr "Deze sjablonen worden gebruikt als standaard voor alle evenementen in uw
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:332
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "Deze sjablonen overschrijven de organisator-standaarden alleen voor dit evenement. Als hier geen aangepaste sjabloon is ingesteld, wordt in plaats daarvan de organisatorsjabloon gebruikt."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:10
+msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
+msgstr "Deze Gebruiksvoorwaarden (\"Voorwaarden\") zijn van toepassing op uw gebruik van deze website en het Friends of School-platform, beheerd door Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"wij\" of \"ons\"). Door deze site te bezoeken of een ticket te kopen, gaat u akkoord met deze Voorwaarden."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Third"
@@ -11930,6 +12038,10 @@ msgstr "Dit overschrijft alle zichtbaarheidsinstellingen en verbergt het product
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "Dit voorbeeld toont hoe uw e-mail eruit ziet met voorbeeldgegevens. Werkelijke e-mails gebruiken echte waarden."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:10
+msgid "This Privacy Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
+msgstr "Dit privacybeleid legt uit hoe Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"wij\" of \"ons\"), de beheerder van het Friends of School-platform en deze website, uw persoonlijke gegevens verzamelt, gebruikt en beschermt wanneer u deze site bezoekt, zich registreert voor een evenement of anderszins met ons interacteert."
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:80
 msgid "This product cannot be deleted because it is associated with an order. You can hide it instead."
 msgstr "Dit product kan niet worden verwijderd omdat het gekoppeld is aan een bestelling. In plaats daarvan kunt u het verbergen."
@@ -11958,6 +12070,10 @@ msgstr "Dit rapport is alleen voor informatieve doeleinden. Raadpleeg altijd een
 msgid "This reset password link is invalid or expired."
 msgstr "Deze vraag is alleen zichtbaar voor de organisator van het evenement."
 
+#: src/components/routes/legal/TermsOfService/index.tsx:72
+msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
+msgstr "Deze site wordt aangeboden \"zoals ze is\". Voor zover wettelijk toegestaan, is Aqualeo Digecom FZ LLC niet aansprakelijk voor indirecte, incidentele of gevolgschade die voortvloeit uit uw gebruik van deze site of deelname aan een vermeld evenement."
+
 #: src/components/common/AttendeeTicket/index.tsx:148
 msgid "This ticket is no longer valid"
 msgstr "Dit ticket is niet langer geldig"
@@ -11973,6 +12089,14 @@ msgstr "Het aantal van dit niveau wordt gedeeld door alle datums"
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Deze gebruiker is niet actief, omdat hij zijn uitnodiging niet heeft geaccepteerd."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:19
+msgid "This website is operated by Aqualeo Digecom FZ LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
+msgstr "Deze website wordt beheerd door Aqualeo Digecom FZ LLC. Voor vragen over deze Voorwaarden kunt u contact met ons opnemen via <0>fos@aqualeo.co</0>."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:20
+msgid "This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
+msgstr "Deze website wordt beheerd door Aqualeo Digecom FZ LLC. Als u vragen heeft over dit beleid of over hoe uw gegevens worden verwerkt, kunt u contact met ons opnemen via <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:369
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -12075,6 +12199,10 @@ msgstr "Ticket niet gevonden"
 #: src/components/routes/event/products.tsx:89
 msgid "Ticket or Product"
 msgstr "Ticket of product"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
+msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
+msgstr "Ticketbetalingen op deze site worden veilig verwerkt door Stripe, een PCI-conforme externe betalingsverwerker. Wij slaan uw volledige kaartgegevens niet op onze servers op. Raadpleeg <0>het privacybeleid van Stripe</0> voor details over hoe Stripe uw betalingsinformatie verwerkt."
 
 #: src/components/routes/event/TicketDesigner/TicketDesignerPrint.tsx:99
 msgid "Ticket Preview for"
@@ -12199,9 +12327,25 @@ msgstr "tot"
 msgid "To"
 msgstr "Aan"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:54
+msgid "To communicate with you about events you've registered for."
+msgstr "Om met u te communiceren over evenementen waarvoor u zich heeft geregistreerd."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
+msgid "To improve and secure our website and services."
+msgstr "Om onze website en diensten te verbeteren en te beveiligen."
+
 #: src/components/modals/SendMessageModal/index.tsx:315
 msgid "To increase your limits, contact us at"
 msgstr "Om uw limieten te verhogen, neem contact met ons op via"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:53
+msgid "To process event registrations and ticket purchases."
+msgstr "Om evenementregistraties en ticketaankopen te verwerken."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+msgid "To respond to enquiries submitted through our contact form."
+msgstr "Om te reageren op vragen die via ons contactformulier zijn ingediend."
 
 #: src/components/common/OccurrenceSelect/index.tsx:148
 #: src/components/common/PeriodSelector/index.tsx:30
@@ -13117,6 +13261,14 @@ msgstr "Waarschuwing: dit is de standaardsysteemconfiguratie. Wijzigingen zijn v
 msgid "We accept"
 msgstr "Wij accepteren"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
+msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
+msgstr "Wij verzamelen ook automatisch beperkte technische informatie, zoals uw IP-adres, browsertype en bezochte pagina's, om de site te kunnen beheren en verbeteren. Waar hiervoor cookies worden gebruikt, kunt u uw voorkeuren op elk moment aanpassen via de link cookie-instellingen in de footer."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
+msgid "We collect information you provide directly to us, including:"
+msgstr "Wij verzamelen informatie die u ons rechtstreeks verstrekt, waaronder:"
+
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "We konden je betaling niet verwerken. Probeer het opnieuw of neem contact op met de klantenservice."
@@ -13169,9 +13321,21 @@ msgstr "We kunnen Stripe op dit moment niet bereiken. Probeer het zo meteen opni
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "We konden de categorieën niet opnieuw ordenen. Probeer het opnieuw."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:82
+msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
+msgstr "Wij verkopen uw persoonlijke gegevens niet. Wij delen informatie alleen met dienstverleners die ons helpen de site te beheren (zoals onze betalingsverwerker en e-mailleverancier), of wanneer dit wettelijk vereist is."
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:418
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Er is een probleem opgetreden bij het laden van deze pagina. Probeer het opnieuw."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:81
+msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
+msgstr "Wij kunnen deze Voorwaarden van tijd tot tijd bijwerken. Voortgezet gebruik van de site na publicatie van wijzigingen geldt als aanvaarding van de bijgewerkte Voorwaarden."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
+msgstr "Wij kunnen dit privacybeleid van tijd tot tijd bijwerken. De datum \"Laatst bijgewerkt\" bovenaan deze pagina geeft de meest recente wijzigingen weer."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:236
 msgid "We partner with Stripe to send payouts straight to your bank account."
@@ -13190,6 +13354,10 @@ msgstr "We raden afmetingen aan van 2160px bij 1080px en een maximale bestandsgr
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "We raden een formaat van 400x400 px aan, met een maximale bestandsgrootte van 5 MB"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:91
+msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
+msgstr "Wij bewaren persoonlijke gegevens zolang als nodig is om de in dit beleid beschreven doeleinden te vervullen, inclusief het voldoen aan wettelijke, boekhoudkundige of rapportageverplichtingen."
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:158
 msgid "We sent a verification link to {0}"
 msgstr "We hebben een verificatielink gestuurd naar {0}"
@@ -13197,6 +13365,10 @@ msgstr "We hebben een verificatielink gestuurd naar {0}"
 #: src/components/common/CookieConsentBanner/index.tsx:50
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "We gebruiken cookies om te begrijpen hoe de site wordt gebruikt en om uw ervaring te verbeteren."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
+msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
+msgstr "Wij gebruiken essentiële cookies die nodig zijn om de site te laten functioneren, en, met uw toestemming, optionele analyse- en advertentiecookies om te begrijpen hoe de site wordt gebruikt. U kunt uw cookievoorkeuren op elk moment wijzigen via de link \"Cookie-instellingen\" in de footer van de website."
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -13593,6 +13765,10 @@ msgstr "Ja, verwijder ze"
 msgid "Yoga class"
 msgstr "Yogales"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:54
+msgid "You agree not to misuse this website, including attempting to interfere with its normal operation, submitting false information when registering for an event, or using the contact form to send spam or unlawful content."
+msgstr "U stemt ermee in deze website niet te misbruiken, waaronder het verstoren van de normale werking, het indienen van valse informatie bij registratie voor een evenement, of het gebruik van het contactformulier om spam of onwettige inhoud te versturen."
+
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:53
 msgid "You are changing your email to <0>{0}</0>."
 msgstr "Je wijzigt je e-mailadres in <0>{0}</0>."
@@ -13687,6 +13863,10 @@ msgstr "Je hebt belastingen en kosten toegevoegd aan een Gratis product. Wilt u 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:729
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Je hebt niet-opgeslagen wijzigingen. Weet je zeker dat je ze wilt verwerpen?"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:99
+msgid "You may request access to, correction of, or deletion of your personal information by contacting us at <0>fos@aqualeo.co</0>."
+msgstr "U kunt toegang tot, correctie van of verwijdering van uw persoonlijke gegevens aanvragen door contact met ons op te nemen via <0>fos@aqualeo.co</0>."
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"
@@ -13861,6 +14041,10 @@ msgstr "Jouw naam"
 #: src/components/common/ContactOrganizerModal/index.tsx:73
 msgid "Your Name"
 msgstr "Jouw naam"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:31
+msgid "Your name, email address, and contact details when you register for an event or contact us."
+msgstr "Uw naam, e-mailadres en contactgegevens wanneer u zich registreert voor een evenement of contact met ons opneemt."
 
 #: src/components/routes/auth/ResetPassword/index.tsx:58
 msgid "Your new password must be at least 8 characters long."

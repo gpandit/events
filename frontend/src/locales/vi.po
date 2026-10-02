@@ -341,6 +341,15 @@ msgstr "1 giờ khả dụng"
 msgid "1 week before event"
 msgstr "1 tuần trước sự kiện"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:18
+#: src/components/routes/legal/TermsOfService/index.tsx:17
+msgid "1. Who we are"
+msgstr "1. Chúng tôi là ai"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:113
+msgid "10. Changes to this policy"
+msgstr "10. Thay đổi đối với chính sách này"
+
 #: src/components/common/CapacityHelp/index.tsx:28
 msgid "12 mats in the studio and one Drop-in ticket."
 msgstr "12 thảm trong phòng tập và một vé lẻ."
@@ -354,6 +363,14 @@ msgstr "123 Đường Mẫu"
 msgid "135+ currencies & 40+ payment methods"
 msgstr "Hơn 135 loại tiền tệ và hơn 40 phương thức thanh toán"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:25
+msgid "2. Event registrations and tickets"
+msgstr "2. Đăng ký sự kiện và vé"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:27
+msgid "2. Information we collect"
+msgstr "2. Thông tin chúng tôi thu thập"
+
 #: src/components/common/WidgetEditor/index.tsx:230
 msgid "20"
 msgstr "20"
@@ -361,6 +378,59 @@ msgstr "20"
 #: src/components/common/CapacityHelp/index.tsx:61
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 chỗ mỗi ngày, cộng thêm 30 áo thun cho cả đợt."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:51
+msgid "3. How we use your information"
+msgstr "3. Cách chúng tôi sử dụng thông tin của bạn"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:34
+msgid "3. Payments"
+msgstr "3. Thanh toán"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+msgid "4. Payment processing"
+msgstr "4. Xử lý thanh toán"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:43
+msgid "4. Refunds and cancellations"
+msgstr "4. Hoàn tiền và hủy"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:52
+msgid "5. Acceptable use"
+msgstr "5. Sử dụng hợp lệ"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:71
+msgid "5. Cookies"
+msgstr "5. Cookie"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:61
+msgid "6. Intellectual property"
+msgstr "6. Sở hữu trí tuệ"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:80
+msgid "6. Sharing your information"
+msgstr "6. Chia sẻ thông tin của bạn"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
+msgid "7. Data retention"
+msgstr "7. Lưu trữ dữ liệu"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:70
+msgid "7. Limitation of liability"
+msgstr "7. Giới hạn trách nhiệm"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:79
+msgid "8. Changes to these Terms"
+msgstr "8. Thay đổi đối với các Điều khoản này"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:97
+msgid "8. Your rights"
+msgstr "8. Quyền của bạn"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:105
+#: src/components/routes/legal/TermsOfService/index.tsx:87
+msgid "9. Contact us"
+msgstr "9. Liên hệ chúng tôi"
 
 #: src/components/routes/admin/Announcements/index.tsx:319
 msgid "A button label is required when a URL is set"
@@ -1215,6 +1285,10 @@ msgstr "Câu trả lời được cung cấp khi thanh toán (ví dụ: chọn s
 msgid "Any dates you've manually customized will be kept."
 msgstr "Những ngày bạn đã tùy chỉnh thủ công sẽ được giữ nguyên."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:39
+msgid "Any messages or information you submit through our contact forms."
+msgstr "Bất kỳ tin nhắn hoặc thông tin nào bạn gửi qua biểu mẫu liên hệ của chúng tôi."
+
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:62
 msgid "Any queries from product holders will be sent to this email address. This will also be used as the \"reply-to\" address for all emails sent from this event"
 msgstr "Mọi thắc mắc từ chủ sở hữu sản phẩm sẽ được gửi đến địa chỉ email này. Địa chỉ này cũng sẽ được sử dụng làm địa chỉ \"trả lời\" cho tất cả email gửi từ sự kiện này."
@@ -1874,6 +1948,10 @@ msgstr "Vì tài khoản này có các đơn hàng đã hoàn tất, hồ sơ gi
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:293
 msgid "Billing Address"
 msgstr "Địa chỉ thanh toán"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:35
+msgid "Billing information necessary to process ticket purchases (handled securely by our payment processor — see Section 4)."
+msgstr "Thông tin thanh toán cần thiết để xử lý việc mua vé (được xử lý an toàn bởi bên xử lý thanh toán của chúng tôi — xem Mục 4)."
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
 msgid "Billing Settings"
@@ -4778,6 +4856,10 @@ msgstr "Sự kiện đã cập nhật"
 msgid "Events"
 msgstr "Sự kiện"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:27
+msgid "Events listed on this site are organized by Friends of School and affiliated community organizers. Ticket availability, pricing, and event details are set by the organizer and may change without notice. Please review each event's details carefully before registering."
+msgstr "Các sự kiện được liệt kê trên trang này do Friends of School và các đơn vị tổ chức cộng đồng liên kết tổ chức. Tình trạng còn vé, giá cả và chi tiết sự kiện do ban tổ chức quyết định và có thể thay đổi mà không cần báo trước. Vui lòng xem kỹ chi tiết từng sự kiện trước khi đăng ký."
+
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:120
 #: src/components/routes/organizer/Reports/index.tsx:23
 msgid "Events Performance"
@@ -6025,6 +6107,10 @@ msgstr "Nếu bạn không yêu cầu thay đổi này, vui lòng thay đổi ng
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "Nếu bạn có tài khoản với chúng tôi, bạn sẽ nhận được email với hướng dẫn về cách đặt lại mật khẩu."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:107
+msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
+msgstr "Nếu bạn có thắc mắc về Chính sách quyền riêng tư này, vui lòng liên hệ Aqualeo Digecom FZ LLC tại <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
 msgid "Image"
@@ -8550,6 +8636,10 @@ msgstr "Thanh toán thành công!"
 msgid "Payment Terms"
 msgstr "Điều khoản thanh toán"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:36
+msgid "Payments are processed securely through Stripe. By completing a purchase, you authorize us (via our payment processor) to charge the payment method you provide for the applicable ticket price and any associated fees."
+msgstr "Thanh toán được xử lý an toàn qua Stripe. Khi hoàn tất giao dịch mua, bạn cho phép chúng tôi (thông qua bên xử lý thanh toán) tính phí vào phương thức thanh toán bạn cung cấp cho giá vé tương ứng và mọi khoản phí liên quan."
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "Thanh toán không khả dụng"
@@ -8975,6 +9065,7 @@ msgstr "In ra PDF"
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "Chính sách quyền riêng tư"
 
@@ -9259,6 +9350,10 @@ msgstr "Câu hỏi"
 msgid "Questions & Answers"
 msgstr "Câu hỏi"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:89
+msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
+msgstr "Các câu hỏi về Điều khoản này có thể gửi đến <0>fos@aqualeo.co</0>."
+
 #: src/components/common/QuestionsTable/index.tsx:183
 msgid "Questions reordered"
 msgstr "Đã sắp xếp lại câu hỏi"
@@ -9425,6 +9520,10 @@ msgstr "Hoàn tiền toàn bộ đơn hàng của ngày này"
 #: src/components/modals/RefundOrderModal/index.tsx:115
 msgid "Refund amount"
 msgstr "Số tiền hoàn lại"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:45
+msgid "Refund and cancellation terms are set by the individual event organizer and will be stated on the event page where applicable. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
+msgstr "Điều khoản hoàn tiền và hủy do từng ban tổ chức sự kiện quy định và sẽ được nêu trên trang sự kiện nếu có. Nếu sự kiện bị ban tổ chức hủy, chúng tôi sẽ nỗ lực hợp lý để thông báo cho người tham dự đã đăng ký."
 
 #: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund failed"
@@ -11442,6 +11541,7 @@ msgstr "Từ khóa"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "Điều khoản dịch vụ"
 
@@ -11517,6 +11617,10 @@ msgstr "Địa chỉ email đã được thay đổi. Người tham dự sẽ nh
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:12
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "Sự kiện bạn đang tìm kiếm hiện không khả dụng. Nó có thể đã bị xóa, hết hạn hoặc URL không chính xác."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:63
+msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
+msgstr "Tên, logo và nội dung trang Friends of School là tài sản của Aqualeo Digecom FZ LLC và không được sử dụng khi chưa được phép. Nội dung sự kiện (như mô tả và hình ảnh) vẫn thuộc sở hữu của ban tổ chức tương ứng."
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -11693,6 +11797,10 @@ msgstr "Các mẫu này sẽ được sử dụng làm mặc định cho tất c
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:332
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "Các mẫu này sẽ ghi đè mặc định của tổ chức chỉ cho sự kiện này. Nếu không có mẫu tùy chỉnh nào được thiết lập ở đây, mẫu của tổ chức sẽ được sử dụng thay thế."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:10
+msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
+msgstr "Các Điều khoản Dịch vụ này (\"Điều khoản\") điều chỉnh việc bạn sử dụng trang web này và nền tảng Friends of School, do Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"chúng tôi\") vận hành. Khi truy cập trang này hoặc mua vé, bạn đồng ý với các Điều khoản này."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Third"
@@ -11929,6 +12037,10 @@ msgstr "Điều này ghi đè tất cả các cài đặt khả năng hiển th�
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "Xem trước này cho thấy email của bạn sẽ trông như thế nào với dữ liệu mẫu. Email thực tế sẽ sử dụng giá trị thực."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:10
+msgid "This Privacy Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
+msgstr "Chính sách quyền riêng tư này giải thích cách Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"chúng tôi\"), đơn vị vận hành nền tảng Friends of School và trang web này, thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn khi bạn truy cập trang này, đăng ký sự kiện hoặc tương tác khác với chúng tôi."
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:80
 msgid "This product cannot be deleted because it is associated with an order. You can hide it instead."
 msgstr "Sản phẩm này không thể bị xóa vì nó được liên kết với một đơn hàng. "
@@ -11957,6 +12069,10 @@ msgstr "Báo cáo này chỉ dành cho mục đích thông tin. Luôn tham khả
 msgid "This reset password link is invalid or expired."
 msgstr "Liên kết mật khẩu đặt lại này không hợp lệ hoặc hết hạn."
 
+#: src/components/routes/legal/TermsOfService/index.tsx:72
+msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
+msgstr "Trang này được cung cấp \"nguyên trạng\". Trong phạm vi tối đa pháp luật cho phép, Aqualeo Digecom FZ LLC không chịu trách nhiệm cho bất kỳ thiệt hại gián tiếp, ngẫu nhiên hoặc do hậu quả nào phát sinh từ việc bạn sử dụng trang này hoặc tham dự bất kỳ sự kiện nào được liệt kê."
+
 #: src/components/common/AttendeeTicket/index.tsx:148
 msgid "This ticket is no longer valid"
 msgstr "Vé này không còn hiệu lực"
@@ -11972,6 +12088,14 @@ msgstr "Số lượng của bậc này được chia sẻ cho tất cả các ng
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Người dùng này không hoạt động, vì họ chưa chấp nhận lời mời của họ."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:19
+msgid "This website is operated by Aqualeo Digecom FZ LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
+msgstr "Trang web này do Aqualeo Digecom FZ LLC vận hành. Nếu có thắc mắc về các Điều khoản này, hãy liên hệ chúng tôi tại <0>fos@aqualeo.co</0>."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:20
+msgid "This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
+msgstr "Trang web này do Aqualeo Digecom FZ LLC vận hành. Nếu bạn có thắc mắc về chính sách này hoặc cách xử lý dữ liệu của bạn, bạn có thể liên hệ chúng tôi tại <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:369
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -12074,6 +12198,10 @@ msgstr "Không tìm thấy vé"
 #: src/components/routes/event/products.tsx:89
 msgid "Ticket or Product"
 msgstr "Vé hoặc sản phẩm"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
+msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
+msgstr "Các khoản thanh toán vé trên trang này được xử lý an toàn bởi Stripe, một bên xử lý thanh toán thứ ba tuân thủ PCI. Chúng tôi không lưu trữ đầy đủ thông tin thẻ của bạn trên máy chủ của mình. Vui lòng xem <0>Chính sách quyền riêng tư của Stripe</0> để biết chi tiết về cách Stripe xử lý thông tin thanh toán của bạn."
 
 #: src/components/routes/event/TicketDesigner/TicketDesignerPrint.tsx:99
 msgid "Ticket Preview for"
@@ -12198,9 +12326,25 @@ msgstr "đến"
 msgid "To"
 msgstr "Đến"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:54
+msgid "To communicate with you about events you've registered for."
+msgstr "Để liên lạc với bạn về các sự kiện bạn đã đăng ký."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
+msgid "To improve and secure our website and services."
+msgstr "Để cải thiện và bảo mật trang web và dịch vụ của chúng tôi."
+
 #: src/components/modals/SendMessageModal/index.tsx:315
 msgid "To increase your limits, contact us at"
 msgstr "Để tăng giới hạn của bạn, hãy liên hệ với chúng tôi tại"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:53
+msgid "To process event registrations and ticket purchases."
+msgstr "Để xử lý việc đăng ký sự kiện và mua vé."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+msgid "To respond to enquiries submitted through our contact form."
+msgstr "Để phản hồi các thắc mắc gửi qua biểu mẫu liên hệ của chúng tôi."
 
 #: src/components/common/OccurrenceSelect/index.tsx:148
 #: src/components/common/PeriodSelector/index.tsx:30
@@ -13116,6 +13260,14 @@ msgstr "Cảnh báo: Đây là cấu hình mặc định của hệ thống. Tha
 msgid "We accept"
 msgstr "Chúng tôi chấp nhận"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
+msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
+msgstr "Chúng tôi cũng tự động thu thập thông tin kỹ thuật giới hạn, chẳng hạn như địa chỉ IP, loại trình duyệt và các trang đã truy cập, để giúp chúng tôi vận hành và cải thiện trang web. Khi cookie được sử dụng cho mục đích này, bạn có thể kiểm soát tùy chọn của mình bất kỳ lúc nào qua liên kết cài đặt cookie ở chân trang."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
+msgid "We collect information you provide directly to us, including:"
+msgstr "Chúng tôi thu thập thông tin bạn cung cấp trực tiếp cho chúng tôi, bao gồm:"
+
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "Chúng tôi không thể xử lý thanh toán của bạn. Vui lòng thử lại hoặc liên hệ với ban tổ chức."
@@ -13168,9 +13320,21 @@ msgstr "Hiện chúng tôi không kết nối được tới Stripe. Vui lòng t
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Chúng tôi không thể sắp xếp lại các danh mục. Vui lòng thử lại."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:82
+msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
+msgstr "Chúng tôi không bán thông tin cá nhân của bạn. Chúng tôi chỉ chia sẻ thông tin với các nhà cung cấp dịch vụ giúp chúng tôi vận hành trang web (như bên xử lý thanh toán và nhà cung cấp dịch vụ email), hoặc khi pháp luật yêu cầu."
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:418
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Đã xảy ra sự cố khi tải trang này. Vui lòng thử lại."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:81
+msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
+msgstr "Chúng tôi có thể cập nhật các Điều khoản này theo thời gian. Việc tiếp tục sử dụng trang web sau khi các thay đổi được đăng tải đồng nghĩa với việc chấp nhận các Điều khoản đã cập nhật."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
+msgstr "Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian. Ngày \"Cập nhật lần cuối\" ở đầu trang này phản ánh các thay đổi gần đây nhất."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:236
 msgid "We partner with Stripe to send payouts straight to your bank account."
@@ -13189,6 +13353,10 @@ msgstr "Chúng tôi đề xuất kích thước 2160px bằng 1080px và kích t
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Chúng tôi khuyến nghị kích thước 400px x 400px và dung lượng tối đa 5MB"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:91
+msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
+msgstr "Chúng tôi lưu giữ thông tin cá nhân trong thời gian cần thiết để thực hiện các mục đích nêu trong chính sách này, bao gồm tuân thủ các nghĩa vụ pháp lý, kế toán hoặc báo cáo."
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:158
 msgid "We sent a verification link to {0}"
 msgstr "Chúng tôi đã gửi liên kết xác minh tới {0}"
@@ -13196,6 +13364,10 @@ msgstr "Chúng tôi đã gửi liên kết xác minh tới {0}"
 #: src/components/common/CookieConsentBanner/index.tsx:50
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "Chúng tôi sử dụng cookie để hiểu cách trang web được sử dụng và cải thiện trải nghiệm của bạn."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
+msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
+msgstr "Chúng tôi sử dụng cookie thiết yếu cần thiết để trang web hoạt động, và khi được bạn đồng ý, các cookie phân tích và quảng cáo tùy chọn để giúp chúng tôi hiểu cách trang web được sử dụng. Bạn có thể thay đổi tùy chọn cookie bất kỳ lúc nào bằng liên kết \"Cài đặt cookie\" ở chân trang web."
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -13592,6 +13764,10 @@ msgstr "Có, loại bỏ chúng"
 msgid "Yoga class"
 msgstr "Lớp yoga"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:54
+msgid "You agree not to misuse this website, including attempting to interfere with its normal operation, submitting false information when registering for an event, or using the contact form to send spam or unlawful content."
+msgstr "Bạn đồng ý không lạm dụng trang web này, bao gồm việc cố gắng can thiệp vào hoạt động bình thường của trang, cung cấp thông tin sai khi đăng ký sự kiện, hoặc sử dụng biểu mẫu liên hệ để gửi thư rác hoặc nội dung bất hợp pháp."
+
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:53
 msgid "You are changing your email to <0>{0}</0>."
 msgstr "Bạn đang thay đổi email của mình thành <0>{0}</0>."
@@ -13686,6 +13862,10 @@ msgstr "Bạn có thuế và phí được thêm vào một sản phẩm miễn 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:729
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Bạn có thay đổi chưa lưu. Bạn có chắc muốn bỏ chúng không?"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:99
+msgid "You may request access to, correction of, or deletion of your personal information by contacting us at <0>fos@aqualeo.co</0>."
+msgstr "Bạn có thể yêu cầu truy cập, chỉnh sửa hoặc xóa thông tin cá nhân của mình bằng cách liên hệ chúng tôi tại <0>fos@aqualeo.co</0>."
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"
@@ -13860,6 +14040,10 @@ msgstr "Tên của bạn"
 #: src/components/common/ContactOrganizerModal/index.tsx:73
 msgid "Your Name"
 msgstr "Tên của bạn"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:31
+msgid "Your name, email address, and contact details when you register for an event or contact us."
+msgstr "Tên, địa chỉ email và thông tin liên hệ của bạn khi bạn đăng ký sự kiện hoặc liên hệ chúng tôi."
 
 #: src/components/routes/auth/ResetPassword/index.tsx:58
 msgid "Your new password must be at least 8 characters long."

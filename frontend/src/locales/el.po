@@ -341,6 +341,15 @@ msgstr "1 διαθέσιμη ώρα"
 msgid "1 week before event"
 msgstr "1 εβδομάδα πριν την εκδήλωση"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:18
+#: src/components/routes/legal/TermsOfService/index.tsx:17
+msgid "1. Who we are"
+msgstr "1. Ποιοι είμαστε"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:113
+msgid "10. Changes to this policy"
+msgstr "10. Αλλαγές στην παρούσα πολιτική"
+
 #: src/components/common/CapacityHelp/index.tsx:28
 msgid "12 mats in the studio and one Drop-in ticket."
 msgstr "12 στρώματα στο στούντιο και ένα εισιτήριο μεμονωμένης συμμετοχής."
@@ -354,6 +363,14 @@ msgstr "Παράδειγμα Οδού 123"
 msgid "135+ currencies & 40+ payment methods"
 msgstr "Πάνω από 135 νομίσματα και πάνω από 40 τρόποι πληρωμής"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:25
+msgid "2. Event registrations and tickets"
+msgstr "2. Εγγραφές σε εκδηλώσεις και εισιτήρια"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:27
+msgid "2. Information we collect"
+msgstr "2. Πληροφορίες που συλλέγουμε"
+
 #: src/components/common/WidgetEditor/index.tsx:230
 msgid "20"
 msgstr "20"
@@ -361,6 +378,59 @@ msgstr "20"
 #: src/components/common/CapacityHelp/index.tsx:61
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 θέσεις ανά ημερομηνία, συν 30 μπλουζάκια για όλη τη σειρά."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:51
+msgid "3. How we use your information"
+msgstr "3. Πώς χρησιμοποιούμε τις πληροφορίες σας"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:34
+msgid "3. Payments"
+msgstr "3. Πληρωμές"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+msgid "4. Payment processing"
+msgstr "4. Επεξεργασία πληρωμών"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:43
+msgid "4. Refunds and cancellations"
+msgstr "4. Επιστροφές χρημάτων και ακυρώσεις"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:52
+msgid "5. Acceptable use"
+msgstr "5. Αποδεκτή χρήση"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:71
+msgid "5. Cookies"
+msgstr "5. Cookies"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:61
+msgid "6. Intellectual property"
+msgstr "6. Πνευματική ιδιοκτησία"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:80
+msgid "6. Sharing your information"
+msgstr "6. Κοινοποίηση των πληροφοριών σας"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
+msgid "7. Data retention"
+msgstr "7. Διατήρηση δεδομένων"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:70
+msgid "7. Limitation of liability"
+msgstr "7. Περιορισμός ευθύνης"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:79
+msgid "8. Changes to these Terms"
+msgstr "8. Αλλαγές στους παρόντες Όρους"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:97
+msgid "8. Your rights"
+msgstr "8. Τα δικαιώματά σας"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:105
+#: src/components/routes/legal/TermsOfService/index.tsx:87
+msgid "9. Contact us"
+msgstr "9. Επικοινωνήστε μαζί μας"
 
 #: src/components/routes/admin/Announcements/index.tsx:319
 msgid "A button label is required when a URL is set"
@@ -1215,6 +1285,10 @@ msgstr "Απαντήσεις που δόθηκαν κατά την ολοκλή�
 msgid "Any dates you've manually customized will be kept."
 msgstr "Οι ημερομηνίες που έχετε προσαρμόσει χειροκίνητα θα διατηρηθούν."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:39
+msgid "Any messages or information you submit through our contact forms."
+msgstr "Οποιαδήποτε μηνύματα ή πληροφορίες υποβάλλετε μέσω των φορμών επικοινωνίας μας."
+
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:62
 msgid "Any queries from product holders will be sent to this email address. This will also be used as the \"reply-to\" address for all emails sent from this event"
 msgstr "Τυχόν ερωτήματα από κατόχους προϊόντων θα αποστέλλονται σε αυτή τη διεύθυνση. Θα χρησιμοποιηθεί επίσης ως διεύθυνση \"απάντηση προς\" για όλα τα email αυτής της εκδήλωσης"
@@ -1874,6 +1948,10 @@ msgstr "Επειδή αυτός ο λογαριασμός έχει ολοκλη�
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:293
 msgid "Billing Address"
 msgstr "Διεύθυνση Χρέωσης"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:35
+msgid "Billing information necessary to process ticket purchases (handled securely by our payment processor — see Section 4)."
+msgstr "Στοιχεία χρέωσης απαραίτητα για την επεξεργασία αγορών εισιτηρίων (διαχειρίζονται με ασφάλεια από τον πάροχο πληρωμών μας — βλ. Ενότητα 4)."
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
 msgid "Billing Settings"
@@ -4778,6 +4856,10 @@ msgstr "Εκδήλωση Ενημερώθηκε"
 msgid "Events"
 msgstr "Εκδηλώσεις"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:27
+msgid "Events listed on this site are organized by Friends of School and affiliated community organizers. Ticket availability, pricing, and event details are set by the organizer and may change without notice. Please review each event's details carefully before registering."
+msgstr "Οι εκδηλώσεις που αναφέρονται σε αυτόν τον ιστότοπο διοργανώνονται από το Friends of School και συνδεδεμένους κοινοτικούς διοργανωτές. Η διαθεσιμότητα εισιτηρίων, οι τιμές και οι λεπτομέρειες της εκδήλωσης καθορίζονται από τον διοργανωτή και ενδέχεται να αλλάξουν χωρίς προειδοποίηση. Παρακαλούμε εξετάστε προσεκτικά τις λεπτομέρειες κάθε εκδήλωσης πριν εγγραφείτε."
+
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:120
 #: src/components/routes/organizer/Reports/index.tsx:23
 msgid "Events Performance"
@@ -6025,6 +6107,10 @@ msgstr "Εάν δεν ζητήσατε αυτή την αλλαγή, αλλάξ�
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "Εάν έχετε λογαριασμό σε εμάς, θα λάβετε email με οδηγίες για την επαναφορά του κωδικού σας."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:107
+msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
+msgstr "Εάν έχετε ερωτήσεις σχετικά με αυτήν την Πολιτική Απορρήτου, επικοινωνήστε με την Aqualeo Digecom FZ LLC στο <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
 msgid "Image"
@@ -8550,6 +8636,10 @@ msgstr "Η πληρωμή επιτεύχθηκε!"
 msgid "Payment Terms"
 msgstr "Όροι Πληρωμής"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:36
+msgid "Payments are processed securely through Stripe. By completing a purchase, you authorize us (via our payment processor) to charge the payment method you provide for the applicable ticket price and any associated fees."
+msgstr "Οι πληρωμές επεξεργάζονται με ασφάλεια μέσω της Stripe. Ολοκληρώνοντας μια αγορά, μας εξουσιοδοτείτε (μέσω του παρόχου πληρωμών μας) να χρεώσουμε τη μέθοδο πληρωμής που παρέχετε με την αντίστοιχη τιμή εισιτηρίου και τυχόν σχετικές χρεώσεις."
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "Οι πληρωμές δεν είναι διαθέσιμες"
@@ -8975,6 +9065,7 @@ msgstr "Εκτύπωση σε PDF"
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "Πολιτική Απορρήτου"
 
@@ -9259,6 +9350,10 @@ msgstr "Ερωτήσεις"
 msgid "Questions & Answers"
 msgstr "Ερωτήσεις & Απαντήσεις"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:89
+msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
+msgstr "Ερωτήσεις σχετικά με τους παρόντες Όρους μπορούν να αποσταλούν στο <0>fos@aqualeo.co</0>."
+
 #: src/components/common/QuestionsTable/index.tsx:183
 msgid "Questions reordered"
 msgstr "Οι ερωτήσεις αναδιατάχθηκαν"
@@ -9425,6 +9520,10 @@ msgstr "Επιστροφή χρημάτων για όλες τις παραγγ�
 #: src/components/modals/RefundOrderModal/index.tsx:115
 msgid "Refund amount"
 msgstr "Ποσό επιστροφής"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:45
+msgid "Refund and cancellation terms are set by the individual event organizer and will be stated on the event page where applicable. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
+msgstr "Οι όροι επιστροφής χρημάτων και ακύρωσης καθορίζονται από τον εκάστοτε διοργανωτή της εκδήλωσης και θα αναφέρονται στη σελίδα της εκδήλωσης όπου ισχύει. Εάν μια εκδήλωση ακυρωθεί από τον διοργανωτή, θα καταβάλουμε εύλογες προσπάθειες να ενημερώσουμε τους εγγεγραμμένους συμμετέχοντες."
 
 #: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund failed"
@@ -11442,6 +11541,7 @@ msgstr "Όρος"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "Όροι Χρήσης"
 
@@ -11517,6 +11617,10 @@ msgstr "Η διεύθυνση email άλλαξε. Ο συμμετέχων θα �
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:12
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "Η εκδήλωση που αναζητάτε δεν είναι διαθέσιμη αυτή τη στιγμή. Μπορεί να αφαιρέθηκε, να έληξε ή το URL μπορεί να είναι λανθασμένο."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:63
+msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
+msgstr "Το όνομα, το λογότυπο και το περιεχόμενο του ιστότοπου Friends of School είναι ιδιοκτησία της Aqualeo Digecom FZ LLC και δεν μπορούν να χρησιμοποιηθούν χωρίς άδεια. Το περιεχόμενο εκδηλώσεων (όπως περιγραφές και εικόνες) παραμένει ιδιοκτησία του αντίστοιχου διοργανωτή."
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -11693,6 +11797,10 @@ msgstr "Αυτά τα πρότυπα θα χρησιμοποιούνται ως 
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:332
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "Αυτά τα πρότυπα θα παρακάμψουν τις προεπιλογές διοργανωτή μόνο για αυτή την εκδήλωση. Εάν δεν έχει οριστεί προσαρμοσμένο πρότυπο, θα χρησιμοποιηθεί το πρότυπο διοργανωτή."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:10
+msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
+msgstr "Οι παρόντες Όροι Χρήσης (\"Όροι\") διέπουν τη χρήση αυτού του ιστότοπου και της πλατφόρμας Friends of School, που λειτουργεί η Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"εμείς\"). Με την πρόσβαση σε αυτόν τον ιστότοπο ή την αγορά εισιτηρίου, αποδέχεστε τους παρόντες Όρους."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Third"
@@ -11929,6 +12037,10 @@ msgstr "Αυτό παρακάμπτει όλες τις ρυθμίσεις ορ�
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "Αυτή η προεπισκόπηση δείχνει πώς θα φαίνεται το email με δείγμα δεδομένων. Τα πραγματικά email θα χρησιμοποιούν πραγματικές τιμές."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:10
+msgid "This Privacy Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
+msgstr "Η παρούσα Πολιτική Απορρήτου εξηγεί πώς η Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"εμείς\"), φορέας λειτουργίας της πλατφόρμας Friends of School και αυτού του ιστότοπου, συλλέγει, χρησιμοποιεί και προστατεύει τα προσωπικά σας δεδομένα όταν επισκέπτεστε αυτόν τον ιστότοπο, εγγράφεστε σε μια εκδήλωση ή αλληλεπιδράτε μαζί μας με άλλο τρόπο."
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:80
 msgid "This product cannot be deleted because it is associated with an order. You can hide it instead."
 msgstr "Αυτό το προϊόν δεν μπορεί να διαγραφεί γιατί σχετίζεται με παραγγελία. Μπορείτε να το αποκρύψετε."
@@ -11957,6 +12069,10 @@ msgstr "Αυτή η αναφορά είναι μόνο για ενημερωτι
 msgid "This reset password link is invalid or expired."
 msgstr "Αυτός ο σύνδεσμος επαναφοράς κωδικού δεν είναι έγκυρος ή έχει λήξει."
 
+#: src/components/routes/legal/TermsOfService/index.tsx:72
+msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
+msgstr "Αυτός ο ιστότοπος παρέχεται \"ως έχει\". Στον μέγιστο βαθμό που επιτρέπεται από τον νόμο, η Aqualeo Digecom FZ LLC δεν ευθύνεται για οποιαδήποτε έμμεση, τυχαία ή επακόλουθη ζημία που προκύπτει από τη χρήση αυτού του ιστότοπου ή τη συμμετοχή σε οποιαδήποτε αναφερόμενη εκδήλωση."
+
 #: src/components/common/AttendeeTicket/index.tsx:148
 msgid "This ticket is no longer valid"
 msgstr "Αυτό το εισιτήριο δεν ισχύει πλέον"
@@ -11972,6 +12088,14 @@ msgstr "Η ποσότητα αυτού του επιπέδου είναι κοι
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Αυτός ο χρήστης δεν είναι ενεργός, καθώς δεν έχει αποδεχτεί την πρόσκλησή του."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:19
+msgid "This website is operated by Aqualeo Digecom FZ LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
+msgstr "Αυτός ο ιστότοπος λειτουργεί από την Aqualeo Digecom FZ LLC. Για ερωτήσεις σχετικά με τους παρόντες Όρους, επικοινωνήστε μαζί μας στο <0>fos@aqualeo.co</0>."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:20
+msgid "This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
+msgstr "Αυτός ο ιστότοπος λειτουργεί από την Aqualeo Digecom FZ LLC. Εάν έχετε ερωτήσεις σχετικά με αυτήν την πολιτική ή τον τρόπο επεξεργασίας των δεδομένων σας, μπορείτε να επικοινωνήσετε μαζί μας στο <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:369
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -12074,6 +12198,10 @@ msgstr "Εισιτήριο Δεν Βρέθηκε"
 #: src/components/routes/event/products.tsx:89
 msgid "Ticket or Product"
 msgstr "Εισιτήριο ή Προϊόν"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
+msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
+msgstr "Οι πληρωμές εισιτηρίων σε αυτόν τον ιστότοπο επεξεργάζονται με ασφάλεια από τη Stripe, έναν συμβατό με PCI τρίτο πάροχο πληρωμών. Δεν αποθηκεύουμε τα πλήρη στοιχεία της κάρτας σας στους διακομιστές μας. Ανατρέξτε στην <0>Πολιτική Απορρήτου της Stripe</0> για λεπτομέρειες σχετικά με τον τρόπο επεξεργασίας των πληροφοριών πληρωμής σας από τη Stripe."
 
 #: src/components/routes/event/TicketDesigner/TicketDesignerPrint.tsx:99
 msgid "Ticket Preview for"
@@ -12198,9 +12326,25 @@ msgstr "έως"
 msgid "To"
 msgstr "Προς"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:54
+msgid "To communicate with you about events you've registered for."
+msgstr "Για να επικοινωνούμε μαζί σας σχετικά με εκδηλώσεις στις οποίες έχετε εγγραφεί."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
+msgid "To improve and secure our website and services."
+msgstr "Για τη βελτίωση και ασφάλεια του ιστότοπου και των υπηρεσιών μας."
+
 #: src/components/modals/SendMessageModal/index.tsx:315
 msgid "To increase your limits, contact us at"
 msgstr "Για να αυξήσετε τα όριά σας, επικοινωνήστε μαζί μας στο"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:53
+msgid "To process event registrations and ticket purchases."
+msgstr "Για την επεξεργασία εγγραφών σε εκδηλώσεις και αγορών εισιτηρίων."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+msgid "To respond to enquiries submitted through our contact form."
+msgstr "Για να απαντάμε σε ερωτήματα που υποβάλλονται μέσω της φόρμας επικοινωνίας μας."
 
 #: src/components/common/OccurrenceSelect/index.tsx:148
 #: src/components/common/PeriodSelector/index.tsx:30
@@ -13116,6 +13260,14 @@ msgstr "Προειδοποίηση: Αυτή είναι η προεπιλεγμ�
 msgid "We accept"
 msgstr "Δεχόμαστε"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
+msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
+msgstr "Συλλέγουμε επίσης αυτόματα περιορισμένες τεχνικές πληροφορίες, όπως τη διεύθυνση IP, τον τύπο προγράμματος περιήγησης και τις σελίδες που επισκεφθήκατε, για να μας βοηθήσουν να λειτουργούμε και να βελτιώνουμε τον ιστότοπο. Όπου χρησιμοποιούνται cookies για αυτόν τον σκοπό, μπορείτε να ελέγχετε τις προτιμήσεις σας ανά πάσα στιγμή μέσω του συνδέσμου ρυθμίσεων cookie στο υποσέλιδο."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
+msgid "We collect information you provide directly to us, including:"
+msgstr "Συλλέγουμε πληροφορίες που μας παρέχετε απευθείας, συμπεριλαμβανομένων:"
+
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "Δεν μπορέσαμε να επεξεργαστούμε την πληρωμή σας. Δοκιμάστε ξανά ή επικοινωνήστε με την υποστήριξη."
@@ -13168,9 +13320,21 @@ msgstr "Δεν μπορούμε να συνδεθούμε με το Stripe αυ�
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Δεν μπορέσαμε να αναδιατάξουμε τις κατηγορίες. Παρακαλώ δοκιμάστε ξανά."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:82
+msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
+msgstr "Δεν πωλούμε τα προσωπικά σας δεδομένα. Κοινοποιούμε πληροφορίες μόνο σε παρόχους υπηρεσιών που μας βοηθούν να λειτουργούμε τον ιστότοπο (όπως ο πάροχος πληρωμών και ο πάροχος παράδοσης email μας), ή όταν απαιτείται από τον νόμο."
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:418
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Παρουσιάστηκε πρόβλημα κατά τη φόρτωση αυτής της σελίδας. Παρακαλώ δοκιμάστε ξανά."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:81
+msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
+msgstr "Ενδέχεται να ενημερώνουμε τους παρόντες Όρους κατά καιρούς. Η συνεχιζόμενη χρήση του ιστότοπου μετά τη δημοσίευση αλλαγών συνιστά αποδοχή των ενημερωμένων Όρων."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
+msgstr "Ενδέχεται να ενημερώνουμε την παρούσα Πολιτική Απορρήτου κατά καιρούς. Η ημερομηνία \"Τελευταία ενημέρωση\" στο επάνω μέρος αυτής της σελίδας αντικατοπτρίζει τις πιο πρόσφατες αλλαγές."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:236
 msgid "We partner with Stripe to send payouts straight to your bank account."
@@ -13189,6 +13353,10 @@ msgstr "Προτείνουμε διαστάσεις 1950px x 650px, αναλογ
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Προτείνουμε διαστάσεις 400px x 400px, μέγιστο μέγεθος 5MB"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:91
+msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
+msgstr "Διατηρούμε τα προσωπικά δεδομένα για όσο διάστημα είναι απαραίτητο για την εκπλήρωση των σκοπών που περιγράφονται στην παρούσα πολιτική, συμπεριλαμβανομένης της συμμόρφωσης με νομικές, λογιστικές ή αναφορικές υποχρεώσεις."
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:158
 msgid "We sent a verification link to {0}"
 msgstr "Στείλαμε σύνδεσμο επαλήθευσης στο {0}"
@@ -13196,6 +13364,10 @@ msgstr "Στείλαμε σύνδεσμο επαλήθευσης στο {0}"
 #: src/components/common/CookieConsentBanner/index.tsx:50
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "Χρησιμοποιούμε cookies για να κατανοήσουμε πώς χρησιμοποιείται ο ιστότοπος και να βελτιώσουμε την εμπειρία σας."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
+msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
+msgstr "Χρησιμοποιούμε απαραίτητα cookies που απαιτούνται για τη λειτουργία του ιστότοπου και, με τη συγκατάθεσή σας, προαιρετικά cookies ανάλυσης και διαφήμισης για να μας βοηθήσουν να κατανοήσουμε πώς χρησιμοποιείται ο ιστότοπος. Μπορείτε να αλλάξετε τις προτιμήσεις cookie σας ανά πάσα στιγμή χρησιμοποιώντας τον σύνδεσμο \"Ρυθμίσεις cookie\" στο υποσέλιδο του ιστότοπου."
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -13592,6 +13764,10 @@ msgstr "Ναι, αφαίρεσέ τα"
 msgid "Yoga class"
 msgstr "Μάθημα γιόγκα"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:54
+msgid "You agree not to misuse this website, including attempting to interfere with its normal operation, submitting false information when registering for an event, or using the contact form to send spam or unlawful content."
+msgstr "Συμφωνείτε να μην κάνετε κατάχρηση αυτού του ιστότοπου, συμπεριλαμβανομένης της προσπάθειας παρεμβολής στην κανονική λειτουργία του, της υποβολής ψευδών πληροφοριών κατά την εγγραφή σε εκδήλωση ή της χρήσης της φόρμας επικοινωνίας για αποστολή ανεπιθύμητης αλληλογραφίας ή παράνομου περιεχομένου."
+
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:53
 msgid "You are changing your email to <0>{0}</0>."
 msgstr "Αλλάζετε το email σας σε <0>{0}</0>."
@@ -13686,6 +13862,10 @@ msgstr "Έχετε φόρους και τέλη σε Δωρεάν Προϊόν. 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:729
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Έχετε μη αποθηκευμένες αλλαγές. Σίγουρα θέλετε να τις απορρίψετε;"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:99
+msgid "You may request access to, correction of, or deletion of your personal information by contacting us at <0>fos@aqualeo.co</0>."
+msgstr "Μπορείτε να ζητήσετε πρόσβαση, διόρθωση ή διαγραφή των προσωπικών σας δεδομένων επικοινωνώντας μαζί μας στο <0>fos@aqualeo.co</0>."
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"
@@ -13860,6 +14040,10 @@ msgstr "Το όνομά σας"
 #: src/components/common/ContactOrganizerModal/index.tsx:73
 msgid "Your Name"
 msgstr "Το Όνομά σας"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:31
+msgid "Your name, email address, and contact details when you register for an event or contact us."
+msgstr "Το όνομα, η διεύθυνση email και τα στοιχεία επικοινωνίας σας όταν εγγράφεστε σε μια εκδήλωση ή επικοινωνείτε μαζί μας."
 
 #: src/components/routes/auth/ResetPassword/index.tsx:58
 msgid "Your new password must be at least 8 characters long."

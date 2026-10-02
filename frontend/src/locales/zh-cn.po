@@ -341,6 +341,15 @@ msgstr "有 1 个可选时间"
 msgid "1 week before event"
 msgstr "活动前1周"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:18
+#: src/components/routes/legal/TermsOfService/index.tsx:17
+msgid "1. Who we are"
+msgstr "1. 关于我们"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:113
+msgid "10. Changes to this policy"
+msgstr "10. 本政策的变更"
+
 #: src/components/common/CapacityHelp/index.tsx:28
 msgid "12 mats in the studio and one Drop-in ticket."
 msgstr "工作室有 12 张垫子和一种单次票。"
@@ -354,6 +363,14 @@ msgstr "示例街123号"
 msgid "135+ currencies & 40+ payment methods"
 msgstr "135 种以上货币和 40 种以上支付方式"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:25
+msgid "2. Event registrations and tickets"
+msgstr "2. 活动报名与门票"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:27
+msgid "2. Information we collect"
+msgstr "2. 我们收集的信息"
+
 #: src/components/common/WidgetEditor/index.tsx:230
 msgid "20"
 msgstr "20"
@@ -361,6 +378,59 @@ msgstr "20"
 #: src/components/common/CapacityHelp/index.tsx:61
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "每个日期 25 个名额，外加整个系列共 30 件 T 恤。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:51
+msgid "3. How we use your information"
+msgstr "3. 我们如何使用您的信息"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:34
+msgid "3. Payments"
+msgstr "3. 付款"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+msgid "4. Payment processing"
+msgstr "4. 付款处理"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:43
+msgid "4. Refunds and cancellations"
+msgstr "4. 退款与取消"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:52
+msgid "5. Acceptable use"
+msgstr "5. 可接受的使用方式"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:71
+msgid "5. Cookies"
+msgstr "5. Cookie"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:61
+msgid "6. Intellectual property"
+msgstr "6. 知识产权"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:80
+msgid "6. Sharing your information"
+msgstr "6. 分享您的信息"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
+msgid "7. Data retention"
+msgstr "7. 数据保留"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:70
+msgid "7. Limitation of liability"
+msgstr "7. 责任限制"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:79
+msgid "8. Changes to these Terms"
+msgstr "8. 本条款的变更"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:97
+msgid "8. Your rights"
+msgstr "8. 您的权利"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:105
+#: src/components/routes/legal/TermsOfService/index.tsx:87
+msgid "9. Contact us"
+msgstr "9. 联系我们"
 
 #: src/components/routes/admin/Announcements/index.tsx:319
 msgid "A button label is required when a URL is set"
@@ -1215,6 +1285,10 @@ msgstr "结账时填写的回答（例如餐食选择）"
 msgid "Any dates you've manually customized will be kept."
 msgstr "你手动调整过的日期将保留。"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:39
+msgid "Any messages or information you submit through our contact forms."
+msgstr "您通过我们的联系表单提交的任何消息或信息。"
+
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:62
 msgid "Any queries from product holders will be sent to this email address. This will also be used as the \"reply-to\" address for all emails sent from this event"
 msgstr "产品持有者的任何查询都将发送到此电子邮件地址。此地址还将用作从此活动发送的所有电子邮件的“回复至”地址"
@@ -1874,6 +1948,10 @@ msgstr "由于此账户存在已完成的订单，交易记录（金额、日期
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:293
 msgid "Billing Address"
 msgstr "账单地址"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:35
+msgid "Billing information necessary to process ticket purchases (handled securely by our payment processor — see Section 4)."
+msgstr "处理门票购买所需的账单信息（由我们的支付处理商安全处理——参见第 4 节）。"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
 msgid "Billing Settings"
@@ -4778,6 +4856,10 @@ msgstr "活动已更新"
 msgid "Events"
 msgstr "活动"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:27
+msgid "Events listed on this site are organized by Friends of School and affiliated community organizers. Ticket availability, pricing, and event details are set by the organizer and may change without notice. Please review each event's details carefully before registering."
+msgstr "本网站上列出的活动由 Friends of School 及其附属社区组织者举办。门票供应情况、价格和活动详情由组织者决定，可能会在不另行通知的情况下更改。请在注册前仔细查看每个活动的详情。"
+
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:120
 #: src/components/routes/organizer/Reports/index.tsx:23
 msgid "Events Performance"
@@ -6025,6 +6107,10 @@ msgstr "如果您没有要求更改密码，请立即更改密码。"
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "如果您在我们这里有账户，您将收到一封包含如何重置密码说明的电子邮件。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:107
+msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
+msgstr "如果您对本隐私政策有任何疑问，请通过 <0>fos@aqualeo.co</0> 联系 Aqualeo Digecom FZ LLC。"
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
 msgid "Image"
@@ -8550,6 +8636,10 @@ msgstr "付款成功！"
 msgid "Payment Terms"
 msgstr "付款条款"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:36
+msgid "Payments are processed securely through Stripe. By completing a purchase, you authorize us (via our payment processor) to charge the payment method you provide for the applicable ticket price and any associated fees."
+msgstr "付款通过 Stripe 安全处理。完成购买即表示您授权我们（通过我们的支付处理商）向您提供的支付方式收取相应的门票价格及任何相关费用。"
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "付款不可用"
@@ -8975,6 +9065,7 @@ msgstr "打印为PDF"
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
@@ -9259,6 +9350,10 @@ msgstr "问题"
 msgid "Questions & Answers"
 msgstr "问与答"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:89
+msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
+msgstr "有关本条款的问题可发送至 <0>fos@aqualeo.co</0>。"
+
 #: src/components/common/QuestionsTable/index.tsx:183
 msgid "Questions reordered"
 msgstr "问题已重新排序"
@@ -9425,6 +9520,10 @@ msgstr "为该日期的所有订单退款"
 #: src/components/modals/RefundOrderModal/index.tsx:115
 msgid "Refund amount"
 msgstr "退款金额"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:45
+msgid "Refund and cancellation terms are set by the individual event organizer and will be stated on the event page where applicable. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
+msgstr "退款和取消条款由各活动组织者自行设定，如适用将在活动页面上说明。如果组织者取消活动，我们将尽合理努力通知已报名的参与者。"
 
 #: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund failed"
@@ -11442,6 +11541,7 @@ msgstr "关键词"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "服务条款"
 
@@ -11517,6 +11617,10 @@ msgstr "电子邮件地址已更改。参与者将在更新后的电子邮件地
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:12
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "您查找的活动目前不可用。它可能已被删除、过期或 URL 不正确。"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:63
+msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
+msgstr "Friends of School 的名称、标志及网站内容为 Aqualeo Digecom FZ LLC 所有，未经许可不得使用。活动内容（如描述和图片）仍归相应组织者所有。"
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -11693,6 +11797,10 @@ msgstr "这些模板将用作您组织中所有活动的默认模板。单个活
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:332
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "这些模板将仅覆盖此活动的组织者默认设置。如果这里没有设置自定义模板，将使用组织者模板。"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:10
+msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
+msgstr "本服务条款（“条款”）规范您对本网站及由 Aqualeo Digecom FZ LLC（“Aqualeo Digecom”、“我们”）运营的 Friends of School 平台的使用。访问本网站或购买门票即表示您同意本条款。"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Third"
@@ -11929,6 +12037,10 @@ msgstr "这将覆盖所有可见性设置，并将该产品对所有客户隐藏
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "此预览显示您的邮件使用示例数据的外观。实际邮件将使用真实值。"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:10
+msgid "This Privacy Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
+msgstr "本隐私政策说明了 Friends of School 平台及本网站的运营方 Aqualeo Digecom FZ LLC（“Aqualeo Digecom”、“我们”）在您访问本网站、注册活动或与我们进行其他互动时，如何收集、使用和保护您的个人信息。"
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:80
 msgid "This product cannot be deleted because it is associated with an order. You can hide it instead."
 msgstr "此产品无法删除，因为它与订单关联。您可以将其隐藏。"
@@ -11957,6 +12069,10 @@ msgstr "此报告仅供参考。在将此数据用于会计或税务目的之前
 msgid "This reset password link is invalid or expired."
 msgstr "此重置密码链接无效或已过期。"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:72
+msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
+msgstr "本网站按“原样”提供。在法律允许的最大范围内，Aqualeo Digecom FZ LLC 对因使用本网站或参加任何列出的活动而产生的任何间接、附带或后果性损害不承担责任。"
+
 #: src/components/common/AttendeeTicket/index.tsx:148
 msgid "This ticket is no longer valid"
 msgstr "此票已失效"
@@ -11972,6 +12088,14 @@ msgstr "此层级的数量在所有日期间共享"
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "该用户未激活，因为他们没有接受邀请。"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:19
+msgid "This website is operated by Aqualeo Digecom FZ LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
+msgstr "本网站由 Aqualeo Digecom FZ LLC 运营。如对本条款有任何疑问，请通过 <0>fos@aqualeo.co</0> 联系我们。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:20
+msgid "This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
+msgstr "本网站由 Aqualeo Digecom FZ LLC 运营。如果您对本政策或您的数据处理方式有任何疑问，可以通过 <0>fos@aqualeo.co</0> 联系我们。"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:369
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -12074,6 +12198,10 @@ msgstr "未找到门票"
 #: src/components/routes/event/products.tsx:89
 msgid "Ticket or Product"
 msgstr "票或商品"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
+msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
+msgstr "本网站上的门票付款由符合 PCI 标准的第三方支付处理商 Stripe 安全处理。我们不会在我们的服务器上存储您的完整卡信息。有关 Stripe 如何处理您的付款信息的详情，请参阅 <0>Stripe 的隐私政策</0>。"
 
 #: src/components/routes/event/TicketDesigner/TicketDesignerPrint.tsx:99
 msgid "Ticket Preview for"
@@ -12198,9 +12326,25 @@ msgstr "至"
 msgid "To"
 msgstr "收件人"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:54
+msgid "To communicate with you about events you've registered for."
+msgstr "就您已报名的活动与您进行沟通。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
+msgid "To improve and secure our website and services."
+msgstr "改进和保护我们的网站及服务。"
+
 #: src/components/modals/SendMessageModal/index.tsx:315
 msgid "To increase your limits, contact us at"
 msgstr "要提高您的限制，请联系我们"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:53
+msgid "To process event registrations and ticket purchases."
+msgstr "处理活动报名和门票购买。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+msgid "To respond to enquiries submitted through our contact form."
+msgstr "回复通过我们的联系表单提交的询问。"
 
 #: src/components/common/OccurrenceSelect/index.tsx:148
 #: src/components/common/PeriodSelector/index.tsx:30
@@ -13116,6 +13260,14 @@ msgstr "警告：这是系统默认配置。更改将影响所有未分配特定
 msgid "We accept"
 msgstr "我们接受"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
+msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
+msgstr "我们还会自动收集有限的技术信息，例如您的 IP 地址、浏览器类型和访问过的页面，以帮助我们运营和改进网站。若为此目的使用了 Cookie，您可以随时通过页脚中的 Cookie 设置链接管理您的偏好。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
+msgid "We collect information you provide directly to us, including:"
+msgstr "我们收集您直接提供给我们的信息，包括："
+
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "我们无法处理您的付款。请重试或联系技术支持。"
@@ -13168,9 +13320,21 @@ msgstr "目前无法连接 Stripe，请稍后重试。"
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "我们无法重新排序类别。请再试一次。"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:82
+msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
+msgstr "我们不会出售您的个人信息。我们仅与帮助我们运营网站的服务提供商（例如我们的支付处理商和电子邮件发送服务商）共享信息，或在法律要求时共享。"
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:418
 msgid "We hit a snag loading this page. Please try again."
 msgstr "加载此页面时遇到问题。请重试。"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:81
+msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
+msgstr "我们可能会不时更新本条款。在变更发布后继续使用本网站即表示接受更新后的条款。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
+msgstr "我们可能会不时更新本隐私政策。本页顶部的“最后更新”日期反映了最新的变更。"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:236
 msgid "We partner with Stripe to send payouts straight to your bank account."
@@ -13189,6 +13353,10 @@ msgstr "我们建议尺寸为 2160px x 1080px，文件大小不超过 5MB"
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "建议尺寸为 400x400 像素，文件大小不超过 5MB"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:91
+msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
+msgstr "我们会在实现本政策所述目的所需的期限内保留个人信息，包括遵守法律、会计或报告义务。"
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:158
 msgid "We sent a verification link to {0}"
 msgstr "我们已向 {0} 发送验证链接"
@@ -13196,6 +13364,10 @@ msgstr "我们已向 {0} 发送验证链接"
 #: src/components/common/CookieConsentBanner/index.tsx:50
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "我们使用 Cookie 来帮助我们了解网站的使用情况并改善您的体验。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
+msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
+msgstr "我们使用网站运行所必需的基本 Cookie，并在您同意的情况下使用可选的分析和广告 Cookie，以帮助我们了解网站的使用情况。您可以随时通过网站页脚中的“Cookie 设置”链接更改您的 Cookie 偏好。"
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -13592,6 +13764,10 @@ msgstr "是的，移除它们"
 msgid "Yoga class"
 msgstr "瑜伽课"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:54
+msgid "You agree not to misuse this website, including attempting to interfere with its normal operation, submitting false information when registering for an event, or using the contact form to send spam or unlawful content."
+msgstr "您同意不滥用本网站，包括不试图干扰其正常运行、在注册活动时提交虚假信息，或利用联系表单发送垃圾邮件或非法内容。"
+
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:53
 msgid "You are changing your email to <0>{0}</0>."
 msgstr "您正在将电子邮件更改为 <0>{0}</0>。"
@@ -13686,6 +13862,10 @@ msgstr "您已向免费产品添加了税费。您想要删除它们吗？"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:729
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "你有未保存的更改，确定要放弃吗？"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:99
+msgid "You may request access to, correction of, or deletion of your personal information by contacting us at <0>fos@aqualeo.co</0>."
+msgstr "您可以通过 <0>fos@aqualeo.co</0> 联系我们，要求访问、更正或删除您的个人信息。"
 
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"
@@ -13860,6 +14040,10 @@ msgstr "您的姓名"
 #: src/components/common/ContactOrganizerModal/index.tsx:73
 msgid "Your Name"
 msgstr "您的姓名"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:31
+msgid "Your name, email address, and contact details when you register for an event or contact us."
+msgstr "您在注册活动或联系我们时提供的姓名、电子邮件地址和联系方式。"
 
 #: src/components/routes/auth/ResetPassword/index.tsx:58
 msgid "Your new password must be at least 8 characters long."
