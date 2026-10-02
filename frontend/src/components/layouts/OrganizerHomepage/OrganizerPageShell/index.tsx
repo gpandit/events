@@ -1,18 +1,15 @@
 import React, {useEffect} from 'react';
 import {useLocation} from "react-router";
-import {Anchor} from '@mantine/core';
-import {t} from "@lingui/macro";
 import {Organizer} from "../../../../types.ts";
 import {OrganizerDocumentHead} from "../../../common/OrganizerDocumentHead";
-import {PoweredByFooter} from "../../../common/PoweredByFooter";
 import {StatusToggle} from "../../../common/StatusToggle";
-import {getConfig} from "../../../../utilites/config.ts";
 import {computeThemeVariables, validateThemeSettings} from "../../../../utilites/themeUtils.ts";
 import {ensureHomepageFontLoaded} from "../../../../utilites/fontLoader.ts";
 import {useOrganizerTrackingPixels} from "../../../../hooks/useOrganizerTrackingPixels";
-import {CookieSettingsLink} from "../../../common/CookieSettingsLink";
 import {removeTransparency} from "../../../../utilites/colorHelper.ts";
 import {OrganizerNav} from "../OrganizerNav";
+import {SiteFooter} from "../SiteFooter";
+import {ThemeToggle} from "../../../common/ThemeToggle";
 import classes from '../OrganizerHomepage.module.scss';
 
 interface OrganizerPageShellProps {
@@ -115,28 +112,11 @@ export const OrganizerPageShell: React.FC<OrganizerPageShellProps> = ({organizer
                 <div className={classes.container}>
                     <div className={classes.wrapper}>
                         {children}
-
-                        <div className={classes.footerSection}>
-                            <div className={classes.footerLinks}>
-                                <Anchor
-                                    href={getConfig('VITE_PRIVACY_URL', 'https://hi.events/privacy-policy?utm_source=app-organizer-footer')}
-                                    className={classes.footerLink}
-                                >
-                                    {t`Privacy Policy`}
-                                </Anchor>
-                                <span className={classes.footerSeparator}>•</span>
-                                <Anchor
-                                    href={getConfig('VITE_TOS_URL', 'https://hi.events/terms-of-service?utm_source=app-organizer-footer')}
-                                    className={classes.footerLink}
-                                >
-                                    {t`Terms of Service`}
-                                </Anchor>
-                            </div>
-                            <PoweredByFooter className={classes.poweredByFooter}/>
-                            <CookieSettingsLink/>
-                        </div>
                     </div>
                 </div>
+
+                <SiteFooter organizer={organizer}/>
+                <ThemeToggle/>
             </main>
         </>
     );

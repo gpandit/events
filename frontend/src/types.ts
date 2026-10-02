@@ -27,7 +27,9 @@ export type ConfigKeys =
     | 'VITE_COOKIE_CONSENT_DOMAIN'
     | 'VITE_GOOGLE_ADS_CONVERSION_ID'
     | 'VITE_GOOGLE_ADS_CONVERSION_LABELS'
-    | 'VITE_DEFAULT_ORGANIZER_ID';
+    | 'VITE_DEFAULT_ORGANIZER_ID'
+    | 'VITE_INSTAGRAM_HANDLE'
+    | 'VITE_INSTAGRAM_EMBED_URL';
 
 export enum StripePlatform {
     Canada = 'ca',

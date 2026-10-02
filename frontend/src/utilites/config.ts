@@ -28,6 +28,8 @@ export const clientBuildEnv: { [K in ConfigKeys]: string } = {
     'VITE_GOOGLE_ADS_CONVERSION_ID': import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID,
     'VITE_GOOGLE_ADS_CONVERSION_LABELS': import.meta.env.VITE_GOOGLE_ADS_CONVERSION_LABELS,
     'VITE_DEFAULT_ORGANIZER_ID': import.meta.env.VITE_DEFAULT_ORGANIZER_ID,
+    'VITE_INSTAGRAM_HANDLE': import.meta.env.VITE_INSTAGRAM_HANDLE,
+    'VITE_INSTAGRAM_EMBED_URL': import.meta.env.VITE_INSTAGRAM_EMBED_URL,
 }
 
 export const getConfig = (key: ConfigKeys, fallback?: string): string | undefined => {

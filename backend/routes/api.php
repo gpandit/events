@@ -180,6 +180,7 @@ use HiEvents\Http\Actions\Organizers\GetOrganizersAction;
 use HiEvents\Http\Actions\Organizers\GetPublicOrganizerAction;
 use HiEvents\Http\Actions\Organizers\Orders\GetOrganizerOrdersAction;
 use HiEvents\Http\Actions\Organizers\Public\SendOrganizerContactMessagePublicAction;
+use HiEvents\Http\Actions\Public\SubmitSiteContactMessageAction;
 use HiEvents\Http\Actions\Organizers\Settings\GetOrganizerSettingsAction;
 use HiEvents\Http\Actions\Organizers\Settings\PartialUpdateOrganizerSettingsAction;
 use HiEvents\Http\Actions\Organizers\Stats\GetOrganizerStatsAction;
@@ -615,6 +616,10 @@ $router->prefix('/public')->group(
         $router->get('/organizers/{organizer_id}', GetPublicOrganizerAction::class);
         $router->get('/organizers/{organizer_id}/events', GetOrganizerEventsPublicAction::class);
         $router->post('/organizers/{organizer_id}/contact', SendOrganizerContactMessagePublicAction::class)
+            ->middleware('throttle:5,1');
+
+        // Site-wide contact form (footer)
+        $router->post('/contact', SubmitSiteContactMessageAction::class)
             ->middleware('throttle:5,1');
 
         // Products

@@ -1028,6 +1028,10 @@ msgstr "Alle Termine"
 msgid "All Products"
 msgstr "Alle Produkte"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
+msgid "All rights reserved."
+msgstr "Alle Rechte vorbehalten."
+
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:109
 msgid "All Statuses"
 msgstr "Alle Status"
@@ -1789,6 +1793,10 @@ msgstr "Zurück zum Event"
 #: src/components/layouts/Checkout/index.tsx:309
 msgid "Back to event page"
 msgstr "Zurück zur Veranstaltungsseite"
+
+#: src/components/common/LegalPageLayout/index.tsx:22
+msgid "Back to home"
+msgstr "Zurück zur Startseite"
 
 #: src/components/routes/auth/ForgotPassword/index.tsx:48
 #: src/components/routes/auth/ForgotPassword/index.tsx:74
@@ -2856,6 +2864,10 @@ msgstr "Kontakt {0}"
 msgid "Contact Email"
 msgstr "Kontakt-E-Mail"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+msgid "Contact Us"
+msgstr "Kontakt"
+
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
@@ -2917,7 +2929,7 @@ msgid "Control who gets in, and when"
 msgstr "Steuern Sie, wer wann Einlass erhält"
 
 #: src/components/common/CookieConsentBanner/index.tsx:71
-#: src/components/common/CookieSettingsLink/index.tsx:17
+#: src/components/common/CookieSettingsLink/index.tsx:18
 msgid "Cookie settings"
 msgstr "Cookie-Einstellungen"
 
@@ -4756,6 +4768,7 @@ msgstr "Veranstaltung aktualisiert"
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
 #: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
@@ -4769,6 +4782,10 @@ msgstr "Veranstaltungen"
 #: src/components/routes/organizer/Reports/index.tsx:23
 msgid "Events Performance"
 msgstr "Veranstaltungsleistung"
+
+#: src/components/common/PoweredByFooter/index.tsx:60
+msgid "Events powered by"
+msgstr "Events bereitgestellt von"
 
 #: src/components/routes/admin/Dashboard/index.tsx:450
 msgid "Events Starting in Next 24 Hours"
@@ -5145,6 +5162,7 @@ msgid "Failed to save VAT settings. Please try again."
 msgstr "Fehler beim Speichern der Umsatzsteuereinstellungen. Bitte versuchen Sie es erneut."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:39
 msgid "Failed to send message. Please try again."
 msgstr "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
 
@@ -5431,6 +5449,10 @@ msgstr "Blitz aus"
 msgid "Flash on"
 msgstr "Blitz an"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:15
+msgid "Follow us on Instagram"
+msgstr "Folgen Sie uns auf Instagram"
+
 #: src/components/common/ThemeFontControl/index.tsx:65
 msgid "Font Family"
 msgstr "Schriftart"
@@ -5468,7 +5490,7 @@ msgstr "Vierter"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:133
 #: src/components/forms/ProductForm/index.tsx:289
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:191
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:148
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:155
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
 msgid "Free"
@@ -5486,6 +5508,10 @@ msgstr "Fr"
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:27
 msgid "Friday"
 msgstr "Freitag"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
+msgid "Friends of School"
+msgstr "Friends of School"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1067
 msgid "From"
@@ -5577,7 +5603,7 @@ msgid "Get started"
 msgstr "Erste Schritte"
 
 #: src/components/layouts/EventHomepage/index.tsx:209
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:157
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:164
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "Tickets erhalten"
@@ -5874,6 +5900,7 @@ msgid "Hobbies"
 msgstr "Hobbys"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:32
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:110
 msgid "Home"
 msgstr "Startseite"
 
@@ -5901,6 +5928,10 @@ msgstr "Homer"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:412
 msgid "Hours"
 msgstr "Stunden"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:63
+msgid "How can we help?"
+msgstr "Wie können wir helfen?"
 
 #: src/components/common/CapacityHelp/index.tsx:110
 #: src/components/common/CapacityHelp/index.tsx:165
@@ -6134,9 +6165,14 @@ msgstr "Bild einfügen"
 msgid "Insert Liquid Token"
 msgstr "Liquid-Token einfügen"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:116
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:53
 msgid "Instagram"
 msgstr "Instagram"
+
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:26
+msgid "Instagram feed"
+msgstr "Instagram-Feed"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
 msgid "Instant Stripe payouts"
@@ -6466,6 +6502,10 @@ msgstr "Letzte Antwort"
 msgid "Last Triggered"
 msgstr "Zuletzt ausgelöst"
 
+#: src/components/common/LegalPageLayout/index.tsx:26
+msgid "Last updated: {updatedDate}"
+msgstr "Zuletzt aktualisiert: {updatedDate}"
+
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:70
 msgid "Last Used"
 msgstr "Zuletzt verwendet"
@@ -6501,6 +6541,10 @@ msgstr "Leer lassen, um diese Check-in-Liste für alle Termine zu verwenden"
 #: src/components/forms/CheckInListForm/index.tsx:106
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "Aktiviert lassen, um alle Tickets der Veranstaltung abzudecken. Deaktivieren, um bestimmte Tickets auszuwählen."
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+msgid "Legal"
+msgstr "Rechtliches"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:305
 msgid "Let them know about the change"
@@ -6825,6 +6869,7 @@ msgstr "Medium"
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:155
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:68
 #: src/components/modals/SendMessageModal/index.tsx:444
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:60
 msgid "Message"
@@ -7005,7 +7050,7 @@ msgstr "Mehrzeiliges Textfeld"
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/EventHomepage/index.tsx:181
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:47
 msgid "Multiple locations"
 msgstr "Mehrere Orte"
 
@@ -7018,6 +7063,7 @@ msgid "Music"
 msgstr "Musik"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
 msgid "My Account"
 msgstr "Mein Konto"
 
@@ -7118,7 +7164,9 @@ msgstr "Neue Anmeldungen"
 msgid "New time:"
 msgstr "Neue Uhrzeit:"
 
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:106
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:113
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:22
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:35
 msgid "Next Event"
 msgstr "Nächstes Event"
 
@@ -7799,7 +7847,7 @@ msgstr "Laufend"
 
 #: src/components/common/EventCard/index.tsx:111
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:50
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:43
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:50
 #: src/components/routes/event/OccurrencesTab/index.tsx:333
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:478
 #: src/components/routes/my-tickets/index.tsx:56
@@ -7816,7 +7864,7 @@ msgstr "Online – Zugangsdaten angeben"
 
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:47
 msgid "Online & in-person"
 msgstr "Online & vor Ort"
 
@@ -7831,7 +7879,7 @@ msgstr "Online-Veranstaltung"
 
 #: src/components/layouts/EventHomepage/index.tsx:411
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:132
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:139
 msgid "Online Event"
 msgstr "Online-Veranstaltung"
 
@@ -8272,6 +8320,10 @@ msgstr "Sonstiges"
 #: src/components/common/CheckInStatusModal/index.tsx:177
 msgid "Other Lists (Ticket Not Included)"
 msgstr "Andere Listen (Ticket Nicht Enthalten)"
+
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
+msgid "Our latest posts are on Instagram — tap below to see them."
+msgstr "Unsere neuesten Beiträge findest du auf Instagram – tippe unten, um sie zu sehen."
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:121
 msgid "Outcome"
@@ -8738,6 +8790,10 @@ msgstr "Bitte geben Sie den 5-stelligen Code ein"
 msgid "Please enter your VAT number"
 msgstr "Bitte geben Sie Ihre Umsatzsteuer-ID ein"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:28
+msgid "Please fill in all fields"
+msgstr "Bitte füllen Sie alle Felder aus"
+
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
 msgstr "Bitte beachten Sie"
@@ -8822,8 +8878,12 @@ msgid "Post Checkout message"
 msgstr "Checkout-Nachricht veröffentlichen"
 
 #: src/components/common/PoweredByFooter/index.tsx:60
-msgid "Powered by"
-msgstr "Bereitgestellt von"
+#~ msgid "Powered by"
+#~ msgstr "Bereitgestellt von"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:97
+msgid "Powered by Friends of School, an initiative by"
+msgstr "Bereitgestellt von Friends of School, einer Initiative von"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:90
 msgid "Pre Checkout message"
@@ -8914,7 +8974,7 @@ msgstr "Als PDF drucken"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:125
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
 msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
 
@@ -9207,6 +9267,10 @@ msgstr "Fragen neu sortiert"
 #: src/components/routes/admin/FailedJobs/index.tsx:257
 msgid "Queue"
 msgstr "Warteschlange"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:108
+msgid "Quick Links"
+msgstr "Schnellzugriff"
 
 #: src/components/forms/PromoCodeForm/index.tsx:145
 msgid "Quick Tip"
@@ -10085,6 +10149,10 @@ msgstr "Sichere Kasse"
 msgid "See schedule"
 msgstr "Terminplan ansehen"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:17
+msgid "See the latest photos and updates from"
+msgstr "Sieh dir die neuesten Fotos und Updates an von"
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:310
 msgid "See what Stripe still needs"
 msgstr "Sehen, was Stripe noch benötigt"
@@ -10307,6 +10375,10 @@ msgstr "E-Mails an Teilnehmer, Ticketinhaber oder Bestellinhaber senden. Nachric
 #: src/components/modals/SendMessageModal/index.tsx:568
 msgid "Send me a copy"
 msgstr "Senden Sie mir eine Kopie"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:74
+msgid "Send message"
+msgstr "Nachricht senden"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:112
 #: src/components/modals/SendMessageModal/index.tsx:542
@@ -11369,7 +11441,7 @@ msgid "Term"
 msgstr "Suchbegriff"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:132
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
 
@@ -12141,6 +12213,11 @@ msgstr "Heute"
 msgid "Toggle columns"
 msgstr "Spalten umschalten"
 
+#: src/components/common/ThemeToggle/index.tsx:21
+#: src/components/common/ThemeToggle/index.tsx:22
+msgid "Toggle light and dark theme"
+msgstr "Zwischen hellem und dunklem Design wechseln"
+
 #: src/components/routes/event/OccurrencesTab/GroupedOccurrenceTable/index.tsx:46
 msgid "Tomorrow"
 msgstr "Morgen"
@@ -12484,6 +12561,7 @@ msgstr "bis zu {perDateAllocation} pro Termin"
 #: src/components/common/EventsDashboardStatusButtons/index.tsx:20
 #: src/components/common/EventStatusBadge/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:45
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:35
 #: src/components/routes/event/OccurrencesTab/index.tsx:513
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:33
 msgid "Upcoming"
@@ -12854,6 +12932,10 @@ msgstr "Video-URL"
 msgid "Vietnamese"
 msgstr "Vietnamesisch"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:36
+msgid "View @{handle} on Instagram"
+msgstr "@{handle} auf Instagram ansehen"
+
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:70
 msgid "View All"
 msgstr "Alle anzeigen"
@@ -13029,6 +13111,10 @@ msgstr "Achtung: Dies ist die {0}-Standardkonfiguration. Änderungen wirken sich
 #: src/components/routes/admin/Configurations/index.tsx:211
 msgid "Warning: This is the system default configuration. Changes will affect all accounts that don't have a specific configuration assigned."
 msgstr "Warnung: Dies ist die Systemstandardkonfiguration. Änderungen wirken sich auf alle Konten aus, denen keine spezifische Konfiguration zugewiesen ist."
+
+#: src/components/common/PaymentIcons/index.tsx:62
+msgid "We accept"
+msgstr "Wir akzeptieren"
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
@@ -13733,6 +13819,11 @@ msgstr "Ihre aktuelle Bestellung geht verloren."
 msgid "Your Details"
 msgstr "Deine Details"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:56
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:60
+msgid "Your email"
+msgstr "Ihre E-Mail"
+
 #: src/components/common/ContactOrganizerModal/index.tsx:79
 msgid "Your Email"
 msgstr "Ihre E-Mail"
@@ -13753,9 +13844,18 @@ msgstr "Ihre Nachricht wurde gesendet"
 msgid "Your message has been sent successfully!"
 msgstr "Ihre Nachricht wurde erfolgreich gesendet!"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:35
+msgid "Your message has been sent. We'll be in touch soon!"
+msgstr "Ihre Nachricht wurde gesendet. Wir melden uns bald bei Ihnen!"
+
 #: src/components/routes/event/messages.tsx:275
 msgid "Your messages will appear here"
 msgstr "Ihre Nachrichten werden hier angezeigt"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:48
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:52
+msgid "Your name"
+msgstr "Ihr Name"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:73
 msgid "Your Name"

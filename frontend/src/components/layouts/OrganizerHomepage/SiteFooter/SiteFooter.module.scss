@@ -1,0 +1,206 @@
+.footer {
+    width: 100%;
+    background: #11161c;
+    color: #c7ccd4;
+    margin-top: 48px;
+}
+
+.inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 24px 28px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+    gap: 32px;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 560px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.brandColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.brandLogo {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brandText {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #9aa2ad;
+    max-width: 280px;
+
+    a {
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.paymentIconsWrapper {
+    margin-top: 6px;
+
+    :global(.mantine-light) & {
+        color: inherit;
+    }
+}
+
+.columnTitle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.linkColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerNavLink {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #9aa2ad;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 0;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.contactColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contactInput, .contactTextarea {
+    background: #1a2029;
+    border: 1px solid #2a3340;
+    border-radius: 6px;
+    padding: 9px 11px;
+    font-size: 13.5px;
+    color: #ffffff;
+    font-family: inherit;
+    resize: vertical;
+
+    &::placeholder {
+        color: #67707c;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: var(--organizer-primary-color, #5c7cfa);
+    }
+}
+
+.contactError {
+    color: #ff8787;
+    font-size: 12.5px;
+}
+
+.contactSubmit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+    padding: 10px 16px;
+    background: var(--organizer-primary-color, #5c7cfa);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13.5px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .9;
+    }
+
+    &:disabled {
+        opacity: .6;
+        cursor: not-allowed;
+    }
+}
+
+.spin {
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bottomBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid #242b35;
+    font-size: 12.5px;
+    color: #7b8290;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.poweredBy {
+    font-size: 12.5px;
+    color: #7b8290;
+
+    a {
+        color: #c7ccd4;
+    }
+}
+
+.instagramHint {
+    margin: 10px 0 0;
+    font-size: 11.5px;
+    color: #4d545f;
+    text-align: center;
+}

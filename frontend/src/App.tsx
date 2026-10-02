@@ -65,6 +65,7 @@ export const App: FC<
             />
             <MantineProvider
                 cssVariablesResolver={v8CssVariablesResolver}
+                defaultColorScheme="light"
                 theme={{
                     colors: props.themeColors,
                     primaryColor: "primary",

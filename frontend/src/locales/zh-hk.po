@@ -1028,6 +1028,10 @@ msgstr "所有場次"
 msgid "All Products"
 msgstr "所有產品"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
+msgid "All rights reserved."
+msgstr "保留所有權利。"
+
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:109
 msgid "All Statuses"
 msgstr "所有狀態"
@@ -1789,6 +1793,10 @@ msgstr "返回活動"
 #: src/components/layouts/Checkout/index.tsx:309
 msgid "Back to event page"
 msgstr "返回活動頁面"
+
+#: src/components/common/LegalPageLayout/index.tsx:22
+msgid "Back to home"
+msgstr "返回首頁"
 
 #: src/components/routes/auth/ForgotPassword/index.tsx:48
 #: src/components/routes/auth/ForgotPassword/index.tsx:74
@@ -2856,6 +2864,10 @@ msgstr "聯絡 {0}"
 msgid "Contact Email"
 msgstr "聯絡電郵"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+msgid "Contact Us"
+msgstr "聯絡我們"
+
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
@@ -2917,7 +2929,7 @@ msgid "Control who gets in, and when"
 msgstr "控制誰可入場、何時入場"
 
 #: src/components/common/CookieConsentBanner/index.tsx:71
-#: src/components/common/CookieSettingsLink/index.tsx:17
+#: src/components/common/CookieSettingsLink/index.tsx:18
 msgid "Cookie settings"
 msgstr "Cookie 設定"
 
@@ -4756,6 +4768,7 @@ msgstr "活動已更新"
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
 #: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
@@ -4769,6 +4782,10 @@ msgstr "活動"
 #: src/components/routes/organizer/Reports/index.tsx:23
 msgid "Events Performance"
 msgstr "活動表現"
+
+#: src/components/common/PoweredByFooter/index.tsx:60
+msgid "Events powered by"
+msgstr "活動技術支援："
 
 #: src/components/routes/admin/Dashboard/index.tsx:450
 msgid "Events Starting in Next 24 Hours"
@@ -5145,6 +5162,7 @@ msgid "Failed to save VAT settings. Please try again."
 msgstr "儲存增值稅設定失敗。請重試。"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:39
 msgid "Failed to send message. Please try again."
 msgstr "發送訊息失敗。請再試一次。"
 
@@ -5431,6 +5449,10 @@ msgstr "閃光燈關閉"
 msgid "Flash on"
 msgstr "閃光燈開啟"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:15
+msgid "Follow us on Instagram"
+msgstr "在 Instagram 上關注我們"
+
 #: src/components/common/ThemeFontControl/index.tsx:65
 msgid "Font Family"
 msgstr "字體"
@@ -5468,7 +5490,7 @@ msgstr "第四個"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:133
 #: src/components/forms/ProductForm/index.tsx:289
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:191
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:148
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:155
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
 msgid "Free"
@@ -5486,6 +5508,10 @@ msgstr "五"
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:27
 msgid "Friday"
 msgstr "星期五"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
+msgid "Friends of School"
+msgstr "Friends of School"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1067
 msgid "From"
@@ -5577,7 +5603,7 @@ msgid "Get started"
 msgstr "開始使用"
 
 #: src/components/layouts/EventHomepage/index.tsx:209
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:157
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:164
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "購票"
@@ -5874,6 +5900,7 @@ msgid "Hobbies"
 msgstr "興趣愛好"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:32
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:110
 msgid "Home"
 msgstr "首頁"
 
@@ -5901,6 +5928,10 @@ msgstr "荷馬"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:412
 msgid "Hours"
 msgstr "小時"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:63
+msgid "How can we help?"
+msgstr "我們可以如何幫助您？"
 
 #: src/components/common/CapacityHelp/index.tsx:110
 #: src/components/common/CapacityHelp/index.tsx:165
@@ -6134,9 +6165,14 @@ msgstr "插入圖片"
 msgid "Insert Liquid Token"
 msgstr "插入Liquid標記"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:116
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:53
 msgid "Instagram"
 msgstr "Instagram"
+
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:26
+msgid "Instagram feed"
+msgstr "Instagram 動態"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
 msgid "Instant Stripe payouts"
@@ -6466,6 +6502,10 @@ msgstr "最新響應"
 msgid "Last Triggered"
 msgstr "最近觸發"
 
+#: src/components/common/LegalPageLayout/index.tsx:26
+msgid "Last updated: {updatedDate}"
+msgstr "最後更新：{updatedDate}"
+
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:70
 msgid "Last Used"
 msgstr "最近一次使用"
@@ -6501,6 +6541,10 @@ msgstr "留空即可讓此簽到名單適用於所有場次"
 #: src/components/forms/CheckInListForm/index.tsx:106
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "保持開啟即可涵蓋活動的所有門票；關閉後可揀選指定門票。"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+msgid "Legal"
+msgstr "法律資訊"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:305
 msgid "Let them know about the change"
@@ -6825,6 +6869,7 @@ msgstr "媒介"
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:155
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:68
 #: src/components/modals/SendMessageModal/index.tsx:444
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:60
 msgid "Message"
@@ -7005,7 +7050,7 @@ msgstr "多行文本框"
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/EventHomepage/index.tsx:181
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:47
 msgid "Multiple locations"
 msgstr "多個地點"
 
@@ -7018,6 +7063,7 @@ msgid "Music"
 msgstr "音樂"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
 msgid "My Account"
 msgstr "我的帳戶"
 
@@ -7118,7 +7164,9 @@ msgstr "新註冊"
 msgid "New time:"
 msgstr "新時間："
 
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:106
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:113
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:22
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:35
 msgid "Next Event"
 msgstr "下一場活動"
 
@@ -7799,7 +7847,7 @@ msgstr "持續進行"
 
 #: src/components/common/EventCard/index.tsx:111
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:50
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:43
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:50
 #: src/components/routes/event/OccurrencesTab/index.tsx:333
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:478
 #: src/components/routes/my-tickets/index.tsx:56
@@ -7816,7 +7864,7 @@ msgstr "網上 — 請填寫連線資料"
 
 #: src/components/common/EventCard/index.tsx:108
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:47
 msgid "Online & in-person"
 msgstr "網上及實體"
 
@@ -7831,7 +7879,7 @@ msgstr "網上活動"
 
 #: src/components/layouts/EventHomepage/index.tsx:411
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
-#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:132
+#: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:139
 msgid "Online Event"
 msgstr "線上活動"
 
@@ -8272,6 +8320,10 @@ msgstr "其他"
 #: src/components/common/CheckInStatusModal/index.tsx:177
 msgid "Other Lists (Ticket Not Included)"
 msgstr "其他列表（不包含此票）"
+
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
+msgid "Our latest posts are on Instagram — tap below to see them."
+msgstr "我們的最新動態發佈在 Instagram 上 — 點擊下方查看。"
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:121
 msgid "Outcome"
@@ -8738,6 +8790,10 @@ msgstr "請輸入5位數驗證碼"
 msgid "Please enter your VAT number"
 msgstr "請輸入您的增值稅號碼"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:28
+msgid "Please fill in all fields"
+msgstr "請填寫所有欄位"
+
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
 msgstr "請注意"
@@ -8822,8 +8878,12 @@ msgid "Post Checkout message"
 msgstr "結賬後信息"
 
 #: src/components/common/PoweredByFooter/index.tsx:60
-msgid "Powered by"
-msgstr "技術支援"
+#~ msgid "Powered by"
+#~ msgstr "技術支援"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:97
+msgid "Powered by Friends of School, an initiative by"
+msgstr "由 Friends of School 提供支援，這是以下機構的一項計劃："
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:90
 msgid "Pre Checkout message"
@@ -8914,7 +8974,7 @@ msgstr "列印為PDF"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
 #: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:125
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
 msgid "Privacy Policy"
 msgstr "私隱政策"
 
@@ -9207,6 +9267,10 @@ msgstr "問題已重新排序"
 #: src/components/routes/admin/FailedJobs/index.tsx:257
 msgid "Queue"
 msgstr "隊列"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:108
+msgid "Quick Links"
+msgstr "快速連結"
 
 #: src/components/forms/PromoCodeForm/index.tsx:145
 msgid "Quick Tip"
@@ -10085,6 +10149,10 @@ msgstr "安全結帳"
 msgid "See schedule"
 msgstr "查看排程"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:17
+msgid "See the latest photos and updates from"
+msgstr "查看最新相片和動態，來自"
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:310
 msgid "See what Stripe still needs"
 msgstr "查看 Stripe 還需要甚麼資料"
@@ -10307,6 +10375,10 @@ msgstr "向參與者、持票人或訂單擁有者發送電子郵件。訊息可
 #: src/components/modals/SendMessageModal/index.tsx:568
 msgid "Send me a copy"
 msgstr "發送副本給我"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:74
+msgid "Send message"
+msgstr "傳送訊息"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:112
 #: src/components/modals/SendMessageModal/index.tsx:542
@@ -11369,7 +11441,7 @@ msgid "Term"
 msgstr "關鍵字"
 
 #: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/OrganizerPageShell/index.tsx:132
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
 msgid "Terms of Service"
 msgstr "服務條款"
 
@@ -12141,6 +12213,11 @@ msgstr "今天"
 msgid "Toggle columns"
 msgstr "切換欄位"
 
+#: src/components/common/ThemeToggle/index.tsx:21
+#: src/components/common/ThemeToggle/index.tsx:22
+msgid "Toggle light and dark theme"
+msgstr "切換淺色與深色主題"
+
 #: src/components/routes/event/OccurrencesTab/GroupedOccurrenceTable/index.tsx:46
 msgid "Tomorrow"
 msgstr "明天"
@@ -12484,6 +12561,7 @@ msgstr "每個日期最多 {perDateAllocation}"
 #: src/components/common/EventsDashboardStatusButtons/index.tsx:20
 #: src/components/common/EventStatusBadge/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:45
+#: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:35
 #: src/components/routes/event/OccurrencesTab/index.tsx:513
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:33
 msgid "Upcoming"
@@ -12854,6 +12932,10 @@ msgstr "影片連結"
 msgid "Vietnamese"
 msgstr "越南語"
 
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:36
+msgid "View @{handle} on Instagram"
+msgstr "在 Instagram 上查看 @{handle}"
+
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:70
 msgid "View All"
 msgstr "查看全部"
@@ -13029,6 +13111,10 @@ msgstr "警告：這是 {0} 預設配置。變更將影響所有自動分配此�
 #: src/components/routes/admin/Configurations/index.tsx:211
 msgid "Warning: This is the system default configuration. Changes will affect all accounts that don't have a specific configuration assigned."
 msgstr "警告：這是系統預設配置。變更將影響所有未分配特定配置的帳戶。"
+
+#: src/components/common/PaymentIcons/index.tsx:62
+msgid "We accept"
+msgstr "我們接受"
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
@@ -13733,6 +13819,11 @@ msgstr "您當前的訂單將丟失。"
 msgid "Your Details"
 msgstr "您的詳細信息"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:56
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:60
+msgid "Your email"
+msgstr "您的電郵"
+
 #: src/components/common/ContactOrganizerModal/index.tsx:79
 msgid "Your Email"
 msgstr "您的電子郵件"
@@ -13753,9 +13844,18 @@ msgstr "您的信息已發送"
 msgid "Your message has been sent successfully!"
 msgstr "你嘅訊息已經成功發送！"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:35
+msgid "Your message has been sent. We'll be in touch soon!"
+msgstr "您的訊息已傳送。我們會盡快與您聯絡！"
+
 #: src/components/routes/event/messages.tsx:275
 msgid "Your messages will appear here"
 msgstr "您的訊息將顯示在此處"
+
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:48
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:52
+msgid "Your name"
+msgstr "您的姓名"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:73
 msgid "Your Name"
