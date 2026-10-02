@@ -582,6 +582,15 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/events/:organizerId/:organizerSlug/about",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicOrganizerAbout = await import("./components/layouts/PublicOrganizerAbout");
+            return { Component: PublicOrganizerAbout.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/privacy-policy",
         async lazy() {
             const PrivacyPolicy = await import("./components/routes/legal/PrivacyPolicy");

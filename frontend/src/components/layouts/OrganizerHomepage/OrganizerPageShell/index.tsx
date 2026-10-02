@@ -14,19 +14,26 @@ import classes from '../OrganizerHomepage.module.scss';
 
 interface OrganizerPageShellProps {
     organizer: Organizer;
-    activeNav: 'home' | 'events';
+    activeNav: 'home' | 'events' | 'about';
     hero?: React.ReactNode;
     children: React.ReactNode;
 }
 
 const ScrollToTop = () => {
-    const {pathname} = useLocation();
+    const {pathname, hash} = useLocation();
 
     useEffect(() => {
         setTimeout(() => {
+            if (hash) {
+                const target = document.getElementById(hash.slice(1));
+                if (target) {
+                    target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    return;
+                }
+            }
             window.scrollTo(0, 0);
         }, 100);
-    }, [pathname]);
+    }, [pathname, hash]);
 
     return null;
 }

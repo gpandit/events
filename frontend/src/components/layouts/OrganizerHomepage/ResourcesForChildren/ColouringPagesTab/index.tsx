@@ -1,10 +1,8 @@
 import {useRef} from 'react';
-import {IconChevronLeft, IconChevronRight, IconDownload, IconExternalLink, IconHeart, IconPalette, IconSparkles, IconSun} from '@tabler/icons-react';
+import {IconChevronLeft, IconChevronRight, IconDownload, IconExternalLink} from '@tabler/icons-react';
 import {t} from '@lingui/macro';
 import {colouringPages} from '../colouringPagesData.ts';
 import classes from '../ResourcesForChildren.module.scss';
-
-const TILE_ICONS = [IconPalette, IconHeart, IconSparkles, IconSun];
 
 export const ColouringPagesTab = () => {
     const trackRef = useRef<HTMLDivElement>(null);
@@ -33,20 +31,22 @@ export const ColouringPagesTab = () => {
                     </button>
 
                     <div className={classes.carousel} ref={trackRef}>
-                        {colouringPages.map((page, index) => {
-                            const Icon = TILE_ICONS[index % TILE_ICONS.length];
-                            return (
-                                <div key={page.title} className={classes.colouringCard}>
-                                    <div className={`${classes.colouringTile} ${classes[`tint-${page.tint}`]}`}>
-                                        <Icon size={40} strokeWidth={1.5}/>
-                                    </div>
-                                    <p className={classes.colouringTitle}>{page.title}</p>
-                                    <a href={page.pdfUrl} download className={classes.downloadLink}>
-                                        <IconDownload size={16}/> {t`Download PDF`}
-                                    </a>
+                        {colouringPages.map((page) => (
+                            <div key={page.title} className={classes.colouringCard}>
+                                <div className={`${classes.colouringTile} ${classes[`tint-${page.tint}`]}`}>
+                                    <img
+                                        src={page.thumbnailUrl}
+                                        alt={page.title}
+                                        className={classes.colouringThumbnail}
+                                        loading="lazy"
+                                    />
                                 </div>
-                            );
-                        })}
+                                <p className={classes.colouringTitle}>{page.title}</p>
+                                <a href={page.pdfUrl} download className={classes.downloadLink}>
+                                    <IconDownload size={16}/> {t`Download PDF`}
+                                </a>
+                            </div>
+                        ))}
                     </div>
 
                     <button
@@ -70,7 +70,9 @@ export const ColouringPagesTab = () => {
                 rel="noopener noreferrer"
                 className={classes.shopLink}
             >
-                {t`Love colouring? Shop creative colouring sets at icreate.art`} <IconExternalLink size={14}/>
+                {t`Love colouring? Shop creative colouring sets at`}{' '}
+                <img src="/logos/icreate-logo.webp" alt={t`I Create`} className={classes.shopLinkLogo}/>
+                <IconExternalLink size={16}/>
             </a>
         </div>
     );
