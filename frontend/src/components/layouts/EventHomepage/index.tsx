@@ -40,7 +40,7 @@ import {formatCurrency} from "../../../utilites/currency.ts";
 import {UserGeneratedContent} from "../../common/UserGeneratedContent";
 import {OrganizerNav} from "../OrganizerHomepage/OrganizerNav";
 import {SiteFooter} from "../OrganizerHomepage/SiteFooter";
-import {ThemeToggle} from "../../common/ThemeToggle";
+import {FloatingSiteControls} from "../../common/FloatingSiteControls";
 
 interface EventHomepageProps {
     event?: Event;
@@ -724,7 +724,7 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
                 </div>
 
                 <SiteFooter organizer={organizer}/>
-                <ThemeToggle/>
+                <FloatingSiteControls/>
             </main>
         </>
     );

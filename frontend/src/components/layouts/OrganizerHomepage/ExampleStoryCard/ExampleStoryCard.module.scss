@@ -1,0 +1,104 @@
+@use "../../../../styles/mixins.scss";
+
+.card {
+    position: relative;
+    background: var(--organizer-content-bg-color, #ffffff);
+    border: 1.5px dashed var(--organizer-primary-color, #8b5cf6);
+    border-radius: 18px;
+    padding: 28px 24px 24px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.exampleBadge {
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-contrast, #ffffff);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 999px;
+}
+
+.exampleNote {
+    margin: 10px 0 0;
+    color: var(--organizer-secondary-color, #525252);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.header {
+    padding-top: 6px;
+}
+
+.typeBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--organizer-accent-soft, rgba(139, 92, 246, 0.08));
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 4px 9px;
+    border-radius: 999px;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--organizer-primary-text-color, #1a1a1a);
+    margin: 10px 0 2px;
+}
+
+.author {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--organizer-secondary-color, #525252);
+}
+
+.body {
+    color: var(--organizer-primary-text-color, #1a1a1a);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    max-width: 680px;
+
+    p {
+        margin: 0 0 1em;
+    }
+}
+
+.illustration {
+    display: block;
+    width: 88px;
+    height: 88px;
+    padding: 14px;
+    border-radius: 50%;
+    background: var(--organizer-accent-soft, rgba(139, 92, 246, 0.1));
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
+
+    &:nth-of-type(odd) {
+        float: left;
+        margin: 2px 16px 10px 0;
+        shape-outside: circle(50%);
+    }
+
+    &:nth-of-type(even) {
+        float: right;
+        margin: 2px 0 10px 16px;
+        shape-outside: circle(50%);
+    }
+
+    @include mixins.respond-below(sm) {
+        float: none;
+        margin: 0 auto 14px;
+    }
+}

@@ -9,15 +9,15 @@ const getBackendUrl = () => {
     return backendUrl;
 };
 
-const fetchSitemap = async (path, res, errorContext) => {
+const fetchSitemap = async (path, res, errorContext, contentType = 'application/xml') => {
     try {
         const backendUrl = getBackendUrl();
         const response = await axios.get(`${backendUrl}/public${path}`, {
-            headers: { 'Accept': 'application/xml' },
+            headers: { 'Accept': contentType },
             responseType: 'text',
         });
 
-        res.setHeader('Content-Type', 'application/xml');
+        res.setHeader('Content-Type', contentType);
         if (response.headers['cache-control']) {
             res.setHeader('Cache-Control', response.headers['cache-control']);
         }
@@ -46,6 +46,10 @@ const validatePageParam = (page, res) => {
 
 export const sitemapIndexHandler = async (_req, res) => {
     await fetchSitemap('/sitemap.xml', res, 'sitemap index');
+};
+
+export const sitemapTxtHandler = async (_req, res) => {
+    await fetchSitemap('/sitemap.txt', res, 'sitemap txt', 'text/plain; charset=utf-8');
 };
 
 export const sitemapEventsHandler = async (req, res) => {

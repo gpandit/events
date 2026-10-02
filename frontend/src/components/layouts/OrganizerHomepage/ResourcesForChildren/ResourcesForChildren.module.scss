@@ -4,6 +4,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 
 .section {
     margin-top: 48px;
+    scroll-margin-top: 96px;
 }
 
 .heading {
@@ -30,7 +31,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
         font-weight: 600;
 
         &[data-active] {
-            color: var(--organizer-primary-color, #8b5cf6);
+            color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
             border-color: var(--organizer-primary-color, #8b5cf6);
         }
     }
@@ -62,7 +63,39 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 }
 
 .puzzleIcon {
-    color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
+}
+
+.carouselWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.carouselNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
+    background: var(--organizer-content-bg-color, #ffffff);
+    color: var(--organizer-primary-text-color, #1a1a1a);
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+        background: var(--organizer-primary-color, #8b5cf6);
+        border-color: var(--organizer-primary-color, #8b5cf6);
+        color: var(--organizer-accent-contrast, #ffffff);
+    }
+
+    @include mixins.respond-below(sm) {
+        display: none;
+    }
 }
 
 .carousel {
@@ -70,32 +103,56 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     gap: 16px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+    padding: 4px 4px 12px;
     -webkit-overflow-scrolling: touch;
 }
 
 .colouringCard {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     background: var(--organizer-content-bg-color, #ffffff);
     border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
-    border-radius: 14px;
-    padding: 14px;
-    flex: 0 0 260px;
+    border-radius: 16px;
+    padding: 16px;
+    flex: 0 0 200px;
     scroll-snap-align: start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.18);
+    }
 
     @include mixins.respond-below(sm) {
-        flex-basis: 78%;
+        flex-basis: 68%;
     }
 }
 
-.colouringImage {
+.colouringTile {
     width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
+}
+
+.tint-peach {
+    background: color-mix(in srgb, #ff9f7a 22%, var(--organizer-content-bg-color, #ffffff));
+}
+
+.tint-sky {
+    background: color-mix(in srgb, #6ec3ff 20%, var(--organizer-content-bg-color, #ffffff));
+}
+
+.tint-mint {
+    background: color-mix(in srgb, #5fd4a8 20%, var(--organizer-content-bg-color, #ffffff));
+}
+
+.tint-lilac {
+    background: color-mix(in srgb, #b794f6 20%, var(--organizer-content-bg-color, #ffffff));
 }
 
 .colouringTitle {
@@ -108,14 +165,19 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 .downloadLink {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
-    color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     text-decoration: none;
     font-weight: 600;
     font-size: 0.85rem;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: var(--organizer-accent-soft, rgba(139, 92, 246, 0.08));
 
     &:hover {
-        text-decoration: underline;
+        background: var(--organizer-primary-color, #8b5cf6);
+        color: var(--organizer-accent-contrast, #ffffff);
     }
 }
 
@@ -123,7 +185,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
@@ -234,7 +296,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     gap: 6px;
     cursor: pointer;
     font-weight: 600 !important;
-    color: var(--organizer-primary-color, #8b5cf6) !important;
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6)) !important;
     font-size: 0.8rem !important;
 
     &:hover {
@@ -317,7 +379,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     background: var(--organizer-accent-soft, rgba(139, 92, 246, 0.08));
     border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
     border-radius: 16px;
-    color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
 
     h3 {
         margin: 0;
@@ -334,7 +396,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 .submitAnother {
     border: none;
     background: none;
-    color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     font-weight: 600;
     cursor: pointer;
     padding: 0;

@@ -238,6 +238,7 @@ use HiEvents\Http\Actions\SelfService\ResendOrderConfirmationPublicAction;
 use HiEvents\Http\Actions\Sitemap\GetSitemapEventsAction;
 use HiEvents\Http\Actions\Sitemap\GetSitemapIndexAction;
 use HiEvents\Http\Actions\Sitemap\GetSitemapOrganizersAction;
+use HiEvents\Http\Actions\Sitemap\GetSitemapTxtAction;
 use HiEvents\Http\Actions\TaxesAndFees\CreateTaxOrFeeAction;
 use HiEvents\Http\Actions\TaxesAndFees\DeleteTaxOrFeeAction;
 use HiEvents\Http\Actions\TaxesAndFees\EditTaxOrFeeAction;
@@ -694,6 +695,7 @@ $router->prefix('/public')->group(
         $router->get('/sitemap.xml', GetSitemapIndexAction::class);
         $router->get('/sitemap-events-{page}.xml', GetSitemapEventsAction::class)->where('page', '[0-9]+');
         $router->get('/sitemap-organizers-{page}.xml', GetSitemapOrganizersAction::class)->where('page', '[0-9]+');
+        $router->get('/sitemap.txt', GetSitemapTxtAction::class);
     }
 );
 

@@ -25,6 +25,9 @@ const ALLOWED_UNAUTHENTICATED_PATHS = [
     'check-in',
     '/events/',
     'my-tickets',
+    'privacy-policy',
+    'terms-of-service',
+    'cookie-policy',
 ];
 
 export const api = axios.create({

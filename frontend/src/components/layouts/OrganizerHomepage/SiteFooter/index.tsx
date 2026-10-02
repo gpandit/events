@@ -118,6 +118,12 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <Link to={`${organizerHomepagePath(organizer)}/stories`} className={classes.footerNavLink}>
                             <IconBook2 size={14}/> {t`Children's Stories`}
                         </Link>
+                        <Link
+                            to={`${organizerHomepagePath(organizer)}#resources-for-children`}
+                            className={classes.footerNavLink}
+                        >
+                            {t`Children's Resources`}
+                        </Link>
                         <Link to="/auth/login" className={classes.footerNavLink}>
                             {t`My Account`}
                         </Link>
@@ -130,6 +136,9 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         </a>
                         <a href={getConfig('VITE_TOS_URL', '/terms-of-service')} className={classes.footerNavLink}>
                             {t`Terms of Service`}
+                        </a>
+                        <a href="/cookie-policy" className={classes.footerNavLink}>
+                            {t`Cookie Policy`}
                         </a>
                         <CookieSettingsLink className={classes.footerNavLink}/>
                     </div>

@@ -12,8 +12,8 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     margin: 0 auto 32px;
 }
 
-.introIcon {
-    color: var(--organizer-primary-color, #8b5cf6);
+.introSpacer {
+    height: 28px;
     margin-bottom: 8px;
 }
 
@@ -55,13 +55,32 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 }
 
 .card {
+    position: relative;
     background: var(--organizer-content-bg-color, #ffffff);
     border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
     border-radius: 16px;
-    padding: 20px;
+    padding: 24px 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        height: 4px;
+        border-radius: 0 0 4px 4px;
+        background: var(--organizer-primary-color, #8b5cf6);
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .cardHeader {
@@ -75,7 +94,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     align-items: center;
     gap: 5px;
     background: var(--organizer-accent-soft, rgba(139, 92, 246, 0.08));
-    color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -114,7 +133,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     margin: 32px auto 0;
     padding: 10px 24px;
     background: var(--organizer-accent-soft, rgba(139, 92, 246, 0.08));
-    color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     border: none;
     border-radius: 10px;
     font-weight: 700;

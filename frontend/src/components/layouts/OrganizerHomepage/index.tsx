@@ -1,3 +1,4 @@
+import {t} from "@lingui/macro";
 import {Event, GenericPaginatedResponse, Organizer} from "../../../types.ts";
 import {OrganizerPageShell} from "./OrganizerPageShell";
 import {OrganizerHero} from "./OrganizerHero";
@@ -6,6 +7,7 @@ import {OrganizerProfileCard} from "./OrganizerProfileCard";
 import {ResourcesForChildren} from "./ResourcesForChildren";
 import {organizerEventsPath} from "../../../utilites/urlHelper.ts";
 import {validateThemeSettings} from "../../../utilites/themeUtils.ts";
+import classes from './OrganizerHomepage.module.scss';
 
 interface OrganizerHomepageProps {
     organizer?: Organizer;
@@ -41,10 +43,16 @@ export const OrganizerHomepage = ({
             }
         >
             {upcomingEvents.length > 0 && (
-                <UpcomingEventsSpotlight
-                    events={upcomingEvents}
-                    primaryColor={themeSettings.accent}
-                />
+                <>
+                    <h2 className={classes.upcomingHeading}>{t`What's happening at RAB`}</h2>
+                    <UpcomingEventsSpotlight
+                        events={upcomingEvents}
+                        primaryColor={themeSettings.accent}
+                    />
+                    <div className={classes.sectionDivider} role="separator" aria-hidden="true">
+                        <span className={classes.sectionDividerMark}/>
+                    </div>
+                </>
             )}
 
             {isFirstPage && !isPastEvents && <ResourcesForChildren organizer={organizer}/>}

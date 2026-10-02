@@ -10,44 +10,10 @@ export const LanguageSwitcher = () => {
     // Ideally these would be in the locales.ts file, but when they're there they don't translate
     const getLocaleName = (locale: SupportedLocales): string => {
         switch (locale) {
-            case "hu":
-                return t`Hungarian`;
-            case "de":
-                return t`German`;
             case "en":
                 return t`English`;
-            case "fi":
-                return t`Finnish`;
-            case "es":
-                return t`Spanish`;
-            case "fr":
-                return t`French`;
-            case "it":
-                return t`Italian`;
-            case "nl":
-                return t`Dutch`;
-            case "pt":
-                return t`Portuguese`;
-            case "pt-br":
-                return t`Brazilian Portuguese`;
-            case "zh-cn":
-                return t`Chinese (Simplified)`;
-            case "zh-hk":
-                return t`Chinese (Traditional)`;
-            case "vi":
-                return t`Vietnamese`;
-            case "tr":
-                return t`Turkish`;
-            case "pl":
-                return t`Polish`;
-            case "se":
-                return t`Swedish`;
-            case "sk":
-                return t`Slovak`;
-            case "el":
-                return t`Greek`;
-            case "ko":
-                return t`Korean`;
+            case "ar":
+                return t`Arabic`;
             default:
                 // Defensive fallback: if a new locale is added to SupportedLocales
                 // but not handled here, return the locale code itself rather than

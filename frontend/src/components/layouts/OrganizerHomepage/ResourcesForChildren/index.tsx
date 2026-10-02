@@ -14,7 +14,7 @@ interface ResourcesForChildrenProps {
 
 export const ResourcesForChildren: React.FC<ResourcesForChildrenProps> = ({organizer}) => {
     return (
-        <section className={classes.section}>
+        <section id="resources-for-children" className={classes.section}>
             <h2 className={classes.heading}>{t`Resources for Children`}</h2>
             <p className={classes.subheading}>
                 {t`Colouring sheets, puzzles, and a place to share your own stories and poems.`}

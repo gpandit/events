@@ -334,6 +334,50 @@ class SitemapGeneratorServiceTest extends TestCase
         $this->assertTrue($dom->loadXML($xml));
     }
 
+    public function test_generate_events_url_list_returns_plain_urls(): void
+    {
+        $events = new Collection([
+            $this->createMockEvent(1, 'Event One', '2025-02-01 18:00:00', '2025-01-10 12:00:00'),
+            $this->createMockEvent(2, 'Event Two', '2025-03-01 18:00:00', '2025-01-11 12:00:00'),
+        ]);
+
+        $urls = $this->service->generateEventsUrlList($events, 'https://example.com');
+
+        $this->assertEquals([
+            'https://example.com/event/1/event-one',
+            'https://example.com/event/2/event-two',
+        ], $urls);
+    }
+
+    public function test_generate_events_url_list_with_empty_collection(): void
+    {
+        $urls = $this->service->generateEventsUrlList(new Collection([]), 'https://example.com');
+
+        $this->assertEquals([], $urls);
+    }
+
+    public function test_generate_organizers_url_list_returns_plain_urls(): void
+    {
+        $organizers = new Collection([
+            $this->createMockOrganizer(1, 'Organizer One', '2025-01-10 12:00:00'),
+            $this->createMockOrganizer(2, 'Organizer Two', '2025-01-11 12:00:00'),
+        ]);
+
+        $urls = $this->service->generateOrganizersUrlList($organizers, 'https://example.com');
+
+        $this->assertEquals([
+            'https://example.com/events/1/organizer-one',
+            'https://example.com/events/2/organizer-two',
+        ], $urls);
+    }
+
+    public function test_generate_organizers_url_list_with_empty_collection(): void
+    {
+        $urls = $this->service->generateOrganizersUrlList(new Collection([]), 'https://example.com');
+
+        $this->assertEquals([], $urls);
+    }
+
     private function createMockEvent(int $id, string $title, ?string $startDate, ?string $updatedAt): EventDomainObject
     {
         $event = m::mock(EventDomainObject::class);

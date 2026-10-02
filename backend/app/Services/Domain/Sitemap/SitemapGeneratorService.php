@@ -112,8 +112,7 @@ class SitemapGeneratorService
 
     private function writeEventUrl(XMLWriter $writer, EventDomainObject $event, string $baseUrl, Carbon $now): void
     {
-        $slug = Str::slug($event->getTitle()) ?: self::DEFAULT_EVENT_SLUG;
-        $eventUrl = $baseUrl.sprintf(self::EVENT_URL_PATTERN, $event->getId(), $slug);
+        $eventUrl = $this->getEventUrl($event, $baseUrl);
 
         $isUpcoming = $this->isEventUpcoming($event, $now);
         $lastMod = Carbon::parse($event->getUpdatedAt())->toAtomString();
@@ -124,6 +123,22 @@ class SitemapGeneratorService
         $writer->writeElement('changefreq', $isUpcoming ? self::CHANGEFREQ_DAILY : self::CHANGEFREQ_WEEKLY);
         $writer->writeElement('priority', $isUpcoming ? self::PRIORITY_HIGH : self::PRIORITY_LOW);
         $writer->endElement();
+    }
+
+    public function getEventUrl(EventDomainObject $event, string $baseUrl): string
+    {
+        $slug = Str::slug($event->getTitle()) ?: self::DEFAULT_EVENT_SLUG;
+
+        return $baseUrl.sprintf(self::EVENT_URL_PATTERN, $event->getId(), $slug);
+    }
+
+    /**
+     * @param  Collection<int, EventDomainObject>  $events
+     * @return array<int, string>
+     */
+    public function generateEventsUrlList(Collection $events, string $baseUrl): array
+    {
+        return $events->map(fn (EventDomainObject $event) => $this->getEventUrl($event, $baseUrl))->values()->all();
     }
 
     private function isEventUpcoming(EventDomainObject $event, Carbon $now): bool
@@ -156,8 +171,7 @@ class SitemapGeneratorService
 
     private function writeOrganizerUrl(XMLWriter $writer, OrganizerDomainObject $organizer, string $baseUrl): void
     {
-        $slug = Str::slug($organizer->getName()) ?: self::DEFAULT_ORGANIZER_SLUG;
-        $organizerUrl = $baseUrl.sprintf(self::ORGANIZER_URL_PATTERN, $organizer->getId(), $slug);
+        $organizerUrl = $this->getOrganizerUrl($organizer, $baseUrl);
         $lastMod = Carbon::parse($organizer->getUpdatedAt())->toAtomString();
 
         $writer->startElement('url');
@@ -166,5 +180,21 @@ class SitemapGeneratorService
         $writer->writeElement('changefreq', self::CHANGEFREQ_WEEKLY);
         $writer->writeElement('priority', self::PRIORITY_MEDIUM);
         $writer->endElement();
+    }
+
+    public function getOrganizerUrl(OrganizerDomainObject $organizer, string $baseUrl): string
+    {
+        $slug = Str::slug($organizer->getName()) ?: self::DEFAULT_ORGANIZER_SLUG;
+
+        return $baseUrl.sprintf(self::ORGANIZER_URL_PATTERN, $organizer->getId(), $slug);
+    }
+
+    /**
+     * @param  Collection<int, OrganizerDomainObject>  $organizers
+     * @return array<int, string>
+     */
+    public function generateOrganizersUrlList(Collection $organizers, string $baseUrl): array
+    {
+        return $organizers->map(fn (OrganizerDomainObject $organizer) => $this->getOrganizerUrl($organizer, $baseUrl))->values()->all();
     }
 }

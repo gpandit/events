@@ -37,6 +37,12 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                     >
                         {t`Events`}
                     </Link>
+                    <Link
+                        to={`${organizerHomepagePath(organizer)}#resources-for-children`}
+                        className={classes.link}
+                    >
+                        {t`Children's Resources`}
+                    </Link>
                     <Link to="/auth/login" className={classes.link}>
                         {t`My Account`}
                     </Link>

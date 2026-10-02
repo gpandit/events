@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {t} from '@lingui/macro';
-import {IconBook2, IconFeather} from '@tabler/icons-react';
+import {IconFeather} from '@tabler/icons-react';
 import {Organizer, PublishedChildStorySubmission} from '../../../../types.ts';
 import {useGetPublishedChildStorySubmissions} from '../../../../queries/useGetPublishedChildStorySubmissions.ts';
+import {ExampleStoryCard} from '../ExampleStoryCard';
 import classes from './ChildrenStoriesSection.module.scss';
 
 interface ChildrenStoriesSectionProps {
@@ -33,12 +34,14 @@ export const ChildrenStoriesSection: React.FC<ChildrenStoriesSectionProps> = ({o
     return (
         <div className={classes.wrapper}>
             <div className={classes.intro}>
-                <IconBook2 size={28} className={classes.introIcon}/>
+                <div className={classes.introSpacer}/>
                 <h1 className={classes.title}>{t`Children's Stories & Poems`}</h1>
                 <p className={classes.subtitle}>
                     {t`A collection of original stories and poems written by children in our community.`}
                 </p>
             </div>
+
+            <ExampleStoryCard/>
 
             {isLoading && page === 1 && <p className={classes.empty}>{t`Loading...`}</p>}
 
