@@ -766,6 +766,36 @@ export interface GenericPaginatedResponse<T> {
     meta: PaginationData;
 }
 
+export type ChildStorySubmissionType = 'STORY' | 'POEM';
+export type ChildStorySubmissionStatus = 'PENDING' | 'APPROVED' | 'REJECTED';
+
+export interface ChildStorySubmission {
+    id: number;
+    organizer_id: number;
+    type: ChildStorySubmissionType;
+    first_name: string;
+    last_name: string;
+    year_group: string;
+    content: string;
+    original_filename?: string | null;
+    consent_own_work: boolean;
+    consent_publish: boolean;
+    status: ChildStorySubmissionStatus;
+    submitted_at: string;
+    reviewed_at?: string | null;
+    published_at?: string | null;
+}
+
+export interface PublishedChildStorySubmission {
+    id: number;
+    type: ChildStorySubmissionType;
+    first_name: string;
+    last_initial: string;
+    year_group: string;
+    content: string;
+    published_at: string;
+}
+
 export enum ProductPriceType {
     Paid = 'PAID',
     Donation = 'DONATION',

@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layouts/Event/index.tsx:224
-#: src/components/layouts/OrganizerLayout/index.tsx:218
+#: src/components/layouts/OrganizerLayout/index.tsx:222
 msgid "- Click to Publish"
 msgstr "- 클릭하여 게시"
 
 #: src/components/layouts/Event/index.tsx:226
-#: src/components/layouts/OrganizerLayout/index.tsx:220
+#: src/components/layouts/OrganizerLayout/index.tsx:224
 msgid "- Click to Unpublish"
 msgstr "- 클릭하여 게시 취소"
 
@@ -81,7 +81,6 @@ msgid "{0} left"
 msgstr "{0}개 남음"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:158
 msgid "{0} logo"
 msgstr "{0} 로고"
 
@@ -444,6 +443,10 @@ msgstr "취소 안내가 다음으로 발송되었습니다:"
 msgid "a change in duration"
 msgstr "소요 시간 변경"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:39
+msgid "A collection of original stories and poems written by children in our community."
+msgstr "우리 커뮤니티의 어린이들이 쓴 독창적인 이야기와 시 모음입니다."
+
 #: src/components/forms/QuestionForm/index.tsx:138
 msgid "A date input. Perfect for asking for a date of birth etc."
 msgstr "날짜 입력 항목입니다. 생년월일 등을 물어볼 때 적합합니다."
@@ -537,7 +540,7 @@ msgstr "요일 패턴"
 msgid "Abandoned"
 msgstr "중단됨"
 
-#: src/components/layouts/EventHomepage/index.tsx:482
+#: src/components/layouts/EventHomepage/index.tsx:484
 msgid "About"
 msgstr "소개"
 
@@ -667,6 +670,7 @@ msgstr "조치 필요: 부가가치세 정보 필요"
 #: src/components/common/WaitlistTable/index.tsx:56
 #: src/components/common/WaitlistTable/index.tsx:234
 #: src/components/routes/admin/FailedJobs/index.tsx:167
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:66
 msgid "Actions"
 msgstr "작업"
 
@@ -851,7 +855,7 @@ msgstr "등급 추가"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:385
+#: src/components/layouts/EventHomepage/index.tsx:387
 msgid "Add to Calendar"
 msgstr "캘린더에 추가"
 
@@ -976,8 +980,8 @@ msgid "Affiliate deleted successfully"
 msgstr "제휴사가 성공적으로 삭제되었습니다"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Affiliate program"
-msgstr "제휴 프로그램"
+#~ msgid "Affiliate program"
+#~ msgstr "제휴 프로그램"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -1098,7 +1102,7 @@ msgstr "모든 회차"
 msgid "All Products"
 msgstr "모든 상품"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:147
 msgid "All rights reserved."
 msgstr "모든 권리 보유."
 
@@ -1358,6 +1362,10 @@ msgstr "적용 대상"
 msgid "Apply to all tickets"
 msgstr "모든 티켓에 적용"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:93
+msgid "Approve"
+msgstr "승인"
+
 #: src/components/routes/admin/SpamEvents/index.tsx:177
 msgid "Approve - Not Spam"
 msgstr "승인 - 스팸 아님"
@@ -1365,6 +1373,10 @@ msgstr "승인 - 스팸 아님"
 #: src/components/routes/admin/Messages/index.tsx:232
 msgid "Approve Message"
 msgstr "메시지 승인"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:17
+msgid "Approved"
+msgstr "승인됨"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:69
 msgid "April"
@@ -1503,11 +1515,11 @@ msgstr "나가시겠습니까?"
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "이 이벤트를 초안으로 변경하시겠습니까? 이벤트가 공개적으로 표시되지 않습니다"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:150
+#: src/components/layouts/OrganizerLayout/index.tsx:154
 msgid "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 msgstr "이 주최자 페이지를 초안으로 변경하시겠습니까? 페이지가 공개적으로 표시되지 않습니다"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:151
+#: src/components/layouts/OrganizerLayout/index.tsx:155
 msgid "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 msgstr "이 주최자 페이지를 공개하시겠습니까? 페이지가 공개적으로 표시됩니다"
 
@@ -2047,7 +2059,7 @@ msgstr "구매자에게는 순수 가격만 표시됩니다. 플랫폼 수수료
 msgid "By adding tracking pixels, you acknowledge that you and this platform are joint controllers of the data collected. You are responsible for ensuring you have a lawful basis for this processing under applicable privacy laws (GDPR, CCPA, etc.)."
 msgstr "추적 픽셀을 추가하면 귀하와 본 플랫폼이 수집된 데이터의 공동 관리자임에 동의하는 것입니다. 관련 개인정보 보호법(GDPR, CCPA 등)에 따라 이 처리에 대한 적법한 근거가 있는지 확인할 책임은 귀하에게 있습니다."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:762
+#: src/components/routes/product-widget/CollectInformation/index.tsx:761
 #: src/components/routes/product-widget/Payment/index.tsx:157
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "계속 진행하면 <0>{0} 서비스 약관</0>에 동의하는 것입니다"
@@ -2222,8 +2234,8 @@ msgid "Capacity Assignments"
 msgstr "정원 할당"
 
 #: src/components/layouts/AuthLayout/index.tsx:29
-msgid "Capacity management"
-msgstr "정원 관리"
+#~ msgid "Capacity management"
+#~ msgstr "정원 관리"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -2324,8 +2336,8 @@ msgstr "체크인만"
 msgid "Check out"
 msgstr "체크아웃"
 
-#: src/components/layouts/EventHomepage/index.tsx:344
-#: src/components/layouts/EventHomepage/index.tsx:345
+#: src/components/layouts/EventHomepage/index.tsx:346
+#: src/components/layouts/EventHomepage/index.tsx:347
 msgid "Check out this event: {0}"
 msgstr "이 이벤트를 확인해 보세요: {0}"
 
@@ -2482,6 +2494,14 @@ msgstr "결제 · {stepCount}단계 중 {stepNumber}단계"
 msgid "Checkout Settings"
 msgstr "결제 설정"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+msgid "Children's Stories"
+msgstr "어린이 이야기"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:37
+msgid "Children's Stories & Poems"
+msgstr "어린이 이야기 & 시"
+
 #: src/components/common/LanguageSwitcher/index.tsx:34
 msgid "Chinese (Simplified)"
 msgstr "중국어(간체)"
@@ -2550,6 +2570,10 @@ msgstr "2층석"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:576
 msgid "City"
 msgstr "도시"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:180
+msgid "Class / Year group"
+msgstr "학급 / 학년"
 
 #: src/components/common/CapacityHelp/index.tsx:60
 msgid "Class with a T-shirt add-on"
@@ -2644,7 +2668,7 @@ msgstr "코드는 3자 이상 50자 이하여야 합니다"
 msgid "Code must be no more than 20 characters"
 msgstr "코드는 20자를 초과할 수 없습니다"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:189
+#: src/components/layouts/OrganizerLayout/index.tsx:193
 msgid "Collaborate with your team to create amazing events together."
 msgstr "팀과 협업하여 함께 멋진 이벤트를 만드세요."
 
@@ -2682,6 +2706,14 @@ msgstr "색상은 유효한 HEX 색상 코드여야 합니다. 예: #ffffff"
 msgid "Colors"
 msgstr "색상"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:26
+msgid "Colouring Pages"
+msgstr "색칠 공부"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:20
+msgid "Colouring sheets, puzzles, and a place to share your own stories and poems."
+msgstr "색칠 공부, 퍼즐, 그리고 자신만의 이야기와 시를 나눌 수 있는 공간입니다."
+
 #: src/components/common/ColumnVisibilityToggle/index.tsx:21
 msgid "Columns"
 msgstr "열"
@@ -2703,11 +2735,15 @@ msgstr "이벤트를 설명하는 쉼표로 구분된 키워드입니다. 검색
 msgid "Communication Preferences"
 msgstr "커뮤니케이션 환경설정"
 
+#: src/components/layouts/OrganizerLayout/index.tsx:112
+msgid "Community"
+msgstr "커뮤니티"
+
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:82
 msgid "complete"
 msgstr "완료"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:758
+#: src/components/routes/product-widget/CollectInformation/index.tsx:757
 msgid "Complete Order"
 msgstr "주문 완료"
 
@@ -2823,8 +2859,8 @@ msgstr "확인"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:499
 #: src/components/routes/product-widget/CollectInformation/index.tsx:500
+#: src/components/routes/product-widget/CollectInformation/index.tsx:715
 #: src/components/routes/product-widget/CollectInformation/index.tsx:716
-#: src/components/routes/product-widget/CollectInformation/index.tsx:717
 msgid "Confirm Email Address"
 msgstr "이메일 주소 확인"
 
@@ -2860,7 +2896,7 @@ msgstr "스팸 확정"
 msgid "Confirm your email to access all features."
 msgstr "모든 기능을 이용하려면 이메일을 확인하세요."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:314
+#: src/components/layouts/OrganizerLayout/index.tsx:318
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "확인 이메일이 발송되었습니다! 받은 편지함을 확인해 주세요."
 
@@ -2929,7 +2965,7 @@ msgid "Connection details are required for online events"
 msgstr "온라인 이벤트에는 접속 정보가 필요합니다"
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:684
+#: src/components/layouts/EventHomepage/index.tsx:686
 #: src/components/layouts/OrganizerHomepage/OrganizerProfileCard/index.tsx:111
 msgid "Contact"
 msgstr "연락처"
@@ -2942,13 +2978,14 @@ msgstr "{0}에게 문의"
 msgid "Contact Email"
 msgstr "연락처 이메일"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:139
 msgid "Contact Us"
 msgstr "문의하기"
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:65
 msgid "Content"
 msgstr "내용"
 
@@ -2986,7 +3023,7 @@ msgstr "이벤트 생성으로 계속"
 msgid "Continue to next step"
 msgstr "다음 단계로 계속"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:758
+#: src/components/routes/product-widget/CollectInformation/index.tsx:757
 msgid "Continue to Payment"
 msgstr "결제로 계속"
 
@@ -3287,7 +3324,7 @@ msgid "Create event"
 msgstr "이벤트 생성"
 
 #: src/components/common/NoEventsBlankSlate/index.tsx:27
-#: src/components/layouts/OrganizerLayout/index.tsx:179
+#: src/components/layouts/OrganizerLayout/index.tsx:183
 #: src/components/routes/organizer/Events/index.tsx:62
 msgid "Create Event"
 msgstr "이벤트 생성"
@@ -3426,8 +3463,8 @@ msgid "Currently available for purchase"
 msgstr "현재 구매 가능"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "Custom branding"
-msgstr "맞춤 브랜딩"
+#~ msgid "Custom branding"
+#~ msgstr "맞춤 브랜딩"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3438,8 +3475,8 @@ msgid "Custom Maps URL"
 msgstr "맞춤 지도 URL"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Custom questions"
-msgstr "맞춤 질문"
+#~ msgid "Custom questions"
+#~ msgstr "맞춤 질문"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -4026,6 +4063,10 @@ msgstr "인보이스 다운로드"
 msgid "Download Invoice"
 msgstr "인보이스 다운로드"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:16
+msgid "Download PDF"
+msgstr "PDF 다운로드"
+
 #: src/components/modals/ShareModal/index.tsx:228
 msgid "Download QR Code"
 msgstr "QR 코드 다운로드"
@@ -4041,7 +4082,7 @@ msgstr "인보이스 다운로드 중"
 
 #: src/components/common/EventCard/index.tsx:96
 #: src/components/layouts/Event/index.tsx:223
-#: src/components/layouts/OrganizerLayout/index.tsx:217
+#: src/components/layouts/OrganizerLayout/index.tsx:221
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
 msgid "Draft"
@@ -4123,6 +4164,10 @@ msgstr "예: 새 기능: 대기자 명단"
 #: src/components/routes/admin/Announcements/index.tsx:391
 msgid "e.g. Scheduled maintenance this Saturday from 2-4am UTC"
 msgstr "예: 이번 주 토요일 UTC 오전 2-4시 정기 점검"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:184
+msgid "e.g. Year 5 or Form 2"
+msgstr "예: 5학년 또는 Form 2"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:280
 msgid "e.g., Get Tickets, Register Now"
@@ -4352,8 +4397,8 @@ msgid "Email & Notification Settings"
 msgstr "이메일 및 알림 설정"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Email & scheduled messages"
-msgstr "이메일 및 예약 메시지"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "이메일 및 예약 메시지"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4367,7 +4412,7 @@ msgstr "이메일 주소"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:490
 #: src/components/routes/product-widget/CollectInformation/index.tsx:491
-#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+#: src/components/routes/product-widget/CollectInformation/index.tsx:705
 #: src/components/routes/product-widget/CollectInformation/index.tsx:707
 msgid "Email Address"
 msgstr "이메일 주소"
@@ -4399,7 +4444,7 @@ msgid "Email confirmation resent"
 msgstr "이메일 확인이 재발송되었습니다"
 
 #: src/components/layouts/Event/index.tsx:87
-#: src/components/layouts/OrganizerLayout/index.tsx:123
+#: src/components/layouts/OrganizerLayout/index.tsx:127
 #: src/components/routes/profile/ManageProfile/index.tsx:101
 msgid "Email confirmation resent successfully"
 msgstr "이메일 확인이 성공적으로 재발송되었습니다"
@@ -4427,7 +4472,7 @@ msgstr "이메일 미리보기"
 msgid "Email Templates"
 msgstr "이메일 템플릿"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:293
+#: src/components/layouts/OrganizerLayout/index.tsx:297
 msgid "Email Verification Required"
 msgstr "이메일 인증 필요"
 
@@ -4453,8 +4498,8 @@ msgid "Embed Widget"
 msgstr "임베드 위젯"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Embeddable widget"
-msgstr "임베드 가능한 위젯"
+#~ msgid "Embeddable widget"
+#~ msgstr "임베드 가능한 위젯"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -4821,6 +4866,10 @@ msgstr "이벤트 상태 업데이트에 실패했습니다. 나중에 다시 �
 msgid "Event status updated"
 msgstr "이벤트 상태가 업데이트되었습니다"
 
+#: src/components/layouts/AuthLayout/index.tsx:39
+msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+msgstr "Repton Al Barsha 티켓 판매는 Aqualeo Digecom의 이니셔티브인 <0>Friends of School</0>이 후원하며 Hi.Events로 운영됩니다."
+
 #: src/components/common/AdminEventsTable/index.tsx:86
 msgid "Event Title"
 msgstr "이벤트 제목"
@@ -4847,7 +4896,7 @@ msgstr "이벤트 수정됨"
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
-#: src/components/layouts/OrganizerLayout/index.tsx:105
+#: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
 #: src/components/routes/admin/Dashboard/index.tsx:403
@@ -5449,6 +5498,7 @@ msgstr "첫 번째 참가자"
 msgid "First Invoice Number"
 msgstr "첫 인보이스 번호"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:156
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
 #: src/components/modals/ManageAttendeeModal/index.tsx:202
 #: src/components/modals/ManageOrderModal/index.tsx:229
@@ -5591,6 +5641,11 @@ msgstr "금"
 msgid "Friday"
 msgstr "금요일"
 
+#: src/components/layouts/AuthLayout/index.tsx:164
+msgid "Friends of Repton Al Barsha logo"
+msgstr "Friends of Repton Al Barsha 로고"
+
+#: src/components/layouts/AuthLayout/index.tsx:33
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
 msgid "Friends of School"
 msgstr "Friends of School"
@@ -5616,8 +5671,8 @@ msgid "from {start}, for {count} dates"
 msgstr "{start}부터 {count}회"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Full data ownership"
-msgstr "완전한 데이터 소유권"
+#~ msgid "Full data ownership"
+#~ msgstr "완전한 데이터 소유권"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -5668,11 +5723,11 @@ msgstr "코드 생성"
 msgid "German"
 msgstr "독일어"
 
-#: src/components/layouts/EventHomepage/index.tsx:517
+#: src/components/layouts/EventHomepage/index.tsx:519
 msgid "Get Directions"
 msgstr "길 찾기"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:82
+#: src/components/layouts/OrganizerLayout/index.tsx:83
 msgid "Get Paid"
 msgstr "결제 받기"
 
@@ -5992,7 +6047,7 @@ msgid "Homepage Design"
 msgstr "홈페이지 디자인"
 
 #: src/components/layouts/Event/index.tsx:118
-#: src/components/layouts/OrganizerLayout/index.tsx:109
+#: src/components/layouts/OrganizerLayout/index.tsx:110
 msgid "Homepage Designer"
 msgstr "홈페이지 디자이너"
 
@@ -6079,6 +6134,14 @@ msgstr "<0>이용약관</0>에 동의합니다"
 #: src/components/modals/SendMessageModal/index.tsx:530
 msgid "I confirm this is a transactional message related to this event"
 msgstr "이 메시지가 이 이벤트와 관련된 거래성 메시지임을 확인합니다"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:220
+msgid "I confirm this is entirely my own original work."
+msgstr "이것이 전적으로 저 자신의 독창적인 작품임을 확인합니다."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:231
+msgid "I'd like my story/poem to be considered for publication on this website."
+msgstr "제 이야기/시가 이 웹사이트에 게재되는 것을 고려해 주셨으면 합니다."
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1037
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
@@ -6261,11 +6324,11 @@ msgid "Instagram feed"
 msgstr "인스타그램 피드"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Instant Stripe payouts"
-msgstr "즉시 Stripe 정산"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "즉시 Stripe 정산"
 
 #: src/components/layouts/Event/index.tsx:143
-#: src/components/layouts/OrganizerLayout/index.tsx:114
+#: src/components/layouts/OrganizerLayout/index.tsx:118
 msgid "Integrations"
 msgstr "통합"
 
@@ -6314,7 +6377,7 @@ msgstr "팀원 초대"
 msgid "Invite Team Member"
 msgstr "팀원 초대"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:191
+#: src/components/layouts/OrganizerLayout/index.tsx:195
 msgid "Invite Team Members"
 msgstr "팀원 초대"
 
@@ -6322,7 +6385,7 @@ msgstr "팀원 초대"
 msgid "Invite User"
 msgstr "사용자 초대"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:188
+#: src/components/layouts/OrganizerLayout/index.tsx:192
 msgid "Invite Your Team"
 msgstr "팀 초대하기"
 
@@ -6409,7 +6472,7 @@ msgstr "John"
 msgid "Johnson"
 msgstr "Johnson"
 
-#: src/components/layouts/EventHomepage/index.tsx:413
+#: src/components/layouts/EventHomepage/index.tsx:415
 msgid "Join from anywhere"
 msgstr "어디서든 참여하세요"
 
@@ -6464,8 +6527,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "{0}의 소식과 이벤트 업데이트 받기"
 
 #: src/components/layouts/AuthLayout/index.tsx:43
-msgid "Keep the profit."
-msgstr "수익을 온전히 가져가세요."
+#~ msgid "Keep the profit."
+#~ msgstr "수익을 온전히 가져가세요."
 
 #: src/components/common/LanguageSwitcher/index.tsx:50
 msgid "Korean"
@@ -6551,6 +6614,7 @@ msgstr "최근 90일"
 msgid "Last login"
 msgstr "마지막 로그인"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:167
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
 #: src/components/modals/ManageAttendeeModal/index.tsx:204
 #: src/components/modals/ManageOrderModal/index.tsx:235
@@ -6628,7 +6692,7 @@ msgstr "모든 회차에 이 체크인 목록을 적용하려면 비워 두세�
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "켜 두면 이벤트의 모든 티켓에 적용됩니다. 특정 티켓을 선택하려면 끄세요."
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:127
 msgid "Legal"
 msgstr "법적 고지"
 
@@ -6640,7 +6704,7 @@ msgstr "변경 사항을 알리기"
 msgid "Let them know about the changes"
 msgstr "변경 사항을 알리기"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:111
+#: src/components/layouts/OrganizerLayout/index.tsx:115
 msgid "Library"
 msgstr "라이브러리"
 
@@ -6674,7 +6738,7 @@ msgstr "목록"
 
 #: src/components/common/EventCard/index.tsx:99
 #: src/components/layouts/Event/index.tsx:225
-#: src/components/layouts/OrganizerLayout/index.tsx:219
+#: src/components/layouts/OrganizerLayout/index.tsx:223
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
 msgstr "공개"
@@ -6691,6 +6755,10 @@ msgstr "진행 중인 이벤트"
 #: src/components/forms/ProductForm/ProductPreview.tsx:79
 msgid "Live preview"
 msgstr "실시간 미리보기"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:78
+msgid "Load more"
+msgstr "더 보기"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:346
 msgid "Loaded dates"
@@ -6716,6 +6784,7 @@ msgstr "웹훅 불러오는 중"
 
 #: src/components/common/OrganizerReportTable/index.tsx:265
 #: src/components/common/ReportTable/index.tsx:225
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:43
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
@@ -6726,7 +6795,7 @@ msgstr "불러오는 중..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:495
+#: src/components/layouts/EventHomepage/index.tsx:497
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:470
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -6755,7 +6824,7 @@ msgstr "위치 업데이트"
 msgid "locations"
 msgstr "위치"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:112
+#: src/components/layouts/OrganizerLayout/index.tsx:116
 #: src/components/routes/organizer/Locations/index.tsx:31
 msgid "Locations"
 msgstr "위치"
@@ -6803,6 +6872,10 @@ msgstr "내 티켓 조회"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:33
+msgid "Love colouring? Shop creative colouring sets at icreate.art"
+msgstr "색칠하는 것을 좋아하시나요? icreate.art에서 창의적인 색칠 세트를 구입해 보세요"
+
 #: src/components/modals/LocationEditModal/index.tsx:136
 msgid "Main Office"
 msgstr "본사"
@@ -6827,7 +6900,7 @@ msgstr "이 질문을 필수로 설정"
 #: src/components/common/OrganizerWebhookTable/index.tsx:96
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:539
 #: src/components/common/PromoCodeTable/index.tsx:175
-#: src/components/layouts/OrganizerLayout/index.tsx:104
+#: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:273
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:84
 msgid "Manage"
@@ -7141,15 +7214,15 @@ msgid "Multiple locations"
 msgstr "여러 위치"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Multiple ticket types"
-msgstr "여러 티켓 유형"
+#~ msgid "Multiple ticket types"
+#~ msgstr "여러 티켓 유형"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
 msgstr "음악"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:122
 msgid "My Account"
 msgstr "내 계정"
 
@@ -7188,6 +7261,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:62
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
 msgid "Name"
 msgstr "이름"
@@ -7226,6 +7300,10 @@ msgstr "없음"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:434
 msgid "New capacity"
 msgstr "새 정원"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:23
+msgid "New colouring sheets are on their way — check back soon!"
+msgstr "새로운 색칠 공부가 곧 올라올 예정입니다 — 곧 다시 확인해 주세요!"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:454
 msgid "New label"
@@ -7618,6 +7696,14 @@ msgstr "검색 결과 없음"
 msgid "No search results."
 msgstr "검색 결과가 없습니다."
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:47
+msgid "No stories have been published yet — check back soon!"
+msgstr "아직 게재된 이야기가 없습니다 — 곧 다시 확인해 주세요!"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:54
+msgid "No submissions here yet."
+msgstr "아직 여기에 제출된 내용이 없습니다."
+
 #: src/components/common/AddressAutocomplete/index.tsx:99
 #: src/components/common/LocationPicker/index.tsx:338
 msgid "No suggestions"
@@ -7963,7 +8049,7 @@ msgstr "온라인 및 오프라인 — 일정 참조"
 msgid "Online event"
 msgstr "온라인 이벤트"
 
-#: src/components/layouts/EventHomepage/index.tsx:411
+#: src/components/layouts/EventHomepage/index.tsx:413
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:139
 msgid "Online Event"
@@ -8066,6 +8152,10 @@ msgstr "사이드바 열기"
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
 msgstr "옵션 {i}"
+
+#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+msgid "Optional - the order confirmation and tickets already go to the email above"
+msgstr "선택 사항 - 주문 확인 및 티켓은 이미 위의 이메일로 전송됩니다"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:263
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
@@ -8326,7 +8416,7 @@ msgid "Organization Name"
 msgstr "조직명"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:596
+#: src/components/layouts/EventHomepage/index.tsx:598
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -8345,7 +8435,7 @@ msgid "Organizer archived successfully"
 msgstr "주최자가 성공적으로 보관되었습니다"
 
 #: src/components/layouts/Event/index.tsx:97
-#: src/components/layouts/OrganizerLayout/index.tsx:93
+#: src/components/layouts/OrganizerLayout/index.tsx:94
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Organizer Dashboard"
 msgstr "주최자 대시보드"
@@ -8376,12 +8466,12 @@ msgid "Organizer Settings"
 msgstr "주최자 설정"
 
 #: src/components/common/StatusToggle/index.tsx:63
-#: src/components/layouts/OrganizerLayout/index.tsx:162
+#: src/components/layouts/OrganizerLayout/index.tsx:166
 msgid "Organizer status update failed. Please try again later"
 msgstr "주최자 상태 업데이트에 실패했습니다. 나중에 다시 시도해 주세요"
 
 #: src/components/common/StatusToggle/index.tsx:55
-#: src/components/layouts/OrganizerLayout/index.tsx:159
+#: src/components/layouts/OrganizerLayout/index.tsx:163
 msgid "Organizer status updated"
 msgstr "주최자 상태가 업데이트되었습니다"
 
@@ -8410,6 +8500,10 @@ msgstr "기타 목록 (티켓 미포함)"
 #: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "최신 게시물은 인스타그램에서 확인하실 수 있습니다 — 아래를 눌러 확인하세요."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:109
+msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Stories page with your first name, last initial and year group."
+msgstr "저희 팀이 읽어본 후 승인되면, 이름, 성의 첫 글자, 학년과 함께 어린이 이야기 페이지에 게재됩니다."
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:121
 msgid "Outcome"
@@ -8651,6 +8745,7 @@ msgid "Payouts"
 msgstr "정산"
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:85
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:16
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:437
 #: src/components/routes/organizer/Payments/CapabilityList.tsx:60
 msgid "Pending"
@@ -8847,6 +8942,10 @@ msgstr "이메일을 확인하여 이메일 주소를 인증해 주세요"
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr "변경된 시간은 티켓에서 확인해 주세요. 티켓은 여전히 유효하며, 새 시간이 맞지 않는 경우가 아니라면 별도의 조치가 필요하지 않습니다. 궁금한 점이 있으시면 이 이메일에 회신해 주세요."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:77
+msgid "Please confirm both boxes below before submitting."
+msgstr "제출하기 전에 아래 두 체크박스를 모두 확인해 주세요."
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1028
 msgid "Please continue in the new tab"
 msgstr "새 탭에서 계속 진행해 주세요"
@@ -8883,6 +8982,10 @@ msgstr "부가가치세 번호를 입력해 주세요"
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:28
 msgid "Please fill in all fields"
 msgstr "모든 항목을 입력해 주세요"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:72
+msgid "Please fill in all fields before submitting."
+msgstr "제출하기 전에 모든 항목을 작성해 주세요."
 
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
@@ -8922,6 +9025,10 @@ msgstr "하나 이상의 상품을 선택해 주세요"
 msgid "Please try again."
 msgstr "다시 시도해 주세요."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:37
+msgid "Please upload a plain text (.txt) file, or paste your writing into the box below instead."
+msgstr "일반 텍스트(.txt) 파일을 업로드하거나, 대신 아래 상자에 글을 붙여넣어 주세요."
+
 #: src/components/routes/profile/ManageProfile/index.tsx:161
 msgid "Please verify your email address to access all features"
 msgstr "모든 기능을 이용하려면 이메일 주소를 인증해 주세요"
@@ -8946,6 +9053,12 @@ msgstr "인보이스를 준비하는 동안 잠시 기다려 주세요..."
 #: src/components/routes/event/orders.tsx:123
 msgid "Please wait while we prepare your orders for export..."
 msgstr "주문 내보내기를 준비하는 동안 잠시 기다려 주세요..."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:150
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+msgid "Poem"
+msgstr "시"
 
 #: src/components/common/LanguageSwitcher/index.tsx:42
 msgid "Polish"
@@ -9063,8 +9176,7 @@ msgid "Print to PDF"
 msgstr "PDF로 인쇄"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
-#: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "개인정보 처리방침"
@@ -9214,8 +9326,8 @@ msgid "promo codes"
 msgstr "프로모션 코드"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Promo codes"
-msgstr "프로모션 코드"
+#~ msgid "Promo codes"
+#~ msgstr "프로모션 코드"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9301,13 +9413,21 @@ msgstr "구매자"
 msgid "Purchaser email"
 msgstr "구매자 이메일"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:29
+msgid "Puzzles"
+msgstr "퍼즐"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:11
+msgid "Puzzles are coming soon! Check back for fun brain-teasers and activity sheets."
+msgstr "퍼즐이 곧 제공됩니다! 재미있는 퀴즈와 활동지를 위해 다시 확인해 주세요."
+
 #: src/components/modals/ShareModal/index.tsx:168
 msgid "QR Code"
 msgstr "QR 코드"
 
 #: src/components/layouts/AuthLayout/index.tsx:17
-msgid "QR code check-in"
-msgstr "QR 코드 체크인"
+#~ msgid "QR code check-in"
+#~ msgstr "QR 코드 체크인"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9400,8 +9520,8 @@ msgid "Ready to go live?"
 msgstr "공개할 준비가 되셨나요?"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Real-time analytics"
-msgstr "실시간 분석"
+#~ msgid "Real-time analytics"
+#~ msgstr "실시간 분석"
 
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:171
 msgid "Reason (optional)"
@@ -9477,7 +9597,7 @@ msgstr "환불 기록"
 msgid "Recurring"
 msgstr "반복"
 
-#: src/components/layouts/EventHomepage/index.tsx:375
+#: src/components/layouts/EventHomepage/index.tsx:377
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -9488,8 +9608,8 @@ msgid "Recurring Event Settings"
 msgstr "반복 이벤트 설정"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Recurring events"
-msgstr "반복 이벤트"
+#~ msgid "Recurring events"
+#~ msgstr "반복 이벤트"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -9590,9 +9710,17 @@ msgstr "등록"
 msgid "Registration Questions"
 msgstr "등록 질문"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:103
+msgid "Reject"
+msgstr "거절"
+
 #: src/components/common/CookieConsentBanner/index.tsx:135
 msgid "Reject all"
 msgstr "모두 거부"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:18
+msgid "Rejected"
+msgstr "거절됨"
 
 #: src/components/forms/ProductForm/index.tsx:378
 msgid "Release tiers in order"
@@ -9653,7 +9781,7 @@ msgid "Report not found"
 msgstr "보고서를 찾을 수 없습니다"
 
 #: src/components/layouts/Event/index.tsx:104
-#: src/components/layouts/OrganizerLayout/index.tsx:99
+#: src/components/layouts/OrganizerLayout/index.tsx:100
 #: src/components/routes/event/Reports/index.tsx:47
 #: src/components/routes/organizer/Reports/index.tsx:51
 msgid "Reports"
@@ -9691,7 +9819,7 @@ msgstr "코드 재발송"
 msgid "Resend Confirmation"
 msgstr "확인 재발송"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:310
+#: src/components/layouts/OrganizerLayout/index.tsx:314
 msgid "Resend Confirmation Email"
 msgstr "확인 이메일 재발송"
 
@@ -9748,6 +9876,10 @@ msgstr "비밀번호 재설정"
 #: src/components/routes/auth/ResetPassword/index.tsx:75
 msgid "Resetting..."
 msgstr "재설정 중..."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:18
+msgid "Resources for Children"
+msgstr "어린이를 위한 자료"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:116
 msgid "Response"
@@ -10244,7 +10376,7 @@ msgstr "보조 텍스트 색상"
 msgid "Secure Checkout"
 msgstr "안전한 결제"
 
-#: src/components/layouts/EventHomepage/index.tsx:438
+#: src/components/layouts/EventHomepage/index.tsx:440
 msgid "See schedule"
 msgstr "일정 보기"
 
@@ -10435,8 +10567,8 @@ msgid "Selected"
 msgstr "선택됨"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Sell out your event."
-msgstr "이벤트를 매진시키세요."
+#~ msgid "Sell out your event."
+#~ msgstr "이벤트를 매진시키세요."
 
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:77
 msgid "Sellable"
@@ -10630,7 +10762,7 @@ msgstr "반복 일정을 설정하여 날짜를 자동으로 생성하거나, �
 msgid "Set up check-in lists for different entrances, sessions, or days."
 msgstr "입구, 세션, 날짜별로 체크인 목록을 설정하세요."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:85
+#: src/components/layouts/OrganizerLayout/index.tsx:86
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
 msgstr "정산 설정"
@@ -10669,7 +10801,7 @@ msgstr "날짜의 위치 또는 온라인 정보를 설정, 변경 또는 제거
 msgid "Setting updated"
 msgstr "설정이 수정되었습니다"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:106
+#: src/components/layouts/OrganizerLayout/index.tsx:107
 #: src/components/modals/DuplicateEventModal/index.tsx:51
 msgid "Settings"
 msgstr "설정"
@@ -10683,8 +10815,8 @@ msgid "Setup takes just a few minutes — you don't need an existing Stripe acco
 msgstr "설정은 몇 분이면 완료되며 기존 Stripe 계정이 없어도 됩니다. Stripe가 카드, 월렛, 지역별 결제 수단 및 사기 방지를 처리하므로 이벤트에만 집중하실 수 있습니다."
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:349
-#: src/components/layouts/OrganizerLayout/index.tsx:239
+#: src/components/layouts/EventHomepage/index.tsx:351
+#: src/components/layouts/OrganizerLayout/index.tsx:243
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
 #: src/components/modals/ShareModal/index.tsx:186
@@ -10704,10 +10836,18 @@ msgstr "제휴 링크 공유"
 msgid "Share Event"
 msgstr "이벤트 공유"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:236
-#: src/components/layouts/OrganizerLayout/index.tsx:278
+#: src/components/layouts/OrganizerLayout/index.tsx:240
+#: src/components/layouts/OrganizerLayout/index.tsx:282
 msgid "Share Organizer Page"
 msgstr "주최자 페이지 공유"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:129
+msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
+msgstr "Friends of Repton 커뮤니티와 함께 자신만의 짧은 이야기나 시를 나눠보세요! 매달 최고의 이야기와 최고의 시를 선정해 상을 드립니다. 작품이 게재되길 원하시면 이름, 성의 첫 글자, 학년이 함께 표시됩니다."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:32
+msgid "Share Your Story"
+msgstr "이야기 공유하기"
 
 #: src/components/routes/event/CapacityAssignments/index.tsx:35
 msgid "Shared Capacity Management"
@@ -10945,11 +11085,13 @@ msgid "Something went wrong. Please try again later."
 msgstr "문제가 발생했습니다. 나중에 다시 시도해 주세요."
 
 #: src/components/layouts/Event/index.tsx:91
-#: src/components/layouts/OrganizerLayout/index.tsx:127
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:97
+#: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
 #: src/components/routes/my-tickets/index.tsx:162
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:35
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
 msgid "Something went wrong. Please try again."
@@ -11118,6 +11260,25 @@ msgstr "아직 필요함"
 msgid "Stop Impersonating"
 msgstr "대리 로그인 종료"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:143
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+msgid "Story"
+msgstr "이야기"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+msgid "Story published"
+msgstr "이야기가 게재되었습니다"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+msgid "Story rejected"
+msgstr "이야기가 거절되었습니다"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:113
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:42
+msgid "Story Submissions"
+msgstr "이야기 제출"
+
 #: src/components/common/OrdersTable/index.tsx:295
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
@@ -11186,6 +11347,18 @@ msgstr "제목이 여기에 표시됩니다"
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:267
 msgid "Subject:"
 msgstr "제목:"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:119
+msgid "Submit another story or poem"
+msgstr "다른 이야기나 시 제출하기"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:240
+msgid "Submit for review"
+msgstr "검토를 위해 제출"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:64
+msgid "Submitted"
+msgstr "제출됨"
 
 #: src/components/common/InlineOrderSummary/index.tsx:148
 #: src/components/common/OrderSummary/index.tsx:53
@@ -11387,7 +11560,7 @@ msgstr "지원 이메일"
 msgid "Swedish"
 msgstr "스웨덴어"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:75
+#: src/components/layouts/OrganizerLayout/index.tsx:76
 #: src/components/modals/SwitchOrganizerModal/index.tsx:46
 msgid "Switch Organizer"
 msgstr "주최자 전환"
@@ -11488,8 +11661,8 @@ msgid "Taxes and Fees"
 msgstr "세금 및 수수료"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Team collaboration"
-msgstr "팀 협업"
+#~ msgid "Team collaboration"
+#~ msgstr "팀 협업"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -11539,8 +11712,7 @@ msgstr "템플릿이 성공적으로 저장되었습니다"
 msgid "Term"
 msgstr "기간"
 
-#: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:132
 #: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "서비스 약관"
@@ -11553,10 +11725,18 @@ msgstr "텍스트가 읽기 어려울 수 있습니다"
 msgid "Thank you for attending!"
 msgstr "참석해 주셔서 감사합니다!"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:107
+msgid "Thank you for sharing your writing!"
+msgstr "글을 나눠주셔서 감사합니다!"
+
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:55
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
 msgid "Thanks,"
 msgstr "감사합니다,"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:42
+msgid "That file is too large. Please keep it under 200KB, or paste your writing below instead."
+msgstr "파일이 너무 큽니다. 200KB 이하로 유지하거나, 대신 아래에 텍스트를 붙여넣어 주세요."
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:297
 #: src/components/routes/product-widget/SelectProducts/index.tsx:543
@@ -11896,7 +12076,7 @@ msgstr "이 날짜만"
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
 msgstr "이 주최자에서 {stripeAccountId} 연결을 해제합니다. Stripe 계정을 다시 연결할 때까지 유료 티켓 판매가 중단됩니다."
 
-#: src/components/layouts/EventHomepage/index.tsx:399
+#: src/components/layouts/EventHomepage/index.tsx:401
 msgid "This event has ended"
 msgstr "이 이벤트는 종료되었습니다"
 
@@ -12366,7 +12546,7 @@ msgstr "라이트/다크 테마 전환"
 msgid "Tomorrow"
 msgstr "내일"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:108
+#: src/components/layouts/OrganizerLayout/index.tsx:109
 msgid "Tools"
 msgstr "도구"
 
@@ -12528,6 +12708,7 @@ msgstr "두 가지 설정이 한 날짜에 예약할 수 있는 인원을 결정
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:61
 msgid "Type"
 msgstr "유형"
 
@@ -12786,6 +12967,10 @@ msgstr "규칙을 작성하면 실시간으로 업데이트됩니다. 월을 넘
 #: src/components/forms/ProductForm/ProductPreview.tsx:100
 msgid "Updates as you type."
 msgstr "입력하면 실시간으로 업데이트됩니다."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:196
+msgid "Upload a .txt file"
+msgstr ".txt 파일 업로드"
 
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:39
 msgid "Upload a cover image for your organizer"
@@ -13147,7 +13332,7 @@ msgstr "이벤트 보기"
 msgid "View logs"
 msgstr "로그 보기"
 
-#: src/components/layouts/EventHomepage/index.tsx:558
+#: src/components/layouts/EventHomepage/index.tsx:560
 msgid "View Map"
 msgstr "지도 보기"
 
@@ -13155,7 +13340,7 @@ msgstr "지도 보기"
 msgid "View Message"
 msgstr "메시지 보기"
 
-#: src/components/layouts/EventHomepage/index.tsx:467
+#: src/components/layouts/EventHomepage/index.tsx:469
 msgid "View on Google Maps"
 msgstr "Google 지도에서 보기"
 
@@ -13176,8 +13361,8 @@ msgstr "주문 상세 정보 보기"
 msgid "View order details, issue refunds, and resend confirmations."
 msgstr "주문 상세 정보를 보고, 환불을 처리하고, 확인서를 재발송하세요."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:254
-#: src/components/layouts/OrganizerLayout/index.tsx:257
+#: src/components/layouts/OrganizerLayout/index.tsx:258
+#: src/components/layouts/OrganizerLayout/index.tsx:261
 msgid "View Organizer Homepage"
 msgstr "주최자 홈페이지 보기"
 
@@ -13231,7 +13416,6 @@ msgid "Waiting for scan…"
 msgstr "스캔 대기 중…"
 
 #: src/components/forms/ProductForm/index.tsx:456
-#: src/components/layouts/AuthLayout/index.tsx:18
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13315,6 +13499,10 @@ msgstr "데이터를 불러올 수 없습니다. 다시 시도해 주세요."
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:97
 msgid "We couldn't reach Stripe just now. Please try again in a moment."
 msgstr "지금 Stripe에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:52
+msgid "We couldn't read that file. Please try pasting your writing into the box below instead."
+msgstr "해당 파일을 읽을 수 없습니다. 대신 아래 상자에 텍스트를 붙여넣어 보세요."
 
 #: src/components/common/ProductsTable/SortableCategory/index.tsx:98
 msgid "We couldn't reorder the categories. Please try again."
@@ -13425,8 +13613,8 @@ msgid "Webhook deleted successfully"
 msgstr "웹훅이 성공적으로 삭제되었습니다"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Webhook integrations"
-msgstr "웹훅 연동"
+#~ msgid "Webhook integrations"
+#~ msgstr "웹훅 연동"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151
@@ -13451,7 +13639,7 @@ msgid "Webhook will send notifications"
 msgstr "웹훅이 알림을 보냅니다"
 
 #: src/components/layouts/Event/index.tsx:145
-#: src/components/layouts/OrganizerLayout/index.tsx:115
+#: src/components/layouts/OrganizerLayout/index.tsx:119
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
 #: src/components/routes/organizer/Webhooks/index.tsx:30
@@ -13729,6 +13917,10 @@ msgstr "X (Twitter)"
 msgid "year"
 msgstr "년"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:63
+msgid "Year group"
+msgstr "학년"
+
 #: src/components/common/OrganizerReportTable/index.tsx:59
 #: src/components/common/PeriodSelector/index.tsx:38
 #: src/components/common/ReportTable/index.tsx:54
@@ -13891,7 +14083,7 @@ msgstr "참가자를 수동으로 추가하려면 먼저 티켓을 생성해야 
 msgid "You must have at least one price tier"
 msgstr "최소 하나의 가격 등급이 있어야 합니다"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:299
+#: src/components/layouts/OrganizerLayout/index.tsx:303
 msgid "You must verify your email address before you can update the organizer status."
 msgstr "주최자 상태를 변경하려면 먼저 이메일 주소를 인증해야 합니다."
 
@@ -14113,6 +14305,10 @@ msgstr "환불이 처리 중입니다."
 #: src/components/layouts/CheckIn/index.tsx:117
 msgid "Your saved date filter is no longer available — showing all dates."
 msgstr "저장된 날짜 필터를 더 이상 사용할 수 없어 모든 날짜를 표시합니다."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:194
+msgid "Your story or poem"
+msgstr "당신의 이야기 또는 시"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:116
 msgid "Your Stripe account itself isn't affected, and no data is lost — you can reconnect at any time."

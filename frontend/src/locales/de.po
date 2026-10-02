@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layouts/Event/index.tsx:224
-#: src/components/layouts/OrganizerLayout/index.tsx:218
+#: src/components/layouts/OrganizerLayout/index.tsx:222
 msgid "- Click to Publish"
 msgstr "- Zum Veröffentlichen klicken"
 
 #: src/components/layouts/Event/index.tsx:226
-#: src/components/layouts/OrganizerLayout/index.tsx:220
+#: src/components/layouts/OrganizerLayout/index.tsx:224
 msgid "- Click to Unpublish"
 msgstr "- Zum Rückgängigmachen der Veröffentlichung klicken"
 
@@ -81,7 +81,6 @@ msgid "{0} left"
 msgstr "{0} übrig"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:158
 msgid "{0} logo"
 msgstr "{0} Logo"
 
@@ -444,6 +443,10 @@ msgstr "Eine Stornierungsbenachrichtigung wurde gesendet an"
 msgid "a change in duration"
 msgstr "eine Änderung der Dauer"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:39
+msgid "A collection of original stories and poems written by children in our community."
+msgstr "Eine Sammlung von Original-Geschichten und Gedichten, geschrieben von Kindern aus unserer Gemeinschaft."
+
 #: src/components/forms/QuestionForm/index.tsx:138
 msgid "A date input. Perfect for asking for a date of birth etc."
 msgstr "Ein Datumseingabefeld. Perfekt, um nach einem Geburtsdatum o.ä. zu fragen."
@@ -537,7 +540,7 @@ msgstr "Wochentagsmuster"
 msgid "Abandoned"
 msgstr "Abgebrochen"
 
-#: src/components/layouts/EventHomepage/index.tsx:482
+#: src/components/layouts/EventHomepage/index.tsx:484
 msgid "About"
 msgstr "Über"
 
@@ -667,6 +670,7 @@ msgstr "Handlung erforderlich: Umsatzsteuerinformationen benötigt"
 #: src/components/common/WaitlistTable/index.tsx:56
 #: src/components/common/WaitlistTable/index.tsx:234
 #: src/components/routes/admin/FailedJobs/index.tsx:167
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:66
 msgid "Actions"
 msgstr "Aktionen"
 
@@ -851,7 +855,7 @@ msgstr "Ebene hinzufügen"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:385
+#: src/components/layouts/EventHomepage/index.tsx:387
 msgid "Add to Calendar"
 msgstr "Zum Kalender hinzufügen"
 
@@ -976,8 +980,8 @@ msgid "Affiliate deleted successfully"
 msgstr "Partner erfolgreich gelöscht"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Affiliate program"
-msgstr "Partnerprogramm"
+#~ msgid "Affiliate program"
+#~ msgstr "Partnerprogramm"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -1098,7 +1102,7 @@ msgstr "Alle Termine"
 msgid "All Products"
 msgstr "Alle Produkte"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:147
 msgid "All rights reserved."
 msgstr "Alle Rechte vorbehalten."
 
@@ -1358,6 +1362,10 @@ msgstr "Anwenden auf"
 msgid "Apply to all tickets"
 msgstr "Auf alle Tickets anwenden"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:93
+msgid "Approve"
+msgstr "Genehmigen"
+
 #: src/components/routes/admin/SpamEvents/index.tsx:177
 msgid "Approve - Not Spam"
 msgstr "Genehmigen - Kein Spam"
@@ -1365,6 +1373,10 @@ msgstr "Genehmigen - Kein Spam"
 #: src/components/routes/admin/Messages/index.tsx:232
 msgid "Approve Message"
 msgstr "Nachricht genehmigen"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:17
+msgid "Approved"
+msgstr "Genehmigt"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:69
 msgid "April"
@@ -1503,11 +1515,11 @@ msgstr "Möchten Sie wirklich gehen?"
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "Möchten Sie diese Veranstaltung wirklich als Entwurf speichern? Dadurch wird die Veranstaltung für die Öffentlichkeit unsichtbar."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:150
+#: src/components/layouts/OrganizerLayout/index.tsx:154
 msgid "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 msgstr "Sind Sie sicher, dass Sie diesen Veranstalter auf Entwurf setzen möchten? Dadurch wird die Veranstalterseite für die Öffentlichkeit unsichtbar."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:151
+#: src/components/layouts/OrganizerLayout/index.tsx:155
 msgid "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 msgstr "Sind Sie sicher, dass Sie diesen Veranstalter veröffentlichen möchten? Dadurch wird die Veranstalterseite für die Öffentlichkeit sichtbar."
 
@@ -2047,7 +2059,7 @@ msgstr "Käufer sehen einen klaren Preis. Die Plattformgebühr wird von Ihrer Au
 msgid "By adding tracking pixels, you acknowledge that you and this platform are joint controllers of the data collected. You are responsible for ensuring you have a lawful basis for this processing under applicable privacy laws (GDPR, CCPA, etc.)."
 msgstr "Durch das Hinzufügen von Tracking-Pixeln bestätigen Sie, dass Sie und diese Plattform gemeinsam Verantwortliche für die erhobenen Daten sind. Sie sind dafür verantwortlich, eine rechtmäßige Grundlage für diese Verarbeitung gemäß den geltenden Datenschutzgesetzen (DSGVO, CCPA usw.) sicherzustellen."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:762
+#: src/components/routes/product-widget/CollectInformation/index.tsx:761
 #: src/components/routes/product-widget/Payment/index.tsx:157
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Durch Fortfahren stimmen Sie den <0>{0} Nutzungsbedingungen</0> zu"
@@ -2222,8 +2234,8 @@ msgid "Capacity Assignments"
 msgstr "Kapazitätszuweisungen"
 
 #: src/components/layouts/AuthLayout/index.tsx:29
-msgid "Capacity management"
-msgstr "Kapazitätsverwaltung"
+#~ msgid "Capacity management"
+#~ msgstr "Kapazitätsverwaltung"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -2324,8 +2336,8 @@ msgstr "Nur einchecken"
 msgid "Check out"
 msgstr "Auschecken"
 
-#: src/components/layouts/EventHomepage/index.tsx:344
-#: src/components/layouts/EventHomepage/index.tsx:345
+#: src/components/layouts/EventHomepage/index.tsx:346
+#: src/components/layouts/EventHomepage/index.tsx:347
 msgid "Check out this event: {0}"
 msgstr "Schauen Sie sich diese Veranstaltung an: {0}"
 
@@ -2482,6 +2494,14 @@ msgstr "Checkout · Schritt {stepNumber} von {stepCount}"
 msgid "Checkout Settings"
 msgstr "Checkout-Einstellungen"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+msgid "Children's Stories"
+msgstr "Geschichten der Kinder"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:37
+msgid "Children's Stories & Poems"
+msgstr "Geschichten & Gedichte der Kinder"
+
 #: src/components/common/LanguageSwitcher/index.tsx:34
 msgid "Chinese (Simplified)"
 msgstr "Vereinfachtes Chinesisch"
@@ -2550,6 +2570,10 @@ msgstr "Rang"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:576
 msgid "City"
 msgstr "Stadt"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:180
+msgid "Class / Year group"
+msgstr "Klasse / Jahrgangsstufe"
 
 #: src/components/common/CapacityHelp/index.tsx:60
 msgid "Class with a T-shirt add-on"
@@ -2644,7 +2668,7 @@ msgstr "Der Code muss zwischen 3 und 50 Zeichen lang sein"
 msgid "Code must be no more than 20 characters"
 msgstr "Code darf maximal 20 Zeichen lang sein"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:189
+#: src/components/layouts/OrganizerLayout/index.tsx:193
 msgid "Collaborate with your team to create amazing events together."
 msgstr "Arbeiten Sie mit Ihrem Team zusammen, um gemeinsam großartige Veranstaltungen zu gestalten."
 
@@ -2682,6 +2706,14 @@ msgstr "Die Farbe muss ein gültiger Hex-Farbcode sein. Beispiel: #ffffff"
 msgid "Colors"
 msgstr "Farben"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:26
+msgid "Colouring Pages"
+msgstr "Ausmalbilder"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:20
+msgid "Colouring sheets, puzzles, and a place to share your own stories and poems."
+msgstr "Ausmalbilder, Rätsel und ein Ort, um eigene Geschichten und Gedichte zu teilen."
+
 #: src/components/common/ColumnVisibilityToggle/index.tsx:21
 msgid "Columns"
 msgstr "Spalten"
@@ -2703,11 +2735,15 @@ msgstr "Durch Kommas getrennte Schlüsselwörter, die das Ereignis beschreiben. 
 msgid "Communication Preferences"
 msgstr "Kommunikationseinstellungen"
 
+#: src/components/layouts/OrganizerLayout/index.tsx:112
+msgid "Community"
+msgstr "Gemeinschaft"
+
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:82
 msgid "complete"
 msgstr "abgeschlossen"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:758
+#: src/components/routes/product-widget/CollectInformation/index.tsx:757
 msgid "Complete Order"
 msgstr "Bestellung abschließen"
 
@@ -2823,8 +2859,8 @@ msgstr "Bestätigen"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:499
 #: src/components/routes/product-widget/CollectInformation/index.tsx:500
+#: src/components/routes/product-widget/CollectInformation/index.tsx:715
 #: src/components/routes/product-widget/CollectInformation/index.tsx:716
-#: src/components/routes/product-widget/CollectInformation/index.tsx:717
 msgid "Confirm Email Address"
 msgstr "E-Mail-Adresse bestätigen"
 
@@ -2860,7 +2896,7 @@ msgstr "Spam bestätigen"
 msgid "Confirm your email to access all features."
 msgstr "Bestätigen Sie Ihre E-Mail-Adresse, um alle Funktionen zu nutzen."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:314
+#: src/components/layouts/OrganizerLayout/index.tsx:318
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "Bestätigungs-E-Mail gesendet! Bitte überprüfen Sie Ihren Posteingang."
 
@@ -2929,7 +2965,7 @@ msgid "Connection details are required for online events"
 msgstr "Für Online-Veranstaltungen sind Verbindungsdetails erforderlich"
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:684
+#: src/components/layouts/EventHomepage/index.tsx:686
 #: src/components/layouts/OrganizerHomepage/OrganizerProfileCard/index.tsx:111
 msgid "Contact"
 msgstr "Kontakt"
@@ -2942,13 +2978,14 @@ msgstr "Kontakt {0}"
 msgid "Contact Email"
 msgstr "Kontakt-E-Mail"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:139
 msgid "Contact Us"
 msgstr "Kontakt"
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:65
 msgid "Content"
 msgstr "Inhalt"
 
@@ -2986,7 +3023,7 @@ msgstr "Weiter zur Veranstaltungserstellung"
 msgid "Continue to next step"
 msgstr "Weiter zum nächsten Schritt"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:758
+#: src/components/routes/product-widget/CollectInformation/index.tsx:757
 msgid "Continue to Payment"
 msgstr "Weiter zur Zahlung"
 
@@ -3287,7 +3324,7 @@ msgid "Create event"
 msgstr "Veranstaltung erstellen"
 
 #: src/components/common/NoEventsBlankSlate/index.tsx:27
-#: src/components/layouts/OrganizerLayout/index.tsx:179
+#: src/components/layouts/OrganizerLayout/index.tsx:183
 #: src/components/routes/organizer/Events/index.tsx:62
 msgid "Create Event"
 msgstr "Ereignis erstellen"
@@ -3426,8 +3463,8 @@ msgid "Currently available for purchase"
 msgstr "Derzeit zum Kauf verfügbar"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "Custom branding"
-msgstr "Individuelles Branding"
+#~ msgid "Custom branding"
+#~ msgstr "Individuelles Branding"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3438,8 +3475,8 @@ msgid "Custom Maps URL"
 msgstr "Benutzerdefinierte Karten-URL"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Custom questions"
-msgstr "Individuelle Fragen"
+#~ msgid "Custom questions"
+#~ msgstr "Individuelle Fragen"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -4026,6 +4063,10 @@ msgstr "Rechnung herunterladen"
 msgid "Download Invoice"
 msgstr "Rechnung herunterladen"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:16
+msgid "Download PDF"
+msgstr "PDF herunterladen"
+
 #: src/components/modals/ShareModal/index.tsx:228
 msgid "Download QR Code"
 msgstr "QR-Code herunterladen"
@@ -4041,7 +4082,7 @@ msgstr "Rechnung wird heruntergeladen"
 
 #: src/components/common/EventCard/index.tsx:96
 #: src/components/layouts/Event/index.tsx:223
-#: src/components/layouts/OrganizerLayout/index.tsx:217
+#: src/components/layouts/OrganizerLayout/index.tsx:221
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
 msgid "Draft"
@@ -4123,6 +4164,10 @@ msgstr "z. B. Neue Funktion: Wartelisten"
 #: src/components/routes/admin/Announcements/index.tsx:391
 msgid "e.g. Scheduled maintenance this Saturday from 2-4am UTC"
 msgstr "z. B. Geplante Wartung diesen Samstag von 2–4 Uhr UTC"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:184
+msgid "e.g. Year 5 or Form 2"
+msgstr "z. B. Jahrgang 5 oder Klasse 2"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:280
 msgid "e.g., Get Tickets, Register Now"
@@ -4352,8 +4397,8 @@ msgid "Email & Notification Settings"
 msgstr "E-Mail- und Benachrichtigungseinstellungen"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Email & scheduled messages"
-msgstr "E-Mails & geplante Nachrichten"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "E-Mails & geplante Nachrichten"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4367,7 +4412,7 @@ msgstr "E-Mail-Adresse"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:490
 #: src/components/routes/product-widget/CollectInformation/index.tsx:491
-#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+#: src/components/routes/product-widget/CollectInformation/index.tsx:705
 #: src/components/routes/product-widget/CollectInformation/index.tsx:707
 msgid "Email Address"
 msgstr "E-Mail-Adresse"
@@ -4399,7 +4444,7 @@ msgid "Email confirmation resent"
 msgstr "E-Mail-Bestätigung erneut gesendet"
 
 #: src/components/layouts/Event/index.tsx:87
-#: src/components/layouts/OrganizerLayout/index.tsx:123
+#: src/components/layouts/OrganizerLayout/index.tsx:127
 #: src/components/routes/profile/ManageProfile/index.tsx:101
 msgid "Email confirmation resent successfully"
 msgstr "E-Mail-Bestätigung erfolgreich erneut gesendet"
@@ -4427,7 +4472,7 @@ msgstr "E-Mail-Vorschau"
 msgid "Email Templates"
 msgstr "E-Mail-Vorlagen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:293
+#: src/components/layouts/OrganizerLayout/index.tsx:297
 msgid "Email Verification Required"
 msgstr "E-Mail-Verifizierung erforderlich"
 
@@ -4453,8 +4498,8 @@ msgid "Embed Widget"
 msgstr "Widget einbetten"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Embeddable widget"
-msgstr "Einbettbares Widget"
+#~ msgid "Embeddable widget"
+#~ msgstr "Einbettbares Widget"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -4821,6 +4866,10 @@ msgstr "Die Aktualisierung des Ereignisstatus ist fehlgeschlagen. Bitte versuche
 msgid "Event status updated"
 msgstr "Veranstaltungsstatus aktualisiert"
 
+#: src/components/layouts/AuthLayout/index.tsx:39
+msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+msgstr "Ticketverkauf für Repton Al Barsha, unterstützt von <0>Friends of School</0> — einer Initiative von Aqualeo Digecom, bereitgestellt von Hi.Events."
+
 #: src/components/common/AdminEventsTable/index.tsx:86
 msgid "Event Title"
 msgstr "Veranstaltungstitel"
@@ -4847,7 +4896,7 @@ msgstr "Veranstaltung aktualisiert"
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
-#: src/components/layouts/OrganizerLayout/index.tsx:105
+#: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
 #: src/components/routes/admin/Dashboard/index.tsx:403
@@ -5449,6 +5498,7 @@ msgstr "Ersten Teilnehmer"
 msgid "First Invoice Number"
 msgstr "Erste Rechnungsnummer"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:156
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
 #: src/components/modals/ManageAttendeeModal/index.tsx:202
 #: src/components/modals/ManageOrderModal/index.tsx:229
@@ -5591,6 +5641,11 @@ msgstr "Fr"
 msgid "Friday"
 msgstr "Freitag"
 
+#: src/components/layouts/AuthLayout/index.tsx:164
+msgid "Friends of Repton Al Barsha logo"
+msgstr "Logo von Friends of Repton Al Barsha"
+
+#: src/components/layouts/AuthLayout/index.tsx:33
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
 msgid "Friends of School"
 msgstr "Friends of School"
@@ -5616,8 +5671,8 @@ msgid "from {start}, for {count} dates"
 msgstr "ab {start}, für {count} Termine"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Full data ownership"
-msgstr "Volle Datenhoheit"
+#~ msgid "Full data ownership"
+#~ msgstr "Volle Datenhoheit"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -5668,11 +5723,11 @@ msgstr "Code generieren"
 msgid "German"
 msgstr "Deutsch"
 
-#: src/components/layouts/EventHomepage/index.tsx:517
+#: src/components/layouts/EventHomepage/index.tsx:519
 msgid "Get Directions"
 msgstr "Wegbeschreibung"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:82
+#: src/components/layouts/OrganizerLayout/index.tsx:83
 msgid "Get Paid"
 msgstr "Auszahlung einrichten"
 
@@ -5992,7 +6047,7 @@ msgid "Homepage Design"
 msgstr "Homepage-Design"
 
 #: src/components/layouts/Event/index.tsx:118
-#: src/components/layouts/OrganizerLayout/index.tsx:109
+#: src/components/layouts/OrganizerLayout/index.tsx:110
 msgid "Homepage Designer"
 msgstr "Homepage-Designer"
 
@@ -6079,6 +6134,14 @@ msgstr "Ich stimme den <0>Allgemeinen Geschäftsbedingungen</0> zu"
 #: src/components/modals/SendMessageModal/index.tsx:530
 msgid "I confirm this is a transactional message related to this event"
 msgstr "Ich bestätige, dass dies eine Transaktionsnachricht im Zusammenhang mit dieser Veranstaltung ist"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:220
+msgid "I confirm this is entirely my own original work."
+msgstr "Ich bestätige, dass dies vollständig meine eigene, originale Arbeit ist."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:231
+msgid "I'd like my story/poem to be considered for publication on this website."
+msgstr "Ich würde mich freuen, wenn meine Geschichte/mein Gedicht für eine Veröffentlichung auf dieser Website in Betracht gezogen wird."
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1037
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
@@ -6261,11 +6324,11 @@ msgid "Instagram feed"
 msgstr "Instagram-Feed"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Instant Stripe payouts"
-msgstr "Sofortige Stripe-Auszahlungen"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "Sofortige Stripe-Auszahlungen"
 
 #: src/components/layouts/Event/index.tsx:143
-#: src/components/layouts/OrganizerLayout/index.tsx:114
+#: src/components/layouts/OrganizerLayout/index.tsx:118
 msgid "Integrations"
 msgstr "Integrationen"
 
@@ -6314,7 +6377,7 @@ msgstr "Teammitglied einladen"
 msgid "Invite Team Member"
 msgstr "Teammitglied einladen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:191
+#: src/components/layouts/OrganizerLayout/index.tsx:195
 msgid "Invite Team Members"
 msgstr "Teammitglieder einladen"
 
@@ -6322,7 +6385,7 @@ msgstr "Teammitglieder einladen"
 msgid "Invite User"
 msgstr "Benutzer einladen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:188
+#: src/components/layouts/OrganizerLayout/index.tsx:192
 msgid "Invite Your Team"
 msgstr "Laden Sie Ihr Team ein"
 
@@ -6409,7 +6472,7 @@ msgstr "John"
 msgid "Johnson"
 msgstr "Johnson"
 
-#: src/components/layouts/EventHomepage/index.tsx:413
+#: src/components/layouts/EventHomepage/index.tsx:415
 msgid "Join from anywhere"
 msgstr "Von überall teilnehmen"
 
@@ -6464,8 +6527,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "Halte mich über Neuigkeiten und Veranstaltungen von {0} auf dem Laufenden"
 
 #: src/components/layouts/AuthLayout/index.tsx:43
-msgid "Keep the profit."
-msgstr "Behalten Sie den Gewinn."
+#~ msgid "Keep the profit."
+#~ msgstr "Behalten Sie den Gewinn."
 
 #: src/components/common/LanguageSwitcher/index.tsx:50
 msgid "Korean"
@@ -6551,6 +6614,7 @@ msgstr "Letzte 90 Tage"
 msgid "Last login"
 msgstr "Letzte Anmeldung"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:167
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
 #: src/components/modals/ManageAttendeeModal/index.tsx:204
 #: src/components/modals/ManageOrderModal/index.tsx:235
@@ -6628,7 +6692,7 @@ msgstr "Leer lassen, um diese Check-in-Liste für alle Termine zu verwenden"
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "Aktiviert lassen, um alle Tickets der Veranstaltung abzudecken. Deaktivieren, um bestimmte Tickets auszuwählen."
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:127
 msgid "Legal"
 msgstr "Rechtliches"
 
@@ -6640,7 +6704,7 @@ msgstr "Informieren Sie sie über die Änderung"
 msgid "Let them know about the changes"
 msgstr "Informieren Sie sie über die Änderungen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:111
+#: src/components/layouts/OrganizerLayout/index.tsx:115
 msgid "Library"
 msgstr "Bibliothek"
 
@@ -6674,7 +6738,7 @@ msgstr "Liste"
 
 #: src/components/common/EventCard/index.tsx:99
 #: src/components/layouts/Event/index.tsx:225
-#: src/components/layouts/OrganizerLayout/index.tsx:219
+#: src/components/layouts/OrganizerLayout/index.tsx:223
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
 msgstr "Live"
@@ -6691,6 +6755,10 @@ msgstr "Live-Veranstaltungen"
 #: src/components/forms/ProductForm/ProductPreview.tsx:79
 msgid "Live preview"
 msgstr "Live-Vorschau"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:78
+msgid "Load more"
+msgstr "Mehr laden"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:346
 msgid "Loaded dates"
@@ -6716,6 +6784,7 @@ msgstr "Webhooks werden geladen"
 
 #: src/components/common/OrganizerReportTable/index.tsx:265
 #: src/components/common/ReportTable/index.tsx:225
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:43
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
@@ -6726,7 +6795,7 @@ msgstr "Wird geladen..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:495
+#: src/components/layouts/EventHomepage/index.tsx:497
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:470
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -6755,7 +6824,7 @@ msgstr "Ortsänderungen"
 msgid "locations"
 msgstr "Standorte"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:112
+#: src/components/layouts/OrganizerLayout/index.tsx:116
 #: src/components/routes/organizer/Locations/index.tsx:31
 msgid "Locations"
 msgstr "Standorte"
@@ -6803,6 +6872,10 @@ msgstr "Meine Tickets nachschlagen"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:33
+msgid "Love colouring? Shop creative colouring sets at icreate.art"
+msgstr "Lust aufs Ausmalen? Kreative Ausmal-Sets gibt es bei icreate.art"
+
 #: src/components/modals/LocationEditModal/index.tsx:136
 msgid "Main Office"
 msgstr "Hauptbüro"
@@ -6827,7 +6900,7 @@ msgstr "Machen Sie diese Frage obligatorisch"
 #: src/components/common/OrganizerWebhookTable/index.tsx:96
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:539
 #: src/components/common/PromoCodeTable/index.tsx:175
-#: src/components/layouts/OrganizerLayout/index.tsx:104
+#: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:273
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:84
 msgid "Manage"
@@ -7141,15 +7214,15 @@ msgid "Multiple locations"
 msgstr "Mehrere Orte"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Multiple ticket types"
-msgstr "Mehrere Tickettypen"
+#~ msgid "Multiple ticket types"
+#~ msgstr "Mehrere Tickettypen"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
 msgstr "Musik"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:122
 msgid "My Account"
 msgstr "Mein Konto"
 
@@ -7188,6 +7261,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:62
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
 msgid "Name"
 msgstr "Name"
@@ -7226,6 +7300,10 @@ msgstr "Niemals"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:434
 msgid "New capacity"
 msgstr "Neue Kapazität"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:23
+msgid "New colouring sheets are on their way — check back soon!"
+msgstr "Neue Ausmalbilder sind bald verfügbar — schau bald wieder vorbei!"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:454
 msgid "New label"
@@ -7618,6 +7696,14 @@ msgstr "Keine Suchergebnisse"
 msgid "No search results."
 msgstr "Keine Suchergebnisse."
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:47
+msgid "No stories have been published yet — check back soon!"
+msgstr "Es wurden noch keine Geschichten veröffentlicht — schau bald wieder vorbei!"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:54
+msgid "No submissions here yet."
+msgstr "Hier gibt es noch keine Einsendungen."
+
 #: src/components/common/AddressAutocomplete/index.tsx:99
 #: src/components/common/LocationPicker/index.tsx:338
 msgid "No suggestions"
@@ -7963,7 +8049,7 @@ msgstr "Online & vor Ort – siehe Terminplan"
 msgid "Online event"
 msgstr "Online-Veranstaltung"
 
-#: src/components/layouts/EventHomepage/index.tsx:411
+#: src/components/layouts/EventHomepage/index.tsx:413
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:139
 msgid "Online Event"
@@ -8066,6 +8152,10 @@ msgstr "Seitenleiste öffnen"
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
 msgstr "Option {i}"
+
+#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+msgid "Optional - the order confirmation and tickets already go to the email above"
+msgstr "Optional – die Bestellbestätigung und Tickets gehen bereits an die oben angegebene E-Mail-Adresse"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:263
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
@@ -8326,7 +8416,7 @@ msgid "Organization Name"
 msgstr "Organisationsname"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:596
+#: src/components/layouts/EventHomepage/index.tsx:598
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -8345,7 +8435,7 @@ msgid "Organizer archived successfully"
 msgstr "Veranstalter erfolgreich archiviert"
 
 #: src/components/layouts/Event/index.tsx:97
-#: src/components/layouts/OrganizerLayout/index.tsx:93
+#: src/components/layouts/OrganizerLayout/index.tsx:94
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Organizer Dashboard"
 msgstr "Veranstalter-Dashboard"
@@ -8376,12 +8466,12 @@ msgid "Organizer Settings"
 msgstr "Veranstaltereinstellungen"
 
 #: src/components/common/StatusToggle/index.tsx:63
-#: src/components/layouts/OrganizerLayout/index.tsx:162
+#: src/components/layouts/OrganizerLayout/index.tsx:166
 msgid "Organizer status update failed. Please try again later"
 msgstr "Aktualisierung des Veranstalterstatus fehlgeschlagen. Bitte versuchen Sie es später erneut."
 
 #: src/components/common/StatusToggle/index.tsx:55
-#: src/components/layouts/OrganizerLayout/index.tsx:159
+#: src/components/layouts/OrganizerLayout/index.tsx:163
 msgid "Organizer status updated"
 msgstr "Veranstalterstatus aktualisiert"
 
@@ -8410,6 +8500,10 @@ msgstr "Andere Listen (Ticket Nicht Enthalten)"
 #: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "Unsere neuesten Beiträge findest du auf Instagram – tippe unten, um sie zu sehen."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:109
+msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Stories page with your first name, last initial and year group."
+msgstr "Unser Team liest alles durch, und wenn es genehmigt wird, wird es auf unserer Seite „Geschichten der Kinder“ mit deinem Vornamen, dem Anfangsbuchstaben des Nachnamens und der Jahrgangsstufe veröffentlicht."
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:121
 msgid "Outcome"
@@ -8651,6 +8745,7 @@ msgid "Payouts"
 msgstr "Auszahlungen"
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:85
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:16
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:437
 #: src/components/routes/organizer/Payments/CapabilityList.tsx:60
 msgid "Pending"
@@ -8847,6 +8942,10 @@ msgstr "Bitte überprüfen Sie Ihre E-Mail, um Ihre E-Mail-Adresse zu bestätige
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr "Bitte prüfen Sie die aktualisierte Uhrzeit auf Ihrem Ticket. Ihre Tickets bleiben gültig – Sie müssen nichts tun, es sei denn, die neuen Zeiten passen Ihnen nicht. Antworten Sie auf diese E-Mail, wenn Sie Fragen haben."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:77
+msgid "Please confirm both boxes below before submitting."
+msgstr "Bitte bestätige beide Kästchen unten, bevor du absendest."
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1028
 msgid "Please continue in the new tab"
 msgstr "Bitte fahren Sie im neuen Tab fort"
@@ -8883,6 +8982,10 @@ msgstr "Bitte geben Sie Ihre Umsatzsteuer-ID ein"
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:28
 msgid "Please fill in all fields"
 msgstr "Bitte füllen Sie alle Felder aus"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:72
+msgid "Please fill in all fields before submitting."
+msgstr "Bitte fülle alle Felder aus, bevor du absendest."
 
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
@@ -8922,6 +9025,10 @@ msgstr "Bitte wählen Sie mindestens ein Produkt aus"
 msgid "Please try again."
 msgstr "Bitte versuchen Sie es erneut."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:37
+msgid "Please upload a plain text (.txt) file, or paste your writing into the box below instead."
+msgstr "Bitte lade eine einfache Textdatei (.txt) hoch oder füge deinen Text stattdessen unten ein."
+
 #: src/components/routes/profile/ManageProfile/index.tsx:161
 msgid "Please verify your email address to access all features"
 msgstr "Bitte bestätigen Sie Ihre E-Mail-Adresse, um auf alle Funktionen zugreifen zu können"
@@ -8946,6 +9053,12 @@ msgstr "Bitte warten Sie, während wir Ihre Rechnung vorbereiten..."
 #: src/components/routes/event/orders.tsx:123
 msgid "Please wait while we prepare your orders for export..."
 msgstr "Bitte warten Sie, während wir Ihre Bestellungen für den Export vorbereiten..."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:150
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+msgid "Poem"
+msgstr "Gedicht"
 
 #: src/components/common/LanguageSwitcher/index.tsx:42
 msgid "Polish"
@@ -9063,8 +9176,7 @@ msgid "Print to PDF"
 msgstr "Als PDF drucken"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
-#: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
@@ -9214,8 +9326,8 @@ msgid "promo codes"
 msgstr "Aktionscodes"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Promo codes"
-msgstr "Aktionscodes"
+#~ msgid "Promo codes"
+#~ msgstr "Aktionscodes"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9301,13 +9413,21 @@ msgstr "Käufer"
 msgid "Purchaser email"
 msgstr "E-Mail des Käufers"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:29
+msgid "Puzzles"
+msgstr "Rätsel"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:11
+msgid "Puzzles are coming soon! Check back for fun brain-teasers and activity sheets."
+msgstr "Rätsel kommen bald! Schau bald wieder vorbei für lustige Denksportaufgaben und Aktivitätsblätter."
+
 #: src/components/modals/ShareModal/index.tsx:168
 msgid "QR Code"
 msgstr "QR-Code"
 
 #: src/components/layouts/AuthLayout/index.tsx:17
-msgid "QR code check-in"
-msgstr "Check-in per QR-Code"
+#~ msgid "QR code check-in"
+#~ msgstr "Check-in per QR-Code"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9400,8 +9520,8 @@ msgid "Ready to go live?"
 msgstr "Bereit, live zu gehen?"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Real-time analytics"
-msgstr "Echtzeit-Auswertungen"
+#~ msgid "Real-time analytics"
+#~ msgstr "Echtzeit-Auswertungen"
 
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:171
 msgid "Reason (optional)"
@@ -9477,7 +9597,7 @@ msgstr "Erstattung erfassen"
 msgid "Recurring"
 msgstr "Wiederkehrend"
 
-#: src/components/layouts/EventHomepage/index.tsx:375
+#: src/components/layouts/EventHomepage/index.tsx:377
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -9488,8 +9608,8 @@ msgid "Recurring Event Settings"
 msgstr "Einstellungen für wiederkehrende Veranstaltungen"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Recurring events"
-msgstr "Wiederkehrende Veranstaltungen"
+#~ msgid "Recurring events"
+#~ msgstr "Wiederkehrende Veranstaltungen"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -9590,9 +9710,17 @@ msgstr "Registrieren"
 msgid "Registration Questions"
 msgstr "Registrierungsfragen"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:103
+msgid "Reject"
+msgstr "Ablehnen"
+
 #: src/components/common/CookieConsentBanner/index.tsx:135
 msgid "Reject all"
 msgstr "Alle ablehnen"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:18
+msgid "Rejected"
+msgstr "Abgelehnt"
 
 #: src/components/forms/ProductForm/index.tsx:378
 msgid "Release tiers in order"
@@ -9653,7 +9781,7 @@ msgid "Report not found"
 msgstr "Bericht nicht gefunden"
 
 #: src/components/layouts/Event/index.tsx:104
-#: src/components/layouts/OrganizerLayout/index.tsx:99
+#: src/components/layouts/OrganizerLayout/index.tsx:100
 #: src/components/routes/event/Reports/index.tsx:47
 #: src/components/routes/organizer/Reports/index.tsx:51
 msgid "Reports"
@@ -9691,7 +9819,7 @@ msgstr "Code erneut senden"
 msgid "Resend Confirmation"
 msgstr "Bestätigung erneut senden"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:310
+#: src/components/layouts/OrganizerLayout/index.tsx:314
 msgid "Resend Confirmation Email"
 msgstr "Bestätigungs-E-Mail erneut senden"
 
@@ -9748,6 +9876,10 @@ msgstr "Passwort zurücksetzen"
 #: src/components/routes/auth/ResetPassword/index.tsx:75
 msgid "Resetting..."
 msgstr "Wird zurückgesetzt..."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:18
+msgid "Resources for Children"
+msgstr "Ressourcen für Kinder"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:116
 msgid "Response"
@@ -10244,7 +10376,7 @@ msgstr "Sekundäre Textfarbe"
 msgid "Secure Checkout"
 msgstr "Sichere Kasse"
 
-#: src/components/layouts/EventHomepage/index.tsx:438
+#: src/components/layouts/EventHomepage/index.tsx:440
 msgid "See schedule"
 msgstr "Terminplan ansehen"
 
@@ -10435,8 +10567,8 @@ msgid "Selected"
 msgstr "Ausgewählt"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Sell out your event."
-msgstr "Verkaufen Sie Ihre Veranstaltung aus."
+#~ msgid "Sell out your event."
+#~ msgstr "Verkaufen Sie Ihre Veranstaltung aus."
 
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:77
 msgid "Sellable"
@@ -10630,7 +10762,7 @@ msgstr "Richten Sie einen wiederkehrenden Terminplan ein, um Termine automatisch
 msgid "Set up check-in lists for different entrances, sessions, or days."
 msgstr "Richten Sie Check-in-Listen für verschiedene Eingänge, Sitzungen oder Tage ein."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:85
+#: src/components/layouts/OrganizerLayout/index.tsx:86
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
 msgstr "Auszahlungen einrichten"
@@ -10669,7 +10801,7 @@ msgstr "Ort oder Online-Details des Termins festlegen, ändern oder entfernen"
 msgid "Setting updated"
 msgstr "Einstellung aktualisiert"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:106
+#: src/components/layouts/OrganizerLayout/index.tsx:107
 #: src/components/modals/DuplicateEventModal/index.tsx:51
 msgid "Settings"
 msgstr "Einstellungen"
@@ -10683,8 +10815,8 @@ msgid "Setup takes just a few minutes — you don't need an existing Stripe acco
 msgstr "Die Einrichtung dauert nur wenige Minuten – ein bestehendes Stripe-Konto ist nicht erforderlich. Stripe übernimmt Karten, Wallets, regionale Zahlungsmethoden und Betrugsschutz, damit Sie sich auf Ihre Veranstaltung konzentrieren können."
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:349
-#: src/components/layouts/OrganizerLayout/index.tsx:239
+#: src/components/layouts/EventHomepage/index.tsx:351
+#: src/components/layouts/OrganizerLayout/index.tsx:243
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
 #: src/components/modals/ShareModal/index.tsx:186
@@ -10704,10 +10836,18 @@ msgstr "Partnerlink teilen"
 msgid "Share Event"
 msgstr "Veranstaltung teilen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:236
-#: src/components/layouts/OrganizerLayout/index.tsx:278
+#: src/components/layouts/OrganizerLayout/index.tsx:240
+#: src/components/layouts/OrganizerLayout/index.tsx:282
 msgid "Share Organizer Page"
 msgstr "Veranstalterseite teilen"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:129
+msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
+msgstr "Teile deine eigene kurze Geschichte oder dein Gedicht mit der Friends-of-Repton-Gemeinschaft! Jeden Monat vergeben wir einen Preis für die beste Geschichte und das beste Gedicht. Wenn deine Arbeit veröffentlicht werden soll, werden dein Vorname, der Anfangsbuchstabe deines Nachnamens und deine Jahrgangsstufe daneben angezeigt."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:32
+msgid "Share Your Story"
+msgstr "Teile deine Geschichte"
 
 #: src/components/routes/event/CapacityAssignments/index.tsx:35
 msgid "Shared Capacity Management"
@@ -10945,11 +11085,13 @@ msgid "Something went wrong. Please try again later."
 msgstr "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
 
 #: src/components/layouts/Event/index.tsx:91
-#: src/components/layouts/OrganizerLayout/index.tsx:127
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:97
+#: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
 #: src/components/routes/my-tickets/index.tsx:162
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:35
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
 msgid "Something went wrong. Please try again."
@@ -11118,6 +11260,25 @@ msgstr "Noch erforderlich"
 msgid "Stop Impersonating"
 msgstr "Identitätswechsel beenden"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:143
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+msgid "Story"
+msgstr "Geschichte"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+msgid "Story published"
+msgstr "Geschichte veröffentlicht"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+msgid "Story rejected"
+msgstr "Geschichte abgelehnt"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:113
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:42
+msgid "Story Submissions"
+msgstr "Eingereichte Geschichten"
+
 #: src/components/common/OrdersTable/index.tsx:295
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
@@ -11186,6 +11347,18 @@ msgstr "Betreff wird hier angezeigt"
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:267
 msgid "Subject:"
 msgstr "Betreff:"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:119
+msgid "Submit another story or poem"
+msgstr "Weitere Geschichte oder weiteres Gedicht einreichen"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:240
+msgid "Submit for review"
+msgstr "Zur Überprüfung einreichen"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:64
+msgid "Submitted"
+msgstr "Eingereicht"
 
 #: src/components/common/InlineOrderSummary/index.tsx:148
 #: src/components/common/OrderSummary/index.tsx:53
@@ -11387,7 +11560,7 @@ msgstr "Support-E-Mail"
 msgid "Swedish"
 msgstr "Schwedisch"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:75
+#: src/components/layouts/OrganizerLayout/index.tsx:76
 #: src/components/modals/SwitchOrganizerModal/index.tsx:46
 msgid "Switch Organizer"
 msgstr "Veranstalter wechseln"
@@ -11488,8 +11661,8 @@ msgid "Taxes and Fees"
 msgstr "Steuern und Gebühren"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Team collaboration"
-msgstr "Zusammenarbeit im Team"
+#~ msgid "Team collaboration"
+#~ msgstr "Zusammenarbeit im Team"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -11539,8 +11712,7 @@ msgstr "Vorlage erfolgreich gespeichert"
 msgid "Term"
 msgstr "Suchbegriff"
 
-#: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:132
 #: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "Nutzungsbedingungen"
@@ -11553,10 +11725,18 @@ msgstr "Text könnte schwer lesbar sein"
 msgid "Thank you for attending!"
 msgstr "Danke für Ihre Teilnahme!"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:107
+msgid "Thank you for sharing your writing!"
+msgstr "Danke, dass du deinen Text geteilt hast!"
+
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:55
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
 msgid "Thanks,"
 msgstr "Danke,"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:42
+msgid "That file is too large. Please keep it under 200KB, or paste your writing below instead."
+msgstr "Diese Datei ist zu groß. Bitte halte sie unter 200 KB oder füge deinen Text stattdessen unten ein."
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:297
 #: src/components/routes/product-widget/SelectProducts/index.tsx:543
@@ -11896,7 +12076,7 @@ msgstr "Nur dieser Termin"
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
 msgstr "Dadurch wird {stripeAccountId} von diesem Veranstalter getrennt. Kostenpflichtige Ticketverkäufe funktionieren erst wieder, wenn Sie erneut ein Stripe-Konto verbinden."
 
-#: src/components/layouts/EventHomepage/index.tsx:399
+#: src/components/layouts/EventHomepage/index.tsx:401
 msgid "This event has ended"
 msgstr "Diese Veranstaltung ist beendet"
 
@@ -12366,7 +12546,7 @@ msgstr "Zwischen hellem und dunklem Design wechseln"
 msgid "Tomorrow"
 msgstr "Morgen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:108
+#: src/components/layouts/OrganizerLayout/index.tsx:109
 msgid "Tools"
 msgstr "Werkzeuge"
 
@@ -12528,6 +12708,7 @@ msgstr "Zwei Einstellungen bestimmen, wie viele Personen einen Termin buchen kö
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:61
 msgid "Type"
 msgstr "Typ"
 
@@ -12786,6 +12967,10 @@ msgstr "Aktualisiert sich, während Sie die Regel erstellen. Blättern Sie durch
 #: src/components/forms/ProductForm/ProductPreview.tsx:100
 msgid "Updates as you type."
 msgstr "Wird während der Eingabe aktualisiert."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:196
+msgid "Upload a .txt file"
+msgstr "Eine .txt-Datei hochladen"
 
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:39
 msgid "Upload a cover image for your organizer"
@@ -13147,7 +13332,7 @@ msgstr "Veranstaltungen anzeigen"
 msgid "View logs"
 msgstr "Protokolle anzeigen"
 
-#: src/components/layouts/EventHomepage/index.tsx:558
+#: src/components/layouts/EventHomepage/index.tsx:560
 msgid "View Map"
 msgstr "Karte ansehen"
 
@@ -13155,7 +13340,7 @@ msgstr "Karte ansehen"
 msgid "View Message"
 msgstr "Nachricht anzeigen"
 
-#: src/components/layouts/EventHomepage/index.tsx:467
+#: src/components/layouts/EventHomepage/index.tsx:469
 msgid "View on Google Maps"
 msgstr "Auf Google Maps anzeigen"
 
@@ -13176,8 +13361,8 @@ msgstr "Bestelldetails anzeigen"
 msgid "View order details, issue refunds, and resend confirmations."
 msgstr "Sehen Sie Bestelldetails ein, erstatten Sie Rückzahlungen und senden Sie Bestätigungen erneut."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:254
-#: src/components/layouts/OrganizerLayout/index.tsx:257
+#: src/components/layouts/OrganizerLayout/index.tsx:258
+#: src/components/layouts/OrganizerLayout/index.tsx:261
 msgid "View Organizer Homepage"
 msgstr "Veranstalter-Startseite anzeigen"
 
@@ -13231,7 +13416,6 @@ msgid "Waiting for scan…"
 msgstr "Warte auf Scan…"
 
 #: src/components/forms/ProductForm/index.tsx:456
-#: src/components/layouts/AuthLayout/index.tsx:18
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13315,6 +13499,10 @@ msgstr "Wir konnten die Daten nicht laden. Bitte versuchen Sie es erneut."
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:97
 msgid "We couldn't reach Stripe just now. Please try again in a moment."
 msgstr "Stripe ist derzeit nicht erreichbar. Bitte versuchen Sie es gleich erneut."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:52
+msgid "We couldn't read that file. Please try pasting your writing into the box below instead."
+msgstr "Wir konnten diese Datei nicht lesen. Bitte füge deinen Text stattdessen unten in das Feld ein."
 
 #: src/components/common/ProductsTable/SortableCategory/index.tsx:98
 msgid "We couldn't reorder the categories. Please try again."
@@ -13425,8 +13613,8 @@ msgid "Webhook deleted successfully"
 msgstr "Webhook erfolgreich gelöscht"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Webhook integrations"
-msgstr "Webhook-Integrationen"
+#~ msgid "Webhook integrations"
+#~ msgstr "Webhook-Integrationen"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151
@@ -13451,7 +13639,7 @@ msgid "Webhook will send notifications"
 msgstr "Webhook sendet Benachrichtigungen"
 
 #: src/components/layouts/Event/index.tsx:145
-#: src/components/layouts/OrganizerLayout/index.tsx:115
+#: src/components/layouts/OrganizerLayout/index.tsx:119
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
 #: src/components/routes/organizer/Webhooks/index.tsx:30
@@ -13729,6 +13917,10 @@ msgstr "X (Twitter)"
 msgid "year"
 msgstr "Jahr"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:63
+msgid "Year group"
+msgstr "Jahrgangsstufe"
+
 #: src/components/common/OrganizerReportTable/index.tsx:59
 #: src/components/common/PeriodSelector/index.tsx:38
 #: src/components/common/ReportTable/index.tsx:54
@@ -13891,7 +14083,7 @@ msgstr "Sie müssen ein Ticket erstellen, bevor Sie einen Teilnehmer manuell hin
 msgid "You must have at least one price tier"
 msgstr "Sie müssen mindestens eine Preisstufe haben"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:299
+#: src/components/layouts/OrganizerLayout/index.tsx:303
 msgid "You must verify your email address before you can update the organizer status."
 msgstr "Sie müssen Ihre E-Mail-Adresse bestätigen, bevor Sie den Veranstalterstatus aktualisieren können."
 
@@ -14113,6 +14305,10 @@ msgstr "Ihre Rückerstattung wird bearbeitet."
 #: src/components/layouts/CheckIn/index.tsx:117
 msgid "Your saved date filter is no longer available — showing all dates."
 msgstr "Ihr gespeicherter Terminfilter ist nicht mehr verfügbar – es werden alle Termine angezeigt."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:194
+msgid "Your story or poem"
+msgstr "Deine Geschichte oder dein Gedicht"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:116
 msgid "Your Stripe account itself isn't affected, and no data is lost — you can reconnect at any time."

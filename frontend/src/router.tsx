@@ -320,6 +320,13 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "child-story-submissions",
+                async lazy() {
+                    const ChildStorySubmissions = await import("./components/routes/organizer/ChildStorySubmissions");
+                    return { Component: ChildStorySubmissions.default };
+                }
+            },
+            {
                 path: "webhooks",
                 async lazy() {
                     const Webhooks = await import("./components/routes/organizer/Webhooks");
@@ -562,6 +569,15 @@ export const router: RouteObject[] = [
         async lazy() {
             const PublicOrganizerInstagram = await import("./components/layouts/PublicOrganizerInstagram");
             return { Component: PublicOrganizerInstagram.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/events/:organizerId/:organizerSlug/stories",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicChildrenStories = await import("./components/layouts/PublicChildrenStories");
+            return { Component: PublicChildrenStories.default };
         },
         errorElement: <ErrorPage />,
     },

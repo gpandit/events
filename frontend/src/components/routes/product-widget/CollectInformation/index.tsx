@@ -701,9 +701,9 @@ export const CollectInformation = () => {
 
                                                 <InputGroup>
                                                     <TextInput
-                                                        withAsterisk
                                                         type={"email"}
                                                         label={t`Email Address`}
+                                                        description={t`Optional - the order confirmation and tickets already go to the email above`}
                                                         placeholder={t`Email Address`}
                                                         disabled={isLocked('email')}
                                                         rightSection={isEmailValid(form.values.products[currentProductIndex]?.email || '') ?
@@ -711,7 +711,6 @@ export const CollectInformation = () => {
                                                         {...form.getInputProps(`products.${currentProductIndex}.email`)}
                                                     />
                                                     <TextInput
-                                                        withAsterisk
                                                         type={"email"}
                                                         label={t`Confirm Email Address`}
                                                         placeholder={t`Confirm Email Address`}
@@ -762,7 +761,7 @@ export const CollectInformation = () => {
                             <Trans>
                                 By continuing, you agree to the{' '}
                                 <a
-                                    href={getConfig('VITE_TOS_URL', 'https://hi.events/terms-of-service') as string}
+                                    href={getConfig('VITE_TOS_URL', '/terms-of-service') as string}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

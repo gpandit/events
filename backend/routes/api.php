@@ -175,11 +175,15 @@ use HiEvents\Http\Actions\Organizers\DeleteOrganizerAction;
 use HiEvents\Http\Actions\Organizers\EditOrganizerAction;
 use HiEvents\Http\Actions\Organizers\GetOrganizerAction;
 use HiEvents\Http\Actions\Organizers\GetOrganizerDeletionStatusAction;
+use HiEvents\Http\Actions\Organizers\ChildStorySubmissions\GetChildStorySubmissionsAction;
+use HiEvents\Http\Actions\Organizers\ChildStorySubmissions\ReviewChildStorySubmissionAction;
 use HiEvents\Http\Actions\Organizers\GetOrganizerEventsAction;
 use HiEvents\Http\Actions\Organizers\GetOrganizersAction;
 use HiEvents\Http\Actions\Organizers\GetPublicOrganizerAction;
 use HiEvents\Http\Actions\Organizers\Orders\GetOrganizerOrdersAction;
+use HiEvents\Http\Actions\Organizers\Public\GetPublishedChildStorySubmissionsPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\SendOrganizerContactMessagePublicAction;
+use HiEvents\Http\Actions\Organizers\Public\SubmitChildStorySubmissionPublicAction;
 use HiEvents\Http\Actions\Public\SubmitSiteContactMessageAction;
 use HiEvents\Http\Actions\Organizers\Settings\GetOrganizerSettingsAction;
 use HiEvents\Http\Actions\Organizers\Settings\PartialUpdateOrganizerSettingsAction;
@@ -346,6 +350,8 @@ $router->middleware(['auth:api'])->group(
         $router->get('/organizers/{organizer_id}/webhooks/{webhook_id}', GetOrganizerWebhookAction::class);
         $router->delete('/organizers/{organizer_id}/webhooks/{webhook_id}', DeleteOrganizerWebhookAction::class);
         $router->get('/organizers/{organizer_id}/webhooks/{webhook_id}/logs', GetOrganizerWebhookLogsAction::class);
+        $router->get('/organizers/{organizerId}/child-story-submissions', GetChildStorySubmissionsAction::class);
+        $router->put('/organizers/{organizerId}/child-story-submissions/{submissionId}/review', ReviewChildStorySubmissionAction::class);
 
         // Locations - Organizer level
         $router->get('/organizers/{organizer_id}/locations', GetLocationsAction::class);
@@ -617,6 +623,9 @@ $router->prefix('/public')->group(
         $router->get('/organizers/{organizer_id}/events', GetOrganizerEventsPublicAction::class);
         $router->post('/organizers/{organizer_id}/contact', SendOrganizerContactMessagePublicAction::class)
             ->middleware('throttle:5,1');
+        $router->post('/organizers/{organizerId}/child-story-submissions', SubmitChildStorySubmissionPublicAction::class)
+            ->middleware('throttle:5,1');
+        $router->get('/organizers/{organizerId}/child-story-submissions', GetPublishedChildStorySubmissionsPublicAction::class);
 
         $router->post('/contact', SubmitSiteContactMessageAction::class)
             ->middleware('throttle:5,1');

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from "react-router";
 import {t} from "@lingui/macro";
-import {IconBrandInstagram, IconLoader2, IconMail, IconSend} from "@tabler/icons-react";
+import {IconBook2, IconBrandInstagram, IconLoader2, IconMail, IconSend} from "@tabler/icons-react";
 import {Organizer} from "../../../../types.ts";
 import {organizerEventsPath, organizerHomepagePath} from "../../../../utilites/urlHelper.ts";
 import {getConfig} from "../../../../utilites/config.ts";
@@ -114,6 +114,9 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         </Link>
                         <Link to={`${organizerHomepagePath(organizer)}/instagram`} className={classes.footerNavLink}>
                             <IconBrandInstagram size={14}/> {t`Instagram`}
+                        </Link>
+                        <Link to={`${organizerHomepagePath(organizer)}/stories`} className={classes.footerNavLink}>
+                            <IconBook2 size={14}/> {t`Children's Stories`}
                         </Link>
                         <Link to="/auth/login" className={classes.footerNavLink}>
                             {t`My Account`}

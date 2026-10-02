@@ -1,47 +1,46 @@
-import {Navigate, Outlet} from "react-router";
+import {Navigate, Outlet, useLocation} from "react-router";
 import classes from "./Auth.module.scss";
-import {t} from "@lingui/macro";
+import {t, Trans} from "@lingui/macro";
 import {useGetMe} from "../../../queries/useGetMe.ts";
+import {useGetOrganizerPublic} from "../../../queries/useGetOrganizerPublic.ts";
 import {PoweredByFooter} from "../../common/PoweredByFooter";
 import {LanguageSwitcher} from "../../common/LanguageSwitcher";
+import {OrganizerNav} from "../OrganizerHomepage/OrganizerNav";
+import {SiteFooter} from "../OrganizerHomepage/SiteFooter";
+import {ThemeToggle} from "../../common/ThemeToggle";
+import {useOrganizerThemeStyles} from "../../../hooks/useOrganizerThemeStyles.ts";
 import {useCallback, useEffect, useRef} from "react";
 import {getConfig} from "../../../utilites/config.ts";
 import {isHiEvents} from "../../../utilites/helpers.ts";
 import {showInfo} from "../../../utilites/notifications.tsx";
 import {captureUtmData} from "../../../utilites/utm.ts";
 
-const tickerFeatures = [
-    t`Recurring events`,
-    t`Instant Stripe payouts`,
-    t`Custom branding`,
-    t`QR code check-in`,
-    t`Waitlist`,
-    t`Promo codes`,
-    t`Real-time analytics`,
-    t`Email & scheduled messages`,
-    t`Embeddable widget`,
-    t`Affiliate program`,
-    t`Team collaboration`,
-    t`Custom questions`,
-    t`Webhook integrations`,
-    t`Full data ownership`,
-    t`Multiple ticket types`,
-    t`Capacity management`,
-];
-
 const FeaturePanel = () => {
-    const tickerLoop = [...tickerFeatures, ...tickerFeatures];
-
     return (
         <div className={classes.rightPanel}>
+            <div className={classes.checker} aria-hidden="true"/>
             <div className={classes.noise}/>
-            <div className={classes.rings}/>
 
             <div className={classes.panelInner}>
-                <h1 className={classes.heroTitle}>
-                    <span className={classes.heroBold}>{t`Sell out your event.`}</span>
-                    <span className={classes.heroLight}>{t`Keep the profit.`}</span>
-                </h1>
+                <a
+                    href="https://friendsofschool.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.fosLogoLink}
+                >
+                    <img
+                        src="/logos/friends-of-school-logo-white.webp"
+                        alt={t`Friends of School`}
+                        className={classes.fosLogo}
+                    />
+                </a>
+
+                <p className={classes.tagline}>
+                    <Trans>
+                        Event ticketing @ Repton Al Barsha, supported by <strong>Friends of School</strong> — an
+                        initiative by Aqualeo Digecom, powered by Hi.Events.
+                    </Trans>
+                </p>
 
                 <div className={classes.ticketScene} aria-hidden="true">
                     <div className={classes.ticketGhost}/>
@@ -52,8 +51,8 @@ const FeaturePanel = () => {
                                     <span>Admit One</span>
                                     <span>№ 000482</span>
                                 </div>
-                                <div className={classes.ticketTitle}>Dublin Jazz Festival</div>
-                                <div className={classes.ticketMeta}>Sat, Aug 16 · 8:00 PM · Dublin</div>
+                                <div className={classes.ticketTitle}>Repton Movie Night</div>
+                                <div className={classes.ticketMeta}>Sat, Aug 16 · 6:00 PM · Repton Al Barsha</div>
                                 <div className={classes.ticketFields}>
                                     <div className={classes.ticketField}>
                                         <span>Door</span>
@@ -65,7 +64,7 @@ const FeaturePanel = () => {
                                     </div>
                                     <div className={classes.ticketField}>
                                         <span>Price</span>
-                                        <strong>€89.00</strong>
+                                        <strong>AED 30</strong>
                                     </div>
                                 </div>
                                 <div className={classes.barcode}/>
@@ -101,30 +100,33 @@ const FeaturePanel = () => {
                                     <rect x="10" y="22" width="3" height="2"/>
                                     <rect x="16" y="22" width="2" height="2"/>
                                 </svg>
-                                <span className={classes.stubSeat}>GA — €89</span>
+                                <span className={classes.stubSeat}>GA — AED 30</span>
                             </div>
                         </div>
                     </div>
-                    <div className={classes.stamp}>Sold Out</div>
-                </div>
-            </div>
-
-            <div className={classes.ticker} aria-hidden="true">
-                <div className={classes.tickerTrack}>
-                    {tickerLoop.map((item, i) => (
-                        <span key={i} className={classes.tickerItem}>
-                            {item}
-                            <span className={classes.tickerDot}/>
-                        </span>
-                    ))}
                 </div>
             </div>
         </div>
     );
 };
 
+const ScrollToTop = () => {
+    const {pathname} = useLocation();
+
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100);
+    }, [pathname]);
+
+    return null;
+}
+
 const AuthLayout = () => {
     const me = useGetMe();
+    const defaultOrganizerId = getConfig('VITE_DEFAULT_ORGANIZER_ID');
+    const {data: organizer} = useGetOrganizerPublic(defaultOrganizerId, {enabled: !me.isSuccess});
+    const {themeStyles, mode} = useOrganizerThemeStyles(organizer);
     const clickCountRef = useRef(0);
     const clickTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
@@ -148,15 +150,23 @@ const AuthLayout = () => {
     }
 
     return (
-        <div className={classes.authLayout}>
+        <div className={classes.authLayout} style={themeStyles} data-mode={mode}>
+            <ScrollToTop/>
+
+            {organizer && <OrganizerNav organizer={organizer}/>}
+
             <div className={classes.splitLayout}>
                 <div className={classes.leftPanel}>
                     <main className={classes.container}>
                         <div className={classes.logo} onClick={handleLogoClick} style={{cursor: 'pointer'}}>
                             <img
-                                src={getConfig("VITE_APP_LOGO_DARK", "/logos/hi-events-horizontal-light.svg")}
-                                alt={t`${getConfig("VITE_APP_NAME", "Hi.Events")} logo`}
+                                src={getConfig("VITE_APP_LOGO_DARK", "/logos/friends-of-repton-logo.png")}
+                                alt={t`Friends of Repton Al Barsha logo`}
+                                className={classes.logoMark}
                             />
+                            <span className={classes.logoText}>
+                                {getConfig("VITE_APP_NAME", "Friends of Repton Al Barsha")}
+                            </span>
                         </div>
                         <div className={classes.formArea}>
                             <div className={classes.wrapper}>
@@ -187,6 +197,9 @@ const AuthLayout = () => {
 
                 <FeaturePanel />
             </div>
+
+            {organizer && <SiteFooter organizer={organizer}/>}
+            <ThemeToggle/>
         </div>
     );
 };

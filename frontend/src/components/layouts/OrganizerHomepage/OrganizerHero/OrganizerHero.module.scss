@@ -89,15 +89,19 @@ $font-body: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemFont
 
 .subheading {
   font-family: $font-body;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   margin: 0;
   color: rgba(255, 255, 255, 0.92);
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
   animation: heroPopIn 0.7s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
 
+  @include mixins.respond-below(md) {
+    font-size: 1.3rem;
+  }
+
   @include mixins.respond-below(sm) {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   :global(p) {
