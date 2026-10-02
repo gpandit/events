@@ -213,11 +213,11 @@
 }
 
 .fosLogo {
-  height: 72px;
+  height: 100px;
   width: auto;
 
   @include mixins.respond-below(lg) {
-    height: 58px;
+    height: 80px;
   }
 }
 

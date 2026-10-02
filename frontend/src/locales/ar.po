@@ -580,6 +580,15 @@ msgstr "مهجور"
 msgid "About"
 msgstr "حول"
 
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:23
+msgid "About Friends of Repton"
+msgstr "عن أصدقاء ريبتون"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:44
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:116
+msgid "About Us"
+msgstr "من نحن"
+
 #: src/components/common/PlatformFeesSettings/index.tsx:192
 msgid "Absorb fee"
 msgstr "استيعاب الرسم"
@@ -1134,7 +1143,7 @@ msgstr "جميع المناسبات"
 msgid "All Products"
 msgstr "جميع المنتجات"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:156
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
 msgid "All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
@@ -1416,7 +1425,7 @@ msgstr "أبريل"
 
 #: src/components/common/LanguageSwitcher/index.tsx:16
 msgid "Arabic"
-msgstr ""
+msgstr "العربية"
 
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:64
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:69
@@ -2031,10 +2040,6 @@ msgstr "أضف هذه الصفحة إلى المفضلة لإدارة طلبك �
 msgid "Brand your tickets with a custom logo, colors, and footer message."
 msgstr "اجعل تذاكرك تحمل علامتك التجارية بشعار وألوان ورسالة تذييل مخصصة."
 
-#: src/components/common/LanguageSwitcher/index.tsx:32
-#~ msgid "Brazilian Portuguese"
-#~ msgstr "البرتغالية البرازيلية"
-
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:253
 msgid "Built-in fraud protection"
 msgstr "حماية مدمجة من الاحتيال"
@@ -2536,26 +2541,18 @@ msgstr "الدفع · الخطوة {stepNumber} من {stepCount}"
 msgid "Checkout Settings"
 msgstr "إعدادات الدفع"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:44
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:125
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:50
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:128
 msgid "Children's Resources"
 msgstr "موارد الأطفال"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:122
 msgid "Children's Stories"
 msgstr "قصص الأطفال"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:38
 msgid "Children's Stories & Poems"
 msgstr "قصص وقصائد الأطفال"
-
-#: src/components/common/LanguageSwitcher/index.tsx:34
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "الصينية (المبسطة)"
-
-#: src/components/common/LanguageSwitcher/index.tsx:36
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "الصينية (التقليدية)"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:362
@@ -3025,7 +3022,7 @@ msgstr "اتصل بـ {0}"
 msgid "Contact Email"
 msgstr "بريد التواصل الإلكتروني"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:148
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:151
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
@@ -3090,7 +3087,7 @@ msgstr "تحكم في من يدخل لهذا التاريخ"
 msgid "Control who gets in, and when"
 msgstr "تحكم في من يدخل، ومتى"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:141
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
 #: src/components/routes/legal/CookiePolicy/index.tsx:8
 msgid "Cookie Policy"
 msgstr "سياسة ملفات تعريف الارتباط"
@@ -4116,7 +4113,7 @@ msgstr "تنزيل الفاتورة"
 msgid "Download Invoice"
 msgstr "تنزيل الفاتورة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:45
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:46
 msgid "Download PDF"
 msgstr "تنزيل PDF"
 
@@ -4192,10 +4189,6 @@ msgstr "تكرار المنتج"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:122
 msgid "Duration must be at least 1 minute."
 msgstr "يجب أن تكون المدة دقيقة واحدة على الأقل."
-
-#: src/components/common/LanguageSwitcher/index.tsx:28
-#~ msgid "Dutch"
-#~ msgstr "الهولندية"
 
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:72
 msgid "e.g. 180 (3 hours)"
@@ -5523,10 +5516,6 @@ msgstr "أكمل إعداد Stripe"
 msgid "Finish setup"
 msgstr "إنهاء الإعداد"
 
-#: src/components/common/LanguageSwitcher/index.tsx:20
-#~ msgid "Finnish"
-#~ msgstr "الفنلندية"
-
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:58
 msgid "First"
 msgstr "الأول"
@@ -5685,10 +5674,6 @@ msgstr "الرابع"
 msgid "Free"
 msgstr "مجاني"
 
-#: src/components/common/LanguageSwitcher/index.tsx:24
-#~ msgid "French"
-#~ msgstr "الفرنسية"
-
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:45
 msgid "Fri"
 msgstr "الجمعة"
@@ -5701,6 +5686,10 @@ msgstr "الجمعة"
 #: src/components/layouts/AuthLayout/index.tsx:164
 msgid "Friends of Repton Al Barsha logo"
 msgstr "شعار أصدقاء ريبتون البرشاء"
+
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:25
+msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
+msgstr "تدعم أصدقاء ريبتون المدرسة في تنظيم فعاليات متنوعة داخل الحرم المدرسي، بما في ذلك ليالي الأفلام والمناسبات الاجتماعية والنزهات وحفلات نهاية العام وفعاليات عيد الميلاد ونهاية العام. كما تشارك بفاعلية في ضمان إيجاد منزل جديد للزي المدرسي المستعمل."
 
 #: src/components/layouts/AuthLayout/index.tsx:33
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
@@ -5771,10 +5760,6 @@ msgstr "إنشاء"
 #: src/components/forms/PromoCodeForm/index.tsx:80
 msgid "Generate code"
 msgstr "إنشاء رمز"
-
-#: src/components/common/LanguageSwitcher/index.tsx:16
-#~ msgid "German"
-#~ msgstr "الألمانية"
 
 #: src/components/layouts/EventHomepage/index.tsx:519
 msgid "Get Directions"
@@ -5855,10 +5840,6 @@ msgstr "تقويم Google"
 #: src/components/common/CheckIn/CheckInDescriptionModal.tsx:40
 msgid "Got it"
 msgstr "فهمت"
-
-#: src/components/common/LanguageSwitcher/index.tsx:48
-#~ msgid "Greek"
-#~ msgstr "اليونانية"
 
 #: src/components/common/EventCard/index.tsx:377
 msgid "Gross revenue"
@@ -6168,10 +6149,6 @@ msgstr "https://example-maps-service.com/..."
 msgid "https://webhook-domain.com/webhook"
 msgstr "https://webhook-domain.com/webhook"
 
-#: src/components/common/LanguageSwitcher/index.tsx:14
-#~ msgid "Hungarian"
-#~ msgstr "المجرية"
-
 #: src/components/routes/organizer/Settings/Sections/TrackingPixelSettings/index.tsx:250
 msgid "I acknowledge my responsibilities as a data controller"
 msgstr "أقرّ بمسؤولياتي كمتحكم في البيانات"
@@ -6191,6 +6168,10 @@ msgstr "أؤكد أن هذه رسالة معاملات متعلقة بهذه ا�
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:220
 msgid "I confirm this is entirely my own original work."
 msgstr "أؤكد أن هذا عمل أصلي خاص بي بالكامل."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:74
+msgid "I Create"
+msgstr "I Create"
 
 #: src/components/layouts/OrganizerHomepage/ExampleStoryCard/index.tsx:41
 msgid "I found my best friend Noor near the big neem tree. She had made a lantern shaped like a cat, with two triangle ears cut from gold paper. \"Yours looks like the ocean,\" she said. \"Mine looks like Mishka,\" I said, and we both laughed, because Mishka was the stray cat who slept under the library steps and refused to be anyone's pet."
@@ -6371,7 +6352,7 @@ msgstr "إدراج صورة"
 msgid "Insert Liquid Token"
 msgstr "إدراج رمز Liquid"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:116
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:53
 msgid "Instagram"
 msgstr "إنستغرام"
@@ -6475,10 +6456,6 @@ msgstr "يحدث في أكثر من تاريخ واحد"
 msgid "It may have been unpublished or removed. Please check the link and try again."
 msgstr "ربما تم إلغاء نشرها أو إزالتها. يرجى التحقق من الرابط والمحاولة مرة أخرى."
 
-#: src/components/common/LanguageSwitcher/index.tsx:26
-#~ msgid "Italian"
-#~ msgstr "الإيطالية"
-
 #: src/components/routes/product-widget/CollectInformation/index.tsx:669
 msgid "Item"
 msgstr "عنصر"
@@ -6578,10 +6555,6 @@ msgstr "اجعلها موجزة — تعرض اللافتات سطرًا واح�
 #: src/components/routes/product-widget/CollectInformation/index.tsx:609
 msgid "Keep me updated on news and events from {0}"
 msgstr "أبقني على اطلاع بالأخبار والفعاليات من {0}"
-
-#: src/components/common/LanguageSwitcher/index.tsx:50
-#~ msgid "Korean"
-#~ msgstr "الكورية"
 
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:171
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:454
@@ -6741,7 +6714,7 @@ msgstr "اتركه فارغًا لتطبيق قائمة تسجيل الدخول 
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "اتركه مفعّلاً ليغطي كل تذكرة في الفعالية. أوقفه لاختيار تذاكر محددة."
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
 msgid "Legal"
 msgstr "قانوني"
 
@@ -6922,8 +6895,8 @@ msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat ele
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:73
-msgid "Love colouring? Shop creative colouring sets at icreate.art"
-msgstr "تحب التلوين؟ تسوّق أطقم تلوين إبداعية على icreate.art"
+msgid "Love colouring? Shop creative colouring sets at"
+msgstr "تحب التلوين؟ تسوق مجموعات تلوين إبداعية من"
 
 #: src/components/modals/LocationEditModal/index.tsx:136
 msgid "Main Office"
@@ -7270,8 +7243,8 @@ msgstr "مواقع متعددة"
 msgid "Music"
 msgstr "موسيقى"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:47
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:128
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:53
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:131
 msgid "My Account"
 msgstr "حسابي"
 
@@ -9125,17 +9098,9 @@ msgstr "يرجى الانتظار بينما نجهز طلباتك للتصدي�
 msgid "Poem"
 msgstr "قصيدة"
 
-#: src/components/common/LanguageSwitcher/index.tsx:42
-#~ msgid "Polish"
-#~ msgstr "البولندية"
-
 #: src/components/routes/admin/Dashboard/index.tsx:245
 msgid "Popular Events (Last 14 Days)"
 msgstr "الفعاليات الرائجة (آخر 14 يومًا)"
-
-#: src/components/common/LanguageSwitcher/index.tsx:30
-#~ msgid "Portuguese"
-#~ msgstr "البرتغالية"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:968
 msgid "Position"
@@ -9236,7 +9201,7 @@ msgstr "طباعة التذاكر"
 msgid "Print to PDF"
 msgstr "طباعة كملف PDF"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:135
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:138
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
@@ -10286,7 +10251,7 @@ msgstr "الوقت المجدول"
 msgid "Scroll to next colouring page"
 msgstr "الانتقال إلى صفحة التلوين التالية"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:30
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:28
 msgid "Scroll to previous colouring page"
 msgstr "الانتقال إلى صفحة التلوين السابقة"
 
@@ -11043,10 +11008,6 @@ msgstr "تخطي التواريخ المعدّلة يدويًا"
 msgid "Skip this step"
 msgstr "تخطي هذه الخطوة"
 
-#: src/components/common/LanguageSwitcher/index.tsx:46
-#~ msgid "Slovak"
-#~ msgstr "السلوفاكية"
-
 #: src/components/routes/auth/AcceptInvitation/index.tsx:103
 #: src/components/routes/auth/Register/index.tsx:95
 msgid "Smith"
@@ -11156,10 +11117,6 @@ msgstr "عذرًا، هذا الرمز الترويجي غير معروف"
 #: src/components/routes/admin/Attribution/index.tsx:165
 msgid "Source"
 msgstr "المصدر"
-
-#: src/components/common/LanguageSwitcher/index.tsx:22
-#~ msgid "Spanish"
-#~ msgstr "الإسبانية"
 
 #: src/components/routes/admin/Announcements/index.tsx:426
 msgid "Specific accounts"
@@ -11609,10 +11566,6 @@ msgstr "الأحد"
 msgid "Support Email"
 msgstr "بريد الدعم الإلكتروني"
 
-#: src/components/common/LanguageSwitcher/index.tsx:44
-#~ msgid "Swedish"
-#~ msgstr "السويدية"
-
 #: src/components/common/FloatingSiteControls/index.tsx:131
 #: src/components/common/FloatingSiteControls/index.tsx:138
 msgid "Switch language"
@@ -11766,7 +11719,7 @@ msgstr "تم حفظ القالب بنجاح"
 msgid "Term"
 msgstr "المدة"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:138
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:141
 #: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
@@ -12754,10 +12707,6 @@ msgstr "الثلاثاء"
 msgid "Tuesday"
 msgstr "الثلاثاء"
 
-#: src/components/common/LanguageSwitcher/index.tsx:40
-#~ msgid "Turkish"
-#~ msgstr "التركية"
-
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:94
 msgid "Turn sound off"
 msgstr "إيقاف الصوت"
@@ -13329,10 +13278,6 @@ msgstr "فيديو"
 msgid "Video URL"
 msgstr "رابط الفيديو"
 
-#: src/components/common/LanguageSwitcher/index.tsx:38
-#~ msgid "Vietnamese"
-#~ msgstr "الفيتنامية"
-
 #: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:36
 msgid "View @{handle} on Instagram"
 msgstr "عرض @{handle} على إنستغرام"
@@ -13812,7 +13757,7 @@ msgstr "ما نوع هذا السؤال؟"
 msgid "What unauthenticated staff can see"
 msgstr "ما يمكن للموظفين غير الموثّقين رؤيته"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:47
+#: src/components/layouts/OrganizerHomepage/index.tsx:46
 msgid "What's happening at RAB"
 msgstr "ماذا يحدث في RAB"
 

@@ -136,7 +136,15 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
+}
+
+.colouringThumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
 .tint-peach {
@@ -184,15 +192,21 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 .shopLink {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    flex-wrap: wrap;
+    gap: 8px;
     color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.15rem;
 
     &:hover {
         text-decoration: underline;
     }
+}
+
+.shopLinkLogo {
+    height: 26px;
+    width: auto;
 }
 
 .storyIntro {

@@ -20,13 +20,14 @@
 }
 
 .satellite {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 12px;
-    margin-bottom: 0;
-    height: 0;
-    overflow: visible;
 }
 
 .satelliteButton {
@@ -38,8 +39,6 @@
 }
 
 .satelliteOpen {
-    margin-bottom: 12px;
-
     .satelliteButton {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -47,7 +46,7 @@
     }
 
     .satelliteButton:nth-child(1) {
-        transition-delay: 0.06s;
+        transition-delay: 0s;
     }
 
     .satelliteButton:nth-child(2) {
@@ -55,15 +54,16 @@
     }
 
     .satelliteButton:nth-child(3) {
-        transition-delay: 0s;
+        transition-delay: 0.06s;
     }
 }
 
 .scrollTop {
     position: absolute;
-    bottom: calc(48px + 12px + 3 * (48px + 12px) + 14px);
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
     opacity: 0;
-    transform: translateY(8px);
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
     box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
@@ -71,6 +71,6 @@
 
 .scrollTopVisible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     pointer-events: auto;
 }
