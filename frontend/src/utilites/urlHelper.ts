@@ -17,6 +17,10 @@ export const organizerHomepagePath = (organizer: Organizer) => {
     return `/events/${organizer?.id}/${organizer?.slug}`;
 }
 
+export const organizerEventsPath = (organizer: Organizer) => {
+    return `${organizerHomepagePath(organizer)}/events`;
+}
+
 export const organizerHomepageUrl = (organizer: Organizer) => {
     return getConfig('VITE_FRONTEND_URL') + organizerHomepagePath(organizer);
 }

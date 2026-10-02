@@ -104,6 +104,14 @@ class PartialUpdateOrganizerSettingsRequest extends BaseRequest
             'homepage_theme_settings.background_type' => ['nullable', 'string', Rule::in(HomepageBackgroundType::valuesArray())],
             'homepage_theme_settings.font_family' => ['nullable', 'string', Rule::in(HomepageFontFamily::valuesArray())],
 
+            // Homepage hero banner
+            'homepage_theme_settings.hero_media_type' => ['nullable', 'string', Rule::in(['IMAGE', 'VIDEO'])],
+            'homepage_theme_settings.hero_video_url' => ['nullable', 'url', 'max:2048'],
+            'homepage_theme_settings.hero_heading' => ['nullable', 'string', 'max:150'],
+            'homepage_theme_settings.hero_subheading' => ['nullable', 'string', 'max:300'],
+            'homepage_theme_settings.hero_cta_text' => ['nullable', 'string', 'max:50'],
+            'homepage_theme_settings.hero_cta_url' => ['nullable', 'string', 'max:2048'],
+
             // SEO
             'seo_keywords' => ['sometimes', 'nullable', 'string', 'max:255'],
             'seo_title' => ['sometimes', 'nullable', 'string', 'max:255'],

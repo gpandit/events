@@ -183,6 +183,12 @@ export function validateThemeSettings(
         mode: settings.mode || detectMode(settings.background || defaults.background),
         background_type: settings.background_type || defaults.background_type,
         font_family: settings.font_family || defaults.font_family,
+        hero_media_type: settings.hero_media_type === 'VIDEO' ? 'VIDEO' : 'IMAGE',
+        hero_video_url: settings.hero_video_url || undefined,
+        hero_heading: settings.hero_heading || undefined,
+        hero_subheading: settings.hero_subheading || undefined,
+        hero_cta_text: settings.hero_cta_text || undefined,
+        hero_cta_url: settings.hero_cta_url || undefined,
     };
 }
 

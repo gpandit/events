@@ -1,10 +1,16 @@
-import { Navigate, RouteObject } from "react-router";
+import { Navigate, RouteObject, useParams } from "react-router";
 import ErrorPage from "./error-page.tsx";
 import { useEffect, useState } from "react";
 import { useGetMe } from "./queries/useGetMe.ts";
 import { publicEventRouteLoader } from "./routeLoaders/publicEventRouteLoader.ts";
 import { publicOrganizerRouteLoader } from "./routeLoaders/publicOrganizerRouteLoader.ts";
 import { organizerPreviewRouteLoader } from "./routeLoaders/organizerPreviewRouteLoader.ts";
+
+const RedirectToOrganizerEvents = ({pastEvents}: {pastEvents?: boolean}) => {
+    const {organizerId, organizerSlug} = useParams();
+    const suffix = pastEvents ? "/events/past-events" : "/events";
+    return <Navigate to={`/events/${organizerId}/${organizerSlug}${suffix}`} replace={true} />;
+};
 
 const Root = () => {
     const [redirectPath, setRedirectPath] = useState<string | null>(null);
@@ -543,10 +549,24 @@ export const router: RouteObject[] = [
     },
     {
         path: "/events/:organizerId/:organizerSlug/past-events",
+        element: <RedirectToOrganizerEvents pastEvents/>,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/events/:organizerId/:organizerSlug/events",
         loader: publicOrganizerRouteLoader,
         async lazy() {
-            const PublicOrganizer = await import("./components/layouts/PublicOrganizer");
-            return { Component: PublicOrganizer.default };
+            const PublicOrganizerEvents = await import("./components/layouts/PublicOrganizerEvents");
+            return { Component: PublicOrganizerEvents.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/events/:organizerId/:organizerSlug/events/past-events",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicOrganizerEvents = await import("./components/layouts/PublicOrganizerEvents");
+            return { Component: PublicOrganizerEvents.default };
         },
         errorElement: <ErrorPage />,
     },
