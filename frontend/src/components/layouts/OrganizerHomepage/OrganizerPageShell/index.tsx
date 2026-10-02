@@ -3,9 +3,9 @@ import {useLocation} from "react-router";
 import {Organizer} from "../../../../types.ts";
 import {OrganizerDocumentHead} from "../../../common/OrganizerDocumentHead";
 import {StatusToggle} from "../../../common/StatusToggle";
-import {computeThemeVariables, validateThemeSettings} from "../../../../utilites/themeUtils.ts";
 import {ensureHomepageFontLoaded} from "../../../../utilites/fontLoader.ts";
 import {useOrganizerTrackingPixels} from "../../../../hooks/useOrganizerTrackingPixels";
+import {useOrganizerThemeStyles} from "../../../../hooks/useOrganizerThemeStyles.ts";
 import {removeTransparency} from "../../../../utilites/colorHelper.ts";
 import {OrganizerNav} from "../OrganizerNav";
 import {SiteFooter} from "../SiteFooter";
@@ -34,9 +34,7 @@ const ScrollToTop = () => {
 export const OrganizerPageShell: React.FC<OrganizerPageShellProps> = ({organizer, activeNav, hero, children}) => {
     useOrganizerTrackingPixels(organizer?.settings?.tracking_pixels);
 
-    const rawThemeSettings = organizer?.settings?.homepage_theme_settings;
-    const themeSettings = validateThemeSettings(rawThemeSettings);
-    const cssVars = computeThemeVariables(themeSettings);
+    const {themeSettings, themeStyles} = useOrganizerThemeStyles(organizer);
     const backgroundType = themeSettings.background_type;
 
     const organizerCover = organizer.images?.find(img => img.type === 'ORGANIZER_COVER');
@@ -44,21 +42,6 @@ export const OrganizerPageShell: React.FC<OrganizerPageShellProps> = ({organizer
     useEffect(() => {
         ensureHomepageFontLoaded(themeSettings.font_family);
     }, [themeSettings.font_family]);
-
-    const themeStyles = {
-        '--organizer-bg-color': themeSettings.background,
-        '--organizer-content-bg-color': cssVars['--theme-surface'],
-        '--organizer-primary-color': themeSettings.accent,
-        '--organizer-primary-text-color': cssVars['--theme-text-primary'],
-        '--organizer-secondary-color': cssVars['--theme-text-secondary'],
-        '--organizer-secondary-text-color': cssVars['--theme-text-tertiary'],
-        '--organizer-accent-contrast': cssVars['--theme-accent-contrast'],
-        '--organizer-accent-soft': cssVars['--theme-accent-soft'],
-        '--organizer-accent-muted': cssVars['--theme-accent-muted'],
-        '--organizer-border-color': cssVars['--theme-border'],
-        '--theme-font-family': cssVars['--theme-font-family'],
-        fontFamily: cssVars['--theme-font-family'],
-    } as React.CSSProperties;
 
     return (
         <>

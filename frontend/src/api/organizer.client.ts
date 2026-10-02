@@ -1,5 +1,7 @@
 import {api} from "./client";
 import {
+    ChildStorySubmission,
+    ChildStorySubmissionStatus,
     Event,
     GenericDataResponse,
     GenericPaginatedResponse,
@@ -8,6 +10,7 @@ import {
     Organizer,
     OrganizerSettings,
     OrganizerStats,
+    PublishedChildStorySubmission,
     QueryFilters,
 } from "../types";
 import {queryParamsHelper} from "../utilites/queryParamsHelper.ts";
@@ -141,6 +144,22 @@ export const organizerClient = {
 
         return new Blob([response.data]);
     },
+
+    getChildStorySubmissions: async (organizerId: IdParam, status?: ChildStorySubmissionStatus) => {
+        const query = status ? `?status=${status}` : '';
+        const response = await api.get<GenericPaginatedResponse<ChildStorySubmission>>(
+            `organizers/${organizerId}/child-story-submissions${query}`
+        );
+        return response.data;
+    },
+
+    reviewChildStorySubmission: async (organizerId: IdParam, submissionId: IdParam, status: ChildStorySubmissionStatus) => {
+        const response = await api.put<GenericDataResponse<ChildStorySubmission>>(
+            `organizers/${organizerId}/child-story-submissions/${submissionId}/review`,
+            {status}
+        );
+        return response.data;
+    },
 }
 
 export const organizerPublicClient = {
@@ -169,8 +188,32 @@ export const organizerPublicClient = {
         message: string;
     }) => {
         const response = await publicApi.post<GenericDataResponse<any>>(
-            `organizers/${organizerId}/contact`, 
+            `organizers/${organizerId}/contact`,
             contactData
+        );
+        return response.data;
+    },
+
+    submitChildStorySubmission: async (organizerId: IdParam, submission: {
+        type: 'STORY' | 'POEM';
+        first_name: string;
+        last_name: string;
+        year_group: string;
+        content: string;
+        original_filename?: string;
+        consent_own_work: boolean;
+        consent_publish: boolean;
+    }) => {
+        const response = await publicApi.post<GenericDataResponse<ChildStorySubmission>>(
+            `organizers/${organizerId}/child-story-submissions`,
+            submission
+        );
+        return response.data;
+    },
+
+    getPublishedChildStorySubmissions: async (organizerId: IdParam, pagination: QueryFilters) => {
+        const response = await publicApi.get<GenericPaginatedResponse<PublishedChildStorySubmission>>(
+            `organizers/${organizerId}/child-story-submissions` + queryParamsHelper.buildQueryString(pagination)
         );
         return response.data;
     },

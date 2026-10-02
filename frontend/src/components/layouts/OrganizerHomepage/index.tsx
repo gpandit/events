@@ -3,6 +3,7 @@ import {OrganizerPageShell} from "./OrganizerPageShell";
 import {OrganizerHero} from "./OrganizerHero";
 import {UpcomingEventsSpotlight} from './UpcomingEventsSpotlight';
 import {OrganizerProfileCard} from "./OrganizerProfileCard";
+import {ResourcesForChildren} from "./ResourcesForChildren";
 import {organizerEventsPath} from "../../../utilites/urlHelper.ts";
 import {validateThemeSettings} from "../../../utilites/themeUtils.ts";
 
@@ -45,6 +46,8 @@ export const OrganizerHomepage = ({
                     primaryColor={themeSettings.accent}
                 />
             )}
+
+            {isFirstPage && !isPastEvents && <ResourcesForChildren organizer={organizer}/>}
 
             <OrganizerProfileCard organizer={organizer}/>
         </OrganizerPageShell>

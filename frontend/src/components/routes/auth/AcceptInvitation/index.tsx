@@ -143,7 +143,7 @@ const AcceptInvitation = () => {
                                     I agree to the{' '}
                                     <Anchor
                                         target={'_blank'}
-                                        href={getConfig("VITE_TOS_URL", 'https://hi.events/terms-of-service')}
+                                        href={getConfig("VITE_TOS_URL", '/terms-of-service')}
                                     >
                                         terms and conditions
                                     </Anchor>

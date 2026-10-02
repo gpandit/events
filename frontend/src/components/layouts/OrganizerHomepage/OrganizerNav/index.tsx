@@ -7,7 +7,7 @@ import classes from './OrganizerNav.module.scss';
 
 interface OrganizerNavProps {
     organizer: Organizer;
-    active: 'home' | 'events';
+    active?: 'home' | 'events';
 }
 
 export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) => {

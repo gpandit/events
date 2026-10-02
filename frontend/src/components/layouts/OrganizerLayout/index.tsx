@@ -9,6 +9,7 @@ import {
     IconExternalLink,
     IconEye,
     IconEyeOff,
+    IconFeather,
     IconMapPin,
     IconPaint,
     IconSettings,
@@ -107,6 +108,9 @@ const OrganizerLayout = () => {
 
         { label: t`Tools` },
         { link: 'organizer-homepage-designer', label: t`Homepage Designer`, icon: IconPaint },
+
+        { label: t`Community` },
+        { link: 'child-story-submissions', label: t`Story Submissions`, icon: IconFeather },
 
         { label: t`Library` },
         { link: 'locations', label: t`Locations`, icon: IconMapPin },

@@ -22,17 +22,14 @@ import {
 } from "@tabler/icons-react";
 import {Anchor} from "@mantine/core";
 import {t} from "@lingui/macro";
-import {PoweredByFooter} from "../../common/PoweredByFooter";
 import {ContactOrganizerModal} from "../../common/ContactOrganizerModal";
 import {socialMediaConfig} from "../../../constants/socialMediaConfig";
 import {getGoogleMapsUrl, getShortLocationDisplay} from "../../../utilites/addressUtilities.ts";
 import {buildEventLocationDisplay, summariseEventLocations} from "../../../utilites/effectiveLocation.ts";
 import {StatusToggle} from "../../common/StatusToggle";
-import {getConfig} from "../../../utilites/config.ts";
 import {computeThemeVariables, validateThemeSettings} from "../../../utilites/themeUtils.ts";
 import {useOrganizerTrackingPixels} from "../../../hooks/useOrganizerTrackingPixels";
 import {trackPixelEvent, hasActivePixels} from "../../../utilites/trackingPixels";
-import {CookieSettingsLink} from "../../common/CookieSettingsLink";
 import {removeTransparency} from "../../../utilites/colorHelper.ts";
 import {ensureHomepageFontLoaded} from "../../../utilites/fontLoader.ts";
 import {ShareComponent} from "../../common/ShareIcon";
@@ -41,6 +38,9 @@ import {CalendarOptionsPopover} from "../../common/CalendarOptionsPopover";
 import {isDateInPast} from "../../../utilites/dates.ts";
 import {formatCurrency} from "../../../utilites/currency.ts";
 import {UserGeneratedContent} from "../../common/UserGeneratedContent";
+import {OrganizerNav} from "../OrganizerHomepage/OrganizerNav";
+import {SiteFooter} from "../OrganizerHomepage/SiteFooter";
+import {ThemeToggle} from "../../common/ThemeToggle";
 
 interface EventHomepageProps {
     event?: Event;
@@ -258,6 +258,8 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
                         '--overlay-color': themeSettings.background
                     } as React.CSSProperties : undefined}
                 />
+
+                <OrganizerNav organizer={organizer}/>
 
                 <div className={classes.container}>
                     <div className={classes.wrapper}>
@@ -690,25 +692,6 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
                             )}
                         </div>
 
-                        {/* Footer */}
-                        <div className={classes.footerSection}>
-                            <div className={classes.footerLinks}>
-                                <Anchor
-                                    href={getConfig('VITE_PRIVACY_URL', 'https://hi.events/privacy-policy?utm_source=app-event-footer')}
-                                    className={classes.footerLink}
-                                >
-                                    {t`Privacy Policy`}
-                                </Anchor>
-                                <Anchor
-                                    href={getConfig('VITE_TOS_URL', 'https://hi.events/terms-of-service?utm_source=app-event-footer')}
-                                    className={classes.footerLink}
-                                >
-                                    {t`Terms of Service`}
-                                </Anchor>
-                            </div>
-                            <PoweredByFooter className={classes.poweredByFooter}/>
-                            <CookieSettingsLink/>
-                        </div>
                     </div>
 
                     {showFloatingCheckoutButton && (
@@ -739,6 +722,9 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
                         organizer={organizer}
                     />
                 </div>
+
+                <SiteFooter organizer={organizer}/>
+                <ThemeToggle/>
             </main>
         </>
     );

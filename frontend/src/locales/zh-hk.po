@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layouts/Event/index.tsx:224
-#: src/components/layouts/OrganizerLayout/index.tsx:218
+#: src/components/layouts/OrganizerLayout/index.tsx:222
 msgid "- Click to Publish"
 msgstr "- 點擊發布"
 
 #: src/components/layouts/Event/index.tsx:226
-#: src/components/layouts/OrganizerLayout/index.tsx:220
+#: src/components/layouts/OrganizerLayout/index.tsx:224
 msgid "- Click to Unpublish"
 msgstr "- 點擊取消發布"
 
@@ -81,7 +81,6 @@ msgid "{0} left"
 msgstr "剩餘 {0}"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:158
 msgid "{0} logo"
 msgstr "{0} 標誌"
 
@@ -341,6 +340,15 @@ msgstr "有 1 個可選時間"
 msgid "1 week before event"
 msgstr "活動前1週"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:18
+#: src/components/routes/legal/TermsOfService/index.tsx:17
+msgid "1. Who we are"
+msgstr "1. 關於我們"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:113
+msgid "10. Changes to this policy"
+msgstr "10. 本政策的變更"
+
 #: src/components/common/CapacityHelp/index.tsx:28
 msgid "12 mats in the studio and one Drop-in ticket."
 msgstr "工作室有 12 張墊子和一種單次票。"
@@ -354,6 +362,14 @@ msgstr "示例街123號"
 msgid "135+ currencies & 40+ payment methods"
 msgstr "135 種以上貨幣及 40 種以上付款方式"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:25
+msgid "2. Event registrations and tickets"
+msgstr "2. 活動報名與門票"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:27
+msgid "2. Information we collect"
+msgstr "2. 我們收集的資訊"
+
 #: src/components/common/WidgetEditor/index.tsx:230
 msgid "20"
 msgstr "20"
@@ -361,6 +377,59 @@ msgstr "20"
 #: src/components/common/CapacityHelp/index.tsx:61
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "每個日期 25 個名額，外加整個系列共 30 件 T 恤。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:51
+msgid "3. How we use your information"
+msgstr "3. 我們如何使用您的資訊"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:34
+msgid "3. Payments"
+msgstr "3. 付款"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+msgid "4. Payment processing"
+msgstr "4. 付款處理"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:43
+msgid "4. Refunds and cancellations"
+msgstr "4. 退款與取消"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:52
+msgid "5. Acceptable use"
+msgstr "5. 可接受的使用方式"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:71
+msgid "5. Cookies"
+msgstr "5. Cookie"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:61
+msgid "6. Intellectual property"
+msgstr "6. 知識產權"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:80
+msgid "6. Sharing your information"
+msgstr "6. 分享您的資訊"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
+msgid "7. Data retention"
+msgstr "7. 資料保留"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:70
+msgid "7. Limitation of liability"
+msgstr "7. 責任限制"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:79
+msgid "8. Changes to these Terms"
+msgstr "8. 本條款的變更"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:97
+msgid "8. Your rights"
+msgstr "8. 您的權利"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:105
+#: src/components/routes/legal/TermsOfService/index.tsx:87
+msgid "9. Contact us"
+msgstr "9. 聯絡我們"
 
 #: src/components/routes/admin/Announcements/index.tsx:319
 msgid "A button label is required when a URL is set"
@@ -373,6 +442,10 @@ msgstr "取消通知已發送至"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:300
 msgid "a change in duration"
 msgstr "時長變更"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:39
+msgid "A collection of original stories and poems written by children in our community."
+msgstr "由我們社區的孩子們創作的原創故事和詩歌合集。"
 
 #: src/components/forms/QuestionForm/index.tsx:138
 msgid "A date input. Perfect for asking for a date of birth etc."
@@ -467,7 +540,7 @@ msgstr "按星期模式"
 msgid "Abandoned"
 msgstr "已放棄"
 
-#: src/components/layouts/EventHomepage/index.tsx:482
+#: src/components/layouts/EventHomepage/index.tsx:484
 msgid "About"
 msgstr "關於"
 
@@ -597,6 +670,7 @@ msgstr "需要操作：需提供增值稅資料"
 #: src/components/common/WaitlistTable/index.tsx:56
 #: src/components/common/WaitlistTable/index.tsx:234
 #: src/components/routes/admin/FailedJobs/index.tsx:167
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:66
 msgid "Actions"
 msgstr "操作"
 
@@ -781,7 +855,7 @@ msgstr "增加層級"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:385
+#: src/components/layouts/EventHomepage/index.tsx:387
 msgid "Add to Calendar"
 msgstr "添加到日曆"
 
@@ -906,8 +980,8 @@ msgid "Affiliate deleted successfully"
 msgstr "推廣夥伴刪除成功"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Affiliate program"
-msgstr "聯盟推廣計劃"
+#~ msgid "Affiliate program"
+#~ msgstr "聯盟推廣計劃"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -1028,7 +1102,7 @@ msgstr "所有場次"
 msgid "All Products"
 msgstr "所有產品"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:147
 msgid "All rights reserved."
 msgstr "保留所有權利。"
 
@@ -1215,6 +1289,10 @@ msgstr "結帳時填寫的回答（例如餐飲選擇）"
 msgid "Any dates you've manually customized will be kept."
 msgstr "你手動調整過的日期會保留。"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:39
+msgid "Any messages or information you submit through our contact forms."
+msgstr "您透過我們的聯絡表單提交的任何訊息或資訊。"
+
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:62
 msgid "Any queries from product holders will be sent to this email address. This will also be used as the \"reply-to\" address for all emails sent from this event"
 msgstr "產品持有者的任何查詢都將發送到此電子郵件地址。此地址還將用作從此活動發送的所有電子郵件的“回覆至”地址"
@@ -1284,6 +1362,10 @@ msgstr "套用至"
 msgid "Apply to all tickets"
 msgstr "套用至所有門票"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:93
+msgid "Approve"
+msgstr "批准"
+
 #: src/components/routes/admin/SpamEvents/index.tsx:177
 msgid "Approve - Not Spam"
 msgstr "批准 - 不是垃圾內容"
@@ -1291,6 +1373,10 @@ msgstr "批准 - 不是垃圾內容"
 #: src/components/routes/admin/Messages/index.tsx:232
 msgid "Approve Message"
 msgstr "批准訊息"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:17
+msgid "Approved"
+msgstr "已批准"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:69
 msgid "April"
@@ -1429,11 +1515,11 @@ msgstr "您確定要離開嗎？"
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "您確定要將此活動設為草稿嗎？這將使公眾無法看到該活動"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:150
+#: src/components/layouts/OrganizerLayout/index.tsx:154
 msgid "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 msgstr "您確定要將此主辦單位設為草稿嗎？這將使該頁面對公眾隱藏。"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:151
+#: src/components/layouts/OrganizerLayout/index.tsx:155
 msgid "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 msgstr "您確定要將此主辦單位設為公開嗎？這將使該頁面對公眾可見。"
 
@@ -1875,6 +1961,10 @@ msgstr "由於此帳戶有已完成的訂單，交易記錄（金額、日期及
 msgid "Billing Address"
 msgstr "賬單地址"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:35
+msgid "Billing information necessary to process ticket purchases (handled securely by our payment processor — see Section 4)."
+msgstr "處理門票購買所需的帳單資訊（由我們的付款處理商安全處理——參見第 4 節）。"
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
 msgid "Billing Settings"
 msgstr "賬單設置"
@@ -1969,7 +2059,7 @@ msgstr "買家看到的是淨價。平台費用將從您的付款中扣除。"
 msgid "By adding tracking pixels, you acknowledge that you and this platform are joint controllers of the data collected. You are responsible for ensuring you have a lawful basis for this processing under applicable privacy laws (GDPR, CCPA, etc.)."
 msgstr "通過添加追蹤像素，您確認您和本平台是所收集數據的共同控制者。您有責任確保根據適用的私隱法律（GDPR、CCPA等）擁有合法的處理依據。"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:762
+#: src/components/routes/product-widget/CollectInformation/index.tsx:761
 #: src/components/routes/product-widget/Payment/index.tsx:157
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "繼續即表示您同意 <0>{0} 服務條款</0>"
@@ -2144,8 +2234,8 @@ msgid "Capacity Assignments"
 msgstr "容量分配"
 
 #: src/components/layouts/AuthLayout/index.tsx:29
-msgid "Capacity management"
-msgstr "容量管理"
+#~ msgid "Capacity management"
+#~ msgstr "容量管理"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -2246,8 +2336,8 @@ msgstr "僅簽到"
 msgid "Check out"
 msgstr "取消簽到"
 
-#: src/components/layouts/EventHomepage/index.tsx:344
-#: src/components/layouts/EventHomepage/index.tsx:345
+#: src/components/layouts/EventHomepage/index.tsx:346
+#: src/components/layouts/EventHomepage/index.tsx:347
 msgid "Check out this event: {0}"
 msgstr "看看這個活動：{0}"
 
@@ -2404,6 +2494,14 @@ msgstr "結帳 · 第 {stepNumber} 步，共 {stepCount} 步"
 msgid "Checkout Settings"
 msgstr "結賬設置"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+msgid "Children's Stories"
+msgstr "兒童故事"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:37
+msgid "Children's Stories & Poems"
+msgstr "兒童故事與詩歌"
+
 #: src/components/common/LanguageSwitcher/index.tsx:34
 msgid "Chinese (Simplified)"
 msgstr "簡體中文"
@@ -2472,6 +2570,10 @@ msgstr "環形座"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:576
 msgid "City"
 msgstr "城市"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:180
+msgid "Class / Year group"
+msgstr "班級 / 年級"
 
 #: src/components/common/CapacityHelp/index.tsx:60
 msgid "Class with a T-shirt add-on"
@@ -2566,7 +2668,7 @@ msgstr "代碼長度必須在 3 至 50 個字符之間"
 msgid "Code must be no more than 20 characters"
 msgstr "代碼唔可以超過20個字元"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:189
+#: src/components/layouts/OrganizerLayout/index.tsx:193
 msgid "Collaborate with your team to create amazing events together."
 msgstr "與您的團隊合作，一起創造精彩活動。"
 
@@ -2604,6 +2706,14 @@ msgstr "顏色必須是有效的十六進制顏色代碼。例如#ffffff"
 msgid "Colors"
 msgstr "顏色"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:26
+msgid "Colouring Pages"
+msgstr "填色頁"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:20
+msgid "Colouring sheets, puzzles, and a place to share your own stories and poems."
+msgstr "填色頁、拼圖，以及分享你自己的故事和詩歌的空間。"
+
 #: src/components/common/ColumnVisibilityToggle/index.tsx:21
 msgid "Columns"
 msgstr "欄位"
@@ -2625,11 +2735,15 @@ msgstr "以逗號分隔的描述活動的關鍵字。搜索引擎將使用這些
 msgid "Communication Preferences"
 msgstr "通訊偏好"
 
+#: src/components/layouts/OrganizerLayout/index.tsx:112
+msgid "Community"
+msgstr "社區"
+
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:82
 msgid "complete"
 msgstr "已完成"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:758
+#: src/components/routes/product-widget/CollectInformation/index.tsx:757
 msgid "Complete Order"
 msgstr "完整訂單"
 
@@ -2745,8 +2859,8 @@ msgstr "確認"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:499
 #: src/components/routes/product-widget/CollectInformation/index.tsx:500
+#: src/components/routes/product-widget/CollectInformation/index.tsx:715
 #: src/components/routes/product-widget/CollectInformation/index.tsx:716
-#: src/components/routes/product-widget/CollectInformation/index.tsx:717
 msgid "Confirm Email Address"
 msgstr "確認電子郵件地址"
 
@@ -2782,7 +2896,7 @@ msgstr "確認為垃圾內容"
 msgid "Confirm your email to access all features."
 msgstr "請確認您的電郵地址以使用所有功能。"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:314
+#: src/components/layouts/OrganizerLayout/index.tsx:318
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "確認電郵已發送！請檢查您的收件匣。"
 
@@ -2851,7 +2965,7 @@ msgid "Connection details are required for online events"
 msgstr "線上活動必須填寫連線詳情"
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:684
+#: src/components/layouts/EventHomepage/index.tsx:686
 #: src/components/layouts/OrganizerHomepage/OrganizerProfileCard/index.tsx:111
 msgid "Contact"
 msgstr "聯絡"
@@ -2864,13 +2978,14 @@ msgstr "聯絡 {0}"
 msgid "Contact Email"
 msgstr "聯絡電郵"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:139
 msgid "Contact Us"
 msgstr "聯絡我們"
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:65
 msgid "Content"
 msgstr "內容"
 
@@ -2908,7 +3023,7 @@ msgstr "繼續建立活動"
 msgid "Continue to next step"
 msgstr "繼續下一步"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:758
+#: src/components/routes/product-widget/CollectInformation/index.tsx:757
 msgid "Continue to Payment"
 msgstr "繼續付款"
 
@@ -3209,7 +3324,7 @@ msgid "Create event"
 msgstr "建立活動"
 
 #: src/components/common/NoEventsBlankSlate/index.tsx:27
-#: src/components/layouts/OrganizerLayout/index.tsx:179
+#: src/components/layouts/OrganizerLayout/index.tsx:183
 #: src/components/routes/organizer/Events/index.tsx:62
 msgid "Create Event"
 msgstr "創建活動"
@@ -3348,8 +3463,8 @@ msgid "Currently available for purchase"
 msgstr "目前可供購買"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "Custom branding"
-msgstr "自訂品牌形象"
+#~ msgid "Custom branding"
+#~ msgstr "自訂品牌形象"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3360,8 +3475,8 @@ msgid "Custom Maps URL"
 msgstr "自定義地圖 URL"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Custom questions"
-msgstr "自訂問題"
+#~ msgid "Custom questions"
+#~ msgstr "自訂問題"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -3948,6 +4063,10 @@ msgstr "下載發票"
 msgid "Download Invoice"
 msgstr "下載發票"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:16
+msgid "Download PDF"
+msgstr "下載 PDF"
+
 #: src/components/modals/ShareModal/index.tsx:228
 msgid "Download QR Code"
 msgstr "下載二維碼"
@@ -3963,7 +4082,7 @@ msgstr "正在下載發票"
 
 #: src/components/common/EventCard/index.tsx:96
 #: src/components/layouts/Event/index.tsx:223
-#: src/components/layouts/OrganizerLayout/index.tsx:217
+#: src/components/layouts/OrganizerLayout/index.tsx:221
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
 msgid "Draft"
@@ -4045,6 +4164,10 @@ msgstr "例如：新功能：候補名單"
 #: src/components/routes/admin/Announcements/index.tsx:391
 msgid "e.g. Scheduled maintenance this Saturday from 2-4am UTC"
 msgstr "例如：本星期六 UTC 凌晨 2 時至 4 時計劃維護"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:184
+msgid "e.g. Year 5 or Form 2"
+msgstr "例如：五年級或 Form 2"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:280
 msgid "e.g., Get Tickets, Register Now"
@@ -4274,8 +4397,8 @@ msgid "Email & Notification Settings"
 msgstr "電子郵件和通知設置"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Email & scheduled messages"
-msgstr "電郵與排程訊息"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "電郵與排程訊息"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4289,7 +4412,7 @@ msgstr "電子郵件地址"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:490
 #: src/components/routes/product-widget/CollectInformation/index.tsx:491
-#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+#: src/components/routes/product-widget/CollectInformation/index.tsx:705
 #: src/components/routes/product-widget/CollectInformation/index.tsx:707
 msgid "Email Address"
 msgstr "電子郵件地址"
@@ -4321,7 +4444,7 @@ msgid "Email confirmation resent"
 msgstr "重新發送電子郵件確認"
 
 #: src/components/layouts/Event/index.tsx:87
-#: src/components/layouts/OrganizerLayout/index.tsx:123
+#: src/components/layouts/OrganizerLayout/index.tsx:127
 #: src/components/routes/profile/ManageProfile/index.tsx:101
 msgid "Email confirmation resent successfully"
 msgstr "成功重新發送電子郵件確認"
@@ -4349,7 +4472,7 @@ msgstr "郵件預覽"
 msgid "Email Templates"
 msgstr "郵件範本"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:293
+#: src/components/layouts/OrganizerLayout/index.tsx:297
 msgid "Email Verification Required"
 msgstr "需要電郵驗證"
 
@@ -4375,8 +4498,8 @@ msgid "Embed Widget"
 msgstr "嵌入小工具"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Embeddable widget"
-msgstr "可嵌入小工具"
+#~ msgid "Embeddable widget"
+#~ msgstr "可嵌入小工具"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -4743,6 +4866,10 @@ msgstr "活動狀態更新失敗。請稍後再試"
 msgid "Event status updated"
 msgstr "事件狀態已更新"
 
+#: src/components/layouts/AuthLayout/index.tsx:39
+msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+msgstr "Repton Al Barsha 活動門票銷售，由 <0>Friends of School</0> 支持 — 這是 Aqualeo Digecom 的一項倡議，由 Hi.Events 提供技術支援。"
+
 #: src/components/common/AdminEventsTable/index.tsx:86
 msgid "Event Title"
 msgstr "活動標題"
@@ -4769,7 +4896,7 @@ msgstr "活動已更新"
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
-#: src/components/layouts/OrganizerLayout/index.tsx:105
+#: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
 #: src/components/routes/admin/Dashboard/index.tsx:403
@@ -4777,6 +4904,10 @@ msgstr "活動已更新"
 #: src/components/routes/organizer/Events/index.tsx:43
 msgid "Events"
 msgstr "活動"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:27
+msgid "Events listed on this site are organized by Friends of School and affiliated community organizers. Ticket availability, pricing, and event details are set by the organizer and may change without notice. Please review each event's details carefully before registering."
+msgstr "本網站上列出的活動由 Friends of School 及其附屬社區組織者舉辦。門票供應情況、價格和活動詳情由組織者決定，可能會在不另行通知的情況下更改。請在報名前仔細查看每個活動的詳情。"
 
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:120
 #: src/components/routes/organizer/Reports/index.tsx:23
@@ -5367,6 +5498,7 @@ msgstr "第一位參與者"
 msgid "First Invoice Number"
 msgstr "第一張發票號碼"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:156
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
 #: src/components/modals/ManageAttendeeModal/index.tsx:202
 #: src/components/modals/ManageOrderModal/index.tsx:229
@@ -5509,6 +5641,11 @@ msgstr "五"
 msgid "Friday"
 msgstr "星期五"
 
+#: src/components/layouts/AuthLayout/index.tsx:164
+msgid "Friends of Repton Al Barsha logo"
+msgstr "Friends of Repton Al Barsha 標誌"
+
+#: src/components/layouts/AuthLayout/index.tsx:33
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
 msgid "Friends of School"
 msgstr "Friends of School"
@@ -5534,8 +5671,8 @@ msgid "from {start}, for {count} dates"
 msgstr "從{start}起，共{count}個日期"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Full data ownership"
-msgstr "資料完全屬於你"
+#~ msgid "Full data ownership"
+#~ msgstr "資料完全屬於你"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -5586,11 +5723,11 @@ msgstr "產生代碼"
 msgid "German"
 msgstr "德國"
 
-#: src/components/layouts/EventHomepage/index.tsx:517
+#: src/components/layouts/EventHomepage/index.tsx:519
 msgid "Get Directions"
 msgstr "取得路線"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:82
+#: src/components/layouts/OrganizerLayout/index.tsx:83
 msgid "Get Paid"
 msgstr "收款"
 
@@ -5910,7 +6047,7 @@ msgid "Homepage Design"
 msgstr "主頁設計"
 
 #: src/components/layouts/Event/index.tsx:118
-#: src/components/layouts/OrganizerLayout/index.tsx:109
+#: src/components/layouts/OrganizerLayout/index.tsx:110
 msgid "Homepage Designer"
 msgstr "首頁設計器"
 
@@ -5998,6 +6135,14 @@ msgstr "我同意<0>條款和條件</0>。"
 msgid "I confirm this is a transactional message related to this event"
 msgstr "我確認這是與此活動相關的交易訊息"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:220
+msgid "I confirm this is entirely my own original work."
+msgstr "我確認這完全是我自己的原創作品。"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:231
+msgid "I'd like my story/poem to be considered for publication on this website."
+msgstr "我希望我的故事/詩歌能被考慮在本網站上發布。"
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1037
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
 msgstr "如果未自動開啟新分頁，請點擊下方按鈕繼續結帳。"
@@ -6025,6 +6170,10 @@ msgstr "如果您沒有要求更改密碼，請立即更改密碼。"
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "如果您在我們這裡有帳戶，您將收到一封電子郵件，其中包含如何重置密碼的說明。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:107
+msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
+msgstr "如果您對本私隱政策有任何疑問，請透過 <0>fos@aqualeo.co</0> 聯絡 Aqualeo Digecom FZ LLC。"
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
 msgid "Image"
@@ -6175,11 +6324,11 @@ msgid "Instagram feed"
 msgstr "Instagram 動態"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Instant Stripe payouts"
-msgstr "Stripe 即時撥款"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "Stripe 即時撥款"
 
 #: src/components/layouts/Event/index.tsx:143
-#: src/components/layouts/OrganizerLayout/index.tsx:114
+#: src/components/layouts/OrganizerLayout/index.tsx:118
 msgid "Integrations"
 msgstr "整合"
 
@@ -6228,7 +6377,7 @@ msgstr "邀請團隊成員"
 msgid "Invite Team Member"
 msgstr "邀請團隊成員"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:191
+#: src/components/layouts/OrganizerLayout/index.tsx:195
 msgid "Invite Team Members"
 msgstr "邀請團隊成員"
 
@@ -6236,7 +6385,7 @@ msgstr "邀請團隊成員"
 msgid "Invite User"
 msgstr "邀請用户"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:188
+#: src/components/layouts/OrganizerLayout/index.tsx:192
 msgid "Invite Your Team"
 msgstr "邀請您的團隊"
 
@@ -6323,7 +6472,7 @@ msgstr "約翰"
 msgid "Johnson"
 msgstr "約翰遜"
 
-#: src/components/layouts/EventHomepage/index.tsx:413
+#: src/components/layouts/EventHomepage/index.tsx:415
 msgid "Join from anywhere"
 msgstr "隨時隨地加入"
 
@@ -6378,8 +6527,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "讓我隨時了解來自 {0} 的新聞和活動"
 
 #: src/components/layouts/AuthLayout/index.tsx:43
-msgid "Keep the profit."
-msgstr "利潤全歸你。"
+#~ msgid "Keep the profit."
+#~ msgstr "利潤全歸你。"
 
 #: src/components/common/LanguageSwitcher/index.tsx:50
 msgid "Korean"
@@ -6465,6 +6614,7 @@ msgstr "過去 90 天"
 msgid "Last login"
 msgstr "最後登錄"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:167
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
 #: src/components/modals/ManageAttendeeModal/index.tsx:204
 #: src/components/modals/ManageOrderModal/index.tsx:235
@@ -6542,7 +6692,7 @@ msgstr "留空即可讓此簽到名單適用於所有場次"
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "保持開啟即可涵蓋活動的所有門票；關閉後可揀選指定門票。"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:127
 msgid "Legal"
 msgstr "法律資訊"
 
@@ -6554,7 +6704,7 @@ msgstr "通知他們這項變更"
 msgid "Let them know about the changes"
 msgstr "通知他們這些變更"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:111
+#: src/components/layouts/OrganizerLayout/index.tsx:115
 msgid "Library"
 msgstr "圖庫"
 
@@ -6588,7 +6738,7 @@ msgstr "清單"
 
 #: src/components/common/EventCard/index.tsx:99
 #: src/components/layouts/Event/index.tsx:225
-#: src/components/layouts/OrganizerLayout/index.tsx:219
+#: src/components/layouts/OrganizerLayout/index.tsx:223
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
 msgstr "已上線"
@@ -6605,6 +6755,10 @@ msgstr "直播活動"
 #: src/components/forms/ProductForm/ProductPreview.tsx:79
 msgid "Live preview"
 msgstr "即時預覽"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:78
+msgid "Load more"
+msgstr "載入更多"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:346
 msgid "Loaded dates"
@@ -6630,6 +6784,7 @@ msgstr "正在加載 Webhook"
 
 #: src/components/common/OrganizerReportTable/index.tsx:265
 #: src/components/common/ReportTable/index.tsx:225
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:43
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
@@ -6640,7 +6795,7 @@ msgstr "加載中..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:495
+#: src/components/layouts/EventHomepage/index.tsx:497
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:470
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -6669,7 +6824,7 @@ msgstr "地點更新"
 msgid "locations"
 msgstr "個地點"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:112
+#: src/components/layouts/OrganizerLayout/index.tsx:116
 #: src/components/routes/organizer/Locations/index.tsx:31
 msgid "Locations"
 msgstr "地點"
@@ -6717,6 +6872,10 @@ msgstr "查找我的門票"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:33
+msgid "Love colouring? Shop creative colouring sets at icreate.art"
+msgstr "喜歡填色嗎？到 icreate.art 選購創意填色套裝"
+
 #: src/components/modals/LocationEditModal/index.tsx:136
 msgid "Main Office"
 msgstr "總部辦公室"
@@ -6741,7 +6900,7 @@ msgstr "將此問題作為必答題"
 #: src/components/common/OrganizerWebhookTable/index.tsx:96
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:539
 #: src/components/common/PromoCodeTable/index.tsx:175
-#: src/components/layouts/OrganizerLayout/index.tsx:104
+#: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:273
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:84
 msgid "Manage"
@@ -7055,15 +7214,15 @@ msgid "Multiple locations"
 msgstr "多個地點"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Multiple ticket types"
-msgstr "多種門票類型"
+#~ msgid "Multiple ticket types"
+#~ msgstr "多種門票類型"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
 msgstr "音樂"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:122
 msgid "My Account"
 msgstr "我的帳戶"
 
@@ -7102,6 +7261,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:62
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
 msgid "Name"
 msgstr "名稱"
@@ -7140,6 +7300,10 @@ msgstr "從不"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:434
 msgid "New capacity"
 msgstr "新容量"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:23
+msgid "New colouring sheets are on their way — check back soon!"
+msgstr "新的填色頁即將推出 — 請稍後再來查看！"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:454
 msgid "New label"
@@ -7532,6 +7696,14 @@ msgstr "沒有搜索結果"
 msgid "No search results."
 msgstr "沒有搜索結果。"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:47
+msgid "No stories have been published yet — check back soon!"
+msgstr "目前還沒有已發布的故事 — 請稍後再來查看！"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:54
+msgid "No submissions here yet."
+msgstr "這裡還沒有投稿。"
+
 #: src/components/common/AddressAutocomplete/index.tsx:99
 #: src/components/common/LocationPicker/index.tsx:338
 msgid "No suggestions"
@@ -7877,7 +8049,7 @@ msgstr "網上及實體 — 詳見排程"
 msgid "Online event"
 msgstr "網上活動"
 
-#: src/components/layouts/EventHomepage/index.tsx:411
+#: src/components/layouts/EventHomepage/index.tsx:413
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:139
 msgid "Online Event"
@@ -7980,6 +8152,10 @@ msgstr "打開側邊欄"
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
 msgstr "方案 {i}"
+
+#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+msgid "Optional - the order confirmation and tickets already go to the email above"
+msgstr "可選 - 訂單確認和門票已會發送到上方填寫的電郵"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:263
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
@@ -8240,7 +8416,7 @@ msgid "Organization Name"
 msgstr "組織名稱"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:596
+#: src/components/layouts/EventHomepage/index.tsx:598
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -8259,7 +8435,7 @@ msgid "Organizer archived successfully"
 msgstr "主辦方已成功封存"
 
 #: src/components/layouts/Event/index.tsx:97
-#: src/components/layouts/OrganizerLayout/index.tsx:93
+#: src/components/layouts/OrganizerLayout/index.tsx:94
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Organizer Dashboard"
 msgstr "主辦單位儀表板"
@@ -8290,12 +8466,12 @@ msgid "Organizer Settings"
 msgstr "主辦單位設定"
 
 #: src/components/common/StatusToggle/index.tsx:63
-#: src/components/layouts/OrganizerLayout/index.tsx:162
+#: src/components/layouts/OrganizerLayout/index.tsx:166
 msgid "Organizer status update failed. Please try again later"
 msgstr "更新主辦單位狀態失敗。請稍後再試。"
 
 #: src/components/common/StatusToggle/index.tsx:55
-#: src/components/layouts/OrganizerLayout/index.tsx:159
+#: src/components/layouts/OrganizerLayout/index.tsx:163
 msgid "Organizer status updated"
 msgstr "主辦單位狀態已更新"
 
@@ -8324,6 +8500,10 @@ msgstr "其他列表（不包含此票）"
 #: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "我們的最新動態發佈在 Instagram 上 — 點擊下方查看。"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:109
+msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Stories page with your first name, last initial and year group."
+msgstr "我們的團隊會閱讀你的作品，如獲批准，將連同你的名字、姓氏首字母和年級一起發布在我們的兒童故事頁面上。"
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:121
 msgid "Outcome"
@@ -8550,6 +8730,10 @@ msgstr "付款成功！"
 msgid "Payment Terms"
 msgstr "付款條款"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:36
+msgid "Payments are processed securely through Stripe. By completing a purchase, you authorize us (via our payment processor) to charge the payment method you provide for the applicable ticket price and any associated fees."
+msgstr "付款透過 Stripe 安全處理。完成購買即表示您授權我們（透過我們的付款處理商）向您提供的付款方式收取相應的門票價格及任何相關費用。"
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "付款不可用"
@@ -8561,6 +8745,7 @@ msgid "Payouts"
 msgstr "收款"
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:85
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:16
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:437
 #: src/components/routes/organizer/Payments/CapabilityList.tsx:60
 msgid "Pending"
@@ -8757,6 +8942,10 @@ msgstr "請檢查您的電子郵件以確認您的電子郵件地址"
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr "請查看門票上的最新時間。你的門票仍然有效 — 除非新時間不合適，否則毋須任何操作。如有疑問，請直接回覆此電郵。"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:77
+msgid "Please confirm both boxes below before submitting."
+msgstr "提交前請確認下方兩個方格。"
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1028
 msgid "Please continue in the new tab"
 msgstr "請在新標籤頁中繼續"
@@ -8793,6 +8982,10 @@ msgstr "請輸入您的增值稅號碼"
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:28
 msgid "Please fill in all fields"
 msgstr "請填寫所有欄位"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:72
+msgid "Please fill in all fields before submitting."
+msgstr "提交前請填寫所有欄位。"
 
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
@@ -8832,6 +9025,10 @@ msgstr "請選擇至少一個產品"
 msgid "Please try again."
 msgstr "請再試一次。"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:37
+msgid "Please upload a plain text (.txt) file, or paste your writing into the box below instead."
+msgstr "請上傳純文字（.txt）檔案，或改為將文字貼上於下方的文字框中。"
+
 #: src/components/routes/profile/ManageProfile/index.tsx:161
 msgid "Please verify your email address to access all features"
 msgstr "請驗證您的電子郵件地址，以訪問所有功能"
@@ -8856,6 +9053,12 @@ msgstr "請稍候，我們正在準備您的發票..."
 #: src/components/routes/event/orders.tsx:123
 msgid "Please wait while we prepare your orders for export..."
 msgstr "請稍候，我們正在準備導出您的訂單..."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:150
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+msgid "Poem"
+msgstr "詩歌"
 
 #: src/components/common/LanguageSwitcher/index.tsx:42
 msgid "Polish"
@@ -8973,8 +9176,8 @@ msgid "Print to PDF"
 msgstr "列印為PDF"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
-#: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "私隱政策"
 
@@ -9123,8 +9326,8 @@ msgid "promo codes"
 msgstr "優惠碼"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Promo codes"
-msgstr "優惠碼"
+#~ msgid "Promo codes"
+#~ msgstr "優惠碼"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9210,13 +9413,21 @@ msgstr "購買人"
 msgid "Purchaser email"
 msgstr "購買人電郵"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:29
+msgid "Puzzles"
+msgstr "拼圖"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:11
+msgid "Puzzles are coming soon! Check back for fun brain-teasers and activity sheets."
+msgstr "拼圖即將推出！敬請期待有趣的腦筋急轉彎和活動表。"
+
 #: src/components/modals/ShareModal/index.tsx:168
 msgid "QR Code"
 msgstr "二維碼"
 
 #: src/components/layouts/AuthLayout/index.tsx:17
-msgid "QR code check-in"
-msgstr "二維碼簽到"
+#~ msgid "QR code check-in"
+#~ msgstr "二維碼簽到"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9258,6 +9469,10 @@ msgstr "問題"
 #: src/components/modals/ManageOrderModal/index.tsx:294
 msgid "Questions & Answers"
 msgstr "問與答"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:89
+msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
+msgstr "有關本條款的問題可發送至 <0>fos@aqualeo.co</0>。"
 
 #: src/components/common/QuestionsTable/index.tsx:183
 msgid "Questions reordered"
@@ -9305,8 +9520,8 @@ msgid "Ready to go live?"
 msgstr "準備好發布了嗎？"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Real-time analytics"
-msgstr "即時數據分析"
+#~ msgid "Real-time analytics"
+#~ msgstr "即時數據分析"
 
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:171
 msgid "Reason (optional)"
@@ -9382,7 +9597,7 @@ msgstr "記錄退款"
 msgid "Recurring"
 msgstr "重複"
 
-#: src/components/layouts/EventHomepage/index.tsx:375
+#: src/components/layouts/EventHomepage/index.tsx:377
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -9393,8 +9608,8 @@ msgid "Recurring Event Settings"
 msgstr "重複活動設定"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Recurring events"
-msgstr "重複活動"
+#~ msgid "Recurring events"
+#~ msgstr "重複活動"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -9425,6 +9640,10 @@ msgstr "為此日期的所有訂單退款"
 #: src/components/modals/RefundOrderModal/index.tsx:115
 msgid "Refund amount"
 msgstr "退款金額"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:45
+msgid "Refund and cancellation terms are set by the individual event organizer and will be stated on the event page where applicable. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
+msgstr "退款和取消條款由各活動組織者自行設定，如適用將在活動頁面上說明。如果組織者取消活動，我們將盡合理努力通知已報名的參加者。"
 
 #: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund failed"
@@ -9491,9 +9710,17 @@ msgstr "註冊"
 msgid "Registration Questions"
 msgstr "註冊問題"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:103
+msgid "Reject"
+msgstr "拒絕"
+
 #: src/components/common/CookieConsentBanner/index.tsx:135
 msgid "Reject all"
 msgstr "全部拒絕"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:18
+msgid "Rejected"
+msgstr "已拒絕"
 
 #: src/components/forms/ProductForm/index.tsx:378
 msgid "Release tiers in order"
@@ -9554,7 +9781,7 @@ msgid "Report not found"
 msgstr "未找到報告"
 
 #: src/components/layouts/Event/index.tsx:104
-#: src/components/layouts/OrganizerLayout/index.tsx:99
+#: src/components/layouts/OrganizerLayout/index.tsx:100
 #: src/components/routes/event/Reports/index.tsx:47
 #: src/components/routes/organizer/Reports/index.tsx:51
 msgid "Reports"
@@ -9592,7 +9819,7 @@ msgstr "重新發送驗證碼"
 msgid "Resend Confirmation"
 msgstr "重新發送確認"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:310
+#: src/components/layouts/OrganizerLayout/index.tsx:314
 msgid "Resend Confirmation Email"
 msgstr "重新發送確認電郵"
 
@@ -9649,6 +9876,10 @@ msgstr "重置密碼"
 #: src/components/routes/auth/ResetPassword/index.tsx:75
 msgid "Resetting..."
 msgstr "重置中..."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:18
+msgid "Resources for Children"
+msgstr "兒童資源"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:116
 msgid "Response"
@@ -10145,7 +10376,7 @@ msgstr "次要文字顏色"
 msgid "Secure Checkout"
 msgstr "安全結帳"
 
-#: src/components/layouts/EventHomepage/index.tsx:438
+#: src/components/layouts/EventHomepage/index.tsx:440
 msgid "See schedule"
 msgstr "查看排程"
 
@@ -10336,8 +10567,8 @@ msgid "Selected"
 msgstr "已選擇"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Sell out your event."
-msgstr "令你的活動座無虛席。"
+#~ msgid "Sell out your event."
+#~ msgstr "令你的活動座無虛席。"
 
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:77
 msgid "Sellable"
@@ -10531,7 +10762,7 @@ msgstr "設定重複排程以自動建立日期，或逐個新增。"
 msgid "Set up check-in lists for different entrances, sessions, or days."
 msgstr "為不同的入口、場次或日期設定簽到列表。"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:85
+#: src/components/layouts/OrganizerLayout/index.tsx:86
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
 msgstr "設定收款"
@@ -10570,7 +10801,7 @@ msgstr "設定、更改或清除此日期的地點或網上資料"
 msgid "Setting updated"
 msgstr "設定已更新"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:106
+#: src/components/layouts/OrganizerLayout/index.tsx:107
 #: src/components/modals/DuplicateEventModal/index.tsx:51
 msgid "Settings"
 msgstr "設置"
@@ -10584,8 +10815,8 @@ msgid "Setup takes just a few minutes — you don't need an existing Stripe acco
 msgstr "設定只需幾分鐘 — 毋須已有的 Stripe 帳戶。Stripe 會處理信用卡、電子錢包、各地付款方式和防詐騙，讓你專注於活動本身。"
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:349
-#: src/components/layouts/OrganizerLayout/index.tsx:239
+#: src/components/layouts/EventHomepage/index.tsx:351
+#: src/components/layouts/OrganizerLayout/index.tsx:243
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
 #: src/components/modals/ShareModal/index.tsx:186
@@ -10605,10 +10836,18 @@ msgstr "分享推廣連結"
 msgid "Share Event"
 msgstr "分享活動"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:236
-#: src/components/layouts/OrganizerLayout/index.tsx:278
+#: src/components/layouts/OrganizerLayout/index.tsx:240
+#: src/components/layouts/OrganizerLayout/index.tsx:282
 msgid "Share Organizer Page"
 msgstr "分享主辦單位頁面"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:129
+msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
+msgstr "與 Friends of Repton 社區分享你自己的短篇故事或詩歌吧！我們每月都會為最佳故事和最佳詩歌頒獎。如果你希望作品被發布，你的名字、姓氏首字母和年級將顯示在旁邊。"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:32
+msgid "Share Your Story"
+msgstr "分享你的故事"
 
 #: src/components/routes/event/CapacityAssignments/index.tsx:35
 msgid "Shared Capacity Management"
@@ -10846,11 +11085,13 @@ msgid "Something went wrong. Please try again later."
 msgstr "出了點問題。請稍後再試。"
 
 #: src/components/layouts/Event/index.tsx:91
-#: src/components/layouts/OrganizerLayout/index.tsx:127
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:97
+#: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
 #: src/components/routes/my-tickets/index.tsx:162
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:35
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
 msgid "Something went wrong. Please try again."
@@ -11019,6 +11260,25 @@ msgstr "仍需提供"
 msgid "Stop Impersonating"
 msgstr "停止模擬"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:143
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+msgid "Story"
+msgstr "故事"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+msgid "Story published"
+msgstr "故事已發布"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+msgid "Story rejected"
+msgstr "故事已拒絕"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:113
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:42
+msgid "Story Submissions"
+msgstr "故事投稿"
+
 #: src/components/common/OrdersTable/index.tsx:295
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
@@ -11087,6 +11347,18 @@ msgstr "主題將顯示在這裏"
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:267
 msgid "Subject:"
 msgstr "主題："
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:119
+msgid "Submit another story or poem"
+msgstr "再提交一篇故事或詩歌"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:240
+msgid "Submit for review"
+msgstr "提交審核"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:64
+msgid "Submitted"
+msgstr "已提交"
 
 #: src/components/common/InlineOrderSummary/index.tsx:148
 #: src/components/common/OrderSummary/index.tsx:53
@@ -11288,7 +11560,7 @@ msgstr "支持電子郵件"
 msgid "Swedish"
 msgstr "瑞典語"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:75
+#: src/components/layouts/OrganizerLayout/index.tsx:76
 #: src/components/modals/SwitchOrganizerModal/index.tsx:46
 msgid "Switch Organizer"
 msgstr "切換主辦單位"
@@ -11389,8 +11661,8 @@ msgid "Taxes and Fees"
 msgstr "税費"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Team collaboration"
-msgstr "團隊協作"
+#~ msgid "Team collaboration"
+#~ msgstr "團隊協作"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -11440,8 +11712,8 @@ msgstr "範本儲存成功"
 msgid "Term"
 msgstr "關鍵字"
 
-#: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:132
+#: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "服務條款"
 
@@ -11453,10 +11725,18 @@ msgstr "文字可能難以閱讀"
 msgid "Thank you for attending!"
 msgstr "感謝您的參與！"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:107
+msgid "Thank you for sharing your writing!"
+msgstr "感謝你分享自己的作品！"
+
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:55
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
 msgid "Thanks,"
 msgstr "多謝，"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:42
+msgid "That file is too large. Please keep it under 200KB, or paste your writing below instead."
+msgstr "該檔案太大了。請保持在 200KB 以內，或改為將文字貼上於下方。"
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:297
 #: src/components/routes/product-widget/SelectProducts/index.tsx:543
@@ -11517,6 +11797,10 @@ msgstr "電郵地址已更改。參與者將在更新後的電郵地址收到新
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:12
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "您查找的活動目前不可用。它可能已被刪除、過期或 URL 不正確。"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:63
+msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
+msgstr "Friends of School 的名稱、標誌及網站內容為 Aqualeo Digecom FZ LLC 所有，未經許可不得使用。活動內容（如描述和圖片）仍歸相應組織者所有。"
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -11694,6 +11978,10 @@ msgstr "這些範本將用作您組織中所有活動的預設範本。單個活
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "這些範本將僅覆蓋此活動的組織者預設設置。如果這裏沒有設置自定義範本，將使用組織者範本。"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:10
+msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
+msgstr "本服務條款（「條款」）規範您對本網站及由 Aqualeo Digecom FZ LLC（「Aqualeo Digecom」、「我們」）營運的 Friends of School 平台的使用。瀏覽本網站或購買門票即表示您同意本條款。"
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Third"
 msgstr "第三個"
@@ -11788,7 +12076,7 @@ msgstr "只限此日期"
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
 msgstr "此操作將中斷 {stripeAccountId} 與此主辦方的連接。在您重新連接 Stripe 帳戶之前，付費門票銷售將無法進行。"
 
-#: src/components/layouts/EventHomepage/index.tsx:399
+#: src/components/layouts/EventHomepage/index.tsx:401
 msgid "This event has ended"
 msgstr "此活動已結束"
 
@@ -11929,6 +12217,10 @@ msgstr "這將覆蓋所有可見性設置，並將該產品對所有客户隱藏
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "此預覽顯示您的郵件使用示例資料的外觀。實際郵件將使用真實值。"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:10
+msgid "This Privacy Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
+msgstr "本私隱政策說明了 Friends of School 平台及本網站的營運方 Aqualeo Digecom FZ LLC（「Aqualeo Digecom」、「我們」）在您瀏覽本網站、報名活動或與我們進行其他互動時，如何收集、使用和保護您的個人資料。"
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:80
 msgid "This product cannot be deleted because it is associated with an order. You can hide it instead."
 msgstr "此產品無法刪除，因為它與訂單關聯。您可以將其隱藏。"
@@ -11957,6 +12249,10 @@ msgstr "此報告僅供參考。在將此數據用於會計或稅務目的之前
 msgid "This reset password link is invalid or expired."
 msgstr "此重置密碼鏈接無效或已過期。"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:72
+msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
+msgstr "本網站按「原樣」提供。在法律允許的最大範圍內，Aqualeo Digecom FZ LLC 對因使用本網站或參加任何列出的活動而產生的任何間接、附帶或後果性損害不承擔責任。"
+
 #: src/components/common/AttendeeTicket/index.tsx:148
 msgid "This ticket is no longer valid"
 msgstr "此門票已失效"
@@ -11972,6 +12268,14 @@ msgstr "此級別的數量在所有日期間共用"
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "該用户未激活，因為他們沒有接受邀請。"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:19
+msgid "This website is operated by Aqualeo Digecom FZ LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
+msgstr "本網站由 Aqualeo Digecom FZ LLC 營運。如對本條款有任何疑問，請透過 <0>fos@aqualeo.co</0> 聯絡我們。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:20
+msgid "This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
+msgstr "本網站由 Aqualeo Digecom FZ LLC 營運。如果您對本政策或您的資料處理方式有任何疑問，可以透過 <0>fos@aqualeo.co</0> 聯絡我們。"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:369
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -12074,6 +12378,10 @@ msgstr "找不到門票"
 #: src/components/routes/event/products.tsx:89
 msgid "Ticket or Product"
 msgstr "票券或產品"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
+msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
+msgstr "本網站上的門票付款由符合 PCI 標準的第三方付款處理商 Stripe 安全處理。我們不會在我們的伺服器上儲存您的完整卡片資訊。有關 Stripe 如何處理您的付款資訊的詳情，請參閱 <0>Stripe 的私隱政策</0>。"
 
 #: src/components/routes/event/TicketDesigner/TicketDesignerPrint.tsx:99
 msgid "Ticket Preview for"
@@ -12198,9 +12506,25 @@ msgstr "至"
 msgid "To"
 msgstr "收件人"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:54
+msgid "To communicate with you about events you've registered for."
+msgstr "就您已報名的活動與您進行溝通。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
+msgid "To improve and secure our website and services."
+msgstr "改善和保護我們的網站及服務。"
+
 #: src/components/modals/SendMessageModal/index.tsx:315
 msgid "To increase your limits, contact us at"
 msgstr "要提高您的限制，請聯繫我們"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:53
+msgid "To process event registrations and ticket purchases."
+msgstr "處理活動報名和門票購買。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+msgid "To respond to enquiries submitted through our contact form."
+msgstr "回覆透過我們的聯絡表單提交的查詢。"
 
 #: src/components/common/OccurrenceSelect/index.tsx:148
 #: src/components/common/PeriodSelector/index.tsx:30
@@ -12222,7 +12546,7 @@ msgstr "切換淺色與深色主題"
 msgid "Tomorrow"
 msgstr "明天"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:108
+#: src/components/layouts/OrganizerLayout/index.tsx:109
 msgid "Tools"
 msgstr "工具"
 
@@ -12384,6 +12708,7 @@ msgstr "兩個設定決定一個日期可以預訂多少人。較低者即為可
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:61
 msgid "Type"
 msgstr "類型"
 
@@ -12642,6 +12967,10 @@ msgstr "隨規則建立即時更新。翻閱月份以核對日期。"
 #: src/components/forms/ProductForm/ProductPreview.tsx:100
 msgid "Updates as you type."
 msgstr "輸入時即時更新。"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:196
+msgid "Upload a .txt file"
+msgstr "上傳 .txt 檔案"
 
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:39
 msgid "Upload a cover image for your organizer"
@@ -13003,7 +13332,7 @@ msgstr "查看活動"
 msgid "View logs"
 msgstr "查看日誌"
 
-#: src/components/layouts/EventHomepage/index.tsx:558
+#: src/components/layouts/EventHomepage/index.tsx:560
 msgid "View Map"
 msgstr "查看地圖"
 
@@ -13011,7 +13340,7 @@ msgstr "查看地圖"
 msgid "View Message"
 msgstr "查看訊息"
 
-#: src/components/layouts/EventHomepage/index.tsx:467
+#: src/components/layouts/EventHomepage/index.tsx:469
 msgid "View on Google Maps"
 msgstr "在谷歌地圖上查看"
 
@@ -13032,8 +13361,8 @@ msgstr "查看訂單詳情"
 msgid "View order details, issue refunds, and resend confirmations."
 msgstr "查看訂單詳情、退款和重新傳送確認。"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:254
-#: src/components/layouts/OrganizerLayout/index.tsx:257
+#: src/components/layouts/OrganizerLayout/index.tsx:258
+#: src/components/layouts/OrganizerLayout/index.tsx:261
 msgid "View Organizer Homepage"
 msgstr "查看主辦單位主頁"
 
@@ -13087,7 +13416,6 @@ msgid "Waiting for scan…"
 msgstr "等待掃描…"
 
 #: src/components/forms/ProductForm/index.tsx:456
-#: src/components/layouts/AuthLayout/index.tsx:18
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13115,6 +13443,14 @@ msgstr "警告：這是系統預設配置。變更將影響所有未分配特定
 #: src/components/common/PaymentIcons/index.tsx:62
 msgid "We accept"
 msgstr "我們接受"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
+msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
+msgstr "我們還會自動收集有限的技術資訊，例如您的 IP 位址、瀏覽器類型和瀏覽過的頁面，以幫助我們營運和改善網站。若為此目的使用了 Cookie，您可以隨時透過頁尾中的 Cookie 設定連結管理您的偏好設定。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
+msgid "We collect information you provide directly to us, including:"
+msgstr "我們收集您直接提供給我們的資訊，包括："
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
@@ -13164,13 +13500,29 @@ msgstr "我們無法加載數據。請重試。"
 msgid "We couldn't reach Stripe just now. Please try again in a moment."
 msgstr "目前無法連接 Stripe，請稍後再試。"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:52
+msgid "We couldn't read that file. Please try pasting your writing into the box below instead."
+msgstr "我們無法讀取該檔案。請嘗試將文字貼上於下方的文字框中。"
+
 #: src/components/common/ProductsTable/SortableCategory/index.tsx:98
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "我們無法重新排序類別。請再試一次。"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:82
+msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
+msgstr "我們不會出售您的個人資料。我們僅與幫助我們營運網站的服務供應商（例如我們的付款處理商和電郵發送服務商）分享資訊，或在法律要求時分享。"
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:418
 msgid "We hit a snag loading this page. Please try again."
 msgstr "載入此頁面時遇到問題。請重試。"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:81
+msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
+msgstr "我們可能會不時更新本條款。在變更發佈後繼續使用本網站即表示接受更新後的條款。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
+msgstr "我們可能會不時更新本私隱政策。本頁頂部的「最後更新」日期反映了最新的變更。"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:236
 msgid "We partner with Stripe to send payouts straight to your bank account."
@@ -13189,6 +13541,10 @@ msgstr "我們建議尺寸為 2160px x 1080px，文件大小不超過 5MB"
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "我們建議尺寸為 400x400 像素，檔案大小不超過 5MB"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:91
+msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
+msgstr "我們會在實現本政策所述目的所需的期限內保留個人資料，包括遵守法律、會計或報告義務。"
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:158
 msgid "We sent a verification link to {0}"
 msgstr "我們已向 {0} 傳送驗證連結"
@@ -13196,6 +13552,10 @@ msgstr "我們已向 {0} 傳送驗證連結"
 #: src/components/common/CookieConsentBanner/index.tsx:50
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "我們使用 Cookie 來幫助我們了解網站的使用情況並改善您的體驗。"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
+msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
+msgstr "我們使用網站運作所必需的基本 Cookie，並在您同意的情況下使用可選的分析和廣告 Cookie，以幫助我們了解網站的使用情況。您可以隨時透過網站頁尾中的「Cookie 設定」連結更改您的 Cookie 偏好設定。"
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -13253,8 +13613,8 @@ msgid "Webhook deleted successfully"
 msgstr "Webhook 刪除成功"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Webhook integrations"
-msgstr "Webhook 整合"
+#~ msgid "Webhook integrations"
+#~ msgstr "Webhook 整合"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151
@@ -13279,7 +13639,7 @@ msgid "Webhook will send notifications"
 msgstr "Webhook 將發送通知"
 
 #: src/components/layouts/Event/index.tsx:145
-#: src/components/layouts/OrganizerLayout/index.tsx:115
+#: src/components/layouts/OrganizerLayout/index.tsx:119
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
 #: src/components/routes/organizer/Webhooks/index.tsx:30
@@ -13557,6 +13917,10 @@ msgstr "X（Twitter）"
 msgid "year"
 msgstr "年"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:63
+msgid "Year group"
+msgstr "年級"
+
 #: src/components/common/OrganizerReportTable/index.tsx:59
 #: src/components/common/PeriodSelector/index.tsx:38
 #: src/components/common/ReportTable/index.tsx:54
@@ -13591,6 +13955,10 @@ msgstr "是的，移除它們"
 #: src/components/common/CapacityHelp/index.tsx:27
 msgid "Yoga class"
 msgstr "瑜伽課"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:54
+msgid "You agree not to misuse this website, including attempting to interfere with its normal operation, submitting false information when registering for an event, or using the contact form to send spam or unlawful content."
+msgstr "您同意不濫用本網站，包括不試圖干擾其正常運作、在報名活動時提交虛假資訊，或利用聯絡表單發送垃圾郵件或非法內容。"
 
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:53
 msgid "You are changing your email to <0>{0}</0>."
@@ -13687,6 +14055,10 @@ msgstr "您已向免費產品添加了税費。您想要刪除它們嗎？"
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "你有未儲存的變更，確定要捨棄嗎？"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:99
+msgid "You may request access to, correction of, or deletion of your personal information by contacting us at <0>fos@aqualeo.co</0>."
+msgstr "您可以透過 <0>fos@aqualeo.co</0> 聯絡我們，要求查閱、更正或刪除您的個人資料。"
+
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"
 msgstr "您必須確認此電子郵件並非促銷郵件"
@@ -13711,7 +14083,7 @@ msgstr "必須先創建機票，然後才能手動添加與會者。"
 msgid "You must have at least one price tier"
 msgstr "您必須至少有一個價格等級"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:299
+#: src/components/layouts/OrganizerLayout/index.tsx:303
 msgid "You must verify your email address before you can update the organizer status."
 msgstr "在更新主辦單位狀態之前，您必須先驗證您的電郵地址。"
 
@@ -13861,6 +14233,10 @@ msgstr "您的姓名"
 msgid "Your Name"
 msgstr "您的姓名"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:31
+msgid "Your name, email address, and contact details when you register for an event or contact us."
+msgstr "您在報名活動或聯絡我們時提供的姓名、電郵地址和聯絡方式。"
+
 #: src/components/routes/auth/ResetPassword/index.tsx:58
 msgid "Your new password must be at least 8 characters long."
 msgstr "您的新密碼必須至少為 8 個字元。"
@@ -13929,6 +14305,10 @@ msgstr "您的退款正在處理中。"
 #: src/components/layouts/CheckIn/index.tsx:117
 msgid "Your saved date filter is no longer available — showing all dates."
 msgstr "你儲存的日期篩選條件已失效 — 現正顯示所有日期。"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:194
+msgid "Your story or poem"
+msgstr "你的故事或詩歌"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:116
 msgid "Your Stripe account itself isn't affected, and no data is lost — you can reconnect at any time."

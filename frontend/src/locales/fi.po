@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layouts/Event/index.tsx:224
-#: src/components/layouts/OrganizerLayout/index.tsx:218
+#: src/components/layouts/OrganizerLayout/index.tsx:222
 msgid "- Click to Publish"
 msgstr "– Napsauta julkaistaksesi"
 
 #: src/components/layouts/Event/index.tsx:226
-#: src/components/layouts/OrganizerLayout/index.tsx:220
+#: src/components/layouts/OrganizerLayout/index.tsx:224
 msgid "- Click to Unpublish"
 msgstr "– Napsauta poistaaksesi julkaisun"
 
@@ -81,7 +81,6 @@ msgid "{0} left"
 msgstr "{0} jäljellä"
 
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:87
-#: src/components/layouts/AuthLayout/index.tsx:158
 msgid "{0} logo"
 msgstr "{0}-logo"
 
@@ -341,6 +340,15 @@ msgstr "1 aika saatavilla"
 msgid "1 week before event"
 msgstr "1 viikko ennen tapahtumaa"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:18
+#: src/components/routes/legal/TermsOfService/index.tsx:17
+msgid "1. Who we are"
+msgstr "1. Keitä olemme"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:113
+msgid "10. Changes to this policy"
+msgstr "10. Muutokset tähän tietosuojakäytäntöön"
+
 #: src/components/common/CapacityHelp/index.tsx:28
 msgid "12 mats in the studio and one Drop-in ticket."
 msgstr "12 mattoa studiossa ja yksi Drop-in-lippu."
@@ -354,6 +362,14 @@ msgstr "123 Sample Street"
 msgid "135+ currencies & 40+ payment methods"
 msgstr "135+ valuuttaa ja 40+ maksutapaa"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:25
+msgid "2. Event registrations and tickets"
+msgstr "2. Tapahtumailmoittautumiset ja liput"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:27
+msgid "2. Information we collect"
+msgstr "2. Keräämämme tiedot"
+
 #: src/components/common/WidgetEditor/index.tsx:230
 msgid "20"
 msgstr "20"
@@ -361,6 +377,59 @@ msgstr "20"
 #: src/components/common/CapacityHelp/index.tsx:61
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 paikkaa per päivämäärä sekä 30 T-paitaa koko sarjan aikana."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:51
+msgid "3. How we use your information"
+msgstr "3. Miten käytämme tietojasi"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:34
+msgid "3. Payments"
+msgstr "3. Maksut"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+msgid "4. Payment processing"
+msgstr "4. Maksujen käsittely"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:43
+msgid "4. Refunds and cancellations"
+msgstr "4. Palautukset ja peruutukset"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:52
+msgid "5. Acceptable use"
+msgstr "5. Hyväksyttävä käyttö"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:71
+msgid "5. Cookies"
+msgstr "5. Evästeet"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:61
+msgid "6. Intellectual property"
+msgstr "6. Immateriaalioikeudet"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:80
+msgid "6. Sharing your information"
+msgstr "6. Tietojesi jakaminen"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
+msgid "7. Data retention"
+msgstr "7. Tietojen säilyttäminen"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:70
+msgid "7. Limitation of liability"
+msgstr "7. Vastuunrajoitus"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:79
+msgid "8. Changes to these Terms"
+msgstr "8. Näiden ehtojen muutokset"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:97
+msgid "8. Your rights"
+msgstr "8. Oikeutesi"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:105
+#: src/components/routes/legal/TermsOfService/index.tsx:87
+msgid "9. Contact us"
+msgstr "9. Ota yhteyttä"
 
 #: src/components/routes/admin/Announcements/index.tsx:319
 msgid "A button label is required when a URL is set"
@@ -373,6 +442,10 @@ msgstr "Peruutusilmoitus on lähetetty osoitteeseen"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:300
 msgid "a change in duration"
 msgstr "keston muutos"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:39
+msgid "A collection of original stories and poems written by children in our community."
+msgstr "Kokoelma alkuperäisiä tarinoita ja runoja, joita yhteisömme lapset ovat kirjoittaneet."
 
 #: src/components/forms/QuestionForm/index.tsx:138
 msgid "A date input. Perfect for asking for a date of birth etc."
@@ -467,7 +540,7 @@ msgstr "Arkipäiväkuvio"
 msgid "Abandoned"
 msgstr "Hylätty"
 
-#: src/components/layouts/EventHomepage/index.tsx:482
+#: src/components/layouts/EventHomepage/index.tsx:484
 msgid "About"
 msgstr "Tietoja"
 
@@ -597,6 +670,7 @@ msgstr "Toimenpide vaaditaan: ALV-tiedot tarvitaan"
 #: src/components/common/WaitlistTable/index.tsx:56
 #: src/components/common/WaitlistTable/index.tsx:234
 #: src/components/routes/admin/FailedJobs/index.tsx:167
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:66
 msgid "Actions"
 msgstr "Toiminnot"
 
@@ -781,7 +855,7 @@ msgstr "Lisää taso"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:385
+#: src/components/layouts/EventHomepage/index.tsx:387
 msgid "Add to Calendar"
 msgstr "Lisää kalenteriin"
 
@@ -906,8 +980,8 @@ msgid "Affiliate deleted successfully"
 msgstr "Kumppani poistettu onnistuneesti"
 
 #: src/components/layouts/AuthLayout/index.tsx:23
-msgid "Affiliate program"
-msgstr "Kumppaniohjelma"
+#~ msgid "Affiliate program"
+#~ msgstr "Kumppaniohjelma"
 
 #: src/components/forms/AffiliateForm/index.tsx:23
 msgid "Affiliate sales will be tracked"
@@ -1028,7 +1102,7 @@ msgstr "Kaikki tapahtumakerrat"
 msgid "All Products"
 msgstr "Kaikki tuotteet"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:147
 msgid "All rights reserved."
 msgstr "Kaikki oikeudet pidätetään."
 
@@ -1215,6 +1289,10 @@ msgstr "Kassalla annetut vastaukset (esim. ateriavalinta)"
 msgid "Any dates you've manually customized will be kept."
 msgstr "Manuaalisesti muokkaamasi päivämäärät säilytetään."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:39
+msgid "Any messages or information you submit through our contact forms."
+msgstr "Kaikki viestit tai tiedot, jotka lähetät yhteydenottolomakkeidemme kautta."
+
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:62
 msgid "Any queries from product holders will be sent to this email address. This will also be used as the \"reply-to\" address for all emails sent from this event"
 msgstr "Kaikki lipunhaltijoiden kyselyt lähetetään tähän sähköpostiosoitteeseen. Tätä käytetään myös viestin vastausosoitteen (reply-to) kentässä kaikille tästä tapahtumasta lähetetyille sähköposteille"
@@ -1284,6 +1362,10 @@ msgstr "Käytä kohteeseen"
 msgid "Apply to all tickets"
 msgstr "Käytä kaikkiin lippuihin"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:93
+msgid "Approve"
+msgstr "Hyväksy"
+
 #: src/components/routes/admin/SpamEvents/index.tsx:177
 msgid "Approve - Not Spam"
 msgstr "Hyväksy – ei roskapostia"
@@ -1291,6 +1373,10 @@ msgstr "Hyväksy – ei roskapostia"
 #: src/components/routes/admin/Messages/index.tsx:232
 msgid "Approve Message"
 msgstr "Hyväksy viesti"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:17
+msgid "Approved"
+msgstr "Hyväksytty"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:69
 msgid "April"
@@ -1429,11 +1515,11 @@ msgstr "Haluatko varmasti poistua?"
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "Haluatko varmasti muuttaa tämän tapahtuman luonnokseksi? Tapahtuma piiloutuu julkisilta."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:150
+#: src/components/layouts/OrganizerLayout/index.tsx:154
 msgid "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 msgstr "Haluatko varmasti muuttaa tämän järjestäjän luonnokseksi? Järjestäjäsivu piiloutuu julkisilta."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:151
+#: src/components/layouts/OrganizerLayout/index.tsx:155
 msgid "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 msgstr "Haluatko varmasti julkaista tämän järjestäjän? Järjestäjäsivu tulee julkisesti näkyville."
 
@@ -1875,6 +1961,10 @@ msgstr "Koska tällä tilillä on valmiita tilauksia, tapahtumatiedot (summat, p
 msgid "Billing Address"
 msgstr "Laskutusosoite"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:35
+msgid "Billing information necessary to process ticket purchases (handled securely by our payment processor — see Section 4)."
+msgstr "Lipun oston käsittelyyn tarvittavat laskutustiedot (käsitellään turvallisesti maksunvälittäjämme toimesta – katso kohta 4)."
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:177
 msgid "Billing Settings"
 msgstr "Laskutusasetukset"
@@ -1969,7 +2059,7 @@ msgstr "Ostajat näkevät siistin hinnan. Palvelumaksu vähennetään tilitykses
 msgid "By adding tracking pixels, you acknowledge that you and this platform are joint controllers of the data collected. You are responsible for ensuring you have a lawful basis for this processing under applicable privacy laws (GDPR, CCPA, etc.)."
 msgstr "Lisäämällä seurantapikseleitä vahvistat, että sinä ja tämä alusta olette yhteisiä kerättyjen tietojen rekisterinpitäjiä. Olet vastuussa siitä, että sinulla on laillinen käsittelyperuste sovellettavien tietosuojalakien (GDPR, CCPA jne.) mukaisesti."
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:762
+#: src/components/routes/product-widget/CollectInformation/index.tsx:761
 #: src/components/routes/product-widget/Payment/index.tsx:157
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Jatkamalla hyväksyt <0>{0}:n käyttöehdot</0>"
@@ -2144,8 +2234,8 @@ msgid "Capacity Assignments"
 msgstr "Kapasiteetin kohdistukset"
 
 #: src/components/layouts/AuthLayout/index.tsx:29
-msgid "Capacity management"
-msgstr "Kapasiteetin hallinta"
+#~ msgid "Capacity management"
+#~ msgstr "Kapasiteetin hallinta"
 
 #: src/components/layouts/Event/index.tsx:137
 msgid "Capacity Management"
@@ -2246,8 +2336,8 @@ msgstr "Vain sisäänkirjaus"
 msgid "Check out"
 msgstr "Kirjaa ulos"
 
-#: src/components/layouts/EventHomepage/index.tsx:344
-#: src/components/layouts/EventHomepage/index.tsx:345
+#: src/components/layouts/EventHomepage/index.tsx:346
+#: src/components/layouts/EventHomepage/index.tsx:347
 msgid "Check out this event: {0}"
 msgstr "Tutustu tähän tapahtumaan: {0}"
 
@@ -2404,6 +2494,14 @@ msgstr "Kassa · vaihe {stepNumber}/{stepCount}"
 msgid "Checkout Settings"
 msgstr "Kassa-asetukset"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+msgid "Children's Stories"
+msgstr "Lasten tarinat"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:37
+msgid "Children's Stories & Poems"
+msgstr "Lasten tarinat ja runot"
+
 #: src/components/common/LanguageSwitcher/index.tsx:34
 msgid "Chinese (Simplified)"
 msgstr "Kiina (yksinkertaistettu)"
@@ -2472,6 +2570,10 @@ msgstr "Keskikerros"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:576
 msgid "City"
 msgstr "Kaupunki"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:180
+msgid "Class / Year group"
+msgstr "Luokka / Vuosiluokka"
 
 #: src/components/common/CapacityHelp/index.tsx:60
 msgid "Class with a T-shirt add-on"
@@ -2566,7 +2668,7 @@ msgstr "Koodin on oltava 3–50 merkkiä pitkä"
 msgid "Code must be no more than 20 characters"
 msgstr "Koodin on oltava enintään 20 merkkiä pitkä"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:189
+#: src/components/layouts/OrganizerLayout/index.tsx:193
 msgid "Collaborate with your team to create amazing events together."
 msgstr "Tee tiimisi kanssa yhteistyötä luodaksesi upeita tapahtumia yhdessä."
 
@@ -2604,6 +2706,14 @@ msgstr "Värin on oltava kelvollinen heksakoodin muotoinen. Esimerkki: #ffffff"
 msgid "Colors"
 msgstr "Värit"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:26
+msgid "Colouring Pages"
+msgstr "Värityskuvat"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:20
+msgid "Colouring sheets, puzzles, and a place to share your own stories and poems."
+msgstr "Värityskuvia, palapelejä ja paikka jakaa omia tarinoita ja runoja."
+
 #: src/components/common/ColumnVisibilityToggle/index.tsx:21
 msgid "Columns"
 msgstr "Sarakkeet"
@@ -2625,11 +2735,15 @@ msgstr "Pilkuilla erotellut avainsanat, jotka kuvaavat tapahtumaa. Näitä käyt
 msgid "Communication Preferences"
 msgstr "Viestiasetukset"
 
+#: src/components/layouts/OrganizerLayout/index.tsx:112
+msgid "Community"
+msgstr "Yhteisö"
+
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:82
 msgid "complete"
 msgstr "valmis"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:758
+#: src/components/routes/product-widget/CollectInformation/index.tsx:757
 msgid "Complete Order"
 msgstr "Viimeistele tilaus"
 
@@ -2745,8 +2859,8 @@ msgstr "Vahvista"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:499
 #: src/components/routes/product-widget/CollectInformation/index.tsx:500
+#: src/components/routes/product-widget/CollectInformation/index.tsx:715
 #: src/components/routes/product-widget/CollectInformation/index.tsx:716
-#: src/components/routes/product-widget/CollectInformation/index.tsx:717
 msgid "Confirm Email Address"
 msgstr "Vahvista sähköpostiosoite"
 
@@ -2782,7 +2896,7 @@ msgstr "Vahvista roskapostiksi"
 msgid "Confirm your email to access all features."
 msgstr "Vahvista sähköpostiosoitteesi päästäksesi kaikkiin ominaisuuksiin."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:314
+#: src/components/layouts/OrganizerLayout/index.tsx:318
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "Vahvistussähköposti lähetetty! Tarkista postilaatikkosi."
 
@@ -2851,7 +2965,7 @@ msgid "Connection details are required for online events"
 msgstr "Yhteystiedot vaaditaan verkkotapahtumille"
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:684
+#: src/components/layouts/EventHomepage/index.tsx:686
 #: src/components/layouts/OrganizerHomepage/OrganizerProfileCard/index.tsx:111
 msgid "Contact"
 msgstr "Ota yhteyttä"
@@ -2864,13 +2978,14 @@ msgstr "Ota yhteyttä {0}"
 msgid "Contact Email"
 msgstr "Yhteyssähköposti"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:139
 msgid "Contact Us"
 msgstr "Ota yhteyttä"
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:65
 msgid "Content"
 msgstr "Sisältö"
 
@@ -2908,7 +3023,7 @@ msgstr "Jatka tapahtuman luomiseen"
 msgid "Continue to next step"
 msgstr "Siirry seuraavaan vaiheeseen"
 
-#: src/components/routes/product-widget/CollectInformation/index.tsx:758
+#: src/components/routes/product-widget/CollectInformation/index.tsx:757
 msgid "Continue to Payment"
 msgstr "Siirry maksuvaiheeseen"
 
@@ -3209,7 +3324,7 @@ msgid "Create event"
 msgstr "Luo tapahtuma"
 
 #: src/components/common/NoEventsBlankSlate/index.tsx:27
-#: src/components/layouts/OrganizerLayout/index.tsx:179
+#: src/components/layouts/OrganizerLayout/index.tsx:183
 #: src/components/routes/organizer/Events/index.tsx:62
 msgid "Create Event"
 msgstr "Luo tapahtuma"
@@ -3348,8 +3463,8 @@ msgid "Currently available for purchase"
 msgstr "Tällä hetkellä ostettavissa"
 
 #: src/components/layouts/AuthLayout/index.tsx:16
-msgid "Custom branding"
-msgstr "Mukautettu brändäys"
+#~ msgid "Custom branding"
+#~ msgstr "Mukautettu brändäys"
 
 #: src/components/modals/SendMessageModal/index.tsx:496
 msgid "Custom date and time"
@@ -3360,8 +3475,8 @@ msgid "Custom Maps URL"
 msgstr "Mukautettu kartta-URL"
 
 #: src/components/layouts/AuthLayout/index.tsx:25
-msgid "Custom questions"
-msgstr "Mukautetut kysymykset"
+#~ msgid "Custom questions"
+#~ msgstr "Mukautetut kysymykset"
 
 #: src/components/common/QuestionsTable/index.tsx:433
 msgid "Custom Questions"
@@ -3948,6 +4063,10 @@ msgstr "Lataa lasku"
 msgid "Download Invoice"
 msgstr "Lataa lasku"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:16
+msgid "Download PDF"
+msgstr "Lataa PDF"
+
 #: src/components/modals/ShareModal/index.tsx:228
 msgid "Download QR Code"
 msgstr "Lataa QR-koodi"
@@ -3963,7 +4082,7 @@ msgstr "Ladataan laskua"
 
 #: src/components/common/EventCard/index.tsx:96
 #: src/components/layouts/Event/index.tsx:223
-#: src/components/layouts/OrganizerLayout/index.tsx:217
+#: src/components/layouts/OrganizerLayout/index.tsx:221
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
 msgid "Draft"
@@ -4045,6 +4164,10 @@ msgstr "esim. Uusi ominaisuus: jonotuslistat"
 #: src/components/routes/admin/Announcements/index.tsx:391
 msgid "e.g. Scheduled maintenance this Saturday from 2-4am UTC"
 msgstr "esim. Ajoitettu huolto lauantaina klo 2–4 UTC"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:184
+msgid "e.g. Year 5 or Form 2"
+msgstr "esim. 5. luokka tai Form 2"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:280
 msgid "e.g., Get Tickets, Register Now"
@@ -4274,8 +4397,8 @@ msgid "Email & Notification Settings"
 msgstr "Sähköposti- ja ilmoitusasetukset"
 
 #: src/components/layouts/AuthLayout/index.tsx:21
-msgid "Email & scheduled messages"
-msgstr "Sähköposti- ja ajoitetut viestit"
+#~ msgid "Email & scheduled messages"
+#~ msgstr "Sähköposti- ja ajoitetut viestit"
 
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
@@ -4289,7 +4412,7 @@ msgstr "Sähköpostiosoite"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:490
 #: src/components/routes/product-widget/CollectInformation/index.tsx:491
-#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+#: src/components/routes/product-widget/CollectInformation/index.tsx:705
 #: src/components/routes/product-widget/CollectInformation/index.tsx:707
 msgid "Email Address"
 msgstr "Sähköpostiosoite"
@@ -4321,7 +4444,7 @@ msgid "Email confirmation resent"
 msgstr "Sähköpostivarmistus lähetetty uudelleen"
 
 #: src/components/layouts/Event/index.tsx:87
-#: src/components/layouts/OrganizerLayout/index.tsx:123
+#: src/components/layouts/OrganizerLayout/index.tsx:127
 #: src/components/routes/profile/ManageProfile/index.tsx:101
 msgid "Email confirmation resent successfully"
 msgstr "Sähköpostivarmistus lähetettiin uudelleen onnistuneesti"
@@ -4349,7 +4472,7 @@ msgstr "Sähköpostin esikatselu"
 msgid "Email Templates"
 msgstr "Sähköpostipohjat"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:293
+#: src/components/layouts/OrganizerLayout/index.tsx:297
 msgid "Email Verification Required"
 msgstr "Sähköpostivarmistus vaaditaan"
 
@@ -4375,8 +4498,8 @@ msgid "Embed Widget"
 msgstr "Upota widget"
 
 #: src/components/layouts/AuthLayout/index.tsx:22
-msgid "Embeddable widget"
-msgstr "Upotettava widget"
+#~ msgid "Embeddable widget"
+#~ msgstr "Upotettava widget"
 
 #: src/components/routes/admin/Announcements/index.tsx:409
 msgid "Emoji"
@@ -4743,6 +4866,10 @@ msgstr "Tapahtuman tilan päivitys epäonnistui. Yritä myöhemmin uudelleen"
 msgid "Event status updated"
 msgstr "Tapahtuman tila päivitetty"
 
+#: src/components/layouts/AuthLayout/index.tsx:39
+msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+msgstr "Lipunmyynti Repton Al Barshalle, tukenaan <0>Friends of School</0> — Aqualeo Digecomin aloite, toteutettu Hi.Eventsillä."
+
 #: src/components/common/AdminEventsTable/index.tsx:86
 msgid "Event Title"
 msgstr "Tapahtuman otsikko"
@@ -4769,7 +4896,7 @@ msgstr "Tapahtuma päivitetty"
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
-#: src/components/layouts/OrganizerLayout/index.tsx:105
+#: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
 #: src/components/routes/admin/Dashboard/index.tsx:403
@@ -4777,6 +4904,10 @@ msgstr "Tapahtuma päivitetty"
 #: src/components/routes/organizer/Events/index.tsx:43
 msgid "Events"
 msgstr "Tapahtumat"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:27
+msgid "Events listed on this site are organized by Friends of School and affiliated community organizers. Ticket availability, pricing, and event details are set by the organizer and may change without notice. Please review each event's details carefully before registering."
+msgstr "Tällä sivustolla listatut tapahtumat järjestää Friends of School ja siihen liittyvät yhteisöjärjestäjät. Lippujen saatavuuden, hinnoittelun ja tapahtuman tiedot määrittää järjestäjä, ja ne voivat muuttua ilman erillistä ilmoitusta. Tarkista kunkin tapahtuman tiedot huolellisesti ennen ilmoittautumista."
 
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:120
 #: src/components/routes/organizer/Reports/index.tsx:23
@@ -5367,6 +5498,7 @@ msgstr "Ensimmäinen osallistuja"
 msgid "First Invoice Number"
 msgstr "Ensimmäinen laskun numero"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:156
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
 #: src/components/modals/ManageAttendeeModal/index.tsx:202
 #: src/components/modals/ManageOrderModal/index.tsx:229
@@ -5509,6 +5641,11 @@ msgstr "Pe"
 msgid "Friday"
 msgstr "Perjantai"
 
+#: src/components/layouts/AuthLayout/index.tsx:164
+msgid "Friends of Repton Al Barsha logo"
+msgstr "Friends of Repton Al Barshan logo"
+
+#: src/components/layouts/AuthLayout/index.tsx:33
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
 msgid "Friends of School"
 msgstr "Friends of School"
@@ -5534,8 +5671,8 @@ msgid "from {start}, for {count} dates"
 msgstr "alkaen {start}, kestää {count} päivää"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
-msgid "Full data ownership"
-msgstr "Täydellinen datan omistajuus"
+#~ msgid "Full data ownership"
+#~ msgstr "Täydellinen datan omistajuus"
 
 #: src/components/common/PeriodSelector/index.tsx:46
 msgid "Full event"
@@ -5586,11 +5723,11 @@ msgstr "Luo koodi"
 msgid "German"
 msgstr "Saksa"
 
-#: src/components/layouts/EventHomepage/index.tsx:517
+#: src/components/layouts/EventHomepage/index.tsx:519
 msgid "Get Directions"
 msgstr "Näytä reitti"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:82
+#: src/components/layouts/OrganizerLayout/index.tsx:83
 msgid "Get Paid"
 msgstr "Saat maksun"
 
@@ -5910,7 +6047,7 @@ msgid "Homepage Design"
 msgstr "Tapahtumasivun suunnittelu"
 
 #: src/components/layouts/Event/index.tsx:118
-#: src/components/layouts/OrganizerLayout/index.tsx:109
+#: src/components/layouts/OrganizerLayout/index.tsx:110
 msgid "Homepage Designer"
 msgstr "Tapahtumasivun suunnittelija"
 
@@ -5998,6 +6135,14 @@ msgstr "Hyväksyn <0>käyttöehdot</0>"
 msgid "I confirm this is a transactional message related to this event"
 msgstr "Vahvistan, että tämä on tähän tapahtumaan liittyvä transaktionaalinen viesti"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:220
+msgid "I confirm this is entirely my own original work."
+msgstr "Vahvistan, että tämä on kokonaan omaa, alkuperäistä työtäni."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:231
+msgid "I'd like my story/poem to be considered for publication on this website."
+msgstr "Haluaisin, että tarinani/runoni harkitaan julkaistavaksi tällä verkkosivustolla."
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1037
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
 msgstr "Jos uusi välilehti ei avautunut automaattisesti, napsauta alla olevaa painiketta jatkaaksesi kassaan."
@@ -6025,6 +6170,10 @@ msgstr "Jos et pyytänyt tätä muutosta, vaihda salasanasi välittömästi."
 #: src/components/routes/auth/ForgotPassword/index.tsx:44
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "Jos sinulla on tili meillä, saat sähköpostin, jossa on ohjeet salasanan palauttamiseen."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:107
+msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
+msgstr "Jos sinulla on kysyttävää tästä tietosuojakäytännöstä, ota yhteyttä Aqualeo Digecom FZ LLC:hen osoitteessa <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
 msgid "Image"
@@ -6175,11 +6324,11 @@ msgid "Instagram feed"
 msgstr "Instagram-syöte"
 
 #: src/components/layouts/AuthLayout/index.tsx:15
-msgid "Instant Stripe payouts"
-msgstr "Välittömät Stripe-tilitykset"
+#~ msgid "Instant Stripe payouts"
+#~ msgstr "Välittömät Stripe-tilitykset"
 
 #: src/components/layouts/Event/index.tsx:143
-#: src/components/layouts/OrganizerLayout/index.tsx:114
+#: src/components/layouts/OrganizerLayout/index.tsx:118
 msgid "Integrations"
 msgstr "Integraatiot"
 
@@ -6228,7 +6377,7 @@ msgstr "Kutsu tiimin jäsen"
 msgid "Invite Team Member"
 msgstr "Kutsu tiimin jäsen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:191
+#: src/components/layouts/OrganizerLayout/index.tsx:195
 msgid "Invite Team Members"
 msgstr "Kutsu tiimin jäseniä"
 
@@ -6236,7 +6385,7 @@ msgstr "Kutsu tiimin jäseniä"
 msgid "Invite User"
 msgstr "Kutsu käyttäjä"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:188
+#: src/components/layouts/OrganizerLayout/index.tsx:192
 msgid "Invite Your Team"
 msgstr "Kutsu tiimisi"
 
@@ -6323,7 +6472,7 @@ msgstr "John"
 msgid "Johnson"
 msgstr "Johnson"
 
-#: src/components/layouts/EventHomepage/index.tsx:413
+#: src/components/layouts/EventHomepage/index.tsx:415
 msgid "Join from anywhere"
 msgstr "Liity mistä tahansa"
 
@@ -6378,8 +6527,8 @@ msgid "Keep me updated on news and events from {0}"
 msgstr "Pidä minut ajan tasalla uutisista ja tapahtumista kohteessa {0}"
 
 #: src/components/layouts/AuthLayout/index.tsx:43
-msgid "Keep the profit."
-msgstr "Säilytä voitto."
+#~ msgid "Keep the profit."
+#~ msgstr "Säilytä voitto."
 
 #: src/components/common/LanguageSwitcher/index.tsx:50
 msgid "Korean"
@@ -6465,6 +6614,7 @@ msgstr "Viimeiset 90 päivää"
 msgid "Last login"
 msgstr "Viimeisin kirjautuminen"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:167
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
 #: src/components/modals/ManageAttendeeModal/index.tsx:204
 #: src/components/modals/ManageOrderModal/index.tsx:235
@@ -6542,7 +6692,7 @@ msgstr "Jätä tyhjäksi soveltaaksesi tätä sisäänkirjauslistaa kaikkiin tap
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "Jätä päälle kattaaksesi kaikki tapahtuman liput. Poista käytöstä valitaksesi tietyt liput."
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:127
 msgid "Legal"
 msgstr "Oikeudellista"
 
@@ -6554,7 +6704,7 @@ msgstr "Ilmoita heille muutoksesta"
 msgid "Let them know about the changes"
 msgstr "Ilmoita heille muutoksista"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:111
+#: src/components/layouts/OrganizerLayout/index.tsx:115
 msgid "Library"
 msgstr "Kirjasto"
 
@@ -6588,7 +6738,7 @@ msgstr "Luettelo"
 
 #: src/components/common/EventCard/index.tsx:99
 #: src/components/layouts/Event/index.tsx:225
-#: src/components/layouts/OrganizerLayout/index.tsx:219
+#: src/components/layouts/OrganizerLayout/index.tsx:223
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
 msgstr "Live"
@@ -6605,6 +6755,10 @@ msgstr "Live-tapahtumat"
 #: src/components/forms/ProductForm/ProductPreview.tsx:79
 msgid "Live preview"
 msgstr "Live-esikatselu"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:78
+msgid "Load more"
+msgstr "Lataa lisää"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:346
 msgid "Loaded dates"
@@ -6630,6 +6784,7 @@ msgstr "Webhookeja ladataan"
 
 #: src/components/common/OrganizerReportTable/index.tsx:265
 #: src/components/common/ReportTable/index.tsx:225
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:43
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
@@ -6640,7 +6795,7 @@ msgstr "Ladataan..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:495
+#: src/components/layouts/EventHomepage/index.tsx:497
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:470
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -6669,7 +6824,7 @@ msgstr "sijaintipäivitykset"
 msgid "locations"
 msgstr "sijainnit"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:112
+#: src/components/layouts/OrganizerLayout/index.tsx:116
 #: src/components/routes/organizer/Locations/index.tsx:31
 msgid "Locations"
 msgstr "Sijainnit"
@@ -6717,6 +6872,10 @@ msgstr "Etsi lippuni"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:33
+msgid "Love colouring? Shop creative colouring sets at icreate.art"
+msgstr "Pidätkö värittämisestä? Osta luovia värityssarjoja osoitteesta icreate.art"
+
 #: src/components/modals/LocationEditModal/index.tsx:136
 msgid "Main Office"
 msgstr "Pääkonttori"
@@ -6741,7 +6900,7 @@ msgstr "Tee tästä kysymyksestä pakollinen"
 #: src/components/common/OrganizerWebhookTable/index.tsx:96
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:539
 #: src/components/common/PromoCodeTable/index.tsx:175
-#: src/components/layouts/OrganizerLayout/index.tsx:104
+#: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:273
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:84
 msgid "Manage"
@@ -7055,15 +7214,15 @@ msgid "Multiple locations"
 msgstr "Useita sijainteja"
 
 #: src/components/layouts/AuthLayout/index.tsx:28
-msgid "Multiple ticket types"
-msgstr "Useita lipputyyppejä"
+#~ msgid "Multiple ticket types"
+#~ msgstr "Useita lipputyyppejä"
 
 #: src/constants/eventCategories.ts:8
 msgid "Music"
 msgstr "Musiikki"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:41
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:122
 msgid "My Account"
 msgstr "Oma tili"
 
@@ -7102,6 +7261,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:62
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
 msgid "Name"
 msgstr "Nimi"
@@ -7140,6 +7300,10 @@ msgstr "Ei koskaan"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:434
 msgid "New capacity"
 msgstr "Uusi kapasiteetti"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:23
+msgid "New colouring sheets are on their way — check back soon!"
+msgstr "Uusia värityskuvia on tulossa pian — käy pian uudelleen!"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:454
 msgid "New label"
@@ -7532,6 +7696,14 @@ msgstr "Ei hakutuloksia"
 msgid "No search results."
 msgstr "Hakutuloksia ei löytynyt."
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:47
+msgid "No stories have been published yet — check back soon!"
+msgstr "Tarinoita ei ole vielä julkaistu — käy pian uudelleen!"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:54
+msgid "No submissions here yet."
+msgstr "Täällä ei ole vielä lähetyksiä."
+
 #: src/components/common/AddressAutocomplete/index.tsx:99
 #: src/components/common/LocationPicker/index.tsx:338
 msgid "No suggestions"
@@ -7877,7 +8049,7 @@ msgstr "Verkossa ja paikan päällä — katso aikataulu"
 msgid "Online event"
 msgstr "Verkkotapahtuma"
 
-#: src/components/layouts/EventHomepage/index.tsx:411
+#: src/components/layouts/EventHomepage/index.tsx:413
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:139
 msgid "Online Event"
@@ -7980,6 +8152,10 @@ msgstr "Avaa sivupalkki"
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
 msgstr "Vaihtoehto {i}"
+
+#: src/components/routes/product-widget/CollectInformation/index.tsx:706
+msgid "Optional - the order confirmation and tickets already go to the email above"
+msgstr "Valinnainen – tilausvahvistus ja liput lähetetään joka tapauksessa yllä olevaan sähköpostiosoitteeseen"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:263
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
@@ -8240,7 +8416,7 @@ msgid "Organization Name"
 msgstr "Organisaation nimi"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:596
+#: src/components/layouts/EventHomepage/index.tsx:598
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -8259,7 +8435,7 @@ msgid "Organizer archived successfully"
 msgstr "Järjestäjä arkistoitiin onnistuneesti."
 
 #: src/components/layouts/Event/index.tsx:97
-#: src/components/layouts/OrganizerLayout/index.tsx:93
+#: src/components/layouts/OrganizerLayout/index.tsx:94
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Organizer Dashboard"
 msgstr "Järjestäjän kojelauta"
@@ -8290,12 +8466,12 @@ msgid "Organizer Settings"
 msgstr "Järjestäjäasetukset"
 
 #: src/components/common/StatusToggle/index.tsx:63
-#: src/components/layouts/OrganizerLayout/index.tsx:162
+#: src/components/layouts/OrganizerLayout/index.tsx:166
 msgid "Organizer status update failed. Please try again later"
 msgstr "Järjestäjän tilapäivitys epäonnistui. Yritä uudelleen myöhemmin."
 
 #: src/components/common/StatusToggle/index.tsx:55
-#: src/components/layouts/OrganizerLayout/index.tsx:159
+#: src/components/layouts/OrganizerLayout/index.tsx:163
 msgid "Organizer status updated"
 msgstr "Järjestäjän tila päivitettiin."
 
@@ -8324,6 +8500,10 @@ msgstr "Muut listat (lippu ei sisälly)"
 #: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "Uusimmat julkaisumme löytyvät Instagramista – katso ne napauttamalla alta."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:109
+msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Stories page with your first name, last initial and year group."
+msgstr "Tiimimme lukee sen, ja jos se hyväksytään, se julkaistaan Lasten tarinat -sivullamme etunimesi, sukunimesi alkukirjaimen ja vuosiluokkasi kanssa."
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:121
 msgid "Outcome"
@@ -8550,6 +8730,10 @@ msgstr "Maksu onnistui!"
 msgid "Payment Terms"
 msgstr "Maksuehdot"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:36
+msgid "Payments are processed securely through Stripe. By completing a purchase, you authorize us (via our payment processor) to charge the payment method you provide for the applicable ticket price and any associated fees."
+msgstr "Maksut käsitellään turvallisesti Stripen kautta. Suorittamalla oston valtuutat meidät (maksunvälittäjämme kautta) veloittamaan antamaltasi maksutavalta sovellettavan lipun hinnan ja mahdolliset lisämaksut."
+
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:49
 msgid "Payments not available"
 msgstr "Maksut eivät ole saatavilla"
@@ -8561,6 +8745,7 @@ msgid "Payouts"
 msgstr "Tilitykset"
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:85
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:16
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:437
 #: src/components/routes/organizer/Payments/CapabilityList.tsx:60
 msgid "Pending"
@@ -8757,6 +8942,10 @@ msgstr "Tarkista sähköpostisi vahvistaaksesi sähköpostiosoitteesi"
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr "Tarkista lippusi päivitetyn ajan varalta. Lippusi ovat edelleen voimassa — toimenpiteitä ei tarvita, ellei uusi aika sovi sinulle. Vastaa tähän sähköpostiin, jos sinulla on kysyttävää."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:77
+msgid "Please confirm both boxes below before submitting."
+msgstr "Vahvista molemmat alla olevat ruudut ennen lähettämistä."
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1028
 msgid "Please continue in the new tab"
 msgstr "Jatka uudessa välilehdessä"
@@ -8793,6 +8982,10 @@ msgstr "Anna ALV-tunnuksesi"
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:28
 msgid "Please fill in all fields"
 msgstr "Täytä kaikki kentät"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:72
+msgid "Please fill in all fields before submitting."
+msgstr "Täytä kaikki kentät ennen lähettämistä."
 
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
@@ -8832,6 +9025,10 @@ msgstr "Valitse vähintään yksi tuote"
 msgid "Please try again."
 msgstr "Yritä uudelleen."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:37
+msgid "Please upload a plain text (.txt) file, or paste your writing into the box below instead."
+msgstr "Lataa pelkkä tekstitiedosto (.txt), tai liitä tekstisi sen sijaan alla olevaan laatikkoon."
+
 #: src/components/routes/profile/ManageProfile/index.tsx:161
 msgid "Please verify your email address to access all features"
 msgstr "Vahvista sähköpostiosoitteesi käyttääksesi kaikkia ominaisuuksia"
@@ -8856,6 +9053,12 @@ msgstr "Odota, kun valmistamme laskuasi..."
 #: src/components/routes/event/orders.tsx:123
 msgid "Please wait while we prepare your orders for export..."
 msgstr "Odota, kun valmistamme tilauksiasi vientiä varten..."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:150
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+msgid "Poem"
+msgstr "Runo"
 
 #: src/components/common/LanguageSwitcher/index.tsx:42
 msgid "Polish"
@@ -8973,8 +9176,8 @@ msgid "Print to PDF"
 msgstr "Tulosta PDF:ksi"
 
 #: src/components/common/CookieConsentBanner/index.tsx:82
-#: src/components/layouts/EventHomepage/index.tsx:700
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:126
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "Tietosuojaseloste"
 
@@ -9123,8 +9326,8 @@ msgid "promo codes"
 msgstr "kampanjakoodit"
 
 #: src/components/layouts/AuthLayout/index.tsx:19
-msgid "Promo codes"
-msgstr "Kampanjakoodit"
+#~ msgid "Promo codes"
+#~ msgstr "Kampanjakoodit"
 
 #: src/components/layouts/Event/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:52
@@ -9210,13 +9413,21 @@ msgstr "Ostaja"
 msgid "Purchaser email"
 msgstr "Ostajan sähköposti"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:29
+msgid "Puzzles"
+msgstr "Palapelit"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:11
+msgid "Puzzles are coming soon! Check back for fun brain-teasers and activity sheets."
+msgstr "Palapelit tulossa pian! Käy uudelleen hauskojen pulmien ja tehtävälomakkeiden merkeissä."
+
 #: src/components/modals/ShareModal/index.tsx:168
 msgid "QR Code"
 msgstr "QR-koodi"
 
 #: src/components/layouts/AuthLayout/index.tsx:17
-msgid "QR code check-in"
-msgstr "QR-koodilla sisäänkirjautuminen"
+#~ msgid "QR code check-in"
+#~ msgstr "QR-koodilla sisäänkirjautuminen"
 
 #: src/components/modals/OfferWaitlistModal/index.tsx:170
 msgid "Qty"
@@ -9258,6 +9469,10 @@ msgstr "Kysymykset"
 #: src/components/modals/ManageOrderModal/index.tsx:294
 msgid "Questions & Answers"
 msgstr "Kysymykset ja vastaukset"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:89
+msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
+msgstr "Kysymykset näistä ehdoista voi lähettää osoitteeseen <0>fos@aqualeo.co</0>."
 
 #: src/components/common/QuestionsTable/index.tsx:183
 msgid "Questions reordered"
@@ -9305,8 +9520,8 @@ msgid "Ready to go live?"
 msgstr "Valmis julkaistavaksi?"
 
 #: src/components/layouts/AuthLayout/index.tsx:20
-msgid "Real-time analytics"
-msgstr "Reaaliaikainen analytiikka"
+#~ msgid "Real-time analytics"
+#~ msgstr "Reaaliaikainen analytiikka"
 
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:171
 msgid "Reason (optional)"
@@ -9382,7 +9597,7 @@ msgstr "Tallenna hyvitys"
 msgid "Recurring"
 msgstr "Toistuva"
 
-#: src/components/layouts/EventHomepage/index.tsx:375
+#: src/components/layouts/EventHomepage/index.tsx:377
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -9393,8 +9608,8 @@ msgid "Recurring Event Settings"
 msgstr "Toistuvan tapahtuman asetukset"
 
 #: src/components/layouts/AuthLayout/index.tsx:14
-msgid "Recurring events"
-msgstr "Toistuvat tapahtumat"
+#~ msgid "Recurring events"
+#~ msgstr "Toistuvat tapahtumat"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -9425,6 +9640,10 @@ msgstr "Hyvitä kaikki tilaukset tältä päivältä"
 #: src/components/modals/RefundOrderModal/index.tsx:115
 msgid "Refund amount"
 msgstr "Hyvityssumma"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:45
+msgid "Refund and cancellation terms are set by the individual event organizer and will be stated on the event page where applicable. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
+msgstr "Yksittäinen tapahtuman järjestäjä määrittää palautus- ja peruutusehdot, jotka ilmoitetaan tarvittaessa tapahtumasivulla. Jos järjestäjä peruuttaa tapahtuman, pyrimme kohtuullisin keinoin ilmoittamaan asiasta ilmoittautuneille osallistujille."
 
 #: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund failed"
@@ -9491,9 +9710,17 @@ msgstr "Rekisteröidy"
 msgid "Registration Questions"
 msgstr "Rekisteröitymiskysymykset"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:103
+msgid "Reject"
+msgstr "Hylkää"
+
 #: src/components/common/CookieConsentBanner/index.tsx:135
 msgid "Reject all"
 msgstr "Hylkää kaikki"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:18
+msgid "Rejected"
+msgstr "Hylätty"
 
 #: src/components/forms/ProductForm/index.tsx:378
 msgid "Release tiers in order"
@@ -9554,7 +9781,7 @@ msgid "Report not found"
 msgstr "Raporttia ei löydy"
 
 #: src/components/layouts/Event/index.tsx:104
-#: src/components/layouts/OrganizerLayout/index.tsx:99
+#: src/components/layouts/OrganizerLayout/index.tsx:100
 #: src/components/routes/event/Reports/index.tsx:47
 #: src/components/routes/organizer/Reports/index.tsx:51
 msgid "Reports"
@@ -9592,7 +9819,7 @@ msgstr "Lähetä koodi uudelleen"
 msgid "Resend Confirmation"
 msgstr "Lähetä vahvistus uudelleen"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:310
+#: src/components/layouts/OrganizerLayout/index.tsx:314
 msgid "Resend Confirmation Email"
 msgstr "Lähetä vahvistussähköposti uudelleen"
 
@@ -9649,6 +9876,10 @@ msgstr "Nollaa salasana"
 #: src/components/routes/auth/ResetPassword/index.tsx:75
 msgid "Resetting..."
 msgstr "Nollataan..."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:18
+msgid "Resources for Children"
+msgstr "Resursseja lapsille"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:116
 msgid "Response"
@@ -10145,7 +10376,7 @@ msgstr "Toissijainen tekstiväri"
 msgid "Secure Checkout"
 msgstr "Turvallinen kassa"
 
-#: src/components/layouts/EventHomepage/index.tsx:438
+#: src/components/layouts/EventHomepage/index.tsx:440
 msgid "See schedule"
 msgstr "Näytä aikataulu"
 
@@ -10336,8 +10567,8 @@ msgid "Selected"
 msgstr "Valittu"
 
 #: src/components/layouts/AuthLayout/index.tsx:42
-msgid "Sell out your event."
-msgstr "Tee tapahtumastasi loppuunmyyty."
+#~ msgid "Sell out your event."
+#~ msgstr "Tee tapahtumastasi loppuunmyyty."
 
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:77
 msgid "Sellable"
@@ -10531,7 +10762,7 @@ msgstr "Aseta toistuva aikataulu päivämäärien automaattista luontia varten, 
 msgid "Set up check-in lists for different entrances, sessions, or days."
 msgstr "Luo sisäänkirjautumislistoja eri sisäänkäyntejä, istuntoja tai päiviä varten."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:85
+#: src/components/layouts/OrganizerLayout/index.tsx:86
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
 msgstr "Aseta tilitykset"
@@ -10570,7 +10801,7 @@ msgstr "Aseta, muuta tai poista päivämäärän sijainti tai verkkotiedot"
 msgid "Setting updated"
 msgstr "Asetus päivitetty"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:106
+#: src/components/layouts/OrganizerLayout/index.tsx:107
 #: src/components/modals/DuplicateEventModal/index.tsx:51
 msgid "Settings"
 msgstr "Asetukset"
@@ -10584,8 +10815,8 @@ msgid "Setup takes just a few minutes — you don't need an existing Stripe acco
 msgstr "Asetus vie vain muutaman minuutin — et tarvitse olemassa olevaa Stripe-tiliä. Stripe hoitaa kortit, lompakot, alueelliset maksutavat ja petostorjunnan, jotta voit keskittyä tapahtumaasi."
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:349
-#: src/components/layouts/OrganizerLayout/index.tsx:239
+#: src/components/layouts/EventHomepage/index.tsx:351
+#: src/components/layouts/OrganizerLayout/index.tsx:243
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
 #: src/components/modals/ShareModal/index.tsx:186
@@ -10605,10 +10836,18 @@ msgstr "Jaa kumppanilinkki"
 msgid "Share Event"
 msgstr "Jaa tapahtuma"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:236
-#: src/components/layouts/OrganizerLayout/index.tsx:278
+#: src/components/layouts/OrganizerLayout/index.tsx:240
+#: src/components/layouts/OrganizerLayout/index.tsx:282
 msgid "Share Organizer Page"
 msgstr "Jaa järjestäjän sivu"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:129
+msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
+msgstr "Jaa oma lyhyt tarinasi tai runosi Friends of Repton -yhteisön kanssa! Palkitsemme joka kuukausi parhaan tarinan ja parhaan runon. Jos haluat työsi julkaistavaksi, etunimesi, sukunimesi alkukirjain ja vuosiluokkasi näytetään sen vieressä."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:32
+msgid "Share Your Story"
+msgstr "Jaa tarinasi"
 
 #: src/components/routes/event/CapacityAssignments/index.tsx:35
 msgid "Shared Capacity Management"
@@ -10846,11 +11085,13 @@ msgid "Something went wrong. Please try again later."
 msgstr "Jotain meni pieleen. Yritä myöhemmin uudelleen."
 
 #: src/components/layouts/Event/index.tsx:91
-#: src/components/layouts/OrganizerLayout/index.tsx:127
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:97
+#: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
 #: src/components/routes/my-tickets/index.tsx:162
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:35
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
 msgid "Something went wrong. Please try again."
@@ -11019,6 +11260,25 @@ msgstr "Tarvitaan vielä"
 msgid "Stop Impersonating"
 msgstr "Lopeta käyttäjänä toimiminen"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:143
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+msgid "Story"
+msgstr "Tarina"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+msgid "Story published"
+msgstr "Tarina julkaistu"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+msgid "Story rejected"
+msgstr "Tarina hylätty"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:113
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:42
+msgid "Story Submissions"
+msgstr "Tarinalähetykset"
+
 #: src/components/common/OrdersTable/index.tsx:295
 #: src/components/routes/admin/Dashboard/index.tsx:424
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:86
@@ -11087,6 +11347,18 @@ msgstr "Aihe näkyy tässä"
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:267
 msgid "Subject:"
 msgstr "Aihe:"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:119
+msgid "Submit another story or poem"
+msgstr "Lähetä toinen tarina tai runo"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:240
+msgid "Submit for review"
+msgstr "Lähetä tarkistettavaksi"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:64
+msgid "Submitted"
+msgstr "Lähetetty"
 
 #: src/components/common/InlineOrderSummary/index.tsx:148
 #: src/components/common/OrderSummary/index.tsx:53
@@ -11288,7 +11560,7 @@ msgstr "Tukisähköposti"
 msgid "Swedish"
 msgstr "Ruotsi"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:75
+#: src/components/layouts/OrganizerLayout/index.tsx:76
 #: src/components/modals/SwitchOrganizerModal/index.tsx:46
 msgid "Switch Organizer"
 msgstr "Vaihda järjestäjää"
@@ -11389,8 +11661,8 @@ msgid "Taxes and Fees"
 msgstr "Verot ja maksut"
 
 #: src/components/layouts/AuthLayout/index.tsx:24
-msgid "Team collaboration"
-msgstr "Tiimityöskentely"
+#~ msgid "Team collaboration"
+#~ msgstr "Tiimityöskentely"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -11440,8 +11712,8 @@ msgstr "Malli tallennettu onnistuneesti"
 msgid "Term"
 msgstr "Termi"
 
-#: src/components/layouts/EventHomepage/index.tsx:706
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:132
+#: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "Käyttöehdot"
 
@@ -11453,10 +11725,18 @@ msgstr "Teksti voi olla vaikea lukea"
 msgid "Thank you for attending!"
 msgstr "Kiitos osallistumisestasi!"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:107
+msgid "Thank you for sharing your writing!"
+msgstr "Kiitos, että jaoit kirjoituksesi!"
+
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:55
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
 msgid "Thanks,"
 msgstr "Kiitos,"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:42
+msgid "That file is too large. Please keep it under 200KB, or paste your writing below instead."
+msgstr "Tiedosto on liian suuri. Pidä se alle 200 kt:n, tai liitä tekstisi sen sijaan alle."
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:297
 #: src/components/routes/product-widget/SelectProducts/index.tsx:543
@@ -11517,6 +11797,10 @@ msgstr "Sähköpostiosoite on muutettu. Osallistuja saa uuden lipun päivitettyy
 #: src/components/layouts/EventHomepage/EventNotAvailable/index.tsx:12
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "Etsimääsi tapahtumaa ei ole saatavilla tällä hetkellä. Se on voitu poistaa, vanhentua tai URL-osoite voi olla virheellinen."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:63
+msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
+msgstr "Friends of School -nimi, logo ja sivuston sisältö ovat Aqualeo Digecom FZ LLC:n omaisuutta, eikä niitä saa käyttää ilman lupaa. Tapahtumasisältö (kuten kuvaukset ja kuvat) pysyy kyseisen järjestäjän omaisuutena."
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -11694,6 +11978,10 @@ msgstr "Näitä mallipohjia käytetään organisaatiosi kaikkien tapahtumien ole
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "Nämä mallipohjat ohittavat järjestäjän oletusmallipohjat vain tämän tapahtuman osalta. Jos tähän ei määritetä mukautettua mallipohjaa, käytetään järjestäjän mallipohjaa."
 
+#: src/components/routes/legal/TermsOfService/index.tsx:10
+msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
+msgstr "Nämä käyttöehdot (\"Ehdot\") koskevat tämän verkkosivuston ja Friends of School -alustan käyttöä, jota ylläpitää Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"me\" tai \"meidän\"). Käyttämällä tätä sivustoa tai ostamalla lipun hyväksyt nämä Ehdot."
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Third"
 msgstr "Kolmas"
@@ -11788,7 +12076,7 @@ msgstr "Vain tämä päivämäärä"
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
 msgstr "Tämä katkaisee yhteyden {stripeAccountId}-tilin ja tämän järjestäjän välillä. Maksullisten lippujen myynti lakkaa toimimasta, kunnes yhdistät Stripe-tilin uudelleen."
 
-#: src/components/layouts/EventHomepage/index.tsx:399
+#: src/components/layouts/EventHomepage/index.tsx:401
 msgid "This event has ended"
 msgstr "Tämä tapahtuma on päättynyt"
 
@@ -11929,6 +12217,10 @@ msgstr "Tämä ohittaa kaikki näkyvyysasetukset ja piilottaa tuotteen kaikilta 
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "Tässä esikatselussa näet, miltä sähköpostisi näyttää esimerkkitietojen avulla. Todellisissa sähköposteissa käytetään oikeita arvoja."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:10
+msgid "This Privacy Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
+msgstr "Tämä tietosuojakäytäntö selittää, miten Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"me\" tai \"meidän\"), Friends of School -alustan ja tämän verkkosivuston ylläpitäjä, kerää, käyttää ja suojaa henkilötietojasi, kun vierailet tällä sivustolla, ilmoittaudut tapahtumaan tai olet muutoin yhteydessä kanssamme."
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:80
 msgid "This product cannot be deleted because it is associated with an order. You can hide it instead."
 msgstr "Tuotetta ei voi poistaa, koska se liittyy tilaukseen. Voit sen sijaan piilottaa sen."
@@ -11957,6 +12249,10 @@ msgstr "Tämä raportti on tarkoitettu ainoastaan tiedoksi. Keskustele aina vero
 msgid "This reset password link is invalid or expired."
 msgstr "Tämä salasanan palautuslinkki ei kelpaa tai on vanhentunut."
 
+#: src/components/routes/legal/TermsOfService/index.tsx:72
+msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
+msgstr "Tämä sivusto tarjotaan \"sellaisenaan\". Lain sallimissa rajoissa Aqualeo Digecom FZ LLC ei vastaa välillisistä, satunnaisista tai seurannaisvahingoista, jotka johtuvat tämän sivuston käytöstä tai osallistumisesta mihin tahansa listattuun tapahtumaan."
+
 #: src/components/common/AttendeeTicket/index.tsx:148
 msgid "This ticket is no longer valid"
 msgstr "Tämä lippu ei ole enää voimassa"
@@ -11972,6 +12268,14 @@ msgstr "Tämän hintatason määrä on jaettu kaikkien päivämäärien kesken"
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "Tämä käyttäjä ei ole aktiivinen, koska hän ei ole hyväksynyt kutsuaan."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:19
+msgid "This website is operated by Aqualeo Digecom FZ LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
+msgstr "Tätä verkkosivustoa ylläpitää Aqualeo Digecom FZ LLC. Jos sinulla on kysyttävää näistä ehdoista, ota yhteyttä osoitteeseen <0>fos@aqualeo.co</0>."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:20
+msgid "This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
+msgstr "Tätä verkkosivustoa ylläpitää Aqualeo Digecom FZ LLC. Jos sinulla on kysyttävää tästä käytännöstä tai tietojesi käsittelystä, voit ottaa meihin yhteyttä osoitteessa <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:369
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -12074,6 +12378,10 @@ msgstr "Lippua ei löytynyt"
 #: src/components/routes/event/products.tsx:89
 msgid "Ticket or Product"
 msgstr "Lippu tai tuote"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
+msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
+msgstr "Tämän sivuston lippumaksut käsittelee turvallisesti Stripe, PCI-yhteensopiva kolmannen osapuolen maksunvälittäjä. Emme säilytä täydellisiä korttitietojasi palvelimillamme. Lisätietoja siitä, miten Stripe käsittelee maksutietojasi, löydät kohdasta <0>Stripen tietosuojakäytäntö</0>."
 
 #: src/components/routes/event/TicketDesigner/TicketDesignerPrint.tsx:99
 msgid "Ticket Preview for"
@@ -12198,9 +12506,25 @@ msgstr "–"
 msgid "To"
 msgstr "Vastaanottaja"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:54
+msgid "To communicate with you about events you've registered for."
+msgstr "Jotta voimme olla sinuun yhteydessä tapahtumista, joihin olet ilmoittautunut."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
+msgid "To improve and secure our website and services."
+msgstr "Jotta voimme parantaa ja suojata verkkosivustoamme ja palveluitamme."
+
 #: src/components/modals/SendMessageModal/index.tsx:315
 msgid "To increase your limits, contact us at"
 msgstr "Jos haluat nostaa rajojasi, ota meihin yhteyttä osoitteessa"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:53
+msgid "To process event registrations and ticket purchases."
+msgstr "Tapahtumailmoittautumisten ja lippuostojen käsittelyyn."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+msgid "To respond to enquiries submitted through our contact form."
+msgstr "Jotta voimme vastata yhteydenottolomakkeemme kautta lähetettyihin tiedusteluihin."
 
 #: src/components/common/OccurrenceSelect/index.tsx:148
 #: src/components/common/PeriodSelector/index.tsx:30
@@ -12222,7 +12546,7 @@ msgstr "Vaihda vaalean ja tumman teeman välillä"
 msgid "Tomorrow"
 msgstr "Huomenna"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:108
+#: src/components/layouts/OrganizerLayout/index.tsx:109
 msgid "Tools"
 msgstr "Työkalut"
 
@@ -12384,6 +12708,7 @@ msgstr "Kaksi asetusta määrittää, kuinka moni voi varata päivämäärän. P
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:61
 msgid "Type"
 msgstr "Tyyppi"
 
@@ -12642,6 +12967,10 @@ msgstr "Päivittyy sääntöä rakentaessasi. Selaa kuukausia tarkistaaksesi pä
 #: src/components/forms/ProductForm/ProductPreview.tsx:100
 msgid "Updates as you type."
 msgstr "Päivittyy kirjoittaessasi."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:196
+msgid "Upload a .txt file"
+msgstr "Lataa .txt-tiedosto"
 
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:39
 msgid "Upload a cover image for your organizer"
@@ -13003,7 +13332,7 @@ msgstr "Näytä tapahtumat"
 msgid "View logs"
 msgstr "Näytä lokit"
 
-#: src/components/layouts/EventHomepage/index.tsx:558
+#: src/components/layouts/EventHomepage/index.tsx:560
 msgid "View Map"
 msgstr "Näytä kartta"
 
@@ -13011,7 +13340,7 @@ msgstr "Näytä kartta"
 msgid "View Message"
 msgstr "Näytä viesti"
 
-#: src/components/layouts/EventHomepage/index.tsx:467
+#: src/components/layouts/EventHomepage/index.tsx:469
 msgid "View on Google Maps"
 msgstr "Näytä Google Mapsissa"
 
@@ -13032,8 +13361,8 @@ msgstr "Näytä tilauksen tiedot"
 msgid "View order details, issue refunds, and resend confirmations."
 msgstr "Näytä tilausten tiedot, tee hyvityksiä ja lähetä vahvistuksia uudelleen."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:254
-#: src/components/layouts/OrganizerLayout/index.tsx:257
+#: src/components/layouts/OrganizerLayout/index.tsx:258
+#: src/components/layouts/OrganizerLayout/index.tsx:261
 msgid "View Organizer Homepage"
 msgstr "Näytä järjestäjäsivu"
 
@@ -13087,7 +13416,6 @@ msgid "Waiting for scan…"
 msgstr "Odotetaan skannausta…"
 
 #: src/components/forms/ProductForm/index.tsx:456
-#: src/components/layouts/AuthLayout/index.tsx:18
 #: src/components/layouts/Event/index.tsx:134
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
@@ -13115,6 +13443,14 @@ msgstr "Varoitus: Tämä on järjestelmän oletusmääritys. Muutokset vaikuttav
 #: src/components/common/PaymentIcons/index.tsx:62
 msgid "We accept"
 msgstr "Hyväksymme"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
+msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
+msgstr "Keräämme automaattisesti myös rajoitetusti teknisiä tietoja, kuten IP-osoitteesi, selaintyyppisi ja käymäsi sivut, jotta voimme ylläpitää ja parantaa sivustoa. Jos tähän tarkoitukseen käytetään evästeitä, voit hallita asetuksiasi milloin tahansa alatunnisteen evästeasetukset-linkin kautta."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
+msgid "We collect information you provide directly to us, including:"
+msgstr "Keräämme tietoja, jotka annat meille suoraan, mukaan lukien:"
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
@@ -13164,13 +13500,29 @@ msgstr "Tietojen lataaminen ei onnistunut. Yritä uudelleen."
 msgid "We couldn't reach Stripe just now. Please try again in a moment."
 msgstr "Stripeen ei juuri nyt saatu yhteyttä. Yritä hetken kuluttua uudelleen."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:52
+msgid "We couldn't read that file. Please try pasting your writing into the box below instead."
+msgstr "Emme pystyneet lukemaan tiedostoa. Kokeile liittää tekstisi alla olevaan laatikkoon."
+
 #: src/components/common/ProductsTable/SortableCategory/index.tsx:98
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Kategorioiden järjestyksen muuttaminen ei onnistunut. Yritä uudelleen."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:82
+msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
+msgstr "Emme myy henkilötietojasi. Jaamme tietoja vain palveluntarjoajille, jotka auttavat meitä ylläpitämään sivustoa (kuten maksunvälittäjämme ja sähköpostin toimituspalvelumme), tai kun laki sitä edellyttää."
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:418
 msgid "We hit a snag loading this page. Please try again."
 msgstr "Tämän sivun lataamisessa ilmeni ongelma. Yritä uudelleen."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:81
+msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
+msgstr "Voimme päivittää näitä ehtoja ajoittain. Sivuston käytön jatkaminen muutosten julkaisun jälkeen katsotaan päivitettyjen ehtojen hyväksymiseksi."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
+msgstr "Voimme päivittää tätä tietosuojakäytäntöä ajoittain. Tämän sivun yläreunassa oleva \"Viimeksi päivitetty\" -päivämäärä kertoo viimeisimmät muutokset."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:236
 msgid "We partner with Stripe to send payouts straight to your bank account."
@@ -13189,6 +13541,10 @@ msgstr "Suosittelemme mittoja 1 950 × 650 pikseliä, kuvasuhdetta 3:1 ja enint�
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "Suosittelemme mittoja 400 × 400 pikseliä ja enintään 5 Mt:n tiedostokokoa"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:91
+msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
+msgstr "Säilytämme henkilötietoja niin kauan kuin on tarpeen tässä käytännössä kuvattujen tarkoitusten täyttämiseksi, mukaan lukien lakisääteisten, kirjanpidollisten tai raportointivelvoitteiden noudattaminen."
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:158
 msgid "We sent a verification link to {0}"
 msgstr "Lähetimme vahvistuslinkin osoitteeseen {0}"
@@ -13196,6 +13552,10 @@ msgstr "Lähetimme vahvistuslinkin osoitteeseen {0}"
 #: src/components/common/CookieConsentBanner/index.tsx:50
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "Käytämme evästeitä ymmärtääksemme, miten sivustoa käytetään, ja parantaaksemme käyttökokemustasi."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
+msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
+msgstr "Käytämme sivuston toiminnan kannalta välttämättömiä evästeitä sekä suostumuksellasi valinnaisia analytiikka- ja mainosevästeitä, jotka auttavat meitä ymmärtämään sivuston käyttöä. Voit muuttaa evästeasetuksiasi milloin tahansa sivuston alatunnisteen \"Evästeasetukset\"-linkin kautta."
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -13253,8 +13613,8 @@ msgid "Webhook deleted successfully"
 msgstr "Webhook poistettiin onnistuneesti"
 
 #: src/components/layouts/AuthLayout/index.tsx:26
-msgid "Webhook integrations"
-msgstr "Webhook-integraatiot"
+#~ msgid "Webhook integrations"
+#~ msgstr "Webhook-integraatiot"
 
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:137
 #: src/components/modals/WebhookLogsModal/index.tsx:151
@@ -13279,7 +13639,7 @@ msgid "Webhook will send notifications"
 msgstr "Webhook lähettää ilmoituksia"
 
 #: src/components/layouts/Event/index.tsx:145
-#: src/components/layouts/OrganizerLayout/index.tsx:115
+#: src/components/layouts/OrganizerLayout/index.tsx:119
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
 #: src/components/routes/organizer/Webhooks/index.tsx:30
@@ -13557,6 +13917,10 @@ msgstr "X (Twitter)"
 msgid "year"
 msgstr "vuosi"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:63
+msgid "Year group"
+msgstr "Vuosiluokka"
+
 #: src/components/common/OrganizerReportTable/index.tsx:59
 #: src/components/common/PeriodSelector/index.tsx:38
 #: src/components/common/ReportTable/index.tsx:54
@@ -13591,6 +13955,10 @@ msgstr "Kyllä, poista ne"
 #: src/components/common/CapacityHelp/index.tsx:27
 msgid "Yoga class"
 msgstr "Joogatunti"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:54
+msgid "You agree not to misuse this website, including attempting to interfere with its normal operation, submitting false information when registering for an event, or using the contact form to send spam or unlawful content."
+msgstr "Sitoudut olemaan käyttämättä tätä verkkosivustoa väärin, mukaan lukien yrittämästä häiritä sen normaalia toimintaa, antamasta vääriä tietoja ilmoittautuessasi tapahtumaan tai käyttämästä yhteydenottolomaketta roskapostin tai laittoman sisällön lähettämiseen."
 
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:53
 msgid "You are changing your email to <0>{0}</0>."
@@ -13687,6 +14055,10 @@ msgstr "Maksuttomaan tuotteeseen on lisätty veroja ja maksuja. Haluatko poistaa
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "Sinulla on tallentamattomia muutoksia. Haluatko varmasti hylätä ne?"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:99
+msgid "You may request access to, correction of, or deletion of your personal information by contacting us at <0>fos@aqualeo.co</0>."
+msgstr "Voit pyytää pääsyä henkilötietoihisi, niiden korjaamista tai poistamista ottamalla meihin yhteyttä osoitteessa <0>fos@aqualeo.co</0>."
+
 #: src/components/modals/SendMessageModal/index.tsx:204
 msgid "You must acknowledge that this email is not promotional"
 msgstr "Sinun on vahvistettava, että tämä sähköposti ei ole markkinointiviesti"
@@ -13711,7 +14083,7 @@ msgstr "Sinun on luotava lippu ennen kuin voit lisätä osallistujan manuaalises
 msgid "You must have at least one price tier"
 msgstr "Sinulla on oltava vähintään yksi hintaporras"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:299
+#: src/components/layouts/OrganizerLayout/index.tsx:303
 msgid "You must verify your email address before you can update the organizer status."
 msgstr "Sinun on vahvistettava sähköpostiosoitteesi ennen kuin voit päivittää järjestäjän tilaa."
 
@@ -13861,6 +14233,10 @@ msgstr "Nimesi"
 msgid "Your Name"
 msgstr "Nimesi"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:31
+msgid "Your name, email address, and contact details when you register for an event or contact us."
+msgstr "Nimesi, sähköpostiosoitteesi ja yhteystietosi, kun ilmoittaudut tapahtumaan tai otat meihin yhteyttä."
+
 #: src/components/routes/auth/ResetPassword/index.tsx:58
 msgid "Your new password must be at least 8 characters long."
 msgstr "Uuden salasanasi on oltava vähintään 8 merkkiä pitkä."
@@ -13929,6 +14305,10 @@ msgstr "Hyvitystäsi käsitellään."
 #: src/components/layouts/CheckIn/index.tsx:117
 msgid "Your saved date filter is no longer available — showing all dates."
 msgstr "Tallennettu päivämääräsuodattimesi ei ole enää käytettävissä — näytetään kaikki päivämäärät."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/StorySubmissionTab/index.tsx:194
+msgid "Your story or poem"
+msgstr "Tarinasi tai runosi"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:116
 msgid "Your Stripe account itself isn't affected, and no data is lost — you can reconnect at any time."
