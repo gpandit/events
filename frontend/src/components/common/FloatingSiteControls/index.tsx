@@ -105,9 +105,9 @@ export const FloatingSiteControls = () => {
                     variant="filled"
                     size={40}
                     radius="xl"
-                    className={`${classes.scrollTop} ${isScrolled ? classes.scrollTopVisible : ''}`}
+                    className={`${classes.scrollTop} ${(isScrolled && !isOpen) ? classes.scrollTopVisible : ''}`}
                     aria-label={t`Back to top`}
-                    tabIndex={isScrolled ? 0 : -1}
+                    tabIndex={(isScrolled && !isOpen) ? 0 : -1}
                 >
                     <IconArrowUp size={18}/>
                 </ActionIcon>
