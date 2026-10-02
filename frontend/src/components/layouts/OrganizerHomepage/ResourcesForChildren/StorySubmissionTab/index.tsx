@@ -4,6 +4,8 @@ import {IconCheck, IconFileUpload, IconLoader2, IconSend} from '@tabler/icons-re
 import {Organizer} from '../../../../../types.ts';
 import {useSubmitChildStorySubmission} from '../../../../../mutations/useSubmitChildStorySubmission.ts';
 import {showError} from '../../../../../utilites/notifications.tsx';
+import {getConfig} from '../../../../../utilites/config.ts';
+import {TurnstileWidget} from '../../../../common/TurnstileWidget';
 import classes from '../ResourcesForChildren.module.scss';
 
 interface StorySubmissionTabProps {
@@ -24,6 +26,8 @@ export const StorySubmissionTab: React.FC<StorySubmissionTabProps> = ({organizer
     const [consentOwnWork, setConsentOwnWork] = useState(false);
     const [consentPublish, setConsentPublish] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+    const [turnstileKey, setTurnstileKey] = useState(0);
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];
@@ -78,6 +82,11 @@ export const StorySubmissionTab: React.FC<StorySubmissionTabProps> = ({organizer
             return;
         }
 
+        if (getConfig('VITE_TURNSTILE_SITE_KEY') && !turnstileToken) {
+            setError(t`Please complete the security check before submitting.`);
+            return;
+        }
+
         setError(null);
         submitMutation.mutate({
             type,
@@ -88,13 +97,18 @@ export const StorySubmissionTab: React.FC<StorySubmissionTabProps> = ({organizer
             original_filename: originalFilename,
             consent_own_work: consentOwnWork,
             consent_publish: consentPublish,
+            turnstile_token: turnstileToken ?? undefined,
         }, {
             onSuccess: () => {
                 setSubmitted(true);
                 resetForm();
+                setTurnstileToken(null);
+                setTurnstileKey((key) => key + 1);
             },
             onError: (err: any) => {
                 showError(err?.response?.data?.message || t`Something went wrong. Please try again.`);
+                setTurnstileToken(null);
+                setTurnstileKey((key) => key + 1);
             },
         });
     };
@@ -231,6 +245,8 @@ export const StorySubmissionTab: React.FC<StorySubmissionTabProps> = ({organizer
                         {t`I'd like my story/poem to be considered for publication on this website.`}
                     </span>
                 </label>
+
+                <TurnstileWidget key={turnstileKey} onToken={setTurnstileToken}/>
 
                 {error && <p className={classes.formError}>{error}</p>}
 

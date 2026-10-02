@@ -13,6 +13,7 @@ export const useSubmitChildStorySubmission = (organizerId: IdParam) => {
             original_filename?: string;
             consent_own_work: boolean;
             consent_publish: boolean;
+            turnstile_token?: string;
         }) => organizerPublicClient.submitChildStorySubmission(organizerId, submission),
     });
 };

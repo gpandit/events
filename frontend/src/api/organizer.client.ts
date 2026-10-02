@@ -203,6 +203,7 @@ export const organizerPublicClient = {
         original_filename?: string;
         consent_own_work: boolean;
         consent_publish: boolean;
+        turnstile_token?: string;
     }) => {
         const response = await publicApi.post<GenericDataResponse<ChildStorySubmission>>(
             `organizers/${organizerId}/child-story-submissions`,
