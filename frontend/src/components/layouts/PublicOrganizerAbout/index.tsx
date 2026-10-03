@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import {useLoaderData} from "react-router";
 import {t, Trans} from "@lingui/macro";
 import {IconUser} from "@tabler/icons-react";
@@ -17,6 +18,12 @@ export const PublicOrganizerAbout = () => {
         eventsData?: GenericPaginatedResponse<Event>;
         isPastEvents: boolean;
     };
+
+    useEffect(() => {
+        if (window.location.hash === '#get-in-touch') {
+            document.getElementById('get-in-touch')?.scrollIntoView();
+        }
+    }, []);
 
     if (!loaderData?.organizer) {
         return <OrganizerNotFound/>;
@@ -51,10 +58,10 @@ export const PublicOrganizerAbout = () => {
                 </div>
             </section>
 
-            <section className={classes.volunteerSection}>
-                <h2 className={classes.heading}>{t`Join our team - volunteer with us`}</h2>
+            <section id="get-in-touch" className={classes.volunteerSection}>
+                <h2 className={classes.heading}>{t`Get involved - volunteer, sponsor or say hello`}</h2>
                 <p className={classes.volunteerIntro}>
-                    {t`Leave your details below and we'll get in touch about how you can help.`}
+                    {t`Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch.`}
                 </p>
                 <VolunteerForm/>
             </section>
