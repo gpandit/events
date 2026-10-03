@@ -34,7 +34,8 @@ export const CookiePolicy = () => {
                 <li>
                     <Trans>
                         <strong>Analytics</strong> — helps us understand how the site is used, such as which pages
-                        are visited, so we can improve it. Only set with your consent.
+                        are visited, so we can improve it. We use Google Analytics (a service of Google LLC) for this.
+                        Only set with your consent.
                     </Trans>
                 </li>
                 <li>
@@ -45,7 +46,25 @@ export const CookiePolicy = () => {
                 </li>
             </ul>
 
-            <h2><Trans>3. Managing your preferences</Trans></h2>
+            <h2><Trans>3. Google Analytics</Trans></h2>
+            <p>
+                <Trans>
+                    We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With
+                    your consent, Google sets cookies (such as _ga) on your device and collects information such as
+                    the pages you visit, your approximate location, and your device and browser type. Until you
+                    consent to analytics, Google tags run in a restricted mode that does not store analytics cookies,
+                    and if you decline they remain restricted. You can learn how Google uses data at{" "}
+                    <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">
+                        policies.google.com/technologies/partner-sites
+                    </a>{" "}
+                    and opt out through the{" "}
+                    <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">
+                        Google Analytics opt-out browser add-on
+                    </a>.
+                </Trans>
+            </p>
+
+            <h2><Trans>4. Managing your preferences</Trans></h2>
             <p>
                 <Trans>
                     When you first visit this site, you'll be asked to accept or reject optional cookies. You can
@@ -54,7 +73,7 @@ export const CookiePolicy = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>4. Browser controls</Trans></h2>
+            <h2><Trans>5. Browser controls</Trans></h2>
             <p>
                 <Trans>
                     Most browsers also let you block or delete cookies through their own settings. Blocking essential
@@ -62,7 +81,7 @@ export const CookiePolicy = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>5. More information</Trans></h2>
+            <h2><Trans>6. More information</Trans></h2>
             <p>
                 <Trans>
                     For details on how we handle personal information more generally, see our{" "}
@@ -71,7 +90,7 @@ export const CookiePolicy = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>6. Changes to this policy</Trans></h2>
+            <h2><Trans>7. Changes to this policy</Trans></h2>
             <p>
                 <Trans>
                     We may update this Cookie Policy from time to time. The "Last updated" date at the top of this
