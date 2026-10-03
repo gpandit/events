@@ -259,13 +259,17 @@ msgstr "+1 day"
 msgid "+Tax/Fees"
 msgstr "+Tax/Fees"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:41
+#: src/components/routes/legal/CookiePolicy/index.tsx:42
 msgid "<0>Advertising</0> — used to measure and personalise ads. Only set with your consent."
 msgstr "<0>Advertising</0> — used to measure and personalise ads. Only set with your consent."
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:35
-msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
-msgstr "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
+#~ msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
+#~ msgstr "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:35
+msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. We use Google Analytics (a service of Google LLC) for this. Only set with your consent."
+msgstr "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. We use Google Analytics (a service of Google LLC) for this. Only set with your consent."
 
 #: src/components/common/CheckInListList/index.tsx:49
 #: src/components/common/CheckInListTable/index.tsx:284
@@ -406,21 +410,29 @@ msgstr "20"
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 places per date, plus 30 T-shirts across the whole run."
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:49
+msgid "3. Google Analytics"
+msgstr "3. Google Analytics"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:51
 msgid "3. How we use your information"
 msgstr "3. How we use your information"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:48
-msgid "3. Managing your preferences"
-msgstr "3. Managing your preferences"
+#~ msgid "3. Managing your preferences"
+#~ msgstr "3. Managing your preferences"
 
 #: src/components/routes/legal/TermsOfService/index.tsx:34
 msgid "3. Payments"
 msgstr "3. Payments"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:57
-msgid "4. Browser controls"
-msgstr "4. Browser controls"
+#~ msgid "4. Browser controls"
+#~ msgstr "4. Browser controls"
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:67
+msgid "4. Managing your preferences"
+msgstr "4. Managing your preferences"
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:59
 msgid "4. Payment processing"
@@ -434,13 +446,17 @@ msgstr "4. Refunds and cancellations"
 msgid "5. Acceptable use"
 msgstr "5. Acceptable use"
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:76
+msgid "5. Browser controls"
+msgstr "5. Browser controls"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:71
 msgid "5. Cookies"
 msgstr "5. Cookies"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:65
-msgid "5. More information"
-msgstr "5. More information"
+#~ msgid "5. More information"
+#~ msgstr "5. More information"
 
 #: src/components/common/ErrorDisplay/index.tsx:61
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:68
@@ -452,16 +468,24 @@ msgid "503 Service Unavailable."
 msgstr "503 Service Unavailable."
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:74
-msgid "6. Changes to this policy"
-msgstr "6. Changes to this policy"
+#~ msgid "6. Changes to this policy"
+#~ msgstr "6. Changes to this policy"
 
 #: src/components/routes/legal/TermsOfService/index.tsx:61
 msgid "6. Intellectual property"
 msgstr "6. Intellectual property"
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:84
+msgid "6. More information"
+msgstr "6. More information"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:80
 msgid "6. Sharing your information"
 msgstr "6. Sharing your information"
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:93
+msgid "7. Changes to this policy"
+msgstr "7. Changes to this policy"
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:89
 msgid "7. Data retention"
@@ -5557,6 +5581,10 @@ msgstr "Failed to save VAT settings. Please try again."
 msgid "Failed to send message. Please try again."
 msgstr "Failed to send message. Please try again."
 
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:30
+#~ msgid "Failed to send sign-up. Please try again."
+#~ msgstr "Failed to send sign-up. Please try again."
+
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:37
 msgid "Failed to send your message. Please try again."
 msgstr "Failed to send your message. Please try again."
@@ -5879,7 +5907,7 @@ msgstr "for"
 msgid "For a number of dates"
 msgstr "For a number of dates"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:67
+#: src/components/routes/legal/CookiePolicy/index.tsx:86
 msgid "For details on how we handle personal information more generally, see our <0>Privacy Policy</0>. If you have questions about this Cookie Policy, contact us at <1>fos@aqualeo.co</1>."
 msgstr "For details on how we handle personal information more generally, see our <0>Privacy Policy</0>. If you have questions about this Cookie Policy, contact us at <1>fos@aqualeo.co</1>."
 
@@ -6173,8 +6201,12 @@ msgid "Help us improve by telling us why you're leaving"
 msgstr "Help us improve by telling us why you're leaving"
 
 #: src/components/common/CookieConsentBanner/index.tsx:67
-msgid "Helps us understand how the site is used."
-msgstr "Helps us understand how the site is used."
+msgid "Helps us understand how the site is used, using Google Analytics."
+msgstr "Helps us understand how the site is used, using Google Analytics."
+
+#: src/components/common/CookieConsentBanner/index.tsx:67
+#~ msgid "Helps us understand how the site is used."
+#~ msgstr "Helps us understand how the site is used."
 
 #: src/components/routes/my-tickets/index.tsx:255
 msgid "Here are all the tickets associated with your email address."
@@ -6808,6 +6840,10 @@ msgstr "Johnson"
 msgid "Join from anywhere"
 msgstr "Join from anywhere"
 
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:55
+#~ msgid "Join our team - volunteer with us"
+#~ msgstr "Join our team - volunteer with us"
+
 #: src/components/common/JoinWaitlistButton/index.tsx:38
 #: src/components/modals/JoinWaitlistModal/index.tsx:207
 msgid "Join Waitlist"
@@ -7038,6 +7074,10 @@ msgstr "Leave empty to apply this check-in list to all occurrences"
 #: src/components/forms/CheckInListForm/index.tsx:106
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
+
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:57
+#~ msgid "Leave your details below and we'll get in touch about how you can help."
+#~ msgstr "Leave your details below and we'll get in touch about how you can help."
 
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:141
 msgid "Legal"
@@ -7556,7 +7596,7 @@ msgstr "More actions"
 msgid "More choices"
 msgstr "More choices"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:59
+#: src/components/routes/legal/CookiePolicy/index.tsx:78
 msgid "Most browsers also let you block or delete cookies through their own settings. Blocking essential cookies may prevent parts of the site, such as signing in, from working correctly."
 msgstr "Most browsers also let you block or delete cookies through their own settings. Blocking essential cookies may prevent parts of the site, such as signing in, from working correctly."
 
@@ -9920,6 +9960,10 @@ msgstr "Puzzles"
 msgid "Puzzles and quizzes to challenge curious thinkers."
 msgstr "Puzzles and quizzes to challenge curious thinkers."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:11
+#~ msgid "Puzzles are coming soon! Check back for fun brain-teasers and activity sheets."
+#~ msgstr "Puzzles are coming soon! Check back for fun brain-teasers and activity sheets."
+
 #: src/components/modals/ShareModal/index.tsx:168
 msgid "QR Code"
 msgstr "QR Code"
@@ -11390,6 +11434,10 @@ msgstr "Share your own short story or poem with the Friends of Repton community!
 msgid "Share your own stories and poems with everyone."
 msgstr "Share your own stories and poems with everyone."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:32
+#~ msgid "Share Your Story"
+#~ msgstr "Share Your Story"
+
 #: src/components/routes/event/CapacityAssignments/index.tsx:35
 msgid "Shared Capacity Management"
 msgstr "Shared Capacity Management"
@@ -11543,6 +11591,10 @@ msgstr "Sign out"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:125
 msgid "Sign up"
 msgstr "Sign up"
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:84
+#~ msgid "Sign up to volunteer"
+#~ msgstr "Sign up to volunteer"
 
 #: src/components/routes/admin/Dashboard/index.tsx:402
 msgid "Signed Up"
@@ -12280,6 +12332,10 @@ msgstr "Tell us about your organization. This information will be displayed on y
 msgid "Tell us how often your event repeats and we'll create all the dates for you."
 msgstr "Tell us how often your event repeats and we'll create all the dates for you."
 
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:74
+#~ msgid "Tell us how you'd like to help"
+#~ msgstr "Tell us how you'd like to help"
+
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:92
 msgid "Tell us how you'd like to help or what you'd like to know"
 msgstr "Tell us how you'd like to help or what you'd like to know"
@@ -12332,6 +12388,10 @@ msgstr "Thank you for getting in touch! We'll reply soon."
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:121
 msgid "Thank you for sharing your writing!"
 msgstr "Thank you for sharing your writing!"
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:26
+#~ msgid "Thank you for volunteering! We'll be in touch soon."
+#~ msgstr "Thank you for volunteering! We'll be in touch soon."
 
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:55
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
@@ -14185,7 +14245,7 @@ msgstr "We hit a snag loading this page. Please try again."
 msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 msgstr "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:76
+#: src/components/routes/legal/CookiePolicy/index.tsx:95
 msgid "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 
@@ -14229,6 +14289,10 @@ msgstr "We use cookies to help us understand how the site is used and to improve
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:73
 msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
 msgstr "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:51
+msgid "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
+msgstr "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -14541,7 +14605,7 @@ msgstr "When offline payments are enabled, users will be able to complete their 
 msgid "When we finally walked home, my grandmother asked if the lantern had looked like the sea. I told her it had looked even better — it had looked like the sea at night, full of its own small, floating moons."
 msgstr "When we finally walked home, my grandmother asked if the lantern had looked like the sea. I told her it had looked even better — it had looked like the sea at night, full of its own small, floating moons."
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:50
+#: src/components/routes/legal/CookiePolicy/index.tsx:69
 msgid "When you first visit this site, you'll be asked to accept or reject optional cookies. You can change your choice at any time using the \"Cookie settings\" link in the footer of any page. Revoking a category reloads the page so the change takes effect immediately."
 msgstr "When you first visit this site, you'll be asked to accept or reject optional cookies. You can change your choice at any time using the \"Cookie settings\" link in the footer of any page. Revoking a category reloads the page so the change takes effect immediately."
 

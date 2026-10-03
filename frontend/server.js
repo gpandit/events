@@ -175,11 +175,13 @@ Sitemap: ${frontendUrl}/sitemap.txt
             if (process.env.VITE_COOKIE_CONSENT_ENABLED !== 'false') {
                 headSnippets.push(`<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{${googleConsentDefaults(req.cookies?.hi_cookie_consent)}});</script>`);
             }
-            if (process.env.VITE_GOOGLE_ADS_CONVERSION_ID) {
-                const conversionId = encodeURIComponent(process.env.VITE_GOOGLE_ADS_CONVERSION_ID);
+            const googleTagIds = [process.env.VITE_GOOGLE_TAG_ID, process.env.VITE_GOOGLE_ADS_CONVERSION_ID].filter(Boolean);
+            if (googleTagIds.length > 0) {
+                const [primaryTagId] = googleTagIds;
+                const configCalls = googleTagIds.map((id) => `gtag('config','${encodeURIComponent(id)}');`).join('');
                 headSnippets.push(`
-                <script async src="https://www.googletagmanager.com/gtag/js?id=${conversionId}"></script>
-                <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${conversionId}');</script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(primaryTagId)}"></script>
+                <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());${configCalls}</script>
             `);
             }
             if (process.env.VITE_FATHOM_SITE_ID) {

@@ -64,7 +64,7 @@ export const CookieConsentBanner = () => {
     };
 
     const optionalCategories: { key: ConsentCategory; label: string; description: string }[] = [
-        {key: 'analytics', label: t`Analytics`, description: t`Helps us understand how the site is used.`},
+        {key: 'analytics', label: t`Analytics`, description: t`Helps us understand how the site is used, using Google Analytics.`},
         {key: 'advertising', label: t`Advertising`, description: t`Used to measure and personalise ads.`},
     ];
 
