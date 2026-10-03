@@ -209,45 +209,19 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
 }
 
-.carouselWrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.carouselNav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
-    background: var(--organizer-content-bg-color, #ffffff);
-    color: var(--organizer-primary-text-color, #1a1a1a);
-    cursor: pointer;
-    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-
-    &:hover {
-        background: var(--organizer-primary-color, #8b5cf6);
-        border-color: var(--organizer-primary-color, #8b5cf6);
-        color: var(--organizer-accent-contrast, #ffffff);
-    }
-
-    @include mixins.respond-below(sm) {
-        display: none;
-    }
-}
-
-.carousel {
-    display: flex;
+.colouringGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 4px 4px 12px;
-    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+
+    @include mixins.respond-above(md) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @include mixins.respond-above(lg) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }
 
 .colouringCard {
@@ -257,19 +231,26 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     background: var(--organizer-content-bg-color, #ffffff);
     border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
     border-radius: 16px;
-    padding: 16px;
-    flex: 0 0 200px;
-    scroll-snap-align: start;
+    padding: 14px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.18);
     }
+}
 
-    @include mixins.respond-below(sm) {
-        flex-basis: 68%;
-    }
+.shopBanner {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    background: var(--organizer-content-bg-color, #ffffff);
+    border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 16px;
+    text-align: center;
 }
 
 .colouringTile {
@@ -389,4 +370,44 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     &:hover {
         text-decoration: underline;
     }
+}
+
+.savePrompt,
+.saveForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+    margin-top: 8px;
+}
+
+.saveActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.saveInput {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.18));
+    border-radius: 10px;
+    background: var(--organizer-content-bg-color, #ffffff);
+    color: var(--organizer-primary-text-color, #1a1a1a);
+    font: inherit;
+
+    &:focus {
+        outline: 2px solid var(--organizer-primary-color, #8b5cf6);
+        outline-offset: 1px;
+    }
+}
+
+.saveError {
+    margin: 0;
+    color: #e03131;
+    font-size: 0.9rem;
 }

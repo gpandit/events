@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router";
 import {Burger, Menu} from "@mantine/core";
 import {t} from "@lingui/macro";
 import {IconChevronDown} from "@tabler/icons-react";
 import {Organizer} from "../../../../types.ts";
+import {Wordmark} from "../../../common/Wordmark";
 import {
     organizerEventsPath,
     organizerHomepagePath,
@@ -18,6 +19,16 @@ interface OrganizerNavProps {
 
 export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const overHero = active === 'home';
+    const transparent = overHero && !scrolled && !menuOpen;
+
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 24);
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, {passive: true});
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     const organizerLogo = organizer.images?.find(img => img.type === 'ORGANIZER_LOGO');
     const homePath = organizerHomepagePath(organizer);
 
@@ -31,7 +42,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
     const closeMenu = () => setMenuOpen(false);
 
     return (
-        <nav className={classes.nav}>
+        <nav className={`${classes.nav} ${overHero ? classes.navOverlay : ''} ${transparent ? classes.navTransparent : ''}`}>
             <div className={classes.navInner}>
                 <Link to={homePath} className={classes.brand} onClick={closeMenu}>
                     {organizerLogo ? (
@@ -39,6 +50,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                     ) : (
                         <span className={classes.brandName}>{organizer.name}</span>
                     )}
+                    {organizerLogo && <Wordmark name={organizer.name} className={classes.brandWordmark}/>}
                 </Link>
 
                 <div className={classes.desktopLinks}>
@@ -54,7 +66,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                                 to={organizerResourcesPath(organizer)}
                                 className={linkClass(active === 'resources' || active === 'stories')}
                             >
-                                {t`Resources for Children`}
+                                {t`Creative Corner`}
                                 <IconChevronDown size={14} className={classes.chevron}/>
                             </Link>
                         </Menu.Target>
@@ -79,6 +91,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                     onClick={() => setMenuOpen(open => !open)}
                     className={classes.burger}
                     size="sm"
+                    color={transparent ? '#ffffff' : undefined}
                     aria-label={menuOpen ? t`Close menu` : t`Open menu`}
                     data-testid="organizer-nav-burger"
                 />
@@ -101,7 +114,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                         className={linkClass(active === 'resources')}
                         onClick={closeMenu}
                     >
-                        {t`Resources for Children`}
+                        {t`Creative Corner`}
                     </Link>
                     <div className={classes.subMenu}>
                         {resourceLinks.map(item => (

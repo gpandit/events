@@ -125,7 +125,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                             to={organizerResourcesPath(organizer)}
                             className={classes.footerNavLink}
                         >
-                            {t`Children's Resources`}
+                            {t`Creative Corner`}
                         </Link>
                         <Link to="/auth/login" className={classes.footerNavLink}>
                             {t`My Account`}

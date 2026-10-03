@@ -17,7 +17,7 @@ products are easy to audit side by side.
    so the site always reads as one product even when organizers pick wildly
    different accent colours.
 2. **Organizer theme** — the homepage content area (hero, event cards,
-   Resources for Children, children's stories) is themed per organizer via
+   Creative Corner, children's stories) is themed per organizer via
    CSS custom properties computed in `src/utilites/themeUtils.ts` and applied
    in `src/hooks/useOrganizerThemeStyles.ts`. An organizer picks one `accent`
    colour; everything else (surface, text, border) is derived from the

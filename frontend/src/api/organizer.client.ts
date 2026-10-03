@@ -212,6 +212,21 @@ export const organizerPublicClient = {
         return response.data;
     },
 
+    submitQuizResult: async (organizerId: IdParam, result: {
+        first_name: string;
+        last_name: string;
+        email: string;
+        age_band: string;
+        score: number;
+        total_questions: number;
+    }) => {
+        const response = await publicApi.post<GenericDataResponse<{ message: string }>>(
+            `organizers/${organizerId}/quiz-results`,
+            result
+        );
+        return response.data;
+    },
+
     getPublishedChildStorySubmissions: async (organizerId: IdParam, pagination: QueryFilters) => {
         const response = await publicApi.get<GenericPaginatedResponse<PublishedChildStorySubmission>>(
             `organizers/${organizerId}/child-story-submissions` + queryParamsHelper.buildQueryString(pagination)

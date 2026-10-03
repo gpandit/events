@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Link} from "react-router";
 import {t} from "@lingui/macro";
-import {IconArrowRight} from '@tabler/icons-react';
+import {IconArrowRight, IconChevronDown} from '@tabler/icons-react';
 import {HomepageThemeSettings, Organizer} from "../../../../types.ts";
 import {UserGeneratedContent} from "../../../common/UserGeneratedContent";
 import classes from './OrganizerHero.module.scss';
@@ -13,6 +13,15 @@ interface OrganizerHeroProps {
 }
 
 export const OrganizerHero: React.FC<OrganizerHeroProps> = ({organizer, themeSettings, ctaHref}) => {
+    const heroRef = useRef<HTMLDivElement>(null);
+
+    const scrollDown = () => {
+        const hero = heroRef.current;
+        if (hero) {
+            window.scrollTo({top: hero.offsetTop + hero.offsetHeight, behavior: 'smooth'});
+        }
+    };
+
     const organizerCover = organizer.images?.find(img => img.type === 'ORGANIZER_COVER');
 
     const isVideo = themeSettings.hero_media_type === 'VIDEO' && !!themeSettings.hero_video_url;
@@ -26,7 +35,7 @@ export const OrganizerHero: React.FC<OrganizerHeroProps> = ({organizer, themeSet
     const ctaUrl = themeSettings.hero_cta_url || ctaHref;
 
     return (
-        <div className={classes.hero}>
+        <div className={classes.hero} ref={heroRef}>
             <div className={classes.media}>
                 {isVideo ? (
                     <video
@@ -73,6 +82,11 @@ export const OrganizerHero: React.FC<OrganizerHeroProps> = ({organizer, themeSet
                     </Link>
                 )}
             </div>
+
+            <button type="button" className={classes.scrollCue} onClick={scrollDown} data-testid="hero-scroll-down">
+                <span>{t`Scroll down`}</span>
+                <IconChevronDown size={28} className={classes.scrollCueArrow}/>
+            </button>
         </div>
     );
 };

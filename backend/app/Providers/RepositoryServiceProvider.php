@@ -64,6 +64,7 @@ use HiEvents\Repository\Eloquent\UserRepository;
 use HiEvents\Repository\Eloquent\WaitlistEntryRepository;
 use HiEvents\Repository\Eloquent\WebhookLogRepository;
 use HiEvents\Repository\Eloquent\WebhookRepository;
+use HiEvents\Repository\Eloquent\QuizResultRepository;
 use HiEvents\Repository\Interfaces\AccountAttributionRepositoryInterface;
 use HiEvents\Repository\Interfaces\AccountConfigurationRepositoryInterface;
 use HiEvents\Repository\Interfaces\AccountDeletionRequestRepositoryInterface;
@@ -124,6 +125,7 @@ use HiEvents\Repository\Interfaces\UserRepositoryInterface;
 use HiEvents\Repository\Interfaces\WaitlistEntryRepositoryInterface;
 use HiEvents\Repository\Interfaces\WebhookLogRepositoryInterface;
 use HiEvents\Repository\Interfaces\WebhookRepositoryInterface;
+use HiEvents\Repository\Interfaces\QuizResultRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -162,6 +164,7 @@ class RepositoryServiceProvider extends ServiceProvider
         StripeCustomerRepositoryInterface::class => StripeCustomerRepository::class,
         CheckInListRepositoryInterface::class => CheckInListRepository::class,
         ChildStorySubmissionRepositoryInterface::class => ChildStorySubmissionRepository::class,
+        QuizResultRepositoryInterface::class => QuizResultRepository::class,
         AttendeeCheckInRepositoryInterface::class => AttendeeCheckInRepository::class,
         ProductCategoryRepositoryInterface::class => ProductCategoryRepository::class,
         InvoiceRepositoryInterface::class => InvoiceRepository::class,

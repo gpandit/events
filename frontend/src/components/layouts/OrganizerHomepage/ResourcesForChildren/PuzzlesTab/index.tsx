@@ -1,17 +1,26 @@
 import {useCallback, useEffect, useState} from 'react';
 import {t} from '@lingui/macro';
 import {IconClock, IconPuzzle, IconRefresh, IconTrophy} from '@tabler/icons-react';
+import {Organizer} from '../../../../../types.ts';
 import {AGE_BANDS, AgeBand, Puzzle, PUZZLES_BY_AGE_BAND, PuzzleSubject} from './generalKnowledgePuzzles.ts';
-import {getQuizPercentage, getQuizRank, QuizRank, shuffle} from './quizScoring.ts';
+import {getQuizPercentage, getQuizRank, QuizRank, rememberTest, selectQuizQuestions, shuffle} from './quizScoring.ts';
+import {SaveScorePrompt} from './SaveScorePrompt.tsx';
 import classes from '../ResourcesForChildren.module.scss';
 
 const SECONDS_PER_QUESTION = 30;
 const QUESTIONS_PER_TEST = 20;
 const BEST_SCORE_STORAGE_KEY = 'fos_general_knowledge_quiz_best';
+const RECENT_TESTS_STORAGE_KEY = 'fos_general_knowledge_quiz_recent';
 
 type QuizStage = 'intro' | 'playing' | 'result';
 
 type BestScores = Partial<Record<AgeBand, number>>;
+
+type RecentTests = Partial<Record<AgeBand, string[][]>>;
+
+interface PuzzlesTabProps {
+    organizer: Organizer;
+}
 
 const readBestScores = (): BestScores => {
     try {
@@ -25,6 +34,23 @@ const readBestScores = (): BestScores => {
 const writeBestScores = (scores: BestScores) => {
     try {
         window.localStorage.setItem(BEST_SCORE_STORAGE_KEY, JSON.stringify(scores));
+    } catch {
+        return;
+    }
+};
+
+const readRecentTests = (): RecentTests => {
+    try {
+        const stored = window.localStorage.getItem(RECENT_TESTS_STORAGE_KEY);
+        return stored ? JSON.parse(stored) as RecentTests : {};
+    } catch {
+        return {};
+    }
+};
+
+const writeRecentTests = (recent: RecentTests) => {
+    try {
+        window.localStorage.setItem(RECENT_TESTS_STORAGE_KEY, JSON.stringify(recent));
     } catch {
         return;
     }
@@ -74,7 +100,7 @@ const rankContent = (rank: QuizRank) => {
     }
 };
 
-export const PuzzlesTab = () => {
+export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
     const [stage, setStage] = useState<QuizStage>('intro');
     const [ageBand, setAgeBand] = useState<AgeBand | null>(null);
     const [puzzles, setPuzzles] = useState<Puzzle[]>([]);
@@ -83,6 +109,7 @@ export const PuzzlesTab = () => {
     const [score, setScore] = useState(0);
     const [timeLeft, setTimeLeft] = useState(SECONDS_PER_QUESTION);
     const [bestScores, setBestScores] = useState<BestScores>({});
+    const [attempt, setAttempt] = useState(0);
 
     const total = puzzles.length;
 
@@ -133,12 +160,15 @@ export const PuzzlesTab = () => {
     }, [stage, timeLeft, answer]);
 
     const start = (band: AgeBand) => {
-        const selected = shuffle(PUZZLES_BY_AGE_BAND[band]).slice(0, QUESTIONS_PER_TEST);
+        const recent = readRecentTests();
+        const selected = selectQuizQuestions(PUZZLES_BY_AGE_BAND[band], recent[band] ?? [], QUESTIONS_PER_TEST);
+        writeRecentTests({...recent, [band]: rememberTest(recent[band] ?? [], selected.map((puzzle) => puzzle.id))});
         setAgeBand(band);
         setPuzzles(selected);
         setQuestionOptions(selected.map((puzzle) => shuffle(puzzle.options)));
         setCurrent(0);
         setScore(0);
+        setAttempt((previous) => previous + 1);
         setTimeLeft(SECONDS_PER_QUESTION);
         setStage('playing');
     };
@@ -201,6 +231,15 @@ export const PuzzlesTab = () => {
                     {bestPercentage !== null && (
                         <p className={classes.puzzleText}>{t`Your best score: ${bestPercentage}%`}</p>
                     )}
+                    {ageBand && (
+                        <SaveScorePrompt
+                            key={attempt}
+                            organizerId={organizer.id}
+                            ageBand={ageBand}
+                            score={score}
+                            total={total}
+                        />
+                    )}
                     <button type="button" className={classes.primaryButton} onClick={() => ageBand && start(ageBand)}>
                         <IconRefresh size={16}/> {t`Take the test again`}
                     </button>
@@ -237,6 +276,7 @@ export const PuzzlesTab = () => {
                             type="button"
                             className={classes.puzzleOption}
                             onClick={() => answer(option)}
+                            data-testid="puzzles-option"
                         >
                             {option}
                         </button>

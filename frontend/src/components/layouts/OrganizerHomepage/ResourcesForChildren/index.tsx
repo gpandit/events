@@ -25,7 +25,7 @@ export const ResourcesForChildren: React.FC<ResourcesForChildrenProps> = ({organ
 
     return (
         <section className={classes.section}>
-            <h2 className={classes.heading}>{t`Resources for Children`}</h2>
+            <h2 className={classes.heading}>{t`Creative Corner`}</h2>
             <p className={classes.subheading}>
                 {t`Colouring sheets and puzzles for children.`}
             </p>
@@ -48,7 +48,7 @@ export const ResourcesForChildren: React.FC<ResourcesForChildrenProps> = ({organ
                     <ColouringPagesTab/>
                 </Tabs.Panel>
                 <Tabs.Panel value="puzzles">
-                    <PuzzlesTab/>
+                    <PuzzlesTab organizer={organizer}/>
                 </Tabs.Panel>
             </Tabs>
         </section>
