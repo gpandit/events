@@ -83,9 +83,6 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                         {t`About Us`}
                     </Link>
                     <Link to={organizerAccountPath(organizer)} className={linkClass(active === 'account')}>
-                        {t`Parent Account`}
-                    </Link>
-                    <Link to="/auth/login" className={classes.link}>
                         {t`My Account`}
                     </Link>
                 </div>
@@ -140,9 +137,6 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                         className={linkClass(active === 'account')}
                         onClick={closeMenu}
                     >
-                        {t`Parent Account`}
-                    </Link>
-                    <Link to="/auth/login" className={classes.link} onClick={closeMenu}>
                         {t`My Account`}
                     </Link>
                 </div>

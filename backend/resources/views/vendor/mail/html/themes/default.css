@@ -148,6 +148,7 @@ img {
 /* Header */
 
 .header {
+    background-color: #ffffff;
     padding: 32px 0 28px;
     text-align: center;
 }
@@ -163,6 +164,7 @@ img {
 /* Logo */
 
 .logo {
+    background-color: #ffffff;
     max-width: 220px;
     width: 150px;
 }
