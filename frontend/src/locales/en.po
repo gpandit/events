@@ -1320,8 +1320,8 @@ msgid "An optional message to display on the highlighted product, e.g. \"Selling
 msgstr "An optional message to display on the highlighted product, e.g. \"Selling fast 🔥\" or \"Best value\""
 
 #: src/components/forms/StripeCheckoutForm/index.tsx:71
-msgid "An unexpected error occurred."
-msgstr "An unexpected error occurred."
+#~ msgid "An unexpected error occurred."
+#~ msgstr "An unexpected error occurred."
 
 #: src/hooks/useFormErrorResponseHandler.tsx:48
 msgid "An unexpected error occurred. Please try again."
@@ -1981,7 +1981,7 @@ msgstr "Back"
 msgid "Back to Accounts"
 msgstr "Back to Accounts"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:144
+#: src/components/forms/StripeCheckoutForm/index.tsx:145
 #: src/components/routes/product-widget/CollectInformation/index.tsx:348
 #: src/components/routes/product-widget/CollectInformation/index.tsx:378
 #: src/components/routes/product-widget/CollectInformation/index.tsx:407
@@ -2734,6 +2734,10 @@ msgstr "City"
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:194
 msgid "Class / Year group"
 msgstr "Class / Year group"
+
+#: src/components/forms/StripeCheckoutForm/index.tsx:169
+msgid "Class rules: we accept Visa and Mastercard, plus Apple Pay and Google Pay. American Express didn't make the guest list, so please leave it in your wallet."
+msgstr "Class rules: we accept Visa and Mastercard, plus Apple Pay and Google Pay. American Express didn't make the guest list, so please leave it in your wallet."
 
 #: src/components/common/CapacityHelp/index.tsx:60
 msgid "Class with a T-shirt add-on"
@@ -8955,7 +8959,7 @@ msgstr "Padding"
 msgid "Page"
 msgstr "Page"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:142
+#: src/components/forms/StripeCheckoutForm/index.tsx:143
 msgid "Page no longer available"
 msgstr "Page no longer available"
 
@@ -9139,7 +9143,7 @@ msgstr "Payment Methods"
 msgid "Payment provider"
 msgstr "Payment provider"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:130
+#: src/components/forms/StripeCheckoutForm/index.tsx:131
 msgid "Payment received"
 msgstr "Payment received"
 
@@ -9152,7 +9156,7 @@ msgstr "Payment Received"
 msgid "Payment Status"
 msgstr "Payment Status"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:96
+#: src/components/forms/StripeCheckoutForm/index.tsx:97
 msgid "Payment succeeded!"
 msgstr "Payment succeeded!"
 
@@ -11663,7 +11667,7 @@ msgstr "Something went wrong, please try again, or contact support if the proble
 msgid "Something went wrong! Please try again"
 msgstr "Something went wrong! Please try again"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:105
+#: src/components/forms/StripeCheckoutForm/index.tsx:106
 msgid "Something went wrong."
 msgstr "Something went wrong."
 
@@ -12346,6 +12350,10 @@ msgstr "Thanks,"
 msgid "That file is too large. Please keep it under 200KB, or paste your writing below instead."
 msgstr "That file is too large. Please keep it under 200KB, or paste your writing below instead."
 
+#: src/components/forms/StripeCheckoutForm/index.tsx:72
+msgid "That payment got sent to detention. If you used American Express, we can't accept it here. Please try Visa or Mastercard instead."
+msgstr "That payment got sent to detention. If you used American Express, we can't accept it here. Please try Visa or Mastercard instead."
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:297
 #: src/components/routes/product-widget/SelectProducts/index.tsx:543
 msgid "That promo code is invalid"
@@ -12809,7 +12817,7 @@ msgstr "This name is visible to end users"
 msgid "This occurrence is at capacity"
 msgstr "This occurrence is at capacity"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:131
+#: src/components/forms/StripeCheckoutForm/index.tsx:132
 msgid "This order has already been paid."
 msgstr "This order has already been paid."
 
@@ -12833,7 +12841,7 @@ msgstr "This order is being processed."
 msgid "This order is complete."
 msgstr "This order is complete."
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:143
+#: src/components/forms/StripeCheckoutForm/index.tsx:144
 msgid "This order page is no longer available."
 msgstr "This order page is no longer available."
 
@@ -14012,7 +14020,7 @@ msgstr "View on Google Maps"
 msgid "View Order"
 msgstr "View Order"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:132
+#: src/components/forms/StripeCheckoutForm/index.tsx:133
 #: src/components/routes/product-widget/CollectInformation/index.tsx:368
 msgid "View Order Details"
 msgstr "View Order Details"
@@ -15042,7 +15050,7 @@ msgstr "Your password needs at least {MIN_PASSWORD_LENGTH} characters"
 msgid "Your password needs at least 6 characters"
 msgstr "Your password needs at least 6 characters"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:99
+#: src/components/forms/StripeCheckoutForm/index.tsx:100
 msgid "Your payment is processing."
 msgstr "Your payment is processing."
 
@@ -15050,11 +15058,11 @@ msgstr "Your payment is processing."
 msgid "Your payment is protected with bank-level encryption"
 msgstr "Your payment is protected with bank-level encryption"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:102
+#: src/components/forms/StripeCheckoutForm/index.tsx:103
 msgid "Your payment was not successful, please try again."
 msgstr "Your payment was not successful, please try again."
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:163
+#: src/components/forms/StripeCheckoutForm/index.tsx:164
 msgid "Your payment was unsuccessful. Please try again."
 msgstr "Your payment was unsuccessful. Please try again."
 

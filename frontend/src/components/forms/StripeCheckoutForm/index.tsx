@@ -3,6 +3,7 @@ import {PaymentElement, useElements, useStripe} from "@stripe/react-stripe-js";
 import {useNavigate, useParams} from "react-router";
 import * as stripeJs from "@stripe/stripe-js";
 import {Alert, Skeleton} from "@mantine/core";
+import {IconCreditCard} from "@tabler/icons-react";
 import {t} from "@lingui/macro";
 import classes from './StripeCheckoutForm.module.scss';
 import {LoadingMask} from "../../common/LoadingMask";
@@ -68,7 +69,7 @@ export default function StripeCheckoutForm({setSubmitHandler}: {
             if (error.type === "card_error" || error.type === "validation_error") {
                 setMessage(error.message);
             } else {
-                setMessage(t`An unexpected error occurred.`);
+                setMessage(t`That payment got sent to detention. If you used American Express, we can't accept it here. Please try Visa or Mastercard instead.`);
             }
             return;
         }
@@ -164,6 +165,9 @@ export default function StripeCheckoutForm({setSubmitHandler}: {
                 )}
 
                 {message !== '' && <Alert mb={20}>{message}</Alert>}
+                <Alert mb={20} color={'gray'} icon={<IconCreditCard size={18}/>}>
+                    {t`Class rules: we accept Visa and Mastercard, plus Apple Pay and Google Pay. American Express didn't make the guest list, so please leave it in your wallet.`}
+                </Alert>
                 <LoadingMask/>
                 <PaymentElement
                     className={classes.stripeForElement}

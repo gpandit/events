@@ -1316,8 +1316,8 @@ msgid "An optional message to display on the highlighted product, e.g. \"Selling
 msgstr "رسالة اختيارية تُعرض على المنتج المميز، مثل \"ينفد بسرعة 🔥\" أو \"الأفضل قيمة\""
 
 #: src/components/forms/StripeCheckoutForm/index.tsx:71
-msgid "An unexpected error occurred."
-msgstr "حدث خطأ غير متوقع."
+#~ msgid "An unexpected error occurred."
+#~ msgstr "حدث خطأ غير متوقع."
 
 #: src/hooks/useFormErrorResponseHandler.tsx:48
 msgid "An unexpected error occurred. Please try again."
@@ -1977,7 +1977,7 @@ msgstr "رجوع"
 msgid "Back to Accounts"
 msgstr "العودة إلى الحسابات"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:144
+#: src/components/forms/StripeCheckoutForm/index.tsx:145
 #: src/components/routes/product-widget/CollectInformation/index.tsx:348
 #: src/components/routes/product-widget/CollectInformation/index.tsx:378
 #: src/components/routes/product-widget/CollectInformation/index.tsx:407
@@ -2730,6 +2730,10 @@ msgstr "المدينة"
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:194
 msgid "Class / Year group"
 msgstr "الصف / مجموعة السنة"
+
+#: src/components/forms/StripeCheckoutForm/index.tsx:169
+msgid "Class rules: we accept Visa and Mastercard, plus Apple Pay and Google Pay. American Express didn't make the guest list, so please leave it in your wallet."
+msgstr "قواعد الصف: نقبل بطاقات فيزا وماستركارد، إضافةً إلى Apple Pay وGoogle Pay. بطاقة أمريكان إكسبريس لم تدخل قائمة المدعوين، فيرجى إبقاؤها في محفظتك."
 
 #: src/components/common/CapacityHelp/index.tsx:60
 msgid "Class with a T-shirt add-on"
@@ -8947,7 +8951,7 @@ msgstr "الحشو"
 msgid "Page"
 msgstr "الصفحة"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:142
+#: src/components/forms/StripeCheckoutForm/index.tsx:143
 msgid "Page no longer available"
 msgstr "الصفحة لم تعد متاحة"
 
@@ -9131,7 +9135,7 @@ msgstr "طرق الدفع"
 msgid "Payment provider"
 msgstr "مزود الدفع"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:130
+#: src/components/forms/StripeCheckoutForm/index.tsx:131
 msgid "Payment received"
 msgstr "تم استلام الدفع"
 
@@ -9144,7 +9148,7 @@ msgstr "تم استلام الدفع"
 msgid "Payment Status"
 msgstr "حالة الدفع"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:96
+#: src/components/forms/StripeCheckoutForm/index.tsx:97
 msgid "Payment succeeded!"
 msgstr "نجح الدفع!"
 
@@ -11655,7 +11659,7 @@ msgstr "حدث خطأ ما، يرجى المحاولة مرة أخرى، أو ا
 msgid "Something went wrong! Please try again"
 msgstr "حدث خطأ ما! يرجى المحاولة مرة أخرى"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:105
+#: src/components/forms/StripeCheckoutForm/index.tsx:106
 msgid "Something went wrong."
 msgstr "حدث خطأ ما."
 
@@ -12334,6 +12338,10 @@ msgstr "شكرًا،"
 msgid "That file is too large. Please keep it under 200KB, or paste your writing below instead."
 msgstr "هذا الملف كبير جدًا. يرجى إبقائه أقل من 200 كيلوبايت، أو لصق كتابتك أدناه بدلاً من ذلك."
 
+#: src/components/forms/StripeCheckoutForm/index.tsx:72
+msgid "That payment got sent to detention. If you used American Express, we can't accept it here. Please try Visa or Mastercard instead."
+msgstr "تم إرسال هذه الدفعة إلى غرفة العقاب. إذا كنت قد استخدمت بطاقة أمريكان إكسبريس، فلا يمكننا قبولها هنا. يرجى تجربة فيزا أو ماستركارد بدلاً من ذلك."
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:297
 #: src/components/routes/product-widget/SelectProducts/index.tsx:543
 msgid "That promo code is invalid"
@@ -12797,7 +12805,7 @@ msgstr "هذا الاسم مرئي للمستخدمين النهائيين"
 msgid "This occurrence is at capacity"
 msgstr "هذه المناسبة في كامل سعتها"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:131
+#: src/components/forms/StripeCheckoutForm/index.tsx:132
 msgid "This order has already been paid."
 msgstr "تم دفع هذا الطلب بالفعل."
 
@@ -12821,7 +12829,7 @@ msgstr "هذا الطلب قيد المعالجة."
 msgid "This order is complete."
 msgstr "هذا الطلب مكتمل."
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:143
+#: src/components/forms/StripeCheckoutForm/index.tsx:144
 msgid "This order page is no longer available."
 msgstr "صفحة الطلب هذه لم تعد متاحة."
 
@@ -14000,7 +14008,7 @@ msgstr "عرض على خرائط Google"
 msgid "View Order"
 msgstr "عرض الطلب"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:132
+#: src/components/forms/StripeCheckoutForm/index.tsx:133
 #: src/components/routes/product-widget/CollectInformation/index.tsx:368
 msgid "View Order Details"
 msgstr "عرض تفاصيل الطلب"
@@ -15014,7 +15022,7 @@ msgstr "تحتاج كلمة المرور إلى {MIN_PASSWORD_LENGTH} أحرف �
 msgid "Your password needs at least 6 characters"
 msgstr "تحتاج كلمة المرور إلى 6 أحرف على الأقل"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:99
+#: src/components/forms/StripeCheckoutForm/index.tsx:100
 msgid "Your payment is processing."
 msgstr "دفعتك قيد المعالجة."
 
@@ -15022,11 +15030,11 @@ msgstr "دفعتك قيد المعالجة."
 msgid "Your payment is protected with bank-level encryption"
 msgstr "دفعتك محمية بتشفير على مستوى البنوك"
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:102
+#: src/components/forms/StripeCheckoutForm/index.tsx:103
 msgid "Your payment was not successful, please try again."
 msgstr "لم تنجح دفعتك، يرجى المحاولة مرة أخرى."
 
-#: src/components/forms/StripeCheckoutForm/index.tsx:163
+#: src/components/forms/StripeCheckoutForm/index.tsx:164
 msgid "Your payment was unsuccessful. Please try again."
 msgstr "لم تنجح دفعتك. يرجى المحاولة مرة أخرى."
 
