@@ -31,7 +31,6 @@ import {computeThemeVariables, validateThemeSettings} from "../../../utilites/th
 import {useOrganizerTrackingPixels} from "../../../hooks/useOrganizerTrackingPixels";
 import {trackPixelEvent, hasActivePixels} from "../../../utilites/trackingPixels";
 import {removeTransparency} from "../../../utilites/colorHelper.ts";
-import {ensureHomepageFontLoaded} from "../../../utilites/fontLoader.ts";
 import {ShareComponent} from "../../common/ShareIcon";
 import {EventDateRange} from "../../common/EventDateRange";
 import {CalendarOptionsPopover} from "../../common/CalendarOptionsPopover";
@@ -140,10 +139,6 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
     const themeSettings = validateThemeSettings(rawThemeSettings);
     const cssVars = computeThemeVariables(themeSettings);
     const backgroundType = themeSettings.background_type;
-
-    useEffect(() => {
-        ensureHomepageFontLoaded(themeSettings.font_family);
-    }, [themeSettings.font_family]);
 
     const themeStyles = {
         '--event-bg-color': themeSettings.background,
