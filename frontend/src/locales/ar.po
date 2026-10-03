@@ -84,6 +84,10 @@ msgstr "{0} متبقٍ"
 msgid "{0} logo"
 msgstr "شعار {0}"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:53
+msgid "{0} now has {1} points in this age group."
+msgstr "{0} لديه الآن {1} نقطة في هذه الفئة العمرية."
+
 #: src/components/modals/CreateAttendeeModal/index.tsx:272
 msgid "{0} of {1} seats are taken."
 msgstr "تم حجز {0} من {1} مقعدًا."
@@ -91,6 +95,10 @@ msgstr "تم حجز {0} من {1} مقعدًا."
 #: src/components/routes/events/Dashboard/index.tsx:141
 msgid "{0} organizers"
 msgstr "{0} منظمين"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:54
+msgid "{0} tests · best {1}%"
+msgstr "{0} اختبارات · الأفضل {1}%"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:624
 msgid "{0} tickets"
@@ -433,6 +441,15 @@ msgstr "5. ملفات تعريف الارتباط"
 #: src/components/routes/legal/CookiePolicy/index.tsx:65
 msgid "5. More information"
 msgstr "5. مزيد من المعلومات"
+
+#: src/components/common/ErrorDisplay/index.tsx:41
+#: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
+msgid "500 Error."
+msgstr "خطأ 500."
+
+#: src/components/common/ErrorDisplay/index.tsx:35
+msgid "503 Service Unavailable."
+msgstr "503 الخدمة غير متاحة."
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:74
 msgid "6. Changes to this policy"
@@ -1059,21 +1076,25 @@ msgstr "تساعدك برامج الشراكة على تتبع المبيعات 
 msgid "After your event is created, you can choose how often it repeats from the dashboard."
 msgstr "بعد إنشاء فعاليتك، يمكنك اختيار عدد مرات تكرارها من لوحة التحكم."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:66
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:66
+msgid "Age group"
+msgstr "الفئة العمرية"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:11
 msgid "Ages 11 to 13"
-msgstr ""
+msgstr "من 11 إلى 13 سنة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:68
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:13
 msgid "Ages 14 to 17"
-msgstr ""
+msgstr "من 14 إلى 17 سنة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:62
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:7
 msgid "Ages 5 to 7"
-msgstr ""
+msgstr "من 5 إلى 7 سنوات"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:64
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:9
 msgid "Ages 8 to 10"
-msgstr ""
+msgstr "من 8 إلى 10 سنوات"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:292
 msgid "all"
@@ -1283,8 +1304,8 @@ msgid "An error occurred while checking export status."
 msgstr "حدث خطأ أثناء التحقق من حالة التصدير."
 
 #: src/components/common/ErrorDisplay/index.tsx:19
-msgid "An error occurred while loading the page"
-msgstr "حدث خطأ أثناء تحميل الصفحة"
+#~ msgid "An error occurred while loading the page"
+#~ msgstr "حدث خطأ أثناء تحميل الصفحة"
 
 #: src/components/forms/ProductCategoryForm/index.tsx:30
 msgid "An optional description of this category to display on the event page."
@@ -1946,6 +1967,12 @@ msgstr "Awesome Events Ltd."
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Ltd."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:186
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:85
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:86
+msgid "Back"
+msgstr "رجوع"
+
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:106
 msgid "Back to Accounts"
 msgstr "العودة إلى الحسابات"
@@ -1975,6 +2002,10 @@ msgstr "العودة إلى تسجيل الدخول"
 #: src/components/routes/event/messages.tsx:54
 msgid "Back to messages"
 msgstr "العودة إلى الرسائل"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/AnswerReview.tsx:71
+msgid "Back to my results"
+msgstr "العودة إلى نتائجي"
 
 #: src/components/routes/organizer/Reports/ReportLayout/index.tsx:42
 msgid "Back to Reports"
@@ -2047,9 +2078,9 @@ msgstr "نظرًا لأن هذا الحساب أكمل طلبات، ستُحفظ
 msgid "behind the garden gate."
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:201
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:290
 msgid "Best: {0}%"
-msgstr ""
+msgstr "الأفضل: {0}%"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:541
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:293
@@ -2616,9 +2647,13 @@ msgstr "اختر إعدادًا"
 msgid "Choose a different action"
 msgstr "اختر إجراءً مختلفًا"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:247
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:356
 msgid "Choose a different age group"
-msgstr ""
+msgstr "اختر فئة عمرية أخرى"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:154
+msgid "Choose a password (at least 6 characters)"
+msgstr "اختر كلمة مرور (6 أحرف على الأقل)"
 
 #: src/components/common/ThemeFontControl/index.tsx:66
 msgid "Choose a typeface that matches your brand. Fonts are self-hosted via Bunny Fonts."
@@ -2627,6 +2662,10 @@ msgstr "اختر خطًا يتناسب مع علامتك التجارية. ال�
 #: src/components/modals/ChooseAccountModal/index.tsx:13
 msgid "Choose an account"
 msgstr "اختر حسابًا"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:36
+msgid "Choose an age group"
+msgstr "اختر فئة عمرية"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:202
 msgid "Choose an organizer"
@@ -2656,10 +2695,10 @@ msgstr "اختر الإعداد الافتراضي للفعاليات الجدي
 msgid "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 msgstr "اختر من يدفع رسم المنصة. هذا لا يؤثر على الرسوم الإضافية التي قمت بتهيئتها في إعدادات حسابك."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:187
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:188
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:276
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:277
 msgid "Choose your age group"
-msgstr ""
+msgstr "اختر فئتك العمرية"
 
 #: src/components/common/CapacityHelp/index.tsx:53
 msgid "Circle"
@@ -3109,6 +3148,7 @@ msgstr "المحتوى مطلوب"
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
 #: src/components/layouts/EventHomepage/index.tsx:210
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:88
 #: src/components/routes/product-widget/SelectProducts/index.tsx:895
 msgid "Continue"
 msgstr "متابعة"
@@ -3263,6 +3303,10 @@ msgstr "نسخ إلى الحافظة"
 msgid "Copy URL"
 msgstr "نسخ الرابط"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/AnswerReview.tsx:51
+msgid "Correct answer"
+msgstr "الإجابة الصحيحة"
+
 #: src/components/common/LocationsTable/index.tsx:40
 msgid "Could not delete location"
 msgstr "تعذّر حذف الموقع"
@@ -3341,6 +3385,10 @@ msgstr "أنشئ أداة مخصصة لبيع التذاكر على موقعك."
 #: src/components/modals/SelectCheckInListModal/index.tsx:82
 msgid "Create a list for this date"
 msgstr "إنشاء قائمة لهذا التاريخ"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:122
+msgid "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
+msgstr "أنشئ حساب دخول لحفظ نتائجك وكسب النقاط. سنمنحك اسم مستخدم من شخصية كرتونية ممتعة ليبقى اسمك الحقيقي خاصاً."
 
 #: src/components/layouts/CheckIn/index.tsx:508
 msgid "Create a new check-in list for an active session, or contact the organizer if you think this is a mistake."
@@ -3454,6 +3502,10 @@ msgstr "إنشاء فعالية"
 #: src/components/forms/ProductForm/index.tsx:555
 msgid "Create more tickets or products to offer them as add-ons"
 msgstr "أنشئ المزيد من التذاكر أو المنتجات لعرضها كإضافات"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:168
+msgid "Create my login"
+msgstr "إنشاء حسابي"
 
 #: src/components/routes/events/Dashboard/index.tsx:172
 msgid "Create new"
@@ -3743,6 +3795,7 @@ msgstr "لوحة التحكم"
 #: src/components/common/OrderDetails/index.tsx:42
 #: src/components/common/WaitlistTable/index.tsx:184
 #: src/components/forms/QuestionForm/index.tsx:136
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:65
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:39
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:56
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:24
@@ -4499,8 +4552,8 @@ msgstr "قوائم تسجيل الدخول المؤهلة"
 #: src/components/common/OrderDetails/index.tsx:34
 #: src/components/common/QuestionsTable/index.tsx:254
 #: src/components/forms/AffiliateForm/index.tsx:89
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:125
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:126
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:145
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:146
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
 #: src/components/modals/EditUserModal/index.tsx:81
@@ -4701,14 +4754,14 @@ msgstr "ينتهي {0}"
 
 #: src/components/common/LanguageSwitcher/index.tsx:14
 #: src/components/common/LanguageSwitcher/index.tsx:39
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:75
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:20
 #: src/components/modals/CreateAttendeeModal/index.tsx:236
 msgid "English"
 msgstr "الإنجليزية"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:185
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:274
 msgid "English, Science, Maths, Geography and History questions. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
-msgstr ""
+msgstr "أسئلة في اللغة الإنجليزية والعلوم والرياضيات والجغرافيا والتاريخ. اختر فئتك العمرية ثم أجب عن {QUESTIONS_PER_TEST} سؤالاً. اختر الإجابة الصحيحة من بين 4 خيارات. لديك {SECONDS_PER_QUESTION} ثانية لكل سؤال."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:132
 msgid "Enter a capacity value or choose unlimited."
@@ -4786,8 +4839,8 @@ msgid "Enter unique affiliate code"
 msgstr "أدخل رمز شريك تابع فريدًا"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:105
-msgid "Enter your details to sign in or sign up and save your score."
-msgstr "أدخل بياناتك لتسجيل الدخول أو التسجيل وحفظ نتيجتك."
+#~ msgid "Enter your details to sign in or sign up and save your score."
+#~ msgstr "أدخل بياناتك لتسجيل الدخول أو التسجيل وحفظ نتيجتك."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:80
 #: src/components/routes/auth/Login/index.tsx:150
@@ -4824,6 +4877,14 @@ msgstr "ستظهر الإدخالات هنا عندما ينضم العملاء 
 #: src/hooks/useOrderActions.tsx:84
 msgid "Error"
 msgstr "خطأ"
+
+#: src/components/common/ErrorDisplay/index.tsx:29
+msgid "Error 403! Access Denied!"
+msgstr "خطأ 403! تم رفض الوصول!"
+
+#: src/components/common/ErrorDisplay/index.tsx:23
+msgid "Error 404! Page not found."
+msgstr "خطأ 404! الصفحة غير موجودة."
 
 #: src/components/routes/profile/ConfirmEmailAddress/index.tsx:27
 msgid "Error confirming email address"
@@ -5438,8 +5499,8 @@ msgid "Failed to save VAT settings. Please try again."
 msgstr "فشل حفظ إعدادات ضريبة القيمة المضافة. يرجى المحاولة مرة أخرى."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:34
-msgid "Failed to save your score. Please try again."
-msgstr "تعذّر حفظ نتيجتك. يرجى المحاولة مرة أخرى."
+#~ msgid "Failed to save your score. Please try again."
+#~ msgstr "تعذّر حفظ نتيجتك. يرجى المحاولة مرة أخرى."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:57
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:39
@@ -5648,8 +5709,8 @@ msgid "First Invoice Number"
 msgstr "رقم الفاتورة الأول"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:170
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:109
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:110
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:127
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:128
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:40
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:41
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
@@ -5683,6 +5744,10 @@ msgstr "الاسم الأول مطلوب"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:30
 msgid "First name must be between 1 and 50 characters"
 msgstr "يجب أن يتراوح الاسم الأول بين 1 و50 حرفًا"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:19
+msgid "First place"
+msgstr "المركز الأول"
 
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:64
 msgid "First Used"
@@ -5734,9 +5799,9 @@ msgstr "الفلاش متوقف"
 msgid "Flash on"
 msgstr "الفلاش يعمل"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:92
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:70
 msgid "Flyer"
-msgstr ""
+msgstr "محلّق"
 
 #: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:15
 msgid "Follow us on Instagram"
@@ -5806,6 +5871,7 @@ msgstr "شعار أصدقاء ريبتون البرشاء"
 msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
 msgstr "تدعم أصدقاء ريبتون المدرسة في تنظيم فعاليات متنوعة داخل الحرم المدرسي، بما في ذلك ليالي الأفلام والمناسبات الاجتماعية والنزهات وحفلات نهاية العام وفعاليات عيد الميلاد ونهاية العام. كما تشارك بفاعلية في ضمان إيجاد منزل جديد للزي المدرسي المستعمل."
 
+#: src/components/common/ErrorDisplay/index.tsx:68
 #: src/components/layouts/AuthLayout/index.tsx:33
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:92
 msgid "Friends of School"
@@ -5864,9 +5930,9 @@ msgstr "دخول عام"
 msgid "General information about your organizer"
 msgstr "معلومات عامة عن جهتك المنظمة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:183
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:272
 msgid "General Knowledge Challenge"
-msgstr ""
+msgstr "تحدي المعلومات العامة"
 
 #: src/components/forms/AffiliateForm/index.tsx:57
 #: src/components/forms/PromoCodeForm/index.tsx:77
@@ -5880,9 +5946,9 @@ msgstr "إنشاء"
 msgid "Generate code"
 msgstr "إنشاء رمز"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:81
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:26
 msgid "Geography"
-msgstr ""
+msgstr "الجغرافيا"
 
 #: src/components/layouts/EventHomepage/index.tsx:519
 msgid "Get Directions"
@@ -5930,6 +5996,10 @@ msgstr "رجوع"
 msgid "Go Back"
 msgstr "رجوع"
 
+#: src/components/common/ErrorDisplay/index.tsx:92
+msgid "Go back to home page"
+msgstr "العودة إلى الصفحة الرئيسية"
+
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:23
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:42
 msgid "Go back to profile"
@@ -5940,16 +6010,16 @@ msgid "Go to Event Page"
 msgstr "الذهاب إلى صفحة الفعالية"
 
 #: src/components/common/ErrorDisplay/index.tsx:65
-msgid "Go to home page"
-msgstr "الذهاب إلى الصفحة الرئيسية"
+#~ msgid "Go to home page"
+#~ msgstr "الذهاب إلى الصفحة الرئيسية"
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:196
 msgid "Go to Schedule"
 msgstr "الذهاب إلى الجدول"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:94
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:72
 msgid "Good effort! A little more practice and you'll soar."
-msgstr ""
+msgstr "جهد جيد! القليل من التدريب وستحلّق عالياً."
 
 #: src/components/common/ThemeColorControls/index.tsx:113
 msgid "Good readability"
@@ -6043,6 +6113,10 @@ msgstr "يساعدنا على فهم كيفية استخدام الموقع."
 #: src/components/routes/my-tickets/index.tsx:255
 msgid "Here are all the tickets associated with your email address."
 msgstr "إليك جميع التذاكر المرتبطة بعنوان بريدك الإلكتروني."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/AnswerReview.tsx:24
+msgid "Here are the questions you missed. The correct answer is shown in green."
+msgstr "هذه هي الأسئلة التي أخطأت فيها. الإجابة الصحيحة موضّحة باللون الأخضر."
 
 #: src/components/common/WidgetEditor/index.tsx:303
 msgid "Here is an example of how you can use the component in your application."
@@ -6176,9 +6250,9 @@ msgstr "يخفي النافد"
 msgid "Hiding a product will prevent users from seeing it on the event page."
 msgstr "سيمنع إخفاء المنتج المستخدمين من رؤيته في صفحة الفعالية."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:90
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:68
 msgid "High Flyer!"
-msgstr ""
+msgstr "محلّق متميز!"
 
 #: src/components/forms/ProductForm/index.tsx:567
 msgid "Highlight"
@@ -6201,9 +6275,9 @@ msgstr "مميّز"
 msgid "Highlighted products will have a different background color to make them stand out on the event page."
 msgstr "ستحمل المنتجات المميزة لون خلفية مختلفًا لتبرز في صفحة الفعالية."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:83
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:28
 msgid "History"
-msgstr ""
+msgstr "التاريخ"
 
 #: src/constants/eventCategories.ts:18
 msgid "Hobbies"
@@ -6671,9 +6745,9 @@ msgstr "يوليو"
 msgid "June"
 msgstr "يونيو"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:94
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:72
 msgid "Just a Flyer"
-msgstr ""
+msgstr "محلّق مبتدئ"
 
 #: src/components/routes/auth/Login/index.tsx:121
 msgid "Just looking for your tickets?"
@@ -6696,17 +6770,17 @@ msgstr "الحفاظ على الاتصال"
 msgid "Keep editing"
 msgstr "متابعة التعديل"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:98
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:76
 msgid "Keep exploring and learning new things, then try the test again."
-msgstr ""
+msgstr "واصل الاستكشاف وتعلّم أشياء جديدة، ثم حاول الاختبار مرة أخرى."
 
 #: src/components/routes/admin/Announcements/index.tsx:390
 msgid "Keep it short — banners show a single line. {0}/200"
 msgstr "اجعلها موجزة — تعرض اللافتات سطرًا واحدًا. {0}/200"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:97
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:75
 msgid "Keep Learning"
-msgstr ""
+msgstr "واصل التعلّم"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:595
 msgid "Keep me updated on news and events from {0}"
@@ -6793,8 +6867,8 @@ msgid "Last login"
 msgstr "آخر تسجيل دخول"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:181
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:117
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:118
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:136
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:137
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:48
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:49
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
@@ -6849,6 +6923,11 @@ msgstr "لاحقًا"
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:152
 msgid "Latest check-ins"
 msgstr "أحدث تسجيلات الدخول"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:267
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:33
+msgid "Leaderboard"
+msgstr "لوحة المتصدرين"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1099
 msgid "Leave “from” as today to start right away."
@@ -6971,6 +7050,8 @@ msgstr "جارٍ تحميل الويب هوكس"
 #: src/components/common/OrganizerReportTable/index.tsx:265
 #: src/components/common/ReportTable/index.tsx:225
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:48
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:52
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:40
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
@@ -7191,9 +7272,9 @@ msgstr "تعليم كمدفوع"
 msgid "Mark as validated (admin override)"
 msgstr "تعليم كمعتمد (تجاوز المسؤول)"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:79
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:24
 msgid "Maths"
-msgstr ""
+msgstr "الرياضيات"
 
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:210
 msgid "Max Messages / 24h"
@@ -7447,6 +7528,11 @@ msgstr "طفا فانوسي ببطء، يدور في دائرة متكاسلة،
 #: src/components/common/GlobalMenu/index.tsx:40
 msgid "My Profile"
 msgstr "ملفي الشخصي"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:245
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:37
+msgid "My scores"
+msgstr "نتائجي"
 
 #: src/components/routes/my-tickets/index.tsx:253
 msgid "My Tickets"
@@ -7905,6 +7991,10 @@ msgstr "لم يُعثر على نتائج"
 msgid "No Saved Locations"
 msgstr "لا توجد مواقع محفوظة"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:55
+msgid "No scores yet for this age group. Be the first!"
+msgstr "لا توجد نتائج بعد لهذه الفئة العمرية. كن الأول!"
+
 #: src/components/common/ProductsTable/ProductsBlankSlate/index.tsx:20
 msgid "No Search Results"
 msgstr "لا توجد نتائج بحث"
@@ -7930,7 +8020,7 @@ msgstr "لا توجد اقتراحات"
 msgid "No Taxes or Fees have been added."
 msgstr "لم تتم إضافة أي ضرائب أو رسوم."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:96
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:107
 msgid "No thanks"
 msgstr "لا، شكرًا"
 
@@ -8730,6 +8820,10 @@ msgstr "قوائم أخرى (التذكرة غير مدرجة)"
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "أحدث منشوراتنا على إنستغرام — اضغط أدناه لمشاهدتها."
 
+#: src/components/common/ErrorDisplay/index.tsx:36
+msgid "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
+msgstr "خوادمنا عالقة حاليًا في طابور السيارات الصباحي أمام المدرسة. سنتحرك من جديد قريبًا!"
+
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:123
 msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial and year group."
 msgstr ""
@@ -8750,9 +8844,9 @@ msgstr "في الهواء الطلق"
 msgid "Outgoing Messages"
 msgstr "الرسائل الصادرة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:90
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:68
 msgid "Outstanding! You really know your stuff."
-msgstr ""
+msgstr "رائع! أنت تعرف الكثير حقاً."
 
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:137
 msgid "Override fees on this organizer"
@@ -8779,8 +8873,8 @@ msgid "Page no longer available"
 msgstr "الصفحة لم تعد متاحة"
 
 #: src/components/common/ErrorDisplay/index.tsx:14
-msgid "Page not found"
-msgstr "الصفحة غير موجودة"
+#~ msgid "Page not found"
+#~ msgstr "الصفحة غير موجودة"
 
 #: src/components/modals/ShareModal/index.tsx:236
 msgid "Page URL"
@@ -8829,6 +8923,9 @@ msgstr "تمرير الرسم إلى المشتري"
 msgid "Pass to Buyer"
 msgstr "تمرير إلى المشتري"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:155
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:187
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:188
 #: src/components/routes/auth/AcceptInvitation/index.tsx:127
 #: src/components/routes/auth/Login/index.tsx:98
 #: src/components/routes/auth/Register/index.tsx:110
@@ -9158,6 +9255,15 @@ msgstr "تقرير رسوم المنصة"
 msgid "Platform Revenue"
 msgstr "إيرادات المنصة"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:62
+msgid "Player"
+msgstr "اللاعب"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:238
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:38
+msgid "Playing as {0}"
+msgstr "تلعب باسم {0}"
+
 #: src/components/forms/QuestionForm/index.tsx:31
 msgid "Please add at least one option"
 msgstr "يرجى إضافة خيار واحد على الأقل"
@@ -9221,6 +9327,10 @@ msgstr "يرجى إدخال رابط صالح"
 msgid "Please enter the 5-digit code"
 msgstr "يرجى إدخال الرمز المكون من 5 أرقام"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:62
+msgid "Please enter your username and password"
+msgstr "يرجى إدخال اسم المستخدم وكلمة المرور"
+
 #: src/components/routes/organizer/Payments/Vat/VatSettingsForm.tsx:145
 msgid "Please enter your VAT number"
 msgstr "يرجى إدخال رقم ضريبة القيمة المضافة الخاص بك"
@@ -9233,9 +9343,13 @@ msgstr "يرجى ملء جميع الحقول"
 msgid "Please fill in all fields before submitting."
 msgstr "يرجى ملء جميع الحقول قبل الإرسال."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:47
+msgid "Please fill in all the fields"
+msgstr "يرجى ملء جميع الحقول"
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:54
-msgid "Please fill in your first name, last name and email"
-msgstr "يرجى إدخال اسمك الأول واسم العائلة والبريد الإلكتروني"
+#~ msgid "Please fill in your first name, last name and email"
+#~ msgstr "يرجى إدخال اسمك الأول واسم العائلة والبريد الإلكتروني"
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:19
 msgid "Please fill in your name, email and phone number"
@@ -9249,7 +9363,7 @@ msgstr "يرجى الملاحظة"
 msgid "Please provide an image."
 msgstr "يرجى تقديم صورة."
 
-#: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:65
+#: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:70
 msgid "Please restart the checkout process."
 msgstr "يرجى إعادة بدء عملية الدفع."
 
@@ -9314,6 +9428,15 @@ msgstr "يرجى الانتظار بينما نجهز طلباتك للتصدي�
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
 msgid "Poem"
 msgstr "قصيدة"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:52
+msgid "points"
+msgstr "نقطة"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:63
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:68
+msgid "Points"
+msgstr "النقاط"
 
 #: src/components/routes/admin/Dashboard/index.tsx:245
 msgid "Popular Events (Last 14 Days)"
@@ -9684,9 +9807,13 @@ msgstr "الكمية المتاحة"
 msgid "Quantity this date"
 msgstr "كمية هذا التاريخ"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:260
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/AnswerReview.tsx:31
+msgid "Question {0}"
+msgstr "السؤال {0}"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:369
 msgid "Question {0} of {total}"
-msgstr ""
+msgstr "السؤال {0} من {total}"
 
 #: src/components/forms/CheckInListForm/index.tsx:205
 msgid "Question answers"
@@ -9741,6 +9868,10 @@ msgstr "خيار اختيار فردي"
 #: src/components/layouts/OrganizerHomepage/ExampleStoryCard/ExamplePoemCard.tsx:11
 msgid "Rain on the Roof"
 msgstr ""
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:61
+msgid "Rank"
+msgstr "المرتبة"
 
 #: src/components/routes/organizer/Reports/TaxSummaryReport/index.tsx:43
 msgid "Rate"
@@ -10180,7 +10311,7 @@ msgid "Retry Job"
 msgstr "إعادة محاولة المهمة"
 
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:52
-#: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
+#: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:72
 msgid "Return to Event"
 msgstr "العودة إلى الفعالية"
 
@@ -10220,6 +10351,10 @@ msgstr "ملخص الإيرادات"
 #: src/components/routes/admin/SpamEvents/index.tsx:102
 msgid "Review events flagged as potential spam by the automated check"
 msgstr "راجع الفعاليات المبلغ عنها كرسائل مزعجة محتملة من قبل الفحص التلقائي"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/AnswerReview.tsx:22
+msgid "Review your answers"
+msgstr "مراجعة إجاباتك"
 
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:133
 msgid "Revoke invitation"
@@ -10371,8 +10506,8 @@ msgid "Save fee override"
 msgstr "حفظ تجاوز الرسم"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:138
-msgid "Save my score"
-msgstr "احفظ نتيجتي"
+#~ msgid "Save my score"
+#~ msgstr "احفظ نتيجتي"
 
 #: src/components/modals/EditOrganizerModal/index.tsx:70
 msgid "Save Organizer"
@@ -10417,6 +10552,10 @@ msgstr "مواقع محفوظة"
 #: src/components/routes/admin/Accounts/AccountDetail/OrganizerAdminModal.tsx:157
 msgid "Saving an override creates a dedicated configuration for this organizer if it's currently on the system default."
 msgstr "يؤدي حفظ تجاوز إلى إنشاء إعداد مخصص لهذه الجهة المنظمة إذا كانت حاليًا على الإعداد الافتراضي للنظام."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:45
+msgid "Saving your score..."
+msgstr "جارٍ حفظ نتيجتك..."
 
 #: src/components/layouts/CheckIn/BottomNav.tsx:15
 msgid "Scan"
@@ -10485,9 +10624,13 @@ msgstr "حذف مجدول"
 msgid "Scheduled time"
 msgstr "الوقت المجدول"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:77
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:22
 msgid "Science"
-msgstr ""
+msgstr "العلوم"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:67
+msgid "Score"
+msgstr "النتيجة"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:87
 msgid "Scroll down"
@@ -10650,6 +10793,10 @@ msgstr "عرض الجدول"
 #: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:17
 msgid "See the latest photos and updates from"
 msgstr "اطّلع على أحدث الصور والتحديثات من"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:330
+msgid "See what I got wrong"
+msgstr "اعرف أين أخطأت"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:310
 msgid "See what Stripe still needs"
@@ -11233,6 +11380,31 @@ msgstr "يعرض حقول العنوان الشائعة، بما في ذلك ا�
 msgid "Shows remaining"
 msgstr "يُظهر المتبقي"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:115
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:201
+msgid "Sign in"
+msgstr "تسجيل الدخول"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:257
+msgid "Sign in / Sign up"
+msgstr "تسجيل الدخول / إنشاء حساب"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:183
+msgid "Sign in or sign up"
+msgstr "تسجيل الدخول أو إنشاء حساب"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:250
+msgid "Sign in to save your scores and earn points."
+msgstr "سجّل الدخول لحفظ نتائجك وكسب النقاط."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:89
+msgid "Sign out"
+msgstr "تسجيل الخروج"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:105
+msgid "Sign up"
+msgstr "إنشاء حساب"
+
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:84
 msgid "Sign up to volunteer"
 msgstr ""
@@ -11319,10 +11491,14 @@ msgstr "نفدت الكمية، قائمة الانتظار متاحة"
 msgid "Some details are hidden from public access. Log in to view everything."
 msgstr "بعض التفاصيل مخفية عن الوصول العام. سجّل الدخول لعرض كل شيء."
 
-#: src/components/common/ErrorDisplay/index.tsx:15
+#: src/components/common/ErrorDisplay/index.tsx:42
+#: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:69
+msgid "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
+msgstr "أحدهم سكب جالونًا من بريق الأشغال اليدوية على خوادمنا. عمال النظافة الرقميون ينظفونها الآن!"
+
 #: src/components/routes/auth/AcceptInvitation/index.tsx:48
 #: src/components/routes/product-widget/CollectInformation/index.tsx:403
-#: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:64
+#: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
 msgid "Something went wrong"
 msgstr "حدث خطأ ما"
 
@@ -11353,6 +11529,7 @@ msgstr "حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقً
 
 #: src/components/layouts/Event/index.tsx:91
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:109
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:25
 #: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
@@ -11432,9 +11609,9 @@ msgstr "تاريخ ووقت البدء"
 msgid "Start date is required"
 msgstr "تاريخ البدء مطلوب"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:213
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:302
 msgid "Start the test"
-msgstr ""
+msgstr "ابدأ الاختبار"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1001
 msgid "Start time"
@@ -11847,9 +12024,9 @@ msgstr "قميص"
 msgid "T-shirts, mugs and more"
 msgstr "قمصان وأكواب والمزيد"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:244
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:345
 msgid "Take the test again"
-msgstr ""
+msgstr "أعد الاختبار"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:961
 msgid "Tap dates like a calendar."
@@ -11990,6 +12167,10 @@ msgstr "المدة"
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:64
+msgid "Tests"
+msgstr "الاختبارات"
+
 #: src/components/common/ThemeColorControls/index.tsx:107
 msgid "Text may be hard to read"
 msgstr "قد يكون النص صعب القراءة"
@@ -12095,6 +12276,10 @@ msgstr "حديقة الفوانيس"
 msgid "The large banner at the top of your homepage. Leave fields blank to use sensible defaults."
 msgstr "اللافتة الكبيرة أعلى صفحتك الرئيسية. اترك الحقول فارغة لاستخدام الإعدادات الافتراضية المنطقية."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:53
+msgid "The leaderboard could not be loaded."
+msgstr "تعذّر تحميل لوحة المتصدرين."
+
 #: src/components/routes/product-widget/OrderSummaryAndProducts/LinkExpiredMessage/index.tsx:30
 msgid "The link you are trying to access has expired or is no longer valid. Please check your email for an updated link to manage your order."
 msgstr "الرابط الذي تحاول الوصول إليه منتهي الصلاحية أو لم يعد صالحًا. يرجى التحقق من بريدك الإلكتروني للحصول على رابط محدث لإدارة طلبك."
@@ -12121,8 +12306,8 @@ msgid "The override is recorded in the order audit log."
 msgstr "يُسجل التجاوز في سجل تدقيق الطلب."
 
 #: src/components/common/ErrorDisplay/index.tsx:18
-msgid "The page you are looking for does not exist"
-msgstr "الصفحة التي تبحث عنها غير موجودة"
+#~ msgid "The page you are looking for does not exist"
+#~ msgstr "الصفحة التي تبحث عنها غير موجودة"
 
 #: src/components/common/PlatformFeesSettings/index.tsx:212
 msgid "The platform fee is added to the ticket price. Buyers pay more, but you receive the full ticket price."
@@ -12189,6 +12374,10 @@ msgstr "المنطقة الزمنية المستخدمة لتواريخ وأوق
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:63
 msgid "The title of the event that will be displayed in search engine results and when sharing on social media. By default, the event title will be used"
 msgstr "عنوان الفعالية الذي سيظهر في نتائج محركات البحث وعند المشاركة على وسائل التواصل الاجتماعي. سيُستخدم عنوان الفعالية افتراضيًا"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:34
+msgid "The top players in each age group. Only usernames are shown."
+msgstr "أفضل اللاعبين في كل فئة عمرية. تظهر أسماء المستخدمين فقط."
 
 #: src/utilites/imageUploadValidation.ts:26
 msgid "The upload didn't reach the server. Check your connection, and if the file is large, try a smaller image (max 5MB)."
@@ -12441,6 +12630,10 @@ msgstr "هذا هو اسم جهتك المنظمة الذي سيظهر لمست�
 #: src/components/modals/CreateWebhookModal/index.tsx:64
 msgid "This is the only time the signing secret will be shown. Please copy it now and store it securely."
 msgstr "هذه هي المرة الوحيدة التي سيظهر فيها سر التوقيع. يرجى نسخه الآن وتخزينه بأمان."
+
+#: src/components/common/ErrorDisplay/index.tsx:24
+msgid "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
+msgstr "هذا الرابط موجود حاليًا في صندوق المفقودات بالمدرسة، بجوار قفاز شتوي وحيد بلا اسم."
 
 #: src/components/routes/my-tickets/index.tsx:179
 msgid "This link is invalid or has expired."
@@ -12763,6 +12956,10 @@ msgstr "الوقت"
 msgid "Time left"
 msgstr "الوقت المتبقي"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/AnswerReview.tsx:64
+msgid "Time ran out before you answered this one."
+msgstr "انتهى الوقت قبل أن تجيب عن هذا السؤال."
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:986
 msgid "Times"
 msgstr "الأوقات"
@@ -12860,6 +13057,10 @@ msgstr "الأدوات"
 #: src/components/routes/admin/Dashboard/index.tsx:341
 msgid "Top Organizers (Last 14 Days)"
 msgstr "أفضل الجهات المنظمة (آخر 14 يومًا)"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:22
+msgid "Top three"
+msgstr "المراكز الثلاثة الأولى"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:177
 msgid "total"
@@ -13386,6 +13587,14 @@ msgstr "المستخدم"
 msgid "User Management"
 msgstr "إدارة المستخدمين"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:178
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:177
+msgid "Username (e.g. Simba42)"
+msgstr "اسم المستخدم (مثل Simba42)"
+
 #: src/components/common/AdminAccountsTable/index.tsx:89
 #: src/components/common/AdminAccountsTable/index.tsx:109
 #: src/components/layouts/Admin/index.tsx:15
@@ -13665,6 +13874,10 @@ msgstr "عرض تفاصيل الطلب، وإصدار الاستردادات، �
 msgid "View Organizer Homepage"
 msgstr "عرض الصفحة الرئيسية للجهة المنظمة"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:348
+msgid "View the leaderboard"
+msgstr "عرض لوحة المتصدرين"
+
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:59
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:109
@@ -13754,6 +13967,10 @@ msgstr "نجمع المعلومات التي تقدمها لنا مباشرة، 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "تعذّرت معالجة دفعتك. يرجى المحاولة مرة أخرى أو التواصل مع الدعم."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:41
+msgid "We could not save your score. Please try again later."
+msgstr "تعذّر حفظ نتيجتك. يرجى المحاولة لاحقاً."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:167
 msgid "We couldn't copy that Stripe connection. Please try again."
@@ -13979,6 +14196,10 @@ msgstr "أسابيع"
 msgid "Weibo"
 msgstr "ويبو"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:76
+msgid "Welcome aboard!"
+msgstr "أهلاً بك!"
+
 #: src/components/routes/auth/AcceptInvitation/index.tsx:77
 msgid "Welcome aboard! Please login to continue."
 msgstr "مرحبًا بك! يرجى تسجيل الدخول للمتابعة."
@@ -13986,6 +14207,10 @@ msgstr "مرحبًا بك! يرجى تسجيل الدخول للمتابعة."
 #: src/components/routes/auth/Login/index.tsx:80
 msgid "Welcome back"
 msgstr "مرحبًا بعودتك"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:173
+msgid "Welcome back! Enter your username and password."
+msgstr "أهلاً بعودتك! أدخل اسم المستخدم وكلمة المرور."
 
 #: src/components/routes/event/EventDashboard/index.tsx:198
 msgid "Welcome back{0} 👋"
@@ -13999,9 +14224,9 @@ msgstr "مرحبًا بك في {0}، {1} 👋"
 msgid "Welcome to {0}, here's a listing of all your events"
 msgstr "مرحبًا بك في {0}، إليك قائمة بجميع فعالياتك"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:92
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:70
 msgid "Well done! You have great general knowledge."
-msgstr ""
+msgstr "أحسنت! لديك معلومات عامة رائعة."
 
 #: src/constants/eventCategories.ts:20
 msgid "Wellness"
@@ -14224,9 +14449,17 @@ msgstr "ورشة عمل"
 msgid "Workshop with early bird"
 msgstr "ورشة عمل بحجز مبكر"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:91
+msgid "Would you like to save your score and earn points?"
+msgstr "هل تريد حفظ نتيجتك وكسب النقاط؟"
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:80
-msgid "Would you like to save your score?"
-msgstr "هل تريد حفظ نتيجتك؟"
+#~ msgid "Would you like to save your score?"
+#~ msgstr "هل تريد حفظ نتيجتك؟"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:80
+msgid "Write it down! You will need it to sign in next time. Only this username is shown on the leaderboard, so your real name stays private."
+msgstr "دوّنه! ستحتاجه لتسجيل الدخول في المرة القادمة. يظهر اسم المستخدم هذا فقط على لوحة المتصدرين، لذا يبقى اسمك الحقيقي خاصاً."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:89
 msgid "Write your message here..."
@@ -14275,7 +14508,7 @@ msgstr "نعم، ألغِ طلبي"
 msgid "Yes, remove them"
 msgstr "نعم، أزلهم"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:88
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:99
 msgid "Yes, save my score"
 msgstr "نعم، احفظ نتيجتي"
 
@@ -14353,6 +14586,10 @@ msgstr "لا يمكنك تعديل دور أو حالة مالك الحساب."
 msgid "You cannot refund a manually created order."
 msgstr "لا يمكنك استرداد طلب تم إنشاؤه يدويًا."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:51
+msgid "You earned {0} points!"
+msgstr "لقد ربحت {0} نقطة!"
+
 #: src/components/modals/ChooseAccountModal/index.tsx:14
 msgid "You have access to multiple accounts. Please choose one to continue."
 msgstr "لديك وصول إلى حسابات متعددة. يرجى اختيار واحد للمتابعة."
@@ -14364,6 +14601,10 @@ msgstr "لقد قبلت هذه الدعوة بالفعل. يرجى تسجيل ا
 #: src/components/routes/profile/ConfirmEmailChange/index.tsx:41
 msgid "You have no pending email change."
 msgstr "ليس لديك تغيير بريد إلكتروني معلّق."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:43
+msgid "You have not saved any scores yet. Take a test to get started!"
+msgstr "لم تحفظ أي نتائج بعد. أجرِ اختباراً للبدء!"
 
 #: src/components/modals/PublishEventModal/index.tsx:82
 msgid "You have paid tickets, but Stripe isn't connected yet, so you can't take payments."
@@ -14434,9 +14675,9 @@ msgstr "يجب عليك توثيق بريد حسابك الإلكتروني قب
 msgid "You receive"
 msgstr "تستلم"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:229
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:318
 msgid "You scored {score} out of {total} ({percentage}%)"
-msgstr ""
+msgstr "حصلت على {score} من {total} ({percentage}%)"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:144
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
@@ -14482,6 +14723,10 @@ msgstr "تم عرض مقعد عليك!"
 msgid "You've changed the session time"
 msgstr "لقد غيّرت وقت الجلسة"
 
+#: src/components/common/ErrorDisplay/index.tsx:30
+msgid "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
+msgstr "لقد دخلتَ رسميًا إلى غرفة المعلمين الرقمية. يُمنع دخول أولياء الأمور والطلاب!"
+
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:92
 msgid "Your account has been deactivated and will be permanently deleted on <0>{0}</0>."
 msgstr "تم تعطيل حسابك وسيُحذف نهائيًا في <0>{0}</0>."
@@ -14502,6 +14747,10 @@ msgstr "يُستخدم اسم حسابك في صفحات الفعاليات وف
 msgid "Your affiliates have been exported successfully."
 msgstr "تم تصدير الشركاء التابعين لديك بنجاح."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/AnswerReview.tsx:56
+msgid "Your answer"
+msgstr "إجابتك"
+
 #: src/components/routes/event/attendees.tsx:164
 msgid "Your attendees have been exported successfully."
 msgstr "تم تصدير الحاضرين لديك بنجاح."
@@ -14514,9 +14763,9 @@ msgstr "سيظهر حاضروك هنا بمجرد تسجيلهم في فعالي
 msgid "Your awesome website 🎉"
 msgstr "موقعك الرائع 🎉"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:232
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:321
 msgid "Your best score: {bestPercentage}%"
-msgstr ""
+msgstr "أفضل نتيجة لك: {bestPercentage}%"
 
 #: src/components/modals/CheckInListSuccessModal/index.tsx:23
 msgid "Your check-in list has been created successfully. Share the link below with your check-in staff."
@@ -14647,8 +14896,8 @@ msgstr "مرشح التاريخ المحفوظ لديك لم يعد متاحًا
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:60
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:70
-msgid "Your score has been saved."
-msgstr "تم حفظ نتيجتك."
+#~ msgid "Your score has been saved."
+#~ msgstr "تم حفظ نتيجتك."
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:208
 msgid "Your story or poem"
@@ -14669,6 +14918,10 @@ msgstr "تذكرتك لا تزال صالحة — لا حاجة لاتخاذ أ�
 #: src/components/routes/product-widget/CollectInformation/index.tsx:365
 msgid "Your tickets have been confirmed."
 msgstr "تم تأكيد تذاكرك."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:77
+msgid "Your username is"
+msgstr "اسم المستخدم الخاص بك هو"
 
 #: src/components/routes/organizer/Payments/Vat/VatSettingsForm.tsx:68
 msgid "Your VAT number is queued for validation"
@@ -14703,39 +14956,3 @@ msgstr "الرمز البريدي"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:577
 msgid "ZIP or Postal Code"
 msgstr "الرمز البريدي"
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "Error 404! Page not found."
-msgstr "خطأ 404! الصفحة غير موجودة."
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
-msgstr "هذا الرابط موجود حاليًا في صندوق المفقودات بالمدرسة، بجوار قفاز شتوي وحيد بلا اسم."
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "Error 403! Access Denied!"
-msgstr "خطأ 403! تم رفض الوصول!"
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
-msgstr "لقد دخلتَ رسميًا إلى غرفة المعلمين الرقمية. يُمنع دخول أولياء الأمور والطلاب!"
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "503 Service Unavailable."
-msgstr "503 الخدمة غير متاحة."
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
-msgstr "خوادمنا عالقة حاليًا في طابور السيارات الصباحي أمام المدرسة. سنتحرك من جديد قريبًا!"
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "500 Error."
-msgstr "خطأ 500."
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
-msgstr "أحدهم سكب جالونًا من بريق الأشغال اليدوية على خوادمنا. عمال النظافة الرقميون ينظفونها الآن!"
-
-#: src/components/common/ErrorDisplay/index.tsx
-msgid "Go back to home page"
-msgstr "العودة إلى الصفحة الرئيسية"

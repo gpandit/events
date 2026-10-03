@@ -1,10 +1,16 @@
 import {useCallback, useEffect, useState} from 'react';
 import {t} from '@lingui/macro';
-import {IconClock, IconPuzzle, IconRefresh, IconTrophy} from '@tabler/icons-react';
-import {Organizer} from '../../../../../types.ts';
-import {AGE_BANDS, AgeBand, Puzzle, PUZZLES_BY_AGE_BAND, PuzzleSubject} from './generalKnowledgePuzzles.ts';
+import {IconClock, IconListCheck, IconPuzzle, IconRefresh, IconTrophy, IconUser} from '@tabler/icons-react';
+import {Organizer, QuizPlayerSession} from '../../../../../types.ts';
+import {AGE_BANDS, AgeBand, Puzzle, PUZZLES_BY_AGE_BAND} from './generalKnowledgePuzzles.ts';
 import {getQuizPercentage, getQuizRank, QuizRank, rememberTest, selectQuizQuestions, shuffle} from './quizScoring.ts';
 import {SaveScorePrompt} from './SaveScorePrompt.tsx';
+import {AnswerReview} from './AnswerReview.tsx';
+import {QuizAuthForm} from './QuizAuthForm.tsx';
+import {QuizLeaderboard} from './QuizLeaderboard.tsx';
+import {QuizProfile} from './QuizProfile.tsx';
+import {ageBandLabel, subjectLabel} from './quizLabels.ts';
+import {useQuizPlayerSession} from './useQuizPlayerSession.ts';
 import classes from '../ResourcesForChildren.module.scss';
 
 const SECONDS_PER_QUESTION = 30;
@@ -12,7 +18,7 @@ const QUESTIONS_PER_TEST = 20;
 const BEST_SCORE_STORAGE_KEY = 'fos_general_knowledge_quiz_best';
 const RECENT_TESTS_STORAGE_KEY = 'fos_general_knowledge_quiz_recent';
 
-type QuizStage = 'intro' | 'playing' | 'result';
+type QuizStage = 'intro' | 'playing' | 'result' | 'review' | 'auth' | 'leaderboard' | 'profile';
 
 type BestScores = Partial<Record<AgeBand, number>>;
 
@@ -56,34 +62,6 @@ const writeRecentTests = (recent: RecentTests) => {
     }
 };
 
-const ageBandLabel = (band: AgeBand) => {
-    switch (band) {
-        case '5-7':
-            return t`Ages 5 to 7`;
-        case '8-10':
-            return t`Ages 8 to 10`;
-        case '11-13':
-            return t`Ages 11 to 13`;
-        default:
-            return t`Ages 14 to 17`;
-    }
-};
-
-const subjectLabel = (subject: PuzzleSubject) => {
-    switch (subject) {
-        case 'English':
-            return t`English`;
-        case 'Science':
-            return t`Science`;
-        case 'Maths':
-            return t`Maths`;
-        case 'Geography':
-            return t`Geography`;
-        default:
-            return t`History`;
-    }
-};
-
 const rankContent = (rank: QuizRank) => {
     switch (rank) {
         case 'HIGH_FLYER':
@@ -109,7 +87,10 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
     const [score, setScore] = useState(0);
     const [timeLeft, setTimeLeft] = useState(SECONDS_PER_QUESTION);
     const [bestScores, setBestScores] = useState<BestScores>({});
+    const [answers, setAnswers] = useState<(string | null)[]>([]);
     const [attempt, setAttempt] = useState(0);
+    const [leaderboardReturnStage, setLeaderboardReturnStage] = useState<QuizStage>('intro');
+    const {session, signIn, signOut} = useQuizPlayerSession(organizer.id);
 
     const total = puzzles.length;
 
@@ -142,6 +123,7 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
         const isCorrect = choice !== null && choice === puzzles[current].answer;
         const nextScore = isCorrect ? score + 1 : score;
         setScore(nextScore);
+        setAnswers((previous) => [...previous, choice]);
         advance(nextScore);
     }, [puzzles, current, score, advance]);
 
@@ -168,6 +150,7 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
         setQuestionOptions(selected.map((puzzle) => shuffle(puzzle.options)));
         setCurrent(0);
         setScore(0);
+        setAnswers([]);
         setAttempt((previous) => previous + 1);
         setTimeLeft(SECONDS_PER_QUESTION);
         setStage('playing');
@@ -175,9 +158,115 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
 
     const bestPercentage = ageBand ? bestScores[ageBand] ?? null : null;
 
+    const handleAuthenticated = (next: QuizPlayerSession) => {
+        signIn(next);
+        if (stage === 'auth') {
+            setStage('intro');
+        }
+    };
+
+    const openLeaderboard = () => {
+        setLeaderboardReturnStage(stage);
+        setStage('leaderboard');
+    };
+
+    const handleSignOut = () => {
+        signOut();
+        setStage('intro');
+    };
+
+    if (stage === 'auth') {
+        return (
+            <div className={classes.tabPanel}>
+                <div className={classes.puzzleCard}>
+                    <IconUser size={40} className={classes.puzzleIcon}/>
+                    <h3 className={classes.puzzleTitle}>{t`Sign in or sign up`}</h3>
+                    <QuizAuthForm organizerId={organizer.id} onAuthenticated={handleAuthenticated}/>
+                    <button type="button" className={classes.linkButton} onClick={() => setStage('intro')}>
+                        {t`Back`}
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    if (stage === 'leaderboard') {
+        return (
+            <div className={classes.tabPanel}>
+                <QuizLeaderboard
+                    organizerId={organizer.id}
+                    initialAgeBand={ageBand}
+                    username={session?.username}
+                    onBack={() => setStage(leaderboardReturnStage)}
+                />
+            </div>
+        );
+    }
+
+    if (stage === 'profile' && session) {
+        return (
+            <div className={classes.tabPanel}>
+                <QuizProfile
+                    organizerId={organizer.id}
+                    session={session}
+                    onSignOut={handleSignOut}
+                    onBack={() => setStage('intro')}
+                />
+            </div>
+        );
+    }
+
+    if (stage === 'review') {
+        return (
+            <div className={classes.tabPanel}>
+                <AnswerReview
+                    puzzles={puzzles}
+                    questionOptions={questionOptions}
+                    answers={answers}
+                    onBack={() => setStage('result')}
+                />
+            </div>
+        );
+    }
+
     if (stage === 'intro') {
         return (
             <div className={classes.tabPanel}>
+                <div className={classes.playerBar} data-testid="puzzles-player-bar">
+                    {session ? (
+                        <>
+                            <span className={classes.playerName}><IconUser size={16}/> {t`Playing as ${session.username}`}</span>
+                            <button
+                                type="button"
+                                className={classes.linkButton}
+                                onClick={() => setStage('profile')}
+                                data-testid="puzzles-my-scores"
+                            >
+                                {t`My scores`}
+                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <span className={classes.playerName}>{t`Sign in to save your scores and earn points.`}</span>
+                            <button
+                                type="button"
+                                className={classes.linkButton}
+                                onClick={() => setStage('auth')}
+                                data-testid="puzzles-sign-in"
+                            >
+                                {t`Sign in / Sign up`}
+                            </button>
+                        </>
+                    )}
+                    <button
+                        type="button"
+                        className={classes.linkButton}
+                        onClick={openLeaderboard}
+                        data-testid="puzzles-leaderboard-link"
+                    >
+                        {t`Leaderboard`}
+                    </button>
+                </div>
                 <div className={classes.puzzleCard}>
                     <IconPuzzle size={40} className={classes.puzzleIcon}/>
                     <h3 className={classes.puzzleTitle}>{t`General Knowledge Challenge`}</h3>
@@ -231,10 +320,22 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
                     {bestPercentage !== null && (
                         <p className={classes.puzzleText}>{t`Your best score: ${bestPercentage}%`}</p>
                     )}
+                    {score < total && (
+                        <button
+                            type="button"
+                            className={classes.secondaryButton}
+                            onClick={() => setStage('review')}
+                            data-testid="puzzles-review-button"
+                        >
+                            <IconListCheck size={16}/> {t`See what I got wrong`}
+                        </button>
+                    )}
                     {ageBand && (
                         <SaveScorePrompt
                             key={attempt}
                             organizerId={organizer.id}
+                            session={session}
+                            onAuthenticated={signIn}
                             ageBand={ageBand}
                             score={score}
                             total={total}
@@ -243,7 +344,15 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
                     <button type="button" className={classes.primaryButton} onClick={() => ageBand && start(ageBand)}>
                         <IconRefresh size={16}/> {t`Take the test again`}
                     </button>
-                    <button type="button" className={classes.linkButton} onClick={() => setStage('intro')}>
+                    <button type="button" className={classes.linkButton} onClick={openLeaderboard}>
+                        {t`View the leaderboard`}
+                    </button>
+                    <button
+                        type="button"
+                        className={classes.linkButton}
+                        onClick={() => setStage('intro')}
+                        data-testid="puzzles-choose-age-group"
+                    >
                         {t`Choose a different age group`}
                     </button>
                 </div>

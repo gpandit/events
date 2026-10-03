@@ -14,6 +14,7 @@ class QuizResult extends BaseModel
             'score' => 'integer',
             'total_questions' => 'integer',
             'percentage' => 'integer',
+            'points' => 'integer',
             'taken_at' => 'datetime',
         ];
     }
@@ -21,5 +22,10 @@ class QuizResult extends BaseModel
     public function organizer(): BelongsTo
     {
         return $this->belongsTo(Organizer::class);
+    }
+
+    public function player(): BelongsTo
+    {
+        return $this->belongsTo(QuizPlayer::class, 'quiz_player_id');
     }
 }
