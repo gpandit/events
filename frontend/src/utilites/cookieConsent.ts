@@ -13,7 +13,7 @@ const CATEGORIES: ConsentCategory[] = ['analytics', 'advertising'];
 export const ALL_GRANTED: ConsentPreferences = {analytics: true, advertising: true};
 export const ALL_DENIED: ConsentPreferences = {analytics: false, advertising: false};
 
-export const isConsentBannerEnabled = (): boolean => getConfig('VITE_COOKIE_CONSENT_ENABLED') === 'true';
+export const isConsentBannerEnabled = (): boolean => getConfig('VITE_COOKIE_CONSENT_ENABLED') !== 'false';
 
 export const isEmbedded = (): boolean =>
     typeof window !== 'undefined' && (window.self !== window.top || window.location.pathname.startsWith('/widget'));

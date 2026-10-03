@@ -121,16 +121,6 @@ export const CollectInformation = () => {
                 email_confirmation: (value, values) =>
                     value !== values.order.email ? t`Email addresses do not match` : null,
             },
-            products: {
-                email_confirmation: (value, values, path) => {
-                    const index = parseInt(path.split('.')[1]);
-                    const product = values.products[index];
-                    if (product && product.email !== value) {
-                        return t`Email addresses do not match`;
-                    }
-                    return null;
-                },
-            },
         },
         validateInputOnBlur: true,
     });
@@ -178,16 +168,12 @@ export const CollectInformation = () => {
                         ...product,
                         first_name: form.values.order.first_name,
                         last_name: form.values.order.last_name,
-                        email: form.values.order.email,
-                        email_confirmation: form.values.order.email,
                     };
                 } else {
                     return {
                         ...product,
                         first_name: "",
                         last_name: "",
-                        email: "",
-                        email_confirmation: "",
                     };
                 }
             }
@@ -651,8 +637,7 @@ export const CollectInformation = () => {
                                 const currentProduct = form.values.products[currentProductIndex];
                                 const valuesMatchOrder = currentProduct &&
                                     currentProduct.first_name === form.values.order.first_name &&
-                                    currentProduct.last_name === form.values.order.last_name &&
-                                    currentProduct.email === form.values.order.email;
+                                    currentProduct.last_name === form.values.order.last_name;
 
                                 // Only show badge if copied AND values still match
                                 const showCopiedBadge = isCopied && productRequiresDetails && valuesMatchOrder;
@@ -696,28 +681,6 @@ export const CollectInformation = () => {
                                                         placeholder={t`Last Name`}
                                                         disabled={isLocked('last_name')}
                                                         {...form.getInputProps(`products.${currentProductIndex}.last_name`)}
-                                                    />
-                                                </InputGroup>
-
-                                                <InputGroup>
-                                                    <TextInput
-                                                        type={"email"}
-                                                        label={t`Email Address`}
-                                                        description={t`Optional - the order confirmation and tickets already go to the email above`}
-                                                        placeholder={t`Email Address`}
-                                                        disabled={isLocked('email')}
-                                                        rightSection={isEmailValid(form.values.products[currentProductIndex]?.email || '') ?
-                                                            <EmailCheckIcon/> : null}
-                                                        {...form.getInputProps(`products.${currentProductIndex}.email`)}
-                                                    />
-                                                    <TextInput
-                                                        type={"email"}
-                                                        label={t`Confirm Email Address`}
-                                                        placeholder={t`Confirm Email Address`}
-                                                        disabled={isLocked('email')}
-                                                        rightSection={isEmailValid(form.values.products[currentProductIndex]?.email_confirmation || '') ?
-                                                            <EmailCheckIcon/> : null}
-                                                        {...form.getInputProps(`products.${currentProductIndex}.email_confirmation`)}
                                                     />
                                                 </InputGroup>
                                             </>

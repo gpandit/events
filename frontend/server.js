@@ -172,7 +172,7 @@ Sitemap: ${frontendUrl}/sitemap.txt
             const envVariablesHtml = `<script>window.hievents = ${getViteEnvironmentVariables()};</script>`;
 
             const headSnippets = [];
-            if (process.env.VITE_COOKIE_CONSENT_ENABLED === 'true') {
+            if (process.env.VITE_COOKIE_CONSENT_ENABLED !== 'false') {
                 headSnippets.push(`<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{${googleConsentDefaults(req.cookies?.hi_cookie_consent)}});</script>`);
             }
             if (process.env.VITE_GOOGLE_ADS_CONVERSION_ID) {
