@@ -5,7 +5,7 @@
             @if($appLogo = config('app.email_logo_url'))
                 <img src="{{ $appLogo }}" class="logo" alt="{{ config('app.name') }}">
             @else
-                <img src="{{ config('app.frontend_url') }}/logos/hi-events-stacked-light.png" class="logo" alt="{{ config('app.name') }}">
+                <img src="{{ config('app.frontend_url') }}/logos/friends-of-school-logo-email.png" class="logo" alt="{{ config('app.name') }}">
             @endif
         </x-mail::header>
     </x-slot:header>
