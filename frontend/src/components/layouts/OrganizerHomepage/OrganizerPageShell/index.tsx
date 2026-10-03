@@ -8,6 +8,7 @@ import {useOrganizerTrackingPixels} from "../../../../hooks/useOrganizerTracking
 import {useOrganizerThemeStyles} from "../../../../hooks/useOrganizerThemeStyles.ts";
 import {removeTransparency} from "../../../../utilites/colorHelper.ts";
 import {OrganizerNav} from "../OrganizerNav";
+import {PageBanner} from "../PageBanner";
 import {SiteFooter} from "../SiteFooter";
 import {FloatingSiteControls} from "../../../common/FloatingSiteControls";
 import classes from '../OrganizerHomepage.module.scss';
@@ -97,7 +98,7 @@ export const OrganizerPageShell: React.FC<OrganizerPageShellProps> = ({organizer
 
                 <OrganizerNav organizer={organizer} active={activeNav}/>
 
-                {hero}
+                {hero ?? <PageBanner variant={activeNav}/>}
 
                 <div className={classes.container}>
                     <div className={classes.wrapper}>
