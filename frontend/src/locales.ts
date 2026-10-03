@@ -2,7 +2,7 @@ import {i18n} from "@lingui/core";
 
 export type SupportedLocales = "en" | "ar";
 
-export const availableLocales = ["en", "ar"];
+export const availableLocales: SupportedLocales[] = ["en"];
 
 export const localeToFlagEmojiMap: Record<SupportedLocales, string> = {
     en: '🇬🇧',
@@ -42,7 +42,7 @@ const dayjsLocaleLoaders: Partial<Record<SupportedLocales, () => Promise<unknown
 
 export async function dynamicActivateLocale(locale: string) {
     try {
-        locale = availableLocales.includes(locale) ? locale : "en";
+        locale = availableLocales.includes(locale as SupportedLocales) ? locale : "en";
         const [module] = await Promise.all([
             import(`./locales/${locale}.po`),
             dayjsLocaleLoaders[locale as SupportedLocales]?.().catch((error) => console.error("Error loading dayjs locale:", error)),
@@ -58,7 +58,7 @@ export async function dynamicActivateLocale(locale: string) {
 export const getSupportedLocale = (userLocale: string) => {
     const normalizedLocale = userLocale.toLowerCase();
 
-    if (availableLocales.includes(normalizedLocale)) {
+    if (availableLocales.includes(normalizedLocale as SupportedLocales)) {
         return normalizedLocale;
     }
 

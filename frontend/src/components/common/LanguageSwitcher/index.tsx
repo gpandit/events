@@ -1,5 +1,5 @@
 import {Select} from "@mantine/core";
-import {dynamicActivateLocale, getClientLocale, localeToNameMap, SupportedLocales} from "../../../locales.ts";
+import {availableLocales, dynamicActivateLocale, getClientLocale, SupportedLocales} from "../../../locales.ts";
 import {t} from "@lingui/macro";
 import {IconWorld} from "@tabler/icons-react";
 import {useLingui} from "@lingui/react";
@@ -31,7 +31,7 @@ export const LanguageSwitcher = () => {
                 width={180}
                 size={'xs'}
                 required
-                data={Object.keys(localeToNameMap).map(locale => ({
+                data={availableLocales.map(locale => ({
                     value: locale,
                     label: getLocaleName(locale as SupportedLocales),
                 }))}
