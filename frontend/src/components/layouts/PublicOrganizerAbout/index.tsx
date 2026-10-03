@@ -24,7 +24,7 @@ export const PublicOrganizerAbout = () => {
 
     return (
         <OrganizerPageShell organizer={loaderData.organizer} activeNav="about">
-            <OrganizerProfileCard organizer={loaderData.organizer} showContactButton={false}>
+            <OrganizerProfileCard organizer={loaderData.organizer} showContactButton={false} showDescription={false}>
                 <p className={classes.blurb}>
                     <Trans>
                         Friends of Repton has been supporting the school in managing various events onsite,

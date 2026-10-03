@@ -12,10 +12,11 @@ import classes from '../OrganizerHomepage.module.scss';
 interface OrganizerProfileCardProps {
     organizer: Organizer;
     showContactButton?: boolean;
+    showDescription?: boolean;
     children?: React.ReactNode;
 }
 
-export const OrganizerProfileCard: React.FC<OrganizerProfileCardProps> = ({organizer, showContactButton = true, children}) => {
+export const OrganizerProfileCard: React.FC<OrganizerProfileCardProps> = ({organizer, showContactButton = true, showDescription = true, children}) => {
     const [contactModalOpen, setContactModalOpen] = useState(false);
 
     const socialLinks = organizer.settings?.social_media_handles ? Object.entries(organizer.settings.social_media_handles)
@@ -118,7 +119,7 @@ export const OrganizerProfileCard: React.FC<OrganizerProfileCardProps> = ({organ
                                 </div>
                             </div>
                         </div>
-                        {organizer?.description && (
+                        {showDescription && organizer?.description && (
                             <UserGeneratedContent
                                 className={classes.description}
                                 html={organizer.description}
