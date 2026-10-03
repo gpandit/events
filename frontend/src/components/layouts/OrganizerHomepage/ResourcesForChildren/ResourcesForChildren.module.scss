@@ -70,6 +70,56 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     color: var(--organizer-primary-text-color, #1a1a1a);
 }
 
+.puzzleSubtitle {
+    margin: 8px 0 0;
+    font-weight: 700;
+    color: var(--organizer-primary-text-color, #1a1a1a);
+}
+
+.ageOptions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+
+    @include mixins.respond-below(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.ageOption,
+.ageOptionActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 10px;
+    border-radius: 12px;
+    border: 2px solid var(--organizer-border-color, rgba(0, 0, 0, 0.15));
+    background: transparent;
+    color: var(--organizer-primary-text-color, #1a1a1a);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+        border-color: var(--organizer-primary-color, #8b5cf6);
+    }
+}
+
+.ageOptionActive {
+    background: var(--organizer-primary-color, #8b5cf6);
+    border-color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-contrast, #ffffff);
+}
+
+.ageOptionBest {
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
 .puzzleText {
     margin: 0;
     max-width: 480px;
@@ -300,4 +350,43 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 .shopLinkLogo {
     height: 26px;
     width: auto;
+}
+
+.primaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-contrast, #ffffff);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.linkButton {
+    border: none;
+    background: none;
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

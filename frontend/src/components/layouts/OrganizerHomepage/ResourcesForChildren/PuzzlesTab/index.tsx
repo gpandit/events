@@ -1,71 +1,106 @@
 import {useCallback, useEffect, useState} from 'react';
 import {t} from '@lingui/macro';
 import {IconClock, IconPuzzle, IconRefresh, IconTrophy} from '@tabler/icons-react';
-import {WORD_PUZZLES} from './wordPuzzlesData.ts';
+import {AGE_BANDS, AgeBand, Puzzle, PUZZLES_BY_AGE_BAND, PuzzleSubject} from './generalKnowledgePuzzles.ts';
 import {getQuizPercentage, getQuizRank, QuizRank, shuffle} from './quizScoring.ts';
 import classes from '../ResourcesForChildren.module.scss';
 
 const SECONDS_PER_QUESTION = 30;
-const BEST_SCORE_STORAGE_KEY = 'fos_word_quiz_best';
+const QUESTIONS_PER_TEST = 20;
+const BEST_SCORE_STORAGE_KEY = 'fos_general_knowledge_quiz_best';
 
 type QuizStage = 'intro' | 'playing' | 'result';
 
-const readBestPercentage = (): number | null => {
+type BestScores = Partial<Record<AgeBand, number>>;
+
+const readBestScores = (): BestScores => {
     try {
         const stored = window.localStorage.getItem(BEST_SCORE_STORAGE_KEY);
-        return stored === null ? null : Number(stored);
+        return stored ? JSON.parse(stored) as BestScores : {};
     } catch {
-        return null;
+        return {};
     }
 };
 
-const writeBestPercentage = (percentage: number) => {
+const writeBestScores = (scores: BestScores) => {
     try {
-        window.localStorage.setItem(BEST_SCORE_STORAGE_KEY, String(percentage));
+        window.localStorage.setItem(BEST_SCORE_STORAGE_KEY, JSON.stringify(scores));
     } catch {
         return;
+    }
+};
+
+const ageBandLabel = (band: AgeBand) => {
+    switch (band) {
+        case '5-7':
+            return t`Ages 5 to 7`;
+        case '8-10':
+            return t`Ages 8 to 10`;
+        case '11-13':
+            return t`Ages 11 to 13`;
+        default:
+            return t`Ages 14 to 17`;
+    }
+};
+
+const subjectLabel = (subject: PuzzleSubject) => {
+    switch (subject) {
+        case 'English':
+            return t`English`;
+        case 'Science':
+            return t`Science`;
+        case 'Maths':
+            return t`Maths`;
+        case 'Geography':
+            return t`Geography`;
+        default:
+            return t`History`;
     }
 };
 
 const rankContent = (rank: QuizRank) => {
     switch (rank) {
         case 'HIGH_FLYER':
-            return {title: t`High Flyer!`, message: t`Outstanding! You have an excellent vocabulary.`};
+            return {title: t`High Flyer!`, message: t`Outstanding! You really know your stuff.`};
         case 'FLYER':
-            return {title: t`Flyer`, message: t`Well done! You have a strong vocabulary.`};
+            return {title: t`Flyer`, message: t`Well done! You have great general knowledge.`};
         case 'JUST_A_FLYER':
             return {title: t`Just a Flyer`, message: t`Good effort! A little more practice and you'll soar.`};
         default:
             return {
                 title: t`Keep Learning`,
-                message: t`We recommend learning some new words and taking the test again.`,
+                message: t`Keep exploring and learning new things, then try the test again.`,
             };
     }
 };
 
 export const PuzzlesTab = () => {
     const [stage, setStage] = useState<QuizStage>('intro');
+    const [ageBand, setAgeBand] = useState<AgeBand | null>(null);
+    const [puzzles, setPuzzles] = useState<Puzzle[]>([]);
     const [questionOptions, setQuestionOptions] = useState<string[][]>([]);
     const [current, setCurrent] = useState(0);
     const [score, setScore] = useState(0);
     const [timeLeft, setTimeLeft] = useState(SECONDS_PER_QUESTION);
-    const [bestPercentage, setBestPercentage] = useState<number | null>(null);
+    const [bestScores, setBestScores] = useState<BestScores>({});
 
-    const total = WORD_PUZZLES.length;
+    const total = puzzles.length;
 
     useEffect(() => {
-        setBestPercentage(readBestPercentage());
+        setBestScores(readBestScores());
     }, []);
 
     const finish = useCallback((finalScore: number) => {
-        const percentage = getQuizPercentage(finalScore, total);
-        setBestPercentage((previous) => {
-            const best = Math.max(previous ?? 0, percentage);
-            writeBestPercentage(best);
-            return best;
-        });
+        if (ageBand) {
+            const percentage = getQuizPercentage(finalScore, total);
+            setBestScores((previous) => {
+                const next = {...previous, [ageBand]: Math.max(previous[ageBand] ?? 0, percentage)};
+                writeBestScores(next);
+                return next;
+            });
+        }
         setStage('result');
-    }, [total]);
+    }, [ageBand, total]);
 
     const advance = useCallback((finalScore: number) => {
         if (current + 1 >= total) {
@@ -77,11 +112,11 @@ export const PuzzlesTab = () => {
     }, [current, total, finish]);
 
     const answer = useCallback((choice: string | null) => {
-        const isCorrect = choice !== null && choice === WORD_PUZZLES[current].answer;
+        const isCorrect = choice !== null && choice === puzzles[current].answer;
         const nextScore = isCorrect ? score + 1 : score;
         setScore(nextScore);
         advance(nextScore);
-    }, [current, score, advance]);
+    }, [puzzles, current, score, advance]);
 
     useEffect(() => {
         if (stage !== 'playing') {
@@ -97,28 +132,55 @@ export const PuzzlesTab = () => {
         return () => window.clearTimeout(timer);
     }, [stage, timeLeft, answer]);
 
-    const start = () => {
-        setQuestionOptions(WORD_PUZZLES.map((puzzle) => shuffle(puzzle.options)));
+    const start = (band: AgeBand) => {
+        const selected = shuffle(PUZZLES_BY_AGE_BAND[band]).slice(0, QUESTIONS_PER_TEST);
+        setAgeBand(band);
+        setPuzzles(selected);
+        setQuestionOptions(selected.map((puzzle) => shuffle(puzzle.options)));
         setCurrent(0);
         setScore(0);
         setTimeLeft(SECONDS_PER_QUESTION);
         setStage('playing');
     };
 
+    const bestPercentage = ageBand ? bestScores[ageBand] ?? null : null;
+
     if (stage === 'intro') {
         return (
             <div className={classes.tabPanel}>
                 <div className={classes.puzzleCard}>
                     <IconPuzzle size={40} className={classes.puzzleIcon}/>
-                    <h3 className={classes.puzzleTitle}>{t`Word Power Challenge`}</h3>
+                    <h3 className={classes.puzzleTitle}>{t`General Knowledge Challenge`}</h3>
                     <p className={classes.puzzleText}>
-                        {t`${total} word puzzles for senior school students. Choose the right answer from 4 choices. You have ${SECONDS_PER_QUESTION} seconds for each question.`}
+                        {t`English, Science, Maths, Geography and History questions. Choose your age group, then answer ${QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have ${SECONDS_PER_QUESTION} seconds for each question.`}
                     </p>
-                    {bestPercentage !== null && (
-                        <p className={classes.puzzleText}>{t`Your best score so far: ${bestPercentage}%`}</p>
-                    )}
-                    <button type="button" className={classes.storySubmit} onClick={start}>
-                        {t`Start the challenge`}
+                    <p className={classes.puzzleSubtitle}>{t`Choose your age group`}</p>
+                    <div className={classes.ageOptions} role="radiogroup" aria-label={t`Choose your age group`}>
+                        {AGE_BANDS.map((band) => (
+                            <button
+                                key={band}
+                                type="button"
+                                role="radio"
+                                aria-checked={ageBand === band}
+                                className={ageBand === band ? classes.ageOptionActive : classes.ageOption}
+                                onClick={() => setAgeBand(band)}
+                                data-testid={`puzzles-age-${band}`}
+                            >
+                                {ageBandLabel(band)}
+                                {bestScores[band] !== undefined && (
+                                    <span className={classes.ageOptionBest}>{t`Best: ${bestScores[band]}%`}</span>
+                                )}
+                            </button>
+                        ))}
+                    </div>
+                    <button
+                        type="button"
+                        className={classes.primaryButton}
+                        onClick={() => ageBand && start(ageBand)}
+                        disabled={!ageBand}
+                        data-testid="puzzles-start-button"
+                    >
+                        {t`Start the test`}
                     </button>
                 </div>
             </div>
@@ -139,21 +201,24 @@ export const PuzzlesTab = () => {
                     {bestPercentage !== null && (
                         <p className={classes.puzzleText}>{t`Your best score: ${bestPercentage}%`}</p>
                     )}
-                    <button type="button" className={classes.storySubmit} onClick={start}>
+                    <button type="button" className={classes.primaryButton} onClick={() => ageBand && start(ageBand)}>
                         <IconRefresh size={16}/> {t`Take the test again`}
+                    </button>
+                    <button type="button" className={classes.linkButton} onClick={() => setStage('intro')}>
+                        {t`Choose a different age group`}
                     </button>
                 </div>
             </div>
         );
     }
 
-    const puzzle = WORD_PUZZLES[current];
+    const puzzle = puzzles[current];
 
     return (
         <div className={classes.tabPanel}>
             <div className={classes.puzzleCard}>
                 <div className={classes.quizHeader}>
-                    <span>{t`Question ${current + 1} of ${total}`}</span>
+                    <span>{t`Question ${current + 1} of ${total}`} · {subjectLabel(puzzle.subject)}</span>
                     <span className={timeLeft <= 5 ? classes.timerLow : classes.timer} aria-live="off">
                         <IconClock size={16}/> {timeLeft}s
                     </span>

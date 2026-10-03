@@ -14600,3 +14600,71 @@ msgstr "Your best score so far: {bestPercentage}%"
 #: src/components/layouts/OrganizerHomepage
 msgid "Your best score: {bestPercentage}%"
 msgstr "Your best score: {bestPercentage}%"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Ages 11 to 13"
+msgstr "Ages 11 to 13"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Ages 14 to 17"
+msgstr "Ages 14 to 17"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Ages 5 to 7"
+msgstr "Ages 5 to 7"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Ages 8 to 10"
+msgstr "Ages 8 to 10"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Best: {0}%"
+msgstr "Best: {0}%"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Choose a different age group"
+msgstr "Choose a different age group"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Choose your age group"
+msgstr "Choose your age group"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "English, Science, Maths, Geography and History questions. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
+msgstr "English, Science, Maths, Geography and History questions. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "General Knowledge Challenge"
+msgstr "General Knowledge Challenge"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Geography"
+msgstr "Geography"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "History"
+msgstr "History"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Keep exploring and learning new things, then try the test again."
+msgstr "Keep exploring and learning new things, then try the test again."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Maths"
+msgstr "Maths"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Outstanding! You really know your stuff."
+msgstr "Outstanding! You really know your stuff."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Science"
+msgstr "Science"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Start the test"
+msgstr "Start the test"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Well done! You have great general knowledge."
+msgstr "Well done! You have great general knowledge."
