@@ -21,7 +21,7 @@
     justify-content: center;
     position: relative;
     z-index: 1;
-    padding: 16px 18px 12px;
+    padding: 20px 18px 16px;
     margin-bottom: 4px;
     flex-shrink: 0;
 
@@ -31,9 +31,9 @@
     }
 
     img {
-      max-height: 36px;
-      max-width: 160px;
-      width: auto;
+      width: 170px;
+      max-width: 100%;
+      height: auto;
     }
   }
 
