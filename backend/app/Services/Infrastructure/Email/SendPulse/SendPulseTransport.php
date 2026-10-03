@@ -49,7 +49,7 @@ class SendPulseTransport extends AbstractTransport
         ]);
 
         try {
-            $this->request()
+            $response = $this->request()
                 ->post(self::API_URL.'/smtp/emails', ['email' => $payload])
                 ->throw();
         } catch (RequestException|ConnectionException $exception) {
@@ -57,6 +57,10 @@ class SendPulseTransport extends AbstractTransport
                 'SendPulse rejected the message: '.$exception->getMessage(),
                 previous: $exception,
             );
+        }
+
+        if ($response->json('result') !== true) {
+            throw new SendPulseDeliveryException('SendPulse did not accept the message: '.$response->body());
         }
     }
 

@@ -102,6 +102,18 @@ class SendPulseTransportTest extends TestCase
         $this->transport()->send($this->email());
     }
 
+    public function test_throws_when_send_pulse_reports_unsuccessful_result(): void
+    {
+        $this->http->fake([
+            'api.sendpulse.com/oauth/access_token' => $this->http->response(['access_token' => 'tok']),
+            'api.sendpulse.com/smtp/emails' => $this->http->response(['result' => false]),
+        ]);
+
+        $this->expectException(SendPulseDeliveryException::class);
+
+        $this->transport()->send($this->email());
+    }
+
     private function transport(): SendPulseTransport
     {
         return new SendPulseTransport($this->http, $this->cache, 'id', 'secret');
