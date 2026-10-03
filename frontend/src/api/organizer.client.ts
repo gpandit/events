@@ -2,6 +2,7 @@ import {api} from "./client";
 import {
     ChildStorySubmission,
     ChildStorySubmissionStatus,
+    CustomerSession,
     Event,
     GenericDataResponse,
     GenericPaginatedResponse,
@@ -12,6 +13,10 @@ import {
     OrganizerStats,
     PublishedChildStorySubmission,
     QueryFilters,
+    QuizLeaderboardEntry,
+    QuizPlayerProfile,
+    QuizPlayerSession,
+    QuizResultOutcome,
 } from "../types";
 import {queryParamsHelper} from "../utilites/queryParamsHelper.ts";
 import {publicApi} from "./public-client.ts";
@@ -212,17 +217,105 @@ export const organizerPublicClient = {
         return response.data;
     },
 
-    submitQuizResult: async (organizerId: IdParam, result: {
+    registerQuizPlayer: async (organizerId: IdParam, player: {
         first_name: string;
         last_name: string;
-        email: string;
+        email?: string;
+        password: string;
+    }) => {
+        const response = await publicApi.post<GenericDataResponse<QuizPlayerSession>>(
+            `organizers/${organizerId}/quiz-players/register`,
+            player
+        );
+        return response.data;
+    },
+
+    loginQuizPlayer: async (organizerId: IdParam, credentials: { username: string; password: string }) => {
+        const response = await publicApi.post<GenericDataResponse<QuizPlayerSession>>(
+            `organizers/${organizerId}/quiz-players/login`,
+            credentials
+        );
+        return response.data;
+    },
+
+    getQuizPlayerProfile: async (organizerId: IdParam, token: string) => {
+        const response = await publicApi.get<GenericDataResponse<QuizPlayerProfile>>(
+            `organizers/${organizerId}/quiz-players/me`,
+            {headers: {'X-Quiz-Token': token}}
+        );
+        return response.data;
+    },
+
+    submitQuizResult: async (organizerId: IdParam, token: string, result: {
         age_band: string;
         score: number;
         total_questions: number;
     }) => {
-        const response = await publicApi.post<GenericDataResponse<{ message: string }>>(
+        const response = await publicApi.post<GenericDataResponse<QuizResultOutcome>>(
             `organizers/${organizerId}/quiz-results`,
-            result
+            result,
+            {headers: {'X-Quiz-Token': token}}
+        );
+        return response.data;
+    },
+
+    requestQuizPasswordReset: async (organizerId: IdParam, username: string) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/quiz-players/forgot-password`,
+            {username}
+        );
+        return response.data;
+    },
+
+    resetQuizPlayerPassword: async (organizerId: IdParam, payload: { token: string; password: string }) => {
+        const response = await publicApi.post<GenericDataResponse<QuizPlayerSession>>(
+            `organizers/${organizerId}/quiz-players/reset-password`,
+            payload
+        );
+        return response.data;
+    },
+
+    registerCustomer: async (organizerId: IdParam, customer: {
+        first_name: string;
+        last_name: string;
+        email: string;
+        phone?: string;
+    }) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/customers/register`,
+            customer
+        );
+        return response.data;
+    },
+
+    requestCustomerPasswordSetup: async (organizerId: IdParam, email: string) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/customers/forgot-password`,
+            {email}
+        );
+        return response.data;
+    },
+
+    setCustomerPassword: async (organizerId: IdParam, payload: { token: string; password: string }) => {
+        const response = await publicApi.post<GenericDataResponse<CustomerSession>>(
+            `organizers/${organizerId}/customers/set-password`,
+            payload
+        );
+        return response.data;
+    },
+
+    loginCustomer: async (organizerId: IdParam, credentials: { email: string; password: string }) => {
+        const response = await publicApi.post<GenericDataResponse<CustomerSession>>(
+            `organizers/${organizerId}/customers/login`,
+            credentials
+        );
+        return response.data;
+    },
+
+    getQuizLeaderboard: async (organizerId: IdParam, ageBand: string) => {
+        const response = await publicApi.get<GenericDataResponse<QuizLeaderboardEntry[]>>(
+            `organizers/${organizerId}/quiz-leaderboard`,
+            {params: {age_band: ageBand}}
         );
         return response.data;
     },

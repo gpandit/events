@@ -6,6 +6,7 @@ import {IconChevronDown} from "@tabler/icons-react";
 import {Organizer} from "../../../../types.ts";
 import {Wordmark} from "../../../common/Wordmark";
 import {
+    organizerAccountPath,
     organizerEventsPath,
     organizerHomepagePath,
     organizerResourcesPath,
@@ -14,7 +15,7 @@ import classes from './OrganizerNav.module.scss';
 
 interface OrganizerNavProps {
     organizer: Organizer;
-    active?: 'home' | 'events' | 'about' | 'stories' | 'resources';
+    active?: 'home' | 'events' | 'about' | 'stories' | 'resources' | 'account';
 }
 
 export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) => {
@@ -81,6 +82,9 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                     <Link to={`${homePath}/about`} className={linkClass(active === 'about')}>
                         {t`About Us`}
                     </Link>
+                    <Link to={organizerAccountPath(organizer)} className={linkClass(active === 'account')}>
+                        {t`Parent Account`}
+                    </Link>
                     <Link to="/auth/login" className={classes.link}>
                         {t`My Account`}
                     </Link>
@@ -130,6 +134,13 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                     </div>
                     <Link to={`${homePath}/about`} className={linkClass(active === 'about')} onClick={closeMenu}>
                         {t`About Us`}
+                    </Link>
+                    <Link
+                        to={organizerAccountPath(organizer)}
+                        className={linkClass(active === 'account')}
+                        onClick={closeMenu}
+                    >
+                        {t`Parent Account`}
                     </Link>
                     <Link to="/auth/login" className={classes.link} onClick={closeMenu}>
                         {t`My Account`}

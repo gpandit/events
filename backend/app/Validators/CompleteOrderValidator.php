@@ -74,6 +74,7 @@ class CompleteOrderValidator extends BaseValidator
             'order.last_name' => ['required', 'string', 'max:40'],
             'order.questions' => new OrderQuestionRule($orderQuestions, $products),
             'order.email' => 'required|email',
+            'order.phone' => 'nullable|string|max:30',
             'order.email_confirmation' => 'required|email|same:order.email',
             'products' => new ProductQuestionRule(
                 $productQuestions,

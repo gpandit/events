@@ -3,7 +3,12 @@ import {Link} from "react-router";
 import {t} from "@lingui/macro";
 import {IconBook2, IconBrandInstagram, IconLoader2, IconMail, IconSend} from "@tabler/icons-react";
 import {Organizer} from "../../../../types.ts";
-import {organizerEventsPath, organizerHomepagePath, organizerResourcesPath} from "../../../../utilites/urlHelper.ts";
+import {
+    organizerAccountPath,
+    organizerEventsPath,
+    organizerHomepagePath,
+    organizerResourcesPath,
+} from "../../../../utilites/urlHelper.ts";
 import {getConfig} from "../../../../utilites/config.ts";
 import {PoweredByFooter} from "../../../common/PoweredByFooter";
 import {PaymentIcons} from "../../../common/PaymentIcons";
@@ -126,6 +131,9 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                             className={classes.footerNavLink}
                         >
                             {t`Creative Corner`}
+                        </Link>
+                        <Link to={organizerAccountPath(organizer)} className={classes.footerNavLink}>
+                            {t`Parent Account`}
                         </Link>
                         <Link to="/auth/login" className={classes.footerNavLink}>
                             {t`My Account`}

@@ -1,143 +1,113 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {t} from '@lingui/macro';
-import {IconLoader2} from '@tabler/icons-react';
-import {IdParam} from '../../../../../types.ts';
-import {useGetMe} from '../../../../../queries/useGetMe.ts';
+import {IconLoader2, IconStarFilled} from '@tabler/icons-react';
+import {IdParam, QuizPlayerSession, QuizResultOutcome} from '../../../../../types.ts';
 import {useSubmitQuizResult} from '../../../../../mutations/useSubmitQuizResult.ts';
-import {showError, showSuccess} from '../../../../../utilites/notifications.tsx';
+import {QuizAuthForm} from './QuizAuthForm.tsx';
 import classes from '../ResourcesForChildren.module.scss';
 
 interface SaveScorePromptProps {
     organizerId: IdParam;
+    session: QuizPlayerSession | null;
+    onAuthenticated: (session: QuizPlayerSession) => void;
     ageBand: string;
     score: number;
     total: number;
 }
 
-type PromptStage = 'ask' | 'form' | 'saved' | 'declined';
+type PromptStage = 'ask' | 'auth' | 'declined';
 
-const emptyValues = {first_name: '', last_name: '', email: ''};
+interface SaveResultProps extends Omit<SaveScorePromptProps, 'session' | 'onAuthenticated'> {
+    session: QuizPlayerSession;
+}
 
-export const SaveScorePrompt: React.FC<SaveScorePromptProps> = ({organizerId, ageBand, score, total}) => {
-    const {data: user, isLoading: isLoadingUser} = useGetMe();
-    const mutation = useSubmitQuizResult(organizerId);
-    const [stage, setStage] = useState<PromptStage>('ask');
-    const [values, setValues] = useState(emptyValues);
-    const [error, setError] = useState<string | null>(null);
-    const autoSaved = useRef(false);
-
-    const save = (details: typeof emptyValues, onSaved: () => void) => {
-        mutation.mutate(
-            {...details, age_band: ageBand, score, total_questions: total},
-            {
-                onSuccess: onSaved,
-                onError: (err: any) => showError(err?.response?.data?.message || t`Failed to save your score. Please try again.`),
-            },
-        );
-    };
+const SaveResult: React.FC<SaveResultProps> = ({organizerId, session, ageBand, score, total}) => {
+    const mutation = useSubmitQuizResult(organizerId, session.token);
+    const [outcome, setOutcome] = useState<QuizResultOutcome | null>(null);
+    const submitted = useRef(false);
 
     useEffect(() => {
-        if (!user || autoSaved.current) {
+        if (submitted.current) {
             return;
         }
-        autoSaved.current = true;
-        save(
-            {first_name: user.first_name, last_name: user.last_name, email: user.email},
-            () => setStage('saved'),
+        submitted.current = true;
+        mutation.mutate(
+            {age_band: ageBand, score, total_questions: total},
+            {onSuccess: (response) => setOutcome(response.data)},
         );
-    }, [user]);
+    }, []);
 
-    const handleSubmit = (event: React.FormEvent) => {
-        event.preventDefault();
-
-        if (!values.first_name.trim() || !values.last_name.trim() || !values.email.trim()) {
-            setError(t`Please fill in your first name, last name and email`);
-            return;
-        }
-
-        setError(null);
-        save(values, () => {
-            showSuccess(t`Your score has been saved.`);
-            setStage('saved');
-        });
-    };
-
-    if (isLoadingUser || stage === 'declined') {
-        return null;
+    if (mutation.isError) {
+        return <p className={classes.saveError} role="alert">{t`We could not save your score. Please try again later.`}</p>;
     }
 
-    if (stage === 'saved') {
-        return <p className={classes.puzzleText}>{t`Your score has been saved.`}</p>;
-    }
-
-    if (user) {
-        return null;
-    }
-
-    if (stage === 'ask') {
-        return (
-            <div className={classes.savePrompt}>
-                <p className={classes.puzzleSubtitle}>{t`Would you like to save your score?`}</p>
-                <div className={classes.saveActions}>
-                    <button
-                        type="button"
-                        className={classes.primaryButton}
-                        onClick={() => setStage('form')}
-                        data-testid="puzzles-save-score-yes"
-                    >
-                        {t`Yes, save my score`}
-                    </button>
-                    <button
-                        type="button"
-                        className={classes.linkButton}
-                        onClick={() => setStage('declined')}
-                        data-testid="puzzles-save-score-no"
-                    >
-                        {t`No thanks`}
-                    </button>
-                </div>
-            </div>
-        );
+    if (!outcome) {
+        return <p className={classes.puzzleText}><IconLoader2 size={16}/> {t`Saving your score...`}</p>;
     }
 
     return (
-        <form onSubmit={handleSubmit} className={classes.saveForm}>
-            <p className={classes.puzzleText}>{t`Enter your details to sign in or sign up and save your score.`}</p>
-            <input
-                type="text"
-                className={classes.saveInput}
-                placeholder={t`First name`}
-                aria-label={t`First name`}
-                value={values.first_name}
-                onChange={(e) => setValues({...values, first_name: e.target.value})}
+        <div className={classes.pointsBadge} data-testid="puzzles-points-earned">
+            <IconStarFilled size={20}/>
+            <span>{t`You earned ${outcome.points_awarded} points!`}</span>
+            <span className={classes.pointsTotal}>
+                {t`${session.username} now has ${outcome.total_points} points in this age group.`}
+            </span>
+        </div>
+    );
+};
+
+export const SaveScorePrompt: React.FC<SaveScorePromptProps> = ({
+                                                                   organizerId,
+                                                                   session,
+                                                                   onAuthenticated,
+                                                                   ageBand,
+                                                                   score,
+                                                                   total,
+                                                               }) => {
+    const [stage, setStage] = useState<PromptStage>('ask');
+
+    if (session) {
+        return (
+            <SaveResult
+                organizerId={organizerId}
+                session={session}
+                ageBand={ageBand}
+                score={score}
+                total={total}
             />
-            <input
-                type="text"
-                className={classes.saveInput}
-                placeholder={t`Last name`}
-                aria-label={t`Last name`}
-                value={values.last_name}
-                onChange={(e) => setValues({...values, last_name: e.target.value})}
-            />
-            <input
-                type="email"
-                className={classes.saveInput}
-                placeholder={t`Email`}
-                aria-label={t`Email`}
-                value={values.email}
-                onChange={(e) => setValues({...values, email: e.target.value})}
-            />
-            {error && <p className={classes.saveError}>{error}</p>}
-            <button
-                type="submit"
-                className={classes.primaryButton}
-                disabled={mutation.isPending}
-                data-testid="puzzles-save-score-submit"
-            >
-                {mutation.isPending && <IconLoader2 size={16}/>}
-                {t`Save my score`}
-            </button>
-        </form>
+        );
+    }
+
+    if (stage === 'declined') {
+        return null;
+    }
+
+    if (stage === 'auth') {
+        return <QuizAuthForm organizerId={organizerId} onAuthenticated={onAuthenticated}/>;
+    }
+
+    return (
+        <div className={classes.savePrompt}>
+            <p className={classes.puzzleSubtitle}>{t`Would you like to save your score and earn points?`}</p>
+            <div className={classes.saveActions}>
+                <button
+                    type="button"
+                    className={classes.primaryButton}
+                    onClick={() => setStage('auth')}
+                    data-testid="puzzles-save-score-yes"
+                >
+                    {t`Yes, save my score`}
+                </button>
+                <button
+                    type="button"
+                    className={classes.linkButton}
+                    onClick={() => setStage('declined')}
+                    data-testid="puzzles-save-score-no"
+                >
+                    {t`No thanks`}
+                </button>
+            </div>
+        </div>
     );
 };
 

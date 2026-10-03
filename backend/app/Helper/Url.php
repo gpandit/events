@@ -28,6 +28,10 @@ class Url
 
     public const TICKET_LOOKUP = 'app.frontend_urls.ticket_lookup';
 
+    public const CUSTOMER_ACCOUNT = 'app.frontend_urls.customer_account';
+
+    public const QUIZ_PASSWORD_RESET = 'app.frontend_urls.quiz_password_reset';
+
     public const ACCOUNT_DANGER_ZONE = 'app.frontend_urls.account_danger_zone';
 
     public static function getFrontEndUrlFromConfig(string $key, array $queryParams = []): string

@@ -12,9 +12,7 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const PLURAL_NAME = 'quiz_results';
     final public const ID = 'id';
     final public const ORGANIZER_ID = 'organizer_id';
-    final public const FIRST_NAME = 'first_name';
-    final public const LAST_NAME = 'last_name';
-    final public const EMAIL = 'email';
+    final public const QUIZ_PLAYER_ID = 'quiz_player_id';
     final public const AGE_BAND = 'age_band';
     final public const SCORE = 'score';
     final public const TOTAL_QUESTIONS = 'total_questions';
@@ -22,28 +20,26 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const TAKEN_AT = 'taken_at';
     final public const CREATED_AT = 'created_at';
     final public const UPDATED_AT = 'updated_at';
+    final public const POINTS = 'points';
 
     protected int $id;
     protected int $organizer_id;
-    protected string $first_name;
-    protected string $last_name;
-    protected string $email;
+    protected int $quiz_player_id;
     protected string $age_band;
     protected int $score;
     protected int $total_questions;
     protected int $percentage;
-    protected ?string $taken_at = null;
+    protected string $taken_at;
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
+    protected int $points = 0;
 
     public function toArray(): array
     {
         return [
                     'id' => $this->id ?? null,
                     'organizer_id' => $this->organizer_id ?? null,
-                    'first_name' => $this->first_name ?? null,
-                    'last_name' => $this->last_name ?? null,
-                    'email' => $this->email ?? null,
+                    'quiz_player_id' => $this->quiz_player_id ?? null,
                     'age_band' => $this->age_band ?? null,
                     'score' => $this->score ?? null,
                     'total_questions' => $this->total_questions ?? null,
@@ -51,6 +47,7 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
                     'taken_at' => $this->taken_at ?? null,
                     'created_at' => $this->created_at ?? null,
                     'updated_at' => $this->updated_at ?? null,
+                    'points' => $this->points ?? null,
                 ];
     }
 
@@ -76,37 +73,15 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
         return $this->organizer_id;
     }
 
-    public function setFirstName(string $first_name): self
+    public function setQuizPlayerId(int $quiz_player_id): self
     {
-        $this->first_name = $first_name;
+        $this->quiz_player_id = $quiz_player_id;
         return $this;
     }
 
-    public function getFirstName(): string
+    public function getQuizPlayerId(): int
     {
-        return $this->first_name;
-    }
-
-    public function setLastName(string $last_name): self
-    {
-        $this->last_name = $last_name;
-        return $this;
-    }
-
-    public function getLastName(): string
-    {
-        return $this->last_name;
-    }
-
-    public function setEmail(string $email): self
-    {
-        $this->email = $email;
-        return $this;
-    }
-
-    public function getEmail(): string
-    {
-        return $this->email;
+        return $this->quiz_player_id;
     }
 
     public function setAgeBand(string $age_band): self
@@ -153,13 +128,13 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
         return $this->percentage;
     }
 
-    public function setTakenAt(?string $taken_at): self
+    public function setTakenAt(string $taken_at): self
     {
         $this->taken_at = $taken_at;
         return $this;
     }
 
-    public function getTakenAt(): ?string
+    public function getTakenAt(): string
     {
         return $this->taken_at;
     }
@@ -184,5 +159,16 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     public function getUpdatedAt(): ?string
     {
         return $this->updated_at;
+    }
+
+    public function setPoints(int $points): self
+    {
+        $this->points = $points;
+        return $this;
+    }
+
+    public function getPoints(): int
+    {
+        return $this->points;
     }
 }

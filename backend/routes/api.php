@@ -184,7 +184,17 @@ use HiEvents\Http\Actions\Organizers\Orders\GetOrganizerOrdersAction;
 use HiEvents\Http\Actions\Organizers\Public\GetPublishedChildStorySubmissionsPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\SendOrganizerContactMessagePublicAction;
 use HiEvents\Http\Actions\Organizers\Public\SubmitChildStorySubmissionPublicAction;
-use HiEvents\Http\Actions\Organizers\Public\SubmitQuizResultPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Customer\LoginCustomerPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Customer\RegisterCustomerPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Customer\RequestCustomerPasswordSetupPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Customer\SetCustomerPasswordPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\RequestQuizPasswordResetPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\ResetQuizPlayerPasswordPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\GetQuizLeaderboardPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\GetQuizPlayerProfilePublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\LoginQuizPlayerPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\RegisterQuizPlayerPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\SubmitQuizResultPublicAction;
 use HiEvents\Http\Actions\Public\SubmitSiteContactMessageAction;
 use HiEvents\Http\Actions\Public\SubmitVolunteerSignupAction;
 use HiEvents\Http\Actions\Organizers\Settings\GetOrganizerSettingsAction;
@@ -629,8 +639,28 @@ $router->prefix('/public')->group(
         $router->post('/organizers/{organizerId}/child-story-submissions', SubmitChildStorySubmissionPublicAction::class)
             ->middleware('throttle:5,1');
         $router->get('/organizers/{organizerId}/child-story-submissions', GetPublishedChildStorySubmissionsPublicAction::class);
-        $router->post('/organizers/{organizerId}/quiz-results', SubmitQuizResultPublicAction::class)
+        $router->post('/organizers/{organizerId}/quiz-players/register', RegisterQuizPlayerPublicAction::class)
             ->middleware('throttle:10,1');
+        $router->post('/organizers/{organizerId}/quiz-players/login', LoginQuizPlayerPublicAction::class)
+            ->middleware('throttle:10,1');
+        $router->post('/organizers/{organizerId}/quiz-players/forgot-password', RequestQuizPasswordResetPublicAction::class)
+            ->middleware('throttle:5,1');
+        $router->post('/organizers/{organizerId}/quiz-players/reset-password', ResetQuizPlayerPasswordPublicAction::class)
+            ->middleware('throttle:10,1');
+        $router->post('/organizers/{organizerId}/customers/register', RegisterCustomerPublicAction::class)
+            ->middleware('throttle:5,1');
+        $router->post('/organizers/{organizerId}/customers/forgot-password', RequestCustomerPasswordSetupPublicAction::class)
+            ->middleware('throttle:5,1');
+        $router->post('/organizers/{organizerId}/customers/set-password', SetCustomerPasswordPublicAction::class)
+            ->middleware('throttle:10,1');
+        $router->post('/organizers/{organizerId}/customers/login', LoginCustomerPublicAction::class)
+            ->middleware('throttle:10,1');
+        $router->get('/organizers/{organizerId}/quiz-players/me', GetQuizPlayerProfilePublicAction::class)
+            ->middleware('throttle:60,1');
+        $router->post('/organizers/{organizerId}/quiz-results', SubmitQuizResultPublicAction::class)
+            ->middleware('throttle:30,1');
+        $router->get('/organizers/{organizerId}/quiz-leaderboard', GetQuizLeaderboardPublicAction::class)
+            ->middleware('throttle:60,1');
 
         $router->post('/contact', SubmitSiteContactMessageAction::class)
             ->middleware('throttle:5,1');

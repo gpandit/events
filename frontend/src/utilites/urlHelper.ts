@@ -17,6 +17,10 @@ export const organizerHomepagePath = (organizer: Organizer) => {
     return `/events/${organizer?.id}/${organizer?.slug}`;
 }
 
+export const organizerAccountPath = (organizer: Organizer) => {
+    return `${organizerHomepagePath(organizer)}/account`;
+}
+
 export const organizerResourcesPath = (organizer: Organizer, tab?: 'colouring-pages' | 'puzzles') => {
     const base = `${organizerHomepagePath(organizer)}/resources`;
     return tab ? `${base}/${tab}` : base;

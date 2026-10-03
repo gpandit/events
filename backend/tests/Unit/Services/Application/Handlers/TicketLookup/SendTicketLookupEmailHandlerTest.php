@@ -5,10 +5,9 @@ namespace Tests\Unit\Services\Application\Handlers\TicketLookup;
 use HiEvents\DomainObjects\OrderDomainObject;
 use HiEvents\Mail\TicketLookup\TicketLookupEmail;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
-use HiEvents\Repository\Interfaces\TicketLookupTokenRepositoryInterface;
 use HiEvents\Services\Application\Handlers\TicketLookup\DTO\SendTicketLookupEmailDTO;
 use HiEvents\Services\Application\Handlers\TicketLookup\SendTicketLookupEmailHandler;
-use HiEvents\Services\Infrastructure\TokenGenerator\TokenGeneratorService;
+use HiEvents\Services\Domain\TicketLookup\TicketLookupTokenService;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\Collection;
@@ -20,9 +19,7 @@ class SendTicketLookupEmailHandlerTest extends TestCase
 {
     private OrderRepositoryInterface $orderRepository;
 
-    private TicketLookupTokenRepositoryInterface $ticketLookupTokenRepository;
-
-    private TokenGeneratorService $tokenGeneratorService;
+    private TicketLookupTokenService $ticketLookupTokenService;
 
     private Mailer $mailer;
 
@@ -37,16 +34,14 @@ class SendTicketLookupEmailHandlerTest extends TestCase
         parent::setUp();
 
         $this->orderRepository = m::mock(OrderRepositoryInterface::class);
-        $this->ticketLookupTokenRepository = m::mock(TicketLookupTokenRepositoryInterface::class);
-        $this->tokenGeneratorService = m::mock(TokenGeneratorService::class);
+        $this->ticketLookupTokenService = m::mock(TicketLookupTokenService::class);
         $this->mailer = m::mock(Mailer::class);
         $this->logger = m::mock(LoggerInterface::class);
         $this->databaseManager = m::mock(DatabaseManager::class);
 
         $this->handler = new SendTicketLookupEmailHandler(
             $this->orderRepository,
-            $this->ticketLookupTokenRepository,
-            $this->tokenGeneratorService,
+            $this->ticketLookupTokenService,
             $this->mailer,
             $this->logger,
             $this->databaseManager,
@@ -74,19 +69,11 @@ class SendTicketLookupEmailHandlerTest extends TestCase
                 return $callback();
             });
 
-        $this->ticketLookupTokenRepository
-            ->shouldReceive('deleteWhere')
+        $this->ticketLookupTokenService
+            ->shouldReceive('issue')
             ->once()
-            ->with(['email' => $email]);
-
-        $this->tokenGeneratorService
-            ->shouldReceive('generateToken')
-            ->once()
+            ->with($email)
             ->andReturn($token);
-
-        $this->ticketLookupTokenRepository
-            ->shouldReceive('create')
-            ->once();
 
         $this->logger
             ->shouldReceive('info')
@@ -128,8 +115,8 @@ class SendTicketLookupEmailHandlerTest extends TestCase
         $this->databaseManager
             ->shouldNotReceive('transaction');
 
-        $this->ticketLookupTokenRepository
-            ->shouldNotReceive('create');
+        $this->ticketLookupTokenService
+            ->shouldNotReceive('issue');
 
         $this->mailer
             ->shouldNotReceive('to');

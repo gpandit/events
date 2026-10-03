@@ -2,21 +2,19 @@
 
 declare(strict_types=1);
 
-namespace HiEvents\Http\Actions\Organizers\Public;
+namespace HiEvents\Http\Actions\Organizers\Public\Customer;
 
-use HiEvents\DomainObjects\Enums\QuizAgeBand;
 use HiEvents\Http\Actions\BaseAction;
-use HiEvents\Services\Application\Handlers\QuizResult\DTO\SubmitQuizResultDTO;
-use HiEvents\Services\Application\Handlers\QuizResult\SubmitQuizResultHandler;
+use HiEvents\Services\Application\Handlers\Customer\DTO\RegisterCustomerDTO;
+use HiEvents\Services\Application\Handlers\Customer\RegisterCustomerHandler;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 
-class SubmitQuizResultPublicAction extends BaseAction
+class RegisterCustomerPublicAction extends BaseAction
 {
     public function __construct(
-        private readonly SubmitQuizResultHandler $handler,
+        private readonly RegisterCustomerHandler $handler,
     ) {}
 
     /**
@@ -31,23 +29,19 @@ class SubmitQuizResultPublicAction extends BaseAction
             'first_name' => 'required|string|max:100',
             'last_name' => 'required|string|max:100',
             'email' => 'required|email|max:255',
-            'age_band' => ['required', Rule::in(QuizAgeBand::valuesArray())],
-            'score' => 'required|integer|min:0|lte:total_questions',
-            'total_questions' => 'required|integer|min:1|max:100',
+            'phone' => 'nullable|string|max:30',
         ]);
 
-        $this->handler->handle(SubmitQuizResultDTO::from([
+        $this->handler->handle(RegisterCustomerDTO::from([
             'organizer_id' => $organizerId,
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
-            'age_band' => $data['age_band'],
-            'score' => (int) $data['score'],
-            'total_questions' => (int) $data['total_questions'],
+            'phone' => $data['phone'] ?? null,
         ]));
 
         return $this->jsonResponse([
-            'message' => __('Your score has been saved.'),
+            'message' => __('Check your email for a link to finish creating your account.'),
         ]);
     }
 }

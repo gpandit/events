@@ -762,6 +762,52 @@ export interface GenericDataResponse<T> {
     errors?: Record<string, string>;
 }
 
+export interface QuizPlayerSession {
+    username: string;
+    token: string;
+}
+
+export interface CustomerSession {
+    lookup_token: string;
+    first_name: string;
+}
+
+export interface QuizResultOutcome {
+    points_awarded: number;
+    total_points: number;
+}
+
+export interface QuizPlayerTotals {
+    age_band: string;
+    total_points: number;
+    tests_taken: number;
+    best_percentage: number;
+}
+
+export interface QuizResultRecord {
+    id: number;
+    age_band: string;
+    score: number;
+    total_questions: number;
+    percentage: number;
+    points: number;
+    taken_at: string;
+}
+
+export interface QuizPlayerProfile {
+    username: string;
+    totals: QuizPlayerTotals[];
+    results: QuizResultRecord[];
+}
+
+export interface QuizLeaderboardEntry {
+    rank: number;
+    username: string;
+    total_points: number;
+    tests_taken: number;
+    best_percentage: number;
+}
+
 export interface GenericPaginatedResponse<T> {
     data: T[];
     meta: PaginationData;
