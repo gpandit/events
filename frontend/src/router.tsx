@@ -748,6 +748,14 @@ export const router: RouteObject[] = [
             return { Component: MyTickets.default };
         },
         errorElement: <ErrorPage />,
+    },
+    {
+        path: "*",
+        loader: () => {
+            throw new Response("Not Found", {status: 404});
+        },
+        element: null,
+        errorElement: <ErrorPage />,
     }
 ];
 
