@@ -1,4 +1,5 @@
 import {useCallback, useEffect, useState} from 'react';
+import {useSearchParams} from 'react-router';
 import {t} from '@lingui/macro';
 import {IconClock, IconListCheck, IconPuzzle, IconRefresh, IconTrophy, IconUser} from '@tabler/icons-react';
 import {Organizer, QuizPlayerSession} from '../../../../../types.ts';
@@ -9,6 +10,7 @@ import {AnswerReview} from './AnswerReview.tsx';
 import {QuizAuthForm} from './QuizAuthForm.tsx';
 import {QuizLeaderboard} from './QuizLeaderboard.tsx';
 import {QuizProfile} from './QuizProfile.tsx';
+import {QuizResetPasswordForm} from './QuizResetPasswordForm.tsx';
 import {ageBandLabel, subjectLabel} from './quizLabels.ts';
 import {useQuizPlayerSession} from './useQuizPlayerSession.ts';
 import classes from '../ResourcesForChildren.module.scss';
@@ -91,6 +93,8 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
     const [attempt, setAttempt] = useState(0);
     const [leaderboardReturnStage, setLeaderboardReturnStage] = useState<QuizStage>('intro');
     const {session, signIn, signOut} = useQuizPlayerSession(organizer.id);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const resetToken = searchParams.get('reset_token');
 
     const total = puzzles.length;
 
@@ -174,6 +178,27 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
         signOut();
         setStage('intro');
     };
+
+    const clearResetToken = () => setSearchParams((params) => {
+        params.delete('reset_token');
+        return params;
+    }, {replace: true});
+
+    if (resetToken) {
+        return (
+            <div className={classes.tabPanel}>
+                <QuizResetPasswordForm
+                    organizerId={organizer.id}
+                    token={resetToken}
+                    onReset={(next) => {
+                        signIn(next);
+                        clearResetToken();
+                    }}
+                    onCancel={clearResetToken}
+                />
+            </div>
+        );
+    }
 
     if (stage === 'auth') {
         return (

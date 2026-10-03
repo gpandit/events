@@ -15,7 +15,7 @@ import classes from '../OrganizerHomepage.module.scss';
 
 interface OrganizerPageShellProps {
     organizer: Organizer;
-    activeNav: 'home' | 'events' | 'about' | 'stories' | 'resources';
+    activeNav: 'home' | 'events' | 'about' | 'stories' | 'resources' | 'account';
     hero?: React.ReactNode;
     children: React.ReactNode;
 }
@@ -98,7 +98,7 @@ export const OrganizerPageShell: React.FC<OrganizerPageShellProps> = ({organizer
 
                 <OrganizerNav organizer={organizer} active={activeNav}/>
 
-                {hero ?? <PageBanner variant={activeNav}/>}
+                {hero ?? <PageBanner variant={activeNav === 'account' ? 'events' : activeNav}/>}
 
                 <div className={classes.container}>
                     <div className={classes.wrapper}>

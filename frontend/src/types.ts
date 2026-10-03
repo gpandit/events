@@ -767,6 +767,11 @@ export interface QuizPlayerSession {
     token: string;
 }
 
+export interface CustomerSession {
+    lookup_token: string;
+    first_name: string;
+}
+
 export interface QuizResultOutcome {
     points_awarded: number;
     total_points: number;

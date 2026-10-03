@@ -7,7 +7,7 @@ export const useRegisterQuizPlayer = (organizerId: IdParam) => {
         mutationFn: (player: {
             first_name: string;
             last_name: string;
-            email: string;
+            email?: string;
             password: string;
         }) => organizerPublicClient.registerQuizPlayer(organizerId, player),
     });

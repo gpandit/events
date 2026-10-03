@@ -25,7 +25,7 @@ abstract class QuizPlayerDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     protected string $username;
     protected string $first_name;
     protected string $last_name;
-    protected string $email;
+    protected ?string $email = null;
     protected string $password;
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
@@ -100,13 +100,13 @@ abstract class QuizPlayerDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
         return $this->last_name;
     }
 
-    public function setEmail(string $email): self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
         return $this;
     }
 
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }

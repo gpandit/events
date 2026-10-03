@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace HiEvents\Http\Actions\Organizers\Public\Quiz;
 
-use HiEvents\Exceptions\InvalidQuizPlayerCredentialsException;
+use HiEvents\Exceptions\InvalidCredentialsException;
 use HiEvents\Http\Actions\BaseAction;
 use HiEvents\Http\ResponseCodes;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\LoginQuizPlayerDTO;
@@ -35,7 +35,7 @@ class LoginQuizPlayerPublicAction extends BaseAction
                 'username' => $data['username'],
                 'password' => $data['password'],
             ]));
-        } catch (InvalidQuizPlayerCredentialsException $exception) {
+        } catch (InvalidCredentialsException $exception) {
             return $this->errorResponse($exception->getMessage(), ResponseCodes::HTTP_UNAUTHORIZED);
         }
 

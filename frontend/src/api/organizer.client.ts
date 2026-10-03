@@ -2,6 +2,7 @@ import {api} from "./client";
 import {
     ChildStorySubmission,
     ChildStorySubmissionStatus,
+    CustomerSession,
     Event,
     GenericDataResponse,
     GenericPaginatedResponse,
@@ -219,7 +220,7 @@ export const organizerPublicClient = {
     registerQuizPlayer: async (organizerId: IdParam, player: {
         first_name: string;
         last_name: string;
-        email: string;
+        email?: string;
         password: string;
     }) => {
         const response = await publicApi.post<GenericDataResponse<QuizPlayerSession>>(
@@ -254,6 +255,59 @@ export const organizerPublicClient = {
             `organizers/${organizerId}/quiz-results`,
             result,
             {headers: {'X-Quiz-Token': token}}
+        );
+        return response.data;
+    },
+
+    requestQuizPasswordReset: async (organizerId: IdParam, username: string) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/quiz-players/forgot-password`,
+            {username}
+        );
+        return response.data;
+    },
+
+    resetQuizPlayerPassword: async (organizerId: IdParam, payload: { token: string; password: string }) => {
+        const response = await publicApi.post<GenericDataResponse<QuizPlayerSession>>(
+            `organizers/${organizerId}/quiz-players/reset-password`,
+            payload
+        );
+        return response.data;
+    },
+
+    registerCustomer: async (organizerId: IdParam, customer: {
+        first_name: string;
+        last_name: string;
+        email: string;
+        phone?: string;
+    }) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/customers/register`,
+            customer
+        );
+        return response.data;
+    },
+
+    requestCustomerPasswordSetup: async (organizerId: IdParam, email: string) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/customers/forgot-password`,
+            {email}
+        );
+        return response.data;
+    },
+
+    setCustomerPassword: async (organizerId: IdParam, payload: { token: string; password: string }) => {
+        const response = await publicApi.post<GenericDataResponse<CustomerSession>>(
+            `organizers/${organizerId}/customers/set-password`,
+            payload
+        );
+        return response.data;
+    },
+
+    loginCustomer: async (organizerId: IdParam, credentials: { email: string; password: string }) => {
+        const response = await publicApi.post<GenericDataResponse<CustomerSession>>(
+            `organizers/${organizerId}/customers/login`,
+            credentials
         );
         return response.data;
     },

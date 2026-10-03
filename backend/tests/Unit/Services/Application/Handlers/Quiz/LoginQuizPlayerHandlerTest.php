@@ -3,7 +3,7 @@
 namespace Tests\Unit\Services\Application\Handlers\Quiz;
 
 use HiEvents\DomainObjects\QuizPlayerDomainObject;
-use HiEvents\Exceptions\InvalidQuizPlayerCredentialsException;
+use HiEvents\Exceptions\InvalidCredentialsException;
 use HiEvents\Repository\Interfaces\QuizPlayerRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\LoginQuizPlayerDTO;
 use HiEvents\Services\Application\Handlers\Quiz\LoginQuizPlayerHandler;
@@ -51,7 +51,7 @@ class LoginQuizPlayerHandlerTest extends TestCase
         $this->players->shouldReceive('findFirstWhere')->once()->andReturn($player);
         $this->hasher->shouldReceive('check')->once()->andReturn(false);
 
-        $this->expectException(InvalidQuizPlayerCredentialsException::class);
+        $this->expectException(InvalidCredentialsException::class);
 
         $this->handler->handle(new LoginQuizPlayerDTO(10, 'Simba42', 'wrong'));
     }
@@ -60,7 +60,7 @@ class LoginQuizPlayerHandlerTest extends TestCase
     {
         $this->players->shouldReceive('findFirstWhere')->once()->andReturn(null);
 
-        $this->expectException(InvalidQuizPlayerCredentialsException::class);
+        $this->expectException(InvalidCredentialsException::class);
 
         $this->handler->handle(new LoginQuizPlayerDTO(10, 'Nobody1', 'secret1'));
     }

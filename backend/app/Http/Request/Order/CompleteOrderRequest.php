@@ -16,6 +16,7 @@ class CompleteOrderRequest extends BaseRequest
                 'order.first_name' => ['required', 'string', 'max:40'],
                 'order.last_name' => ['required', 'string', 'max:40'],
                 'order.email' => ['required', 'email'],
+                'order.phone' => ['nullable', 'string', 'max:30'],
                 'order.email_confirmation' => ['required', 'email', 'same:order.email'],
                 'order.questions' => ['array'],
                 'order.address' => ['array'],

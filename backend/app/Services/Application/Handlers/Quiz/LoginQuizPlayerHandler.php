@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace HiEvents\Services\Application\Handlers\Quiz;
 
 use HiEvents\DomainObjects\Generated\QuizPlayerDomainObjectAbstract;
-use HiEvents\Exceptions\InvalidQuizPlayerCredentialsException;
+use HiEvents\Exceptions\InvalidCredentialsException;
 use HiEvents\Repository\Interfaces\QuizPlayerRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\LoginQuizPlayerDTO;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\QuizPlayerSessionDTO;
@@ -21,7 +21,7 @@ class LoginQuizPlayerHandler
     ) {}
 
     /**
-     * @throws InvalidQuizPlayerCredentialsException
+     * @throws InvalidCredentialsException
      */
     public function handle(LoginQuizPlayerDTO $dto): QuizPlayerSessionDTO
     {
@@ -33,7 +33,7 @@ class LoginQuizPlayerHandler
         ]);
 
         if ($player === null || ! $this->hasher->check($dto->password, $player->getPassword())) {
-            throw new InvalidQuizPlayerCredentialsException;
+            throw new InvalidCredentialsException;
         }
 
         return new QuizPlayerSessionDTO(

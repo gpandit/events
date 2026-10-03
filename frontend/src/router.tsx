@@ -591,6 +591,15 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/events/:organizerId/:organizerSlug/account",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicCustomerAccount = await import("./components/layouts/PublicCustomerAccount");
+            return { Component: PublicCustomerAccount.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/events/:organizerId/:organizerSlug/about",
         loader: publicOrganizerRouteLoader,
         async lazy() {

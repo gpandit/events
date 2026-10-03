@@ -17,10 +17,10 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const SCORE = 'score';
     final public const TOTAL_QUESTIONS = 'total_questions';
     final public const PERCENTAGE = 'percentage';
-    final public const POINTS = 'points';
     final public const TAKEN_AT = 'taken_at';
     final public const CREATED_AT = 'created_at';
     final public const UPDATED_AT = 'updated_at';
+    final public const POINTS = 'points';
 
     protected int $id;
     protected int $organizer_id;
@@ -29,10 +29,10 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     protected int $score;
     protected int $total_questions;
     protected int $percentage;
-    protected int $points;
-    protected ?string $taken_at = null;
+    protected string $taken_at;
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
+    protected int $points = 0;
 
     public function toArray(): array
     {
@@ -44,10 +44,10 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
                     'score' => $this->score ?? null,
                     'total_questions' => $this->total_questions ?? null,
                     'percentage' => $this->percentage ?? null,
-                    'points' => $this->points ?? null,
                     'taken_at' => $this->taken_at ?? null,
                     'created_at' => $this->created_at ?? null,
                     'updated_at' => $this->updated_at ?? null,
+                    'points' => $this->points ?? null,
                 ];
     }
 
@@ -128,24 +128,13 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
         return $this->percentage;
     }
 
-    public function setPoints(int $points): self
-    {
-        $this->points = $points;
-        return $this;
-    }
-
-    public function getPoints(): int
-    {
-        return $this->points;
-    }
-
-    public function setTakenAt(?string $taken_at): self
+    public function setTakenAt(string $taken_at): self
     {
         $this->taken_at = $taken_at;
         return $this;
     }
 
-    public function getTakenAt(): ?string
+    public function getTakenAt(): string
     {
         return $this->taken_at;
     }
@@ -170,5 +159,16 @@ abstract class QuizResultDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     public function getUpdatedAt(): ?string
     {
         return $this->updated_at;
+    }
+
+    public function setPoints(int $points): self
+    {
+        $this->points = $points;
+        return $this;
+    }
+
+    public function getPoints(): int
+    {
+        return $this->points;
     }
 }

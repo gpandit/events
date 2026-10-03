@@ -30,7 +30,7 @@ class RegisterQuizPlayerPublicAction extends BaseAction
             'organizer_id' => 'required|exists:organizers,id',
             'first_name' => 'required|string|max:100',
             'last_name' => 'required|string|max:100',
-            'email' => 'required|email|max:255',
+            'email' => 'nullable|email|max:255',
             'password' => 'required|string|min:6|max:100',
         ]);
 
@@ -39,7 +39,7 @@ class RegisterQuizPlayerPublicAction extends BaseAction
                 'organizer_id' => $organizerId,
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
-                'email' => $data['email'],
+                'email' => $data['email'] ?? null,
                 'password' => $data['password'],
             ]));
         } catch (QuizUsernameUnavailableException $exception) {

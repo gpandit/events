@@ -4,6 +4,7 @@ import {IconLoader2} from '@tabler/icons-react';
 import {IdParam, QuizPlayerSession} from '../../../../../types.ts';
 import {useRegisterQuizPlayer} from '../../../../../mutations/useRegisterQuizPlayer.ts';
 import {useLoginQuizPlayer} from '../../../../../mutations/useLoginQuizPlayer.ts';
+import {useRequestQuizPasswordReset} from '../../../../../mutations/useRequestQuizPasswordReset.ts';
 import classes from '../ResourcesForChildren.module.scss';
 
 interface QuizAuthFormProps {
@@ -11,7 +12,7 @@ interface QuizAuthFormProps {
     onAuthenticated: (session: QuizPlayerSession) => void;
 }
 
-type AuthMode = 'signup' | 'signin';
+type AuthMode = 'signup' | 'signin' | 'forgot';
 
 const emptySignUp = {first_name: '', last_name: '', email: '', password: ''};
 const emptySignIn = {username: '', password: ''};
@@ -33,23 +34,26 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
     const [newPlayer, setNewPlayer] = useState<QuizPlayerSession | null>(null);
     const registerMutation = useRegisterQuizPlayer(organizerId);
     const loginMutation = useLoginQuizPlayer(organizerId);
-    const isPending = registerMutation.isPending || loginMutation.isPending;
+    const resetMutation = useRequestQuizPasswordReset(organizerId);
+    const [resetSent, setResetSent] = useState(false);
+    const isPending = registerMutation.isPending || loginMutation.isPending || resetMutation.isPending;
 
     const switchMode = (next: AuthMode) => {
         setMode(next);
         setError(null);
+        setResetSent(false);
     };
 
     const handleSignUp = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if (Object.values(signUp).some((value) => !value.trim())) {
-            setError(t`Please fill in all the fields`);
+        if (!signUp.first_name.trim() || !signUp.last_name.trim() || !signUp.password) {
+            setError(t`Please fill in your first name, last name and password`);
             return;
         }
 
         setError(null);
-        registerMutation.mutate(signUp, {
+        registerMutation.mutate({...signUp, email: signUp.email.trim() || undefined}, {
             onSuccess: (response) => setNewPlayer(response.data),
             onError: (err) => setError(errorMessage(err)),
         });
@@ -66,6 +70,21 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
         setError(null);
         loginMutation.mutate(signIn, {
             onSuccess: (response) => onAuthenticated(response.data),
+            onError: (err) => setError(errorMessage(err)),
+        });
+    };
+
+    const handleForgot = (event: React.FormEvent) => {
+        event.preventDefault();
+
+        if (!signIn.username.trim()) {
+            setError(t`Please enter your username`);
+            return;
+        }
+
+        setError(null);
+        resetMutation.mutate(signIn.username, {
+            onSuccess: () => setResetSent(true),
             onError: (err) => setError(errorMessage(err)),
         });
     };
@@ -93,6 +112,7 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
 
     return (
         <div className={classes.saveForm}>
+            {mode !== 'forgot' && (
             <div className={classes.segmented} role="tablist">
                 <button
                     type="button"
@@ -115,6 +135,7 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                     {t`Sign in`}
                 </button>
             </div>
+            )}
 
             {mode === 'signup' ? (
                 <form onSubmit={handleSignUp} className={classes.saveForm}>
@@ -142,12 +163,15 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                     <input
                         type="email"
                         className={classes.saveInput}
-                        placeholder={t`Email`}
+                        placeholder={t`Email (optional)`}
                         aria-label={t`Email`}
                         autoComplete="email"
                         value={signUp.email}
                         onChange={(e) => setSignUp({...signUp, email: e.target.value})}
                     />
+                    <p className={classes.fieldHint}>
+                        {t`Email is optional. If you add one, it is only used to send you a link to reset your password.`}
+                    </p>
                     <input
                         type="password"
                         className={classes.saveInput}
@@ -166,6 +190,43 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                     >
                         {isPending && <IconLoader2 size={16}/>}
                         {t`Create my login`}
+                    </button>
+                </form>
+            ) : mode === 'forgot' ? (
+                <form onSubmit={handleForgot} className={classes.saveForm}>
+                    <p className={classes.puzzleSubtitle}>{t`Reset your password`}</p>
+                    {resetSent ? (
+                        <p className={classes.puzzleText} role="status" data-testid="puzzles-reset-sent">
+                            {t`If that username has an email address saved, we have sent a link to reset the password. The link works for 60 minutes.`}
+                        </p>
+                    ) : (
+                        <>
+                            <p className={classes.puzzleText}>
+                                {t`Enter your username and we will email a reset link to the address saved on your account. If you did not add an email when you signed up, ask a parent or guardian to contact us.`}
+                            </p>
+                            <input
+                                type="text"
+                                className={classes.saveInput}
+                                placeholder={t`Username (e.g. Simba42)`}
+                                aria-label={t`Username`}
+                                autoCapitalize="none"
+                                value={signIn.username}
+                                onChange={(e) => setSignIn({...signIn, username: e.target.value})}
+                            />
+                            {error && <p className={classes.saveError} role="alert">{error}</p>}
+                            <button
+                                type="submit"
+                                className={classes.primaryButton}
+                                disabled={isPending}
+                                data-testid="puzzles-forgot-submit"
+                            >
+                                {isPending && <IconLoader2 size={16}/>}
+                                {t`Email me a reset link`}
+                            </button>
+                        </>
+                    )}
+                    <button type="button" className={classes.linkButton} onClick={() => switchMode('signin')}>
+                        {t`Back to sign in`}
                     </button>
                 </form>
             ) : (
@@ -199,6 +260,14 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                     >
                         {isPending && <IconLoader2 size={16}/>}
                         {t`Sign in`}
+                    </button>
+                    <button
+                        type="button"
+                        className={classes.linkButton}
+                        onClick={() => switchMode('forgot')}
+                        data-testid="puzzles-forgot-link"
+                    >
+                        {t`Forgot your password?`}
                     </button>
                 </form>
             )}

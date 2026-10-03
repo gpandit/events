@@ -102,6 +102,7 @@ export const CollectInformation = () => {
                 last_name: "",
                 email: "",
                 email_confirmation: "",
+                phone: "",
                 address: {},
                 questions: {},
                 opted_into_marketing: false,
@@ -489,6 +490,14 @@ export const CollectInformation = () => {
                             {...form.getInputProps("order.email_confirmation")}
                         />
                     </InputGroup>
+
+                    <TextInput
+                        type={"tel"}
+                        label={t`Phone Number (optional)`}
+                        placeholder={t`Phone Number`}
+                        autoComplete="tel"
+                        {...form.getInputProps("order.phone")}
+                    />
 
                     {orderRequiresAttendeeDetails && !isPerOrderCollection && totalTicketAttendees > 0 && !lock && (
                         <div className={classes.copyDetailsSection}>

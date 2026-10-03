@@ -30,7 +30,7 @@ class RegisterQuizPlayerHandler
             QuizPlayerDomainObjectAbstract::USERNAME => $this->usernameGenerator->generate($dto->organizer_id),
             QuizPlayerDomainObjectAbstract::FIRST_NAME => trim($dto->first_name),
             QuizPlayerDomainObjectAbstract::LAST_NAME => trim($dto->last_name),
-            QuizPlayerDomainObjectAbstract::EMAIL => mb_strtolower(trim($dto->email)),
+            QuizPlayerDomainObjectAbstract::EMAIL => $dto->email === null || trim($dto->email) === '' ? null : mb_strtolower(trim($dto->email)),
             QuizPlayerDomainObjectAbstract::PASSWORD => $this->hasher->make($dto->password),
         ]);
 
