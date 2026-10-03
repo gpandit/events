@@ -56,13 +56,18 @@ export const StripePaymentMethod = ({enabled, setSubmitHandler}: StripePaymentMe
     }
 
     if (stripePaymentIntentError && event) {
+        /* @ts-ignore */
+        const errorStatus = stripePaymentIntentError.response?.status;
+        const isServerError = !errorStatus || errorStatus >= 500;
         return (
             <CheckoutContent>
                 <HomepageInfoMessage
                     status="error"
                     /* @ts-ignore */
-                    message={stripePaymentIntentError.response?.data?.message || t`Something went wrong`}
-                    subtitle={t`Please restart the checkout process.`}
+                    message={isServerError ? t`500 Error.` : (stripePaymentIntentError.response?.data?.message || t`Something went wrong`)}
+                    subtitle={isServerError
+                        ? t`Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!`
+                        : t`Please restart the checkout process.`}
                     link={eventHomepagePath(event)}
                     linkText={t`Return to Event`}
                 />
