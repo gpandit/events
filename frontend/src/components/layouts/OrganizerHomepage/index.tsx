@@ -5,6 +5,8 @@ import {OrganizerHero} from "./OrganizerHero";
 import {UpcomingEventsSpotlight} from './UpcomingEventsSpotlight';
 import {organizerEventsPath} from "../../../utilites/urlHelper.ts";
 import {validateThemeSettings} from "../../../utilites/themeUtils.ts";
+import {CreativeCornerSection} from "./CreativeCornerSection";
+import {SponsorshipSection} from "./SponsorshipSection";
 import classes from './OrganizerHomepage.module.scss';
 
 interface OrganizerHomepageProps {
@@ -49,6 +51,8 @@ export const OrganizerHomepage = ({
                     />
                 </>
             )}
+            <CreativeCornerSection organizer={organizer}/>
+            <SponsorshipSection organizer={organizer}/>
         </OrganizerPageShell>
     );
 };

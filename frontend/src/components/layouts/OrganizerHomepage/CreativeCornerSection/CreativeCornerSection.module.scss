@@ -1,0 +1,72 @@
+@use "../../../../styles/mixins.scss";
+
+.section {
+    margin-top: 72px;
+
+    @include mixins.respond-below(md) {
+        margin-top: 48px;
+    }
+}
+
+.heading {
+    font-size: clamp(1.4rem, 3.2vw, 1.85rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--primary-text-color);
+    margin: 0 0 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include mixins.respond-below(md) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 24px;
+    background-color: var(--content-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+}
+
+.icon {
+    color: var(--accent-text);
+}
+
+.title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-text-color);
+}
+
+.description {
+    flex: 1;
+    margin: 0 0 8px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: var(--accent-contrast);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: filter 0.15s;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
