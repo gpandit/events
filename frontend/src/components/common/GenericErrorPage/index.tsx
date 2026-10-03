@@ -2,9 +2,7 @@ import React from 'react';
 import {Box, Button, Container, Image, rem, Stack, Text, Title} from '@mantine/core';
 import {IconHome} from '@tabler/icons-react';
 import classes from './GenericErrorPage.module.scss';
-import {PoweredByFooter} from "../PoweredByFooter";
 import {Helmet} from "react-helmet-async";
-import {getConfig} from "../../../utilites/config.ts";
 
 interface GenericErrorPageProps {
     title: string;
@@ -47,9 +45,9 @@ export const GenericErrorPage: React.FC<GenericErrorPageProps> = ({
                     <Stack gap="xl" align="center">
 
                         <Image
-                            src={getConfig("VITE_APP_LOGO_DARK", "/logos/hi-events-stacked-light.svg")}
-                            alt={getConfig("VITE_APP_NAME", "Hi.Events") + " Logo"}
-                            w={rem(140)}
+                            src="/logos/friends-of-school-logo.webp"
+                            alt="Friends of School"
+                            w={rem(180)}
                             h="auto"
                             fit="contain"
                             className={classes.logo}
@@ -80,7 +78,6 @@ export const GenericErrorPage: React.FC<GenericErrorPageProps> = ({
                             )}
                         </Stack>
 
-                        <PoweredByFooter/>
                     </Stack>
                 </Container>
             </Box>

@@ -14731,3 +14731,39 @@ msgstr "Zip or Postal Code"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:577
 msgid "ZIP or Postal Code"
 msgstr "ZIP or Postal Code"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Error 404! Page not found."
+msgstr "Error 404! Page not found."
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
+msgstr "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Error 403! Access Denied!"
+msgstr "Error 403! Access Denied!"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
+msgstr "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "503 Service Unavailable."
+msgstr "503 Service Unavailable."
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
+msgstr "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "500 Error."
+msgstr "500 Error."
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
+msgstr "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Go back to home page"
+msgstr "Go back to home page"

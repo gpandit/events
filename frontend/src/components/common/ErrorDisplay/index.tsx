@@ -4,19 +4,45 @@ import {IconHome} from '@tabler/icons-react';
 import classes from './ErrorDisplay.module.scss';
 import {Helmet} from "react-helmet-async";
 import {NavLink, useRouteError} from "react-router";
-import {PoweredByFooter} from "../PoweredByFooter";
-import {getConfig} from '../../../utilites/config';
+import {BouncingEmoji} from "../BouncingEmoji";
+
+const getErrorStatus = (error: any): number | undefined => {
+    const status = error?.status ?? error?.response?.status;
+    return typeof status === 'number' ? status : undefined;
+};
 
 export const ErrorDisplay = () => {
     const error = useRouteError() as any;
+    const status = getErrorStatus(error);
 
-    const title = error?.status === 404
-        ? t`Page not found`
-        : t`Something went wrong`;
-
-    const description = error?.status === 404
-        ? t`The page you are looking for does not exist`
-        : t`An error occurred while loading the page`;
+    const {emoji, title, description} = (() => {
+        switch (status) {
+            case 404:
+                return {
+                    emoji: '🧤',
+                    title: t`Error 404! Page not found.`,
+                    description: t`This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove.`,
+                };
+            case 403:
+                return {
+                    emoji: '☕',
+                    title: t`Error 403! Access Denied!`,
+                    description: t`You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!`,
+                };
+            case 503:
+                return {
+                    emoji: '🚌',
+                    title: t`503 Service Unavailable.`,
+                    description: t`Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!`,
+                };
+            default:
+                return {
+                    emoji: '✨',
+                    title: t`500 Error.`,
+                    description: t`Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!`,
+                };
+        }
+    })();
 
     return (
         <>
@@ -38,15 +64,16 @@ export const ErrorDisplay = () => {
                 <Container size="md" className={classes.root}>
                     <Stack gap="xl" align="center">
                         <Image
-                            src={getConfig("VITE_APP_LOGO_DARK", "/logos/hi-events-stacked-light.svg")}
-                            alt={getConfig("VITE_APP_NAME", "Hi.Events") + " Logo"}
-                            w={rem(140)}
+                            src="/logos/friends-of-school-logo.webp"
+                            alt={t`Friends of School`}
+                            w={rem(180)}
                             h="auto"
                             fit="contain"
                             className={classes.logo}
                         />
 
                         <Stack gap="lg" align="center" className={classes.content}>
+                            <BouncingEmoji emoji={emoji} size={64}/>
                             <Title order={1} className={classes.title}>
                                 {title}
                             </Title>
@@ -62,11 +89,10 @@ export const ErrorDisplay = () => {
                                 gradient={{from: 'primary', to: 'secondary'}}
                                 className={classes.button}
                             >
-                                {t`Go to home page`}
+                                {t`Go back to home page`}
                             </Button>
                         </Stack>
 
-                        <PoweredByFooter/>
                     </Stack>
                 </Container>
             </Box>

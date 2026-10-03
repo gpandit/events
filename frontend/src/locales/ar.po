@@ -14703,3 +14703,39 @@ msgstr "الرمز البريدي"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:577
 msgid "ZIP or Postal Code"
 msgstr "الرمز البريدي"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Error 404! Page not found."
+msgstr "خطأ 404! الصفحة غير موجودة."
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
+msgstr "هذا الرابط موجود حاليًا في صندوق المفقودات بالمدرسة، بجوار قفاز شتوي وحيد بلا اسم."
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Error 403! Access Denied!"
+msgstr "خطأ 403! تم رفض الوصول!"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
+msgstr "لقد دخلتَ رسميًا إلى غرفة المعلمين الرقمية. يُمنع دخول أولياء الأمور والطلاب!"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "503 Service Unavailable."
+msgstr "503 الخدمة غير متاحة."
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
+msgstr "خوادمنا عالقة حاليًا في طابور السيارات الصباحي أمام المدرسة. سنتحرك من جديد قريبًا!"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "500 Error."
+msgstr "خطأ 500."
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
+msgstr "أحدهم سكب جالونًا من بريق الأشغال اليدوية على خوادمنا. عمال النظافة الرقميون ينظفونها الآن!"
+
+#: src/components/common/ErrorDisplay/index.tsx
+msgid "Go back to home page"
+msgstr "العودة إلى الصفحة الرئيسية"
