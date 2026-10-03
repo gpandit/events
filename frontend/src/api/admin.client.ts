@@ -1,5 +1,5 @@
 import {api} from "./client";
-import {GenericDataResponse, GenericPaginatedResponse, IdParam, User} from "../types";
+import {GenericDataResponse, GenericPaginatedResponse, IdParam, PaymentProcessingFeeMode, User} from "../types";
 
 export interface AdminUser extends User {
     accounts?: AccountWithRole[];
@@ -55,6 +55,7 @@ export interface AccountConfiguration {
         currency: string;
     };
     bypass_application_fees: boolean;
+    payment_processing_fee_mode: PaymentProcessingFeeMode;
 }
 
 export const isDefaultConfiguration = (config: AccountConfiguration): boolean =>
@@ -68,6 +69,7 @@ export interface CreateConfigurationData {
         currency: string;
     };
     bypass_application_fees?: boolean;
+    payment_processing_fee_mode?: PaymentProcessingFeeMode;
 }
 
 export interface UpdateConfigurationData {
@@ -78,6 +80,7 @@ export interface UpdateConfigurationData {
         currency: string;
     };
     bypass_application_fees?: boolean;
+    payment_processing_fee_mode?: PaymentProcessingFeeMode;
 }
 
 export interface AdminOrganizerVatSetting {

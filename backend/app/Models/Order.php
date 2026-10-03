@@ -57,6 +57,7 @@ class Order extends BaseModel
             'total_before_additions' => 'float',
             'total_tax' => 'float',
             'total_gross' => 'float',
+            'payment_processing_fee' => 'float',
             'total_discount' => 'float',
             'total_fee' => 'float',
             'total_refunded' => 'float',

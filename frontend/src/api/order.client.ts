@@ -4,6 +4,7 @@ import {
     GenericPaginatedResponse,
     IdParam,
     Order,
+    PaymentProcessingFeeQuote,
     QueryFilters,
     StripePaymentIntent
 } from "../types.ts";
@@ -165,6 +166,16 @@ export const orderClientPublic = {
     transitionToOfflinePayment: async (eventId: IdParam, orderShortId: IdParam) => {
         const response = await publicApi.post<GenericDataResponse<Order>>(`events/${eventId}/order/${orderShortId}/await-offline-payment`);
         return response.data;
+    },
+
+    getPaymentProcessingFee: async (eventId: IdParam, orderShortId: IdParam) => {
+        const response = await publicApi.get<GenericDataResponse<PaymentProcessingFeeQuote>>(`events/${eventId}/order/${orderShortId}/processing-fee`);
+        return response.data.data;
+    },
+
+    setPaymentProcessingFeeCoverage: async (eventId: IdParam, orderShortId: IdParam, cover: boolean) => {
+        const response = await publicApi.put<GenericDataResponse<PaymentProcessingFeeQuote>>(`events/${eventId}/order/${orderShortId}/processing-fee`, {cover});
+        return response.data.data;
     },
 
     downloadInvoice: async (eventId: IdParam, orderShortId: IdParam): Promise<Blob> => {

@@ -20,6 +20,7 @@ abstract class OrganizerConfigurationDomainObjectAbstract extends \HiEvents\Doma
     final public const UPDATED_AT = 'updated_at';
     final public const DELETED_AT = 'deleted_at';
     final public const DEFAULT_FOR_CURRENCY = 'default_for_currency';
+    final public const PAYMENT_PROCESSING_FEE_MODE = 'payment_processing_fee_mode';
 
     protected int $id;
     protected string $name;
@@ -31,6 +32,7 @@ abstract class OrganizerConfigurationDomainObjectAbstract extends \HiEvents\Doma
     protected ?string $updated_at = null;
     protected ?string $deleted_at = null;
     protected ?string $default_for_currency = null;
+    protected string $payment_processing_fee_mode = 'HIDE';
 
     public function toArray(): array
     {
@@ -45,6 +47,7 @@ abstract class OrganizerConfigurationDomainObjectAbstract extends \HiEvents\Doma
                     'updated_at' => $this->updated_at ?? null,
                     'deleted_at' => $this->deleted_at ?? null,
                     'default_for_currency' => $this->default_for_currency ?? null,
+                    'payment_processing_fee_mode' => $this->payment_processing_fee_mode ?? null,
                 ];
     }
 
@@ -156,5 +159,16 @@ abstract class OrganizerConfigurationDomainObjectAbstract extends \HiEvents\Doma
     public function getDefaultForCurrency(): ?string
     {
         return $this->default_for_currency;
+    }
+
+    public function setPaymentProcessingFeeMode(string $payment_processing_fee_mode): self
+    {
+        $this->payment_processing_fee_mode = $payment_processing_fee_mode;
+        return $this;
+    }
+
+    public function getPaymentProcessingFeeMode(): string
+    {
+        return $this->payment_processing_fee_mode;
     }
 }

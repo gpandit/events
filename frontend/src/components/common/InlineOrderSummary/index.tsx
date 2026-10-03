@@ -215,6 +215,15 @@ export const InlineOrderSummary = ({
                             </div>
                         )}
 
+                        {!!order.payment_processing_fee && order.payment_processing_fee > 0 && (
+                            <div className={classes.totalsRow}>
+                                <span className={classes.totalsLabel}>{t`Payment processing fee`}</span>
+                                <span className={classes.totalsValue}>
+                                    {formatCurrency(order.payment_processing_fee, order.currency)}
+                                </span>
+                            </div>
+                        )}
+
                         <div className={classNames(classes.totalsRow, classes.totalsRowFinal)}>
                             <span className={classes.totalsFinalLabel}>{t`Total`}</span>
                             <span className={classes.totalsFinalValue}>

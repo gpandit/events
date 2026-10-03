@@ -26,6 +26,7 @@ class OrderResourcePublic extends BaseResource
             'total_tax' => $this->getTotalTax(),
             'total_gross' => $this->getTotalGross(),
             'total_fee' => $this->getTotalFee(),
+            'payment_processing_fee' => $this->getPaymentProcessingFee(),
             /** @var 'RESERVED'|'CANCELLED'|'COMPLETED'|'AWAITING_OFFLINE_PAYMENT'|'ABANDONED' */
             'status' => $this->getStatus(),
             /** @var 'REFUND_PENDING'|'REFUND_FAILED'|'REFUNDED'|'PARTIALLY_REFUNDED'|null */

@@ -5,6 +5,7 @@ import {CheckoutContent} from "../../../layouts/Checkout/CheckoutContent";
 import {CheckoutStepTitle} from "../../../layouts/Checkout/CheckoutStepTitle";
 import {StripePaymentMethod} from "./PaymentMethods/Stripe";
 import {OfflinePaymentMethod} from "./PaymentMethods/Offline";
+import {PaymentProcessingFee} from "./PaymentProcessingFee";
 import {Event} from "../../../../types.ts";
 import {Button, Group, Text} from "@mantine/core";
 import {IconBuildingBank, IconLock, IconWallet} from "@tabler/icons-react";
@@ -30,6 +31,7 @@ const Payment = () => {
     const checkoutEvent = order?.event || event;
     const [isPaymentLoading, setIsPaymentLoading] = useState(false);
     const [activePaymentMethod, setActivePaymentMethod] = useState<'STRIPE' | 'OFFLINE' | null>(null);
+    const [amountVersion, setAmountVersion] = useState(0);
     const [submitHandler, setSubmitHandler] = useState<(() => Promise<void>) | null>(null);
     const transitionOrderToOfflinePaymentMutation = useTransitionOrderToOfflinePaymentPublic();
 
@@ -102,8 +104,16 @@ const Payment = () => {
                 )}
                 {isStripeEnabled && (
                     <div style={{display: activePaymentMethod === 'STRIPE' ? 'block' : 'none'}}>
-                        <StripePaymentMethod enabled={true} setSubmitHandler={setSubmitHandler}/>
+                        <StripePaymentMethod enabled={true} setSubmitHandler={setSubmitHandler} amountVersion={amountVersion}/>
                     </div>
+                )}
+
+                {(isStripeEnabled && activePaymentMethod === 'STRIPE' && order?.is_payment_required) && (
+                    <PaymentProcessingFee
+                        eventId={eventId}
+                        orderShortId={orderShortId}
+                        onCoverageChanged={() => setAmountVersion(version => version + 1)}
+                    />
                 )}
 
                 {isOfflineEnabled && (
