@@ -446,12 +446,12 @@ msgstr "5. Cookies"
 msgid "5. More information"
 msgstr "5. More information"
 
-#: src/components/common/ErrorDisplay/index.tsx:41
+#: src/components/common/ErrorDisplay/index.tsx:61
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
 msgid "500 Error."
 msgstr "500 Error."
 
-#: src/components/common/ErrorDisplay/index.tsx:35
+#: src/components/common/ErrorDisplay/index.tsx:55
 msgid "503 Service Unavailable."
 msgstr "503 Service Unavailable."
 
@@ -4943,11 +4943,11 @@ msgstr "Entries will appear here when customers join the waitlist for sold out p
 msgid "Error"
 msgstr "Error"
 
-#: src/components/common/ErrorDisplay/index.tsx:29
+#: src/components/common/ErrorDisplay/index.tsx:49
 msgid "Error 403! Access Denied!"
 msgstr "Error 403! Access Denied!"
 
-#: src/components/common/ErrorDisplay/index.tsx:23
+#: src/components/common/ErrorDisplay/index.tsx:43
 msgid "Error 404! Page not found."
 msgstr "Error 404! Page not found."
 
@@ -5943,7 +5943,7 @@ msgstr "Friends of Repton Al Barsha logo"
 msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
 msgstr "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
 
-#: src/components/common/ErrorDisplay/index.tsx:68
+#: src/components/common/ErrorDisplay/index.tsx:88
 #: src/components/layouts/AuthLayout/index.tsx:33
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:97
 msgid "Friends of School"
@@ -6068,7 +6068,7 @@ msgstr "Go back"
 msgid "Go Back"
 msgstr "Go Back"
 
-#: src/components/common/ErrorDisplay/index.tsx:92
+#: src/components/common/ErrorDisplay/index.tsx:117
 msgid "Go back to home page"
 msgstr "Go back to home page"
 
@@ -8916,7 +8916,7 @@ msgstr "Other Lists (Ticket Not Included)"
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "Our latest posts are on Instagram — tap below to see them."
 
-#: src/components/common/ErrorDisplay/index.tsx:36
+#: src/components/common/ErrorDisplay/index.tsx:56
 msgid "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
 msgstr "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
 
@@ -11652,7 +11652,7 @@ msgstr "Sold Out, waitlist available"
 msgid "Some details are hidden from public access. Log in to view everything."
 msgstr "Some details are hidden from public access. Log in to view everything."
 
-#: src/components/common/ErrorDisplay/index.tsx:42
+#: src/components/common/ErrorDisplay/index.tsx:62
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:69
 msgid "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
 msgstr "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
@@ -12194,6 +12194,10 @@ msgstr "T-shirts, mugs and more"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:370
 msgid "Take the test again"
 msgstr "Take the test again"
+
+#: src/components/common/ErrorDisplay/index.tsx:106
+msgid "Taking you to the home page in {secondsLeft} seconds..."
+msgstr "Taking you to the home page in {secondsLeft} seconds..."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:961
 msgid "Tap dates like a calendar."
@@ -12802,7 +12806,7 @@ msgstr "This is the name of your organizer that will be displayed to your users.
 msgid "This is the only time the signing secret will be shown. Please copy it now and store it securely."
 msgstr "This is the only time the signing secret will be shown. Please copy it now and store it securely."
 
-#: src/components/common/ErrorDisplay/index.tsx:24
+#: src/components/common/ErrorDisplay/index.tsx:44
 msgid "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
 msgstr "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
 
@@ -14908,7 +14912,7 @@ msgstr "You've been offered a spot!"
 msgid "You've changed the session time"
 msgstr "You've changed the session time"
 
-#: src/components/common/ErrorDisplay/index.tsx:30
+#: src/components/common/ErrorDisplay/index.tsx:50
 msgid "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
 msgstr "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
 

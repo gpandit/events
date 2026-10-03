@@ -442,12 +442,12 @@ msgstr "5. ملفات تعريف الارتباط"
 msgid "5. More information"
 msgstr "5. مزيد من المعلومات"
 
-#: src/components/common/ErrorDisplay/index.tsx:41
+#: src/components/common/ErrorDisplay/index.tsx:61
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
 msgid "500 Error."
 msgstr "خطأ 500."
 
-#: src/components/common/ErrorDisplay/index.tsx:35
+#: src/components/common/ErrorDisplay/index.tsx:55
 msgid "503 Service Unavailable."
 msgstr "503 الخدمة غير متاحة."
 
@@ -4939,11 +4939,11 @@ msgstr "ستظهر الإدخالات هنا عندما ينضم العملاء 
 msgid "Error"
 msgstr "خطأ"
 
-#: src/components/common/ErrorDisplay/index.tsx:29
+#: src/components/common/ErrorDisplay/index.tsx:49
 msgid "Error 403! Access Denied!"
 msgstr "خطأ 403! تم رفض الوصول!"
 
-#: src/components/common/ErrorDisplay/index.tsx:23
+#: src/components/common/ErrorDisplay/index.tsx:43
 msgid "Error 404! Page not found."
 msgstr "خطأ 404! الصفحة غير موجودة."
 
@@ -5939,7 +5939,7 @@ msgstr "شعار أصدقاء ريبتون البرشاء"
 msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
 msgstr "تدعم أصدقاء ريبتون المدرسة في تنظيم فعاليات متنوعة داخل الحرم المدرسي، بما في ذلك ليالي الأفلام والمناسبات الاجتماعية والنزهات وحفلات نهاية العام وفعاليات عيد الميلاد ونهاية العام. كما تشارك بفاعلية في ضمان إيجاد منزل جديد للزي المدرسي المستعمل."
 
-#: src/components/common/ErrorDisplay/index.tsx:68
+#: src/components/common/ErrorDisplay/index.tsx:88
 #: src/components/layouts/AuthLayout/index.tsx:33
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:97
 msgid "Friends of School"
@@ -6064,7 +6064,7 @@ msgstr "رجوع"
 msgid "Go Back"
 msgstr "رجوع"
 
-#: src/components/common/ErrorDisplay/index.tsx:92
+#: src/components/common/ErrorDisplay/index.tsx:117
 msgid "Go back to home page"
 msgstr "العودة إلى الصفحة الرئيسية"
 
@@ -8912,7 +8912,7 @@ msgstr "قوائم أخرى (التذكرة غير مدرجة)"
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "أحدث منشوراتنا على إنستغرام — اضغط أدناه لمشاهدتها."
 
-#: src/components/common/ErrorDisplay/index.tsx:36
+#: src/components/common/ErrorDisplay/index.tsx:56
 msgid "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
 msgstr "خوادمنا عالقة حاليًا في طابور السيارات الصباحي أمام المدرسة. سنتحرك من جديد قريبًا!"
 
@@ -11644,7 +11644,7 @@ msgstr "نفدت الكمية، قائمة الانتظار متاحة"
 msgid "Some details are hidden from public access. Log in to view everything."
 msgstr "بعض التفاصيل مخفية عن الوصول العام. سجّل الدخول لعرض كل شيء."
 
-#: src/components/common/ErrorDisplay/index.tsx:42
+#: src/components/common/ErrorDisplay/index.tsx:62
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:69
 msgid "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
 msgstr "أحدهم سكب جالونًا من بريق الأشغال اليدوية على خوادمنا. عمال النظافة الرقميون ينظفونها الآن!"
@@ -12182,6 +12182,10 @@ msgstr "قمصان وأكواب والمزيد"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:370
 msgid "Take the test again"
 msgstr "أعد الاختبار"
+
+#: src/components/common/ErrorDisplay/index.tsx:106
+msgid "Taking you to the home page in {secondsLeft} seconds..."
+msgstr "سننقلك إلى الصفحة الرئيسية خلال {secondsLeft} ثانية..."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:961
 msgid "Tap dates like a calendar."
@@ -12790,7 +12794,7 @@ msgstr "هذا هو اسم جهتك المنظمة الذي سيظهر لمست�
 msgid "This is the only time the signing secret will be shown. Please copy it now and store it securely."
 msgstr "هذه هي المرة الوحيدة التي سيظهر فيها سر التوقيع. يرجى نسخه الآن وتخزينه بأمان."
 
-#: src/components/common/ErrorDisplay/index.tsx:24
+#: src/components/common/ErrorDisplay/index.tsx:44
 msgid "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
 msgstr "هذا الرابط موجود حاليًا في صندوق المفقودات بالمدرسة، بجوار قفاز شتوي وحيد بلا اسم."
 
@@ -14884,7 +14888,7 @@ msgstr "تم عرض مقعد عليك!"
 msgid "You've changed the session time"
 msgstr "لقد غيّرت وقت الجلسة"
 
-#: src/components/common/ErrorDisplay/index.tsx:30
+#: src/components/common/ErrorDisplay/index.tsx:50
 msgid "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
 msgstr "لقد دخلتَ رسميًا إلى غرفة المعلمين الرقمية. يُمنع دخول أولياء الأمور والطلاب!"
 

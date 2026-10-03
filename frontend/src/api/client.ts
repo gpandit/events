@@ -7,6 +7,7 @@ const BASE_URL = isSsr()
     : getConfig('VITE_API_URL_CLIENT');
 const LOGIN_PATH = "/auth/login";
 const PREVIOUS_URL_KEY = 'previous_url';
+const PROTECTED_PATH_PREFIXES = ['/manage', '/welcome', '/admin', '/account'];
 
 // todo - This isn't scalable, we need to better way to manage this
 const ALLOWED_UNAUTHENTICATED_PATHS = [
@@ -49,6 +50,7 @@ api.interceptors.response.use(
         const isAllowedUnauthenticatedPath = currentPath === '/'
             || ALLOWED_UNAUTHENTICATED_PATHS.some(path => currentPath.includes(path));
         const isManageEventPath = currentPath.startsWith('/manage/event/');
+        const isProtectedPath = PROTECTED_PATH_PREFIXES.some(prefix => currentPath.startsWith(prefix));
         const isAuthError = status === 401 || status === 403;
 
         if (status === 403 && error.response.data?.error_code === 'ACCOUNT_PENDING_DELETION') {
@@ -58,7 +60,7 @@ api.interceptors.response.use(
             return Promise.reject(error);
         }
 
-        if (isAuthError && (!isAllowedUnauthenticatedPath || isManageEventPath)) {
+        if (isAuthError && isProtectedPath && (!isAllowedUnauthenticatedPath || isManageEventPath)) {
             // Store the current URL before redirecting to the login page
             window?.localStorage?.setItem(PREVIOUS_URL_KEY, window?.location.href);
             // Preserve query params (UTM tracking) during redirect
