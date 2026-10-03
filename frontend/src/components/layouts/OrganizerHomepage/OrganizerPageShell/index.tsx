@@ -14,7 +14,7 @@ import classes from '../OrganizerHomepage.module.scss';
 
 interface OrganizerPageShellProps {
     organizer: Organizer;
-    activeNav: 'home' | 'events' | 'about' | 'stories';
+    activeNav: 'home' | 'events' | 'about' | 'stories' | 'resources';
     hero?: React.ReactNode;
     children: React.ReactNode;
 }

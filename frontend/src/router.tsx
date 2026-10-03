@@ -582,6 +582,15 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/events/:organizerId/:organizerSlug/resources/:tab?",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicChildrenResources = await import("./components/layouts/PublicChildrenResources");
+            return { Component: PublicChildrenResources.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/events/:organizerId/:organizerSlug/about",
         loader: publicOrganizerRouteLoader,
         async lazy() {
