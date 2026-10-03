@@ -2,12 +2,11 @@ import React from 'react';
 import {useNavigate} from 'react-router';
 import {Tabs} from '@mantine/core';
 import {t} from '@lingui/macro';
-import {IconFeather, IconPalette, IconPuzzle} from '@tabler/icons-react';
+import {IconPalette, IconPuzzle} from '@tabler/icons-react';
 import {Organizer} from '../../../../types.ts';
 import {organizerResourcesPath} from '../../../../utilites/urlHelper.ts';
 import {ColouringPagesTab} from './ColouringPagesTab';
 import {PuzzlesTab} from './PuzzlesTab';
-import {StorySubmissionTab} from './StorySubmissionTab';
 import classes from './ResourcesForChildren.module.scss';
 
 interface ResourcesForChildrenProps {
@@ -15,7 +14,7 @@ interface ResourcesForChildrenProps {
     activeTab?: string;
 }
 
-const TABS = ['colouring-pages', 'puzzles', 'share-your-story'] as const;
+const TABS = ['colouring-pages', 'puzzles'] as const;
 type ResourcesTab = typeof TABS[number];
 
 const isResourcesTab = (value?: string): value is ResourcesTab => TABS.includes(value as ResourcesTab);
@@ -28,7 +27,7 @@ export const ResourcesForChildren: React.FC<ResourcesForChildrenProps> = ({organ
         <section className={classes.section}>
             <h2 className={classes.heading}>{t`Resources for Children`}</h2>
             <p className={classes.subheading}>
-                {t`Colouring sheets, puzzles, and a place to share your own stories and poems.`}
+                {t`Colouring sheets and puzzles for children.`}
             </p>
 
             <Tabs
@@ -43,9 +42,6 @@ export const ResourcesForChildren: React.FC<ResourcesForChildrenProps> = ({organ
                     <Tabs.Tab value="puzzles" leftSection={<IconPuzzle size={16}/>}>
                         {t`Puzzles`}
                     </Tabs.Tab>
-                    <Tabs.Tab value="share-your-story" leftSection={<IconFeather size={16}/>}>
-                        {t`Share Your Story`}
-                    </Tabs.Tab>
                 </Tabs.List>
 
                 <Tabs.Panel value="colouring-pages">
@@ -53,9 +49,6 @@ export const ResourcesForChildren: React.FC<ResourcesForChildrenProps> = ({organ
                 </Tabs.Panel>
                 <Tabs.Panel value="puzzles">
                     <PuzzlesTab/>
-                </Tabs.Panel>
-                <Tabs.Panel value="share-your-story">
-                    <StorySubmissionTab organizer={organizer}/>
                 </Tabs.Panel>
             </Tabs>
         </section>

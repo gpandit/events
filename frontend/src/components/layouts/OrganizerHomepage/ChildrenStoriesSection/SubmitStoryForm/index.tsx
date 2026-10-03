@@ -6,15 +6,15 @@ import {useSubmitChildStorySubmission} from '../../../../../mutations/useSubmitC
 import {showError} from '../../../../../utilites/notifications.tsx';
 import {getConfig} from '../../../../../utilites/config.ts';
 import {TurnstileWidget} from '../../../../common/TurnstileWidget';
-import classes from '../ResourcesForChildren.module.scss';
+import classes from './SubmitStoryForm.module.scss';
 
-interface StorySubmissionTabProps {
+interface SubmitStoryFormProps {
     organizer: Organizer;
 }
 
 const MAX_FILE_SIZE_BYTES = 200 * 1024;
 
-export const StorySubmissionTab: React.FC<StorySubmissionTabProps> = ({organizer}) => {
+export const SubmitStoryForm: React.FC<SubmitStoryFormProps> = ({organizer}) => {
     const submitMutation = useSubmitChildStorySubmission(organizer.id);
     const [submitted, setSubmitted] = useState(false);
     const [type, setType] = useState<'STORY' | 'POEM'>('STORY');
@@ -115,14 +115,14 @@ export const StorySubmissionTab: React.FC<StorySubmissionTabProps> = ({organizer
 
     if (submitted) {
         return (
-            <div className={classes.tabPanel}>
+            <div className={classes.panel}>
                 <div className={classes.submittedBanner}>
                     <IconCheck size={32}/>
                     <h3>{t`Thank you for sharing your writing!`}</h3>
                     <p>
                         <Trans>
                             Our team will read it over, and if it's approved, it'll be published on our Children's
-                            Stories page with your first name, last initial and year group.
+                            Prose & Poetry page with your first name, last initial and year group.
                         </Trans>
                     </p>
                     <button
@@ -138,7 +138,7 @@ export const StorySubmissionTab: React.FC<StorySubmissionTabProps> = ({organizer
     }
 
     return (
-        <div className={classes.tabPanel}>
+        <div className={classes.panel}>
             <p className={classes.storyIntro}>
                 <Trans>
                     Share your own short story or poem with the Friends of Repton community! Each month we'll
@@ -260,4 +260,4 @@ export const StorySubmissionTab: React.FC<StorySubmissionTabProps> = ({organizer
     );
 };
 
-export default StorySubmissionTab;
+export default SubmitStoryForm;
