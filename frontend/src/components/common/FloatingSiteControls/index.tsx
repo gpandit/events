@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 import {ActionIcon, Tooltip, useComputedColorScheme, useMantineColorScheme} from '@mantine/core';
 import {IconAdjustments, IconArrowUp, IconLanguage, IconMoon, IconSun, IconTextSize} from '@tabler/icons-react';
 import {t} from '@lingui/macro';
-import {dynamicActivateLocale, getClientLocale, SupportedLocales} from '../../../locales.ts';
+import {availableLocales, dynamicActivateLocale, getClientLocale, SupportedLocales} from '../../../locales.ts';
 import classes from './FloatingSiteControls.module.scss';
 
 const TEXT_SCALE_STORAGE_KEY = 'fos_text_scale';
@@ -128,19 +128,21 @@ export const FloatingSiteControls = () => {
                     </ActionIcon>
                 </Tooltip>
 
-                <Tooltip label={t`Switch language`} position="left">
-                    <ActionIcon
-                        onClick={handleLanguageToggle}
-                        variant="filled"
-                        size={48}
-                        radius="xl"
-                        className={classes.satelliteButton}
-                        aria-label={t`Switch language`}
-                        tabIndex={isOpen ? 0 : -1}
-                    >
-                        <IconLanguage size={20}/>
-                    </ActionIcon>
-                </Tooltip>
+                {availableLocales.length > 1 && (
+                    <Tooltip label={t`Switch language`} position="left">
+                        <ActionIcon
+                            onClick={handleLanguageToggle}
+                            variant="filled"
+                            size={48}
+                            radius="xl"
+                            className={classes.satelliteButton}
+                            aria-label={t`Switch language`}
+                            tabIndex={isOpen ? 0 : -1}
+                        >
+                            <IconLanguage size={20}/>
+                        </ActionIcon>
+                    </Tooltip>
+                )}
 
                 <Tooltip label={t`Change text size`} position="left">
                     <ActionIcon

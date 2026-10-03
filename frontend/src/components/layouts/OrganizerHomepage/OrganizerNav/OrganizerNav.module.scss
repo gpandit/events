@@ -50,10 +50,49 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
   text-overflow: ellipsis;
 }
 
-.links {
+.desktopLinks {
   display: flex;
   align-items: center;
   gap: 4px;
+
+  @include mixins.respond-below(md) {
+    display: none;
+  }
+}
+
+.burger {
+  display: none;
+
+  @include mixins.respond-below(md) {
+    display: block;
+  }
+}
+
+.mobileMenu {
+  display: none;
+
+  @include mixins.respond-below(md) {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 20px 16px;
+    border-top: 1px solid rgba(17, 20, 23, 0.07);
+    background-color: rgba(255, 255, 255, 0.96);
+  }
+}
+
+.subMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: 16px;
+  padding-left: 8px;
+  border-left: 2px solid rgba(21, 23, 26, 0.1);
+}
+
+.chevron {
+  margin-left: 4px;
+  vertical-align: -2px;
 }
 
 .link {
@@ -72,9 +111,10 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     background-color: rgba(21, 23, 26, 0.06);
   }
 
-  @include mixins.respond-below(sm) {
-    padding: 8px 10px;
-    font-size: 0.82rem;
+  @include mixins.respond-below(md) {
+    padding: 12px 14px;
+    font-size: 1rem;
+    white-space: normal;
   }
 }
 

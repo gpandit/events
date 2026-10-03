@@ -14396,3 +14396,11 @@ msgstr "Zip or Postal Code"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:591
 msgid "ZIP or Postal Code"
 msgstr "ZIP or Postal Code"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx
+msgid "Close menu"
+msgstr "Close menu"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx
+msgid "Open menu"
+msgstr "Open menu"

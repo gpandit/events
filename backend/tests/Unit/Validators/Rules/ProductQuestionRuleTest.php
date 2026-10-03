@@ -2,6 +2,7 @@
 
 namespace Tests\Unit\Validators\Rules;
 
+use HiEvents\DomainObjects\Enums\ProductType;
 use HiEvents\DomainObjects\ProductDomainObject;
 use HiEvents\DomainObjects\ProductPriceDomainObject;
 use HiEvents\Validators\Rules\ProductQuestionRule;
@@ -58,5 +59,37 @@ class ProductQuestionRuleTest extends TestCase
             value: [['product_id' => 1, 'product_price_id' => 999]],
             fail: static fn () => null,
         );
+    }
+
+    public function test_ticket_without_attendee_email_passes_basic_validation(): void
+    {
+        $price = new ProductPriceDomainObject;
+        $price->setId(100);
+        $price->setProductId(1);
+
+        $product = new ProductDomainObject;
+        $product->setId(1);
+        $product->setProductType(ProductType::TICKET->name);
+        $product->setProductPrices(new Collection([$price]));
+
+        $rule = new ProductQuestionRule(
+            questions: new Collection,
+            products: new Collection([$product]),
+        );
+
+        $rule->validate(
+            attribute: 'products',
+            value: [[
+                'product_id' => 1,
+                'product_price_id' => 100,
+                'first_name' => 'Ada',
+                'last_name' => 'Lovelace',
+                'email' => null,
+                'email_confirmation' => null,
+            ]],
+            fail: static fn () => null,
+        );
+
+        $this->addToAssertionCount(1);
     }
 }
