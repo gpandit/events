@@ -14739,3 +14739,11 @@ msgstr "أحدهم سكب جالونًا من بريق الأشغال اليدو
 #: src/components/common/ErrorDisplay/index.tsx
 msgid "Go back to home page"
 msgstr "العودة إلى الصفحة الرئيسية"
+
+#: src/components/forms/StripeCheckoutForm/index.tsx
+msgid "Class rules: we accept Visa and Mastercard, plus Apple Pay and Google Pay. American Express didn't make the guest list, so please leave it in your wallet."
+msgstr "قواعد الصف: نقبل بطاقات فيزا وماستركارد، إضافةً إلى Apple Pay وGoogle Pay. بطاقة أمريكان إكسبريس لم تدخل قائمة المدعوين، فيرجى إبقاؤها في محفظتك."
+
+#: src/components/forms/StripeCheckoutForm/index.tsx
+msgid "That payment got sent to detention. If you used American Express, we can't accept it here. Please try Visa or Mastercard instead."
+msgstr "تم إرسال هذه الدفعة إلى غرفة العقاب. إذا كنت قد استخدمت بطاقة أمريكان إكسبريس، فلا يمكننا قبولها هنا. يرجى تجربة فيزا أو ماستركارد بدلاً من ذلك."

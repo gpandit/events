@@ -14767,3 +14767,11 @@ msgstr "Someone knocked over a gallon of craft glitter onto our servers. Our dig
 #: src/components/common/ErrorDisplay/index.tsx
 msgid "Go back to home page"
 msgstr "Go back to home page"
+
+#: src/components/forms/StripeCheckoutForm/index.tsx
+msgid "Class rules: we accept Visa and Mastercard, plus Apple Pay and Google Pay. American Express didn't make the guest list, so please leave it in your wallet."
+msgstr "Class rules: we accept Visa and Mastercard, plus Apple Pay and Google Pay. American Express didn't make the guest list, so please leave it in your wallet."
+
+#: src/components/forms/StripeCheckoutForm/index.tsx
+msgid "That payment got sent to detention. If you used American Express, we can't accept it here. Please try Visa or Mastercard instead."
+msgstr "That payment got sent to detention. If you used American Express, we can't accept it here. Please try Visa or Mastercard instead."
