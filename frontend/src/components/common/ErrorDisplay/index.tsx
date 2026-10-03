@@ -3,7 +3,8 @@ import {Box, Button, Container, Image, rem, Stack, Text, Title} from '@mantine/c
 import {IconHome} from '@tabler/icons-react';
 import classes from './ErrorDisplay.module.scss';
 import {Helmet} from "react-helmet-async";
-import {NavLink, useRouteError} from "react-router";
+import {useEffect, useState} from "react";
+import {NavLink, useNavigate, useRouteError} from "react-router";
 import {BouncingEmoji} from "../BouncingEmoji";
 
 const getErrorStatus = (error: any): number | undefined => {
@@ -11,9 +12,28 @@ const getErrorStatus = (error: any): number | undefined => {
     return typeof status === 'number' ? status : undefined;
 };
 
+const REDIRECT_SECONDS = 10;
+
 export const ErrorDisplay = () => {
     const error = useRouteError() as any;
     const status = getErrorStatus(error);
+    const navigate = useNavigate();
+    const [secondsLeft, setSecondsLeft] = useState(REDIRECT_SECONDS);
+    const redirectsHome = status === 404;
+
+    useEffect(() => {
+        if (!redirectsHome) {
+            return;
+        }
+
+        if (secondsLeft === 0) {
+            navigate('/');
+            return;
+        }
+
+        const timer = window.setTimeout(() => setSecondsLeft((seconds) => seconds - 1), 1000);
+        return () => window.clearTimeout(timer);
+    }, [redirectsHome, secondsLeft, navigate]);
 
     const {emoji, title, description} = (() => {
         switch (status) {
@@ -81,6 +101,11 @@ export const ErrorDisplay = () => {
                             <Text size="lg" c="dimmed" className={classes.description}>
                                 {description}
                             </Text>
+                            {redirectsHome && (
+                                <Text size="sm" c="dimmed" role="status" data-testid="error-redirect-countdown">
+                                    {t`Taking you to the home page in ${secondsLeft} seconds...`}
+                                </Text>
+                            )}
                             <Button
                                 component={NavLink}
                                 to="/"
