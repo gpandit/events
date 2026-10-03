@@ -606,7 +606,7 @@ msgstr "حول"
 #~ msgstr "عن أصدقاء ريبتون"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:83
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:136
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:133
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
 msgid "About Us"
 msgstr "من نحن"
@@ -1185,7 +1185,7 @@ msgstr "جميع المناسبات"
 msgid "All Products"
 msgstr "جميع المنتجات"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:170
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:167
 msgid "All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
@@ -2015,8 +2015,8 @@ msgstr "العودة إلى التقارير"
 msgid "Back to search"
 msgstr "العودة إلى البحث"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:158
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:306
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:200
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:348
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:229
 msgid "Back to sign in"
 msgstr "العودة إلى تسجيل الدخول"
@@ -2711,7 +2711,7 @@ msgstr "اختر من يدفع رسم المنصة. هذا لا يؤثر على 
 msgid "Choose your age group"
 msgstr "اختر فئتك العمرية"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:134
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:176
 msgid "Choose your password"
 msgstr "اختر كلمة المرور"
 
@@ -2791,7 +2791,7 @@ msgstr "إغلاق"
 msgid "Close"
 msgstr "إغلاق"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:99
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:96
 msgid "Close menu"
 msgstr ""
 
@@ -3145,7 +3145,7 @@ msgstr "اتصل بـ {0}"
 msgid "Contact Email"
 msgstr "بريد التواصل الإلكتروني"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:156
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
@@ -3215,7 +3215,7 @@ msgstr "تحكم في من يدخل لهذا التاريخ"
 msgid "Control who gets in, and when"
 msgstr "تحكم في من يدخل، ومتى"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:152
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
 #: src/components/routes/legal/CookiePolicy/index.tsx:8
 msgid "Cookie Policy"
 msgstr "سياسة ملفات تعريف الارتباط"
@@ -3429,7 +3429,7 @@ msgstr "إنشاء رمز ترويجي"
 msgid "Create a Ticket"
 msgstr "إنشاء تذكرة"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:183
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:225
 msgid "Create account"
 msgstr "إنشاء حساب"
 
@@ -3443,6 +3443,10 @@ msgstr "أنشئ جهات منظمة إضافية لإدارة علامات تج
 #: src/components/routes/event/Affiliates/index.tsx:100
 msgid "Create Affiliate"
 msgstr "إنشاء شريك تابع"
+
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:273
+msgid "Create an account to see your tickets and purchases. Enter your details and we will email you a link to choose a password. If you have bought tickets with this email before, they will appear in your account."
+msgstr "أنشئ حساباً لمشاهدة تذاكرك ومشترياتك. أدخل بياناتك وسنرسل لك رابطاً لاختيار كلمة مرور. إذا اشتريت تذاكر بهذا البريد من قبل فستظهر في حسابك."
 
 #: src/components/routes/admin/Announcements/index.tsx:147
 msgid "Create an announcement to show a message to your users."
@@ -3628,7 +3632,7 @@ msgid "Creating your organizer profile, please wait"
 msgstr "جارٍ إنشاء ملف جهتك المنظمة، يرجى الانتظار"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:70
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:121
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:28
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
 msgid "Creative Corner"
@@ -4575,12 +4579,12 @@ msgstr "قوائم تسجيل الدخول المؤهلة"
 #: src/components/common/OrderDetails/index.tsx:34
 #: src/components/common/QuestionsTable/index.tsx:254
 #: src/components/forms/AffiliateForm/index.tsx:89
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:193
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:194
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:254
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:255
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:290
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:291
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:235
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:236
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:296
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:297
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:332
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:333
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:167
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
@@ -4671,11 +4675,11 @@ msgstr "البريد الإلكتروني اختياري. إذا أضفته فس
 msgid "Email is required"
 msgstr "البريد الإلكتروني مطلوب"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:276
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:318
 msgid "Email me a link"
 msgstr "أرسل لي رابطاً بالبريد"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:303
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:345
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:224
 msgid "Email me a reset link"
 msgstr "أرسل لي رابط إعادة التعيين"
@@ -4884,8 +4888,8 @@ msgid "Enter unique affiliate code"
 msgstr "أدخل رمز شريك تابع فريدًا"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:231
-msgid "Enter your details and we will email you a link to choose a password. If you have bought tickets with this email before, they will appear in your account."
-msgstr "أدخل بياناتك وسنرسل لك رابطاً لاختيار كلمة مرور. إذا اشتريت تذاكر بهذا البريد من قبل فستظهر في حسابك."
+#~ msgid "Enter your details and we will email you a link to choose a password. If you have bought tickets with this email before, they will appear in your account."
+#~ msgstr "أدخل بياناتك وسنرسل لك رابطاً لاختيار كلمة مرور. إذا اشتريت تذاكر بهذا البريد من قبل فستظهر في حسابك."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:105
 #~ msgid "Enter your details to sign in or sign up and save your score."
@@ -4897,7 +4901,7 @@ msgstr "أدخل بياناتك وسنرسل لك رابطاً لاختيار ك
 msgid "Enter your email"
 msgstr "أدخل بريدك الإلكتروني"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:285
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:327
 msgid "Enter your email and we will send you a link to choose a new password."
 msgstr "أدخل بريدك الإلكتروني وسنرسل لك رابطاً لاختيار كلمة مرور جديدة."
 
@@ -5141,7 +5145,7 @@ msgstr "تم تحديث الفعالية"
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:62
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:114
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:111
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:118
 #: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
@@ -5766,8 +5770,8 @@ msgid "First Invoice Number"
 msgstr "رقم الفاتورة الأول"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:170
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:236
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:237
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:278
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:279
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:148
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:149
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:40
@@ -5894,7 +5898,7 @@ msgstr "للاطلاع على تفاصيل كيفية تعاملنا مع الم
 msgid "Forgot password?"
 msgstr "نسيت كلمة المرور؟"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:223
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:265
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:270
 msgid "Forgot your password?"
 msgstr "هل نسيت كلمة المرور؟"
@@ -6348,7 +6352,7 @@ msgid "Hobbies"
 msgstr "هوايات"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:59
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:107
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:104
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:115
 msgid "Home"
 msgstr "الرئيسية"
@@ -6462,6 +6466,10 @@ msgstr "أرغب في أن تُؤخذ قصتي/قصيدتي بعين الاعت�
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1037
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
 msgstr "إذا لم يتم فتح علامة تبويب جديدة تلقائيًا، يرجى النقر على الزر أدناه للمتابعة إلى الدفع."
+
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:138
+msgid "If an account exists for that email, we have sent a link to reset the password."
+msgstr "إذا كان هناك حساب لهذا البريد الإلكتروني فقد أرسلنا رابطاً لإعادة تعيين كلمة المرور."
 
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:185
 msgid "If blank, the address will be used to generate a Google Maps link"
@@ -6935,8 +6943,8 @@ msgid "Last login"
 msgstr "آخر تسجيل دخول"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:181
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:245
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:246
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:287
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:288
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:157
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:158
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:48
@@ -7027,7 +7035,7 @@ msgstr "اتركه مفعّلاً ليغطي كل تذكرة في الفعالي
 msgid "Leave your details below and we'll get in touch about how you can help."
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:144
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:141
 msgid "Legal"
 msgstr "قانوني"
 
@@ -7571,9 +7579,10 @@ msgstr "مواقع متعددة"
 msgid "Music"
 msgstr "موسيقى"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:89
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:146
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:139
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:165
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:86
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:140
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
 msgid "My Account"
 msgstr "حسابي"
 
@@ -7688,7 +7697,7 @@ msgstr "تسمية جديدة"
 msgid "New location"
 msgstr "موقع جديد"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:139
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:181
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizResetPasswordForm.tsx:48
 msgid "New password"
 msgstr "كلمة المرور الجديدة"
@@ -7698,7 +7707,7 @@ msgstr "كلمة المرور الجديدة"
 msgid "New Password"
 msgstr "كلمة المرور الجديدة"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:138
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:180
 msgid "New password (at least {MIN_PASSWORD_LENGTH} characters)"
 msgstr "كلمة المرور الجديدة ({MIN_PASSWORD_LENGTH} أحرف على الأقل)"
 
@@ -8539,7 +8548,7 @@ msgstr "فتح تسجيل الدخول"
 msgid "Open Check-In Page"
 msgstr "فتح صفحة تسجيل الدخول"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:99
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:96
 msgid "Open menu"
 msgstr ""
 
@@ -8988,8 +8997,8 @@ msgstr "الحسابات المدفوعة"
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:86
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:143
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
-msgid "Parent Account"
-msgstr "حساب ولي الأمر"
+#~ msgid "Parent Account"
+#~ msgstr "حساب ولي الأمر"
 
 #: src/components/modals/RefundOrderModal/index.tsx:117
 msgid "Partial refund"
@@ -9013,8 +9022,8 @@ msgstr "تمرير الرسم إلى المشتري"
 msgid "Pass to Buyer"
 msgstr "تمرير إلى المشتري"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:202
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:203
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:244
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:245
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:179
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:248
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:249
@@ -9284,7 +9293,7 @@ msgstr "المعلومات الشخصية"
 msgid "Phone"
 msgstr "الهاتف"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:264
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:306
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:66
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:67
 msgid "Phone number"
@@ -9294,7 +9303,7 @@ msgstr "رقم الهاتف"
 msgid "Phone Number"
 msgstr "رقم الهاتف"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:263
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:305
 msgid "Phone number (optional)"
 msgstr "رقم الهاتف (اختياري)"
 
@@ -9432,11 +9441,11 @@ msgstr "يرجى إدخال رابط صالح"
 msgid "Please enter the 5-digit code"
 msgstr "يرجى إدخال الرمز المكون من 5 أرقام"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:88
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:127
 msgid "Please enter your email"
 msgstr "يرجى إدخال بريدك الإلكتروني"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:58
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:94
 msgid "Please enter your email and password"
 msgstr "يرجى إدخال بريدك الإلكتروني وكلمة المرور"
 
@@ -9464,7 +9473,7 @@ msgstr "يرجى ملء جميع الحقول قبل الإرسال."
 #~ msgid "Please fill in all the fields"
 #~ msgstr "يرجى ملء جميع الحقول"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:73
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:112
 msgid "Please fill in your first name, last name and email"
 msgstr "يرجى إدخال اسمك الأول واسم العائلة والبريد الإلكتروني"
 
@@ -9662,7 +9671,7 @@ msgstr "طباعة التذاكر"
 msgid "Print to PDF"
 msgstr "طباعة كملف PDF"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:146
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:143
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
@@ -10372,7 +10381,7 @@ msgstr "إعادة تعيين"
 msgid "Reset password"
 msgstr "إعادة تعيين كلمة المرور"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:283
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:325
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:197
 msgid "Reset your password"
 msgstr "إعادة تعيين كلمة المرور"
@@ -10643,7 +10652,7 @@ msgstr "حفظ كلمة المرور الجديدة"
 msgid "Save Organizer"
 msgstr "حفظ الجهة المنظمة"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:151
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:193
 msgid "Save password and view my purchases"
 msgstr "حفظ كلمة المرور وعرض مشترياتي"
 
@@ -10937,8 +10946,8 @@ msgid "See what Stripe still needs"
 msgstr "تعرّف على ما يحتاجه Stripe بعد"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:125
-msgid "See your tickets and other purchases in one place."
-msgstr "شاهد تذاكرك ومشترياتك الأخرى في مكان واحد."
+#~ msgid "See your tickets and other purchases in one place."
+#~ msgstr "شاهد تذاكرك ومشترياتك الأخرى في مكان واحد."
 
 #: src/components/routes/admin/Announcements/index.tsx:161
 msgid "Seen"
@@ -11518,8 +11527,8 @@ msgstr "يعرض حقول العنوان الشائعة، بما في ذلك ا�
 msgid "Shows remaining"
 msgstr "يُظهر المتبقي"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:173
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:215
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:257
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:135
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:262
 msgid "Sign in"
@@ -11532,6 +11541,10 @@ msgstr "تسجيل الدخول / إنشاء حساب"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:208
 msgid "Sign in or sign up"
 msgstr "تسجيل الدخول أو إنشاء حساب"
+
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:167
+msgid "Sign in to manage your events, or to see your tickets and other purchases."
+msgstr "سجّل الدخول لإدارة فعالياتك، أو لمشاهدة تذاكرك ومشترياتك الأخرى."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:275
 msgid "Sign in to save your scores and earn points."
@@ -11669,7 +11682,7 @@ msgstr "حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقً
 
 #: src/components/layouts/Event/index.tsx:91
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:109
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:26
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:30
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:26
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizResetPasswordForm.tsx:34
 #: src/components/layouts/OrganizerLayout/index.tsx:131
@@ -12304,7 +12317,7 @@ msgstr "تم حفظ القالب بنجاح"
 msgid "Term"
 msgstr "المدة"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:146
 #: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
@@ -15014,7 +15027,7 @@ msgstr "عنوان جهتك المنظمة"
 msgid "Your password"
 msgstr "كلمة مرورك"
 
-#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:103
+#: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:145
 msgid "Your password needs at least {MIN_PASSWORD_LENGTH} characters"
 msgstr "تحتاج كلمة المرور إلى {MIN_PASSWORD_LENGTH} أحرف على الأقل"
 

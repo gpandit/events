@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
 import {useNavigate, useSearchParams} from 'react-router';
+import {useMutation} from '@tanstack/react-query';
 import {t} from '@lingui/macro';
 import {IconLoader2, IconTicket} from '@tabler/icons-react';
-import {Organizer} from '../../../../types.ts';
+import {Account, IdParam, LoginData, Organizer} from '../../../../types.ts';
+import {authClient} from '../../../../api/auth.client.ts';
+import {redirectToPreviousUrl} from '../../../../api/client.ts';
+import {ChooseAccountModal} from '../../../modals/ChooseAccountModal';
 import {useRegisterCustomer} from '../../../../mutations/useRegisterCustomer.ts';
 import {useLoginCustomer} from '../../../../mutations/useLoginCustomer.ts';
 import {useRequestCustomerPasswordSetup} from '../../../../mutations/useRequestCustomerPasswordSetup.ts';
@@ -40,8 +44,11 @@ export const CustomerAccount: React.FC<CustomerAccountProps> = ({organizer}) => 
     const registerMutation = useRegisterCustomer(organizer.id);
     const forgotMutation = useRequestCustomerPasswordSetup(organizer.id);
     const setPasswordMutation = useSetCustomerPassword(organizer.id);
-    const isPending = loginMutation.isPending || registerMutation.isPending
-        || forgotMutation.isPending || setPasswordMutation.isPending;
+    const staffLoginMutation = useMutation({mutationFn: (credentials: LoginData) => authClient.login(credentials)});
+    const [staffAccounts, setStaffAccounts] = useState<Account[]>([]);
+    const [isSigningIn, setIsSigningIn] = useState(false);
+    const [isRequestingReset, setIsRequestingReset] = useState(false);
+    const isPending = isSigningIn || isRequestingReset || registerMutation.isPending || setPasswordMutation.isPending;
 
     const goToPurchases = (lookupToken: string) => navigate(`/my-tickets/${lookupToken}`);
 
@@ -51,7 +58,36 @@ export const CustomerAccount: React.FC<CustomerAccountProps> = ({organizer}) => 
         setNotice(null);
     };
 
-    const handleSignIn = (event: React.FormEvent) => {
+    const signInAsStaff = async (accountId?: IdParam): Promise<boolean> => {
+        try {
+            const response = await staffLoginMutation.mutateAsync({
+                email: signIn.email,
+                password: signIn.password,
+                account_id: accountId ?? '',
+            });
+
+            if (response.token) {
+                redirectToPreviousUrl();
+                return true;
+            }
+
+            if (response.accounts.length > 1) {
+                setStaffAccounts(response.accounts);
+                return true;
+            }
+
+            return false;
+        } catch {
+            return false;
+        }
+    };
+
+    const signInAsParent = () => loginMutation.mutate(signIn, {
+        onSuccess: (response) => goToPurchases(response.data.lookup_token),
+        onError: (err) => setError(errorMessage(err)),
+    });
+
+    const handleSignIn = async (event: React.FormEvent) => {
         event.preventDefault();
 
         if (!signIn.email.trim() || !signIn.password) {
@@ -60,10 +96,13 @@ export const CustomerAccount: React.FC<CustomerAccountProps> = ({organizer}) => 
         }
 
         setError(null);
-        loginMutation.mutate(signIn, {
-            onSuccess: (response) => goToPurchases(response.data.lookup_token),
-            onError: (err) => setError(errorMessage(err)),
-        });
+        setIsSigningIn(true);
+        const isStaff = await signInAsStaff();
+        setIsSigningIn(false);
+
+        if (!isStaff) {
+            signInAsParent();
+        }
     };
 
     const handleSignUp = (event: React.FormEvent) => {
@@ -81,7 +120,7 @@ export const CustomerAccount: React.FC<CustomerAccountProps> = ({organizer}) => 
         });
     };
 
-    const handleForgot = (event: React.FormEvent) => {
+    const handleForgot = async (event: React.FormEvent) => {
         event.preventDefault();
 
         if (!signIn.email.trim()) {
@@ -90,10 +129,13 @@ export const CustomerAccount: React.FC<CustomerAccountProps> = ({organizer}) => 
         }
 
         setError(null);
-        forgotMutation.mutate(signIn.email, {
-            onSuccess: (response) => setNotice(response.message),
-            onError: (err) => setError(errorMessage(err)),
-        });
+        setIsRequestingReset(true);
+        await Promise.allSettled([
+            authClient.forgotPassword({email: signIn.email}),
+            forgotMutation.mutateAsync(signIn.email),
+        ]);
+        setIsRequestingReset(false);
+        setNotice(t`If an account exists for that email, we have sent a link to reset the password.`);
     };
 
     const handleSetPassword = (event: React.FormEvent) => {
@@ -120,9 +162,9 @@ export const CustomerAccount: React.FC<CustomerAccountProps> = ({organizer}) => 
 
     return (
         <section className={classes.section}>
-            <h2 className={classes.heading}>{t`Parent Account`}</h2>
+            <h2 className={classes.heading}>{t`My Account`}</h2>
             <p className={classes.subheading}>
-                {t`See your tickets and other purchases in one place.`}
+                {t`Sign in to manage your events, or to see your tickets and other purchases.`}
             </p>
 
             <div className={classes.tabPanel}>
@@ -228,7 +270,7 @@ export const CustomerAccount: React.FC<CustomerAccountProps> = ({organizer}) => 
                             {mode === 'signup' && (
                                 <form onSubmit={handleSignUp} className={classes.saveForm}>
                                     <p className={classes.puzzleText}>
-                                        {t`Enter your details and we will email you a link to choose a password. If you have bought tickets with this email before, they will appear in your account.`}
+                                        {t`Create an account to see your tickets and purchases. Enter your details and we will email you a link to choose a password. If you have bought tickets with this email before, they will appear in your account.`}
                                     </p>
                                     <input
                                         type="text"
@@ -311,6 +353,12 @@ export const CustomerAccount: React.FC<CustomerAccountProps> = ({organizer}) => 
                     )}
                 </div>
             </div>
+            {staffAccounts.length > 0 && (
+                <ChooseAccountModal
+                    accounts={staffAccounts}
+                    onAccountChosen={(accountId) => signInAsStaff(accountId)}
+                />
+            )}
         </section>
     );
 };

@@ -215,6 +215,7 @@ export interface OrganizerStripeConnectAccountsResponse {
 export interface LoginData {
     email: string;
     password: string;
+    account_id?: IdParam;
 }
 
 export interface Image {
