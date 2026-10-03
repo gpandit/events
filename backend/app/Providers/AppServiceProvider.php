@@ -14,6 +14,7 @@ use HiEvents\Services\Infrastructure\CurrencyConversion\NoOpCurrencyConversionCl
 use HiEvents\Services\Infrastructure\CurrencyConversion\OpenExchangeRatesCurrencyConversionClient;
 use HiEvents\Services\Infrastructure\Geo\GeoProviderInterface;
 use HiEvents\Services\Infrastructure\Geo\GooglePlacesGeoProvider;
+use HiEvents\Services\Infrastructure\Email\SendPulse\SendPulseTransport;
 use HiEvents\Services\Infrastructure\Geo\NoOpGeoProvider;
 use HiEvents\Services\Infrastructure\Stripe\StripeClientFactory;
 use HiEvents\Services\Infrastructure\Stripe\StripeConfigurationService;
@@ -23,6 +24,7 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Http\Client\Factory as HttpClient;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Stripe\StripeClient;
@@ -49,6 +51,8 @@ class AppServiceProvider extends ServiceProvider
         $this->disableLazyLoading();
 
         $this->registerMorphMaps();
+
+        $this->registerSendPulseMailTransport();
     }
 
     private function bindDoctrineConnection(): void
@@ -90,6 +94,16 @@ class AppServiceProvider extends ServiceProvider
             StripeClient::class,
             fn () => new StripeClient(config('services.stripe.secret_key'))
         );
+    }
+
+    private function registerSendPulseMailTransport(): void
+    {
+        Mail::extend('sendpulse', fn () => new SendPulseTransport(
+            http: $this->app->make(HttpClient::class),
+            cache: $this->app->make('cache.store'),
+            clientId: (string) config('services.sendpulse.client_id'),
+            clientSecret: (string) config('services.sendpulse.client_secret'),
+        ));
     }
 
     private function handleQueryLogging(): void

@@ -52,6 +52,10 @@ return [
             'verify_peer' => env('MAIL_VERIFY_PEER', true),
         ],
 
+        'sendpulse' => [
+            'transport' => 'sendpulse',
+        ],
+
         'ses' => [
             'transport' => 'ses',
         ],

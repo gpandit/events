@@ -21,6 +21,11 @@ return [
         'scheme' => 'https',
     ],
 
+    'sendpulse' => [
+        'client_id' => env('SENDPULSE_CLIENT_ID'),
+        'client_secret' => env('SENDPULSE_CLIENT_SECRET'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
