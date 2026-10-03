@@ -23,6 +23,8 @@ class OrganizerConfigurationResource extends JsonResource
                 'currency' => $this->getApplicationFeeCurrency(),
             ],
             'bypass_application_fees' => $this->getBypassApplicationFees(),
+            /** @var 'HIDE'|'SHOW'|'COLLECT' */
+            'payment_processing_fee_mode' => $this->getPaymentProcessingFeeMode(),
         ];
     }
 }

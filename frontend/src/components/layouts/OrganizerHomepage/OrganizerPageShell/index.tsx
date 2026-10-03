@@ -3,7 +3,6 @@ import {useLocation} from "react-router";
 import {Organizer} from "../../../../types.ts";
 import {OrganizerDocumentHead} from "../../../common/OrganizerDocumentHead";
 import {StatusToggle} from "../../../common/StatusToggle";
-import {ensureHomepageFontLoaded} from "../../../../utilites/fontLoader.ts";
 import {useOrganizerTrackingPixels} from "../../../../hooks/useOrganizerTrackingPixels";
 import {useOrganizerThemeStyles} from "../../../../hooks/useOrganizerThemeStyles.ts";
 import {removeTransparency} from "../../../../utilites/colorHelper.ts";
@@ -46,10 +45,6 @@ export const OrganizerPageShell: React.FC<OrganizerPageShellProps> = ({organizer
     const backgroundType = themeSettings.background_type;
 
     const organizerCover = organizer.images?.find(img => img.type === 'ORGANIZER_COVER');
-
-    useEffect(() => {
-        ensureHomepageFontLoaded(themeSettings.font_family);
-    }, [themeSettings.font_family]);
 
     return (
         <>

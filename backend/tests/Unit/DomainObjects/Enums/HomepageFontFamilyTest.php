@@ -12,10 +12,9 @@ class HomepageFontFamilyTest extends TestCase
         $values = HomepageFontFamily::valuesArray();
 
         $this->assertContains('Outfit', $values);
-        $this->assertContains('Inter', $values);
         $this->assertContains('Plus Jakarta Sans', $values);
         $this->assertContains('Playfair Display', $values);
-        $this->assertContains('Bebas Neue', $values);
+        $this->assertNotContains('Inter', $values);
     }
 
     public function test_values_are_unique_non_empty_strings(): void

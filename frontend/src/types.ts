@@ -1045,6 +1045,18 @@ export interface Order {
     event?: Event;
     latest_invoice?: Invoice;
     session_identifier?: string;
+    payment_processing_fee?: number;
+}
+
+export type PaymentProcessingFeeMode = 'HIDE' | 'SHOW' | 'COLLECT';
+
+export interface PaymentProcessingFeeQuote {
+    mode: PaymentProcessingFeeMode;
+    fee: number;
+    covered: boolean;
+    total_without_fee: number;
+    total_with_fee: number;
+    currency: string;
 }
 
 export interface Invoice {

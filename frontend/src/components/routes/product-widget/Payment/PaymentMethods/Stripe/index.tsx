@@ -16,9 +16,10 @@ import {validateThemeSettings} from "../../../../../../utilites/themeUtils.ts";
 interface StripePaymentMethodProps {
     enabled: boolean;
     setSubmitHandler: (submitHandler: () => () => Promise<void>) => void;
+    amountVersion: number;
 }
 
-export const StripePaymentMethod = ({enabled, setSubmitHandler}: StripePaymentMethodProps) => {
+export const StripePaymentMethod = ({enabled, setSubmitHandler, amountVersion}: StripePaymentMethodProps) => {
     const {eventId, orderShortId} = useParams();
     const {
         data: stripeData,
@@ -97,7 +98,7 @@ export const StripePaymentMethod = ({enabled, setSubmitHandler}: StripePaymentMe
                         },
                     },
                 }} stripe={stripePromise}>
-                    <StripeCheckoutForm setSubmitHandler={setSubmitHandler} />
+                    <StripeCheckoutForm setSubmitHandler={setSubmitHandler} amountVersion={amountVersion}/>
                 </Elements>
             )}
         </>

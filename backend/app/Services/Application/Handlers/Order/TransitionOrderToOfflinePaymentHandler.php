@@ -90,8 +90,12 @@ class TransitionOrderToOfflinePaymentHandler
 
     private function updateOrderStatuses(int $orderId): void
     {
+        $order = $this->orderRepository->findById($orderId);
+
         $this->orderRepository
             ->updateFromArray($orderId, [
+                OrderDomainObjectAbstract::TOTAL_GROSS => $order->getTotalGross() - $order->getPaymentProcessingFee(),
+                OrderDomainObjectAbstract::PAYMENT_PROCESSING_FEE => 0,
                 OrderDomainObjectAbstract::PAYMENT_STATUS => OrderPaymentStatus::AWAITING_OFFLINE_PAYMENT->name,
                 OrderDomainObjectAbstract::STATUS => OrderStatus::AWAITING_OFFLINE_PAYMENT->name,
                 OrderDomainObjectAbstract::PAYMENT_PROVIDER => PaymentProviders::OFFLINE->value,

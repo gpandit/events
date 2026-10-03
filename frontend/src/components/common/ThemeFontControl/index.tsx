@@ -1,13 +1,11 @@
 import {Select, Text} from "@mantine/core";
 import {t} from "@lingui/macro";
-import {useEffect, useMemo} from "react";
+import {useMemo} from "react";
 import {
     buildHomepageFontStack,
-    buildHomepageFontUrl,
     DEFAULT_HOMEPAGE_FONT,
     HOMEPAGE_FONTS,
 } from "../../../constants/homepageFonts.ts";
-import {ensureHomepageFontLoaded} from "../../../utilites/fontLoader.ts";
 import classes from "./ThemeFontControl.module.scss";
 
 interface ThemeFontControlProps {
@@ -23,27 +21,6 @@ export const ThemeFontControl = ({value, onChange, disabled = false}: ThemeFontC
         () => HOMEPAGE_FONTS.map(font => ({value: font.value, label: font.label})),
         [],
     );
-
-    useEffect(() => {
-        HOMEPAGE_FONTS.forEach(font => {
-            if (font.value === DEFAULT_HOMEPAGE_FONT || typeof document === 'undefined') {
-                return;
-            }
-            const id = `hi-font-preview-${font.bunnyFamily}`;
-            if (document.getElementById(id)) {
-                return;
-            }
-            const link = document.createElement('link');
-            link.id = id;
-            link.rel = 'stylesheet';
-            link.href = buildHomepageFontUrl(font.value);
-            document.head.appendChild(link);
-        });
-    }, []);
-
-    useEffect(() => {
-        ensureHomepageFontLoaded(selected);
-    }, [selected]);
 
     const handleChange = (next: string | null) => {
         if (!next) {

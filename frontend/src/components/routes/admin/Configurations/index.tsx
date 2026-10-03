@@ -11,6 +11,7 @@ import {Modal} from "../../../common/Modal";
 import {useForm} from "@mantine/form";
 import {showSuccess, showError} from "../../../../utilites/notifications";
 import {AccountConfiguration, isDefaultConfiguration} from "../../../../api/admin.client";
+import {PaymentProcessingFeeMode} from "../../../../types";
 import {currenciesMap} from "../../../../../data/currencies";
 import {getCurrencySymbol} from "../../../../utilites/currency";
 import classes from "./Configurations.module.scss";
@@ -21,6 +22,7 @@ interface ConfigurationFormValues {
     percentage_fee: number;
     currency: string;
     bypass_application_fees: boolean;
+    payment_processing_fee_mode: PaymentProcessingFeeMode;
 }
 
 const Configurations = () => {
@@ -99,6 +101,13 @@ const Configurations = () => {
                                                 <Text size="xs" c="dimmed">{t`Percentage Fee`}</Text>
                                                 <Text size="sm" fw={500}>{config.application_fees?.percentage || 0}%</Text>
                                             </div>
+                                            <div>
+                                                <Text size="xs" c="dimmed">{t`Processing Fee`}</Text>
+                                                <Text size="sm" fw={500}>
+                                                    {config.payment_processing_fee_mode === 'COLLECT' ? t`Collect`
+                                                        : config.payment_processing_fee_mode === 'SHOW' ? t`Show` : t`Hide`}
+                                                </Text>
+                                            </div>
                                         </Group>
                                     </Stack>
                                     <Group gap="xs">
@@ -161,6 +170,7 @@ const ConfigurationModal = ({configuration, onClose}: ConfigurationModalProps) =
             percentage_fee: configuration?.application_fees?.percentage || 0,
             currency: configuration?.application_fees?.currency || 'USD',
             bypass_application_fees: configuration?.bypass_application_fees || false,
+            payment_processing_fee_mode: configuration?.payment_processing_fee_mode || 'HIDE',
         },
         validate: {
             name: (value) => {
@@ -185,6 +195,7 @@ const ConfigurationModal = ({configuration, onClose}: ConfigurationModalProps) =
                 currency: values.currency,
             },
             bypass_application_fees: values.bypass_application_fees,
+            payment_processing_fee_mode: values.payment_processing_fee_mode,
         };
 
         const mutation = isEditing ? updateMutation : createMutation;
@@ -263,6 +274,19 @@ const ConfigurationModal = ({configuration, onClose}: ConfigurationModalProps) =
                         label={t`Bypass Application Fees`}
                         description={t`When enabled, no application fees will be charged on Stripe Connect transactions. Use this for countries where application fees are not supported.`}
                         {...form.getInputProps('bypass_application_fees', { type: 'checkbox' })}
+                    />
+
+                    <Select
+                        label={t`Payment Processing Fee`}
+                        description={t`Hide: buyers are not shown the card processing fee. Show: buyers see an estimate, nothing else changes. Collect: buyers see the fee and can choose to cover it.`}
+                        allowDeselect={false}
+                        data={[
+                            {value: 'HIDE', label: t`Hide`},
+                            {value: 'SHOW', label: t`Show`},
+                            {value: 'COLLECT', label: t`Collect`},
+                        ]}
+                        data-testid="configuration-processing-fee-mode"
+                        {...form.getInputProps('payment_processing_fee_mode')}
                     />
 
                     <Button

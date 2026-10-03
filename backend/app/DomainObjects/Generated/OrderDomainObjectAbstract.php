@@ -45,6 +45,7 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     final public const STATISTICS_DECREMENTED_AT = 'statistics_decremented_at';
     final public const OPTED_INTO_MARKETING_AT = 'opted_into_marketing_at';
     final public const PHONE = 'phone';
+    final public const PAYMENT_PROCESSING_FEE = 'payment_processing_fee';
 
     protected int $id;
     protected int $event_id;
@@ -81,6 +82,7 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     protected ?string $statistics_decremented_at = null;
     protected ?string $opted_into_marketing_at = null;
     protected ?string $phone = null;
+    protected float $payment_processing_fee = 0.0;
 
     public function toArray(): array
     {
@@ -120,6 +122,7 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
                     'statistics_decremented_at' => $this->statistics_decremented_at ?? null,
                     'opted_into_marketing_at' => $this->opted_into_marketing_at ?? null,
                     'phone' => $this->phone ?? null,
+                    'payment_processing_fee' => $this->payment_processing_fee ?? null,
                 ];
     }
 
@@ -506,5 +509,16 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     public function getPhone(): ?string
     {
         return $this->phone;
+    }
+
+    public function setPaymentProcessingFee(float $payment_processing_fee): self
+    {
+        $this->payment_processing_fee = $payment_processing_fee;
+        return $this;
+    }
+
+    public function getPaymentProcessingFee(): float
+    {
+        return $this->payment_processing_fee;
     }
 }

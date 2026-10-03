@@ -39,8 +39,9 @@ const buildReturnUrl = (eventId: string, orderShortId: string, sessionId: string
     return sessionId ? `${fallback}?session_identifier=${sessionId}` : fallback;
 };
 
-export default function StripeCheckoutForm({setSubmitHandler}: {
-    setSubmitHandler: (submitHandler: () => () => Promise<void>) => void
+export default function StripeCheckoutForm({setSubmitHandler, amountVersion = 0}: {
+    setSubmitHandler: (submitHandler: () => () => Promise<void>) => void;
+    amountVersion?: number;
 }) {
     const {eventId, orderShortId} = useParams();
     const stripe = useStripe();
@@ -108,6 +109,12 @@ export default function StripeCheckoutForm({setSubmitHandler}: {
             }
         });
     }, [stripe]);
+
+    useEffect(() => {
+        if (amountVersion > 0 && elements) {
+            elements.fetchUpdates();
+        }
+    }, [amountVersion]);
 
     useEffect(() => {
         if (setSubmitHandler) {

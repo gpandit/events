@@ -168,6 +168,8 @@ use HiEvents\Http\Actions\Orders\Public\CompleteOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\CreateOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\DownloadOrderInvoicePublicAction;
 use HiEvents\Http\Actions\Orders\Public\GetOrderActionPublic;
+use HiEvents\Http\Actions\Orders\Public\GetPaymentProcessingFeeActionPublic;
+use HiEvents\Http\Actions\Orders\Public\SetPaymentProcessingFeeCoverageActionPublic;
 use HiEvents\Http\Actions\Orders\Public\TransitionOrderToOfflinePaymentPublicAction;
 use HiEvents\Http\Actions\Orders\ResendOrderConfirmationAction;
 use HiEvents\Http\Actions\Organizers\CreateOrganizerAction;
@@ -676,6 +678,8 @@ $router->prefix('/public')->group(
         $router->get('/events/{event_id}/order/{order_short_id}', GetOrderActionPublic::class);
         $router->post('/events/{event_id}/order/{order_short_id}/abandon', AbandonOrderActionPublic::class);
         $router->post('/events/{event_id}/order/{order_short_id}/await-offline-payment', TransitionOrderToOfflinePaymentPublicAction::class);
+        $router->get('/events/{event_id}/order/{order_short_id}/processing-fee', GetPaymentProcessingFeeActionPublic::class);
+        $router->put('/events/{event_id}/order/{order_short_id}/processing-fee', SetPaymentProcessingFeeCoverageActionPublic::class);
         $router->get('/events/{event_id}/order/{order_short_id}/invoice', DownloadOrderInvoicePublicAction::class);
 
         // Attendees
