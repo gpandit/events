@@ -263,13 +263,17 @@ msgstr "+1 day"
 msgid "+Tax/Fees"
 msgstr "+Tax/Fees"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:41
+#: src/components/routes/legal/CookiePolicy/index.tsx:42
 msgid "<0>Advertising</0> — used to measure and personalise ads. Only set with your consent."
 msgstr "<0>Advertising</0> — used to measure and personalise ads. Only set with your consent."
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:35
-msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
-msgstr "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
+#~ msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
+#~ msgstr "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:35
+msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. We use Google Analytics (a service of Google LLC) for this. Only set with your consent."
+msgstr "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. We use Google Analytics (a service of Google LLC) for this. Only set with your consent."
 
 #: src/components/common/CheckInListList/index.tsx:49
 #: src/components/common/CheckInListTable/index.tsx:284
@@ -410,21 +414,29 @@ msgstr "20"
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 places per date, plus 30 T-shirts across the whole run."
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:49
+msgid "3. Google Analytics"
+msgstr "3. Google Analytics"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:51
 msgid "3. How we use your information"
 msgstr "3. How we use your information"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:48
-msgid "3. Managing your preferences"
-msgstr "3. Managing your preferences"
+#~ msgid "3. Managing your preferences"
+#~ msgstr "3. Managing your preferences"
 
 #: src/components/routes/legal/TermsOfService/index.tsx:34
 msgid "3. Payments"
 msgstr "3. Payments"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:57
-msgid "4. Browser controls"
-msgstr "4. Browser controls"
+#~ msgid "4. Browser controls"
+#~ msgstr "4. Browser controls"
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:67
+msgid "4. Managing your preferences"
+msgstr "4. Managing your preferences"
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:59
 msgid "4. Payment processing"
@@ -438,13 +450,17 @@ msgstr "4. Refunds and cancellations"
 msgid "5. Acceptable use"
 msgstr "5. Acceptable use"
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:76
+msgid "5. Browser controls"
+msgstr "5. Browser controls"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:71
 msgid "5. Cookies"
 msgstr "5. Cookies"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:65
-msgid "5. More information"
-msgstr "5. More information"
+#~ msgid "5. More information"
+#~ msgstr "5. More information"
 
 #: src/components/common/ErrorDisplay/index.tsx:61
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
@@ -456,16 +472,24 @@ msgid "503 Service Unavailable."
 msgstr "503 Service Unavailable."
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:74
-msgid "6. Changes to this policy"
-msgstr "6. Changes to this policy"
+#~ msgid "6. Changes to this policy"
+#~ msgstr "6. Changes to this policy"
 
 #: src/components/routes/legal/TermsOfService/index.tsx:61
 msgid "6. Intellectual property"
 msgstr "6. Intellectual property"
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:84
+msgid "6. More information"
+msgstr "6. More information"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:80
 msgid "6. Sharing your information"
 msgstr "6. Sharing your information"
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:93
+msgid "7. Changes to this policy"
+msgstr "7. Changes to this policy"
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:89
 msgid "7. Data retention"
@@ -2874,6 +2898,10 @@ msgstr "Color must be a valid hex color code. Example: #ffffff"
 msgid "Colors"
 msgstr "Colors"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:18
+msgid "Colouring pages"
+msgstr "Colouring pages"
+
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:37
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:40
 msgid "Colouring Pages"
@@ -3153,7 +3181,7 @@ msgstr "Contact Email"
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:36
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:43
 msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
 msgstr "Contact us: <0>{CONTACT_EMAIL}</0>"
 
@@ -3635,12 +3663,25 @@ msgstr "Creating your event, please wait"
 msgid "Creating your organizer profile, please wait"
 msgstr "Creating your organizer profile, please wait"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:16
+msgid "Creative Colouring"
+msgstr "Creative Colouring"
+
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:42
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:70
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:28
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
 msgid "Creative Corner"
 msgstr "Creative Corner"
+
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:32
+msgid "Creative Minds"
+msgstr "Creative Minds"
+
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:24
+msgid "Creative Writers"
+msgstr "Creative Writers"
 
 #: src/components/routes/admin/Attribution/index.tsx:170
 msgid "CTA"
@@ -4590,8 +4631,8 @@ msgstr "Eligible Check-In Lists"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:332
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:333
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:167
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:76
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:77
 #: src/components/modals/EditUserModal/index.tsx:81
 #: src/components/modals/InviteUserModal/index.tsx:61
 #: src/components/modals/JoinWaitlistModal/index.tsx:189
@@ -5573,8 +5614,12 @@ msgid "Failed to send message. Please try again."
 msgstr "Failed to send message. Please try again."
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:30
-msgid "Failed to send sign-up. Please try again."
-msgstr "Failed to send sign-up. Please try again."
+#~ msgid "Failed to send sign-up. Please try again."
+#~ msgstr "Failed to send sign-up. Please try again."
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:37
+msgid "Failed to send your message. Please try again."
+msgstr "Failed to send your message. Please try again."
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:268
 msgid "Failed to sort products"
@@ -5778,8 +5823,8 @@ msgstr "First Invoice Number"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:279
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:148
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:149
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:40
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:41
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
 #: src/components/modals/ManageAttendeeModal/index.tsx:202
 #: src/components/modals/ManageOrderModal/index.tsx:229
@@ -5894,7 +5939,7 @@ msgstr "for"
 msgid "For a number of dates"
 msgstr "For a number of dates"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:67
+#: src/components/routes/legal/CookiePolicy/index.tsx:86
 msgid "For details on how we handle personal information more generally, see our <0>Privacy Policy</0>. If you have questions about this Cookie Policy, contact us at <1>fos@aqualeo.co</1>."
 msgstr "For details on how we handle personal information more generally, see our <0>Privacy Policy</0>. If you have questions about this Cookie Policy, contact us at <1>fos@aqualeo.co</1>."
 
@@ -5939,7 +5984,7 @@ msgstr "Friday"
 msgid "Friends of Repton Al Barsha logo"
 msgstr "Friends of Repton Al Barsha logo"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:29
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:36
 msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
 msgstr "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
 
@@ -5977,6 +6022,10 @@ msgstr "Full event"
 msgid "Full refund"
 msgstr "Full refund"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:17
+msgid "Fun pages to print, colour and display."
+msgstr "Fun pages to print, colour and display."
+
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:292
 msgid "future"
 msgstr "future"
@@ -5997,6 +6046,11 @@ msgstr "General admission"
 #: src/components/routes/event/TicketDesigner/TicketPreview.tsx:40
 msgid "General Admission"
 msgstr "General Admission"
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:29
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:53
+msgid "General enquiry"
+msgstr "General enquiry"
 
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:64
 msgid "General information about your organizer"
@@ -6025,6 +6079,10 @@ msgstr "Geography"
 #: src/components/layouts/EventHomepage/index.tsx:519
 msgid "Get Directions"
 msgstr "Get Directions"
+
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:62
+msgid "Get involved - volunteer, sponsor or say hello"
+msgstr "Get involved - volunteer, sponsor or say hello"
 
 #: src/components/layouts/OrganizerLayout/index.tsx:83
 msgid "Get Paid"
@@ -6179,8 +6237,12 @@ msgid "Help us improve by telling us why you're leaving"
 msgstr "Help us improve by telling us why you're leaving"
 
 #: src/components/common/CookieConsentBanner/index.tsx:67
-msgid "Helps us understand how the site is used."
-msgstr "Helps us understand how the site is used."
+msgid "Helps us understand how the site is used, using Google Analytics."
+msgstr "Helps us understand how the site is used, using Google Analytics."
+
+#: src/components/common/CookieConsentBanner/index.tsx:67
+#~ msgid "Helps us understand how the site is used."
+#~ msgstr "Helps us understand how the site is used."
 
 #: src/components/routes/my-tickets/index.tsx:255
 msgid "Here are all the tickets associated with your email address."
@@ -6466,6 +6528,10 @@ msgstr "I found my best friend Noor near the big neem tree. She had made a lante
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:245
 msgid "I'd like my story/poem to be considered for publication on this website."
 msgstr "I'd like my story/poem to be considered for publication on this website."
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:45
+msgid "I'm interested in"
+msgstr "I'm interested in"
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1037
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
@@ -6801,8 +6867,8 @@ msgid "Join from anywhere"
 msgstr "Join from anywhere"
 
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:55
-msgid "Join our team - volunteer with us"
-msgstr "Join our team - volunteer with us"
+#~ msgid "Join our team - volunteer with us"
+#~ msgstr "Join our team - volunteer with us"
 
 #: src/components/common/JoinWaitlistButton/index.tsx:38
 #: src/components/modals/JoinWaitlistModal/index.tsx:207
@@ -6951,8 +7017,8 @@ msgstr "Last login"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:288
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:157
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:158
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:48
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:49
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:66
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:67
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
 #: src/components/modals/ManageAttendeeModal/index.tsx:204
 #: src/components/modals/ManageOrderModal/index.tsx:235
@@ -7036,8 +7102,8 @@ msgid "Leave on to cover every ticket on the event. Turn off to pick specific ti
 msgstr "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:57
-msgid "Leave your details below and we'll get in touch about how you can help."
-msgstr "Leave your details below and we'll get in touch about how you can help."
+#~ msgid "Leave your details below and we'll get in touch about how you can help."
+#~ msgstr "Leave your details below and we'll get in touch about how you can help."
 
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:141
 msgid "Legal"
@@ -7382,7 +7448,7 @@ msgstr "May"
 msgid "Medium"
 msgstr "Medium"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:41
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:48
 msgid "Meet the Friends of Repton team"
 msgstr "Meet the Friends of Repton team"
 
@@ -7390,7 +7456,7 @@ msgstr "Meet the Friends of Repton team"
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:155
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:73
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:75
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:93
 #: src/components/modals/SendMessageModal/index.tsx:444
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:60
 msgid "Message"
@@ -7556,7 +7622,7 @@ msgstr "More actions"
 msgid "More choices"
 msgstr "More choices"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:59
+#: src/components/routes/legal/CookiePolicy/index.tsx:78
 msgid "Most browsers also let you block or delete cookies through their own settings. Blocking essential cookies may prevent parts of the site, such as signing in, from working correctly."
 msgstr "Most browsers also let you block or delete cookies through their own settings. Blocking essential cookies may prevent parts of the site, such as signing in, from working correctly."
 
@@ -7634,7 +7700,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/ProductCategoryForm/index.tsx:16
 #: src/components/forms/ProductForm/index.tsx:196
 #: src/components/forms/TaxAndFeeForm/index.tsx:61
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:48
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:55
 #: src/components/modals/DuplicateEventModal/index.tsx:110
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
@@ -9302,8 +9368,8 @@ msgid "Phone"
 msgstr "Phone"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:306
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:66
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:67
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:84
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:85
 msgid "Phone number"
 msgstr "Phone number"
 
@@ -9489,7 +9555,7 @@ msgstr "Please fill in your first name, last name and email"
 msgid "Please fill in your first name, last name and password"
 msgstr "Please fill in your first name, last name and password"
 
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:19
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:21
 msgid "Please fill in your name, email and phone number"
 msgstr "Please fill in your name, email and phone number"
 
@@ -9851,6 +9917,7 @@ msgstr "Promo Only"
 msgid "Promotional emails may result in account suspension"
 msgstr "Promotional emails may result in account suspension"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:26
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:39
 msgid "Prose & Poetry"
 msgstr "Prose & Poetry"
@@ -9916,10 +9983,15 @@ msgstr "Purchaser"
 msgid "Purchaser email"
 msgstr "Purchaser email"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:34
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:43
 msgid "Puzzles"
 msgstr "Puzzles"
+
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:33
+msgid "Puzzles and quizzes to challenge curious thinkers."
+msgstr "Puzzles and quizzes to challenge curious thinkers."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:11
 #~ msgid "Puzzles are coming soon! Check back for fun brain-teasers and activity sheets."
@@ -11151,6 +11223,7 @@ msgstr "Selling a physical product? Cap its quantity on the <0>products page</0>
 msgid "Selling fast 🔥"
 msgstr "Selling fast 🔥"
 
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:102
 #: src/components/routes/auth/Login/index.tsx:160
 #: src/components/routes/my-tickets/index.tsx:219
 msgid "Send"
@@ -11410,6 +11483,10 @@ msgstr "Share Organizer Page"
 msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
 msgstr "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:25
+msgid "Share your own stories and poems with everyone."
+msgstr "Share your own stories and poems with everyone."
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:32
 #~ msgid "Share Your Story"
 #~ msgstr "Share Your Story"
@@ -11567,8 +11644,8 @@ msgid "Sign up"
 msgstr "Sign up"
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:84
-msgid "Sign up to volunteer"
-msgstr "Sign up to volunteer"
+#~ msgid "Sign up to volunteer"
+#~ msgstr "Sign up to volunteer"
 
 #: src/components/routes/admin/Dashboard/index.tsx:402
 msgid "Signed Up"
@@ -11727,6 +11804,11 @@ msgstr "Spirituality"
 #: src/components/forms/CheckInListForm/index.tsx:90
 msgid "Split check-in across days, areas, or ticket types. Share the link with staff — no account needed on their end."
 msgstr "Split check-in across days, areas, or ticket types. Share the link with staff — no account needed on their end."
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:28
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:52
+msgid "Sponsorship"
+msgstr "Sponsorship"
 
 #: src/constants/eventCategories.ts:9
 msgid "Sports"
@@ -12306,8 +12388,12 @@ msgid "Tell us how often your event repeats and we'll create all the dates for y
 msgstr "Tell us how often your event repeats and we'll create all the dates for you."
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:74
-msgid "Tell us how you'd like to help"
-msgstr "Tell us how you'd like to help"
+#~ msgid "Tell us how you'd like to help"
+#~ msgstr "Tell us how you'd like to help"
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:92
+msgid "Tell us how you'd like to help or what you'd like to know"
+msgstr "Tell us how you'd like to help or what you'd like to know"
 
 #: src/components/routes/organizer/Payments/Vat/VatSettings.tsx:37
 msgid "Tell us your VAT registration status so we apply the correct VAT treatment to platform fees."
@@ -12350,13 +12436,17 @@ msgstr "Text may be hard to read"
 msgid "Thank you for attending!"
 msgstr "Thank you for attending!"
 
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:33
+msgid "Thank you for getting in touch! We'll reply soon."
+msgstr "Thank you for getting in touch! We'll reply soon."
+
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:121
 msgid "Thank you for sharing your writing!"
 msgstr "Thank you for sharing your writing!"
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:26
-msgid "Thank you for volunteering! We'll be in touch soon."
-msgstr "Thank you for volunteering! We'll be in touch soon."
+#~ msgid "Thank you for volunteering! We'll be in touch soon."
+#~ msgstr "Thank you for volunteering! We'll be in touch soon."
 
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:55
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
@@ -14089,6 +14179,11 @@ msgstr "Visible to everyone on the event page."
 msgid "VK"
 msgstr "VK"
 
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:27
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:51
+msgid "Volunteering"
+msgstr "Volunteering"
+
 #: src/components/common/WaitlistStats/index.tsx:12
 #: src/components/common/WaitlistTable/index.tsx:25
 #: src/components/modals/OfferWaitlistModal/index.tsx:168
@@ -14213,7 +14308,7 @@ msgstr "We hit a snag loading this page. Please try again."
 msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 msgstr "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:76
+#: src/components/routes/legal/CookiePolicy/index.tsx:95
 msgid "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 
@@ -14261,6 +14356,10 @@ msgstr "We use cookies to help us understand how the site is used and to improve
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:73
 msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
 msgstr "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:51
+msgid "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
+msgstr "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -14453,7 +14552,7 @@ msgstr "What type of question is this?"
 msgid "What unauthenticated staff can see"
 msgstr "What unauthenticated staff can see"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:45
+#: src/components/layouts/OrganizerHomepage/index.tsx:46
 msgid "What's happening at RAB"
 msgstr "What's happening at RAB"
 
@@ -14577,13 +14676,17 @@ msgstr "When offline payments are enabled, users will be able to complete their 
 msgid "When we finally walked home, my grandmother asked if the lantern had looked like the sea. I told her it had looked even better — it had looked like the sea at night, full of its own small, floating moons."
 msgstr "When we finally walked home, my grandmother asked if the lantern had looked like the sea. I told her it had looked even better — it had looked like the sea at night, full of its own small, floating moons."
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:50
+#: src/components/routes/legal/CookiePolicy/index.tsx:69
 msgid "When you first visit this site, you'll be asked to accept or reject optional cookies. You can change your choice at any time using the \"Cookie settings\" link in the footer of any page. Revoking a category reloads the page so the change takes effect immediately."
 msgstr "When you first visit this site, you'll be asked to accept or reject optional cookies. You can change your choice at any time using the \"Cookie settings\" link in the footer of any page. Revoking a category reloads the page so the change takes effect immediately."
 
 #: src/components/routes/admin/Announcements/index.tsx:462
 msgid "Where the button links to"
 msgstr "Where the button links to"
+
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:64
+msgid "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
+msgstr "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
 
 #: src/components/forms/CheckInListForm/index.tsx:119
 msgid "Which tickets should be associated with this check-in list?"

@@ -259,13 +259,17 @@ msgstr "+1 يوم"
 msgid "+Tax/Fees"
 msgstr "+ضريبة/رسوم"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:41
+#: src/components/routes/legal/CookiePolicy/index.tsx:42
 msgid "<0>Advertising</0> — used to measure and personalise ads. Only set with your consent."
 msgstr "<0>الإعلانات</0> — تُستخدم لقياس الإعلانات وتخصيصها. تُفعّل فقط بموافقتك."
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:35
-msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
-msgstr "<0>التحليلات</0> — تساعدنا على فهم كيفية استخدام الموقع، مثل الصفحات التي تتم زيارتها، حتى نتمكن من تحسينه. تُفعّل فقط بموافقتك."
+#~ msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. Only set with your consent."
+#~ msgstr "<0>التحليلات</0> — تساعدنا على فهم كيفية استخدام الموقع، مثل الصفحات التي تتم زيارتها، حتى نتمكن من تحسينه. تُفعّل فقط بموافقتك."
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:35
+msgid "<0>Analytics</0> — helps us understand how the site is used, such as which pages are visited, so we can improve it. We use Google Analytics (a service of Google LLC) for this. Only set with your consent."
+msgstr "<0>التحليلات</0> — تساعدنا على فهم كيفية استخدام الموقع، مثل الصفحات التي تتم زيارتها، حتى نتمكن من تحسينه. نستخدم Google Analytics (خدمة من Google LLC) لهذا الغرض. تُفعّل فقط بموافقتك."
 
 #: src/components/common/CheckInListList/index.tsx:49
 #: src/components/common/CheckInListTable/index.tsx:284
@@ -406,21 +410,29 @@ msgstr "20"
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 مكانًا لكل تاريخ، بالإضافة إلى 30 قميصًا عبر الفترة بأكملها."
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:49
+msgid "3. Google Analytics"
+msgstr "3. Google Analytics"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:51
 msgid "3. How we use your information"
 msgstr "3. كيف نستخدم معلوماتك"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:48
-msgid "3. Managing your preferences"
-msgstr "3. إدارة تفضيلاتك"
+#~ msgid "3. Managing your preferences"
+#~ msgstr "3. إدارة تفضيلاتك"
 
 #: src/components/routes/legal/TermsOfService/index.tsx:34
 msgid "3. Payments"
 msgstr "3. المدفوعات"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:57
-msgid "4. Browser controls"
-msgstr "4. ضوابط المتصفح"
+#~ msgid "4. Browser controls"
+#~ msgstr "4. ضوابط المتصفح"
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:67
+msgid "4. Managing your preferences"
+msgstr "4. إدارة تفضيلاتك"
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:59
 msgid "4. Payment processing"
@@ -434,13 +446,17 @@ msgstr "4. الاسترداد والإلغاء"
 msgid "5. Acceptable use"
 msgstr "5. الاستخدام المقبول"
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:76
+msgid "5. Browser controls"
+msgstr "5. ضوابط المتصفح"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:71
 msgid "5. Cookies"
 msgstr "5. ملفات تعريف الارتباط"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:65
-msgid "5. More information"
-msgstr "5. مزيد من المعلومات"
+#~ msgid "5. More information"
+#~ msgstr "5. مزيد من المعلومات"
 
 #: src/components/common/ErrorDisplay/index.tsx:61
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:67
@@ -452,16 +468,24 @@ msgid "503 Service Unavailable."
 msgstr "503 الخدمة غير متاحة."
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:74
-msgid "6. Changes to this policy"
-msgstr "6. التغييرات على هذه السياسة"
+#~ msgid "6. Changes to this policy"
+#~ msgstr "6. التغييرات على هذه السياسة"
 
 #: src/components/routes/legal/TermsOfService/index.tsx:61
 msgid "6. Intellectual property"
 msgstr "6. الملكية الفكرية"
 
+#: src/components/routes/legal/CookiePolicy/index.tsx:84
+msgid "6. More information"
+msgstr "6. مزيد من المعلومات"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:80
 msgid "6. Sharing your information"
 msgstr "6. مشاركة معلوماتك"
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:93
+msgid "7. Changes to this policy"
+msgstr "7. التغييرات على هذه السياسة"
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:89
 msgid "7. Data retention"
@@ -2870,6 +2894,10 @@ msgstr "يجب أن يكون اللون رمز لون سداسي عشري صال
 msgid "Colors"
 msgstr "الألوان"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:18
+msgid "Colouring pages"
+msgstr ""
+
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:37
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:40
 msgid "Colouring Pages"
@@ -3149,7 +3177,7 @@ msgstr "بريد التواصل الإلكتروني"
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:36
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:43
 msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
 msgstr ""
 
@@ -3631,12 +3659,25 @@ msgstr "جارٍ إنشاء فعاليتك، يرجى الانتظار"
 msgid "Creating your organizer profile, please wait"
 msgstr "جارٍ إنشاء ملف جهتك المنظمة، يرجى الانتظار"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:16
+msgid "Creative Colouring"
+msgstr ""
+
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:42
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:70
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:28
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
 msgid "Creative Corner"
 msgstr "ركن الإبداع"
+
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:32
+msgid "Creative Minds"
+msgstr ""
+
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:24
+msgid "Creative Writers"
+msgstr ""
 
 #: src/components/routes/admin/Attribution/index.tsx:170
 msgid "CTA"
@@ -4586,8 +4627,8 @@ msgstr "قوائم تسجيل الدخول المؤهلة"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:332
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:333
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:167
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:76
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:77
 #: src/components/modals/EditUserModal/index.tsx:81
 #: src/components/modals/InviteUserModal/index.tsx:61
 #: src/components/modals/JoinWaitlistModal/index.tsx:189
@@ -5569,7 +5610,11 @@ msgid "Failed to send message. Please try again."
 msgstr "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:30
-msgid "Failed to send sign-up. Please try again."
+#~ msgid "Failed to send sign-up. Please try again."
+#~ msgstr ""
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:37
+msgid "Failed to send your message. Please try again."
 msgstr ""
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:268
@@ -5774,8 +5819,8 @@ msgstr "رقم الفاتورة الأول"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:279
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:148
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:149
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:40
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:41
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
 #: src/components/modals/ManageAttendeeModal/index.tsx:202
 #: src/components/modals/ManageOrderModal/index.tsx:229
@@ -5890,7 +5935,7 @@ msgstr "لـ"
 msgid "For a number of dates"
 msgstr "لعدد من التواريخ"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:67
+#: src/components/routes/legal/CookiePolicy/index.tsx:86
 msgid "For details on how we handle personal information more generally, see our <0>Privacy Policy</0>. If you have questions about this Cookie Policy, contact us at <1>fos@aqualeo.co</1>."
 msgstr "للاطلاع على تفاصيل كيفية تعاملنا مع المعلومات الشخصية بشكل عام، راجع <0>سياسة الخصوصية</0> الخاصة بنا. إذا كانت لديك أسئلة حول سياسة ملفات تعريف الارتباط هذه، تواصل معنا على <1>fos@aqualeo.co</1>."
 
@@ -5935,7 +5980,7 @@ msgstr "الجمعة"
 msgid "Friends of Repton Al Barsha logo"
 msgstr "شعار أصدقاء ريبتون البرشاء"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:29
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:36
 msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
 msgstr "تدعم أصدقاء ريبتون المدرسة في تنظيم فعاليات متنوعة داخل الحرم المدرسي، بما في ذلك ليالي الأفلام والمناسبات الاجتماعية والنزهات وحفلات نهاية العام وفعاليات عيد الميلاد ونهاية العام. كما تشارك بفاعلية في ضمان إيجاد منزل جديد للزي المدرسي المستعمل."
 
@@ -5973,6 +6018,10 @@ msgstr "الفعالية الكاملة"
 msgid "Full refund"
 msgstr "استرداد كامل"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:17
+msgid "Fun pages to print, colour and display."
+msgstr ""
+
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:292
 msgid "future"
 msgstr "المستقبل"
@@ -5993,6 +6042,11 @@ msgstr "دخول عام"
 #: src/components/routes/event/TicketDesigner/TicketPreview.tsx:40
 msgid "General Admission"
 msgstr "دخول عام"
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:29
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:53
+msgid "General enquiry"
+msgstr ""
 
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:64
 msgid "General information about your organizer"
@@ -6021,6 +6075,10 @@ msgstr "الجغرافيا"
 #: src/components/layouts/EventHomepage/index.tsx:519
 msgid "Get Directions"
 msgstr "الحصول على الاتجاهات"
+
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:62
+msgid "Get involved - volunteer, sponsor or say hello"
+msgstr ""
 
 #: src/components/layouts/OrganizerLayout/index.tsx:83
 msgid "Get Paid"
@@ -6175,8 +6233,12 @@ msgid "Help us improve by telling us why you're leaving"
 msgstr "ساعدنا على التحسين بإخبارنا بسبب مغادرتك"
 
 #: src/components/common/CookieConsentBanner/index.tsx:67
-msgid "Helps us understand how the site is used."
-msgstr "يساعدنا على فهم كيفية استخدام الموقع."
+msgid "Helps us understand how the site is used, using Google Analytics."
+msgstr "تساعدنا على فهم كيفية استخدام الموقع باستخدام Google Analytics."
+
+#: src/components/common/CookieConsentBanner/index.tsx:67
+#~ msgid "Helps us understand how the site is used."
+#~ msgstr "يساعدنا على فهم كيفية استخدام الموقع."
 
 #: src/components/routes/my-tickets/index.tsx:255
 msgid "Here are all the tickets associated with your email address."
@@ -6462,6 +6524,10 @@ msgstr "وجدت صديقتي المقربة نور بالقرب من شجرة �
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:245
 msgid "I'd like my story/poem to be considered for publication on this website."
 msgstr "أرغب في أن تُؤخذ قصتي/قصيدتي بعين الاعتبار للنشر على هذا الموقع."
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:45
+msgid "I'm interested in"
+msgstr ""
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1037
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
@@ -6797,8 +6863,8 @@ msgid "Join from anywhere"
 msgstr "انضم من أي مكان"
 
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:55
-msgid "Join our team - volunteer with us"
-msgstr ""
+#~ msgid "Join our team - volunteer with us"
+#~ msgstr ""
 
 #: src/components/common/JoinWaitlistButton/index.tsx:38
 #: src/components/modals/JoinWaitlistModal/index.tsx:207
@@ -6947,8 +7013,8 @@ msgstr "آخر تسجيل دخول"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:288
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:157
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:158
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:48
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:49
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:66
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:67
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
 #: src/components/modals/ManageAttendeeModal/index.tsx:204
 #: src/components/modals/ManageOrderModal/index.tsx:235
@@ -7032,8 +7098,8 @@ msgid "Leave on to cover every ticket on the event. Turn off to pick specific ti
 msgstr "اتركه مفعّلاً ليغطي كل تذكرة في الفعالية. أوقفه لاختيار تذاكر محددة."
 
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:57
-msgid "Leave your details below and we'll get in touch about how you can help."
-msgstr ""
+#~ msgid "Leave your details below and we'll get in touch about how you can help."
+#~ msgstr ""
 
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:141
 msgid "Legal"
@@ -7378,7 +7444,7 @@ msgstr "مايو"
 msgid "Medium"
 msgstr "متوسط"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:41
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:48
 msgid "Meet the Friends of Repton team"
 msgstr ""
 
@@ -7386,7 +7452,7 @@ msgstr ""
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:155
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:73
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:75
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:93
 #: src/components/modals/SendMessageModal/index.tsx:444
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:60
 msgid "Message"
@@ -7552,7 +7618,7 @@ msgstr "المزيد من الإجراءات"
 msgid "More choices"
 msgstr "خيارات أخرى"
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:59
+#: src/components/routes/legal/CookiePolicy/index.tsx:78
 msgid "Most browsers also let you block or delete cookies through their own settings. Blocking essential cookies may prevent parts of the site, such as signing in, from working correctly."
 msgstr "تتيح لك معظم المتصفحات أيضًا حظر ملفات تعريف الارتباط أو حذفها من خلال إعداداتها الخاصة. قد يؤدي حظر ملفات تعريف الارتباط الأساسية إلى منع بعض أجزاء الموقع، مثل تسجيل الدخول، من العمل بشكل صحيح."
 
@@ -7630,7 +7696,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/ProductCategoryForm/index.tsx:16
 #: src/components/forms/ProductForm/index.tsx:196
 #: src/components/forms/TaxAndFeeForm/index.tsx:61
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:48
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:55
 #: src/components/modals/DuplicateEventModal/index.tsx:110
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
@@ -9294,8 +9360,8 @@ msgid "Phone"
 msgstr "الهاتف"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:306
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:66
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:67
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:84
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:85
 msgid "Phone number"
 msgstr "رقم الهاتف"
 
@@ -9481,7 +9547,7 @@ msgstr "يرجى إدخال اسمك الأول واسم العائلة والب
 msgid "Please fill in your first name, last name and password"
 msgstr "يرجى إدخال الاسم الأول واسم العائلة وكلمة المرور"
 
-#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:19
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:21
 msgid "Please fill in your name, email and phone number"
 msgstr ""
 
@@ -9843,6 +9909,7 @@ msgstr "ترويجي فقط"
 msgid "Promotional emails may result in account suspension"
 msgstr "قد تؤدي الرسائل الترويجية إلى تعليق الحساب"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:26
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:39
 msgid "Prose & Poetry"
 msgstr ""
@@ -9908,10 +9975,15 @@ msgstr "المشتري"
 msgid "Purchaser email"
 msgstr "بريد المشتري الإلكتروني"
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:34
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:43
 msgid "Puzzles"
 msgstr "ألغاز"
+
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:33
+msgid "Puzzles and quizzes to challenge curious thinkers."
+msgstr ""
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:11
 #~ msgid "Puzzles are coming soon! Check back for fun brain-teasers and activity sheets."
@@ -11143,6 +11215,7 @@ msgstr "تبيع منتجًا ماديًا؟ حدد كميته في <0>صفحة 
 msgid "Selling fast 🔥"
 msgstr "ينفد بسرعة 🔥"
 
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:102
 #: src/components/routes/auth/Login/index.tsx:160
 #: src/components/routes/my-tickets/index.tsx:219
 msgid "Send"
@@ -11402,6 +11475,10 @@ msgstr "مشاركة صفحة الجهة المنظمة"
 msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
 msgstr "شارك قصتك القصيرة أو قصيدتك مع مجتمع أصدقاء ريبتون! كل شهر سنمنح جائزة لأفضل قصة وأفضل قصيدة. إذا رغبت في نشر عملك، سيظهر بجانبه اسمك الأول والحرف الأول من اسم عائلتك ومجموعة سنتك الدراسية."
 
+#: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:25
+msgid "Share your own stories and poems with everyone."
+msgstr ""
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:32
 #~ msgid "Share Your Story"
 #~ msgstr "شارك قصتك"
@@ -11559,8 +11636,8 @@ msgid "Sign up"
 msgstr "إنشاء حساب"
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:84
-msgid "Sign up to volunteer"
-msgstr ""
+#~ msgid "Sign up to volunteer"
+#~ msgstr ""
 
 #: src/components/routes/admin/Dashboard/index.tsx:402
 msgid "Signed Up"
@@ -11719,6 +11796,11 @@ msgstr "روحانيات"
 #: src/components/forms/CheckInListForm/index.tsx:90
 msgid "Split check-in across days, areas, or ticket types. Share the link with staff — no account needed on their end."
 msgstr "قسّم تسجيل الدخول عبر الأيام أو المناطق أو أنواع التذاكر. شارك الرابط مع الموظفين — لا حاجة لحساب من جانبهم."
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:28
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:52
+msgid "Sponsorship"
+msgstr ""
 
 #: src/constants/eventCategories.ts:9
 msgid "Sports"
@@ -12294,7 +12376,11 @@ msgid "Tell us how often your event repeats and we'll create all the dates for y
 msgstr "أخبرنا بعدد مرات تكرار فعاليتك وسننشئ جميع التواريخ نيابة عنك."
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:74
-msgid "Tell us how you'd like to help"
+#~ msgid "Tell us how you'd like to help"
+#~ msgstr ""
+
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:92
+msgid "Tell us how you'd like to help or what you'd like to know"
 msgstr ""
 
 #: src/components/routes/organizer/Payments/Vat/VatSettings.tsx:37
@@ -12338,13 +12424,17 @@ msgstr "قد يكون النص صعب القراءة"
 msgid "Thank you for attending!"
 msgstr "شكرًا لحضورك!"
 
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:33
+msgid "Thank you for getting in touch! We'll reply soon."
+msgstr ""
+
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:121
 msgid "Thank you for sharing your writing!"
 msgstr "شكرًا لمشاركة كتابتك!"
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:26
-msgid "Thank you for volunteering! We'll be in touch soon."
-msgstr ""
+#~ msgid "Thank you for volunteering! We'll be in touch soon."
+#~ msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:55
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
@@ -14077,6 +14167,11 @@ msgstr "مرئي للجميع في صفحة الفعالية."
 msgid "VK"
 msgstr "VK"
 
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:27
+#: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:51
+msgid "Volunteering"
+msgstr ""
+
 #: src/components/common/WaitlistStats/index.tsx:12
 #: src/components/common/WaitlistTable/index.tsx:25
 #: src/components/modals/OfferWaitlistModal/index.tsx:168
@@ -14201,7 +14296,7 @@ msgstr "واجهنا عائقًا أثناء تحميل هذه الصفحة. ي�
 msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 msgstr "قد نُحدّث هذه الشروط من وقت لآخر. يشكل استمرار استخدام الموقع بعد نشر التغييرات قبولاً للشروط المحدّثة."
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:76
+#: src/components/routes/legal/CookiePolicy/index.tsx:95
 msgid "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "قد نُحدّث سياسة ملفات تعريف الارتباط هذه من وقت لآخر. يعكس تاريخ \"آخر تحديث\" أعلى هذه الصفحة أحدث التغييرات."
 
@@ -14245,6 +14340,10 @@ msgstr "نستخدم ملفات تعريف الارتباط لمساعدتنا �
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:73
 msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
 msgstr "نستخدم ملفات تعريف الارتباط الأساسية اللازمة لعمل الموقع، وبموافقتك، ملفات تعريف ارتباط اختيارية للتحليلات والإعلانات لمساعدتنا على فهم كيفية استخدام الموقع. يمكنك تغيير تفضيلات ملفات تعريف الارتباط في أي وقت باستخدام رابط \"إعدادات ملفات تعريف الارتباط\" في تذييل الموقع."
+
+#: src/components/routes/legal/CookiePolicy/index.tsx:51
+msgid "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
+msgstr "نستخدم Google Analytics، المقدَّمة من Google LLC، لقياس حركة الزيارات واستخدام هذا الموقع. بموافقتك، تضع Google ملفات تعريف ارتباط (مثل _ga) على جهازك وتجمع معلومات مثل الصفحات التي تزورها وموقعك التقريبي ونوع جهازك ومتصفحك. إلى أن توافق على التحليلات، تعمل وسوم Google في وضع مقيّد لا يخزّن ملفات تعريف ارتباط التحليلات، وتبقى كذلك إذا رفضت. يمكنك معرفة كيفية استخدام Google للبيانات على <0>policies.google.com/technologies/partner-sites</0> ويمكنك إلغاء الاشتراك عبر <1>الإضافة الخاصة بإلغاء الاشتراك في Google Analytics</1>."
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -14433,7 +14532,7 @@ msgstr "ما نوع هذا السؤال؟"
 msgid "What unauthenticated staff can see"
 msgstr "ما يمكن للموظفين غير الموثّقين رؤيته"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:45
+#: src/components/layouts/OrganizerHomepage/index.tsx:46
 msgid "What's happening at RAB"
 msgstr "ماذا يحدث في RAB"
 
@@ -14557,13 +14656,17 @@ msgstr "عند تفعيل المدفوعات غير المتصلة، سيتمك�
 msgid "When we finally walked home, my grandmother asked if the lantern had looked like the sea. I told her it had looked even better — it had looked like the sea at night, full of its own small, floating moons."
 msgstr "عندما مشينا أخيرًا إلى المنزل، سألتني جدتي إن كان الفانوس يبدو كالبحر. أخبرتها أنه بدا أفضل من ذلك — بدا كالبحر ليلاً، مليئًا بأقماره الصغيرة العائمة الخاصة."
 
-#: src/components/routes/legal/CookiePolicy/index.tsx:50
+#: src/components/routes/legal/CookiePolicy/index.tsx:69
 msgid "When you first visit this site, you'll be asked to accept or reject optional cookies. You can change your choice at any time using the \"Cookie settings\" link in the footer of any page. Revoking a category reloads the page so the change takes effect immediately."
 msgstr "عند زيارتك لهذا الموقع لأول مرة، سيُطلب منك قبول أو رفض ملفات تعريف الارتباط الاختيارية. يمكنك تغيير اختيارك في أي وقت باستخدام رابط \"إعدادات ملفات تعريف الارتباط\" في تذييل أي صفحة. يؤدي إلغاء فئة إلى إعادة تحميل الصفحة حتى يسري التغيير فورًا."
 
 #: src/components/routes/admin/Announcements/index.tsx:462
 msgid "Where the button links to"
 msgstr "إلى أين يرتبط الزر"
+
+#: src/components/layouts/PublicOrganizerAbout/index.tsx:64
+msgid "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
+msgstr ""
 
 #: src/components/forms/CheckInListForm/index.tsx:119
 msgid "Which tickets should be associated with this check-in list?"
