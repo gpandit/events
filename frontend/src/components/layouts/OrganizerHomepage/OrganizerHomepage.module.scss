@@ -70,6 +70,7 @@ $transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+  color: var(--organizer-primary-text-color);
   --background-overlay: #{rgba(white, 0.5)};
 
   &[data-mode="dark"] {
@@ -229,7 +230,8 @@ $transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nameSection {
-  h1 {
+  h1,
+  h2 {
     font-family: $font-display;
     font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;

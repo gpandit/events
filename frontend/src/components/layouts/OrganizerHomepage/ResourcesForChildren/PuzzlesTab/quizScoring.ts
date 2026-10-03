@@ -18,3 +18,19 @@ export const shuffle = <T, >(items: readonly T[]): T[] => {
     }
     return copy;
 };
+
+export const RECENT_TESTS_TO_AVOID = 4;
+
+export const selectQuizQuestions = <T extends { id: string }>(
+    pool: readonly T[],
+    recentTests: readonly (readonly string[])[],
+    count: number,
+): T[] => {
+    const recentIds = new Set(recentTests.flat());
+    return shuffle(pool.filter((item) => !recentIds.has(item.id))).slice(0, count);
+};
+
+export const rememberTest = (
+    recentTests: readonly (readonly string[])[],
+    questionIds: readonly string[],
+): string[][] => [...recentTests, questionIds].slice(-RECENT_TESTS_TO_AVOID).map((ids) => [...ids]);

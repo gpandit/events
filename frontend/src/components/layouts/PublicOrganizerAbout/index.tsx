@@ -9,7 +9,7 @@ import {VolunteerForm} from "./VolunteerForm";
 import classes from './PublicOrganizerAbout.module.scss';
 
 const CONTACT_EMAIL = 'friendsofreptonalbarsha@gmail.com';
-const TEAM_PLACEHOLDERS = [1, 2, 3, 4, 5, 6];
+const TEAM_MEMBERS = ['Toria Ni', 'Emi Burrows', null, null, null, null];
 
 export const PublicOrganizerAbout = () => {
     const loaderData = useLoaderData() as {
@@ -40,12 +40,12 @@ export const PublicOrganizerAbout = () => {
             <section className={classes.teamSection}>
                 <h2 className={classes.heading}>{t`Meet the Friends of Repton team`}</h2>
                 <div className={classes.teamGrid}>
-                    {TEAM_PLACEHOLDERS.map((position) => (
+                    {TEAM_MEMBERS.map((memberName, position) => (
                         <div key={position} className={classes.member}>
                             <div className={classes.photo}>
                                 <IconUser size={48}/>
                             </div>
-                            <span className={classes.memberName}>{t`Name`}</span>
+                            <span className={classes.memberName}>{memberName ?? t`Name`}</span>
                         </div>
                     ))}
                 </div>

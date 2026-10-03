@@ -5,6 +5,7 @@ import {IconExternalLink, IconMail, IconMapPin, IconWorld} from '@tabler/icons-r
 import {Organizer} from "../../../../types.ts";
 import {socialMediaConfig} from "../../../../constants/socialMediaConfig";
 import {ContactOrganizerModal} from "../../../common/ContactOrganizerModal";
+import {Wordmark} from "../../../common/Wordmark";
 import {UserGeneratedContent} from "../../../common/UserGeneratedContent";
 import {formatAddress, getShortLocationDisplay} from "../../../../utilites/addressUtilities.ts";
 import classes from '../OrganizerHomepage.module.scss';
@@ -53,7 +54,7 @@ export const OrganizerProfileCard: React.FC<OrganizerProfileCardProps> = ({organ
                                 )}
                                 <div className={classes.organizerInfo}>
                                     <div className={classes.nameSection}>
-                                        <h2>{organizer.name}</h2>
+                                        <h2><Wordmark name={organizer.name}/></h2>
                                         <div className={classes.organizerMeta}>
                                             {getShortLocationDisplay(organizer?.location?.structured_address) && (
                                                 <div className={classes.metaItem}>
