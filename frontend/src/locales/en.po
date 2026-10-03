@@ -14404,3 +14404,199 @@ msgstr "Close menu"
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx
 msgid "Open menu"
 msgstr "Open menu"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "{total} word puzzles for senior school students. Choose the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
+msgstr "{total} word puzzles for senior school students. Choose the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "a hundred tiny drummers"
+msgstr "a hundred tiny drummers"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Amir S. — Year 6"
+msgstr "Amir S. — Year 6"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "and I jump right into the middle"
+msgstr "and I jump right into the middle"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "and the first drops tap-tap-tap,"
+msgstr "and the first drops tap-tap-tap,"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "and when it leaves it tucks a rainbow"
+msgstr "and when it leaves it tucks a rainbow"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "behind the garden gate."
+msgstr "behind the garden gate."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "bringing water for the mango trees,"
+msgstr "bringing water for the mango trees,"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Colouring sheets and puzzles for children."
+msgstr "Colouring sheets and puzzles for children."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
+msgstr "Contact us: <0>{CONTACT_EMAIL}</0>"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "each one holding a piece of the clouds,"
+msgstr "each one holding a piece of the clouds,"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Example 1 — Story"
+msgstr "Example 1 — Story"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Example 2 — Poem"
+msgstr "Example 2 — Poem"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Failed to send sign-up. Please try again."
+msgstr "Failed to send sign-up. Please try again."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Flyer"
+msgstr "Flyer"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Good effort! A little more practice and you'll soar."
+msgstr "Good effort! A little more practice and you'll soar."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Grandpa says the rain is only visiting,"
+msgstr "Grandpa says the rain is only visiting,"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "High Flyer!"
+msgstr "High Flyer!"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Join our team - volunteer with us"
+msgstr "Join our team - volunteer with us"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Just a Flyer"
+msgstr "Just a Flyer"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Keep Learning"
+msgstr "Keep Learning"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Leave your details below and we'll get in touch about how you can help."
+msgstr "Leave your details below and we'll get in touch about how you can help."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "marching across our roof."
+msgstr "marching across our roof."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Meet the Friends of Repton team"
+msgstr "Meet the Friends of Repton team"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Need some inspiration?"
+msgstr "Need some inspiration?"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial and year group."
+msgstr "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial and year group."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Outstanding! You have an excellent vocabulary."
+msgstr "Outstanding! You have an excellent vocabulary."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Phone number"
+msgstr "Phone number"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Please complete the security check before submitting."
+msgstr "Please complete the security check before submitting."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Please fill in your name, email and phone number"
+msgstr "Please fill in your name, email and phone number"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Prose & Poetry"
+msgstr "Prose & Poetry"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Question {0} of {total}"
+msgstr "Question {0} of {total}"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Rain on the Roof"
+msgstr "Rain on the Roof"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Read more"
+msgstr "Read more"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Show less"
+msgstr "Show less"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Sign up to volunteer"
+msgstr "Sign up to volunteer"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Start the challenge"
+msgstr "Start the challenge"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Take the test again"
+msgstr "Take the test again"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Tell us how you'd like to help"
+msgstr "Tell us how you'd like to help"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Thank you for volunteering! We'll be in touch soon."
+msgstr "Thank you for volunteering! We'll be in touch soon."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "The puddles open up like mirrors,"
+msgstr "The puddles open up like mirrors,"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "The sky pulls on its heavy grey coat,"
+msgstr "The sky pulls on its heavy grey coat,"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "to see if I can reach the sky."
+msgstr "to see if I can reach the sky."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "We recommend learning some new words and taking the test again."
+msgstr "We recommend learning some new words and taking the test again."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Well done! You have a strong vocabulary."
+msgstr "Well done! You have a strong vocabulary."
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Word Power Challenge"
+msgstr "Word Power Challenge"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "You scored {score} out of {total} ({percentage}%)"
+msgstr "You scored {score} out of {total} ({percentage}%)"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Your best score so far: {bestPercentage}%"
+msgstr "Your best score so far: {bestPercentage}%"
+
+#: src/components/layouts/OrganizerHomepage
+msgid "Your best score: {bestPercentage}%"
+msgstr "Your best score: {bestPercentage}%"

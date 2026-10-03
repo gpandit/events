@@ -4,6 +4,8 @@ import {IconFeather} from '@tabler/icons-react';
 import {Organizer, PublishedChildStorySubmission} from '../../../../types.ts';
 import {useGetPublishedChildStorySubmissions} from '../../../../queries/useGetPublishedChildStorySubmissions.ts';
 import {ExampleStoryCard} from '../ExampleStoryCard';
+import {ExamplePoemCard} from '../ExampleStoryCard/ExamplePoemCard';
+import {SubmitStoryForm} from './SubmitStoryForm';
 import classes from './ChildrenStoriesSection.module.scss';
 
 interface ChildrenStoriesSectionProps {
@@ -41,7 +43,7 @@ export const ChildrenStoriesSection: React.FC<ChildrenStoriesSectionProps> = ({o
                 </p>
             </div>
 
-            <ExampleStoryCard/>
+            <SubmitStoryForm organizer={organizer}/>
 
             {isLoading && page === 1 && <p className={classes.empty}>{t`Loading...`}</p>}
 
@@ -81,6 +83,14 @@ export const ChildrenStoriesSection: React.FC<ChildrenStoriesSectionProps> = ({o
                     {t`Load more`}
                 </button>
             )}
+
+            <section className={classes.examples}>
+                <h2 className={classes.examplesHeading}>{t`Need some inspiration?`}</h2>
+                <div className={classes.examplesGrid}>
+                    <ExampleStoryCard/>
+                    <ExamplePoemCard/>
+                </div>
+            </section>
         </div>
     );
 };
