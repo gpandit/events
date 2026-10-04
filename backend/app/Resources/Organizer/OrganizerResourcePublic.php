@@ -22,6 +22,7 @@ class OrganizerResourcePublic extends JsonResource
             'description' => $this->getDescription(),
             'slug' => $this->getSlug(),
             'status' => $this->getStatus(),
+            'has_live_shops' => $this->getHasLiveShops(),
             'location' => $this->when(
                 condition: $this->getLocationRecord() !== null,
                 value: fn () => new LocationPublicResource($this->getLocationRecord()),

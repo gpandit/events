@@ -30,7 +30,8 @@ export type ConfigKeys =
     | 'VITE_GOOGLE_ADS_CONVERSION_LABELS'
     | 'VITE_DEFAULT_ORGANIZER_ID'
     | 'VITE_INSTAGRAM_HANDLE'
-    | 'VITE_INSTAGRAM_EMBED_URL';
+    | 'VITE_INSTAGRAM_EMBED_URL'
+    | 'VITE_DEFAULT_SHARE_IMAGE_PATH';
 
 export enum StripePlatform {
     Canada = 'ca',
@@ -89,6 +90,14 @@ export interface HomepageThemeSettings {
     hero_subheading?: string;
     hero_cta_text?: string;
     hero_cta_url?: string;
+    upcoming_heading?: string;
+    about_text?: string;
+    team_heading?: string;
+    team_members?: string[];
+    contact_heading?: string;
+    contact_intro?: string;
+    contact_email?: string;
+    instagram_handle?: string;
 }
 
 export interface LoginResponse {
@@ -245,7 +254,7 @@ export interface Image {
     lqip_base64?: string | null;
 }
 
-export type ImageType = 'EVENT_COVER' | 'EDITOR_IMAGE' | 'ORGANIZER_LOGO' | 'ORGANIZER_COVER' | 'ORGANIZER_IMAGE' | 'TICKET_LOGO';
+export type ImageType = 'EVENT_COVER' | 'EDITOR_IMAGE' | 'ORGANIZER_LOGO' | 'ORGANIZER_COVER' | 'ORGANIZER_IMAGE' | 'TICKET_LOGO' | 'PRODUCT_IMAGE';
 
 export type PaymentProvider = 'STRIPE' | 'OFFLINE';
 
@@ -590,12 +599,32 @@ export interface UpsertPriceOverrideRequest {
     quantity_available?: number | null;
 }
 
+export type ShopCategory = 'UNIFORM' | 'PRELOVED_UNIFORM' | 'BOOKS_STATIONERY' | 'MEALS';
+
+export type ShopVendorType = 'SCHOOL' | 'EXTERNAL' | 'PTA';
+
+export type CollectionStatus = 'PENDING' | 'READY' | 'COLLECTED';
+
+export interface ShopPickListRow {
+    order_id: IdParam;
+    order_public_id: string;
+    student_name: string;
+    answers: { title: string; answer: string }[];
+    buyer_name: string;
+    buyer_email: string;
+    collection_status: CollectionStatus;
+    items: { name: string; quantity: number }[];
+}
+
 export interface Event extends EventBase {
     id?: IdParam;
     slug: string;
     status?: EventStatus;
     type?: EventType;
     recurrence_rule?: RecurrenceRule;
+    is_shop?: boolean;
+    shop_category?: ShopCategory;
+    vendor_type?: ShopVendorType;
     description_preview?: string;
     lifecycle_status?: EventLifecycleStatus;
     settings?: EventSettings;
@@ -693,6 +722,7 @@ export interface OrganizerStats {
 
 export interface Organizer {
     id?: IdParam;
+    has_live_shops?: boolean;
     name: string;
     email: string;
     description?: string;
@@ -904,6 +934,7 @@ export interface ProductPrice {
     id?: number;
     label?: string;
     price: number;
+    compare_at_price?: number | null;
     sale_start_date?: string | Date;
     sale_end_date?: string | Date;
     price_including_taxes_and_fees?: number;
@@ -972,6 +1003,8 @@ export interface Product {
     addon_product_ids?: IdParam[];
     is_addon_only?: boolean;
     addons?: Array<{ id: number; title: string }>;
+    images?: Image[];
+    pending_images?: File[];
 }
 
 export interface ProductCategory {
@@ -1078,6 +1111,9 @@ export interface Order {
     currency: string;
     status: 'RESERVED' | 'CANCELLED' | 'COMPLETED' | 'AWAITING_OFFLINE_PAYMENT' | 'ABANDONED';
     refund_status?: 'REFUND_PENDING' | 'REFUND_FAILED' | 'REFUNDED' | 'PARTIALLY_REFUNDED';
+    collection_status?: CollectionStatus | null;
+    ready_for_collection_at?: string | null;
+    collected_at?: string | null;
     payment_status?: 'NO_PAYMENT_REQUIRED' | 'AWAITING_PAYMENT' | 'PAYMENT_FAILED' | 'PAYMENT_RECEIVED' | 'AWAITING_OFFLINE_PAYMENT';
     public_id: string;
     is_payment_required: boolean;

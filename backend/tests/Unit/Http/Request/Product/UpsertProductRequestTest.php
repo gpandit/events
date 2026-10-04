@@ -68,6 +68,32 @@ class UpsertProductRequestTest extends TestCase
         $this->assertFalse($validator->fails());
     }
 
+    public function test_regular_price_must_be_higher_than_sale_price(): void
+    {
+        $validator = $this->validate([
+            'type' => ProductPriceType::PAID->name,
+            'prices' => [
+                ['price' => 20, 'compare_at_price' => 20],
+            ],
+        ]);
+
+        $this->assertTrue($validator->fails());
+        $this->assertTrue($validator->errors()->has('prices.0.compare_at_price'));
+    }
+
+    public function test_regular_price_is_accepted_when_higher_than_sale_price(): void
+    {
+        $validator = $this->validate([
+            'type' => ProductPriceType::TIERED->name,
+            'prices' => [
+                ['price' => 15, 'label' => 'Age 5-6', 'compare_at_price' => 20],
+                ['price' => 18, 'label' => 'Age 7-8', 'compare_at_price' => null],
+            ],
+        ]);
+
+        $this->assertFalse($validator->fails());
+    }
+
     private function validate(array $overrides): \Illuminate\Validation\Validator
     {
         $request = new UpsertProductRequest;

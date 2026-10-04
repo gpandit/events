@@ -25,6 +25,7 @@ class UpsertProductRequest extends BaseRequest
             'max_per_order' => [...RulesHelper::INTEGER, 'nullable'],
             'prices' => ['required', 'array'],
             'prices.*.price' => [...RulesHelper::MONEY, 'required'],
+            'prices.*.compare_at_price' => [...RulesHelper::MONEY, 'nullable'],
             'prices.*.label' => ['nullable', ...RulesHelper::STRING, 'required_if:type,'.ProductPriceType::TIERED->name],
             'prices.*.sale_start_date' => ['date', 'nullable', 'after:sale_start_date'],
             'prices.*.sale_end_date' => 'date|nullable|after:prices.*.sale_start_date',
@@ -57,6 +58,17 @@ class UpsertProductRequest extends BaseRequest
     public function withValidator(Validator $validator): void
     {
         $validator->after(function (Validator $validator) {
+            collect($this->input('prices', []))->each(function (array $price, int $index) use ($validator) {
+                $compareAtPrice = $price['compare_at_price'] ?? null;
+
+                if ($compareAtPrice !== null && $compareAtPrice !== '' && (float) $compareAtPrice <= (float) ($price['price'] ?? 0)) {
+                    $validator->errors()->add(
+                        "prices.$index.compare_at_price",
+                        __('The regular price must be higher than the sale price.'),
+                    );
+                }
+            });
+
             if (! $this->boolean('sequential_tier_release_enabled') || $this->input('type') !== ProductPriceType::TIERED->name) {
                 return;
             }

@@ -188,6 +188,13 @@ export const organizerPublicClient = {
         return response.data;
     },
 
+    getShops: async (organizerId: IdParam, pagination: QueryFilters) => {
+        const response = await publicApi.get<GenericPaginatedResponse<Event>>(
+            'organizers/' + organizerId + '/shops' + queryParamsHelper.buildQueryString(pagination)
+        );
+        return response.data;
+    },
+
     contactOrganizer: async (organizerId: IdParam, contactData: {
         name: string;
         email: string;

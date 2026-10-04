@@ -25,6 +25,7 @@ abstract class ProductPriceDomainObjectAbstract extends \HiEvents\DomainObjects\
     final public const ORDER = 'order';
     final public const QUANTITY_AVAILABLE = 'quantity_available';
     final public const QUANTITY_APPLIES_TO = 'quantity_applies_to';
+    final public const COMPARE_AT_PRICE = 'compare_at_price';
 
     protected int $id;
     protected int $product_id;
@@ -41,6 +42,7 @@ abstract class ProductPriceDomainObjectAbstract extends \HiEvents\DomainObjects\
     protected int $order = 1;
     protected ?int $quantity_available = null;
     protected string $quantity_applies_to = 'OCCURRENCE';
+    protected ?float $compare_at_price = null;
 
     public function toArray(): array
     {
@@ -60,6 +62,7 @@ abstract class ProductPriceDomainObjectAbstract extends \HiEvents\DomainObjects\
                     'order' => $this->order ?? null,
                     'quantity_available' => $this->quantity_available ?? null,
                     'quantity_applies_to' => $this->quantity_applies_to ?? null,
+                    'compare_at_price' => $this->compare_at_price ?? null,
                 ];
     }
 
@@ -226,5 +229,16 @@ abstract class ProductPriceDomainObjectAbstract extends \HiEvents\DomainObjects\
     public function getQuantityAppliesTo(): string
     {
         return $this->quantity_applies_to;
+    }
+
+    public function setCompareAtPrice(?float $compare_at_price): self
+    {
+        $this->compare_at_price = $compare_at_price;
+        return $this;
+    }
+
+    public function getCompareAtPrice(): ?float
+    {
+        return $this->compare_at_price;
     }
 }

@@ -8,6 +8,7 @@ import {Event, EventLifecycleStatus, EventOccurrence, EventType, OrganizerStatus
 import {EventNotAvailable} from "./EventNotAvailable";
 import {
     IconArrowUpRight,
+    IconBuildingStore,
     IconCalendar,
     IconCalendarOff,
     IconCalendarPlus,
@@ -169,7 +170,7 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
     const hasMixedModes = locationSummary.kind === 'varied' && locationSummary.types.length > 1;
     const hasMultipleLocations = locationSummary.kind === 'varied' && locationSummary.types.length === 1;
     const isOnlineEvent = singleLocationDisplay?.isOnline === true;
-    const hasLocation = singleLocationDisplay !== null && !singleLocationDisplay.isOnline;
+    const hasLocation = !event.is_shop && singleLocationDisplay !== null && !singleLocationDisplay.isOnline;
     const venueName = singleLocationDisplay?.venueName ?? null;
     const formattedAddress = singleLocationDisplay?.full ?? '';
     const mapUrl = singleLocationDisplay?.mapsUrl ?? null;
@@ -357,37 +358,53 @@ const EventHomepage = ({...loaderData}: EventHomepageProps) => {
                                     <h1 className={classes.eventTitle}>{event.title}</h1>
 
                                     <div className={classes.eventMeta}>
-                                        {/* Date/Time */}
-                                        <div className={classes.metaItem}>
-                                            <div className={classes.metaIconBox}>
-                                                <IconCalendar/>
-                                            </div>
-                                            <div className={classes.metaContent}>
-                                                <div className={classes.metaPrimary}>
-                                                    <EventDateRange event={event} occurrence={selectedOccurrence}/>
+                                        {event.is_shop ? (
+                                            <div className={classes.metaItem}>
+                                                <div className={classes.metaIconBox}>
+                                                    <IconBuildingStore/>
                                                 </div>
-                                                {event.type === EventType.RECURRING && (
+                                                <div className={classes.metaContent}>
+                                                    <div className={classes.metaPrimary}>{t`Collect from school reception`}</div>
                                                     <div className={classes.metaSecondary}>
-                                                        <IconCalendarRepeat size={14} style={{verticalAlign: 'middle', marginRight: 4}}/>
-                                                        {t`Recurring Event`}
+                                                        {t`Add the student's name at checkout`}
                                                     </div>
-                                                )}
+                                                </div>
                                             </div>
-                                            {(() => {
-                                                if (event.type === EventType.RECURRING && !selectedOccurrence) return null;
-                                                return (
-                                                    <CalendarOptionsPopover event={event} occurrence={selectedOccurrence}>
-                                                        <button className={classes.addToCalendarButton}>
-                                                            <IconCalendarPlus/>
-                                                            {t`Add to Calendar`}
-                                                        </button>
-                                                    </CalendarOptionsPopover>
-                                                );
-                                            })()}
-                                        </div>
+                                        ) : (
+                                            <>
+                                            {/* Date/Time */}
+                                            <div className={classes.metaItem}>
+                                                <div className={classes.metaIconBox}>
+                                                    <IconCalendar/>
+                                                </div>
+                                                <div className={classes.metaContent}>
+                                                    <div className={classes.metaPrimary}>
+                                                        <EventDateRange event={event} occurrence={selectedOccurrence}/>
+                                                    </div>
+                                                    {event.type === EventType.RECURRING && (
+                                                        <div className={classes.metaSecondary}>
+                                                            <IconCalendarRepeat size={14} style={{verticalAlign: 'middle', marginRight: 4}}/>
+                                                            {t`Recurring Event`}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                {(() => {
+                                                    if (event.type === EventType.RECURRING && !selectedOccurrence) return null;
+                                                    return (
+                                                        <CalendarOptionsPopover event={event} occurrence={selectedOccurrence}>
+                                                            <button className={classes.addToCalendarButton}>
+                                                                <IconCalendarPlus/>
+                                                                {t`Add to Calendar`}
+                                                            </button>
+                                                        </CalendarOptionsPopover>
+                                                    );
+                                                })()}
+                                            </div>
+                                            </>
+                                        )}
 
                                         {/* Event Ended */}
-                                        {event.type !== EventType.RECURRING && event.end_date && isDateInPast(event.end_date) && (
+                                        {!event.is_shop && event.type !== EventType.RECURRING && event.end_date && isDateInPast(event.end_date) && (
                                             <div className={classes.metaItem}>
                                                 <div className={classes.metaIconBox}>
                                                     <IconCalendarOff/>

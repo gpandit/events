@@ -43,7 +43,7 @@ export const OrganizerHomepage = ({
         >
             {upcomingEvents.length > 0 && (
                 <>
-                    <h2 className={classes.upcomingHeading}>{t`What's happening at RAB`}</h2>
+                    <h2 className={classes.upcomingHeading}>{themeSettings.upcoming_heading || t`What's happening`}</h2>
                     <UpcomingEventsSpotlight
                         events={upcomingEvents}
                         primaryColor={themeSettings.accent}

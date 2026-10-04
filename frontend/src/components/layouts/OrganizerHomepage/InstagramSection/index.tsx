@@ -3,8 +3,11 @@ import {IconBrandInstagram} from "@tabler/icons-react";
 import {getConfig} from "../../../../utilites/config.ts";
 import classes from './InstagramSection.module.scss';
 
-export const InstagramSection = () => {
-    const handle = getConfig('VITE_INSTAGRAM_HANDLE', 'friendsofreptonab');
+interface InstagramSectionProps {
+    handle: string;
+}
+
+export const InstagramSection = ({handle}: InstagramSectionProps) => {
     const embedUrl = getConfig('VITE_INSTAGRAM_EMBED_URL');
     const profileUrl = `https://www.instagram.com/${handle}/`;
 

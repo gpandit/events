@@ -3,6 +3,7 @@
 namespace HiEvents\Resources\Product;
 
 use HiEvents\DomainObjects\ProductDomainObject;
+use HiEvents\Resources\Image\ImageResource;
 use HiEvents\Resources\Tax\TaxAndFeeResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -52,6 +53,10 @@ class ProductResourcePublic extends JsonResource
                 'is_available' => $this->isAvailable(),
                 'is_sold_out' => $this->isSoldOut(),
             ]),
+            'images' => $this->when(
+                $this->getImages() !== null,
+                fn () => ImageResource::collection($this->getImages()),
+            ),
             'product_category_id' => $this->getProductCategoryId(),
             'is_highlighted' => $this->getIsHighlighted(),
             'highlight_message' => $this->getHighlightMessage(),

@@ -28,6 +28,9 @@ class OrderResource extends BaseResource
             'status' => $this->getStatus(),
             /** @var 'REFUND_PENDING'|'REFUND_FAILED'|'REFUNDED'|'PARTIALLY_REFUNDED'|null */
             'refund_status' => $this->getRefundStatus(),
+            'collection_status' => $this->getCollectionStatus(),
+            'ready_for_collection_at' => $this->getReadyForCollectionAt(),
+            'collected_at' => $this->getCollectedAt(),
             /** @var 'NO_PAYMENT_REQUIRED'|'AWAITING_PAYMENT'|'AWAITING_OFFLINE_PAYMENT'|'PAYMENT_FAILED'|'PAYMENT_RECEIVED'|null */
             'payment_status' => $this->getPaymentStatus(),
             'currency' => $this->getCurrency(),

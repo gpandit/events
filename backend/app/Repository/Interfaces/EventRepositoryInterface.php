@@ -14,7 +14,7 @@ use Illuminate\Support\Collection;
  */
 interface EventRepositoryInterface extends RepositoryInterface
 {
-    public function findEventsForOrganizer(int $organizerId, int $accountId, QueryParamsDTO $params): LengthAwarePaginator;
+    public function findEventsForOrganizer(int $organizerId, int $accountId, QueryParamsDTO $params, bool $isShop = false): LengthAwarePaginator;
 
     public function findEvents(array $where, QueryParamsDTO $params): LengthAwarePaginator;
 

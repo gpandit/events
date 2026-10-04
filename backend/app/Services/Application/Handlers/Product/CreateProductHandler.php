@@ -35,6 +35,7 @@ class CreateProductHandler
             ProductPriceDomainObjectAbstract::INITIAL_QUANTITY_AVAILABLE => $price->initial_quantity_available,
             ProductPriceDomainObjectAbstract::QUANTITY_APPLIES_TO => ($price->quantity_applies_to ?? ProductQuantityAppliesTo::defaultFor($productsData->product_type))->name,
             ProductPriceDomainObjectAbstract::IS_HIDDEN => $price->is_hidden,
+            ProductPriceDomainObjectAbstract::COMPARE_AT_PRICE => $productsData->type === ProductPriceType::FREE ? null : $price->compare_at_price,
         ]));
 
         $category = $this->getProductCategoryService->getCategory(

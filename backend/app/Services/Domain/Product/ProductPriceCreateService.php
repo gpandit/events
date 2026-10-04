@@ -23,6 +23,7 @@ class ProductPriceCreateService
         return new Collection($prices->map(fn (ProductPriceDomainObject $price, int $index) => $this->productPriceRepository->create([
             'product_id' => $productId,
             'price' => $price->getPrice(),
+            'compare_at_price' => $price->getCompareAtPrice(),
             'label' => $price->getLabel(),
             'sale_start_date' => $price->getSaleStartDate()
                 ? DateHelper::convertToUTC($price->getSaleStartDate(), $event->getTimezone())

@@ -153,6 +153,24 @@ export class ApiClient {
     return check(this.request.put(`organizers/${organizerId}/status`, { headers: jsonHeaders, data: { status } }));
   }
 
+  updateOrganizerThemeSettings(organizerId: number, homepageThemeSettings: Record<string, unknown>): Promise<void> {
+    return check(
+      this.request.patch(`organizers/${organizerId}/settings`, {
+        headers: jsonHeaders,
+        data: { homepage_theme_settings: homepageThemeSettings },
+      }),
+    );
+  }
+
+  createShop(payload: {
+    organizer_id: number;
+    title: string;
+    shop_category: 'UNIFORM' | 'PRELOVED_UNIFORM' | 'BOOKS_STATIONERY' | 'MEALS';
+    vendor_type: 'SCHOOL' | 'EXTERNAL' | 'PTA';
+  }): Promise<EventRecord> {
+    return unwrap<EventRecord>(this.request.post('shops', { headers: jsonHeaders, data: payload }));
+  }
+
   createEvent(payload: CreateEventPayload): Promise<EventRecord> {
     return unwrap<EventRecord>(this.request.post('events', { headers: jsonHeaders, data: payload }));
   }

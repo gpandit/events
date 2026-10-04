@@ -4,6 +4,7 @@ namespace HiEvents\Resources\Product;
 
 use HiEvents\DomainObjects\Enums\ProductPriceType;
 use HiEvents\DomainObjects\ProductDomainObject;
+use HiEvents\Resources\Image\ImageResource;
 use HiEvents\Resources\Tax\TaxAndFeeResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -62,6 +63,10 @@ class ProductResource extends JsonResource
             'prices' => $this->when(
                 (bool) $this->getProductPrices(),
                 fn () => ProductPriceResource::collection($this->getProductPrices())
+            ),
+            'images' => $this->when(
+                $this->getImages() !== null,
+                fn () => ImageResource::collection($this->getImages()),
             ),
             'product_category_id' => $this->getProductCategoryId(),
             'is_highlighted' => $this->getIsHighlighted(),
