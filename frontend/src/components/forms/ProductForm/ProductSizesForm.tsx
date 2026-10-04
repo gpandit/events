@@ -31,10 +31,13 @@ export const ProductSizesForm = ({form, product, event}: ProductSizesFormProps) 
     });
 
     const applyPreset = (sizes: string[]) => {
-        const existing = prices.filter((price) => price.label || price.id);
-        const existingLabels = new Set(existing.map((price) => price.label));
-        const added = sizes.filter((size) => !existingLabels.has(size)).map(newSize);
-        form.setFieldValue('prices', [...existing, ...added]);
+        const labelled = new Set(prices.map((price) => price.label).filter(Boolean));
+        const missing = sizes.filter((size) => !labelled.has(size));
+        const filledBlanks = prices.map((price) => price.label || !missing.length
+            ? price
+            : {...price, label: missing.shift()});
+        const added = missing.map(newSize);
+        form.setFieldValue('prices', [...filledBlanks, ...added]);
     };
 
     const removeSize = (index: number) => {
