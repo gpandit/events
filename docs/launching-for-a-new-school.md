@@ -62,3 +62,26 @@ Manage > Shops creates one shop per vendor. Each shop is a category plus a selle
 - Checkout uses the same payment methods as events. Every shop asks for **Student name** and **Student class or year** (the first order question is used as the student name on pick lists, so keep it first).
 - All orders are collected from school reception. Manage > (shop) > Collection lists orders by student: mark them ready to email the buyer, mark them collected, or print the pick list.
 - Shops appear on the public Shop page, grouped by category, once published.
+
+## 5. Spinning up a school environment on Railway
+
+`railway.json` only builds the app, so Postgres and Redis come from copying a base environment.
+
+1. Once: in Railway, create a `staging` environment with three services - the app (name it `app`), Postgres and Redis. The app gets its database and cache through reference variables, which `railway/school.env.template` sets for you.
+2. For each new school run (needs the Railway CLI, logged in and linked to the project):
+
+```bash
+export APP_KEY=... JWT_SECRET=... STRIPE_SECRET_KEY=... STRIPE_PUBLIC_KEY=... \
+       STRIPE_WEBHOOK_SECRET=... VITE_STRIPE_PUBLISHABLE_KEY=... \
+       MAIL_HOST=... MAIL_PORT=... MAIL_USERNAME=... MAIL_PASSWORD=...
+
+scripts/railway/new-school.sh oak-school \
+  --school "Oak School" --domain oak.example.com --support-email pta@oak.example.com \
+  --instagram oakpta --google-tag G-XXXXXXX
+```
+
+This duplicates `staging` (new Postgres and Redis for that school) and sets every variable in `railway/school.env.template` in one go. Generate a fresh `APP_KEY` and `JWT_SECRET` per school, and use that school's own Stripe keys.
+
+3. Attach the school's domain to the `app` service. Migrations run automatically on start (`docker/all-in-one/scripts/startup.sh`).
+4. Create the organizer, then set `VITE_DEFAULT_ORGANIZER_ID` to its id and redeploy.
+5. Delete the environment when the school no longer needs it - each environment bills for its own database and cache.
