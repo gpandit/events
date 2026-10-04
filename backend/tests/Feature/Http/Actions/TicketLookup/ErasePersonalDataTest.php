@@ -98,7 +98,10 @@ class ErasePersonalDataTest extends TestCase
 
     public function test_the_childrens_puzzle_accounts_linked_to_the_parent_email_are_deleted(): void
     {
+        $username = $this->getJson("/public/organizers/{$this->organizerId}/quiz-players/username-options")->json('data.0');
+
         $this->postJson("/public/organizers/{$this->organizerId}/quiz-players/register", [
+            'username' => $username,
             'first_name' => 'Amelia',
             'email' => 'child@example.com',
             'age_band' => '8-10',

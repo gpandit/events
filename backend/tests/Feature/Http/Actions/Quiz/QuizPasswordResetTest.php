@@ -39,7 +39,10 @@ class QuizPasswordResetTest extends TestCase
 
     private function register(string $email): string
     {
+        $username = $this->getJson($this->url('quiz-players/username-options'))->json('data.0');
+
         return $this->postJson($this->url('quiz-players/register'), [
+            'username' => $username,
             'first_name' => 'Noah',
             'email' => $email,
             'age_band' => '14-17',
@@ -50,6 +53,7 @@ class QuizPasswordResetTest extends TestCase
     public function test_email_is_required_when_signing_up(): void
     {
         $this->postJson($this->url('quiz-players/register'), [
+            'username' => $this->getJson($this->url('quiz-players/username-options'))->json('data.0'),
             'first_name' => 'Noah',
             'age_band' => '14-17',
             'password' => 'secret123',

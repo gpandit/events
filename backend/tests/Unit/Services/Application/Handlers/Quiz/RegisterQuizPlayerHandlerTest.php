@@ -4,6 +4,7 @@ namespace Tests\Unit\Services\Application\Handlers\Quiz;
 
 use HiEvents\DomainObjects\Enums\QuizAgeBand;
 use HiEvents\DomainObjects\QuizPlayerDomainObject;
+use HiEvents\Exceptions\QuizUsernameTakenException;
 use HiEvents\Repository\Interfaces\QuizPlayerRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\RegisterQuizPlayerDTO;
 use HiEvents\Services\Application\Handlers\Quiz\RegisterQuizPlayerHandler;
@@ -44,9 +45,9 @@ class RegisterQuizPlayerHandlerTest extends TestCase
     }
 
     #[DataProvider('ageBands')]
-    public function test_it_creates_a_player_with_a_generated_username_for_every_age_band(QuizAgeBand $ageBand): void
+    public function test_it_creates_a_player_with_the_chosen_username_for_every_age_band(QuizAgeBand $ageBand): void
     {
-        $this->generator->shouldReceive('generate')->once()->with(10)->andReturn('Simba42');
+        $this->generator->shouldReceive('assertChoosable')->once()->with(10, 'Simba42');
         $this->hasher->shouldReceive('make')->once()->with('secret1')->andReturn('hashed');
 
         $created = (new QuizPlayerDomainObject)->setId(1)->setOrganizerId(10)->setUsername('Simba42');
@@ -65,11 +66,21 @@ class RegisterQuizPlayerHandlerTest extends TestCase
         $this->sessions->shouldReceive('issueToken')->once()->with($created)->andReturn('token-123');
 
         $session = $this->handler->handle(
-            new RegisterQuizPlayerDTO(10, ' Amelia ', ' Amelia@Example.com ', $ageBand, 'secret1')
+            new RegisterQuizPlayerDTO(10, 'Simba42', ' Amelia ', ' Amelia@Example.com ', $ageBand, 'secret1')
         );
 
         $this->assertSame('Simba42', $session->username);
         $this->assertSame('token-123', $session->token);
+    }
+
+    public function test_it_does_not_create_a_player_when_the_username_cannot_be_chosen(): void
+    {
+        $this->generator->shouldReceive('assertChoosable')->once()->andThrow(new QuizUsernameTakenException);
+        $this->players->shouldNotReceive('create');
+
+        $this->expectException(QuizUsernameTakenException::class);
+
+        $this->handler->handle(new RegisterQuizPlayerDTO(10, 'Simba42', 'Amelia', 'amelia@example.com', QuizAgeBand::cases()[0], 'secret1'));
     }
 
     public static function ageBands(): array

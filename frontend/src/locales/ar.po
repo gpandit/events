@@ -633,8 +633,8 @@ msgstr "مهجور"
 msgid "About"
 msgstr "حول"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:84
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:134
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:105
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:155
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
 msgid "About Us"
 msgstr "من نحن"
@@ -1995,8 +1995,9 @@ msgstr "Awesome Events Ltd."
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Ltd."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:215
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:216
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:86
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:62
 msgid "Back"
 msgstr "رجوع"
 
@@ -2044,7 +2045,7 @@ msgstr "العودة إلى البحث"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:200
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:348
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:256
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:280
 msgid "Back to sign in"
 msgstr "العودة إلى تسجيل الدخول"
 
@@ -2111,7 +2112,7 @@ msgstr "نظرًا لأن هذا الحساب أكمل طلبات، ستُحفظ
 msgid "behind the garden gate."
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:296
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:297
 msgid "Best: {0}%"
 msgstr "الأفضل: {0}%"
 
@@ -2680,7 +2681,7 @@ msgstr "اختر إعدادًا"
 msgid "Choose a different action"
 msgstr "اختر إجراءً مختلفًا"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:359
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:360
 msgid "Choose a different age group"
 msgstr "اختر فئة عمرية أخرى"
 
@@ -2688,7 +2689,7 @@ msgstr "اختر فئة عمرية أخرى"
 msgid "Choose a new password"
 msgstr "اختر كلمة مرور جديدة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:205
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:229
 msgid "Choose a password (at least 6 characters)"
 msgstr "اختر كلمة مرور (6 أحرف على الأقل)"
 
@@ -2728,10 +2729,10 @@ msgstr "اختر الإعداد الافتراضي للفعاليات الجدي
 msgid "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 msgstr "اختر من يدفع رسم المنصة. هذا لا يؤثر على الرسوم الإضافية التي قمت بتهيئتها في إعدادات حسابك."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:282
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:283
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:186
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:187
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:284
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:202
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:203
 msgid "Choose your age group"
 msgstr "اختر فئتك العمرية"
 
@@ -2819,7 +2820,7 @@ msgstr "إغلاق"
 msgid "Close"
 msgstr "إغلاق"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:97
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
 msgid "Close menu"
 msgstr ""
 
@@ -2907,7 +2908,7 @@ msgstr "الألوان"
 msgid "Colouring pages"
 msgstr "صفحات التلوين"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:59
 msgid "Colouring Pages"
 msgstr "صفحات التلوين"
 
@@ -3203,7 +3204,7 @@ msgstr "المحتوى مطلوب"
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
 #: src/components/layouts/EventHomepage/index.tsx:205
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:126
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:142
 #: src/components/routes/product-widget/SelectProducts/index.tsx:895
 msgid "Continue"
 msgstr "متابعة"
@@ -3446,8 +3447,12 @@ msgid "Create a list for this date"
 msgstr "إنشاء قائمة لهذا التاريخ"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:162
-msgid "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
-msgstr "أنشئ حساب دخول لحفظ نتائجك وكسب النقاط. سنمنحك اسم مستخدم من شخصية كرتونية ممتعة ليبقى اسمك الحقيقي خاصاً."
+#~ msgid "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
+#~ msgstr "أنشئ حساب دخول لحفظ نتائجك وكسب النقاط. سنمنحك اسم مستخدم من شخصية كرتونية ممتعة ليبقى اسمك الحقيقي خاصاً."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:178
+msgid "Create a login to save your scores and earn points. You will pick a fun character username so your name stays private."
+msgstr "أنشئ حساب دخول لحفظ نتائجك وكسب النقاط. ستختار اسم مستخدم ممتعًا من الشخصيات ليبقى اسمك خاصًا."
 
 #: src/components/layouts/CheckIn/index.tsx:508
 msgid "Create a new check-in list for an active session, or contact the organizer if you think this is a mistake."
@@ -3570,7 +3575,7 @@ msgstr "إنشاء فعالية"
 msgid "Create more tickets or products to offer them as add-ons"
 msgstr "أنشئ المزيد من التذاكر أو المنتجات لعرضها كإضافات"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:219
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:243
 msgid "Create my login"
 msgstr "إنشاء حسابي"
 
@@ -3676,8 +3681,8 @@ msgid "Creative Colouring"
 msgstr "التلوين الإبداعي"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:42
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:71
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:119
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:92
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:140
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:8
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
 msgid "Creative Corner"
@@ -4652,8 +4657,8 @@ msgstr "قوائم تسجيل الدخول المؤهلة"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:297
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:332
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:333
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:176
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:177
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:192
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:193
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:76
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:77
 #: src/components/modals/EditUserModal/index.tsx:81
@@ -4740,7 +4745,7 @@ msgid "Email me a link"
 msgstr "أرسل لي رابطاً بالبريد"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:345
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:251
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:275
 msgid "Email me a reset link"
 msgstr "أرسل لي رابط إعادة التعيين"
 
@@ -4868,7 +4873,7 @@ msgstr "ينتهي {0}"
 msgid "English"
 msgstr "الإنجليزية"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:280
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:281
 msgid "English, Science, Maths, Geography and History questions. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
 msgstr "أسئلة في اللغة الإنجليزية والعلوم والرياضيات والجغرافيا والتاريخ. اختر فئتك العمرية ثم أجب عن {QUESTIONS_PER_TEST} سؤالاً. اختر الإجابة الصحيحة من بين 4 خيارات. لديك {SECONDS_PER_QUESTION} ثانية لكل سؤال."
 
@@ -4965,7 +4970,7 @@ msgstr "أدخل بريدك الإلكتروني وسنرسل لك تعليما�
 msgid "Enter your name"
 msgstr "أدخل اسمك"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:232
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:256
 msgid "Enter your username and we will email a reset link to the address saved on your account. If you did not add an email when you signed up, ask a parent or guardian to contact us."
 msgstr "أدخل اسم المستخدم وسنرسل رابط إعادة التعيين إلى البريد المحفوظ في حسابك. إذا لم تضف بريداً عند التسجيل، فاطلب من أحد الوالدين أو ولي الأمر التواصل معنا."
 
@@ -5196,8 +5201,8 @@ msgstr "تم تحديث الفعالية"
 
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:63
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:112
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:84
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:133
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:118
 #: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
@@ -5816,8 +5821,8 @@ msgstr "رقم الفاتورة الأول"
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:190
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:278
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:279
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:167
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:168
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:183
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:184
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
@@ -5947,7 +5952,7 @@ msgid "Forgot password?"
 msgstr "نسيت كلمة المرور؟"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:265
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:297
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:321
 msgid "Forgot your password?"
 msgstr "هل نسيت كلمة المرور؟"
 
@@ -6055,7 +6060,7 @@ msgstr "استفسار عام"
 msgid "General information about your organizer"
 msgstr "معلومات عامة عن جهتك المنظمة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:278
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:279
 msgid "General Knowledge Challenge"
 msgstr "تحدي المعلومات العامة"
 
@@ -6422,8 +6427,8 @@ msgstr "التاريخ"
 msgid "Hobbies"
 msgstr "هوايات"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:105
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:81
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:126
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:115
 msgid "Home"
 msgstr "الرئيسية"
@@ -6574,7 +6579,7 @@ msgstr "عند التفعيل، يمكن لموظفي تسجيل الدخول إ
 msgid "If enabled, the organizer will receive an email notification when a new order is placed"
 msgstr "عند التفعيل، ستتلقى الجهة المنظمة إشعارًا عبر البريد الإلكتروني عند تقديم طلب جديد"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:227
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:251
 msgid "If that username has an email address saved, we have sent a link to reset the password. The link works for 60 minutes."
 msgstr "إذا كان لاسم المستخدم هذا بريد إلكتروني محفوظ فقد أرسلنا رابطاً لإعادة تعيين كلمة المرور. الرابط صالح لمدة 60 دقيقة."
 
@@ -7212,6 +7217,10 @@ msgstr "جارٍ تحميل المعاينة..."
 msgid "Loading tokens..."
 msgstr "جارٍ تحميل الرموز..."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:21
+msgid "Loading usernames"
+msgstr "جارٍ تحميل أسماء المستخدمين"
+
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:144
 msgid "Loading webhook logs..."
 msgstr "جارٍ تحميل سجلات الويب هوك..."
@@ -7677,8 +7686,8 @@ msgid "Music"
 msgstr "موسيقى"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:165
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:87
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:141
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:108
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:162
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
 msgid "My Account"
 msgstr "حسابي"
@@ -7705,7 +7714,7 @@ msgstr "طفا فانوسي ببطء، يدور في دائرة متكاسلة،
 msgid "My Profile"
 msgstr "ملفي الشخصي"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:259
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:260
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:37
 msgid "My scores"
 msgstr "نتائجي"
@@ -7819,6 +7828,10 @@ msgstr "تسجيلات جديدة"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:53
 msgid "New time:"
 msgstr "الوقت الجديد:"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:72
+msgid "Next"
+msgstr "التالي"
 
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:113
 #: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:22
@@ -8650,7 +8663,7 @@ msgstr "فتح تسجيل الدخول"
 msgid "Open Check-In Page"
 msgstr "فتح صفحة تسجيل الدخول"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:97
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
 msgid "Open menu"
 msgstr ""
 
@@ -9131,9 +9144,9 @@ msgstr "تمرير إلى المشتري"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:244
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:245
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:206
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:275
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:276
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:230
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:299
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:300
 #: src/components/routes/auth/AcceptInvitation/index.tsx:127
 #: src/components/routes/auth/Login/index.tsx:98
 #: src/components/routes/auth/Register/index.tsx:110
@@ -9458,6 +9471,11 @@ msgstr "اختر يومًا واحدًا على الأقل من الأسبوع"
 msgid "Pick days to see your dates."
 msgstr "اختر الأيام لرؤية تواريخك."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:37
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:38
+msgid "Pick your username"
+msgstr "اختر اسم المستخدم الخاص بك"
+
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:82
 msgid "Pinterest"
 msgstr "بينتيريست"
@@ -9542,7 +9560,7 @@ msgstr "يرجى التحقق من بريدك الإلكتروني لتأكيد 
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr "يرجى مراجعة تذكرتك للاطلاع على الوقت المحدث. تذاكرك لا تزال صالحة — لا حاجة لاتخاذ أي إجراء ما لم تكن الأوقات الجديدة لا تناسبك. يرجى الرد على هذا البريد الإلكتروني إذا كانت لديك أي أسئلة."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:65
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:68
 msgid "Please choose your age group"
 msgstr "يرجى اختيار فئتك العمرية"
 
@@ -9587,7 +9605,7 @@ msgstr "يرجى إدخال الرمز المكون من 5 أرقام"
 msgid "Please enter your email"
 msgstr "يرجى إدخال بريدك الإلكتروني"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:60
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:63
 msgid "Please enter your email address"
 msgstr "يرجى إدخال بريدك الإلكتروني"
 
@@ -9599,11 +9617,11 @@ msgstr "يرجى إدخال بريدك الإلكتروني وكلمة المر�
 msgid "Please enter your parent or guardian's email address."
 msgstr "يرجى إدخال البريد الإلكتروني لولي أمرك."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:100
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:116
 msgid "Please enter your username"
 msgstr "يرجى إدخال اسم المستخدم"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:85
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:101
 msgid "Please enter your username and password"
 msgstr "يرجى إدخال اسم المستخدم وكلمة المرور"
 
@@ -9619,7 +9637,7 @@ msgstr "يرجى ملء جميع الحقول"
 msgid "Please fill in all fields before submitting."
 msgstr "يرجى ملء جميع الحقول قبل الإرسال."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:55
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:58
 msgid "Please fill in your first name and password"
 msgstr "يرجى إدخال اسمك الأول وكلمة المرور"
 
@@ -9634,6 +9652,10 @@ msgstr ""
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
 msgstr "يرجى الملاحظة"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:73
+msgid "Please pick a username"
+msgstr "يرجى اختيار اسم مستخدم"
 
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:36
 msgid "Please provide an image."
@@ -10002,7 +10024,7 @@ msgid "Promotional emails may result in account suspension"
 msgstr "قد تؤدي الرسائل الترويجية إلى تعليق الحساب"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:26
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:61
 msgid "Prose & Poetry"
 msgstr ""
 
@@ -10068,7 +10090,7 @@ msgid "Purchaser email"
 msgstr "بريد المشتري الإلكتروني"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:34
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:39
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
 #: src/components/layouts/PublicPuzzles/index.tsx:23
 msgid "Puzzles"
 msgstr "ألغاز"
@@ -10101,7 +10123,7 @@ msgstr "كمية هذا التاريخ"
 msgid "Question {0}"
 msgstr "السؤال {0}"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:372
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:373
 msgid "Question {0} of {total}"
 msgstr "السؤال {0} من {total}"
 
@@ -10542,7 +10564,7 @@ msgid "Reset password"
 msgstr "إعادة تعيين كلمة المرور"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:325
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:224
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:248
 msgid "Reset your password"
 msgstr "إعادة تعيين كلمة المرور"
 
@@ -11081,7 +11103,7 @@ msgstr "عرض الجدول"
 msgid "See the latest photos and updates from"
 msgstr "اطّلع على أحدث الصور والتحديثات من"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:336
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:337
 msgid "See what I got wrong"
 msgstr "اعرف أين أخطأت"
 
@@ -11672,16 +11694,16 @@ msgstr "يُظهر المتبقي"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:215
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:257
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:154
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:289
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:170
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:313
 msgid "Sign in"
 msgstr "تسجيل الدخول"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:270
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:271
 msgid "Sign in / Sign up"
 msgstr "تسجيل الدخول / إنشاء حساب"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:212
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:213
 msgid "Sign in or sign up"
 msgstr "تسجيل الدخول أو إنشاء حساب"
 
@@ -11689,7 +11711,7 @@ msgstr "تسجيل الدخول أو إنشاء حساب"
 msgid "Sign in to manage your events, or to see your tickets and other purchases."
 msgstr "سجّل الدخول لإدارة فعالياتك، أو لمشاهدة تذاكرك ومشترياتك الأخرى."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:263
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:264
 msgid "Sign in to save your scores and earn points."
 msgstr "سجّل الدخول لحفظ نتائجك وكسب النقاط."
 
@@ -11697,7 +11719,7 @@ msgstr "سجّل الدخول لحفظ نتائجك وكسب النقاط."
 msgid "Sign out"
 msgstr "تسجيل الخروج"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:144
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:160
 msgid "Sign up"
 msgstr "إنشاء حساب"
 
@@ -11826,7 +11848,7 @@ msgstr "حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقً
 #: src/components/layouts/Event/index.tsx:91
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:129
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:30
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:30
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:32
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizResetPasswordForm.tsx:34
 #: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/layouts/PublicParentalConsent/index.tsx:36
@@ -11914,7 +11936,7 @@ msgstr "تاريخ ووقت البدء"
 msgid "Start date is required"
 msgstr "تاريخ البدء مطلوب"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:308
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:309
 msgid "Start the test"
 msgstr "ابدأ الاختبار"
 
@@ -12333,7 +12355,7 @@ msgstr "قميص"
 msgid "T-shirts, mugs and more"
 msgstr "قمصان وأكواب والمزيد"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:351
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:352
 msgid "Take the test again"
 msgstr "أعد الاختبار"
 
@@ -13940,13 +13962,13 @@ msgstr "المستخدم"
 msgid "User Management"
 msgstr "إدارة المستخدمين"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:238
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:266
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:262
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:290
 msgid "Username"
 msgstr "اسم المستخدم"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:237
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:265
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:261
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:289
 msgid "Username (e.g. Simba42)"
 msgstr "اسم المستخدم (مثل Simba42)"
 
@@ -14320,6 +14342,10 @@ msgstr "نجمع أيضًا تلقائيًا معلومات تقنية محدو�
 msgid "We collect information you provide directly to us, including:"
 msgstr "نجمع المعلومات التي تقدمها لنا مباشرة، بما في ذلك:"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:27
+msgid "We could not load usernames. Try again"
+msgstr "تعذر تحميل أسماء المستخدمين. حاول مرة أخرى"
+
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "تعذّرت معالجة دفعتك. يرجى المحاولة مرة أخرى أو التواصل مع الدعم."
@@ -14453,7 +14479,7 @@ msgstr "نستخدم ملفات تعريف الارتباط الأساسية ا�
 msgid "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
 msgstr "نستخدم Google Analytics، المقدَّمة من Google LLC، لقياس حركة الزيارات واستخدام هذا الموقع. بموافقتك، تضع Google ملفات تعريف ارتباط (مثل _ga) على جهازك وتجمع معلومات مثل الصفحات التي تزورها وموقعك التقريبي ونوع جهازك ومتصفحك. إلى أن توافق على التحليلات، تعمل وسوم Google في وضع مقيّد لا يخزّن ملفات تعريف ارتباط التحليلات، وتبقى كذلك إذا رفضت. يمكنك معرفة كيفية استخدام Google للبيانات على <0>policies.google.com/technologies/partner-sites</0> ويمكنك إلغاء الاشتراك عبر <1>الإضافة الخاصة بإلغاء الاشتراك في Google Analytics</1>."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:184
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:200
 msgid "We use your email to save your session and to send you a link to reset your password."
 msgstr "نستخدم بريدك الإلكتروني لحفظ جلستك وإرسال رابط لإعادة تعيين كلمة المرور."
 
@@ -14576,7 +14602,7 @@ msgstr "أسابيع"
 msgid "Weibo"
 msgstr "ويبو"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:114
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:130
 msgid "Welcome aboard!"
 msgstr "أهلاً بك!"
 
@@ -14588,7 +14614,7 @@ msgstr "مرحبًا بك! يرجى تسجيل الدخول للمتابعة."
 msgid "Welcome back"
 msgstr "مرحبًا بعودتك"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:261
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:285
 msgid "Welcome back! Enter your username and password."
 msgstr "أهلاً بعودتك! أدخل اسم المستخدم وكلمة المرور."
 
@@ -14849,7 +14875,7 @@ msgstr "ورشة عمل بحجز مبكر"
 msgid "Would you like to save your score and earn points?"
 msgstr "هل تريد حفظ نتيجتك وكسب النقاط؟"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:118
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:134
 msgid "Write it down! You will need it to sign in next time. Only this username is shown on the leaderboard, so your real name stays private."
 msgstr "دوّنه! ستحتاجه لتسجيل الدخول في المرة القادمة. يظهر اسم المستخدم هذا فقط على لوحة المتصدرين، لذا يبقى اسمك الحقيقي خاصاً."
 
@@ -15068,7 +15094,7 @@ msgstr "يجب عليك توثيق بريد حسابك الإلكتروني قب
 msgid "You receive"
 msgstr "تستلم"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:324
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:325
 msgid "You scored {score} out of {total} ({percentage}%)"
 msgstr "حصلت على {score} من {total} ({percentage}%)"
 
@@ -15156,7 +15182,7 @@ msgstr "سيظهر حاضروك هنا بمجرد تسجيلهم في فعالي
 msgid "Your awesome website 🎉"
 msgstr "موقعك الرائع 🎉"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:327
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:328
 msgid "Your best score: {bestPercentage}%"
 msgstr "أفضل نتيجة لك: {bestPercentage}%"
 
@@ -15335,7 +15361,7 @@ msgstr "تذكرتك لا تزال صالحة — لا حاجة لاتخاذ أ�
 msgid "Your tickets have been confirmed."
 msgstr "تم تأكيد تذاكرك."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:115
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:131
 msgid "Your username is"
 msgstr "اسم المستخدم الخاص بك هو"
 

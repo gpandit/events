@@ -6,6 +6,7 @@ namespace HiEvents\Services\Application\Handlers\Quiz;
 
 use HiEvents\DomainObjects\Generated\QuizPlayerDomainObjectAbstract;
 use HiEvents\DomainObjects\QuizPlayerDomainObject;
+use HiEvents\Exceptions\QuizUsernameTakenException;
 use HiEvents\Repository\Interfaces\QuizPlayerRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\QuizPlayerSessionDTO;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\RegisterQuizPlayerDTO;
@@ -22,12 +23,17 @@ class RegisterQuizPlayerHandler
         private readonly Hasher $hasher,
     ) {}
 
+    /**
+     * @throws QuizUsernameTakenException
+     */
     public function handle(RegisterQuizPlayerDTO $dto): QuizPlayerSessionDTO
     {
+        $this->usernameGenerator->assertChoosable($dto->organizer_id, $dto->username);
+
         /** @var QuizPlayerDomainObject $player */
         $player = $this->playerRepository->create([
             QuizPlayerDomainObjectAbstract::ORGANIZER_ID => $dto->organizer_id,
-            QuizPlayerDomainObjectAbstract::USERNAME => $this->usernameGenerator->generate($dto->organizer_id),
+            QuizPlayerDomainObjectAbstract::USERNAME => $dto->username,
             QuizPlayerDomainObjectAbstract::FIRST_NAME => trim($dto->first_name),
             QuizPlayerDomainObjectAbstract::EMAIL => mb_strtolower(trim($dto->email)),
             QuizPlayerDomainObjectAbstract::AGE_BAND => $dto->age_band->value,

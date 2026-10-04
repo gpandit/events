@@ -120,6 +120,53 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     opacity: 0.8;
 }
 
+.usernamePicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.usernameOptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.usernameOption,
+.usernameOptionActive {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 2px solid var(--organizer-border-color, rgba(0, 0, 0, 0.15));
+    background: transparent;
+    color: var(--organizer-primary-text-color, #1a1a1a);
+    font-family: $font-display;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+        border-color: var(--organizer-primary-color, #8b5cf6);
+    }
+}
+
+.usernameOptionActive {
+    background: var(--organizer-primary-color, #8b5cf6);
+    border-color: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-contrast, #ffffff);
+}
+
+.usernamePager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
 .puzzleText {
     margin: 0;
     max-width: 480px;
@@ -366,9 +413,17 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     cursor: pointer;
     padding: 0;
     font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
 
-    &:hover {
+    &:hover:not(:disabled) {
         text-decoration: underline;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
     }
 }
 
