@@ -1,6 +1,7 @@
 import axios from "axios";
 import {isSsr} from "../utilites/helpers.ts";
 import {getConfig} from "../utilites/config.ts";
+import {applySsrRequestHeaders} from "./ssrRequestHeaders.ts";
 
 const BASE_URL = isSsr()
     ? getConfig('VITE_API_URL_SERVER')
@@ -18,6 +19,7 @@ const ALLOWED_UNAUTHENTICATED_PATHS = [
     'auth',
     'account/payment',
     'checkout',
+    'box-office',
     '/event/',
     'print',
     '/order/',
@@ -38,6 +40,8 @@ export const api = axios.create({
     },
     withCredentials: true,
 });
+
+api.interceptors.request.use(applySsrRequestHeaders);
 
 api.interceptors.response.use(
     (response) => response,
@@ -60,10 +64,12 @@ api.interceptors.response.use(
             return Promise.reject(error);
         }
 
+        if (status === 403 && error.response.data?.error_code === 'FEATURE_UNAVAILABLE') {
+            return Promise.reject(error);
+        }
+
         if (isAuthError && isProtectedPath && (!isAllowedUnauthenticatedPath || isManageEventPath)) {
-            // Store the current URL before redirecting to the login page
             window?.localStorage?.setItem(PREVIOUS_URL_KEY, window?.location.href);
-            // Preserve query params (UTM tracking) during redirect
             const searchParams = window?.location?.search || '';
             window?.location?.replace(LOGIN_PATH + searchParams);
         }
