@@ -8,7 +8,8 @@ import {getQuizPercentage, getQuizRank, QuizRank, rememberTest, selectQuizQuesti
 import {SaveScorePrompt} from './SaveScorePrompt.tsx';
 import {AnswerReview} from './AnswerReview.tsx';
 import {QuizAuthForm} from './QuizAuthForm.tsx';
-import {QuizLeaderboard} from './QuizLeaderboard.tsx';
+import {QuizLeaderboardPanel} from './QuizLeaderboardPanel.tsx';
+import {QuizPlayerSummary} from './QuizPlayerSummary.tsx';
 import {QuizProfile} from './QuizProfile.tsx';
 import {QuizResetPasswordForm} from './QuizResetPasswordForm.tsx';
 import {ageBandLabel, subjectLabel} from './quizLabels.ts';
@@ -20,14 +21,18 @@ const QUESTIONS_PER_TEST = 20;
 const BEST_SCORE_STORAGE_KEY = 'fos_general_knowledge_quiz_best';
 const RECENT_TESTS_STORAGE_KEY = 'fos_general_knowledge_quiz_recent';
 
-type QuizStage = 'intro' | 'playing' | 'result' | 'review' | 'auth' | 'leaderboard' | 'profile';
+type QuizStage = 'intro' | 'playing' | 'result' | 'review' | 'auth' | 'profile';
 
 type BestScores = Partial<Record<AgeBand, number>>;
 
 type RecentTests = Partial<Record<AgeBand, string[][]>>;
 
-interface PuzzlesTabProps {
+interface PuzzlesStageProps {
     organizer: Organizer;
+    session: QuizPlayerSession | null;
+    signIn: (session: QuizPlayerSession) => void;
+    signOut: () => void;
+    onAgeBandChange: (ageBand: AgeBand) => void;
 }
 
 const readBestScores = (): BestScores => {
@@ -80,7 +85,7 @@ const rankContent = (rank: QuizRank) => {
     }
 };
 
-export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
+const PuzzlesStage = ({organizer, session, signIn, signOut, onAgeBandChange}: PuzzlesStageProps) => {
     const [stage, setStage] = useState<QuizStage>('intro');
     const [ageBand, setAgeBand] = useState<AgeBand | null>(null);
     const [puzzles, setPuzzles] = useState<Puzzle[]>([]);
@@ -92,8 +97,6 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
     const [bestScores, setBestScores] = useState<BestScores>({});
     const [answers, setAnswers] = useState<(string | null)[]>([]);
     const [attempt, setAttempt] = useState(0);
-    const [leaderboardReturnStage, setLeaderboardReturnStage] = useState<QuizStage>('intro');
-    const {session, signIn, signOut} = useQuizPlayerSession(organizer.id);
     const [searchParams, setSearchParams] = useSearchParams();
     const resetToken = searchParams.get('reset_token');
 
@@ -102,6 +105,12 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
     useEffect(() => {
         setBestScores(readBestScores());
     }, []);
+
+    useEffect(() => {
+        if (ageBand) {
+            onAgeBandChange(ageBand);
+        }
+    }, [ageBand]);
 
     const finish = useCallback((finalScore: number) => {
         if (ageBand) {
@@ -170,11 +179,6 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
         }
     };
 
-    const openLeaderboard = () => {
-        setLeaderboardReturnStage(stage);
-        setStage('leaderboard');
-    };
-
     const handleSignOut = () => {
         signOut();
         setStage('intro');
@@ -216,19 +220,6 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
         );
     }
 
-    if (stage === 'leaderboard') {
-        return (
-            <div className={classes.tabPanel}>
-                <QuizLeaderboard
-                    organizerId={organizer.id}
-                    initialAgeBand={ageBand}
-                    username={session?.username}
-                    onBack={() => setStage(leaderboardReturnStage)}
-                />
-            </div>
-        );
-    }
-
     if (stage === 'profile' && session) {
         return (
             <div className={classes.tabPanel}>
@@ -260,17 +251,14 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
             <div className={classes.tabPanel}>
                 <div className={classes.playerBar} data-testid="puzzles-player-bar">
                     {session ? (
-                        <>
-                            <span className={classes.playerName}><IconUser size={16}/> {t`Playing as ${session.username}`}</span>
-                            <button
-                                type="button"
-                                className={classes.linkButton}
-                                onClick={() => setStage('profile')}
-                                data-testid="puzzles-my-scores"
-                            >
-                                {t`My scores`}
-                            </button>
-                        </>
+                        <button
+                            type="button"
+                            className={classes.linkButton}
+                            onClick={() => setStage('profile')}
+                            data-testid="puzzles-my-scores"
+                        >
+                            {t`My scores`}
+                        </button>
                     ) : (
                         <>
                             <span className={classes.playerName}>{t`Sign in to save your scores and earn points.`}</span>
@@ -284,15 +272,8 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
                             </button>
                         </>
                     )}
-                    <button
-                        type="button"
-                        className={classes.linkButton}
-                        onClick={openLeaderboard}
-                        data-testid="puzzles-leaderboard-link"
-                    >
-                        {t`Leaderboard`}
-                    </button>
                 </div>
+                {session && <QuizPlayerSummary organizerId={organizer.id} session={session}/>}
                 <div className={classes.puzzleCard}>
                     <IconPuzzle size={40} className={classes.puzzleIcon}/>
                     <h3 className={classes.puzzleTitle}>{t`General Knowledge Challenge`}</h3>
@@ -370,9 +351,6 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
                     <button type="button" className={classes.primaryButton} onClick={() => ageBand && start(ageBand)}>
                         <IconRefresh size={16}/> {t`Take the test again`}
                     </button>
-                    <button type="button" className={classes.linkButton} onClick={openLeaderboard}>
-                        {t`View the leaderboard`}
-                    </button>
                     <button
                         type="button"
                         className={classes.linkButton}
@@ -421,6 +399,31 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
                     ))}
                 </div>
             </div>
+        </div>
+    );
+};
+
+export const PuzzlesTab = ({organizer}: { organizer: Organizer }) => {
+    const {session, signIn, signOut} = useQuizPlayerSession(organizer.id);
+    const [leaderboardAgeBand, setLeaderboardAgeBand] = useState<AgeBand>(AGE_BANDS[0]);
+
+    return (
+        <div className={classes.puzzlesLayout}>
+            <div className={classes.puzzlesMain}>
+                <PuzzlesStage
+                    organizer={organizer}
+                    session={session}
+                    signIn={signIn}
+                    signOut={signOut}
+                    onAgeBandChange={setLeaderboardAgeBand}
+                />
+            </div>
+            <QuizLeaderboardPanel
+                organizerId={organizer.id}
+                ageBand={leaderboardAgeBand}
+                onAgeBandChange={setLeaderboardAgeBand}
+                username={session?.username}
+            />
         </div>
     );
 };

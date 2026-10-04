@@ -8,7 +8,6 @@ export const useRegisterQuizPlayer = (organizerId: IdParam) => {
             first_name: string;
             email: string;
             age_band: string;
-            parent_email?: string;
             password: string;
         }) => organizerPublicClient.registerQuizPlayer(organizerId, player),
     });

@@ -797,7 +797,6 @@ export interface QuizResultRecord {
 
 export interface QuizPlayerProfile {
     username: string;
-    leaderboard_status: 'NOT_REQUIRED' | ParentalConsentStatus;
     totals: QuizPlayerTotals[];
     results: QuizResultRecord[];
 }

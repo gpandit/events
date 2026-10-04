@@ -1,17 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {Tabs} from '@mantine/core';
 import {t} from '@lingui/macro';
-import {IconArrowLeft, IconCrown, IconMedal} from '@tabler/icons-react';
+import {IconCrown, IconMedal, IconTrophy} from '@tabler/icons-react';
 import {IdParam} from '../../../../../types.ts';
 import {useGetQuizLeaderboard} from '../../../../../queries/useGetQuizLeaderboard.ts';
 import {AGE_BANDS, AgeBand} from './generalKnowledgePuzzles.ts';
 import {ageBandLabel} from './quizLabels.ts';
 import classes from '../ResourcesForChildren.module.scss';
 
-interface QuizLeaderboardProps {
+interface QuizLeaderboardPanelProps {
     organizerId: IdParam;
-    initialAgeBand: AgeBand | null;
+    ageBand: AgeBand;
+    onAgeBandChange: (ageBand: AgeBand) => void;
     username?: string;
-    onBack: () => void;
 }
 
 const RankBadge = ({rank}: { rank: number }) => {
@@ -24,30 +25,39 @@ const RankBadge = ({rank}: { rank: number }) => {
     return null;
 };
 
-export const QuizLeaderboard: React.FC<QuizLeaderboardProps> = ({organizerId, initialAgeBand, username, onBack}) => {
-    const [ageBand, setAgeBand] = useState<AgeBand>(initialAgeBand ?? AGE_BANDS[0]);
+export const QuizLeaderboardPanel: React.FC<QuizLeaderboardPanelProps> = ({
+                                                                              organizerId,
+                                                                              ageBand,
+                                                                              onAgeBandChange,
+                                                                              username,
+                                                                          }) => {
     const {data: entries, isLoading, isError} = useGetQuizLeaderboard(organizerId, ageBand);
 
     return (
-        <div className={classes.puzzleCard}>
-            <h3 className={classes.puzzleTitle}>{t`Leaderboard`}</h3>
+        <aside className={classes.leaderboardPane} data-testid="puzzles-leaderboard-pane">
+            <h3 className={classes.leaderboardTitle}><IconTrophy size={20}/> {t`Leaderboard`}</h3>
             <p className={classes.puzzleText}>{t`The top players in each age group. Only usernames are shown.`}</p>
 
-            <div className={classes.ageOptions} role="radiogroup" aria-label={t`Choose an age group`}>
-                {AGE_BANDS.map((band) => (
-                    <button
-                        key={band}
-                        type="button"
-                        role="radio"
-                        aria-checked={ageBand === band}
-                        className={ageBand === band ? classes.ageOptionActive : classes.ageOption}
-                        onClick={() => setAgeBand(band)}
-                        data-testid={`puzzles-leaderboard-age-${band}`}
-                    >
-                        {ageBandLabel(band)}
-                    </button>
-                ))}
-            </div>
+            <Tabs
+                value={ageBand}
+                onChange={(next) => next && onAgeBandChange(next as AgeBand)}
+                className={classes.tabs}
+            >
+                <Tabs.List grow>
+                    {AGE_BANDS.map((band) => (
+                        <Tabs.Tab
+                            key={band}
+                            value={band}
+                            aria-label={ageBandLabel(band)}
+                            data-testid={`puzzles-leaderboard-age-${band}`}
+                        >
+                            {band.replace('-', '–')}
+                        </Tabs.Tab>
+                    ))}
+                </Tabs.List>
+            </Tabs>
+
+            <p className={classes.leaderboardAgeLabel}>{ageBandLabel(ageBand)}</p>
 
             {isLoading && <p className={classes.puzzleText}>{t`Loading...`}</p>}
             {isError && <p className={classes.saveError} role="alert">{t`The leaderboard could not be loaded.`}</p>}
@@ -61,7 +71,6 @@ export const QuizLeaderboard: React.FC<QuizLeaderboardProps> = ({organizerId, in
                         <th scope="col">{t`Rank`}</th>
                         <th scope="col">{t`Player`}</th>
                         <th scope="col">{t`Points`}</th>
-                        <th scope="col" className={classes.hideOnMobile}>{t`Tests`}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -74,18 +83,13 @@ export const QuizLeaderboard: React.FC<QuizLeaderboardProps> = ({organizerId, in
                             <td><span className={classes.rankCell}>{entry.rank} <RankBadge rank={entry.rank}/></span></td>
                             <td>{entry.username}</td>
                             <td>{entry.total_points}</td>
-                            <td className={classes.hideOnMobile}>{entry.tests_taken}</td>
                         </tr>
                     ))}
                     </tbody>
                 </table>
             )}
-
-            <button type="button" className={classes.linkButton} onClick={onBack}>
-                <IconArrowLeft size={14}/> {t`Back`}
-            </button>
-        </div>
+        </aside>
     );
 };
 
-export default QuizLeaderboard;
+export default QuizLeaderboardPanel;

@@ -239,7 +239,6 @@ export const organizerPublicClient = {
         first_name: string;
         email: string;
         age_band: string;
-        parent_email?: string;
         password: string;
     }) => {
         const response = await publicApi.post<GenericDataResponse<QuizPlayerSession>>(

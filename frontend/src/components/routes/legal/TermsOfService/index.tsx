@@ -80,8 +80,8 @@ export const TermsOfService = () => {
             </p>
             <p>
                 <Trans>
-                    A puzzles account is for the child it is created for. Children aged 13 or under appear on the
-                    leaderboard only with a parent or guardian's permission. You must provide accurate details,
+                    A puzzles account is for the child it is created for. Only an automatically generated username
+                    appears on the leaderboard. You must provide accurate details,
                     keep your password private and not attempt to cheat, tamper with scores or misuse usernames. We
                     may remove accounts or scores that break these rules. See our{" "}
                     <a href="/privacy-policy">Privacy Policy</a> for how children's information is handled.

@@ -148,18 +148,14 @@ export const PrivacyPolicy = () => {
             <p><Trans><strong>Puzzles.</strong> To save scores a child creates a puzzles account, for which we collect:</Trans></p>
             <ul>
                 <li><Trans>their first name, email address, password (stored securely) and chosen age group;</Trans></li>
-                <li><Trans>if they are 13 or under, a parent or guardian's email address;</Trans></li>
                 <li><Trans>their test results and points.</Trans></li>
             </ul>
             <p>
                 <Trans>
                     Each child is given an automatically generated character username. Only this username, their
                     points, tests taken and best score appear on the public leaderboard; their real name and
-                    email are never shown. For children aged 13 or under we email the parent or guardian to ask
-                    permission for the child to appear on the leaderboard. Until permission is given the child can
-                    still play and save scores but is not shown on the leaderboard. A child's email address is
-                    used only to save their account and to send a password reset link, and a parent or guardian's
-                    email address is used only to request and record their permission.
+                    email are never shown. A child's email address is used only to save their account and to
+                    send a password reset link.
                 </Trans>
             </p>
             <p>

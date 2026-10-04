@@ -39,18 +39,6 @@ export const QuizProfile: React.FC<QuizProfileProps> = ({organizerId, session, o
 
             {isLoading && <p className={classes.puzzleText}>{t`Loading...`}</p>}
 
-            {profile?.leaderboard_status === 'PENDING' && (
-                <p className={classes.puzzleText} data-testid="puzzles-leaderboard-pending">
-                    {t`You will appear on the leaderboard once your parent or guardian gives permission. We have emailed them.`}
-                </p>
-            )}
-
-            {profile?.leaderboard_status === 'DECLINED' && (
-                <p className={classes.puzzleText}>
-                    {t`Your parent or guardian chose not to show you on the leaderboard. You can still play and save your scores.`}
-                </p>
-            )}
-
             {profile && profile.results.length === 0 && (
                 <p className={classes.puzzleText}>{t`You have not saved any scores yet. Take a test to get started!`}</p>
             )}
