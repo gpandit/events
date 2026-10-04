@@ -243,6 +243,9 @@ class CreateEventServiceTest extends TestCase
             $mock->shouldReceive('getAttributes')->andReturn([]);
             $mock->shouldReceive('getType')->andReturn('RECURRING');
             $mock->shouldReceive('getRecurrenceRule')->andReturn(null);
+            $mock->shouldReceive('getIsShop')->andReturn(false);
+            $mock->shouldReceive('getShopCategory')->andReturn(null);
+            $mock->shouldReceive('getVendorType')->andReturn(null);
         });
 
         $organizer = $this->createMockOrganizerDomainObject()
@@ -269,6 +272,61 @@ class CreateEventServiceTest extends TestCase
         $this->eventSettingsRepository->shouldReceive('create')
             ->once()
             ->with(Mockery::on(fn ($arg) => $arg['attendee_details_collection_method'] === AttendeeDetailsCollectionMethod::PER_ORDER->value));
+
+        $this->eventStatisticsRepository->shouldReceive('create');
+        $this->checkInListRepository->shouldReceive('create');
+
+        $this->createEventService->createEvent($eventData);
+        $this->assertTrue(true);
+    }
+
+    public function test_create_shop_event_uses_per_order_details_and_shop_button_text(): void
+    {
+        $eventData = Mockery::mock(EventDomainObject::class, static function ($mock) {
+            $mock->shouldReceive('getId')->andReturn(1);
+            $mock->shouldReceive('getTitle')->andReturn('Uniform Co');
+            $mock->shouldReceive('getOrganizerId')->andReturn(1);
+            $mock->shouldReceive('getAccountId')->andReturn(1);
+            $mock->shouldReceive('getTimezone')->andReturn('UTC');
+            $mock->shouldReceive('getCurrency')->andReturn('USD');
+            $mock->shouldReceive('getDescription')->andReturn('Desc');
+            $mock->shouldReceive('getLocationDetails')->andReturn(null);
+            $mock->shouldReceive('getUserId')->andReturn(1);
+            $mock->shouldReceive('getStatus')->andReturn('DRAFT');
+            $mock->shouldReceive('getCategory')->andReturn('OTHER');
+            $mock->shouldReceive('getAttributes')->andReturn([]);
+            $mock->shouldReceive('getType')->andReturn('SINGLE');
+            $mock->shouldReceive('getRecurrenceRule')->andReturn(null);
+            $mock->shouldReceive('getIsShop')->andReturn(true);
+            $mock->shouldReceive('getShopCategory')->andReturn(null);
+            $mock->shouldReceive('getVendorType')->andReturn(null);
+        });
+
+        $organizer = $this->createMockOrganizerDomainObject()
+            ->shouldReceive('getOrganizerSettings')
+            ->andReturn(new OrganizerSettingDomainObject)
+            ->getMock();
+
+        $this->databaseManager->shouldReceive('transaction')->once()->andReturnUsing(fn ($cb) => $cb());
+
+        $this->organizerRepository
+            ->shouldReceive('loadRelation')->with(OrganizerSettingDomainObject::class)->once()->andReturnSelf()
+            ->getMock()
+            ->shouldReceive('findFirstWhere')->andReturn($organizer);
+
+        $this->eventRepository->shouldReceive('create')->andReturn($eventData);
+        $this->purifier->shouldReceive('purify')->andReturn('Desc');
+
+        $this->config->shouldReceive('get')->with('filesystems.public')->andReturn('public');
+        $this->config->shouldReceive('get')->with('app.event_categories_cover_images_path')->andReturn('event-covers');
+        $mockDisk = Mockery::mock();
+        $mockDisk->shouldReceive('exists')->andReturn(false);
+        $this->filesystemManager->shouldReceive('disk')->with('public')->andReturn($mockDisk);
+
+        $this->eventSettingsRepository->shouldReceive('create')
+            ->once()
+            ->with(Mockery::on(fn ($arg) => $arg['attendee_details_collection_method'] === AttendeeDetailsCollectionMethod::PER_ORDER->value
+                && $arg['get_tickets_button_text'] === 'Buy now'));
 
         $this->eventStatisticsRepository->shouldReceive('create');
         $this->checkInListRepository->shouldReceive('create');
@@ -570,6 +628,9 @@ class CreateEventServiceTest extends TestCase
             $mock->shouldReceive('getAttributes')->andReturn([]);
             $mock->shouldReceive('getType')->andReturn('SINGLE');
             $mock->shouldReceive('getRecurrenceRule')->andReturn(null);
+            $mock->shouldReceive('getIsShop')->andReturn(false);
+            $mock->shouldReceive('getShopCategory')->andReturn(null);
+            $mock->shouldReceive('getVendorType')->andReturn(null);
         });
     }
 
@@ -611,6 +672,9 @@ class CreateEventServiceTest extends TestCase
             $mock->shouldReceive('getAttributes')->andReturn([]);
             $mock->shouldReceive('getType')->andReturn('SINGLE');
             $mock->shouldReceive('getRecurrenceRule')->andReturn(null);
+            $mock->shouldReceive('getIsShop')->andReturn(false);
+            $mock->shouldReceive('getShopCategory')->andReturn(null);
+            $mock->shouldReceive('getVendorType')->andReturn(null);
         });
     }
 }

@@ -120,6 +120,11 @@ use HiEvents\Http\Actions\EventOccurrences\UpdateEventOccurrenceAction;
 use HiEvents\Http\Actions\EventOccurrences\UpdateProductVisibilityAction;
 use HiEvents\Http\Actions\EventOccurrences\UpsertPriceOverrideAction;
 use HiEvents\Http\Actions\Events\CreateEventAction;
+use HiEvents\Http\Actions\Shops\CreateShopAction;
+use HiEvents\Http\Actions\Shops\GetOrganizerShopsPublicAction;
+use HiEvents\Http\Actions\Shops\GetShopPickListAction;
+use HiEvents\Http\Actions\Shops\MarkOrdersCollectedAction;
+use HiEvents\Http\Actions\Shops\MarkOrdersReadyForCollectionAction;
 use HiEvents\Http\Actions\Events\DeleteEventAction;
 use HiEvents\Http\Actions\Events\DuplicateEventAction;
 use HiEvents\Http\Actions\Events\GetEventAction;
@@ -413,6 +418,10 @@ $router->middleware(['auth:api'])->group(
 
         // Events
         $router->post('/events', CreateEventAction::class);
+        $router->post('/shops', CreateShopAction::class);
+        $router->get('/events/{event_id}/shop/pick-list', GetShopPickListAction::class);
+        $router->post('/events/{event_id}/shop/orders/ready-for-collection', MarkOrdersReadyForCollectionAction::class);
+        $router->post('/events/{event_id}/shop/orders/collected', MarkOrdersCollectedAction::class);
         $router->get('/events', GetEventsAction::class);
         $router->get('/events/{event_id}', GetEventAction::class);
         $router->put('/events/{event_id}', UpdateEventAction::class);
@@ -641,6 +650,7 @@ $router->prefix('/public')->group(
         // Organizers
         $router->get('/organizers/{organizer_id}', GetPublicOrganizerAction::class);
         $router->get('/organizers/{organizer_id}/events', GetOrganizerEventsPublicAction::class);
+        $router->get('/organizers/{organizer_id}/shops', GetOrganizerShopsPublicAction::class);
         $router->post('/organizers/{organizer_id}/contact', SendOrganizerContactMessagePublicAction::class)
             ->middleware('throttle:5,1');
         $router->post('/organizers/{organizerId}/child-story-submissions', SubmitChildStorySubmissionPublicAction::class)

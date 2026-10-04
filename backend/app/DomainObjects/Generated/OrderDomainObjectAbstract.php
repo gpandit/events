@@ -47,6 +47,9 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     final public const PHONE = 'phone';
     final public const PAYMENT_PROCESSING_FEE = 'payment_processing_fee';
     final public const PII_ERASED_AT = 'pii_erased_at';
+    final public const COLLECTION_STATUS = 'collection_status';
+    final public const READY_FOR_COLLECTION_AT = 'ready_for_collection_at';
+    final public const COLLECTED_AT = 'collected_at';
 
     protected int $id;
     protected int $event_id;
@@ -85,6 +88,9 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     protected ?string $phone = null;
     protected float $payment_processing_fee = 0.0;
     protected ?string $pii_erased_at = null;
+    protected ?string $collection_status = null;
+    protected ?string $ready_for_collection_at = null;
+    protected ?string $collected_at = null;
 
     public function toArray(): array
     {
@@ -126,6 +132,9 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
                     'phone' => $this->phone ?? null,
                     'payment_processing_fee' => $this->payment_processing_fee ?? null,
                     'pii_erased_at' => $this->pii_erased_at ?? null,
+                    'collection_status' => $this->collection_status ?? null,
+                    'ready_for_collection_at' => $this->ready_for_collection_at ?? null,
+                    'collected_at' => $this->collected_at ?? null,
                 ];
     }
 
@@ -534,5 +543,38 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     public function getPiiErasedAt(): ?string
     {
         return $this->pii_erased_at;
+    }
+
+    public function setCollectionStatus(?string $collection_status): self
+    {
+        $this->collection_status = $collection_status;
+        return $this;
+    }
+
+    public function getCollectionStatus(): ?string
+    {
+        return $this->collection_status;
+    }
+
+    public function setReadyForCollectionAt(?string $ready_for_collection_at): self
+    {
+        $this->ready_for_collection_at = $ready_for_collection_at;
+        return $this;
+    }
+
+    public function getReadyForCollectionAt(): ?string
+    {
+        return $this->ready_for_collection_at;
+    }
+
+    public function setCollectedAt(?string $collected_at): self
+    {
+        $this->collected_at = $collected_at;
+        return $this;
+    }
+
+    public function getCollectedAt(): ?string
+    {
+        return $this->collected_at;
     }
 }

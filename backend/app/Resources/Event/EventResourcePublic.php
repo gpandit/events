@@ -50,6 +50,9 @@ class EventResourcePublic extends BaseResource
             'occurrences_month' => $this->when($isRecurring, fn () => $this->getOccurrencesMonth()),
             /** @var 'SINGLE'|'RECURRING' */
             'type' => $this->getType(),
+            'is_shop' => $this->getIsShop(),
+            'shop_category' => $this->getShopCategory(),
+            'vendor_type' => $this->getVendorType(),
             'currency' => $this->getCurrency(),
             'slug' => $this->getSlug(),
             /** @var 'DRAFT'|'LIVE'|'ARCHIVED'|'PENDING_MANUAL_REVIEW'|null */

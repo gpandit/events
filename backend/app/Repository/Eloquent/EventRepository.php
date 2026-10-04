@@ -37,10 +37,11 @@ class EventRepository extends BaseRepository implements EventRepositoryInterface
         return EventDomainObject::class;
     }
 
-    public function findEventsForOrganizer(int $organizerId, int $accountId, QueryParamsDTO $params): LengthAwarePaginator
+    public function findEventsForOrganizer(int $organizerId, int $accountId, QueryParamsDTO $params, bool $isShop = false): LengthAwarePaginator
     {
-        $where[] = static function (Builder $builder) use ($accountId, $organizerId) {
+        $where[] = static function (Builder $builder) use ($accountId, $organizerId, $isShop) {
             $builder
+                ->where(EventDomainObjectAbstract::IS_SHOP, $isShop)
                 ->whereIn(EventDomainObjectAbstract::STATUS, [
                     EventStatus::LIVE->name,
                     EventStatus::DRAFT->name,
