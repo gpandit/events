@@ -7,6 +7,7 @@ namespace HiEvents\Repository\Eloquent;
 use HiEvents\DomainObjects\QuizUsernameCharacterDomainObject;
 use HiEvents\Models\QuizUsernameCharacter;
 use HiEvents\Repository\Interfaces\QuizUsernameCharacterRepositoryInterface;
+use Illuminate\Support\Collection;
 
 /**
  * @extends BaseRepository<QuizUsernameCharacterDomainObject>
@@ -23,10 +24,10 @@ class QuizUsernameCharacterRepository extends BaseRepository implements QuizUser
         return QuizUsernameCharacterDomainObject::class;
     }
 
-    public function findRandom(): ?QuizUsernameCharacterDomainObject
+    public function findRandomMany(int $count): Collection
     {
         return $this->runQuery(
-            fn () => $this->handleSingleResult($this->model->inRandomOrder()->first())
+            fn () => collect($this->handleResults($this->model->inRandomOrder()->limit($count)->get()))
         );
     }
 }

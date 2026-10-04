@@ -235,7 +235,15 @@ export const organizerPublicClient = {
         return response.data;
     },
 
+    getQuizUsernameOptions: async (organizerId: IdParam) => {
+        const response = await publicApi.get<GenericDataResponse<string[]>>(
+            `organizers/${organizerId}/quiz-players/username-options`
+        );
+        return response.data;
+    },
+
     registerQuizPlayer: async (organizerId: IdParam, player: {
+        username: string;
         first_name: string;
         email: string;
         age_band: string;

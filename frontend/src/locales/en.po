@@ -633,8 +633,8 @@ msgstr "Abandoned"
 msgid "About"
 msgstr "About"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:84
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:134
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:105
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:155
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
 msgid "About Us"
 msgstr "About Us"
@@ -1995,8 +1995,9 @@ msgstr "Awesome Events Ltd."
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Ltd."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:215
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:216
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:86
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:62
 msgid "Back"
 msgstr "Back"
 
@@ -2044,7 +2045,7 @@ msgstr "Back to search"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:200
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:348
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:256
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:280
 msgid "Back to sign in"
 msgstr "Back to sign in"
 
@@ -2111,7 +2112,7 @@ msgstr "Because this account has completed orders, transaction records (amounts,
 msgid "behind the garden gate."
 msgstr "behind the garden gate."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:296
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:297
 msgid "Best: {0}%"
 msgstr "Best: {0}%"
 
@@ -2680,7 +2681,7 @@ msgstr "Choose a configuration"
 msgid "Choose a different action"
 msgstr "Choose a different action"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:359
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:360
 msgid "Choose a different age group"
 msgstr "Choose a different age group"
 
@@ -2688,7 +2689,7 @@ msgstr "Choose a different age group"
 msgid "Choose a new password"
 msgstr "Choose a new password"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:205
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:229
 msgid "Choose a password (at least 6 characters)"
 msgstr "Choose a password (at least 6 characters)"
 
@@ -2728,10 +2729,10 @@ msgstr "Choose the default setting for new events. This can be overridden for in
 msgid "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 msgstr "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:282
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:283
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:186
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:187
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:284
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:202
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:203
 msgid "Choose your age group"
 msgstr "Choose your age group"
 
@@ -2819,7 +2820,7 @@ msgstr "close"
 msgid "Close"
 msgstr "Close"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:97
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
 msgid "Close menu"
 msgstr "Close menu"
 
@@ -2907,7 +2908,7 @@ msgstr "Colors"
 msgid "Colouring pages"
 msgstr "Colouring pages"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:38
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:59
 msgid "Colouring Pages"
 msgstr "Colouring Pages"
 
@@ -3203,7 +3204,7 @@ msgstr "Content is required"
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
 #: src/components/layouts/EventHomepage/index.tsx:205
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:126
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:142
 #: src/components/routes/product-widget/SelectProducts/index.tsx:895
 msgid "Continue"
 msgstr "Continue"
@@ -3446,8 +3447,12 @@ msgid "Create a list for this date"
 msgstr "Create a list for this date"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:162
-msgid "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
-msgstr "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
+#~ msgid "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
+#~ msgstr "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:178
+msgid "Create a login to save your scores and earn points. You will pick a fun character username so your name stays private."
+msgstr "Create a login to save your scores and earn points. You will pick a fun character username so your name stays private."
 
 #: src/components/layouts/CheckIn/index.tsx:508
 msgid "Create a new check-in list for an active session, or contact the organizer if you think this is a mistake."
@@ -3570,7 +3575,7 @@ msgstr "Create Event"
 msgid "Create more tickets or products to offer them as add-ons"
 msgstr "Create more tickets or products to offer them as add-ons"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:219
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:243
 msgid "Create my login"
 msgstr "Create my login"
 
@@ -3676,8 +3681,8 @@ msgid "Creative Colouring"
 msgstr "Creative Colouring"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:42
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:71
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:119
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:92
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:140
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:8
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
 msgid "Creative Corner"
@@ -4652,8 +4657,8 @@ msgstr "Eligible Check-In Lists"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:297
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:332
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:333
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:176
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:177
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:192
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:193
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:76
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:77
 #: src/components/modals/EditUserModal/index.tsx:81
@@ -4740,7 +4745,7 @@ msgid "Email me a link"
 msgstr "Email me a link"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:345
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:251
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:275
 msgid "Email me a reset link"
 msgstr "Email me a reset link"
 
@@ -4868,7 +4873,7 @@ msgstr "Ends {0}"
 msgid "English"
 msgstr "English"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:280
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:281
 msgid "English, Science, Maths, Geography and History questions. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
 msgstr "English, Science, Maths, Geography and History questions. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
 
@@ -4965,7 +4970,7 @@ msgstr "Enter your email and we'll send you instructions to reset your password.
 msgid "Enter your name"
 msgstr "Enter your name"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:232
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:256
 msgid "Enter your username and we will email a reset link to the address saved on your account. If you did not add an email when you signed up, ask a parent or guardian to contact us."
 msgstr "Enter your username and we will email a reset link to the address saved on your account. If you did not add an email when you signed up, ask a parent or guardian to contact us."
 
@@ -5196,8 +5201,8 @@ msgstr "Event Updated"
 
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:16
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:63
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:112
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:84
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:133
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:118
 #: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
@@ -5816,8 +5821,8 @@ msgstr "First Invoice Number"
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:190
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:278
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:279
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:167
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:168
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:183
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:184
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
@@ -5947,7 +5952,7 @@ msgid "Forgot password?"
 msgstr "Forgot password?"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:265
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:297
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:321
 msgid "Forgot your password?"
 msgstr "Forgot your password?"
 
@@ -6055,7 +6060,7 @@ msgstr "General enquiry"
 msgid "General information about your organizer"
 msgstr "General information about your organizer"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:278
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:279
 msgid "General Knowledge Challenge"
 msgstr "General Knowledge Challenge"
 
@@ -6422,8 +6427,8 @@ msgstr "History"
 msgid "Hobbies"
 msgstr "Hobbies"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:105
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:81
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:126
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:115
 msgid "Home"
 msgstr "Home"
@@ -6574,7 +6579,7 @@ msgstr "If enabled, check-in staff can either mark attendees as checked in or ma
 msgid "If enabled, the organizer will receive an email notification when a new order is placed"
 msgstr "If enabled, the organizer will receive an email notification when a new order is placed"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:227
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:251
 msgid "If that username has an email address saved, we have sent a link to reset the password. The link works for 60 minutes."
 msgstr "If that username has an email address saved, we have sent a link to reset the password. The link works for 60 minutes."
 
@@ -7212,6 +7217,10 @@ msgstr "Loading preview..."
 msgid "Loading tokens..."
 msgstr "Loading tokens..."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:21
+msgid "Loading usernames"
+msgstr "Loading usernames"
+
 #: src/components/modals/OrganizerWebhookLogsModal/index.tsx:144
 msgid "Loading webhook logs..."
 msgstr "Loading webhook logs..."
@@ -7677,8 +7686,8 @@ msgid "Music"
 msgstr "Music"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:165
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:87
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:141
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:108
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:162
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
 msgid "My Account"
 msgstr "My Account"
@@ -7705,7 +7714,7 @@ msgstr "My lantern floated out slowly, turning in a lazy circle, the blue tissue
 msgid "My Profile"
 msgstr "My Profile"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:259
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:260
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:37
 msgid "My scores"
 msgstr "My scores"
@@ -7819,6 +7828,10 @@ msgstr "New Signups"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:53
 msgid "New time:"
 msgstr "New time:"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:72
+msgid "Next"
+msgstr "Next"
 
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:113
 #: src/components/layouts/OrganizerHomepage/UpcomingEventsSpotlight/index.tsx:22
@@ -8650,7 +8663,7 @@ msgstr "Open Check-In"
 msgid "Open Check-In Page"
 msgstr "Open Check-In Page"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:97
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
 msgid "Open menu"
 msgstr "Open menu"
 
@@ -9131,9 +9144,9 @@ msgstr "Pass to Buyer"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:244
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:245
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:206
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:275
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:276
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:230
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:299
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:300
 #: src/components/routes/auth/AcceptInvitation/index.tsx:127
 #: src/components/routes/auth/Login/index.tsx:98
 #: src/components/routes/auth/Register/index.tsx:110
@@ -9458,6 +9471,11 @@ msgstr "Pick at least one day of the week"
 msgid "Pick days to see your dates."
 msgstr "Pick days to see your dates."
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:37
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:38
+msgid "Pick your username"
+msgstr "Pick your username"
+
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:82
 msgid "Pinterest"
 msgstr "Pinterest"
@@ -9542,7 +9560,7 @@ msgstr "Please check your email to confirm your email address"
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:65
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:68
 msgid "Please choose your age group"
 msgstr "Please choose your age group"
 
@@ -9587,7 +9605,7 @@ msgstr "Please enter the 5-digit code"
 msgid "Please enter your email"
 msgstr "Please enter your email"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:60
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:63
 msgid "Please enter your email address"
 msgstr "Please enter your email address"
 
@@ -9599,11 +9617,11 @@ msgstr "Please enter your email and password"
 msgid "Please enter your parent or guardian's email address."
 msgstr "Please enter your parent or guardian's email address."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:100
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:116
 msgid "Please enter your username"
 msgstr "Please enter your username"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:85
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:101
 msgid "Please enter your username and password"
 msgstr "Please enter your username and password"
 
@@ -9619,7 +9637,7 @@ msgstr "Please fill in all fields"
 msgid "Please fill in all fields before submitting."
 msgstr "Please fill in all fields before submitting."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:55
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:58
 msgid "Please fill in your first name and password"
 msgstr "Please fill in your first name and password"
 
@@ -9634,6 +9652,10 @@ msgstr "Please fill in your name, email and phone number"
 #: src/components/modals/CancelOrderModal/index.tsx:63
 msgid "Please Note"
 msgstr "Please Note"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:73
+msgid "Please pick a username"
+msgstr "Please pick a username"
 
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:36
 msgid "Please provide an image."
@@ -10002,7 +10024,7 @@ msgid "Promotional emails may result in account suspension"
 msgstr "Promotional emails may result in account suspension"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:26
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:61
 msgid "Prose & Poetry"
 msgstr "Prose & Poetry"
 
@@ -10068,7 +10090,7 @@ msgid "Purchaser email"
 msgstr "Purchaser email"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:34
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:39
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
 #: src/components/layouts/PublicPuzzles/index.tsx:23
 msgid "Puzzles"
 msgstr "Puzzles"
@@ -10101,7 +10123,7 @@ msgstr "Quantity this date"
 msgid "Question {0}"
 msgstr "Question {0}"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:372
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:373
 msgid "Question {0} of {total}"
 msgstr "Question {0} of {total}"
 
@@ -10542,7 +10564,7 @@ msgid "Reset password"
 msgstr "Reset password"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:325
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:224
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:248
 msgid "Reset your password"
 msgstr "Reset your password"
 
@@ -11081,7 +11103,7 @@ msgstr "See schedule"
 msgid "See the latest photos and updates from"
 msgstr "See the latest photos and updates from"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:336
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:337
 msgid "See what I got wrong"
 msgstr "See what I got wrong"
 
@@ -11672,16 +11694,16 @@ msgstr "Shows remaining"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:215
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:257
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:154
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:289
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:170
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:313
 msgid "Sign in"
 msgstr "Sign in"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:270
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:271
 msgid "Sign in / Sign up"
 msgstr "Sign in / Sign up"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:212
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:213
 msgid "Sign in or sign up"
 msgstr "Sign in or sign up"
 
@@ -11689,7 +11711,7 @@ msgstr "Sign in or sign up"
 msgid "Sign in to manage your events, or to see your tickets and other purchases."
 msgstr "Sign in to manage your events, or to see your tickets and other purchases."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:263
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:264
 msgid "Sign in to save your scores and earn points."
 msgstr "Sign in to save your scores and earn points."
 
@@ -11697,7 +11719,7 @@ msgstr "Sign in to save your scores and earn points."
 msgid "Sign out"
 msgstr "Sign out"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:144
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:160
 msgid "Sign up"
 msgstr "Sign up"
 
@@ -11826,7 +11848,7 @@ msgstr "Something went wrong. Please try again later."
 #: src/components/layouts/Event/index.tsx:91
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:129
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:30
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:30
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:32
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizResetPasswordForm.tsx:34
 #: src/components/layouts/OrganizerLayout/index.tsx:131
 #: src/components/layouts/PublicParentalConsent/index.tsx:36
@@ -11914,7 +11936,7 @@ msgstr "Start Date & Time"
 msgid "Start date is required"
 msgstr "Start date is required"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:308
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:309
 msgid "Start the test"
 msgstr "Start the test"
 
@@ -12333,7 +12355,7 @@ msgstr "T-shirt"
 msgid "T-shirts, mugs and more"
 msgstr "T-shirts, mugs and more"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:351
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:352
 msgid "Take the test again"
 msgstr "Take the test again"
 
@@ -13940,13 +13962,13 @@ msgstr "User"
 msgid "User Management"
 msgstr "User Management"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:238
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:266
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:262
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:290
 msgid "Username"
 msgstr "Username"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:237
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:265
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:261
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:289
 msgid "Username (e.g. Simba42)"
 msgstr "Username (e.g. Simba42)"
 
@@ -14320,6 +14342,10 @@ msgstr "We also automatically collect limited technical information, such as you
 msgid "We collect information you provide directly to us, including:"
 msgstr "We collect information you provide directly to us, including:"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:27
+msgid "We could not load usernames. Try again"
+msgstr "We could not load usernames. Try again"
+
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "We could not process your payment. Please try again or contact support."
@@ -14453,7 +14479,7 @@ msgstr "We use essential cookies required for the site to function, and, where y
 msgid "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
 msgstr "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:184
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:200
 msgid "We use your email to save your session and to send you a link to reset your password."
 msgstr "We use your email to save your session and to send you a link to reset your password."
 
@@ -14576,7 +14602,7 @@ msgstr "weeks"
 msgid "Weibo"
 msgstr "Weibo"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:114
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:130
 msgid "Welcome aboard!"
 msgstr "Welcome aboard!"
 
@@ -14588,7 +14614,7 @@ msgstr "Welcome aboard! Please login to continue."
 msgid "Welcome back"
 msgstr "Welcome back"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:261
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:285
 msgid "Welcome back! Enter your username and password."
 msgstr "Welcome back! Enter your username and password."
 
@@ -14849,7 +14875,7 @@ msgstr "Workshop with early bird"
 msgid "Would you like to save your score and earn points?"
 msgstr "Would you like to save your score and earn points?"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:118
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:134
 msgid "Write it down! You will need it to sign in next time. Only this username is shown on the leaderboard, so your real name stays private."
 msgstr "Write it down! You will need it to sign in next time. Only this username is shown on the leaderboard, so your real name stays private."
 
@@ -15068,7 +15094,7 @@ msgstr "You need to verify your account email before you can send messages."
 msgid "You receive"
 msgstr "You receive"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:324
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:325
 msgid "You scored {score} out of {total} ({percentage}%)"
 msgstr "You scored {score} out of {total} ({percentage}%)"
 
@@ -15156,7 +15182,7 @@ msgstr "Your attendees will appear here once they have registered for your event
 msgid "Your awesome website 🎉"
 msgstr "Your awesome website 🎉"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:327
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:328
 msgid "Your best score: {bestPercentage}%"
 msgstr "Your best score: {bestPercentage}%"
 
@@ -15335,7 +15361,7 @@ msgstr "Your ticket is still valid — no action is needed unless the new time d
 msgid "Your tickets have been confirmed."
 msgstr "Your tickets have been confirmed."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:115
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:131
 msgid "Your username is"
 msgstr "Your username is"
 

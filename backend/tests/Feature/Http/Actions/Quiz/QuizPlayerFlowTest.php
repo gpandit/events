@@ -36,9 +36,15 @@ class QuizPlayerFlowTest extends TestCase
         return "/public/organizers/{$this->organizerId}/{$path}";
     }
 
+    private function usernameOptions(): array
+    {
+        return $this->getJson($this->url('quiz-players/username-options'))->assertOk()->json('data');
+    }
+
     private function register(string $firstName = 'Amelia'): array
     {
         $response = $this->postJson($this->url('quiz-players/register'), [
+            'username' => $this->usernameOptions()[0],
             'first_name' => $firstName,
             'email' => 'parent@example.com',
             'age_band' => '14-17',
@@ -50,7 +56,7 @@ class QuizPlayerFlowTest extends TestCase
         return $response->json('data');
     }
 
-    public function test_registering_assigns_a_character_username_without_exposing_personal_details(): void
+    public function test_registering_creates_a_character_username_without_exposing_personal_details(): void
     {
         $session = $this->register();
 
@@ -66,6 +72,7 @@ class QuizPlayerFlowTest extends TestCase
         Mail::fake();
 
         $session = $this->postJson($this->url('quiz-players/register'), [
+            'username' => $this->usernameOptions()[0],
             'first_name' => 'Amelia',
             'email' => 'child@example.com',
             'age_band' => '8-10',
@@ -84,11 +91,52 @@ class QuizPlayerFlowTest extends TestCase
         $this->assertSame(['rank', 'username', 'total_points', 'tests_taken', 'best_percentage'], array_keys($leaderboard[0]));
     }
 
-    public function test_every_player_gets_a_different_username(): void
+    public function test_the_player_is_offered_ten_distinct_character_usernames_to_choose_from(): void
     {
-        $usernames = collect(range(1, 8))->map(fn () => $this->register()['username']);
+        $options = $this->usernameOptions();
 
-        $this->assertCount(8, $usernames->unique());
+        $this->assertCount(10, $options);
+        $this->assertCount(10, array_unique($options));
+        $this->assertCount(10, array_unique(array_map(fn (string $name) => preg_replace('/\d+$/', '', $name), $options)));
+    }
+
+    public function test_the_player_gets_exactly_the_username_they_chose(): void
+    {
+        $chosen = $this->usernameOptions()[3];
+
+        $response = $this->postJson($this->url('quiz-players/register'), [
+            'username' => $chosen,
+            'first_name' => 'Amelia',
+            'email' => 'parent@example.com',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertCreated();
+
+        $this->assertSame($chosen, $response->json('data.username'));
+    }
+
+    public function test_a_username_that_is_already_taken_cannot_be_chosen_again(): void
+    {
+        $taken = $this->register()['username'];
+
+        $this->postJson($this->url('quiz-players/register'), [
+            'username' => strtolower($taken),
+            'first_name' => 'Noah',
+            'email' => 'other@example.com',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertUnprocessable()->assertJsonValidationErrors('username');
+    }
+
+    public function test_a_username_that_was_not_offered_is_rejected(): void
+    {
+        $this->postJson($this->url('quiz-players/register'), [
+            'username' => 'MadeUpName77',
+            'first_name' => 'Noah',
+            'email' => 'other@example.com',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertUnprocessable()->assertJsonValidationErrors('username');
     }
 
     public function test_a_returning_player_can_sign_in_with_their_username_in_any_case(): void

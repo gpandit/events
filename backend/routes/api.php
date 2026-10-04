@@ -196,6 +196,7 @@ use HiEvents\Http\Actions\Organizers\Public\Quiz\RequestQuizPasswordResetPublicA
 use HiEvents\Http\Actions\Organizers\Public\Quiz\ResetQuizPlayerPasswordPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\GetQuizLeaderboardPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\GetQuizPlayerProfilePublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\GetQuizUsernameOptionsPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\LoginQuizPlayerPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\RegisterQuizPlayerPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\SubmitQuizResultPublicAction;
@@ -648,6 +649,8 @@ $router->prefix('/public')->group(
             ->middleware('throttle:30,1');
         $router->post('/organizers/{organizerId}/parental-consents/{token}', RespondToParentalConsentPublicAction::class)
             ->middleware('throttle:10,1');
+        $router->get('/organizers/{organizerId}/quiz-players/username-options', GetQuizUsernameOptionsPublicAction::class)
+            ->middleware('throttle:30,1');
         $router->post('/organizers/{organizerId}/quiz-players/register', RegisterQuizPlayerPublicAction::class)
             ->middleware('throttle:10,1');
         $router->post('/organizers/{organizerId}/quiz-players/login', LoginQuizPlayerPublicAction::class)

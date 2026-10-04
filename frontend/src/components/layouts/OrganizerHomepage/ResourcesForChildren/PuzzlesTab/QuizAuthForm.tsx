@@ -5,6 +5,8 @@ import {IdParam, QuizPlayerSession} from '../../../../../types.ts';
 import {useRegisterQuizPlayer} from '../../../../../mutations/useRegisterQuizPlayer.ts';
 import {useLoginQuizPlayer} from '../../../../../mutations/useLoginQuizPlayer.ts';
 import {useRequestQuizPasswordReset} from '../../../../../mutations/useRequestQuizPasswordReset.ts';
+import {useGetQuizUsernameOptions} from '../../../../../queries/useGetQuizUsernameOptions.ts';
+import {QuizUsernamePicker} from './QuizUsernamePicker.tsx';
 import {AGE_BANDS} from './generalKnowledgePuzzles.ts';
 import {ageBandLabel} from './quizLabels.ts';
 import classes from '../ResourcesForChildren.module.scss';
@@ -16,7 +18,7 @@ interface QuizAuthFormProps {
 
 type AuthMode = 'signup' | 'signin' | 'forgot';
 
-const emptySignUp = {first_name: '', email: '', age_band: '', password: ''};
+const emptySignUp = {username: '', first_name: '', email: '', age_band: '', password: ''};
 const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 
 const emptySignIn = {username: '', password: ''};
@@ -36,6 +38,7 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
     const [signIn, setSignIn] = useState(emptySignIn);
     const [error, setError] = useState<string | null>(null);
     const [newPlayer, setNewPlayer] = useState<QuizPlayerSession | null>(null);
+    const usernameOptions = useGetQuizUsernameOptions(organizerId);
     const registerMutation = useRegisterQuizPlayer(organizerId);
     const loginMutation = useLoginQuizPlayer(organizerId);
     const resetMutation = useRequestQuizPasswordReset(organizerId);
@@ -66,15 +69,28 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
             return;
         }
 
+        if (!signUp.username) {
+            setError(t`Please pick a username`);
+            return;
+        }
+
         setError(null);
         registerMutation.mutate({
+            username: signUp.username,
             first_name: signUp.first_name,
             email: signUp.email.trim(),
             age_band: signUp.age_band,
             password: signUp.password,
         }, {
             onSuccess: (response) => setNewPlayer(response.data),
-            onError: (err) => setError(errorMessage(err)),
+            onError: (err: any) => {
+                setError(errorMessage(err));
+
+                if (err?.response?.data?.errors?.username) {
+                    setSignUp({...signUp, username: ''});
+                    usernameOptions.refetch();
+                }
+            },
         });
     };
 
@@ -159,7 +175,7 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
             {mode === 'signup' ? (
                 <form onSubmit={handleSignUp} className={classes.saveForm}>
                     <p className={classes.puzzleText}>
-                        {t`Create a login to save your scores and earn points. We will give you a fun character username so your name stays private.`}
+                        {t`Create a login to save your scores and earn points. You will pick a fun character username so your name stays private.`}
                     </p>
                     <input
                         type="text"
@@ -199,6 +215,14 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                             </button>
                         ))}
                     </div>
+                    <QuizUsernamePicker
+                        options={usernameOptions.data}
+                        isLoading={usernameOptions.isLoading}
+                        isError={usernameOptions.isError}
+                        value={signUp.username}
+                        onChange={(username) => setSignUp({...signUp, username})}
+                        onRetry={() => usernameOptions.refetch()}
+                    />
                     <input
                         type="password"
                         className={classes.saveInput}
