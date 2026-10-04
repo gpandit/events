@@ -21,6 +21,7 @@ class PublishedChildStorySubmissionResource extends BaseResource
             'last_initial' => $this->getLastInitial(),
             'year_group' => $this->getYearGroup(),
             'content' => $this->getContent(),
+            'submitted_at' => $this->getSubmittedAt(),
             'published_at' => $this->getPublishedAt(),
         ];
     }

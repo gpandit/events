@@ -61,14 +61,11 @@ export const ChildrenStoriesSection: React.FC<ChildrenStoriesSectionProps> = ({o
                                 <IconFeather size={13}/>
                                 {submission.type === 'POEM' ? t`Poem` : t`Story`}
                             </span>
-                            <span className={classes.date}>
-                                {new Date(submission.published_at).toLocaleDateString()}
-                            </span>
                         </div>
-                        <p className={classes.content}>{submission.content}</p>
                         <p className={classes.author}>
-                            {submission.first_name} {submission.last_initial}. — {submission.year_group}
+                            {submission.first_name} {submission.last_initial}. · {submission.year_group} · {new Date(submission.submitted_at).toLocaleDateString()}
                         </p>
+                        <p className={classes.content}>{submission.content}</p>
                     </article>
                 ))}
             </div>

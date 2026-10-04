@@ -184,6 +184,8 @@ use HiEvents\Http\Actions\Organizers\GetOrganizersAction;
 use HiEvents\Http\Actions\Organizers\GetPublicOrganizerAction;
 use HiEvents\Http\Actions\Organizers\Orders\GetOrganizerOrdersAction;
 use HiEvents\Http\Actions\Organizers\Public\GetPublishedChildStorySubmissionsPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\ParentalConsent\GetParentalConsentPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\ParentalConsent\RespondToParentalConsentPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\SendOrganizerContactMessagePublicAction;
 use HiEvents\Http\Actions\Organizers\Public\SubmitChildStorySubmissionPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Customer\LoginCustomerPublicAction;
@@ -641,6 +643,10 @@ $router->prefix('/public')->group(
         $router->post('/organizers/{organizerId}/child-story-submissions', SubmitChildStorySubmissionPublicAction::class)
             ->middleware('throttle:5,1');
         $router->get('/organizers/{organizerId}/child-story-submissions', GetPublishedChildStorySubmissionsPublicAction::class);
+        $router->get('/organizers/{organizerId}/parental-consents/{token}', GetParentalConsentPublicAction::class)
+            ->middleware('throttle:30,1');
+        $router->post('/organizers/{organizerId}/parental-consents/{token}', RespondToParentalConsentPublicAction::class)
+            ->middleware('throttle:10,1');
         $router->post('/organizers/{organizerId}/quiz-players/register', RegisterQuizPlayerPublicAction::class)
             ->middleware('throttle:10,1');
         $router->post('/organizers/{organizerId}/quiz-players/login', LoginQuizPlayerPublicAction::class)

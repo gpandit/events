@@ -1,7 +1,7 @@
 import {t, Trans} from "@lingui/macro";
 import {LegalPageLayout} from "../../../common/LegalPageLayout";
 
-const UPDATED_DATE = "October 2, 2026";
+const UPDATED_DATE = "October 4, 2026";
 
 export const TermsOfService = () => {
     return (
@@ -58,7 +58,37 @@ export const TermsOfService = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>6. Intellectual property</Trans></h2>
+            <h2><Trans>6. Children's stories, poems and puzzles</Trans></h2>
+            <p>
+                <Trans>
+                    Children may submit original stories and poems and play our puzzles. By submitting work you
+                    confirm it is entirely your own and that you have the right to share it. Submissions are
+                    reviewed by our team before anything is published, and we may decline or remove any work at
+                    our discretion.
+                </Trans>
+            </p>
+            <p>
+                <Trans>
+                    If the author is under 16, a parent or guardian must give permission before their work is
+                    published, and by giving permission they agree to the publication of the work with the
+                    author's first name, last initial, class or year group and submission date. Permission is
+                    requested by email using the address provided with the submission. By publishing work you
+                    grant us a non-exclusive licence to display it on this website; the author keeps ownership.
+                    A parent or guardian may ask us at <a href="mailto:fos@aqualeo.co">fos@aqualeo.co</a> to remove
+                    published work at any time.
+                </Trans>
+            </p>
+            <p>
+                <Trans>
+                    A puzzles account is for the child it is created for. Children aged 13 or under appear on the
+                    leaderboard only with a parent or guardian's permission. You must provide accurate details,
+                    keep your password private and not attempt to cheat, tamper with scores or misuse usernames. We
+                    may remove accounts or scores that break these rules. See our{" "}
+                    <a href="/privacy-policy">Privacy Policy</a> for how children's information is handled.
+                </Trans>
+            </p>
+
+            <h2><Trans>7. Intellectual property</Trans></h2>
             <p>
                 <Trans>
                     The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC
@@ -67,7 +97,7 @@ export const TermsOfService = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>7. Limitation of liability</Trans></h2>
+            <h2><Trans>8. Limitation of liability</Trans></h2>
             <p>
                 <Trans>
                     This site is provided on an "as is" basis. To the fullest extent permitted by law, Aqualeo
@@ -76,7 +106,7 @@ export const TermsOfService = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>8. Changes to these Terms</Trans></h2>
+            <h2><Trans>9. Changes to these Terms</Trans></h2>
             <p>
                 <Trans>
                     We may update these Terms from time to time. Continued use of the site after changes are
@@ -84,7 +114,7 @@ export const TermsOfService = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>9. Contact us</Trans></h2>
+            <h2><Trans>10. Contact us</Trans></h2>
             <p>
                 <Trans>
                     Questions about these Terms can be sent to <a href="mailto:fos@aqualeo.co">fos@aqualeo.co</a>.

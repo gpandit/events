@@ -25,6 +25,9 @@ export const SubmitStoryForm: React.FC<SubmitStoryFormProps> = ({organizer}) => 
     const [originalFilename, setOriginalFilename] = useState<string | undefined>(undefined);
     const [consentOwnWork, setConsentOwnWork] = useState(false);
     const [consentPublish, setConsentPublish] = useState(false);
+    const [isUnder16, setIsUnder16] = useState<boolean | null>(null);
+    const [parentEmail, setParentEmail] = useState('');
+    const [parentContacted, setParentContacted] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
     const [turnstileKey, setTurnstileKey] = useState(0);
@@ -67,6 +70,8 @@ export const SubmitStoryForm: React.FC<SubmitStoryFormProps> = ({organizer}) => 
         setOriginalFilename(undefined);
         setConsentOwnWork(false);
         setConsentPublish(false);
+        setIsUnder16(null);
+        setParentEmail('');
     };
 
     const handleSubmit = (event: React.FormEvent) => {
@@ -77,8 +82,20 @@ export const SubmitStoryForm: React.FC<SubmitStoryFormProps> = ({organizer}) => 
             return;
         }
 
-        if (!consentOwnWork || !consentPublish) {
-            setError(t`Please confirm both boxes below before submitting.`);
+        if (!consentOwnWork) {
+            setError(t`Please confirm this is your own original work before submitting.`);
+            return;
+        }
+
+        if (consentPublish && isUnder16 === null) {
+            setError(t`Please tell us whether you are under 16.`);
+            return;
+        }
+
+        const needsParent = consentPublish && isUnder16 === true;
+
+        if (needsParent && !/^\S+@\S+\.\S+$/.test(parentEmail.trim())) {
+            setError(t`Please enter your parent or guardian's email address.`);
             return;
         }
 
@@ -97,9 +114,12 @@ export const SubmitStoryForm: React.FC<SubmitStoryFormProps> = ({organizer}) => 
             original_filename: originalFilename,
             consent_own_work: consentOwnWork,
             consent_publish: consentPublish,
+            is_under_16: isUnder16 === true,
+            parent_email: needsParent ? parentEmail.trim() : undefined,
             turnstile_token: turnstileToken ?? undefined,
         }, {
             onSuccess: () => {
+                setParentContacted(needsParent);
                 setSubmitted(true);
                 resetForm();
                 setTurnstileToken(null);
@@ -120,10 +140,9 @@ export const SubmitStoryForm: React.FC<SubmitStoryFormProps> = ({organizer}) => 
                     <IconCheck size={32}/>
                     <h3>{t`Thank you for sharing your writing!`}</h3>
                     <p>
-                        <Trans>
-                            Our team will read it over, and if it's approved, it'll be published on our Children's
-                            Prose & Poetry page with your first name, last initial and year group.
-                        </Trans>
+                        {parentContacted
+                            ? t`We have emailed your parent or guardian to ask for permission. Your work can only be published once they agree and our team approves it. It will then appear on our Children's Prose & Poetry page with your first name, last initial, year group and the date you submitted it.`
+                            : t`Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial, year group and the date you submitted it.`}
                     </p>
                     <button
                         type="button"
@@ -143,7 +162,8 @@ export const SubmitStoryForm: React.FC<SubmitStoryFormProps> = ({organizer}) => 
                 <Trans>
                     Share your own short story or poem with the Friends of Repton community! Each month we'll
                     award a prize for the best story and the best poem. If you'd like your work published, your
-                    first name, last initial and year group will be shown alongside it.
+                    first name, last initial, year group and the date you submitted it will be shown below its
+                    headline. If you are under 16, a parent or guardian must give permission first.
                 </Trans>
             </p>
 
@@ -240,11 +260,59 @@ export const SubmitStoryForm: React.FC<SubmitStoryFormProps> = ({organizer}) => 
                         type="checkbox"
                         checked={consentPublish}
                         onChange={(e) => setConsentPublish(e.target.checked)}
+                        data-testid="story-consent-publish"
                     />
                     <span>
                         {t`I'd like my story/poem to be considered for publication on this website.`}
                     </span>
                 </label>
+
+                {consentPublish && (
+                    <>
+                        <fieldset className={classes.field}>
+                            <legend>{t`Are you under 16?`}</legend>
+                            <label className={classes.consentRow}>
+                                <input
+                                    type="radio"
+                                    name="story-under-16"
+                                    checked={isUnder16 === true}
+                                    onChange={() => setIsUnder16(true)}
+                                    data-testid="story-under-16-yes"
+                                />
+                                <span>{t`Yes`}</span>
+                            </label>
+                            <label className={classes.consentRow}>
+                                <input
+                                    type="radio"
+                                    name="story-under-16"
+                                    checked={isUnder16 === false}
+                                    onChange={() => setIsUnder16(false)}
+                                    data-testid="story-under-16-no"
+                                />
+                                <span>{t`No`}</span>
+                            </label>
+                        </fieldset>
+
+                        {isUnder16 === true && (
+                            <div className={classes.field}>
+                                <label htmlFor="story-parent-email">{t`Parent or guardian's email`}</label>
+                                <input
+                                    id="story-parent-email"
+                                    type="email"
+                                    value={parentEmail}
+                                    onChange={(e) => setParentEmail(e.target.value)}
+                                    className={classes.input}
+                                    autoComplete="off"
+                                    required
+                                    data-testid="story-parent-email"
+                                />
+                                <p className={classes.hint}>
+                                    {t`We will email them to ask for permission and explain how your name and year group will be shown. Your work is only published if they agree and our team approves it.`}
+                                </p>
+                            </div>
+                        )}
+                    </>
+                )}
 
                 <TurnstileWidget key={turnstileKey} onToken={setTurnstileToken}/>
 

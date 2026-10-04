@@ -36,6 +36,13 @@ class SubmitChildStorySubmissionPublicAction extends BaseAction
             'original_filename' => 'nullable|string|max:255',
             'consent_own_work' => 'required|accepted',
             'consent_publish' => 'required|boolean',
+            'is_under_16' => 'required|boolean',
+            'parent_email' => [
+                Rule::requiredIf(fn () => $request->boolean('consent_publish') && $request->boolean('is_under_16')),
+                'nullable',
+                'email',
+                'max:255',
+            ],
             'turnstile_token' => 'nullable|string|max:2048',
         ]);
 
@@ -55,6 +62,9 @@ class SubmitChildStorySubmissionPublicAction extends BaseAction
             'original_filename' => $data['original_filename'] ?? null,
             'consent_own_work' => (bool) $data['consent_own_work'],
             'consent_publish' => (bool) $data['consent_publish'],
+            'parent_email' => $request->boolean('consent_publish') && $request->boolean('is_under_16')
+                ? $data['parent_email']
+                : null,
         ]));
 
         return $this->resourceResponse(

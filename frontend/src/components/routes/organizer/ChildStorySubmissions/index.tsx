@@ -7,7 +7,7 @@ import {PageBody} from '../../../common/PageBody';
 import {PageTitle} from '../../../common/PageTitle';
 import {Card} from '../../../common/Card';
 import {TableSkeleton} from '../../../common/TableSkeleton';
-import {IdParam, ChildStorySubmissionStatus} from '../../../../types.ts';
+import {IdParam, ChildStorySubmission, ChildStorySubmissionStatus} from '../../../../types.ts';
 import {useGetChildStorySubmissions} from '../../../../queries/useGetChildStorySubmissions.ts';
 import {useReviewChildStorySubmission} from '../../../../mutations/useReviewChildStorySubmission.ts';
 import {showError, showSuccess} from '../../../../utilites/notifications.tsx';
@@ -17,6 +17,23 @@ const STATUS_FILTERS: { value: ChildStorySubmissionStatus; label: string }[] = [
     {value: 'APPROVED', label: t`Approved`},
     {value: 'REJECTED', label: t`Rejected`},
 ];
+
+const parentPermissionBadge = (submission: ChildStorySubmission) => {
+    switch (submission.parent_consent_status) {
+        case 'GRANTED':
+            return <Badge color="green" variant="light">{t`Parent agreed`}</Badge>;
+        case 'DECLINED':
+            return <Badge color="red" variant="light">{t`Parent declined`}</Badge>;
+        case 'PENDING':
+            return <Badge color="yellow" variant="light">{t`Awaiting parent`}</Badge>;
+        default:
+            return <Badge color="gray" variant="light">{t`Not required`}</Badge>;
+    }
+};
+
+const canPublish = (submission: ChildStorySubmission) =>
+    submission.consent_publish
+    && (!submission.parent_consent_status || submission.parent_consent_status === 'GRANTED');
 
 export default function ChildStorySubmissions() {
     const {organizerId} = useParams();
@@ -62,6 +79,7 @@ export default function ChildStorySubmissions() {
                                     <Table.Th>{t`Name`}</Table.Th>
                                     <Table.Th>{t`Year group`}</Table.Th>
                                     <Table.Th>{t`Submitted`}</Table.Th>
+                                    <Table.Th>{t`Parent permission`}</Table.Th>
                                     <Table.Th>{t`Content`}</Table.Th>
                                     {status === 'PENDING' && <Table.Th>{t`Actions`}</Table.Th>}
                                 </Table.Tr>
@@ -78,6 +96,12 @@ export default function ChildStorySubmissions() {
                                         <Table.Td>{submission.year_group}</Table.Td>
                                         <Table.Td>{new Date(submission.submitted_at).toLocaleDateString()}</Table.Td>
                                         <Table.Td>
+                                            {parentPermissionBadge(submission)}
+                                            {submission.parent_email && (
+                                                <Text size="xs" c="dimmed">{submission.parent_email}</Text>
+                                            )}
+                                        </Table.Td>
+                                        <Table.Td>
                                             <Text size="sm" lineClamp={2} maw={320}>{submission.content}</Text>
                                         </Table.Td>
                                         {status === 'PENDING' && (
@@ -88,6 +112,7 @@ export default function ChildStorySubmissions() {
                                                         color="green"
                                                         leftSection={<IconCheck size={14}/>}
                                                         loading={reviewMutation.isPending}
+                                                        disabled={!canPublish(submission)}
                                                         onClick={() => handleReview(submission.id, 'APPROVED')}
                                                     >
                                                         {t`Approve`}

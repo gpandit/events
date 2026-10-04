@@ -96,7 +96,7 @@ msgstr "{0} of {1} seats are taken."
 msgid "{0} organizers"
 msgstr "{0} organizers"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:54
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:66
 msgid "{0} tests · best {1}%"
 msgstr "{0} tests · best {1}%"
 
@@ -147,6 +147,14 @@ msgstr "{cappedTotal} + unlimited"
 #: src/components/common/CheckIn/CheckInInfoModal.tsx:55
 msgid "{checkedIn} / {total} checked in"
 msgstr "{checkedIn} / {total} checked in"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:88
+msgid "{childName} has created a puzzles account with {organizerName} (age group {ageBand})."
+msgstr "{childName} has created a puzzles account with {organizerName} (age group {ageBand})."
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:74
+msgid "{childName} has submitted a {workLabel} to {organizerName} and would like it published on our public website."
+msgstr "{childName} has submitted a {workLabel} to {organizerName} and would like it published on our public website."
 
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:378
 msgid "{chipTime}, Sold Out"
@@ -288,9 +296,17 @@ msgstr "<0>https://</0>your-website.com"
 msgid "<0>Please enter the price excluding taxes and fees.</0><1>Taxes and fees can be added below.</1>"
 msgstr "<0>Please enter the price excluding taxes and fees.</0><1>Taxes and fees can be added below.</1>"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:134
+msgid "<0>Puzzles.</0> To save scores a child creates a puzzles account, for which we collect:"
+msgstr "<0>Puzzles.</0> To save scores a child creates a puzzles account, for which we collect:"
+
 #: src/components/common/CapacityAssignmentList/index.tsx:47
 msgid "<0>Set a single total attendance limit that applies to multiple ticket types at once.</0><1>For example, if you link a <2>Day Pass</2> and a <3>Full Weekend</3> ticket, they will both draw from the same pool of spots. Once the limit is reached, all linked tickets automatically stop selling.</1>"
 msgstr "<0>Set a single total attendance limit that applies to multiple ticket types at once.</0><1>For example, if you link a <2>Day Pass</2> and a <3>Full Weekend</3> ticket, they will both draw from the same pool of spots. Once the limit is reached, all linked tickets automatically stop selling.</1>"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:117
+msgid "<0>Stories and poems.</0> When a child submits a story or poem we collect:"
+msgstr "<0>Stories and poems.</0> When a child submits a story or poem we collect:"
 
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:42
 msgid "<0>The number of products available for this product</0><1>This value can be overridden if there are <2>Capacity Limits</2> associated with this product.</1>"
@@ -374,8 +390,17 @@ msgid "1. Who we are"
 msgstr "1. Who we are"
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:113
-msgid "10. Changes to this policy"
-msgstr "10. Changes to this policy"
+#~ msgid "10. Changes to this policy"
+#~ msgstr "10. Changes to this policy"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:161
+#: src/components/routes/legal/TermsOfService/index.tsx:117
+msgid "10. Contact us"
+msgstr "10. Contact us"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:169
+msgid "11. Changes to this policy"
+msgstr "11. Changes to this policy"
 
 #: src/components/common/CapacityHelp/index.tsx:28
 msgid "12 mats in the studio and one Drop-in ticket."
@@ -414,7 +439,7 @@ msgstr "25 places per date, plus 30 T-shirts across the whole run."
 msgid "3. Google Analytics"
 msgstr "3. Google Analytics"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:51
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
 msgid "3. How we use your information"
 msgstr "3. How we use your information"
 
@@ -434,7 +459,7 @@ msgstr "3. Payments"
 msgid "4. Managing your preferences"
 msgstr "4. Managing your preferences"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:63
 msgid "4. Payment processing"
 msgstr "4. Payment processing"
 
@@ -450,7 +475,7 @@ msgstr "5. Acceptable use"
 msgid "5. Browser controls"
 msgstr "5. Browser controls"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:71
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:75
 msgid "5. Cookies"
 msgstr "5. Cookies"
 
@@ -472,14 +497,18 @@ msgstr "503 Service Unavailable."
 #~ msgstr "6. Changes to this policy"
 
 #: src/components/routes/legal/TermsOfService/index.tsx:61
-msgid "6. Intellectual property"
-msgstr "6. Intellectual property"
+msgid "6. Children's stories, poems and puzzles"
+msgstr "6. Children's stories, poems and puzzles"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:61
+#~ msgid "6. Intellectual property"
+#~ msgstr "6. Intellectual property"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:84
 msgid "6. More information"
 msgstr "6. More information"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:80
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:84
 msgid "6. Sharing your information"
 msgstr "6. Sharing your information"
 
@@ -487,26 +516,42 @@ msgstr "6. Sharing your information"
 msgid "7. Changes to this policy"
 msgstr "7. Changes to this policy"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:93
 msgid "7. Data retention"
 msgstr "7. Data retention"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:91
+msgid "7. Intellectual property"
+msgstr "7. Intellectual property"
+
 #: src/components/routes/legal/TermsOfService/index.tsx:70
-msgid "7. Limitation of liability"
-msgstr "7. Limitation of liability"
+#~ msgid "7. Limitation of liability"
+#~ msgstr "7. Limitation of liability"
 
 #: src/components/routes/legal/TermsOfService/index.tsx:79
-msgid "8. Changes to these Terms"
-msgstr "8. Changes to these Terms"
+#~ msgid "8. Changes to these Terms"
+#~ msgstr "8. Changes to these Terms"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:97
+#: src/components/routes/legal/TermsOfService/index.tsx:100
+msgid "8. Limitation of liability"
+msgstr "8. Limitation of liability"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:101
 msgid "8. Your rights"
 msgstr "8. Your rights"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:109
+msgid "9. Changes to these Terms"
+msgstr "9. Changes to these Terms"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:109
+msgid "9. Children's privacy"
+msgstr "9. Children's privacy"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:105
 #: src/components/routes/legal/TermsOfService/index.tsx:87
-msgid "9. Contact us"
-msgstr "9. Contact us"
+#~ msgid "9. Contact us"
+#~ msgstr "9. Contact us"
 
 #: src/components/routes/admin/Announcements/index.tsx:319
 msgid "A button label is required when a URL is set"
@@ -571,6 +616,10 @@ msgstr "A percentage of the product price. E.g., 3.5% of the product price"
 #: src/components/forms/PromoCodeForm/index.tsx:147
 msgid "A promo code with no discount can be used to reveal hidden products."
 msgstr "A promo code with no discount can be used to reveal hidden products."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:82
+msgid "A puzzles account is for the child it is created for. Children aged 13 or under appear on the leaderboard only with a parent or guardian's permission. You must provide accurate details, keep your password private and not attempt to cheat, tamper with scores or misuse usernames. We may remove accounts or scores that break these rules. See our <0>Privacy Policy</0> for how children's information is handled."
+msgstr "A puzzles account is for the child it is created for. Children aged 13 or under appear on the leaderboard only with a parent or guardian's permission. You must provide accurate details, keep your password private and not attempt to cheat, tamper with scores or misuse usernames. We may remove accounts or scores that break these rules. See our <0>Privacy Policy</0> for how children's information is handled."
 
 #: src/components/forms/QuestionForm/index.tsx:120
 msgid "A Radio option has multiple options but only one can be selected."
@@ -757,7 +806,7 @@ msgstr "Action Required: VAT Information Needed"
 #: src/components/common/WaitlistTable/index.tsx:56
 #: src/components/common/WaitlistTable/index.tsx:234
 #: src/components/routes/admin/FailedJobs/index.tsx:167
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:66
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:84
 msgid "Actions"
 msgstr "Actions"
 
@@ -1096,7 +1145,7 @@ msgstr "Affiliates help you track sales generated by partners and influencers. C
 msgid "After your event is created, you can choose how often it repeats from the dashboard."
 msgstr "After your event is created, you can choose how often it repeats from the dashboard."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:66
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:78
 msgid "Age group"
 msgstr "Age group"
 
@@ -1473,7 +1522,7 @@ msgstr "Apply to"
 msgid "Apply to all tickets"
 msgstr "Apply to all tickets"
 
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:93
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:118
 msgid "Approve"
 msgstr "Approve"
 
@@ -1698,6 +1747,10 @@ msgstr "Are you sure you would like to delete this Capacity Assignment?"
 #: src/components/common/CheckInListTable/index.tsx:230
 msgid "Are you sure you would like to delete this Check-In List?"
 msgstr "Are you sure you would like to delete this Check-In List?"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:273
+msgid "Are you under 16?"
+msgstr "Are you under 16?"
 
 #: src/components/routes/organizer/Payments/Vat/VatSettingsForm.tsx:194
 msgid "Are you VAT registered in the EU?"
@@ -1951,6 +2004,10 @@ msgstr "Awaiting offline payment"
 msgid "Awaiting Offline Payment"
 msgstr "Awaiting Offline Payment"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:28
+msgid "Awaiting parent"
+msgstr "Awaiting parent"
+
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:120
 msgid "Awaiting pay"
 msgstr "Awaiting pay"
@@ -1981,7 +2038,7 @@ msgstr "Awesome Organizer Ltd."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:211
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:85
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:86
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:98
 msgid "Back"
 msgstr "Back"
 
@@ -2029,7 +2086,7 @@ msgstr "Back to search"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:200
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:348
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:229
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:291
 msgid "Back to sign in"
 msgstr "Back to sign in"
 
@@ -2640,6 +2697,10 @@ msgstr "Checkout · step {stepNumber} of {stepCount}"
 msgid "Checkout Settings"
 msgstr "Checkout Settings"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:63
+msgid "Children may submit original stories and poems and play our puzzles. By submitting work you confirm it is entirely your own and that you have the right to share it. Submissions are reviewed by our team before anything is published, and we may decline or remove any work at our discretion."
+msgstr "Children may submit original stories and poems and play our puzzles. By submitting work you confirm it is entirely your own and that you have the right to share it. Submissions are reviewed by our team before anything is published, and we may decline or remove any work at our discretion."
+
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:127
 msgid "Children's Stories"
 msgstr "Children's Stories"
@@ -2669,7 +2730,7 @@ msgstr "Choose a different age group"
 msgid "Choose a new password"
 msgstr "Choose a new password"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:178
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:240
 msgid "Choose a password (at least 6 characters)"
 msgstr "Choose a password (at least 6 characters)"
 
@@ -2715,6 +2776,8 @@ msgstr "Choose who pays the platform fee. This does not affect additional fees y
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:301
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:302
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:204
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:205
 msgid "Choose your age group"
 msgstr "Choose your age group"
 
@@ -2734,9 +2797,13 @@ msgstr "Circle"
 msgid "City"
 msgstr "City"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:194
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:214
 msgid "Class / Year group"
 msgstr "Class / Year group"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:79
+msgid "Class / year group: {yearGroup}"
+msgstr "Class / year group: {yearGroup}"
 
 #: src/components/forms/StripeCheckoutForm/index.tsx:176
 msgid "Class rules: we accept Visa and Mastercard, plus Apple Pay and Google Pay. American Express didn't make the guest list, so please leave it in your wallet."
@@ -3168,7 +3235,7 @@ msgstr "Contact us: <0>{CONTACT_EMAIL}</0>"
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
 #: src/components/routes/admin/Attribution/index.tsx:168
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:65
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:83
 msgid "Content"
 msgstr "Content"
 
@@ -3179,7 +3246,7 @@ msgstr "Content is required"
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
 #: src/components/layouts/EventHomepage/index.tsx:205
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:107
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:144
 #: src/components/routes/product-widget/SelectProducts/index.tsx:895
 msgid "Continue"
 msgstr "Continue"
@@ -3421,7 +3488,7 @@ msgstr "Create a custom widget to sell tickets on your site."
 msgid "Create a list for this date"
 msgstr "Create a list for this date"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:143
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:180
 msgid "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
 msgstr "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
 
@@ -3546,7 +3613,7 @@ msgstr "Create Event"
 msgid "Create more tickets or products to offer them as add-ons"
 msgstr "Create more tickets or products to offer them as add-ons"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:192
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:254
 msgid "Create my login"
 msgstr "Create my login"
 
@@ -3851,7 +3918,7 @@ msgstr "Dashboard"
 #: src/components/common/OrderDetails/index.tsx:42
 #: src/components/common/WaitlistTable/index.tsx:184
 #: src/components/forms/QuestionForm/index.tsx:136
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:65
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:77
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:39
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:56
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:24
@@ -3899,6 +3966,10 @@ msgstr "Date reactivated"
 #: src/components/routes/event/OccurrencesTab/index.tsx:214
 msgid "Date reopened for new sales"
 msgstr "Date reopened for new sales"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:80
+msgid "Date submitted: {submittedOn}"
+msgstr "Date submitted: {submittedOn}"
 
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:138
 msgid "Date TBA"
@@ -4396,7 +4467,7 @@ msgstr "e.g. New feature: Waitlists"
 msgid "e.g. Scheduled maintenance this Saturday from 2-4am UTC"
 msgstr "e.g. Scheduled maintenance this Saturday from 2-4am UTC"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:198
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:218
 msgid "e.g. Year 5 or Form 2"
 msgstr "e.g. Year 5 or Form 2"
 
@@ -4411,6 +4482,10 @@ msgstr "e.g., Important update about your tickets"
 #: src/components/routes/admin/Configurations/index.tsx:237
 msgid "e.g., Standard, Premium, Enterprise"
 msgstr "e.g., Standard, Premium, Enterprise"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:141
+msgid "Each child is given an automatically generated character username. Only this username, their points, tests taken and best score appear on the public leaderboard; their real name and email are never shown. For children aged 13 or under we email the parent or guardian to ask permission for the child to appear on the leaderboard. Until permission is given the child can still play and save scores but is not shown on the leaderboard. A child's email address is used only to save their account and to send a password reset link, and a parent or guardian's email address is used only to request and record their permission."
+msgstr "Each child is given an automatically generated character username. Only this username, their points, tests taken and best score appear on the public leaderboard; their real name and email are never shown. For children aged 13 or under we email the parent or guardian to ask permission for the child to appear on the leaderboard. Until permission is given the child can still play and save scores but is not shown on the leaderboard. A child's email address is used only to save their account and to send a password reset link, and a parent or guardian's email address is used only to request and record their permission."
 
 #: src/components/layouts/OrganizerHomepage/ExampleStoryCard/ExamplePoemCard.tsx:23
 msgid "each one holding a piece of the clouds,"
@@ -4614,7 +4689,8 @@ msgstr "Eligible Check-In Lists"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:297
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:332
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:333
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:167
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:194
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:195
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:76
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:77
 #: src/components/modals/EditUserModal/index.tsx:81
@@ -4637,8 +4713,8 @@ msgid "Email"
 msgstr "Email"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:166
-msgid "Email (optional)"
-msgstr "Email (optional)"
+#~ msgid "Email (optional)"
+#~ msgstr "Email (optional)"
 
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:55
 msgid "Email & Notification Settings"
@@ -4695,8 +4771,8 @@ msgid "Email footer message"
 msgstr "Email footer message"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:173
-msgid "Email is optional. If you add one, it is only used to send you a link to reset your password."
-msgstr "Email is optional. If you add one, it is only used to send you a link to reset your password."
+#~ msgid "Email is optional. If you add one, it is only used to send you a link to reset your password."
+#~ msgstr "Email is optional. If you add one, it is only used to send you a link to reset your password."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:34
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:32
@@ -4709,7 +4785,7 @@ msgid "Email me a link"
 msgstr "Email me a link"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:345
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:224
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:286
 msgid "Email me a reset link"
 msgstr "Email me a reset link"
 
@@ -4934,7 +5010,7 @@ msgstr "Enter your email and we'll send you instructions to reset your password.
 msgid "Enter your name"
 msgstr "Enter your name"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:205
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:267
 msgid "Enter your username and we will email a reset link to the address saved on your account. If you did not add an email when you signed up, ask a parent or guardian to contact us."
 msgstr "Enter your username and we will email a reset link to the address saved on your account. If you did not add an email when you signed up, ask a parent or guardian to contact us."
 
@@ -5786,11 +5862,11 @@ msgstr "First attendee"
 msgid "First Invoice Number"
 msgstr "First Invoice Number"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:170
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:190
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:278
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:279
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:148
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:149
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:185
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:186
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:58
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:59
 #: src/components/modals/CreateAttendeeModal/index.tsx:209
@@ -5814,6 +5890,10 @@ msgstr "First name"
 #: src/components/routes/profile/ManageProfile/index.tsx:153
 msgid "First Name"
 msgstr "First Name"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:78
+msgid "First name and last initial: {childName} {lastInitial}."
+msgstr "First name and last initial: {childName} {lastInitial}."
 
 #: src/components/modals/JoinWaitlistModal/index.tsx:56
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:29
@@ -5916,7 +5996,7 @@ msgid "Forgot password?"
 msgstr "Forgot password?"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:265
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:270
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:332
 msgid "Forgot your password?"
 msgstr "Forgot your password?"
 
@@ -6483,7 +6563,7 @@ msgstr "I agree to the <0>terms and conditions</0>"
 msgid "I confirm this is a transactional message related to this event"
 msgstr "I confirm this is a transactional message related to this event"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:234
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:254
 msgid "I confirm this is entirely my own original work."
 msgstr "I confirm this is entirely my own original work."
 
@@ -6491,11 +6571,19 @@ msgstr "I confirm this is entirely my own original work."
 msgid "I Create"
 msgstr "I Create"
 
+#: src/components/layouts/PublicParentalConsent/index.tsx:118
+msgid "I do not give permission"
+msgstr "I do not give permission"
+
 #: src/components/layouts/OrganizerHomepage/ExampleStoryCard/index.tsx:30
 msgid "I found my best friend Noor near the big neem tree. She had made a lantern shaped like a cat, with two triangle ears cut from gold paper. \"Yours looks like the ocean,\" she said. \"Mine looks like Mishka,\" I said, and we both laughed, because Mishka was the stray cat who slept under the library steps and refused to be anyone's pet."
 msgstr "I found my best friend Noor near the big neem tree. She had made a lantern shaped like a cat, with two triangle ears cut from gold paper. \"Yours looks like the ocean,\" she said. \"Mine looks like Mishka,\" I said, and we both laughed, because Mishka was the stray cat who slept under the library steps and refused to be anyone's pet."
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:245
+#: src/components/layouts/PublicParentalConsent/index.tsx:109
+msgid "I give permission"
+msgstr "I give permission"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:266
 msgid "I'd like my story/poem to be considered for publication on this website."
 msgstr "I'd like my story/poem to be considered for publication on this website."
 
@@ -6531,9 +6619,29 @@ msgstr "If enabled, check-in staff can either mark attendees as checked in or ma
 msgid "If enabled, the organizer will receive an email notification when a new order is placed"
 msgstr "If enabled, the organizer will receive an email notification when a new order is placed"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:200
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:262
 msgid "If that username has an email address saved, we have sent a link to reset the password. The link works for 60 minutes."
 msgstr "If that username has an email address saved, we have sent a link to reset the password. The link works for 60 minutes."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:71
+msgid "If the author is under 16, a parent or guardian must give permission before their work is published, and by giving permission they agree to the publication of the work with the author's first name, last initial, class or year group and submission date. Permission is requested by email using the address provided with the submission. By publishing work you grant us a non-exclusive licence to display it on this website; the author keeps ownership. A parent or guardian may ask us at <0>fos@aqualeo.co</0> to remove published work at any time."
+msgstr "If the author is under 16, a parent or guardian must give permission before their work is published, and by giving permission they agree to the publication of the work with the author's first name, last initial, class or year group and submission date. Permission is requested by email using the address provided with the submission. By publishing work you grant us a non-exclusive licence to display it on this website; the author keeps ownership. A parent or guardian may ask us at <0>fos@aqualeo.co</0> to remove published work at any time."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:137
+msgid "if they are 13 or under, a parent or guardian's email address;"
+msgstr "if they are 13 or under, a parent or guardian's email address;"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:121
+msgid "if they would like it published and are under 16, a parent or guardian's email address."
+msgstr "if they would like it published and are under 16, a parent or guardian's email address."
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:76
+msgid "If you agree and our team approves it, the following will be shown below its headline:"
+msgstr "If you agree and our team approves it, the following will be shown below its headline:"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:90
+msgid "If you agree, the public leaderboard will show only:"
+msgstr "If you agree, the public leaderboard will show only:"
 
 #: src/components/routes/profile/ManageProfile/index.tsx:133
 msgid "If you did not request this change, please immediately change your password."
@@ -6543,7 +6651,7 @@ msgstr "If you did not request this change, please immediately change your passw
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "If you have an account with us, you will receive an email with instructions on how to reset your password."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:107
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:163
 msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
 msgstr "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
 
@@ -6674,6 +6782,10 @@ msgstr "Increase quantity"
 #: src/components/common/MessageList/index.tsx:28
 msgid "Individual attendees"
 msgstr "Individual attendees"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:42
+msgid "Information about children who submit stories or poems or use our puzzles, as described in Section 9."
+msgstr "Information about children who submit stories or poems or use our puzzles, as described in Section 9."
 
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:104
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:125
@@ -6986,11 +7098,9 @@ msgstr "Last 90 days"
 msgid "Last login"
 msgstr "Last login"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:181
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:201
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:287
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:288
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:157
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:158
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:66
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:67
 #: src/components/modals/CreateAttendeeModal/index.tsx:216
@@ -7143,7 +7253,7 @@ msgstr "Live Events"
 msgid "Live preview"
 msgstr "Live preview"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:83
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:80
 msgid "Load more"
 msgstr "Load more"
 
@@ -7174,6 +7284,7 @@ msgstr "Loading Webhooks"
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:48
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:52
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:40
+#: src/components/layouts/PublicParentalConsent/index.tsx:141
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
@@ -7679,7 +7790,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:235
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:62
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:79
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
 msgid "Name"
 msgstr "Name"
@@ -7703,7 +7814,7 @@ msgstr "Navigate to Attendee"
 msgid "Near the end of the evening, Mrs. Hassan called all the children to the small pond at the edge of the field. One by one, we were allowed to set our lanterns gently onto little paper boats and let them drift across the water. I was nervous mine would tip over, but Noor held my elbow steady while I leaned down."
 msgstr "Near the end of the evening, Mrs. Hassan called all the children to the small pond at the edge of the field. One by one, we were allowed to set our lanterns gently onto little paper boats and let them drift across the water. I was nervous mine would tip over, but Noor held my elbow steady while I leaned down."
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:88
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:85
 msgid "Need some inspiration?"
 msgstr "Need some inspiration?"
 
@@ -7798,6 +7909,7 @@ msgstr "Next: review your order"
 msgid "Nightlife"
 msgstr "Nightlife"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:292
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:224
 msgid "No"
 msgstr "No"
@@ -8143,7 +8255,7 @@ msgstr "No search results."
 msgid "No stories have been published yet — check back soon!"
 msgstr "No stories have been published yet — check back soon!"
 
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:54
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:71
 msgid "No submissions here yet."
 msgstr "No submissions here yet."
 
@@ -8239,6 +8351,10 @@ msgstr "Not counted"
 #: src/components/common/CheckInStatusModal/index.tsx:124
 msgid "Not Eligible"
 msgstr "Not Eligible"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:30
+msgid "Not required"
+msgstr "Not required"
 
 #: src/components/common/ProductPriceAvailability/index.tsx:43
 msgid "Not yet on sale"
@@ -8961,8 +9077,12 @@ msgid "Our servers are currently stuck in the morning drop-off car line. We'll b
 msgstr "Our servers are currently stuck in the morning drop-off car line. We'll be moving forward again shortly!"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:123
-msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial and year group."
-msgstr "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial and year group."
+#~ msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial and year group."
+#~ msgstr "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial and year group."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:145
+msgid "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial, year group and the date you submitted it."
+msgstr "Our team will read it over, and if it's approved, it'll be published on our Children's Prose & Poetry page with your first name, last initial, year group and the date you submitted it."
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:121
 msgid "Outcome"
@@ -9029,6 +9149,28 @@ msgstr "Paid"
 msgid "Paid Accounts"
 msgstr "Paid Accounts"
 
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:24
+msgid "Parent agreed"
+msgstr "Parent agreed"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:152
+msgid "Parent and guardian links expire after 14 days. A parent or guardian can ask us at <0>fos@aqualeo.co</0> to see, correct or delete their child's information, to remove a published story or poem, or to remove their child from the leaderboard, and we will act on the request promptly. We do not use children's information for advertising."
+msgstr "Parent and guardian links expire after 14 days. A parent or guardian can ask us at <0>fos@aqualeo.co</0> to see, correct or delete their child's information, to remove a published story or poem, or to remove their child from the leaderboard, and we will act on the request promptly. We do not use children's information for advertising."
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:26
+msgid "Parent declined"
+msgstr "Parent declined"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:298
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:225
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:226
+msgid "Parent or guardian's email"
+msgstr "Parent or guardian's email"
+
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:82
+msgid "Parent permission"
+msgstr "Parent permission"
+
 #: src/components/modals/RefundOrderModal/index.tsx:117
 msgid "Partial refund"
 msgstr "Partial refund"
@@ -9053,9 +9195,9 @@ msgstr "Pass to Buyer"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:244
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:245
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:179
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:248
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:249
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:241
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:310
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:311
 #: src/components/routes/auth/AcceptInvitation/index.tsx:127
 #: src/components/routes/auth/Login/index.tsx:98
 #: src/components/routes/auth/Register/index.tsx:110
@@ -9423,6 +9565,14 @@ msgstr "Playing as {0}"
 msgid "Please add at least one option"
 msgstr "Please add at least one option"
 
+#: src/components/layouts/PublicParentalConsent/index.tsx:62
+msgid "Please ask {childName} to submit again so we can send you a new request."
+msgstr "Please ask {childName} to submit again so we can send you a new request."
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:145
+msgid "Please check the link in the email we sent you."
+msgstr "Please check the link in the email we sent you."
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:710
 #: src/hooks/useFormErrorResponseHandler.tsx:18
 msgid "Please check the provided information is correct"
@@ -9445,13 +9595,21 @@ msgstr "Please check your email to confirm your email address"
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:86
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:69
+msgid "Please choose your age group"
+msgstr "Please choose your age group"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:103
 msgid "Please complete the security check before submitting."
 msgstr "Please complete the security check before submitting."
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:81
-msgid "Please confirm both boxes below before submitting."
-msgstr "Please confirm both boxes below before submitting."
+#~ msgid "Please confirm both boxes below before submitting."
+#~ msgstr "Please confirm both boxes below before submitting."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:86
+msgid "Please confirm this is your own original work before submitting."
+msgstr "Please confirm this is your own original work before submitting."
 
 #: src/components/routes/product-widget/SelectProducts/index.tsx:1028
 msgid "Please continue in the new tab"
@@ -9486,15 +9644,27 @@ msgstr "Please enter the 5-digit code"
 msgid "Please enter your email"
 msgstr "Please enter your email"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:64
+msgid "Please enter your email address"
+msgstr "Please enter your email address"
+
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:94
 msgid "Please enter your email and password"
 msgstr "Please enter your email and password"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:81
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:74
+msgid "Please enter your parent or guardian's email address"
+msgstr "Please enter your parent or guardian's email address"
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:98
+msgid "Please enter your parent or guardian's email address."
+msgstr "Please enter your parent or guardian's email address."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:113
 msgid "Please enter your username"
 msgstr "Please enter your username"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:66
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:98
 msgid "Please enter your username and password"
 msgstr "Please enter your username and password"
 
@@ -9506,17 +9676,21 @@ msgstr "Please enter your VAT number"
 msgid "Please fill in all fields"
 msgstr "Please fill in all fields"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:76
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:81
 msgid "Please fill in all fields before submitting."
 msgstr "Please fill in all fields before submitting."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:59
+msgid "Please fill in your first name and password"
+msgstr "Please fill in your first name and password"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:112
 msgid "Please fill in your first name, last name and email"
 msgstr "Please fill in your first name, last name and email"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:51
-msgid "Please fill in your first name, last name and password"
-msgstr "Please fill in your first name, last name and password"
+#~ msgid "Please fill in your first name, last name and password"
+#~ msgstr "Please fill in your first name, last name and password"
 
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:21
 msgid "Please fill in your name, email and phone number"
@@ -9554,13 +9728,17 @@ msgstr "Please select an image."
 msgid "Please select at least one product"
 msgstr "Please select at least one product"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:91
+msgid "Please tell us whether you are under 16."
+msgstr "Please tell us whether you are under 16."
+
 #: src/components/routes/event/Affiliates/index.tsx:53
 #: src/components/routes/event/attendees.tsx:169
 #: src/components/routes/event/orders.tsx:132
 msgid "Please try again."
 msgstr "Please try again."
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:41
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:44
 msgid "Please upload a plain text (.txt) file, or paste your writing into the box below instead."
 msgstr "Please upload a plain text (.txt) file, or paste your writing into the box below instead."
 
@@ -9589,19 +9767,23 @@ msgstr "Please wait while we prepare your invoice..."
 msgid "Please wait while we prepare your orders for export..."
 msgstr "Please wait while we prepare your orders for export..."
 
+#: src/components/layouts/PublicParentalConsent/index.tsx:26
+msgid "poem"
+msgstr "poem"
+
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:62
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:164
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:184
 #: src/components/layouts/OrganizerHomepage/ExampleStoryCard/ExamplePoemCard.tsx:10
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:92
 msgid "Poem"
 msgstr "Poem"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:52
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:64
 msgid "points"
 msgstr "points"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboard.tsx:63
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:68
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:80
 msgid "Points"
 msgstr "Points"
 
@@ -10017,7 +10199,7 @@ msgstr "Questions"
 msgid "Questions & Answers"
 msgstr "Questions & Answers"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:89
+#: src/components/routes/legal/TermsOfService/index.tsx:119
 msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
 msgstr "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
 
@@ -10265,7 +10447,7 @@ msgstr "Register"
 msgid "Registration Questions"
 msgstr "Registration Questions"
 
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:103
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:128
 msgid "Reject"
 msgstr "Reject"
 
@@ -10429,7 +10611,7 @@ msgid "Reset password"
 msgstr "Reset password"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:325
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:197
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:259
 msgid "Reset your password"
 msgstr "Reset your password"
 
@@ -10810,7 +10992,7 @@ msgstr "Scheduled time"
 msgid "Science"
 msgstr "Science"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:67
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:79
 msgid "Score"
 msgstr "Score"
 
@@ -11427,8 +11609,12 @@ msgid "Share Organizer Page"
 msgstr "Share Organizer Page"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:143
-msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
-msgstr "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
+#~ msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
+#~ msgstr "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial and year group will be shown alongside it."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:162
+msgid "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial, year group and the date you submitted it will be shown below its headline. If you are under 16, a parent or guardian must give permission first."
+msgstr "Share your own short story or poem with the Friends of Repton community! Each month we'll award a prize for the best story and the best poem. If you'd like your work published, your first name, last initial, year group and the date you submitted it will be shown below its headline. If you are under 16, a parent or guardian must give permission first."
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:25
 msgid "Share your own stories and poems with everyone."
@@ -11563,8 +11749,8 @@ msgstr "Shows remaining"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:215
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:257
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:135
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:262
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:172
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:324
 msgid "Sign in"
 msgstr "Sign in"
 
@@ -11584,11 +11770,11 @@ msgstr "Sign in to manage your events, or to see your tickets and other purchase
 msgid "Sign in to save your scores and earn points."
 msgstr "Sign in to save your scores and earn points."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:89
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:101
 msgid "Sign out"
 msgstr "Sign out"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:125
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:162
 msgid "Sign up"
 msgstr "Sign up"
 
@@ -11678,6 +11864,10 @@ msgstr "Sold Out, waitlist available"
 msgid "Some details are hidden from public access. Log in to view everything."
 msgstr "Some details are hidden from public access. Log in to view everything."
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:111
+msgid "Some features of this site are used by children: submitting stories and poems, and playing our puzzles. We collect only what we need for these features and we ask for a parent or guardian's permission where it is required."
+msgstr "Some features of this site are used by children: submitting stories and poems, and playing our puzzles. We collect only what we need for these features and we ask for a parent or guardian's permission where it is required."
+
 #: src/components/common/ErrorDisplay/index.tsx:62
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:70
 msgid "Someone knocked over a gallon of craft glitter onto our servers. Our digital janitors are cleaning it up now!"
@@ -11715,16 +11905,17 @@ msgid "Something went wrong. Please try again later."
 msgstr "Something went wrong. Please try again later."
 
 #: src/components/layouts/Event/index.tsx:91
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:109
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:129
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:30
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:26
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:31
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizResetPasswordForm.tsx:34
 #: src/components/layouts/OrganizerLayout/index.tsx:131
+#: src/components/layouts/PublicParentalConsent/index.tsx:36
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:72
 #: src/components/routes/my-tickets/index.tsx:162
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:35
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:52
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
 msgid "Something went wrong. Please try again."
@@ -11898,23 +12089,27 @@ msgstr "Still needed"
 msgid "Stop Impersonating"
 msgstr "Stop Impersonating"
 
+#: src/components/layouts/PublicParentalConsent/index.tsx:26
+msgid "story"
+msgstr "story"
+
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:62
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:157
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:177
 #: src/components/layouts/OrganizerHomepage/ExampleStoryCard/index.tsx:11
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:74
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:92
 msgid "Story"
 msgstr "Story"
 
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:49
 msgid "Story published"
 msgstr "Story published"
 
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:32
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:49
 msgid "Story rejected"
 msgstr "Story rejected"
 
 #: src/components/layouts/OrganizerLayout/index.tsx:113
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:42
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:59
 msgid "Story Submissions"
 msgstr "Story Submissions"
 
@@ -11987,15 +12182,15 @@ msgstr "Subject will appear here"
 msgid "Subject:"
 msgstr "Subject:"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:133
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:152
 msgid "Submit another story or poem"
 msgstr "Submit another story or poem"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:256
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:324
 msgid "Submit for review"
 msgstr "Submit for review"
 
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:64
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:81
 msgid "Submitted"
 msgstr "Submitted"
 
@@ -12377,6 +12572,10 @@ msgstr "Tests"
 msgid "Text may be hard to read"
 msgstr "Text may be hard to read"
 
+#: src/components/layouts/PublicParentalConsent/index.tsx:45
+msgid "Thank you"
+msgstr "Thank you"
+
 #: src/components/routes/event/TicketDesigner/index.tsx:166
 msgid "Thank you for attending!"
 msgstr "Thank you for attending!"
@@ -12385,7 +12584,7 @@ msgstr "Thank you for attending!"
 msgid "Thank you for getting in touch! We'll reply soon."
 msgstr "Thank you for getting in touch! We'll reply soon."
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:121
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:141
 msgid "Thank you for sharing your writing!"
 msgstr "Thank you for sharing your writing!"
 
@@ -12398,7 +12597,7 @@ msgstr "Thank you for sharing your writing!"
 msgid "Thanks,"
 msgstr "Thanks,"
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:46
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:49
 msgid "That file is too large. Please keep it under 200KB, or paste your writing below instead."
 msgstr "That file is too large. Please keep it under 200KB, or paste your writing below instead."
 
@@ -12418,6 +12617,10 @@ msgstr "That's {totalOccurrences} sessions — the maximum is {max}. Shorten the
 #: src/components/routes/event/EventDashboard/NextOccurrenceHero/index.tsx:54
 msgid "That's a wrap"
 msgstr "That's a wrap"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:92
+msgid "The auto-generated username {username} (never their real name)"
+msgstr "The auto-generated username {username} (never their real name)"
 
 #: src/components/common/ThemeColorControls/index.tsx:62
 msgid "The background color of the page. When using cover image, this is applied as an overlay."
@@ -12466,13 +12669,17 @@ msgstr "The email address has been changed. The attendee will receive a new tick
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:63
+#: src/components/routes/legal/TermsOfService/index.tsx:93
 msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
 msgstr "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
 msgstr "The full order amount will be refunded to the customer's original payment method."
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:81
+msgid "The full text of the work, shown below"
+msgstr "The full text of the work, shown below"
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:237
 msgid "The language the attendee will receive emails in."
@@ -12600,6 +12807,22 @@ msgstr "Theater"
 #: src/components/common/CapacityHelp/index.tsx:48
 msgid "Theatre with sections"
 msgstr "Theatre with sections"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:119
+msgid "their first and last name, class or year group, and the text of their work;"
+msgstr "their first and last name, class or year group, and the text of their work;"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:136
+msgid "their first name, email address, password (stored securely) and chosen age group;"
+msgstr "their first name, email address, password (stored securely) and chosen age group;"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:93
+msgid "Their points, number of tests taken and best score"
+msgstr "Their points, number of tests taken and best score"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:138
+msgid "their test results and points."
+msgstr "their test results and points."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
@@ -12833,6 +13056,10 @@ msgstr "This is the name of your organizer that will be displayed to your users.
 msgid "This is the only time the signing secret will be shown. Please copy it now and store it securely."
 msgstr "This is the only time the signing secret will be shown. Please copy it now and store it securely."
 
+#: src/components/layouts/PublicParentalConsent/index.tsx:60
+msgid "This link has expired"
+msgstr "This link has expired"
+
 #: src/components/common/ErrorDisplay/index.tsx:44
 msgid "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
 msgstr "This link is currently sitting in the school's Lost and Found bin right next to a single, unlabeled winter glove."
@@ -12844,6 +13071,10 @@ msgstr "This link is invalid or has expired."
 #: src/components/routes/product-widget/OrderSummaryAndProducts/LinkExpiredMessage/index.tsx:27
 msgid "This link is no longer valid"
 msgstr "This link is no longer valid"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:144
+msgid "This link is not valid"
+msgstr "This link is not valid"
 
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:69
 msgid "This message will be included in the footer of all emails sent from this event"
@@ -12945,7 +13176,7 @@ msgstr "This report is for informational purposes only. Always consult with a ta
 msgid "This reset password link is invalid or expired."
 msgstr "This reset password link is invalid or expired."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:72
+#: src/components/routes/legal/TermsOfService/index.tsx:102
 msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
 msgstr "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
 
@@ -13075,7 +13306,7 @@ msgstr "Ticket Not Found"
 msgid "Ticket or Product"
 msgstr "Ticket or Product"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:65
 msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
 msgstr "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
 
@@ -13206,11 +13437,11 @@ msgstr "to"
 msgid "To"
 msgstr "To"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:54
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:58
 msgid "To communicate with you about events you've registered for."
 msgstr "To communicate with you about events you've registered for."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:60
 msgid "To improve and secure our website and services."
 msgstr "To improve and secure our website and services."
 
@@ -13218,11 +13449,11 @@ msgstr "To improve and secure our website and services."
 msgid "To increase your limits, contact us at"
 msgstr "To increase your limits, contact us at"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:53
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:57
 msgid "To process event registrations and ticket purchases."
 msgstr "To process event registrations and ticket purchases."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
 msgid "To respond to enquiries submitted through our contact form."
 msgstr "To respond to enquiries submitted through our contact form."
 
@@ -13414,7 +13645,7 @@ msgstr "Two settings decide how many people can book a date. Whichever is lower 
 #: src/components/routes/admin/Messages/index.tsx:134
 #: src/components/routes/admin/Messages/index.tsx:165
 #: src/components/routes/admin/Messages/index.tsx:288
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:61
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:78
 msgid "Type"
 msgstr "Type"
 
@@ -13674,7 +13905,7 @@ msgstr "Updates as you build the rule. Flip through months to sanity-check dates
 msgid "Updates as you type."
 msgstr "Updates as you type."
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:210
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:230
 msgid "Upload a .txt file"
 msgstr "Upload a .txt file"
 
@@ -13789,13 +14020,13 @@ msgstr "User"
 msgid "User Management"
 msgstr "User Management"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:211
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:239
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:273
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:301
 msgid "Username"
 msgstr "Username"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:210
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:238
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:272
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:300
 msgid "Username (e.g. Simba42)"
 msgstr "Username (e.g. Simba42)"
 
@@ -14165,7 +14396,7 @@ msgstr "Warning: This is the system default configuration. Changes will affect a
 msgid "We accept"
 msgstr "We accept"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:47
 msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
 msgstr "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
 
@@ -14225,7 +14456,7 @@ msgstr "We couldn't load the data. Please try again."
 msgid "We couldn't reach Stripe just now. Please try again in a moment."
 msgstr "We couldn't reach Stripe just now. Please try again in a moment."
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:56
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:59
 msgid "We couldn't read that file. Please try pasting your writing into the box below instead."
 msgstr "We couldn't read that file. Please try pasting your writing into the box below instead."
 
@@ -14233,15 +14464,27 @@ msgstr "We couldn't read that file. Please try pasting your writing into the box
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "We couldn't reorder the categories. Please try again."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:82
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:86
 msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
 msgstr "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:125
+msgid "We email the parent or guardian to explain what will be shown and ask for their permission. We record their response and when it was given. Work from a child under 16 is only published if the parent or guardian agrees and our team approves it. If published, the page shows the child's first name, the initial of their last name, their class or year group, the date it was submitted and the work itself. Their full last name is never shown publicly. If the parent or guardian does not respond or declines, the work is not published."
+msgstr "We email the parent or guardian to explain what will be shown and ask for their permission. We record their response and when it was given. Work from a child under 16 is only published if the parent or guardian agrees and our team approves it. If published, the page shows the child's first name, the initial of their last name, their class or year group, the date it was submitted and the work itself. Their full last name is never shown publicly. If the parent or guardian does not respond or declines, the work is not published."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:135
+msgid "We have emailed your parent or guardian to ask for permission to show you on the leaderboard. You can play and save your scores in the meantime."
+msgstr "We have emailed your parent or guardian to ask for permission to show you on the leaderboard. You can play and save your scores in the meantime."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:144
+msgid "We have emailed your parent or guardian to ask for permission. Your work can only be published once they agree and our team approves it. It will then appear on our Children's Prose & Poetry page with your first name, last initial, year group and the date you submitted it."
+msgstr "We have emailed your parent or guardian to ask for permission. Your work can only be published once they agree and our team approves it. It will then appear on our Children's Prose & Poetry page with your first name, last initial, year group and the date you submitted it."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:405
 msgid "We hit a snag loading this page. Please try again."
 msgstr "We hit a snag loading this page. Please try again."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:81
+#: src/components/routes/legal/TermsOfService/index.tsx:111
 msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 msgstr "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 
@@ -14249,7 +14492,7 @@ msgstr "We may update these Terms from time to time. Continued use of the site a
 msgid "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:171
 msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 
@@ -14270,7 +14513,7 @@ msgstr "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximu
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:91
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:95
 msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
 msgstr "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
 
@@ -14286,13 +14529,17 @@ msgstr "We sent a verification link to {0}"
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "We use cookies to help us understand how the site is used and to improve your experience."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:77
 msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
 msgstr "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:51
 msgid "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
 msgstr "We use Google Analytics, provided by Google LLC, to measure traffic and usage of this site. With your consent, Google sets cookies (such as _ga) on your device and collects information such as the pages you visit, your approximate location, and your device and browser type. Until you consent to analytics, Google tags run in a restricted mode that does not store analytics cookies, and if you decline they remain restricted. You can learn how Google uses data at <0>policies.google.com/technologies/partner-sites</0> and opt out through the <1>Google Analytics opt-out browser add-on</1>."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:202
+msgid "We use your email to save your session and to send you a link to reset your password."
+msgstr "We use your email to save your session and to send you a link to reset your password."
 
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:100
 msgid "We were unable to confirm your payment. Please try again or contact support."
@@ -14301,6 +14548,14 @@ msgstr "We were unable to confirm your payment. Please try again or contact supp
 #: src/components/routes/organizer/Payments/Vat/VatSettingsForm.tsx:95
 msgid "We were unable to validate your VAT number after multiple attempts. We'll continue trying in the background. Please check back later."
 msgstr "We were unable to validate your VAT number after multiple attempts. We'll continue trying in the background. Please check back later."
+
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:310
+msgid "We will email them to ask for permission and explain how your name and year group will be shown. Your work is only published if they agree and our team approves it."
+msgstr "We will email them to ask for permission and explain how your name and year group will be shown. Your work is only published if they agree and our team approves it."
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:233
+msgid "We will email them to ask for permission to show you on the leaderboard. You can still play and save your scores without it."
+msgstr "We will email them to ask for permission to show you on the leaderboard. You can still play and save your scores without it."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1151
 msgid "We'll create all {totalOccurrences} sessions — you can edit or remove any date afterwards"
@@ -14409,7 +14664,7 @@ msgstr "weeks"
 msgid "Weibo"
 msgstr "Weibo"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:95
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:127
 msgid "Welcome aboard!"
 msgstr "Welcome aboard!"
 
@@ -14421,7 +14676,7 @@ msgstr "Welcome aboard! Please login to continue."
 msgid "Welcome back"
 msgstr "Welcome back"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:234
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:296
 msgid "Welcome back! Enter your username and password."
 msgstr "Welcome back! Enter your username and password."
 
@@ -14613,6 +14868,10 @@ msgstr "When you first visit this site, you'll be asked to accept or reject opti
 msgid "Where the button links to"
 msgstr "Where the button links to"
 
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:120
+msgid "whether they would like it published, and whether they are under 16;"
+msgstr "whether they would like it published, and whether they are under 16;"
+
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:64
 msgid "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
 msgstr "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
@@ -14640,6 +14899,10 @@ msgstr "Widget Preview"
 #: src/components/common/WidgetEditor/index.tsx:160
 msgid "Widget Settings"
 msgstr "Widget Settings"
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:96
+msgid "Without your permission they can still play and save their scores, but will not appear on the leaderboard."
+msgstr "Without your permission they can still play and save their scores, but will not appear on the leaderboard."
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:320
 msgid "Working"
@@ -14670,7 +14933,7 @@ msgstr "Workshop with early bird"
 msgid "Would you like to save your score and earn points?"
 msgstr "Would you like to save your score and earn points?"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:99
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:131
 msgid "Write it down! You will need it to sign in next time. Only this username is shown on the leaderboard, so your real name stays private."
 msgstr "Write it down! You will need it to sign in next time. Only this username is shown on the leaderboard, so your real name stays private."
 
@@ -14686,7 +14949,7 @@ msgstr "X (Twitter)"
 msgid "year"
 msgstr "year"
 
-#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:63
+#: src/components/routes/organizer/ChildStorySubmissions/index.tsx:80
 msgid "Year group"
 msgstr "Year group"
 
@@ -14705,6 +14968,7 @@ msgstr "Yearly"
 msgid "years"
 msgstr "years"
 
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:282
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:224
 msgid "Yes"
 msgstr "Yes"
@@ -14815,7 +15079,7 @@ msgstr "You have already accepted this invitation. Please login to continue."
 msgid "You have no pending email change."
 msgstr "You have no pending email change."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:43
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:55
 msgid "You have not saved any scores yet. Take a test to get started!"
 msgstr "You have not saved any scores yet. Take a test to get started!"
 
@@ -14840,7 +15104,7 @@ msgstr "You have taxes and fees added to a Free Product. Would you like to remov
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "You have unsaved changes. Are you sure you want to discard them?"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:99
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:103
 msgid "You may request access to, correction of, or deletion of your personal information by contacting us at <0>fos@aqualeo.co</0>."
 msgstr "You may request access to, correction of, or deletion of your personal information by contacting us at <0>fos@aqualeo.co</0>."
 
@@ -14891,6 +15155,10 @@ msgstr "You receive"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:343
 msgid "You scored {score} out of {total} ({percentage}%)"
 msgstr "You scored {score} out of {total} ({percentage}%)"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:44
+msgid "You will appear on the leaderboard once your parent or guardian gives permission. We have emailed them."
+msgstr "You will appear on the leaderboard once your parent or guardian gives permission. We have emailed them."
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:144
 msgid "You will have to mark an order as paid manually. This can be done on the manage order page."
@@ -15074,6 +15342,10 @@ msgstr "Your organization name"
 msgid "Your organizer address"
 msgstr "Your organizer address"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:50
+msgid "Your parent or guardian chose not to show you on the leaderboard. You can still play and save your scores."
+msgstr "Your parent or guardian chose not to show you on the leaderboard. You can still play and save your scores."
+
 #: src/components/routes/auth/Login/index.tsx:105
 #: src/components/routes/auth/Register/index.tsx:111
 msgid "Your password"
@@ -15103,6 +15375,18 @@ msgstr "Your payment was not successful, please try again."
 msgid "Your payment was unsuccessful. Please try again."
 msgstr "Your payment was unsuccessful. Please try again."
 
+#: src/components/layouts/PublicParentalConsent/index.tsx:50
+msgid "Your permission has been recorded. {childName} can now appear on the leaderboard."
+msgstr "Your permission has been recorded. {childName} can now appear on the leaderboard."
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:49
+msgid "Your permission has been recorded. If our team approves the work, it will be published."
+msgstr "Your permission has been recorded. If our team approves the work, it will be published."
+
+#: src/components/layouts/PublicParentalConsent/index.tsx:70
+msgid "Your permission is needed"
+msgstr "Your permission is needed"
+
 #: src/components/common/PlatformFeesSettings/index.tsx:149
 msgid "Your Plan"
 msgstr "Your Plan"
@@ -15111,11 +15395,15 @@ msgstr "Your Plan"
 msgid "Your refund is processing."
 msgstr "Your refund is processing."
 
+#: src/components/layouts/PublicParentalConsent/index.tsx:51
+msgid "Your response has been recorded. Nothing will be published or shared."
+msgstr "Your response has been recorded. Nothing will be published or shared."
+
 #: src/components/layouts/CheckIn/index.tsx:117
 msgid "Your saved date filter is no longer available — showing all dates."
 msgstr "Your saved date filter is no longer available — showing all dates."
 
-#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:208
+#: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:228
 msgid "Your story or poem"
 msgstr "Your story or poem"
 
@@ -15135,7 +15423,7 @@ msgstr "Your ticket is still valid — no action is needed unless the new time d
 msgid "Your tickets have been confirmed."
 msgstr "Your tickets have been confirmed."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:96
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:128
 msgid "Your username is"
 msgstr "Your username is"
 

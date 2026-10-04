@@ -1,7 +1,7 @@
 import {t, Trans} from "@lingui/macro";
 import {LegalPageLayout} from "../../../common/LegalPageLayout";
 
-const UPDATED_DATE = "October 2, 2026";
+const UPDATED_DATE = "October 4, 2026";
 
 export const PrivacyPolicy = () => {
     return (
@@ -37,6 +37,10 @@ export const PrivacyPolicy = () => {
                 </li>
                 <li>
                     <Trans>Any messages or information you submit through our contact forms.</Trans>
+                </li>
+                <li>
+                    <Trans>Information about children who submit stories or poems or use our puzzles, as
+                        described in Section 9.</Trans>
                 </li>
             </ul>
             <p>
@@ -102,7 +106,59 @@ export const PrivacyPolicy = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>9. Contact us</Trans></h2>
+            <h2><Trans>9. Children's privacy</Trans></h2>
+            <p>
+                <Trans>
+                    Some features of this site are used by children: submitting stories and poems, and playing our
+                    puzzles. We collect only what we need for these features and we ask for a parent or
+                    guardian's permission where it is required.
+                </Trans>
+            </p>
+            <p><Trans><strong>Stories and poems.</strong> When a child submits a story or poem we collect:</Trans></p>
+            <ul>
+                <li><Trans>their first and last name, class or year group, and the text of their work;</Trans></li>
+                <li><Trans>whether they would like it published, and whether they are under 16;</Trans></li>
+                <li><Trans>if they would like it published and are under 16, a parent or guardian's email
+                    address.</Trans></li>
+            </ul>
+            <p>
+                <Trans>
+                    We email the parent or guardian to explain what will be shown and ask for their permission. We
+                    record their response and when it was given. Work from a child under 16 is only published if
+                    the parent or guardian agrees and our team approves it. If published, the page shows the
+                    child's first name, the initial of their last name, their class or year group, the date it
+                    was submitted and the work itself. Their full last name is never shown publicly. If the
+                    parent or guardian does not respond or declines, the work is not published.
+                </Trans>
+            </p>
+            <p><Trans><strong>Puzzles.</strong> To save scores a child creates a puzzles account, for which we collect:</Trans></p>
+            <ul>
+                <li><Trans>their first name, email address, password (stored securely) and chosen age group;</Trans></li>
+                <li><Trans>if they are 13 or under, a parent or guardian's email address;</Trans></li>
+                <li><Trans>their test results and points.</Trans></li>
+            </ul>
+            <p>
+                <Trans>
+                    Each child is given an automatically generated character username. Only this username, their
+                    points, tests taken and best score appear on the public leaderboard; their real name and
+                    email are never shown. For children aged 13 or under we email the parent or guardian to ask
+                    permission for the child to appear on the leaderboard. Until permission is given the child can
+                    still play and save scores but is not shown on the leaderboard. A child's email address is
+                    used only to save their account and to send a password reset link, and a parent or guardian's
+                    email address is used only to request and record their permission.
+                </Trans>
+            </p>
+            <p>
+                <Trans>
+                    Parent and guardian links expire after 14 days. A parent or guardian can ask us at{" "}
+                    <a href="mailto:fos@aqualeo.co">fos@aqualeo.co</a> to see, correct or delete their child's
+                    information, to remove a published story or poem, or to remove their child from the
+                    leaderboard, and we will act on the request promptly. We do not use children's information
+                    for advertising.
+                </Trans>
+            </p>
+
+            <h2><Trans>10. Contact us</Trans></h2>
             <p>
                 <Trans>
                     If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at{" "}
@@ -110,7 +166,7 @@ export const PrivacyPolicy = () => {
                 </Trans>
             </p>
 
-            <h2><Trans>10. Changes to this policy</Trans></h2>
+            <h2><Trans>11. Changes to this policy</Trans></h2>
             <p>
                 <Trans>
                     We may update this Privacy Policy from time to time. The "Last updated" date at the top of this

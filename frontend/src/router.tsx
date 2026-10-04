@@ -582,6 +582,15 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/events/:organizerId/:organizerSlug/parental-consent/:token",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicParentalConsent = await import("./components/layouts/PublicParentalConsent");
+            return { Component: PublicParentalConsent.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/events/:organizerId/:organizerSlug/resources/:tab?",
         loader: publicOrganizerRouteLoader,
         async lazy() {

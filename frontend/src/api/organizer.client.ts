@@ -11,6 +11,7 @@ import {
     Organizer,
     OrganizerSettings,
     OrganizerStats,
+    ParentalConsentDetails,
     PublishedChildStorySubmission,
     QueryFilters,
     QuizLeaderboardEntry,
@@ -208,6 +209,8 @@ export const organizerPublicClient = {
         original_filename?: string;
         consent_own_work: boolean;
         consent_publish: boolean;
+        is_under_16: boolean;
+        parent_email?: string;
         turnstile_token?: string;
     }) => {
         const response = await publicApi.post<GenericDataResponse<ChildStorySubmission>>(
@@ -217,10 +220,26 @@ export const organizerPublicClient = {
         return response.data;
     },
 
+    getParentalConsent: async (organizerId: IdParam, token: string) => {
+        const response = await publicApi.get<GenericDataResponse<ParentalConsentDetails>>(
+            `organizers/${organizerId}/parental-consents/${encodeURIComponent(token)}`
+        );
+        return response.data;
+    },
+
+    respondToParentalConsent: async (organizerId: IdParam, token: string, granted: boolean) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/parental-consents/${encodeURIComponent(token)}`,
+            {granted}
+        );
+        return response.data;
+    },
+
     registerQuizPlayer: async (organizerId: IdParam, player: {
         first_name: string;
-        last_name: string;
-        email?: string;
+        email: string;
+        age_band: string;
+        parent_email?: string;
         password: string;
     }) => {
         const response = await publicApi.post<GenericDataResponse<QuizPlayerSession>>(

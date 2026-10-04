@@ -25,6 +25,8 @@ class ChildStorySubmissionResource extends BaseResource
             'original_filename' => $this->getOriginalFilename(),
             'consent_own_work' => $this->getConsentOwnWork(),
             'consent_publish' => $this->getConsentPublish(),
+            'parent_email' => $this->getParentalConsent()?->getParentEmail(),
+            'parent_consent_status' => $this->getParentalConsent()?->getStatus(),
             'status' => $this->getStatus(),
             'submitted_at' => $this->getSubmittedAt(),
             'reviewed_at' => $this->getReviewedAt(),

@@ -57,6 +57,18 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+
+    legend {
+        padding: 0;
+        margin-bottom: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--organizer-primary-text-color, #1a1a1a);
+    }
 
     label {
         font-size: 0.85rem;
@@ -136,6 +148,12 @@
     font-size: 1.05rem !important;
     font-weight: 700 !important;
     color: var(--organizer-primary-text-color, #1a1a1a) !important;
+}
+
+.hint {
+    margin: 6px 0 0;
+    font-size: 0.8rem;
+    color: var(--organizer-secondary-color, #525252);
 }
 
 .formError {

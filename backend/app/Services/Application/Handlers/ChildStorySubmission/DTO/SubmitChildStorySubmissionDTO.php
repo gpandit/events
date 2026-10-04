@@ -18,5 +18,6 @@ class SubmitChildStorySubmissionDTO extends BaseDataObject
         public ?string $original_filename,
         public bool $consent_own_work,
         public bool $consent_publish,
+        public ?string $parent_email = null,
     ) {}
 }

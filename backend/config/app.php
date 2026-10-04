@@ -68,6 +68,7 @@ return [
         'ticket_lookup' => '/my-tickets/%s',
         'customer_account' => '/events/%d/%s/account?token=%s',
         'quiz_password_reset' => '/events/%d/%s/resources/puzzles?reset_token=%s',
+        'parental_consent' => '/events/%d/%s/parental-consent/%s',
         'account_danger_zone' => '/account/danger-zone',
     ],
 

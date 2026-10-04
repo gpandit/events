@@ -797,6 +797,7 @@ export interface QuizResultRecord {
 
 export interface QuizPlayerProfile {
     username: string;
+    leaderboard_status: 'NOT_REQUIRED' | ParentalConsentStatus;
     totals: QuizPlayerTotals[];
     results: QuizResultRecord[];
 }
@@ -816,6 +817,7 @@ export interface GenericPaginatedResponse<T> {
 
 export type ChildStorySubmissionType = 'STORY' | 'POEM';
 export type ChildStorySubmissionStatus = 'PENDING' | 'APPROVED' | 'REJECTED';
+export type ParentalConsentStatus = 'PENDING' | 'GRANTED' | 'DECLINED';
 
 export interface ChildStorySubmission {
     id: number;
@@ -828,6 +830,8 @@ export interface ChildStorySubmission {
     original_filename?: string | null;
     consent_own_work: boolean;
     consent_publish: boolean;
+    parent_email?: string | null;
+    parent_consent_status?: ParentalConsentStatus | null;
     status: ChildStorySubmissionStatus;
     submitted_at: string;
     reviewed_at?: string | null;
@@ -841,7 +845,23 @@ export interface PublishedChildStorySubmission {
     last_initial: string;
     year_group: string;
     content: string;
+    submitted_at: string;
     published_at: string;
+}
+
+export interface ParentalConsentDetails {
+    subject_type: 'CHILD_STORY' | 'QUIZ_PLAYER';
+    status: ParentalConsentStatus;
+    is_expired: boolean;
+    organizer_name: string;
+    child_first_name: string;
+    work_type?: ChildStorySubmissionType | null;
+    child_last_initial?: string | null;
+    year_group?: string | null;
+    content?: string | null;
+    submitted_at?: string | null;
+    username?: string | null;
+    age_band?: string | null;
 }
 
 export enum ProductPriceType {
