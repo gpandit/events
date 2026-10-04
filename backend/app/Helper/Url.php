@@ -32,6 +32,8 @@ class Url
 
     public const QUIZ_PASSWORD_RESET = 'app.frontend_urls.quiz_password_reset';
 
+    public const PARENTAL_CONSENT = 'app.frontend_urls.parental_consent';
+
     public const ACCOUNT_DANGER_ZONE = 'app.frontend_urls.account_danger_zone';
 
     public static function getFrontEndUrlFromConfig(string $key, array $queryParams = []): string

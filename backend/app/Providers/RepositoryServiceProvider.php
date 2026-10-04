@@ -65,6 +65,7 @@ use HiEvents\Repository\Eloquent\WaitlistEntryRepository;
 use HiEvents\Repository\Eloquent\WebhookLogRepository;
 use HiEvents\Repository\Eloquent\WebhookRepository;
 use HiEvents\Repository\Eloquent\CustomerRepository;
+use HiEvents\Repository\Eloquent\ParentalConsentRepository;
 use HiEvents\Repository\Eloquent\PasswordSetupTokenRepository;
 use HiEvents\Repository\Eloquent\QuizPlayerRepository;
 use HiEvents\Repository\Eloquent\QuizResultRepository;
@@ -130,6 +131,7 @@ use HiEvents\Repository\Interfaces\WaitlistEntryRepositoryInterface;
 use HiEvents\Repository\Interfaces\WebhookLogRepositoryInterface;
 use HiEvents\Repository\Interfaces\WebhookRepositoryInterface;
 use HiEvents\Repository\Interfaces\CustomerRepositoryInterface;
+use HiEvents\Repository\Interfaces\ParentalConsentRepositoryInterface;
 use HiEvents\Repository\Interfaces\PasswordSetupTokenRepositoryInterface;
 use HiEvents\Repository\Interfaces\QuizPlayerRepositoryInterface;
 use HiEvents\Repository\Interfaces\QuizResultRepositoryInterface;
@@ -175,6 +177,7 @@ class RepositoryServiceProvider extends ServiceProvider
         QuizResultRepositoryInterface::class => QuizResultRepository::class,
         QuizPlayerRepositoryInterface::class => QuizPlayerRepository::class,
         CustomerRepositoryInterface::class => CustomerRepository::class,
+        ParentalConsentRepositoryInterface::class => ParentalConsentRepository::class,
         PasswordSetupTokenRepositoryInterface::class => PasswordSetupTokenRepository::class,
         QuizUsernameCharacterRepositoryInterface::class => QuizUsernameCharacterRepository::class,
         AttendeeCheckInRepositoryInterface::class => AttendeeCheckInRepository::class,

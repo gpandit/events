@@ -14,19 +14,19 @@ abstract class QuizPlayerDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     final public const ORGANIZER_ID = 'organizer_id';
     final public const USERNAME = 'username';
     final public const FIRST_NAME = 'first_name';
-    final public const LAST_NAME = 'last_name';
     final public const EMAIL = 'email';
     final public const PASSWORD = 'password';
     final public const CREATED_AT = 'created_at';
+    final public const AGE_BAND = 'age_band';
     final public const UPDATED_AT = 'updated_at';
 
     protected int $id;
     protected int $organizer_id;
     protected string $username;
     protected string $first_name;
-    protected string $last_name;
     protected ?string $email = null;
     protected string $password;
+    protected ?string $age_band = null;
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
 
@@ -37,9 +37,9 @@ abstract class QuizPlayerDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
                     'organizer_id' => $this->organizer_id ?? null,
                     'username' => $this->username ?? null,
                     'first_name' => $this->first_name ?? null,
-                    'last_name' => $this->last_name ?? null,
                     'email' => $this->email ?? null,
                     'password' => $this->password ?? null,
+                    'age_band' => $this->age_band ?? null,
                     'created_at' => $this->created_at ?? null,
                     'updated_at' => $this->updated_at ?? null,
                 ];
@@ -89,17 +89,6 @@ abstract class QuizPlayerDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
         return $this->first_name;
     }
 
-    public function setLastName(string $last_name): self
-    {
-        $this->last_name = $last_name;
-        return $this;
-    }
-
-    public function getLastName(): string
-    {
-        return $this->last_name;
-    }
-
     public function setEmail(?string $email): self
     {
         $this->email = $email;
@@ -120,6 +109,17 @@ abstract class QuizPlayerDomainObjectAbstract extends \HiEvents\DomainObjects\Ab
     public function getPassword(): string
     {
         return $this->password;
+    }
+
+    public function setAgeBand(?string $age_band): self
+    {
+        $this->age_band = $age_band;
+        return $this;
+    }
+
+    public function getAgeBand(): ?string
+    {
+        return $this->age_band;
     }
 
     public function setCreatedAt(?string $created_at): self

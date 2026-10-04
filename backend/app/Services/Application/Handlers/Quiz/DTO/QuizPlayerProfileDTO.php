@@ -14,9 +14,11 @@ class QuizPlayerProfileDTO extends BaseDataObject
     /**
      * @param  Collection<int, QuizPlayerTotalsDTO>  $totals
      * @param  Collection<int, QuizResultDomainObject>  $results
+     * @param  'NOT_REQUIRED'|'PENDING'|'GRANTED'|'DECLINED'  $leaderboard_status
      */
     public function __construct(
         public string $username,
+        public string $leaderboard_status,
         public Collection $totals,
         public Collection $results,
     ) {}

@@ -6,6 +6,7 @@ namespace HiEvents\Http\Actions\Organizers\ChildStorySubmissions;
 
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\DomainObjects\Status\ChildStorySubmissionStatus;
+use HiEvents\Exceptions\ChildStoryPublicationNotPermittedException;
 use HiEvents\Exceptions\ResourceNotFoundException;
 use HiEvents\Http\Actions\BaseAction;
 use HiEvents\Resources\ChildStorySubmission\ChildStorySubmissionResource;
@@ -36,11 +37,15 @@ class ReviewChildStorySubmissionAction extends BaseAction
             ])],
         ]);
 
-        $submission = $this->handler->handle(
-            submissionId: $submissionId,
-            organizerId: $organizerId,
-            status: ChildStorySubmissionStatus::from($data['status']),
-        );
+        try {
+            $submission = $this->handler->handle(
+                submissionId: $submissionId,
+                organizerId: $organizerId,
+                status: ChildStorySubmissionStatus::from($data['status']),
+            );
+        } catch (ChildStoryPublicationNotPermittedException $exception) {
+            throw ValidationException::withMessages(['status' => $exception->getMessage()]);
+        }
 
         return $this->resourceResponse(
             resource: ChildStorySubmissionResource::class,

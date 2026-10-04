@@ -37,22 +37,23 @@ class QuizPasswordResetTest extends TestCase
         return "/public/organizers/{$this->organizerId}/{$path}";
     }
 
-    private function register(?string $email): string
+    private function register(string $email): string
     {
-        $payload = ['first_name' => 'Noah', 'last_name' => 'Smith', 'password' => 'secret123'];
-
-        if ($email !== null) {
-            $payload['email'] = $email;
-        }
-
-        return $this->postJson($this->url('quiz-players/register'), $payload)->assertCreated()->json('data.username');
+        return $this->postJson($this->url('quiz-players/register'), [
+            'first_name' => 'Noah',
+            'email' => $email,
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertCreated()->json('data.username');
     }
 
-    public function test_email_is_optional_when_signing_up(): void
+    public function test_email_is_required_when_signing_up(): void
     {
-        $username = $this->register(null);
-
-        $this->assertDatabaseHas('quiz_players', ['username' => $username, 'email' => null]);
+        $this->postJson($this->url('quiz-players/register'), [
+            'first_name' => 'Noah',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertUnprocessable()->assertJsonValidationErrors('email');
     }
 
     public function test_a_player_with_an_email_resets_their_password_with_a_magic_link(): void
@@ -84,7 +85,8 @@ class QuizPasswordResetTest extends TestCase
 
     public function test_no_email_is_sent_for_players_without_an_email_or_unknown_usernames(): void
     {
-        $username = $this->register(null);
+        $username = $this->register('older.kid@example.com');
+        DB::table('quiz_players')->where('username', $username)->update(['email' => null]);
         Mail::fake();
 
         $this->postJson($this->url('quiz-players/forgot-password'), ['username' => $username])->assertOk();
