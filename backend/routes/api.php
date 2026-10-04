@@ -259,6 +259,7 @@ use HiEvents\Http\Actions\TaxesAndFees\CreateTaxOrFeeAction;
 use HiEvents\Http\Actions\TaxesAndFees\DeleteTaxOrFeeAction;
 use HiEvents\Http\Actions\TaxesAndFees\EditTaxOrFeeAction;
 use HiEvents\Http\Actions\TaxesAndFees\GetTaxOrFeeAction;
+use HiEvents\Http\Actions\TicketLookup\ErasePersonalDataAction;
 use HiEvents\Http\Actions\TicketLookup\GetOrdersByLookupTokenAction;
 use HiEvents\Http\Actions\TicketLookup\SendTicketLookupEmailAction;
 use HiEvents\Http\Actions\Users\CancelEmailChangeAction;
@@ -727,6 +728,8 @@ $router->prefix('/public')->group(
         $router->post('/ticket-lookup', SendTicketLookupEmailAction::class)
             ->middleware('throttle:10,1');
         $router->get('/ticket-lookup/{token}', GetOrdersByLookupTokenAction::class);
+        $router->post('/ticket-lookup/{token}/erase-personal-data', ErasePersonalDataAction::class)
+            ->middleware('throttle:5,1');
 
         // Self-service order and attendee edits
         $router->prefix('/events/{event_id}/order/{order_short_id}')->group(function (Router $router): void {

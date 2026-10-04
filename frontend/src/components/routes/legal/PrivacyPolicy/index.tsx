@@ -1,7 +1,7 @@
 import {t, Trans} from "@lingui/macro";
 import {LegalPageLayout} from "../../../common/LegalPageLayout";
 
-const UPDATED_DATE = "October 4, 2026";
+const UPDATED_DATE = "October 5, 2026";
 
 export const PrivacyPolicy = () => {
     return (
@@ -97,12 +97,26 @@ export const PrivacyPolicy = () => {
                     this policy, including to comply with legal, accounting, or reporting obligations.
                 </Trans>
             </p>
+            <p>
+                <Trans>
+                    When you delete your data (see Section 8) we remove your name, email address, phone number,
+                    address and similar details from your orders, tickets and account, and delete any stories or
+                    puzzle accounts created for your children. We keep the financial record of each payment
+                    (order reference, amounts, taxes, fees, dates, event and payment processor references) without
+                    any personal details, because we are required to retain financial records for accounting,
+                    tax and audit purposes. We also keep a minimal log that the deletion took place, which
+                    contains only a one-way code derived from your email address and the references of the
+                    orders affected, not the email address itself.
+                </Trans>
+            </p>
 
             <h2><Trans>8. Your rights</Trans></h2>
             <p>
                 <Trans>
-                    You may request access to, correction of, or deletion of your personal information by
-                    contacting us at <a href="mailto:fos@aqualeo.co">fos@aqualeo.co</a>.
+                    You may request access to or correction of your personal information by contacting us at{" "}
+                    <a href="mailto:fos@aqualeo.co">fos@aqualeo.co</a>. You can delete your personal information
+                    yourself at any time using the "Delete my data" option in My Tickets, which you can reach by
+                    signing in to your account or from the link in your ticket emails.
                 </Trans>
             </p>
 

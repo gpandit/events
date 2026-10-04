@@ -26,6 +26,7 @@ import {LoadingMask} from "../../common/LoadingMask";
 import {PoweredByFooter} from "../../common/PoweredByFooter";
 import {EventDateRange} from "../../common/EventDateRange";
 import {CheckoutContent} from "../../layouts/Checkout/CheckoutContent";
+import {DeleteMyData} from "./DeleteMyData";
 
 import {Event, LocationType, Order} from "../../../types.ts";
 import classes from './MyTickets.module.scss';
@@ -239,6 +240,7 @@ export const MyTickets = () => {
                             {t`We couldn't find any orders associated with this email address.`}
                         </p>
                     </div>
+                    <DeleteMyData token={token as string}/>
                 </div>
                 <PoweredByFooter/>
             </CheckoutContent>
@@ -261,6 +263,8 @@ export const MyTickets = () => {
                         <OrderCard key={order.short_id} order={order}/>
                     ))}
                 </div>
+
+                <DeleteMyData token={token as string}/>
             </div>
             <PoweredByFooter/>
         </CheckoutContent>

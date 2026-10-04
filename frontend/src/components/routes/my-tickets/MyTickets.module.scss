@@ -205,3 +205,8 @@
     color: var(--mantine-color-text);
   }
 }
+
+.dangerCard {
+  margin-top: 40px;
+  border: 1px solid var(--mantine-color-red-2);
+}

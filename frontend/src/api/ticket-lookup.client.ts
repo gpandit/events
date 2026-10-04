@@ -7,6 +7,11 @@ export const ticketLookupClient = {
         return response.data;
     },
 
+    erasePersonalData: async (token: string, payload: { confirmation: string; password?: string }) => {
+        const response = await api.post<{ message: string }>(`public/ticket-lookup/${token}/erase-personal-data`, payload);
+        return response.data;
+    },
+
     getOrdersByToken: async (token: string) => {
         const response = await api.get<GenericDataResponse<Order[]>>(`public/ticket-lookup/${token}`);
         return response.data;

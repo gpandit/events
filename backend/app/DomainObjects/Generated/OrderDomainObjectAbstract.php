@@ -46,6 +46,7 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     final public const OPTED_INTO_MARKETING_AT = 'opted_into_marketing_at';
     final public const PHONE = 'phone';
     final public const PAYMENT_PROCESSING_FEE = 'payment_processing_fee';
+    final public const PII_ERASED_AT = 'pii_erased_at';
 
     protected int $id;
     protected int $event_id;
@@ -83,6 +84,7 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     protected ?string $opted_into_marketing_at = null;
     protected ?string $phone = null;
     protected float $payment_processing_fee = 0.0;
+    protected ?string $pii_erased_at = null;
 
     public function toArray(): array
     {
@@ -123,6 +125,7 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
                     'opted_into_marketing_at' => $this->opted_into_marketing_at ?? null,
                     'phone' => $this->phone ?? null,
                     'payment_processing_fee' => $this->payment_processing_fee ?? null,
+                    'pii_erased_at' => $this->pii_erased_at ?? null,
                 ];
     }
 
@@ -520,5 +523,16 @@ abstract class OrderDomainObjectAbstract extends \HiEvents\DomainObjects\Abstrac
     public function getPaymentProcessingFee(): float
     {
         return $this->payment_processing_fee;
+    }
+
+    public function setPiiErasedAt(?string $pii_erased_at): self
+    {
+        $this->pii_erased_at = $pii_erased_at;
+        return $this;
+    }
+
+    public function getPiiErasedAt(): ?string
+    {
+        return $this->pii_erased_at;
     }
 }
