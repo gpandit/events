@@ -34,6 +34,25 @@ test.describe('organizer shops', () => {
     await expect(page.getByText('Add to Calendar')).toHaveCount(0);
   });
 
+  test('the shop link is hidden until a shop is published', async ({ page, api }) => {
+    const organizer = await createFreshOrganizer(api, uniqueName('E2E Hidden Shop Org'));
+    await api.updateOrganizerStatus(organizer.id, 'LIVE');
+    const shop = await api.createShop({
+      organizer_id: organizer.id,
+      title: 'Draft Uniforms',
+      shop_category: 'UNIFORM',
+      vendor_type: 'SCHOOL',
+    });
+
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/about`);
+    await expect(page.getByRole('link', { name: 'Shop', exact: true })).toHaveCount(0);
+
+    await api.publishEvent(shop.id);
+
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/about`);
+    await expect(page.getByRole('link', { name: 'Shop', exact: true }).first()).toBeVisible();
+  });
+
   test('a second school meals vendor is rejected', async ({ api }) => {
     const organizer = await createFreshOrganizer(api, uniqueName('E2E Meals Org'));
 

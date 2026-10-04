@@ -120,9 +120,11 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <Link to={organizerEventsPath(organizer)} className={classes.footerNavLink}>
                             {t`Events`}
                         </Link>
-                        <Link to={organizerShopPath(organizer)} className={classes.footerNavLink}>
-                            {t`Shop`}
-                        </Link>
+                        {organizer.has_live_shops && (
+                            <Link to={organizerShopPath(organizer)} className={classes.footerNavLink}>
+                                {t`Shop`}
+                            </Link>
+                        )}
                         <Link to={`${organizerHomepagePath(organizer)}/about`} className={classes.footerNavLink}>
                             {t`About Us`}
                         </Link>

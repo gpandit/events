@@ -707,6 +707,7 @@ export interface OrganizerStats {
 
 export interface Organizer {
     id?: IdParam;
+    has_live_shops?: boolean;
     name: string;
     email: string;
     description?: string;

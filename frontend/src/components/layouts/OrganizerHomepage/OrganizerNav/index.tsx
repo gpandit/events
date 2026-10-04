@@ -84,9 +84,11 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                     <Link to={organizerEventsPath(organizer)} className={linkClass(active === 'events')}>
                         {t`Events`}
                     </Link>
-                    <Link to={organizerShopPath(organizer)} className={linkClass(active === 'shops')}>
-                        {t`Shop`}
-                    </Link>
+                    {organizer.has_live_shops && (
+                        <Link to={organizerShopPath(organizer)} className={linkClass(active === 'shops')}>
+                            {t`Shop`}
+                        </Link>
+                    )}
                     <Menu trigger="hover" openDelay={50} closeDelay={150} position="bottom-start" withinPortal>
                         <Menu.Target>
                             <Link
@@ -136,13 +138,15 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                     >
                         {t`Events`}
                     </Link>
-                    <Link
-                        to={organizerShopPath(organizer)}
-                        className={linkClass(active === 'shops')}
-                        onClick={closeMenu}
-                    >
-                        {t`Shop`}
-                    </Link>
+                    {organizer.has_live_shops && (
+                        <Link
+                            to={organizerShopPath(organizer)}
+                            className={linkClass(active === 'shops')}
+                            onClick={closeMenu}
+                        >
+                            {t`Shop`}
+                        </Link>
+                    )}
                     <Link
                         to={organizerResourcesPath(organizer)}
                         className={linkClass(active === 'resources')}
