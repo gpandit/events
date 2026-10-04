@@ -107,6 +107,7 @@ class StripePaymentIntentCreationService
         CreatePaymentIntentRequestDTO $paymentIntentDTO,
         array $paymentMethodParams,
         bool $attachCustomer,
+        bool $retriedAfterStaleCustomer = false,
     ): CreatePaymentIntentResponseDTO {
         try {
             $this->databaseManager->beginTransaction();
@@ -153,6 +154,21 @@ class StripePaymentIntentCreationService
 
             $this->databaseManager->rollBack();
 
+            if (! $retriedAfterStaleCustomer && $attachCustomer && $this->isMissingCustomerError($exception)) {
+                $this->stripeCustomerRepository->deleteWhere([
+                    'email' => $paymentIntentDTO->order->getEmail(),
+                    'stripe_account_id' => $paymentIntentDTO->stripeAccountId,
+                ]);
+
+                return $this->createWithPaymentMethodParams(
+                    stripeClient: $stripeClient,
+                    paymentIntentDTO: $paymentIntentDTO,
+                    paymentMethodParams: $paymentMethodParams,
+                    attachCustomer: $attachCustomer,
+                    retriedAfterStaleCustomer: true,
+                );
+            }
+
             throw new CreatePaymentIntentFailedException(
                 __('There was an error communicating with the payment provider. Please try again later.'),
                 previous: $exception,
@@ -162,6 +178,12 @@ class StripePaymentIntentCreationService
 
             throw $exception;
         }
+    }
+
+    private function isMissingCustomerError(ApiErrorException $exception): bool
+    {
+        return $exception->getStripeCode() === 'resource_missing'
+            && str_contains($exception->getMessage(), 'No such customer');
     }
 
     /**
