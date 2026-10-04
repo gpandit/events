@@ -65,3 +65,7 @@ export const imageUrl = (imageType: ImageType, images?: Image[], fallbackUrl?: s
 export const organizerPreviewPath = (organizerId: IdParam) => {
     return `/organizer/${organizerId}/preview`;
 }
+
+export const defaultShareImageUrl = () => {
+    return getConfig('VITE_FRONTEND_URL', '') + '/logos/friends-of-repton-logo.png';
+}

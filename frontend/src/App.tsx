@@ -37,6 +37,7 @@ import {isSsr} from "./utilites/helpers.ts";
 import {StartupChecks} from "./StartupChecks.tsx";
 import {ThirdPartyScripts} from "./components/common/ThirdPartyScripts";
 import {getConfig} from "./utilites/config.ts";
+import {defaultShareImageUrl} from "./utilites/urlHelper.ts";
 import {CookieConsentBanner} from "./components/common/CookieConsentBanner";
 import {isConsentBannerEnabled} from "./utilites/cookieConsent";
 
@@ -102,8 +103,11 @@ export const App: FC<
                                         <title>{getConfig("VITE_APP_NAME", "Hi.Events")}</title>
                                         <link rel="icon"
                                               type="image/svg+xml"
-                                              href={getConfig("VITE_APP_FAVICON", "/favicon.svg")}
+                                              href={getConfig("VITE_APP_FAVICON", "/manifest-icons/favicon.svg")}
                                         />
+                                        <meta property="og:image" content={defaultShareImageUrl()}/>
+                                        <meta name="twitter:image" content={defaultShareImageUrl()}/>
+                                        <meta name="twitter:card" content="summary"/>
                                     </Helmet>
                                     {props.children}
                                 </ModalsProvider>

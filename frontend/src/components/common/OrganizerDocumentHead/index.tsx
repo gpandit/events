@@ -1,7 +1,7 @@
 /* eslint-disable lingui/no-unlocalized-strings */
 import {Helmet} from "react-helmet-async";
 import {Organizer} from "../../../types";
-import {organizerHomepageUrl} from "../../../utilites/urlHelper.ts";
+import {defaultShareImageUrl, organizerHomepageUrl} from "../../../utilites/urlHelper.ts";
 
 interface OrganizerDocumentHeadProps {
     organizer: Organizer;
@@ -13,8 +13,7 @@ export const OrganizerDocumentHead = ({organizer}: OrganizerDocumentHeadProps) =
     const description = organizerSettings?.seo_description || `Discover upcoming events by ${organizer.name}.`;
     const keywords = organizerSettings?.seo_keywords || `${organizer.name}, events, tickets, concerts, sell tickets online`;
     const logoImage = organizer.images?.find(img => img.type === 'ORGANIZER_LOGO')?.url;
-    const coverImage = organizer.images?.find(img => img.type === 'ORGANIZER_COVER')?.url;
-    const image = coverImage || logoImage;
+    const image = defaultShareImageUrl();
     const url = organizerHomepageUrl(organizer);
 
     const structuredAddress = organizer.location?.structured_address;
@@ -89,15 +88,15 @@ export const OrganizerDocumentHead = ({organizer}: OrganizerDocumentHeadProps) =
             {keywords && <meta name="keywords" content={keywords}/>}
             <meta property="og:title" content={title}/>
             <meta property="og:description" content={description}/>
-            {image && <meta property="og:image" content={image}/>}
+            <meta property="og:image" content={image}/>
             <meta property="og:url" content={url}/>
             <meta property="og:type" content="website"/>
             <meta name="author" content={organizer.name}/>
 
             <meta name="twitter:title" content={title}/>
             <meta name="twitter:description" content={description}/>
-            {image && <meta name="twitter:image" content={image}/>}
-            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:image" content={image}/>
+            <meta name="twitter:card" content="summary"/>
 
             <meta name="robots" content={allowIndexing ? "index, follow" : "noindex, nofollow"}/>
 
