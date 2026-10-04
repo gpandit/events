@@ -130,6 +130,8 @@ class RegisterQuizPlayerHandlerTest extends TestCase
         $this->handler->handle(
             new RegisterQuizPlayerDTO(10, 'Amelia', 'child@example.com', QuizAgeBand::AGES_8_TO_10, 'secret1', 'parent@example.com')
         );
+
+        $this->addToAssertionCount(1);
     }
 
     protected function tearDown(): void

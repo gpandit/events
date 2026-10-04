@@ -131,6 +131,8 @@ class SubmitChildStorySubmissionHandlerTest extends TestCase
         $this->mailer->shouldReceive('to')->once()->with('parent@example.com')->andReturn($pendingMail);
 
         $this->handler->handle($this->dto('parent@example.com'));
+
+        $this->addToAssertionCount(1);
     }
 
     protected function tearDown(): void
