@@ -11,6 +11,7 @@ import {
     IconEye,
     IconEyeOff,
     IconFeather,
+    IconArmchair,
     IconMapPin,
     IconPaint,
     IconSettings,
@@ -36,6 +37,8 @@ import { SwitchOrganizerModal } from "../../modals/SwitchOrganizerModal";
 import { CreateOrganizerModal } from "../../modals/CreateOrganizerModal";
 import { useGetOrganizers } from "../../../queries/useGetOrganizers.ts";
 import { useGetAccount } from "../../../queries/useGetAccount.ts";
+import { useLicensedFeature } from "../../../ee/licensing/hooks/useLicensedFeature.ts";
+import { FeatureFlag } from "../../../constants/featureFlags.ts";
 import { ShareModal } from "../../modals/ShareModal";
 import { organizerHomepageUrl } from "../../../utilites/urlHelper";
 import { useUpdateOrganizerStatus } from "../../../mutations/useUpdateOrganizerStatus.ts";
@@ -61,6 +64,7 @@ const OrganizerLayout = () => {
     const { data: organizerResposne } = useGetOrganizers();
     const organizers = organizerResposne?.data;
     const { data: account } = useGetAccount();
+    const seating = useLicensedFeature(FeatureFlag.SEATING);
     const resendEmailConfirmationMutation = useResendEmailConfirmation();
     const [emailConfirmationResent, setEmailConfirmationResent] = useState(false);
     const { data: me } = useGetMe();
@@ -116,6 +120,7 @@ const OrganizerLayout = () => {
 
         { label: t`Library` },
         { link: 'locations', label: t`Locations`, icon: IconMapPin },
+        { link: 'seat-maps', label: t`Seat Maps`, icon: IconArmchair, showWhen: () => seating.isVisible },
 
         { label: t`Integrations` },
         { link: 'webhooks', label: t`Webhooks`, icon: IconWebhook },
@@ -146,7 +151,6 @@ const OrganizerLayout = () => {
     });
 
     const handleStatusToggle = () => {
-        // Check if user email is verified
         if (!isUserEmailVerfied) {
             openEmailVerificationModal();
             return;

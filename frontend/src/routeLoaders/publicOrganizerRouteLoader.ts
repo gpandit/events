@@ -59,7 +59,6 @@ export const publicOrganizerRouteLoader = async ({params, request}: LoaderFuncti
             isPastEvents
         };
     } catch (error: any) {
-        // Re-throw redirect responses so React Router can handle them
         if (error instanceof Response) {
             throw error;
         }

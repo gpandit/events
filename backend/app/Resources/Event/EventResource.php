@@ -34,6 +34,7 @@ class EventResource extends BaseResource
             'is_shop' => $this->getIsShop(),
             'shop_category' => $this->getShopCategory(),
             'vendor_type' => $this->getVendorType(),
+            'has_seat_map' => $this->getHasSeatMap(),
             'recurrence_rule' => $this->getRecurrenceRule(),
             /** @var 'UPCOMING'|'ONGOING'|'ENDED' */
             'lifecycle_status' => $this->getLifeCycleStatus(),

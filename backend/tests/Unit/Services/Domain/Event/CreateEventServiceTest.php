@@ -9,6 +9,7 @@ use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\DomainObjects\OrganizerSettingDomainObject;
+use HiEvents\Enterprise\BoxOffice\Repository\Interfaces\BoxOfficeRepositoryInterface;
 use HiEvents\Exceptions\OrganizerNotFoundException;
 use HiEvents\Repository\Interfaces\CheckInListRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
@@ -51,6 +52,8 @@ class CreateEventServiceTest extends TestCase
 
     private CheckInListRepositoryInterface $checkInListRepository;
 
+    private BoxOfficeRepositoryInterface $boxOfficeRepository;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -66,6 +69,7 @@ class CreateEventServiceTest extends TestCase
         $this->filesystemManager = Mockery::mock(FilesystemManager::class);
         $this->occurrenceRepository = Mockery::mock(EventOccurrenceRepositoryInterface::class);
         $this->checkInListRepository = Mockery::mock(CheckInListRepositoryInterface::class);
+        $this->boxOfficeRepository = Mockery::mock(BoxOfficeRepositoryInterface::class);
 
         $this->createEventService = new CreateEventService(
             $this->eventRepository,
@@ -79,6 +83,7 @@ class CreateEventServiceTest extends TestCase
             $this->filesystemManager,
             $this->occurrenceRepository,
             $this->checkInListRepository,
+            $this->boxOfficeRepository,
         );
     }
 
@@ -135,6 +140,11 @@ class CreateEventServiceTest extends TestCase
         $this->checkInListRepository->shouldReceive('create')->once()
             ->with(Mockery::on(fn ($arg) => ($arg['is_system_default'] ?? false) === true
                 && ($arg['event_id'] ?? null) === $eventData->getId()));
+
+        $this->boxOfficeRepository->shouldReceive('create')->once()
+            ->with(Mockery::on(fn ($arg) => ($arg['is_system_default'] ?? false) === true
+                && ($arg['event_id'] ?? null) === $eventData->getId()
+                && str_starts_with($arg['short_id'] ?? '', 'bo_')));
 
         $this->config->shouldReceive('get')
             ->with('filesystems.public')
@@ -201,6 +211,7 @@ class CreateEventServiceTest extends TestCase
 
         $this->eventStatisticsRepository->shouldReceive('create');
         $this->checkInListRepository->shouldReceive('create');
+        $this->boxOfficeRepository->shouldReceive('create');
 
         $this->config->shouldReceive('get')
             ->with('filesystems.public')
@@ -275,6 +286,7 @@ class CreateEventServiceTest extends TestCase
 
         $this->eventStatisticsRepository->shouldReceive('create');
         $this->checkInListRepository->shouldReceive('create');
+        $this->boxOfficeRepository->shouldReceive('create');
 
         $this->createEventService->createEvent($eventData);
         $this->assertTrue(true);
@@ -306,6 +318,8 @@ class CreateEventServiceTest extends TestCase
             ->shouldReceive('getOrganizerSettings')
             ->andReturn(new OrganizerSettingDomainObject)
             ->getMock();
+
+        $this->boxOfficeRepository->shouldReceive('create');
 
         $this->databaseManager->shouldReceive('transaction')->once()->andReturnUsing(fn ($cb) => $cb());
 
@@ -417,6 +431,7 @@ class CreateEventServiceTest extends TestCase
 
         $this->eventStatisticsRepository->shouldReceive('create');
         $this->checkInListRepository->shouldReceive('create');
+        $this->boxOfficeRepository->shouldReceive('create');
 
         $this->purifier->shouldReceive('purify')->andReturn('Test Description');
 
@@ -473,6 +488,7 @@ class CreateEventServiceTest extends TestCase
 
         $this->eventStatisticsRepository->shouldReceive('create');
         $this->checkInListRepository->shouldReceive('create');
+        $this->boxOfficeRepository->shouldReceive('create');
 
         $this->purifier->shouldReceive('purify')->andReturn('Test Description');
 
@@ -547,6 +563,7 @@ class CreateEventServiceTest extends TestCase
 
         $this->eventStatisticsRepository->shouldReceive('create');
         $this->checkInListRepository->shouldReceive('create');
+        $this->boxOfficeRepository->shouldReceive('create');
 
         $this->purifier->shouldReceive('purify')->andReturn('Test Description');
 
@@ -601,6 +618,7 @@ class CreateEventServiceTest extends TestCase
 
         $this->eventStatisticsRepository->shouldReceive('create');
         $this->checkInListRepository->shouldReceive('create');
+        $this->boxOfficeRepository->shouldReceive('create');
 
         $this->purifier->shouldReceive('purify')->andReturn('Test Description');
 
