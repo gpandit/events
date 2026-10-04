@@ -3,6 +3,7 @@ import ErrorPage from "./error-page.tsx";
 import { publicEventRouteLoader } from "./routeLoaders/publicEventRouteLoader.ts";
 import { publicOrganizerRouteLoader } from "./routeLoaders/publicOrganizerRouteLoader.ts";
 import { organizerPreviewRouteLoader } from "./routeLoaders/organizerPreviewRouteLoader.ts";
+import { publicOrganizerShopsRouteLoader } from "./routeLoaders/publicOrganizerShopsRouteLoader.ts";
 import { defaultHomeRouteLoader } from "./routeLoaders/defaultHomeRouteLoader.ts";
 
 const RedirectToOrganizerEvents = ({pastEvents}: {pastEvents?: boolean}) => {
@@ -306,6 +307,13 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "shops",
+                async lazy() {
+                    const Shops = await import("./components/routes/organizer/Shops");
+                    return { Component: Shops.default };
+                }
+            },
+            {
                 path: "settings",
                 async lazy() {
                     const Settings = await import("./components/routes/organizer/Settings");
@@ -429,6 +437,13 @@ export const router: RouteObject[] = [
                 async lazy() {
                     const Orders = await import("./components/routes/event/orders");
                     return { Component: Orders.default };
+                }
+            },
+            {
+                path: "collection",
+                async lazy() {
+                    const ShopCollection = await import("./components/routes/event/ShopCollection");
+                    return { Component: ShopCollection.default };
                 }
             },
             {
@@ -560,6 +575,15 @@ export const router: RouteObject[] = [
         async lazy() {
             const PublicOrganizerEvents = await import("./components/layouts/PublicOrganizerEvents");
             return { Component: PublicOrganizerEvents.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/events/:organizerId/:organizerSlug/shop",
+        loader: publicOrganizerShopsRouteLoader,
+        async lazy() {
+            const PublicOrganizerShops = await import("./components/layouts/PublicOrganizerShops");
+            return { Component: PublicOrganizerShops.default };
         },
         errorElement: <ErrorPage />,
     },
@@ -749,6 +773,14 @@ export const router: RouteObject[] = [
         async lazy() {
             const PrintProduct = await import("./components/routes/product-widget/PrintProduct");
             return { Component: PrintProduct.default };
+        },
+        errorElement: <ErrorPage />
+    },
+    {
+        path: "/manage/event/:eventId/collection/print",
+        async lazy() {
+            const ShopPickListPrint = await import("./components/routes/event/ShopPickListPrint");
+            return { Component: ShopPickListPrint.default };
         },
         errorElement: <ErrorPage />
     },

@@ -3,6 +3,7 @@ import {
     IconBrandStripe,
     IconCalendar,
     IconCalendarPlus,
+    IconShoppingBag,
     IconChartPie,
     IconChevronRight,
     IconDashboard,
@@ -104,6 +105,7 @@ const OrganizerLayout = () => {
 
         { label: t`Manage` },
         { link: 'events', label: t`Events`, icon: IconCalendar },
+        { link: 'shops', label: t`Shops`, icon: IconShoppingBag },
         { link: 'settings', label: t`Settings`, icon: IconSettings },
 
         { label: t`Tools` },

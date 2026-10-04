@@ -24,6 +24,8 @@ use Throwable;
 
 class CreateShopHandler
 {
+    private const SHOP_OPEN_YEARS = 50;
+
     public function __construct(
         private readonly CreateEventService $createEventService,
         private readonly OrganizerFetchService $organizerFetchService,
@@ -81,6 +83,7 @@ class CreateShopHandler
         $shop = $this->createEventService->createEvent(
             eventData: $event,
             startDate: now($organizer->getTimezone())->toDateTimeString(),
+            endDate: now($organizer->getTimezone())->addYears(self::SHOP_OPEN_YEARS)->toDateTimeString(),
         );
 
         $this->createProductCategories($shop, $dto->shop_category);

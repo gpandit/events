@@ -45,3 +45,20 @@ Blank fields fall back to neutral defaults. The team section and Instagram links
 3. Set the environment variables and run `php artisan migrate`.
 4. Review the legal pages (privacy policy, terms, cookie policy) with the school's own details.
 5. Set `VITE_DEFAULT_ORGANIZER_ID` to the organizer so the root URL opens its site.
+
+## 4. School shop
+
+Manage > Shops creates one shop per vendor. Each shop is a category plus a seller:
+
+| Category | Can be sold by | Notes |
+| --- | --- | --- |
+| New uniform | School, external vendor | Starts with Regular, Sports home, Sports away and House sub-categories |
+| Preloved uniform | School, PTA | Starts with Regular, Sports and House sub-categories |
+| Textbooks & stationery | School, external vendor | Textbooks and Stationery sub-categories |
+| School meals | External vendor | One vendor per school |
+
+- Sub-categories are product categories inside the shop; rename, add or hide them from Products.
+- Sizes: create the product with tiered prices and label each tier with the age or size (for example "Age 5-6" or "Small"). Each tier has its own price and stock.
+- Checkout uses the same payment methods as events. Every shop asks for **Student name** and **Student class or year** (the first order question is used as the student name on pick lists, so keep it first).
+- All orders are collected from school reception. Manage > (shop) > Collection lists orders by student: mark them ready to email the buyer, mark them collected, or print the pick list.
+- Shops appear on the public Shop page, grouped by category, once published.

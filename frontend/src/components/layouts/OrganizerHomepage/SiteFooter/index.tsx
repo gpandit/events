@@ -8,6 +8,7 @@ import {
     organizerEventsPath,
     organizerHomepagePath,
     organizerResourcesPath,
+    organizerShopPath,
 } from "../../../../utilites/urlHelper.ts";
 import {getConfig} from "../../../../utilites/config.ts";
 import {getOrganizerContactEmail, getOrganizerInstagramHandle} from "../../../../utilites/organizerContent.ts";
@@ -118,6 +119,9 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         </Link>
                         <Link to={organizerEventsPath(organizer)} className={classes.footerNavLink}>
                             {t`Events`}
+                        </Link>
+                        <Link to={organizerShopPath(organizer)} className={classes.footerNavLink}>
+                            {t`Shop`}
                         </Link>
                         <Link to={`${organizerHomepagePath(organizer)}/about`} className={classes.footerNavLink}>
                             {t`About Us`}

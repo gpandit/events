@@ -8,6 +8,7 @@ import {Wordmark} from "../../../common/Wordmark";
 import {
     organizerAccountPath,
     organizerEventsPath,
+    organizerShopPath,
     organizerHomepagePath,
     organizerPuzzlesPath,
     organizerResourcesPath,
@@ -16,7 +17,7 @@ import classes from './OrganizerNav.module.scss';
 
 interface OrganizerNavProps {
     organizer: Organizer;
-    active?: 'home' | 'events' | 'about' | 'stories' | 'resources' | 'account';
+    active?: 'home' | 'events' | 'shops' | 'about' | 'stories' | 'resources' | 'account';
 }
 
 const HIDE_AFTER_PX = 80;
@@ -83,6 +84,9 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                     <Link to={organizerEventsPath(organizer)} className={linkClass(active === 'events')}>
                         {t`Events`}
                     </Link>
+                    <Link to={organizerShopPath(organizer)} className={linkClass(active === 'shops')}>
+                        {t`Shop`}
+                    </Link>
                     <Menu trigger="hover" openDelay={50} closeDelay={150} position="bottom-start" withinPortal>
                         <Menu.Target>
                             <Link
@@ -131,6 +135,13 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                         onClick={closeMenu}
                     >
                         {t`Events`}
+                    </Link>
+                    <Link
+                        to={organizerShopPath(organizer)}
+                        className={linkClass(active === 'shops')}
+                        onClick={closeMenu}
+                    >
+                        {t`Shop`}
                     </Link>
                     <Link
                         to={organizerResourcesPath(organizer)}

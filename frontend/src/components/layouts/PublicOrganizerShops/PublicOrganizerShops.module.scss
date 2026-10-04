@@ -1,0 +1,74 @@
+.page {
+  padding: 8px 0 32px;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.intro {
+  max-width: 640px;
+  margin: 0 auto 24px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.empty {
+  text-align: center;
+  opacity: 0.7;
+}
+
+.section {
+  margin-top: 28px;
+}
+
+.sectionTitle {
+  margin: 0 0 14px;
+  font-size: 1.3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: block;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  background: var(--organizer-content-bg-color, #fff);
+  border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
+  border-radius: 12px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.cover {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 14px 16px;
+}
+
+.cardTitle {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.vendor {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--organizer-primary-color, inherit);
+}

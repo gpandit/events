@@ -585,12 +585,32 @@ export interface UpsertPriceOverrideRequest {
     quantity_available?: number | null;
 }
 
+export type ShopCategory = 'UNIFORM' | 'PRELOVED_UNIFORM' | 'BOOKS_STATIONERY' | 'MEALS';
+
+export type ShopVendorType = 'SCHOOL' | 'EXTERNAL' | 'PTA';
+
+export type CollectionStatus = 'PENDING' | 'READY' | 'COLLECTED';
+
+export interface ShopPickListRow {
+    order_id: IdParam;
+    order_public_id: string;
+    student_name: string;
+    answers: { title: string; answer: string }[];
+    buyer_name: string;
+    buyer_email: string;
+    collection_status: CollectionStatus;
+    items: { name: string; quantity: number }[];
+}
+
 export interface Event extends EventBase {
     id?: IdParam;
     slug: string;
     status?: EventStatus;
     type?: EventType;
     recurrence_rule?: RecurrenceRule;
+    is_shop?: boolean;
+    shop_category?: ShopCategory;
+    vendor_type?: ShopVendorType;
     description_preview?: string;
     lifecycle_status?: EventLifecycleStatus;
     settings?: EventSettings;
@@ -1061,6 +1081,9 @@ export interface Order {
     currency: string;
     status: 'RESERVED' | 'CANCELLED' | 'COMPLETED' | 'AWAITING_OFFLINE_PAYMENT' | 'ABANDONED';
     refund_status?: 'REFUND_PENDING' | 'REFUND_FAILED' | 'REFUNDED' | 'PARTIALLY_REFUNDED';
+    collection_status?: CollectionStatus | null;
+    ready_for_collection_at?: string | null;
+    collected_at?: string | null;
     payment_status?: 'NO_PAYMENT_REQUIRED' | 'AWAITING_PAYMENT' | 'PAYMENT_FAILED' | 'PAYMENT_RECEIVED' | 'AWAITING_OFFLINE_PAYMENT';
     public_id: string;
     is_payment_required: boolean;

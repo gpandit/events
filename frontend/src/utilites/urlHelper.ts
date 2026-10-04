@@ -30,6 +30,10 @@ export const organizerPuzzlesPath = (organizer: Organizer) => {
     return `${organizerHomepagePath(organizer)}/puzzles`;
 }
 
+export const organizerShopPath = (organizer: Organizer) => {
+    return `${organizerHomepagePath(organizer)}/shop`;
+}
+
 export const organizerEventsPath = (organizer: Organizer) => {
     return `${organizerHomepagePath(organizer)}/events`;
 }

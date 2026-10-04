@@ -63,12 +63,14 @@ class CreateShopHandlerTest extends TestCase
     {
         $this->createEventService->shouldReceive('createEvent')
             ->once()
-            ->withArgs(function (EventDomainObject $event, ?string $startDate) {
+            ->withArgs(function (EventDomainObject $event, ?string $startDate, ?string $endDate) {
                 return $event->getIsShop() === true
                     && $event->getShopCategory() === 'UNIFORM'
                     && $event->getVendorType() === 'EXTERNAL'
                     && $event->getStatus() === 'DRAFT'
-                    && $startDate !== null;
+                    && $startDate !== null
+                    && $endDate !== null
+                    && $endDate > $startDate;
             })
             ->andReturn((new EventDomainObject)->setId(55));
 
