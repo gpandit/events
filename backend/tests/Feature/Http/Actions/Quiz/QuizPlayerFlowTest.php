@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Http\Actions\Quiz;
 
-use HiEvents\Mail\Quiz\QuizParentConsentEmail;
+use HiEvents\Mail\Quiz\QuizUsernameReminderEmail;
 use HiEvents\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
@@ -37,11 +37,17 @@ class QuizPlayerFlowTest extends TestCase
         return "/public/organizers/{$this->organizerId}/{$path}";
     }
 
-    private function register(string $firstName = 'Amelia'): array
+    private function usernameOptions(): array
+    {
+        return $this->getJson($this->url('quiz-players/username-options'))->assertOk()->json('data');
+    }
+
+    private function register(string $firstName = 'Amelia', ?string $email = null): array
     {
         $response = $this->postJson($this->url('quiz-players/register'), [
+            'username' => $this->usernameOptions()[0],
             'first_name' => $firstName,
-            'email' => 'parent@example.com',
+            'email' => $email ?? uniqid('parent').'@example.com',
             'age_band' => '14-17',
             'password' => 'secret123',
         ]);
@@ -51,9 +57,9 @@ class QuizPlayerFlowTest extends TestCase
         return $response->json('data');
     }
 
-    public function test_registering_assigns_a_character_username_without_exposing_personal_details(): void
+    public function test_registering_creates_a_character_username_without_exposing_personal_details(): void
     {
-        $session = $this->register();
+        $session = $this->register('Amelia', 'parent@example.com');
 
         $this->assertMatchesRegularExpression('/^[A-Za-z][A-Za-z0-9]+\d{2,3}$/', $session['username']);
         $this->assertNotEmpty($session['token']);
@@ -62,89 +68,110 @@ class QuizPlayerFlowTest extends TestCase
         $this->assertDatabaseHas('quiz_players', ['username' => $session['username'], 'email' => 'parent@example.com']);
     }
 
-    public function test_a_younger_player_must_provide_a_different_parent_email(): void
-    {
-        $payload = ['first_name' => 'Amelia', 'email' => 'child@example.com', 'age_band' => '8-10', 'password' => 'secret123'];
-
-        $this->postJson($this->url('quiz-players/register'), $payload)
-            ->assertUnprocessable()
-            ->assertJsonValidationErrors('parent_email');
-
-        $this->postJson($this->url('quiz-players/register'), $payload + ['parent_email' => 'child@example.com'])
-            ->assertUnprocessable()
-            ->assertJsonValidationErrors('parent_email');
-    }
-
-    public function test_a_younger_player_only_appears_on_the_leaderboard_after_parental_consent(): void
+    public function test_a_younger_player_needs_no_parent_email_and_appears_on_the_leaderboard_straight_away(): void
     {
         Mail::fake();
 
         $session = $this->postJson($this->url('quiz-players/register'), [
+            'username' => $this->usernameOptions()[0],
             'first_name' => 'Amelia',
             'email' => 'child@example.com',
             'age_band' => '8-10',
-            'parent_email' => 'parent@example.com',
             'password' => 'secret123',
         ])->assertCreated()->json('data');
 
-        $consentUrl = null;
-        Mail::assertQueued(QuizParentConsentEmail::class, function (QuizParentConsentEmail $mail) use (&$consentUrl) {
-            $consentUrl = $mail->content()->with['consentUrl'];
-
-            return $mail->hasTo('parent@example.com');
-        });
-        $token = basename((string) parse_url($consentUrl, PHP_URL_PATH));
         $headers = ['X-Quiz-Token' => $session['token']];
 
         $this->postJson($this->url('quiz-results'), ['age_band' => '8-10', 'score' => 20, 'total_questions' => 20], $headers)->assertOk();
-        $this->getJson($this->url('quiz-players/me'), $headers)->assertJsonPath('data.leaderboard_status', 'PENDING');
-        $this->assertSame([], $this->getJson($this->url('quiz-leaderboard?age_band=8-10'))->json('data'));
 
-        $this->getJson($this->url("parental-consents/{$token}"))
-            ->assertOk()
-            ->assertJsonPath('data.subject_type', 'QUIZ_PLAYER')
-            ->assertJsonPath('data.username', $session['username']);
+        Mail::assertNothingQueued();
+        $this->getJson($this->url('quiz-players/me'), $headers)->assertJsonMissingPath('data.leaderboard_status');
 
-        $this->postJson($this->url("parental-consents/{$token}"), ['granted' => true])->assertOk();
-        $this->postJson($this->url("parental-consents/{$token}"), ['granted' => false])->assertUnprocessable();
-
-        $this->getJson($this->url('quiz-players/me'), $headers)->assertJsonPath('data.leaderboard_status', 'GRANTED');
-        $this->assertSame(
-            [$session['username']],
-            array_column($this->getJson($this->url('quiz-leaderboard?age_band=8-10'))->json('data'), 'username')
-        );
+        $leaderboard = $this->getJson($this->url('quiz-leaderboard?age_band=8-10'))->json('data');
+        $this->assertSame([$session['username']], array_column($leaderboard, 'username'));
+        $this->assertSame(['rank', 'username', 'total_points', 'tests_taken', 'best_percentage'], array_keys($leaderboard[0]));
     }
 
-    public function test_a_declined_parental_consent_keeps_the_player_off_the_leaderboard(): void
+    public function test_the_player_is_offered_ten_distinct_character_usernames_to_choose_from(): void
+    {
+        $options = $this->usernameOptions();
+
+        $this->assertCount(10, $options);
+        $this->assertCount(10, array_unique($options));
+        $this->assertCount(10, array_unique(array_map(fn (string $name) => preg_replace('/\d+$/', '', $name), $options)));
+    }
+
+    public function test_the_player_gets_exactly_the_username_they_chose(): void
+    {
+        $chosen = $this->usernameOptions()[3];
+
+        $response = $this->postJson($this->url('quiz-players/register'), [
+            'username' => $chosen,
+            'first_name' => 'Amelia',
+            'email' => 'parent@example.com',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertCreated();
+
+        $this->assertSame($chosen, $response->json('data.username'));
+    }
+
+    public function test_an_email_that_is_already_registered_cannot_register_another_username(): void
+    {
+        $this->register('Amelia', 'parent@example.com');
+
+        $this->postJson($this->url('quiz-players/register'), [
+            'username' => $this->usernameOptions()[0],
+            'first_name' => 'Noah',
+            'email' => 'Parent@Example.com',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertUnprocessable()->assertJsonValidationErrors('email');
+
+        $this->assertSame(1, DB::table('quiz_players')->where('organizer_id', $this->organizerId)->count());
+    }
+
+    public function test_a_registered_email_can_request_its_username_by_email(): void
+    {
+        Mail::fake();
+        $this->register('Amelia', 'parent@example.com');
+
+        $this->postJson($this->url('quiz-players/forgot-username'), ['email' => 'PARENT@example.com'])->assertOk();
+
+        Mail::assertQueued(QuizUsernameReminderEmail::class, fn (QuizUsernameReminderEmail $mail) => $mail->hasTo('parent@example.com'));
+    }
+
+    public function test_requesting_a_username_for_an_unknown_email_sends_nothing_and_reveals_nothing(): void
     {
         Mail::fake();
 
-        $session = $this->postJson($this->url('quiz-players/register'), [
-            'first_name' => 'Noah',
-            'email' => 'child@example.com',
-            'age_band' => '11-13',
-            'parent_email' => 'parent@example.com',
-            'password' => 'secret123',
-        ])->assertCreated()->json('data');
+        $this->postJson($this->url('quiz-players/forgot-username'), ['email' => 'nobody@example.com'])->assertOk();
 
-        $token = null;
-        Mail::assertQueued(QuizParentConsentEmail::class, function (QuizParentConsentEmail $mail) use (&$token) {
-            $token = basename((string) parse_url($mail->content()->with['consentUrl'], PHP_URL_PATH));
-
-            return true;
-        });
-
-        $this->postJson($this->url("parental-consents/{$token}"), ['granted' => false])->assertOk();
-        $this->postJson($this->url('quiz-results'), ['age_band' => '11-13', 'score' => 20, 'total_questions' => 20], ['X-Quiz-Token' => $session['token']])->assertOk();
-
-        $this->assertSame([], $this->getJson($this->url('quiz-leaderboard?age_band=11-13'))->json('data'));
+        Mail::assertNothingQueued();
     }
 
-    public function test_every_player_gets_a_different_username(): void
+    public function test_a_username_that_is_already_taken_cannot_be_chosen_again(): void
     {
-        $usernames = collect(range(1, 8))->map(fn () => $this->register()['username']);
+        $taken = $this->register()['username'];
 
-        $this->assertCount(8, $usernames->unique());
+        $this->postJson($this->url('quiz-players/register'), [
+            'username' => strtolower($taken),
+            'first_name' => 'Noah',
+            'email' => 'other@example.com',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertUnprocessable()->assertJsonValidationErrors('username');
+    }
+
+    public function test_a_username_that_was_not_offered_is_rejected(): void
+    {
+        $this->postJson($this->url('quiz-players/register'), [
+            'username' => 'MadeUpName77',
+            'first_name' => 'Noah',
+            'email' => 'other@example.com',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertUnprocessable()->assertJsonValidationErrors('username');
     }
 
     public function test_a_returning_player_can_sign_in_with_their_username_in_any_case(): void

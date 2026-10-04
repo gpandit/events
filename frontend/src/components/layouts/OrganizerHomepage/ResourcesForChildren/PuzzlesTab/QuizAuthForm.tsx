@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
-import {t} from '@lingui/macro';
+import {t, Trans} from '@lingui/macro';
 import {IconLoader2} from '@tabler/icons-react';
 import {IdParam, QuizPlayerSession} from '../../../../../types.ts';
 import {useRegisterQuizPlayer} from '../../../../../mutations/useRegisterQuizPlayer.ts';
 import {useLoginQuizPlayer} from '../../../../../mutations/useLoginQuizPlayer.ts';
 import {useRequestQuizPasswordReset} from '../../../../../mutations/useRequestQuizPasswordReset.ts';
+import {useRequestQuizUsernameReminder} from '../../../../../mutations/useRequestQuizUsernameReminder.ts';
+import {useGetQuizUsernameOptions} from '../../../../../queries/useGetQuizUsernameOptions.ts';
+import {QuizUsernamePicker} from './QuizUsernamePicker.tsx';
 import {AGE_BANDS} from './generalKnowledgePuzzles.ts';
 import {ageBandLabel} from './quizLabels.ts';
 import classes from '../ResourcesForChildren.module.scss';
@@ -16,10 +19,9 @@ interface QuizAuthFormProps {
 
 type AuthMode = 'signup' | 'signin' | 'forgot';
 
-const emptySignUp = {first_name: '', email: '', age_band: '', parent_email: '', password: ''};
+const emptySignUp = {username: '', first_name: '', email: '', age_band: '', password: ''};
 const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 
-const requiresParentalConsent = (ageBand: string) => ageBand !== '' && ageBand !== '14-17';
 const emptySignIn = {username: '', password: ''};
 
 const errorMessage = (error: any): string => {
@@ -37,10 +39,13 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
     const [signIn, setSignIn] = useState(emptySignIn);
     const [error, setError] = useState<string | null>(null);
     const [newPlayer, setNewPlayer] = useState<QuizPlayerSession | null>(null);
-    const [parentContacted, setParentContacted] = useState(false);
+    const usernameOptions = useGetQuizUsernameOptions(organizerId);
     const registerMutation = useRegisterQuizPlayer(organizerId);
     const loginMutation = useLoginQuizPlayer(organizerId);
     const resetMutation = useRequestQuizPasswordReset(organizerId);
+    const reminderMutation = useRequestQuizUsernameReminder(organizerId);
+    const [emailRegistered, setEmailRegistered] = useState(false);
+    const [reminderSent, setReminderSent] = useState(false);
     const [resetSent, setResetSent] = useState(false);
     const isPending = registerMutation.isPending || loginMutation.isPending || resetMutation.isPending;
 
@@ -48,12 +53,12 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
         setMode(next);
         setError(null);
         setResetSent(false);
+        setEmailRegistered(false);
+        setReminderSent(false);
     };
 
     const handleSignUp = (event: React.FormEvent) => {
         event.preventDefault();
-
-        const needsParent = requiresParentalConsent(signUp.age_band);
 
         if (!signUp.first_name.trim() || !signUp.password) {
             setError(t`Please fill in your first name and password`);
@@ -70,23 +75,42 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
             return;
         }
 
-        if (needsParent && !EMAIL_PATTERN.test(signUp.parent_email.trim())) {
-            setError(t`Please enter your parent or guardian's email address`);
+        if (!signUp.username) {
+            setError(t`Please pick a username`);
             return;
         }
 
         setError(null);
+        setEmailRegistered(false);
+        setReminderSent(false);
         registerMutation.mutate({
+            username: signUp.username,
             first_name: signUp.first_name,
             email: signUp.email.trim(),
             age_band: signUp.age_band,
-            parent_email: needsParent ? signUp.parent_email.trim() : undefined,
             password: signUp.password,
         }, {
-            onSuccess: (response) => {
-                setParentContacted(needsParent);
-                setNewPlayer(response.data);
+            onSuccess: (response) => setNewPlayer(response.data),
+            onError: (err: any) => {
+                if (err?.response?.data?.errors?.email) {
+                    setError(null);
+                    setEmailRegistered(true);
+                    return;
+                }
+
+                setError(errorMessage(err));
+
+                if (err?.response?.data?.errors?.username) {
+                    setSignUp({...signUp, username: ''});
+                    usernameOptions.refetch();
+                }
             },
+        });
+    };
+
+    const handleReminder = () => {
+        reminderMutation.mutate(signUp.email.trim(), {
+            onSuccess: () => setReminderSent(true),
             onError: (err) => setError(errorMessage(err)),
         });
     };
@@ -130,11 +154,6 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                 <p className={classes.puzzleText}>
                     {t`Write it down! You will need it to sign in next time. Only this username is shown on the leaderboard, so your real name stays private.`}
                 </p>
-                {parentContacted && (
-                    <p className={classes.puzzleText} data-testid="puzzles-parent-contacted">
-                        {t`We have emailed your parent or guardian to ask for permission to show you on the leaderboard. You can play and save your scores in the meantime.`}
-                    </p>
-                )}
                 <button
                     type="button"
                     className={classes.primaryButton}
@@ -177,7 +196,7 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
             {mode === 'signup' ? (
                 <form onSubmit={handleSignUp} className={classes.saveForm}>
                     <p className={classes.puzzleText}>
-                        {t`Create a login to save your scores and earn points. We will give you a fun character username so your name stays private.`}
+                        {t`Create a login to save your scores and earn points. You will pick a fun character username so your name stays private.`}
                     </p>
                     <input
                         type="text"
@@ -195,9 +214,34 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                         aria-label={t`Email`}
                         autoComplete="email"
                         value={signUp.email}
-                        onChange={(e) => setSignUp({...signUp, email: e.target.value})}
+                        onChange={(e) => {
+                            setSignUp({...signUp, email: e.target.value});
+                            setEmailRegistered(false);
+                            setReminderSent(false);
+                        }}
                         data-testid="puzzles-signup-email"
                     />
+                    {emailRegistered && (
+                        <p className={classes.saveError} role="alert" data-testid="puzzles-email-registered">
+                            {reminderSent ? (
+                                t`If that email address is registered, we have emailed the username to it.`
+                            ) : (
+                                <Trans>
+                                    This email is already registered. You can{' '}
+                                    <button
+                                        type="button"
+                                        className={classes.linkButton}
+                                        onClick={handleReminder}
+                                        disabled={reminderMutation.isPending}
+                                        data-testid="puzzles-request-username"
+                                    >
+                                        request your username
+                                    </button>{' '}
+                                    and we will email it to you.
+                                </Trans>
+                            )}
+                        </p>
+                    )}
                     <p className={classes.fieldHint}>
                         {t`We use your email to save your session and to send you a link to reset your password.`}
                     </p>
@@ -217,23 +261,14 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                             </button>
                         ))}
                     </div>
-                    {requiresParentalConsent(signUp.age_band) && (
-                        <>
-                            <input
-                                type="email"
-                                className={classes.saveInput}
-                                placeholder={t`Parent or guardian's email`}
-                                aria-label={t`Parent or guardian's email`}
-                                autoComplete="off"
-                                value={signUp.parent_email}
-                                onChange={(e) => setSignUp({...signUp, parent_email: e.target.value})}
-                                data-testid="puzzles-signup-parent-email"
-                            />
-                            <p className={classes.fieldHint}>
-                                {t`We will email them to ask for permission to show you on the leaderboard. You can still play and save your scores without it.`}
-                            </p>
-                        </>
-                    )}
+                    <QuizUsernamePicker
+                        options={usernameOptions.data}
+                        isLoading={usernameOptions.isLoading}
+                        isError={usernameOptions.isError}
+                        value={signUp.username}
+                        onChange={(username) => setSignUp({...signUp, username})}
+                        onRetry={() => usernameOptions.refetch()}
+                    />
                     <input
                         type="password"
                         className={classes.saveInput}

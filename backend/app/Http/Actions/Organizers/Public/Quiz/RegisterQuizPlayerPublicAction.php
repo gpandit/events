@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace HiEvents\Http\Actions\Organizers\Public\Quiz;
 
 use HiEvents\DomainObjects\Enums\QuizAgeBand;
-use HiEvents\Exceptions\QuizUsernameUnavailableException;
+use HiEvents\Exceptions\QuizEmailAlreadyRegisteredException;
+use HiEvents\Exceptions\QuizUsernameTakenException;
 use HiEvents\Http\Actions\BaseAction;
 use HiEvents\Http\ResponseCodes;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\RegisterQuizPlayerDTO;
@@ -30,30 +31,26 @@ class RegisterQuizPlayerPublicAction extends BaseAction
 
         $data = $this->validate($request, [
             'organizer_id' => 'required|exists:organizers,id',
+            'username' => 'required|string|max:60',
             'first_name' => 'required|string|max:100',
             'email' => 'required|email|max:255',
             'age_band' => ['required', Rule::enum(QuizAgeBand::class)],
-            'parent_email' => [
-                Rule::requiredIf(fn () => QuizAgeBand::tryFrom((string) $request->input('age_band'))?->requiresParentalConsent() ?? false),
-                'nullable',
-                'email',
-                'max:255',
-                'different:email',
-            ],
             'password' => 'required|string|min:6|max:100',
         ]);
 
         try {
             $session = $this->handler->handle(RegisterQuizPlayerDTO::from([
                 'organizer_id' => $organizerId,
+                'username' => trim($data['username']),
                 'first_name' => $data['first_name'],
                 'email' => $data['email'],
                 'age_band' => $data['age_band'],
-                'parent_email' => $data['parent_email'] ?? null,
                 'password' => $data['password'],
             ]));
-        } catch (QuizUsernameUnavailableException $exception) {
-            return $this->errorResponse($exception->getMessage(), ResponseCodes::HTTP_SERVICE_UNAVAILABLE);
+        } catch (QuizEmailAlreadyRegisteredException $exception) {
+            throw ValidationException::withMessages(['email' => $exception->getMessage()]);
+        } catch (QuizUsernameTakenException $exception) {
+            throw ValidationException::withMessages(['username' => $exception->getMessage()]);
         }
 
         return $this->jsonResponse($session->toArray(), ResponseCodes::HTTP_CREATED, wrapInData: true);

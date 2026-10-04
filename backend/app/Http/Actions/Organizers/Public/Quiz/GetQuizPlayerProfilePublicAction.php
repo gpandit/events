@@ -33,7 +33,6 @@ class GetQuizPlayerProfilePublicAction extends BaseQuizPlayerAction
 
         return $this->jsonResponse([
             'username' => $profile->username,
-            'leaderboard_status' => $profile->leaderboard_status,
             'totals' => $profile->totals->map(fn ($totals) => $totals->toArray())->values(),
             'results' => QuizResultResource::collection($profile->results)->resolve($request),
         ], wrapInData: true);

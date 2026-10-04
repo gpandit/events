@@ -200,6 +200,20 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "feature-flags",
+                async lazy() {
+                    const FeatureFlags = await import("./components/routes/admin/FeatureFlags");
+                    return { Component: FeatureFlags.default };
+                }
+            },
+            {
+                path: "licence",
+                async lazy() {
+                    const Licence = await import("./ee/licensing/components/routes/admin/Licence");
+                    return { Component: Licence.default };
+                }
+            },
+            {
                 path: "failed-jobs",
                 async lazy() {
                     const FailedJobs = await import("./components/routes/admin/FailedJobs");
@@ -341,6 +355,20 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "seat-maps",
+                async lazy() {
+                    const SeatMaps = await import("./ee/seating/components/routes/organizer/SeatMaps");
+                    return { Component: SeatMaps.default };
+                }
+            },
+            {
+                path: "seat-maps/:seatMapId",
+                async lazy() {
+                    const SeatMapDesigner = await import("./ee/seating/components/routes/organizer/SeatMapDesigner");
+                    return { Component: SeatMapDesigner.default };
+                }
+            },
+            {
                 path: "payments",
                 async lazy() {
                     const PaymentsRedirect = await import("./components/routes/organizer/Payments/Redirect");
@@ -453,6 +481,13 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "box-office",
+                async lazy() {
+                    const BoxOffices = await import("./ee/box-office/components/routes/event/BoxOffices");
+                    return { Component: BoxOffices.default };
+                }
+            },
+            {
                 path: "messages",
                 async lazy() {
                     const Messages = await import("./components/routes/event/messages");
@@ -520,6 +555,27 @@ export const router: RouteObject[] = [
                 async lazy() {
                     const CapacityAssignments = await import("./components/routes/event/CapacityAssignments");
                     return { Component: CapacityAssignments.default };
+                }
+            },
+            {
+                path: "seating",
+                async lazy() {
+                    const Seating = await import("./ee/seating/components/routes/event/Seating");
+                    return { Component: Seating.default };
+                }
+            },
+            {
+                path: "seating/sales",
+                async lazy() {
+                    const SeatingSales = await import("./ee/seating/components/routes/event/SeatingSales");
+                    return { Component: SeatingSales.default };
+                }
+            },
+            {
+                path: "seating/designer",
+                async lazy() {
+                    const SeatMapDesigner = await import("./ee/seating/components/routes/event/SeatMapDesigner");
+                    return { Component: SeatMapDesigner.default };
                 }
             },
             {
@@ -596,6 +652,15 @@ export const router: RouteObject[] = [
         async lazy() {
             const PublicChildrenResources = await import("./components/layouts/PublicChildrenResources");
             return { Component: PublicChildrenResources.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/events/:organizerId/:organizerSlug/puzzles",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicPuzzles = await import("./components/layouts/PublicPuzzles");
+            return { Component: PublicPuzzles.default };
         },
         errorElement: <ErrorPage />,
     },
@@ -682,6 +747,14 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/checkout/:eventId/seats",
+        async lazy() {
+            const SeatCheckout = await import("./ee/seating/components/layouts/SeatCheckout");
+            return { Component: SeatCheckout.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/checkout/:eventId",
         async lazy() {
             const Checkout = await import("./components/layouts/Checkout");
@@ -744,6 +817,14 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />
     },
     {
+        path: "/manage/event/:eventId/seating/print",
+        async lazy() {
+            const SeatingPrint = await import("./ee/seating/components/routes/event/SeatingPrint");
+            return { Component: SeatingPrint.default };
+        },
+        errorElement: <ErrorPage />
+    },
+    {
         path: "/product/:eventId/:attendeeShortId",
         async lazy() {
             const AttendeeProductAndInformation = await import("./components/routes/product-widget/AttendeeProductAndInformation");
@@ -756,6 +837,14 @@ export const router: RouteObject[] = [
         async lazy() {
             const CheckIn = await import("./components/layouts/CheckIn");
             return { Component: CheckIn.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/box-office/:boxOfficeShortId",
+        async lazy() {
+            const BoxOffice = await import("./ee/box-office/components/layouts/BoxOffice");
+            return { Component: BoxOffice.default };
         },
         errorElement: <ErrorPage />,
     },

@@ -7,7 +7,7 @@ test.describe('organizer puzzles page', () => {
     const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Org'));
     await api.updateOrganizerStatus(organizer.id, 'LIVE');
 
-    await page.goto(`/events/${organizer.id}/${organizer.slug}/resources/puzzles`);
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/puzzles`);
 
     await expect(page.getByTestId('page-banner')).toBeVisible();
 
@@ -25,7 +25,7 @@ test.describe('organizer puzzles page', () => {
     const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Save Org'));
     await api.updateOrganizerStatus(organizer.id, 'LIVE');
 
-    await page.goto(`/events/${organizer.id}/${organizer.slug}/resources/puzzles`);
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/puzzles`);
     await page.getByTestId('puzzles-age-5-7').click();
     await page.getByTestId('puzzles-start-button').click();
 
@@ -46,6 +46,7 @@ test.describe('organizer puzzles page', () => {
     await page.getByLabel('First name', { exact: true }).fill('Amelia');
     await page.getByLabel('Email', { exact: true }).fill(`player-${Date.now()}@example.com`);
     await page.getByTestId('puzzles-signup-age-14-17').click();
+    await page.getByTestId('puzzles-username-option').first().click();
     await page.getByLabel('Password', { exact: true }).fill('secret123');
     await page.getByTestId('puzzles-auth-signup-submit').click();
 
@@ -55,7 +56,6 @@ test.describe('organizer puzzles page', () => {
 
     await expect(page.getByTestId('puzzles-points-earned')).toBeVisible();
 
-    await page.getByRole('button', { name: 'View the leaderboard' }).click();
     await page.getByTestId('puzzles-leaderboard-age-5-7').click();
     await expect(page.getByTestId('puzzles-leaderboard-row').filter({ hasText: username })).toBeVisible();
   });
@@ -64,11 +64,12 @@ test.describe('organizer puzzles page', () => {
     const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Return Org'));
     await api.updateOrganizerStatus(organizer.id, 'LIVE');
 
-    await page.goto(`/events/${organizer.id}/${organizer.slug}/resources/puzzles`);
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/puzzles`);
     await page.getByTestId('puzzles-sign-in').click();
     await page.getByLabel('First name', { exact: true }).fill('Noah');
     await page.getByLabel('Email', { exact: true }).fill(`player-${Date.now()}@example.com`);
     await page.getByTestId('puzzles-signup-age-14-17').click();
+    await page.getByTestId('puzzles-username-option').first().click();
     await page.getByLabel('Password', { exact: true }).fill('secret123');
     await page.getByTestId('puzzles-auth-signup-submit').click();
     const username = (await page.getByTestId('puzzles-new-username').textContent())?.trim() ?? '';
@@ -83,6 +84,9 @@ test.describe('organizer puzzles page', () => {
     await expect(page.getByTestId('puzzles-points-earned')).toBeVisible();
 
     await page.getByTestId('puzzles-choose-age-group').click();
+    await expect(page.getByTestId('puzzles-player-summary')).toContainText(`Hello ${username}`);
+    await expect(page.getByTestId('puzzles-high-score')).toBeVisible();
+    await expect(page.getByTestId('puzzles-total-score')).toBeVisible();
     await page.getByTestId('puzzles-my-scores').click();
     await page.getByTestId('puzzles-sign-out').click();
 
@@ -96,27 +100,21 @@ test.describe('organizer puzzles page', () => {
     await expect(page.getByTestId('puzzles-profile-results').getByRole('row')).toHaveCount(2);
   });
 
-  test('a young child needs a parent to approve before appearing on the leaderboard', async ({ page, api, mailpit }) => {
-    const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Consent Org'));
+  test('a young child signs up without a parent email and appears on the leaderboard straight away', async ({ page, api }) => {
+    const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Young Org'));
     await api.updateOrganizerStatus(organizer.id, 'LIVE');
-    const parentEmail = `parent-${Date.now()}@example.com`;
 
-    await page.goto(`/events/${organizer.id}/${organizer.slug}/resources/puzzles`);
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/puzzles`);
     await page.getByTestId('puzzles-sign-in').click();
     await page.getByLabel('First name', { exact: true }).fill('Amelia');
     await page.getByLabel('Email', { exact: true }).fill(`child-${Date.now()}@example.com`);
-    await expect(page.getByTestId('puzzles-signup-parent-email')).toBeHidden();
     await page.getByTestId('puzzles-signup-age-8-10').click();
+    await expect(page.getByLabel("Parent or guardian's email")).toHaveCount(0);
+    await page.getByTestId('puzzles-username-option').first().click();
     await page.getByLabel('Password', { exact: true }).fill('secret123');
-
-    await page.getByTestId('puzzles-auth-signup-submit').click();
-    await expect(page.getByRole('alert')).toContainText("parent or guardian's email");
-
-    await page.getByTestId('puzzles-signup-parent-email').fill(parentEmail);
     await page.getByTestId('puzzles-auth-signup-submit').click();
 
     const username = (await page.getByTestId('puzzles-new-username').textContent())?.trim() ?? '';
-    await expect(page.getByTestId('puzzles-parent-contacted')).toBeVisible();
     await page.getByTestId('puzzles-auth-continue').click();
 
     await page.getByTestId('puzzles-age-8-10').click();
@@ -127,18 +125,74 @@ test.describe('organizer puzzles page', () => {
     }
     await expect(page.getByTestId('puzzles-points-earned')).toBeVisible();
 
-    await page.getByRole('button', { name: 'View the leaderboard' }).click();
-    await page.getByTestId('puzzles-leaderboard-age-8-10').click();
-    await expect(page.getByTestId('puzzles-leaderboard-row').filter({ hasText: username })).toHaveCount(0);
-
-    const consentUrl = await mailpit.waitForLink(parentEmail, /parental-consent\//);
-    await page.goto(consentUrl.pathname);
-    await page.getByTestId('parental-consent-grant').click();
-    await expect(page.getByTestId('parental-consent-result')).toContainText('permission has been recorded');
-
-    await page.goto(`/events/${organizer.id}/${organizer.slug}/resources/puzzles`);
-    await page.getByRole('button', { name: 'View the leaderboard' }).click();
     await page.getByTestId('puzzles-leaderboard-age-8-10').click();
     await expect(page.getByTestId('puzzles-leaderboard-row').filter({ hasText: username })).toBeVisible();
+  });
+
+  test('the old resources puzzles link redirects to the puzzles page', async ({ page, api }) => {
+    const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Redirect Org'));
+    await api.updateOrganizerStatus(organizer.id, 'LIVE');
+
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/resources/puzzles`);
+
+    await expect(page).toHaveURL(new RegExp(`/events/${organizer.id}/${organizer.slug}/puzzles$`));
+    await expect(page.getByTestId('puzzles-leaderboard-pane')).toBeVisible();
+  });
+
+  test('a child picks their username from ten characters, five at a time', async ({ page, api }) => {
+    const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Username Org'));
+    await api.updateOrganizerStatus(organizer.id, 'LIVE');
+
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/puzzles`);
+    await page.getByTestId('puzzles-sign-in').click();
+
+    const options = page.getByTestId('puzzles-username-option');
+    await expect(options).toHaveCount(5);
+    const firstPage = await options.allTextContents();
+
+    await page.getByTestId('puzzles-username-next').click();
+    await expect(options).toHaveCount(5);
+    const secondPage = await options.allTextContents();
+    expect(new Set([...firstPage, ...secondPage]).size).toBe(10);
+    await expect(page.getByTestId('puzzles-username-next')).toBeDisabled();
+
+    await options.nth(2).click();
+    const chosen = secondPage[2];
+
+    await page.getByLabel('First name', { exact: true }).fill('Amelia');
+    await page.getByLabel('Email', { exact: true }).fill(`player-${Date.now()}@example.com`);
+    await page.getByTestId('puzzles-signup-age-14-17').click();
+    await page.getByLabel('Password', { exact: true }).fill('secret123');
+    await page.getByTestId('puzzles-auth-signup-submit').click();
+
+    await expect(page.getByTestId('puzzles-new-username')).toHaveText(chosen);
+  });
+
+  test('an email that is already registered is told so and can request its username', async ({ page, api }) => {
+    const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Email Org'));
+    await api.updateOrganizerStatus(organizer.id, 'LIVE');
+    const email = `player-${Date.now()}@example.com`;
+
+    const signUp = async () => {
+      await page.getByLabel('First name', { exact: true }).fill('Amelia');
+      await page.getByLabel('Email', { exact: true }).fill(email);
+      await page.getByTestId('puzzles-signup-age-14-17').click();
+      await page.getByTestId('puzzles-username-option').first().click();
+      await page.getByLabel('Password', { exact: true }).fill('secret123');
+      await page.getByTestId('puzzles-auth-signup-submit').click();
+    };
+
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/puzzles`);
+    await page.getByTestId('puzzles-sign-in').click();
+    await signUp();
+    await expect(page.getByTestId('puzzles-new-username')).toBeVisible();
+
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/puzzles`);
+    await page.getByTestId('puzzles-sign-in').click();
+    await signUp();
+
+    await expect(page.getByTestId('puzzles-email-registered')).toContainText('already registered');
+    await page.getByTestId('puzzles-request-username').click();
+    await expect(page.getByTestId('puzzles-email-registered')).toContainText('emailed the username');
   });
 });

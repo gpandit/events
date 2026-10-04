@@ -1,5 +1,6 @@
-import {useLoaderData, useParams} from "react-router";
+import {Navigate, useLoaderData, useParams} from "react-router";
 import {Event, GenericPaginatedResponse, Organizer} from "../../../types.ts";
+import {organizerPuzzlesPath} from "../../../utilites/urlHelper.ts";
 import {OrganizerPageShell} from "../OrganizerHomepage/OrganizerPageShell";
 import {ResourcesForChildren} from "../OrganizerHomepage/ResourcesForChildren";
 import {OrganizerNotFound} from "../PublicOrganizer/OrganizerNotFound";
@@ -16,9 +17,13 @@ export const PublicChildrenResources = () => {
         return <OrganizerNotFound/>;
     }
 
+    if (tab === 'puzzles') {
+        return <Navigate to={organizerPuzzlesPath(loaderData.organizer)} replace/>;
+    }
+
     return (
         <OrganizerPageShell organizer={loaderData.organizer} activeNav="resources">
-            <ResourcesForChildren organizer={loaderData.organizer} activeTab={tab}/>
+            <ResourcesForChildren/>
         </OrganizerPageShell>
     );
 };

@@ -11,10 +11,10 @@ class RegisterQuizPlayerDTO extends BaseDataObject
 {
     public function __construct(
         public int $organizer_id,
+        public string $username,
         public string $first_name,
         public string $email,
         public QuizAgeBand $age_band,
         public string $password,
-        public ?string $parent_email = null,
     ) {}
 }

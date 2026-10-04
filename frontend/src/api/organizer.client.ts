@@ -235,11 +235,18 @@ export const organizerPublicClient = {
         return response.data;
     },
 
+    getQuizUsernameOptions: async (organizerId: IdParam) => {
+        const response = await publicApi.get<GenericDataResponse<string[]>>(
+            `organizers/${organizerId}/quiz-players/username-options`
+        );
+        return response.data;
+    },
+
     registerQuizPlayer: async (organizerId: IdParam, player: {
+        username: string;
         first_name: string;
         email: string;
         age_band: string;
-        parent_email?: string;
         password: string;
     }) => {
         const response = await publicApi.post<GenericDataResponse<QuizPlayerSession>>(
@@ -274,6 +281,14 @@ export const organizerPublicClient = {
             `organizers/${organizerId}/quiz-results`,
             result,
             {headers: {'X-Quiz-Token': token}}
+        );
+        return response.data;
+    },
+
+    requestQuizUsernameReminder: async (organizerId: IdParam, email: string) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/quiz-players/forgot-username`,
+            {email}
         );
         return response.data;
     },
