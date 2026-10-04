@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace HiEvents\Http\Actions\Organizers\Public\Quiz;
 
 use HiEvents\DomainObjects\Enums\QuizAgeBand;
+use HiEvents\Exceptions\QuizEmailAlreadyRegisteredException;
 use HiEvents\Exceptions\QuizUsernameTakenException;
 use HiEvents\Http\Actions\BaseAction;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\RegisterQuizPlayerDTO;
@@ -45,6 +46,8 @@ class RegisterQuizPlayerPublicAction extends BaseAction
                 'age_band' => $data['age_band'],
                 'password' => $data['password'],
             ]));
+        } catch (QuizEmailAlreadyRegisteredException $exception) {
+            throw ValidationException::withMessages(['email' => $exception->getMessage()]);
         } catch (QuizUsernameTakenException $exception) {
             throw ValidationException::withMessages(['username' => $exception->getMessage()]);
         }

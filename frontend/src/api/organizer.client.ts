@@ -285,6 +285,14 @@ export const organizerPublicClient = {
         return response.data;
     },
 
+    requestQuizUsernameReminder: async (organizerId: IdParam, email: string) => {
+        const response = await publicApi.post<{ message: string }>(
+            `organizers/${organizerId}/quiz-players/forgot-username`,
+            {email}
+        );
+        return response.data;
+    },
+
     requestQuizPasswordReset: async (organizerId: IdParam, username: string) => {
         const response = await publicApi.post<{ message: string }>(
             `organizers/${organizerId}/quiz-players/forgot-password`,

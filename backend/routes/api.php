@@ -193,6 +193,7 @@ use HiEvents\Http\Actions\Organizers\Public\Customer\RegisterCustomerPublicActio
 use HiEvents\Http\Actions\Organizers\Public\Customer\RequestCustomerPasswordSetupPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Customer\SetCustomerPasswordPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\RequestQuizPasswordResetPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\Quiz\RequestQuizUsernameReminderPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\ResetQuizPlayerPasswordPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\GetQuizLeaderboardPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\Quiz\GetQuizPlayerProfilePublicAction;
@@ -655,6 +656,8 @@ $router->prefix('/public')->group(
             ->middleware('throttle:10,1');
         $router->post('/organizers/{organizerId}/quiz-players/login', LoginQuizPlayerPublicAction::class)
             ->middleware('throttle:10,1');
+        $router->post('/organizers/{organizerId}/quiz-players/forgot-username', RequestQuizUsernameReminderPublicAction::class)
+            ->middleware('throttle:5,1');
         $router->post('/organizers/{organizerId}/quiz-players/forgot-password', RequestQuizPasswordResetPublicAction::class)
             ->middleware('throttle:5,1');
         $router->post('/organizers/{organizerId}/quiz-players/reset-password', ResetQuizPlayerPasswordPublicAction::class)
