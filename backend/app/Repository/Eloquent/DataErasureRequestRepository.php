@@ -34,7 +34,7 @@ class DataErasureRequestRepository extends BaseRepository implements DataErasure
         return $this->runQuery(function () use ($email) {
             $orders = $this->db->table('orders')->whereRaw('LOWER(email) = ?', [$email]);
 
-            $orderIds = (clone $orders)->pluck('id')->map(fn ($id) => (int) $id)->all();
+            $orderReferences = (clone $orders)->pluck('public_id', 'id')->all();
 
             $orders->update([
                 'first_name' => null,
@@ -47,7 +47,7 @@ class DataErasureRequestRepository extends BaseRepository implements DataErasure
                 'pii_erased_at' => Carbon::now(),
             ]);
 
-            return $orderIds;
+            return $orderReferences;
         });
     }
 
@@ -96,10 +96,10 @@ class DataErasureRequestRepository extends BaseRepository implements DataErasure
         });
     }
 
-    public function anonymiseWaitlistEntries(string $email): void
+    public function anonymiseWaitlistEntries(string $email): int
     {
-        $this->runQuery(function () use ($email) {
-            $this->db->table('waitlist_entries')
+        return $this->runQuery(function () use ($email) {
+            return $this->db->table('waitlist_entries')
                 ->whereRaw('LOWER(email) = ?', [$email])
                 ->update([
                     'first_name' => '',
@@ -111,10 +111,10 @@ class DataErasureRequestRepository extends BaseRepository implements DataErasure
         });
     }
 
-    public function anonymiseStripeCustomers(string $email): void
+    public function anonymiseStripeCustomers(string $email): int
     {
-        $this->runQuery(function () use ($email) {
-            $this->db->table('stripe_customers')
+        return $this->runQuery(function () use ($email) {
+            return $this->db->table('stripe_customers')
                 ->whereRaw('LOWER(email) = ?', [$email])
                 ->update([
                     'name' => '',
@@ -123,9 +123,9 @@ class DataErasureRequestRepository extends BaseRepository implements DataErasure
         });
     }
 
-    public function deleteCustomerAccounts(string $email): void
+    public function deleteCustomerAccounts(string $email): int
     {
-        $this->runQuery(function () use ($email) {
+        return $this->runQuery(function () use ($email) {
             $customers = $this->db->table('customers')->whereRaw('LOWER(email) = ?', [$email]);
 
             $this->db->table('password_setup_tokens')
@@ -133,7 +133,7 @@ class DataErasureRequestRepository extends BaseRepository implements DataErasure
                 ->whereIn('subject_id', (clone $customers)->select('id'))
                 ->delete();
 
-            $customers->delete();
+            return $customers->delete();
         });
     }
 
@@ -144,7 +144,7 @@ class DataErasureRequestRepository extends BaseRepository implements DataErasure
         });
     }
 
-    public function deleteChildRecords(string $email): int
+    public function deleteChildRecords(string $email): array
     {
         return $this->runQuery(function () use ($email) {
             $consents = $this->db->table('parental_consents')->whereRaw('LOWER(parent_email) = ?', [$email]);
@@ -178,7 +178,7 @@ class DataErasureRequestRepository extends BaseRepository implements DataErasure
                         ->whereIn('subject_id', $playerIds)))
                 ->delete();
 
-            return $storyIds->count() + $playerIds->count();
+            return ['stories' => $storyIds->count(), 'puzzle_accounts' => $playerIds->count()];
         });
     }
 }

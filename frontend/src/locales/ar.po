@@ -3142,7 +3142,7 @@ msgstr "تأكيد كرسالة مزعجة"
 msgid "Confirm your email to access all features."
 msgstr "أكّد بريدك الإلكتروني للوصول إلى جميع الميزات."
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:76
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:79
 msgid "Confirmation"
 msgstr "التأكيد"
 
@@ -4136,9 +4136,9 @@ msgstr "حذف المهمة"
 msgid "Delete location"
 msgstr "حذف الموقع"
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:55
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:67
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:71
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:58
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:70
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:74
 msgid "Delete my data"
 msgstr "حذف بياناتي"
 
@@ -9215,7 +9215,7 @@ msgstr "تمرير إلى المشتري"
 msgid "Password"
 msgstr "كلمة المرور"
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:83
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:86
 msgid "Password (if you have an account password)"
 msgstr "كلمة المرور (إذا كانت لديك كلمة مرور للحساب)"
 
@@ -9462,11 +9462,11 @@ msgstr "نسبة مئوية من مبلغ المعاملة"
 msgid "Performance"
 msgstr "الأداء"
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:99
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:102
 msgid "Permanently delete my data"
 msgstr "حذف بياناتي نهائيًا"
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:58
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:61
 msgid "Permanently delete the personal information we hold for this email address, including your name, email, phone and address on orders and tickets, your account, and any stories or puzzle accounts created for your children. Payment records are kept without any personal details, as we are required to keep financial records."
 msgstr "حذف المعلومات الشخصية التي نحتفظ بها لهذا البريد الإلكتروني نهائيًا، بما في ذلك اسمك وبريدك الإلكتروني وهاتفك وعنوانك في الطلبات والتذاكر، وحسابك، وأي قصص أو حسابات ألغاز أُنشئت لأطفالك. يتم الاحتفاظ بسجلات الدفع دون أي بيانات شخصية، إذ يُطلب منا الاحتفاظ بالسجلات المالية."
 
@@ -12940,7 +12940,7 @@ msgstr "ينطبق هذا على كل تاريخ مطابق في الفعالي�
 msgid "This attendee has an unpaid order."
 msgstr "لدى هذا الحاضر طلب غير مدفوع."
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:73
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:76
 msgid "This cannot be undone. Your tickets will no longer be linked to you, so keep a copy of any ticket you still need. Type {CONFIRMATION_WORD} to confirm."
 msgstr "لا يمكن التراجع عن هذا الإجراء. لن ترتبط تذاكرك بك بعد الآن، لذا احتفظ بنسخة من أي تذكرة تحتاجها. اكتب {CONFIRMATION_WORD} للتأكيد."
 
@@ -14498,6 +14498,10 @@ msgstr "نحن لا نبيع معلوماتك الشخصية. نشارك الم�
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:139
 msgid "We email the parent or guardian to explain what will be shown and ask for their permission. We record their response and when it was given. Work from a child under 16 is only published if the parent or guardian agrees and our team approves it. If published, the page shows the child's first name, the initial of their last name, their class or year group, the date it was submitted and the work itself. Their full last name is never shown publicly. If the parent or guardian does not respond or declines, the work is not published."
 msgstr "نراسل ولي الأمر لنوضح ما سيُعرض ونطلب إذنه. ونسجل ردّه ووقت تقديمه. لا يُنشر عمل الطفل دون 16 سنة إلا إذا وافق ولي الأمر واعتمده فريقنا. وعند النشر تعرض الصفحة الاسم الأول للطفل والحرف الأول من اسم عائلته وصفه أو مرحلته الدراسية وتاريخ التقديم والعمل نفسه. ولا يُعرض اسم عائلته كاملًا علنًا أبدًا. وإذا لم يرد ولي الأمر أو رفض فلن يُنشر العمل."
+
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:47
+msgid "We have emailed you a confirmation listing what was deleted, what we kept and what we could not delete, such as records held by our payment processor."
+msgstr "أرسلنا إليك بريدًا إلكترونيًا للتأكيد يوضح ما تم حذفه وما احتفظنا به وما تعذر علينا حذفه، مثل السجلات التي يحتفظ بها معالج الدفع."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:135
 msgid "We have emailed your parent or guardian to ask for permission to show you on the leaderboard. You can play and save your scores in the meantime."

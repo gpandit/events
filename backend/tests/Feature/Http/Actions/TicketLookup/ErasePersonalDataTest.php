@@ -6,6 +6,7 @@ use HiEvents\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use HiEvents\Mail\PersonalData\PersonalDataErasedEmail;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
@@ -18,6 +19,8 @@ class ErasePersonalDataTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+
+        Mail::fake();
 
         $accountId = User::factory()->withAccount()->create()->accounts()->first()->id;
 
@@ -86,6 +89,7 @@ class ErasePersonalDataTest extends TestCase
         $this->postJson($this->url($token), ['confirmation' => 'DELETE', 'password' => 'secret123'])->assertOk();
 
         $this->assertDatabaseMissing('customers', ['email' => 'parent@example.com']);
+        Mail::assertSent(PersonalDataErasedEmail::class, fn (PersonalDataErasedEmail $mail) => $mail->hasTo('parent@example.com'));
         $this->assertDatabaseMissing('ticket_lookup_tokens', ['token' => $token]);
         $this->assertDatabaseHas('data_erasure_requests', [
             'email_hash' => hash_hmac('sha256', 'parent@example.com', (string) config('app.key')),
@@ -94,8 +98,6 @@ class ErasePersonalDataTest extends TestCase
 
     public function test_the_childrens_puzzle_accounts_linked_to_the_parent_email_are_deleted(): void
     {
-        Mail::fake();
-
         $this->postJson("/public/organizers/{$this->organizerId}/quiz-players/register", [
             'first_name' => 'Amelia',
             'email' => 'child@example.com',
