@@ -28,6 +28,10 @@ return [
     'payment_processing_fee_currency' => env('APP_PAYMENT_PROCESSING_FEE_CURRENCY', 'AED'),
     'disable_registration' => env('APP_DISABLE_REGISTRATION', false),
     'api_rate_limit_per_minute' => env('APP_API_RATE_LIMIT_PER_MINUTE', 180),
+    'trusted_proxies' => env('APP_TRUSTED_PROXIES', '*'),
+    'ssr_shared_secret' => env('APP_SSR_SHARED_SECRET'),
+    'public_order_rate_limit_per_minute' => env('APP_PUBLIC_ORDER_RATE_LIMIT_PER_MINUTE', 60),
+    'public_promo_code_rate_limit_per_minute' => env('APP_PUBLIC_PROMO_CODE_RATE_LIMIT_PER_MINUTE', 10),
     'stripe_connect_account_type' => env('APP_STRIPE_CONNECT_ACCOUNT_TYPE', 'express'),
     'platform_support_email' => env('APP_PLATFORM_SUPPORT_EMAIL', 'support@example.com'),
     'event_spam_check_enabled' => env('APP_EVENT_SPAM_CHECK_ENABLED', false),
@@ -49,6 +53,8 @@ return [
      * Set to null to disable caching
      */
     'homepage_product_quantities_cache_ttl' => env('APP_HOMEPAGE_TICKET_QUANTITIES_CACHE_TTL', 2),
+
+    'seat_map_max_seats' => env('APP_SEAT_MAP_MAX_SEATS', 3000),
 
     /**
      * Frontend URL patterns for various actions. It is unlikely you will need to change these

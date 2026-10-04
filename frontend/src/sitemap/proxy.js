@@ -1,5 +1,7 @@
 import axios from 'axios';
 import * as Sentry from '@sentry/node';
+import {backendRequestHeaders} from '../ssr/backendRequestHeaders.js';
+import {loggableError} from '../ssr/loggableError.js';
 
 const getBackendUrl = () => {
     const backendUrl = process.env.VITE_API_URL_SERVER;
@@ -9,11 +11,11 @@ const getBackendUrl = () => {
     return backendUrl;
 };
 
-const fetchSitemap = async (path, res, errorContext, contentType = 'application/xml') => {
+const fetchSitemap = async (req, path, res, errorContext, contentType = 'application/xml') => {
     try {
         const backendUrl = getBackendUrl();
         const response = await axios.get(`${backendUrl}/public${path}`, {
-            headers: { 'Accept': contentType },
+            headers: { 'Accept': contentType, ...backendRequestHeaders(req) },
             responseType: 'text',
         });
 
@@ -31,7 +33,7 @@ const fetchSitemap = async (path, res, errorContext, contentType = 'application/
             tags: { source: 'sitemap-proxy' },
             extra: { errorContext, path },
         });
-        console.error(`Error fetching ${errorContext}:`, error);
+        console.error(`Error fetching ${errorContext}:`, loggableError(error));
         res.status(500).send('Internal server error');
     }
 };
@@ -44,22 +46,22 @@ const validatePageParam = (page, res) => {
     return true;
 };
 
-export const sitemapIndexHandler = async (_req, res) => {
-    await fetchSitemap('/sitemap.xml', res, 'sitemap index');
+export const sitemapIndexHandler = async (req, res) => {
+    await fetchSitemap(req, '/sitemap.xml', res, 'sitemap index');
 };
 
-export const sitemapTxtHandler = async (_req, res) => {
-    await fetchSitemap('/sitemap.txt', res, 'sitemap txt', 'text/plain; charset=utf-8');
+export const sitemapTxtHandler = async (req, res) => {
+    await fetchSitemap(req, '/sitemap.txt', res, 'sitemap txt', 'text/plain; charset=utf-8');
 };
 
 export const sitemapEventsHandler = async (req, res) => {
     const { page } = req.params;
     if (!validatePageParam(page, res)) return;
-    await fetchSitemap(`/sitemap-events-${page}.xml`, res, 'sitemap events');
+    await fetchSitemap(req, `/sitemap-events-${page}.xml`, res, 'sitemap events');
 };
 
 export const sitemapOrganizersHandler = async (req, res) => {
     const { page } = req.params;
     if (!validatePageParam(page, res)) return;
-    await fetchSitemap(`/sitemap-organizers-${page}.xml`, res, 'sitemap organizers');
+    await fetchSitemap(req, `/sitemap-organizers-${page}.xml`, res, 'sitemap organizers');
 };
