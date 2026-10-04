@@ -85,6 +85,7 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
     const [ageBand, setAgeBand] = useState<AgeBand | null>(null);
     const [puzzles, setPuzzles] = useState<Puzzle[]>([]);
     const [questionOptions, setQuestionOptions] = useState<string[][]>([]);
+    const [hoveredQuestion, setHoveredQuestion] = useState<number | null>(null);
     const [current, setCurrent] = useState(0);
     const [score, setScore] = useState(0);
     const [timeLeft, setTimeLeft] = useState(SECONDS_PER_QUESTION);
@@ -403,10 +404,13 @@ export const PuzzlesTab = ({organizer}: PuzzlesTabProps) => {
                     />
                 </div>
                 <h3 className={classes.puzzleQuestion}>{puzzle.question}</h3>
-                <div className={classes.puzzleOptions}>
+                <div
+                    className={`${classes.puzzleOptions} ${hoveredQuestion === current ? classes.puzzleOptionsHoverable : ''}`}
+                    onPointerMove={() => setHoveredQuestion(current)}
+                >
                     {questionOptions[current]?.map((option) => (
                         <button
-                            key={option}
+                            key={`${current}-${option}`}
                             type="button"
                             className={classes.puzzleOption}
                             onClick={() => answer(option)}
