@@ -747,5 +747,7 @@
     "is ready for collection from school reception.": "جاهز للاستلام من مكتب استقبال المدرسة.",
     "Your order from": "طلبك من",
     "Collection for:": "الاستلام لـ:",
-    "Please quote the student name or order number at reception.": "يرجى ذكر اسم الطالب أو رقم الطلب عند مكتب الاستقبال."
+    "Please quote the student name or order number at reception.": "يرجى ذكر اسم الطالب أو رقم الطلب عند مكتب الاستقبال.",
+    "The regular price must be higher than the sale price.": "يجب أن يكون السعر الأصلي أعلى من سعر البيع.",
+    "A product can have at most :max images.": "يمكن أن يحتوي المنتج على :max صور كحد أقصى."
 }

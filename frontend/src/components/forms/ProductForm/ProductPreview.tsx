@@ -28,7 +28,7 @@ export const ProductVisibilityStatusLine = ({form, event, dataTestId}: ProductVi
         return null;
     }
 
-    const status = computeVisibilityStatus(form.values, nowInTimezone(event.timezone));
+    const status = computeVisibilityStatus(form.values, nowInTimezone(event.timezone), event.is_shop);
 
     return (
         <div
@@ -72,7 +72,7 @@ export const ProductPreview = ({form, event}: ProductPreviewProps) => {
         return null;
     }
 
-    const isHiddenFromEveryone = computeVisibilityStatus(form.values, nowInTimezone(event.timezone)).level === 'hidden';
+    const isHiddenFromEveryone = computeVisibilityStatus(form.values, nowInTimezone(event.timezone), event.is_shop).level === 'hidden';
 
     return (
         <div className={classes.preview}>

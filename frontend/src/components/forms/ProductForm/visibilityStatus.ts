@@ -11,7 +11,7 @@ export interface VisibilityStatus {
 
 const hasValue = (value: unknown): boolean => value !== undefined && value !== null && value !== '';
 
-export const computeVisibilityStatus = (values: Product, nowInEventTz: string): VisibilityStatus => {
+export const computeVisibilityStatus = (values: Product, nowInEventTz: string, isShop = false): VisibilityStatus => {
     if (values.is_hidden) {
         return {
             level: 'hidden',
@@ -53,6 +53,6 @@ export const computeVisibilityStatus = (values: Product, nowInEventTz: string): 
 
     return {
         level: 'visible',
-        message: t`Visible to everyone on the event page.`,
+        message: isShop ? t`Visible to everyone on the shop page.` : t`Visible to everyone on the event page.`,
     };
 };

@@ -72,4 +72,55 @@ test.describe('organizer shops', () => {
       }),
     ).rejects.toThrow(/422/);
   });
+  test('sizes with a regular price show the sale price crossed out on the shop page', async ({ page, api }) => {
+    const organizer = await createFreshOrganizer(api, uniqueName('E2E Sizes Org'));
+    await api.updateOrganizerStatus(organizer.id, 'LIVE');
+    const shop = await api.createShop({
+      organizer_id: organizer.id,
+      title: 'Sizes Uniforms',
+      shop_category: 'UNIFORM',
+      vendor_type: 'SCHOOL',
+    });
+    const [category] = await api.listProductCategories(shop.id);
+
+    await api.createProduct(shop.id, {
+      title: 'Football T-Shirt',
+      product_type: 'GENERAL',
+      type: 'TIERED',
+      product_category_id: Number(category.id),
+      prices: [
+        { price: 39, compare_at_price: 49, label: 'Age 5-6', initial_quantity_available: 10 },
+        { price: 39, compare_at_price: 49, label: 'Age 7-8', initial_quantity_available: 10 },
+      ],
+    });
+    await api.publishEvent(shop.id);
+
+    await page.goto(`/events/${shop.id}/sizes-uniforms`);
+
+    await page.getByText('Football T-Shirt').click();
+    await expect(page.getByText('Age 5-6')).toBeVisible();
+    await expect(page.getByText('Age 7-8')).toBeVisible();
+    await expect(page.locator('.hi-price-strike').first()).toContainText('49');
+  });
+
+  test('a regular price at or below the price is rejected', async ({ api }) => {
+    const organizer = await createFreshOrganizer(api, uniqueName('E2E Bad Compare Org'));
+    const shop = await api.createShop({
+      organizer_id: organizer.id,
+      title: 'Compare Shop',
+      shop_category: 'UNIFORM',
+      vendor_type: 'SCHOOL',
+    });
+    const [category] = await api.listProductCategories(shop.id);
+
+    await expect(
+      api.createProduct(shop.id, {
+        title: 'Blazer',
+        product_type: 'GENERAL',
+        type: 'PAID',
+        product_category_id: Number(category.id),
+        prices: [{ price: 50, compare_at_price: 40 }],
+      }),
+    ).rejects.toThrow(/422/);
+  });
 });

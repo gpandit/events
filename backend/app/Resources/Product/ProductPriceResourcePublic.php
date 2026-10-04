@@ -19,6 +19,7 @@ class ProductPriceResourcePublic extends BaseResource
             'id' => $this->getId(),
             'label' => $this->getLabel(),
             'price' => $this->getPrice(),
+            'compare_at_price' => $this->getCompareAtPrice(),
             'sale_start_date' => $this->getSaleStartDate(),
             'sale_end_date' => $this->getSaleEndDate(),
             'price_including_taxes_and_fees' => $this->getPriceIncludingTaxAndServiceFee(),

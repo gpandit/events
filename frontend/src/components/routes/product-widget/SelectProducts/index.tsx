@@ -32,6 +32,7 @@ import {
     safeLocalStorageSet
 } from "../../../../utilites/helpers.ts";
 import {TieredPricing} from "./Prices/Tiered";
+import {ProductGallery} from "./ProductGallery";
 import classNames from 'classnames';
 import '../../../../styles/widget/default.scss';
 import {ProductAvailabilityMessage} from "../../../common/ProductPriceAvailability";
@@ -726,6 +727,13 @@ const SelectProducts = (props: SelectProductsProps) => {
                                                 </div>
                                             )}
                                             <div className={'hi-title-row'}>
+                                                {product.images?.[0] && (
+                                                    <UnstyledButton className={'hi-product-thumb'}
+                                                                    onClick={toggleCollapse}>
+                                                        <img src={product.images[0].url} alt={product.title}
+                                                             loading={'lazy'}/>
+                                                    </UnstyledButton>
+                                                )}
                                                 <UnstyledButton className={'hi-product-title'}
                                                                 onClick={toggleCollapse}
                                                 >
@@ -788,6 +796,10 @@ const SelectProducts = (props: SelectProductsProps) => {
                                             )}
                                             <Collapse transitionDuration={100} expanded={!isProductCollapsed}
                                                       className={'hi-product-content'} hidden={isProductCollapsed}>
+                                                {!!product.images?.length && (
+                                                    <ProductGallery images={product.images} alt={product.title}/>
+                                                )}
+
                                                 {!isSimpleProduct && (
                                                     <div className={'hi-price-tiers-rows'}>
                                                         <TieredPricing

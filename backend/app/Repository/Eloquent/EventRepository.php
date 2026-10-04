@@ -229,6 +229,7 @@ class EventRepository extends BaseRepository implements EventRepositoryInterface
             ])
             ->join('event_settings', 'events.id', '=', 'event_settings.event_id')
             ->where('events.'.EventDomainObjectAbstract::STATUS, EventStatus::LIVE->name)
+            ->where('events.'.EventDomainObjectAbstract::IS_SHOP, false)
             ->where('event_settings.'.EventSettingDomainObjectAbstract::ALLOW_SEARCH_ENGINE_INDEXING, true)
             ->whereNull('events.'.EventDomainObjectAbstract::DELETED_AT)
             ->orderBy('events.'.EventDomainObjectAbstract::ID)
@@ -251,6 +252,7 @@ class EventRepository extends BaseRepository implements EventRepositoryInterface
             ->newQuery()
             ->join('event_settings', 'events.id', '=', 'event_settings.event_id')
             ->where('events.'.EventDomainObjectAbstract::STATUS, EventStatus::LIVE->name)
+            ->where('events.'.EventDomainObjectAbstract::IS_SHOP, false)
             ->where('event_settings.'.EventSettingDomainObjectAbstract::ALLOW_SEARCH_ENGINE_INDEXING, true)
             ->whereNull('events.'.EventDomainObjectAbstract::DELETED_AT)
             ->count();

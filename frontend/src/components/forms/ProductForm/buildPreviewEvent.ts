@@ -12,6 +12,7 @@ import {
     TaxAndFeeType,
 } from "../../../types.ts";
 import {Constants} from "../../../constants.ts";
+import {pendingFilesToImages} from "./pendingImages.ts";
 
 const sumForType = (taxesAndFees: TaxAndFee[], type: TaxAndFeeType, basePrice: number): number => {
     return taxesAndFees
@@ -62,6 +63,7 @@ const buildPreviewPrices = (
 
             return buildPreviewPrice(index + 1, Number(tier.price || 0), selectedTaxesAndFees, {
                 label: tier.label || t`Tier ${index + 1}`,
+                compare_at_price: tier.compare_at_price ? Number(tier.compare_at_price) : undefined,
                 is_available: !isBeforeSaleStart && !isAfterSaleEnd && !isLocked,
                 is_before_sale_start_date: isBeforeSaleStart,
                 is_after_sale_end_date: isAfterSaleEnd,
@@ -72,7 +74,11 @@ const buildPreviewPrices = (
 
     const basePrice = values.type === ProductPriceType.Free ? 0 : Number(values.prices?.[0]?.price || 0);
 
-    return [buildPreviewPrice(1, basePrice, selectedTaxesAndFees)];
+    const compareAtPrice = values.prices?.[0]?.compare_at_price;
+
+    return [buildPreviewPrice(1, basePrice, selectedTaxesAndFees, {
+        compare_at_price: compareAtPrice ? Number(compareAtPrice) : undefined,
+    })];
 };
 
 const previewQuantityAvailable = (values: Product): number | undefined => {
@@ -123,6 +129,7 @@ export const buildPreviewEvent = (
         is_available: true,
         is_sold_out: false,
         taxes: selectedTaxesAndFees,
+        images: [...(values.images ?? []), ...pendingFilesToImages(values.pending_images)],
     };
 
     const categoryName = event.product_categories?.find(

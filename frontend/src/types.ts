@@ -240,7 +240,7 @@ export interface Image {
     lqip_base64?: string | null;
 }
 
-export type ImageType = 'EVENT_COVER' | 'EDITOR_IMAGE' | 'ORGANIZER_LOGO' | 'ORGANIZER_COVER' | 'ORGANIZER_IMAGE' | 'TICKET_LOGO';
+export type ImageType = 'EVENT_COVER' | 'EDITOR_IMAGE' | 'ORGANIZER_LOGO' | 'ORGANIZER_COVER' | 'ORGANIZER_IMAGE' | 'TICKET_LOGO' | 'PRODUCT_IMAGE';
 
 export type PaymentProvider = 'STRIPE' | 'OFFLINE';
 
@@ -919,6 +919,7 @@ export interface ProductPrice {
     id?: number;
     label?: string;
     price: number;
+    compare_at_price?: number | null;
     sale_start_date?: string | Date;
     sale_end_date?: string | Date;
     price_including_taxes_and_fees?: number;
@@ -986,6 +987,8 @@ export interface Product {
     addon_product_ids?: IdParam[];
     is_addon_only?: boolean;
     addons?: Array<{ id: number; title: string }>;
+    images?: Image[];
+    pending_images?: File[];
 }
 
 export interface ProductCategory {

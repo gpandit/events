@@ -86,6 +86,7 @@ export interface CreateEventPayload {
 
 export interface CreateProductPricePayload {
   price: number;
+  compare_at_price?: number | null;
   label?: string;
   initial_quantity_available?: number;
   quantity_applies_to?: 'OCCURRENCE' | 'EVENT';

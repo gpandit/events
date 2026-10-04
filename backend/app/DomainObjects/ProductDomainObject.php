@@ -18,6 +18,8 @@ class ProductDomainObject extends Generated\ProductDomainObjectAbstract implemen
 
     private ?Collection $addons = null;
 
+    private ?Collection $images = null;
+
     private ?string $offSaleReason = null;
 
     private ?int $quantityAvailable = null;
@@ -79,6 +81,18 @@ class ProductDomainObject extends Generated\ProductDomainObjectAbstract implemen
     public function getFees(): ?Collection
     {
         return $this->getTaxAndFees()?->filter(fn (TaxAndFeesDomainObject $taxAndFee) => $taxAndFee->isFee());
+    }
+
+    public function setImages(?Collection $images): ProductDomainObject
+    {
+        $this->images = $images;
+
+        return $this;
+    }
+
+    public function getImages(): ?Collection
+    {
+        return $this->images;
     }
 
     public function setAddons(Collection $addons): ProductDomainObject
