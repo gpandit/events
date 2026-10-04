@@ -8,6 +8,7 @@ use HiEvents\DomainObjects\Enums\QuizAgeBand;
 use HiEvents\Exceptions\QuizEmailAlreadyRegisteredException;
 use HiEvents\Exceptions\QuizUsernameTakenException;
 use HiEvents\Http\Actions\BaseAction;
+use HiEvents\Http\ResponseCodes;
 use HiEvents\Services\Application\Handlers\Quiz\DTO\RegisterQuizPlayerDTO;
 use HiEvents\Services\Application\Handlers\Quiz\RegisterQuizPlayerHandler;
 use Illuminate\Http\JsonResponse;
