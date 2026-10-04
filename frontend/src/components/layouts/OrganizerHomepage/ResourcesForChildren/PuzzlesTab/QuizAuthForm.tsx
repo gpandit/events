@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {t} from '@lingui/macro';
+import {t, Trans} from '@lingui/macro';
 import {IconLoader2} from '@tabler/icons-react';
 import {IdParam, QuizPlayerSession} from '../../../../../types.ts';
 import {useRegisterQuizPlayer} from '../../../../../mutations/useRegisterQuizPlayer.ts';
 import {useLoginQuizPlayer} from '../../../../../mutations/useLoginQuizPlayer.ts';
 import {useRequestQuizPasswordReset} from '../../../../../mutations/useRequestQuizPasswordReset.ts';
+import {useRequestQuizUsernameReminder} from '../../../../../mutations/useRequestQuizUsernameReminder.ts';
 import {useGetQuizUsernameOptions} from '../../../../../queries/useGetQuizUsernameOptions.ts';
 import {QuizUsernamePicker} from './QuizUsernamePicker.tsx';
 import {AGE_BANDS} from './generalKnowledgePuzzles.ts';
@@ -42,6 +43,9 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
     const registerMutation = useRegisterQuizPlayer(organizerId);
     const loginMutation = useLoginQuizPlayer(organizerId);
     const resetMutation = useRequestQuizPasswordReset(organizerId);
+    const reminderMutation = useRequestQuizUsernameReminder(organizerId);
+    const [emailRegistered, setEmailRegistered] = useState(false);
+    const [reminderSent, setReminderSent] = useState(false);
     const [resetSent, setResetSent] = useState(false);
     const isPending = registerMutation.isPending || loginMutation.isPending || resetMutation.isPending;
 
@@ -49,6 +53,8 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
         setMode(next);
         setError(null);
         setResetSent(false);
+        setEmailRegistered(false);
+        setReminderSent(false);
     };
 
     const handleSignUp = (event: React.FormEvent) => {
@@ -75,6 +81,8 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
         }
 
         setError(null);
+        setEmailRegistered(false);
+        setReminderSent(false);
         registerMutation.mutate({
             username: signUp.username,
             first_name: signUp.first_name,
@@ -84,6 +92,12 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
         }, {
             onSuccess: (response) => setNewPlayer(response.data),
             onError: (err: any) => {
+                if (err?.response?.data?.errors?.email) {
+                    setError(null);
+                    setEmailRegistered(true);
+                    return;
+                }
+
                 setError(errorMessage(err));
 
                 if (err?.response?.data?.errors?.username) {
@@ -91,6 +105,13 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                     usernameOptions.refetch();
                 }
             },
+        });
+    };
+
+    const handleReminder = () => {
+        reminderMutation.mutate(signUp.email.trim(), {
+            onSuccess: () => setReminderSent(true),
+            onError: (err) => setError(errorMessage(err)),
         });
     };
 
@@ -193,9 +214,34 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                         aria-label={t`Email`}
                         autoComplete="email"
                         value={signUp.email}
-                        onChange={(e) => setSignUp({...signUp, email: e.target.value})}
+                        onChange={(e) => {
+                            setSignUp({...signUp, email: e.target.value});
+                            setEmailRegistered(false);
+                            setReminderSent(false);
+                        }}
                         data-testid="puzzles-signup-email"
                     />
+                    {emailRegistered && (
+                        <p className={classes.saveError} role="alert" data-testid="puzzles-email-registered">
+                            {reminderSent ? (
+                                t`If that email address is registered, we have emailed the username to it.`
+                            ) : (
+                                <Trans>
+                                    This email is already registered. You can{' '}
+                                    <button
+                                        type="button"
+                                        className={classes.linkButton}
+                                        onClick={handleReminder}
+                                        disabled={reminderMutation.isPending}
+                                        data-testid="puzzles-request-username"
+                                    >
+                                        request your username
+                                    </button>{' '}
+                                    and we will email it to you.
+                                </Trans>
+                            )}
+                        </p>
+                    )}
                     <p className={classes.fieldHint}>
                         {t`We use your email to save your session and to send you a link to reset your password.`}
                     </p>

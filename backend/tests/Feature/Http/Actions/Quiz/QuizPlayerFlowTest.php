@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Http\Actions\Quiz;
 
+use HiEvents\Mail\Quiz\QuizUsernameReminderEmail;
 use HiEvents\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
@@ -41,12 +42,12 @@ class QuizPlayerFlowTest extends TestCase
         return $this->getJson($this->url('quiz-players/username-options'))->assertOk()->json('data');
     }
 
-    private function register(string $firstName = 'Amelia'): array
+    private function register(string $firstName = 'Amelia', ?string $email = null): array
     {
         $response = $this->postJson($this->url('quiz-players/register'), [
             'username' => $this->usernameOptions()[0],
             'first_name' => $firstName,
-            'email' => 'parent@example.com',
+            'email' => $email ?? uniqid('parent').'@example.com',
             'age_band' => '14-17',
             'password' => 'secret123',
         ]);
@@ -58,7 +59,7 @@ class QuizPlayerFlowTest extends TestCase
 
     public function test_registering_creates_a_character_username_without_exposing_personal_details(): void
     {
-        $session = $this->register();
+        $session = $this->register('Amelia', 'parent@example.com');
 
         $this->assertMatchesRegularExpression('/^[A-Za-z][A-Za-z0-9]+\d{2,3}$/', $session['username']);
         $this->assertNotEmpty($session['token']);
@@ -113,6 +114,40 @@ class QuizPlayerFlowTest extends TestCase
         ])->assertCreated();
 
         $this->assertSame($chosen, $response->json('data.username'));
+    }
+
+    public function test_an_email_that_is_already_registered_cannot_register_another_username(): void
+    {
+        $this->register('Amelia', 'parent@example.com');
+
+        $this->postJson($this->url('quiz-players/register'), [
+            'username' => $this->usernameOptions()[0],
+            'first_name' => 'Noah',
+            'email' => 'Parent@Example.com',
+            'age_band' => '14-17',
+            'password' => 'secret123',
+        ])->assertUnprocessable()->assertJsonValidationErrors('email');
+
+        $this->assertSame(1, DB::table('quiz_players')->where('organizer_id', $this->organizerId)->count());
+    }
+
+    public function test_a_registered_email_can_request_its_username_by_email(): void
+    {
+        Mail::fake();
+        $this->register('Amelia', 'parent@example.com');
+
+        $this->postJson($this->url('quiz-players/forgot-username'), ['email' => 'PARENT@example.com'])->assertOk();
+
+        Mail::assertQueued(QuizUsernameReminderEmail::class, fn (QuizUsernameReminderEmail $mail) => $mail->hasTo('parent@example.com'));
+    }
+
+    public function test_requesting_a_username_for_an_unknown_email_sends_nothing_and_reveals_nothing(): void
+    {
+        Mail::fake();
+
+        $this->postJson($this->url('quiz-players/forgot-username'), ['email' => 'nobody@example.com'])->assertOk();
+
+        Mail::assertNothingQueued();
     }
 
     public function test_a_username_that_is_already_taken_cannot_be_chosen_again(): void
