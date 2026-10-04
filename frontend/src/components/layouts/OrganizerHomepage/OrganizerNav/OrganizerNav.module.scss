@@ -10,13 +10,22 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   border-bottom: 1px solid rgba(17, 20, 23, 0.07);
+  transition: transform 0.25s ease;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.navHidden {
+  transform: translateY(-100%);
 }
 
 .navOverlay {
   position: fixed;
   left: 0;
   right: 0;
-  transition: background-color 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
 }
 
 .navOverlay:not(.navTransparent) {
@@ -65,11 +74,24 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
   }
 }
 
+.navInnerWithLogo {
+  @include mixins.respond-below(md) {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+  }
+}
+
 .brand {
   display: flex;
   align-items: center;
   text-decoration: none;
   min-width: 0;
+}
+
+.brandWithLogo {
+  @include mixins.respond-below(md) {
+    display: contents;
+  }
 }
 
 .brandLogo {
@@ -85,7 +107,12 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
   color: #15171a;
 
   @include mixins.respond-below(md) {
-    display: none;
+    margin-left: 0;
+    font-size: 1rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
   }
 }
 
@@ -114,6 +141,7 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 
   @include mixins.respond-below(md) {
     display: block;
+    justify-self: end;
   }
 }
 

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Link} from "react-router";
 import {Burger, Menu} from "@mantine/core";
 import {t} from "@lingui/macro";
@@ -18,14 +18,35 @@ interface OrganizerNavProps {
     active?: 'home' | 'events' | 'about' | 'stories' | 'resources' | 'account';
 }
 
+const HIDE_AFTER_PX = 80;
+const SCROLL_TOLERANCE_PX = 6;
+
 export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [hidden, setHidden] = useState(false);
+    const lastScrollY = useRef(0);
     const overHero = active === 'home';
     const transparent = overHero && !scrolled && !menuOpen;
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 24);
+        lastScrollY.current = window.scrollY;
+        const handleScroll = () => {
+            const currentY = window.scrollY;
+            const delta = currentY - lastScrollY.current;
+
+            setScrolled(currentY > 24);
+
+            if (currentY <= HIDE_AFTER_PX || delta < -SCROLL_TOLERANCE_PX) {
+                setHidden(false);
+            } else if (delta > SCROLL_TOLERANCE_PX) {
+                setHidden(true);
+            }
+
+            if (Math.abs(delta) > SCROLL_TOLERANCE_PX) {
+                lastScrollY.current = currentY;
+            }
+        };
         handleScroll();
         window.addEventListener('scroll', handleScroll, {passive: true});
         return () => window.removeEventListener('scroll', handleScroll);
@@ -43,9 +64,9 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
     const closeMenu = () => setMenuOpen(false);
 
     return (
-        <nav className={`${classes.nav} ${overHero ? classes.navOverlay : ''} ${transparent ? classes.navTransparent : ''}`}>
-            <div className={classes.navInner}>
-                <Link to={homePath} className={classes.brand} onClick={closeMenu}>
+        <nav className={`${classes.nav} ${overHero ? classes.navOverlay : ''} ${transparent ? classes.navTransparent : ''} ${hidden && !menuOpen ? classes.navHidden : ''}`}>
+            <div className={`${classes.navInner} ${organizerLogo ? classes.navInnerWithLogo : ''}`}>
+                <Link to={homePath} className={`${classes.brand} ${organizerLogo ? classes.brandWithLogo : ''}`} onClick={closeMenu}>
                     {organizerLogo ? (
                         <img src={organizerLogo.url} alt={organizer.name} className={classes.brandLogo}/>
                     ) : (
