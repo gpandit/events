@@ -674,6 +674,14 @@ export const router: RouteObject[] = [
         },
     },
     {
+        path: "/organizer/:organizerId/preview/about",
+        loader: organizerPreviewRouteLoader,
+        async lazy() {
+            const OrganizerAboutPreview = await import("./components/layouts/OrganizerAboutPreview");
+            return { Component: OrganizerAboutPreview.default };
+        },
+    },
+    {
         path: "/event/:eventId/:eventSlug",
         loader: publicEventRouteLoader,
         async lazy() {

@@ -8,14 +8,18 @@ import {HomepageThemeSettings, IdParam, OrganizerSettings} from "../../../../typ
 import {showSuccess} from "../../../../utilites/notifications.tsx";
 import {t} from "@lingui/macro";
 import {useForm} from "@mantine/form";
-import {Accordion, Button, Group, Stack, Text, TextInput, Textarea} from "@mantine/core";
+import {Accordion, Button, Group, SegmentedControl, Stack, Text, TextInput, Textarea} from "@mantine/core";
 import {
+    IconAddressBook,
     IconColorPicker,
     IconHelp,
+    IconInfoCircle,
+    IconLayoutList,
     IconPalette,
     IconPhoto,
     IconPhotoVideo,
     IconTypography,
+    IconUsers,
     IconVideo,
 } from "@tabler/icons-react";
 import {Tooltip} from "../../../common/Tooltip";
@@ -23,7 +27,7 @@ import {LoadingMask} from "../../../common/LoadingMask";
 import {CustomSelect} from "../../../common/CustomSelect";
 import {GET_ORGANIZER_QUERY_KEY, useGetOrganizer} from "../../../../queries/useGetOrganizer.ts";
 import {ImageUploadDropzone} from "../../../common/ImageUploadDropzone";
-import {organizerPreviewPath} from "../../../../utilites/urlHelper.ts";
+import {OrganizerPreviewPage, organizerPreviewPath} from "../../../../utilites/urlHelper.ts";
 import {queryClient} from "../../../../utilites/queryClient.ts";
 import {GET_ORGANIZER_PUBLIC_QUERY_KEY} from "../../../../queries/useGetOrganizerPublic.ts";
 import {ThemeColorControls} from "../../../common/ThemeColorControls";
@@ -34,6 +38,8 @@ import {DEFAULT_HOMEPAGE_FONT} from "../../../../constants/homepageFonts.ts";
 interface FormValues {
     homepage_theme_settings: Partial<HomepageThemeSettings>;
 }
+
+const MAX_TEAM_MEMBERS = 12;
 
 const OrganizerHomepageDesigner = () => {
     const {organizerId} = useParams();
@@ -49,6 +55,7 @@ const OrganizerHomepageDesigner = () => {
     const [iframeSrc, setIframeSrc] = useState<string | null>(null);
     const [iframeLoaded, setIframeLoaded] = useState(false);
     const [accordionValue, setAccordionValue] = useState<string[]>(['images', 'hero', 'theme', 'typography']);
+    const [page, setPage] = useState<OrganizerPreviewPage>('home');
     const [lastCoverId, setLastCoverId] = useState<IdParam | null>(null);
     const [lastLogoId, setLastLogoId] = useState<IdParam | null>(null);
 
@@ -86,11 +93,24 @@ const OrganizerHomepageDesigner = () => {
         }
     }, [organizerSettingsQuery.isFetched, organizerSettingsQuery.data]);
 
+    const buildPreviewSrc = (previewPage: OrganizerPreviewPage, coverId?: IdParam, logoId?: IdParam) => {
+        const path = organizerPreviewPath(organizerId, previewPage);
+        return coverId || logoId ? `${path}?cover_image_id=${coverId}&logo_image_id=${logoId}` : path;
+    };
+
     useEffect(() => {
         if (organizerSettingsQuery.isFetched && organizerQuery.isFetched && !iframeSrc) {
             setIframeSrc(organizerPreviewPath(organizerId));
         }
     }, [organizerSettingsQuery.isFetched, organizerQuery.isFetched, organizerId]);
+
+    const handlePageChange = (value: string) => {
+        const nextPage = value as OrganizerPreviewPage;
+        setPage(nextPage);
+        setIframeLoaded(false);
+        lastSentSettings.current = null;
+        setIframeSrc(buildPreviewSrc(nextPage, existingCover?.id, existingLogo?.id));
+    };
 
     const handleSubmit = (values: FormValues) => {
         const validatedTheme = validateThemeSettings(values.homepage_theme_settings);
@@ -106,7 +126,7 @@ const OrganizerHomepageDesigner = () => {
             },
             {
                 onSuccess: () => {
-                    showSuccess(t`Successfully Updated Homepage Design`);
+                    showSuccess(t`Successfully Updated Site Design`);
                 },
                 onError: (error) => {
                     formErrorHandle(form, error);
@@ -153,7 +173,7 @@ const OrganizerHomepageDesigner = () => {
         if (((existingCover?.id !== lastCoverId) || existingLogo?.id !== lastLogoId) && iframeSrc) {
             setLastCoverId(existingCover?.id);
             setLastLogoId(existingLogo?.id);
-            setIframeSrc(organizerPreviewPath(organizerId) + `?cover_image_id=${existingCover?.id}&logo_image_id=${existingLogo?.id}`);
+            setIframeSrc(buildPreviewSrc(page, existingCover?.id, existingLogo?.id));
             setIframeLoaded(false);
         }
     }, [existingCover?.id, existingLogo?.id]);
@@ -186,6 +206,13 @@ const OrganizerHomepageDesigner = () => {
         });
     };
 
+    const updateTeamMembers = (value: string) => {
+        form.setFieldValue('homepage_theme_settings', {
+            ...form.values.homepage_theme_settings,
+            team_members: value.split('\n').slice(0, MAX_TEAM_MEMBERS),
+        });
+    };
+
     const handleHeroMediaTypeChange = (mediaType: string | string[]) => {
         const value = Array.isArray(mediaType) ? mediaType[0] : mediaType;
         form.setFieldValue('homepage_theme_settings', {
@@ -199,8 +226,19 @@ const OrganizerHomepageDesigner = () => {
             <div className={classes.sidebar}>
                 <div className={classes.sticky}>
                     <div className={classes.header}>
-                        <h2>{t`Homepage Design`}</h2>
-                        <Text c="dimmed" size="sm">{t`Customize your organizer page appearance`}</Text>
+                        <h2>{t`Site Design`}</h2>
+                        <Text c="dimmed" size="sm">{t`Customize the look and content of your public pages`}</Text>
+                        <SegmentedControl
+                            fullWidth
+                            mt="sm"
+                            value={page}
+                            onChange={handlePageChange}
+                            data={[
+                                {value: 'home', label: t`Home`},
+                                {value: 'about', label: t`About & Contact`},
+                            ]}
+                            data-testid="designer-page-switcher"
+                        />
                     </div>
 
                     <Accordion
@@ -262,6 +300,7 @@ const OrganizerHomepageDesigner = () => {
                             </Accordion.Panel>
                         </Accordion.Item>
 
+                        {page === 'home' && (
                         <Accordion.Item value="hero" className={classes.accordionItem}>
                             <Accordion.Control icon={<IconPhotoVideo size={20}/>}>
                                 <Text fw={500}>{t`Hero Banner`}</Text>
@@ -343,6 +382,138 @@ const OrganizerHomepageDesigner = () => {
                                 </fieldset>
                             </Accordion.Panel>
                         </Accordion.Item>
+                        )}
+
+                        {page === 'home' && (
+                        <Accordion.Item value="homepage-text" className={classes.accordionItem}>
+                            <Accordion.Control icon={<IconLayoutList size={20}/>}>
+                                <Text fw={500}>{t`Homepage Text`}</Text>
+                            </Accordion.Control>
+                            <Accordion.Panel>
+                                <fieldset disabled={organizerSettingsQuery.isLoading || updateMutation.isPending}
+                                          className={classes.fieldset}>
+                                    <TextInput
+                                        label={t`Upcoming Events Heading`}
+                                        placeholder={t`What's happening`}
+                                        value={form.values.homepage_theme_settings.upcoming_heading || ''}
+                                        onChange={(event) => updateHeroField('upcoming_heading', event.currentTarget.value)}
+                                        maxLength={100}
+                                    />
+                                </fieldset>
+                            </Accordion.Panel>
+                        </Accordion.Item>
+                        )}
+
+                        {page === 'about' && (
+                        <Accordion.Item value="about-text" className={classes.accordionItem}>
+                            <Accordion.Control icon={<IconInfoCircle size={20}/>}>
+                                <Text fw={500}>{t`About Text`}</Text>
+                            </Accordion.Control>
+                            <Accordion.Panel>
+                                <fieldset disabled={organizerSettingsQuery.isLoading || updateMutation.isPending}
+                                          className={classes.fieldset}>
+                                    <Textarea
+                                        label={t`About Us`}
+                                        description={t`Leave blank to show your organizer description`}
+                                        value={form.values.homepage_theme_settings.about_text || ''}
+                                        onChange={(event) => updateHeroField('about_text', event.currentTarget.value)}
+                                        maxLength={2000}
+                                        autosize
+                                        minRows={4}
+                                    />
+                                </fieldset>
+                            </Accordion.Panel>
+                        </Accordion.Item>
+                        )}
+
+                        {page === 'about' && (
+                        <Accordion.Item value="team" className={classes.accordionItem}>
+                            <Accordion.Control icon={<IconUsers size={20}/>}>
+                                <Text fw={500}>{t`Team`}</Text>
+                            </Accordion.Control>
+                            <Accordion.Panel>
+                                <fieldset disabled={organizerSettingsQuery.isLoading || updateMutation.isPending}
+                                          className={classes.fieldset}>
+                                    <Stack gap="md">
+                                        <TextInput
+                                            label={t`Team Heading`}
+                                            placeholder={t`Meet the team`}
+                                            value={form.values.homepage_theme_settings.team_heading || ''}
+                                            onChange={(event) => updateHeroField('team_heading', event.currentTarget.value)}
+                                            maxLength={100}
+                                        />
+                                        <Textarea
+                                            label={t`Team Members`}
+                                            description={t`One name per line, up to 12. Leave blank to hide the team section`}
+                                            value={(form.values.homepage_theme_settings.team_members || []).join('\n')}
+                                            onChange={(event) => updateTeamMembers(event.currentTarget.value)}
+                                            autosize
+                                            minRows={4}
+                                        />
+                                    </Stack>
+                                </fieldset>
+                            </Accordion.Panel>
+                        </Accordion.Item>
+                        )}
+
+                        {page === 'about' && (
+                        <Accordion.Item value="contact-section" className={classes.accordionItem}>
+                            <Accordion.Control icon={<IconAddressBook size={20}/>}>
+                                <Text fw={500}>{t`Get in Touch Section`}</Text>
+                            </Accordion.Control>
+                            <Accordion.Panel>
+                                <fieldset disabled={organizerSettingsQuery.isLoading || updateMutation.isPending}
+                                          className={classes.fieldset}>
+                                    <Stack gap="md">
+                                        <TextInput
+                                            label={t`Heading`}
+                                            placeholder={t`Get involved - volunteer, sponsor or say hello`}
+                                            value={form.values.homepage_theme_settings.contact_heading || ''}
+                                            onChange={(event) => updateHeroField('contact_heading', event.currentTarget.value)}
+                                            maxLength={100}
+                                        />
+                                        <Textarea
+                                            label={t`Introduction`}
+                                            value={form.values.homepage_theme_settings.contact_intro || ''}
+                                            onChange={(event) => updateHeroField('contact_intro', event.currentTarget.value)}
+                                            maxLength={300}
+                                            autosize
+                                            minRows={2}
+                                        />
+                                    </Stack>
+                                </fieldset>
+                            </Accordion.Panel>
+                        </Accordion.Item>
+                        )}
+
+                        <Accordion.Item value="contact-details" className={classes.accordionItem}>
+                            <Accordion.Control icon={<IconAddressBook size={20}/>}>
+                                <Text fw={500}>{t`Contact Details`}</Text>
+                            </Accordion.Control>
+                            <Accordion.Panel>
+                                <fieldset disabled={organizerSettingsQuery.isLoading || updateMutation.isPending}
+                                          className={classes.fieldset}>
+                                    <Stack gap="md">
+                                        <TextInput
+                                            label={t`Contact Email`}
+                                            description={t`Shown in the footer and on the About page. Defaults to your organizer email`}
+                                            placeholder={organizerData?.email}
+                                            value={form.values.homepage_theme_settings.contact_email || ''}
+                                            onChange={(event) => updateHeroField('contact_email', event.currentTarget.value)}
+                                            maxLength={255}
+                                        />
+                                        <TextInput
+                                            label={t`Instagram Handle`}
+                                            description={t`Without the @. Leave blank to hide Instagram links`}
+                                            placeholder="yourschool"
+                                            value={form.values.homepage_theme_settings.instagram_handle || ''}
+                                            onChange={(event) => updateHeroField('instagram_handle', event.currentTarget.value.replace(/^@/, ''))}
+                                            maxLength={30}
+                                        />
+                                    </Stack>
+                                </fieldset>
+                            </Accordion.Panel>
+                        </Accordion.Item>
 
                         <Accordion.Item value="theme" className={classes.accordionItem}>
                             <Accordion.Control icon={<IconPalette size={20}/>}>
@@ -419,7 +590,7 @@ const OrganizerHomepageDesigner = () => {
             </div>
 
             <div className={classes.previewContainer}>
-                <h2>{t`Homepage Preview`}</h2>
+                <h2>{page === 'about' ? t`About Page Preview` : t`Homepage Preview`}</h2>
                 <div className={classes.iframeContainer}>
                     {iframeSrc ? (
                         <iframe

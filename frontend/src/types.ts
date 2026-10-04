@@ -30,7 +30,8 @@ export type ConfigKeys =
     | 'VITE_GOOGLE_ADS_CONVERSION_LABELS'
     | 'VITE_DEFAULT_ORGANIZER_ID'
     | 'VITE_INSTAGRAM_HANDLE'
-    | 'VITE_INSTAGRAM_EMBED_URL';
+    | 'VITE_INSTAGRAM_EMBED_URL'
+    | 'VITE_DEFAULT_SHARE_IMAGE_PATH';
 
 export enum StripePlatform {
     Canada = 'ca',
@@ -89,6 +90,14 @@ export interface HomepageThemeSettings {
     hero_subheading?: string;
     hero_cta_text?: string;
     hero_cta_url?: string;
+    upcoming_heading?: string;
+    about_text?: string;
+    team_heading?: string;
+    team_members?: string[];
+    contact_heading?: string;
+    contact_intro?: string;
+    contact_email?: string;
+    instagram_handle?: string;
 }
 
 export interface LoginResponse {

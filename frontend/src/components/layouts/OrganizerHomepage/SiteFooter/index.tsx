@@ -10,6 +10,7 @@ import {
     organizerResourcesPath,
 } from "../../../../utilites/urlHelper.ts";
 import {getConfig} from "../../../../utilites/config.ts";
+import {getOrganizerContactEmail, getOrganizerInstagramHandle} from "../../../../utilites/organizerContent.ts";
 import {PoweredByFooter} from "../../../common/PoweredByFooter";
 import {PaymentIcons} from "../../../common/PaymentIcons";
 import {CookieSettingsLink} from "../../../common/CookieSettingsLink";
@@ -84,7 +85,8 @@ const ContactForm: React.FC = () => {
 
 export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
     const year = new Date().getFullYear();
-    const instagramHandle = getConfig('VITE_INSTAGRAM_HANDLE', 'friendsofreptonab');
+    const instagramHandle = getOrganizerInstagramHandle(organizer);
+    const contactEmail = getOrganizerContactEmail(organizer);
 
     return (
         <footer className={classes.footer}>
@@ -120,9 +122,11 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <Link to={`${organizerHomepagePath(organizer)}/about`} className={classes.footerNavLink}>
                             {t`About Us`}
                         </Link>
-                        <Link to={`${organizerHomepagePath(organizer)}/instagram`} className={classes.footerNavLink}>
-                            <IconBrandInstagram size={14}/> {t`Instagram`}
-                        </Link>
+                        {instagramHandle && (
+                            <Link to={`${organizerHomepagePath(organizer)}/instagram`} className={classes.footerNavLink}>
+                                <IconBrandInstagram size={14}/> {t`Instagram`}
+                            </Link>
+                        )}
                         <Link to={`${organizerHomepagePath(organizer)}/stories`} className={classes.footerNavLink}>
                             <IconBook2 size={14}/> {t`Children's Stories`}
                         </Link>
@@ -155,8 +159,8 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <h3 className={classes.columnTitle}>
                             <IconMail size={16}/> {t`Contact Us`}
                         </h3>
-                        <a href="mailto:friendsofreptonalbarsha@gmail.com" className={classes.footerNavLink}>
-                            friendsofreptonalbarsha@gmail.com
+                        <a href={`mailto:${contactEmail}`} className={classes.footerNavLink}>
+                            {contactEmail}
                         </a>
                         <ContactForm/>
                     </div>
@@ -169,7 +173,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                     <PoweredByFooter className={classes.poweredBy}/>
                 </div>
 
-                <p className={classes.instagramHint}>@{instagramHandle}</p>
+                {instagramHandle && <p className={classes.instagramHint}>@{instagramHandle}</p>}
             </div>
         </footer>
     );

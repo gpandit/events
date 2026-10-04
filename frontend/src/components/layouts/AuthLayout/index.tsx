@@ -16,6 +16,8 @@ import {showInfo} from "../../../utilites/notifications.tsx";
 import {captureUtmData} from "../../../utilites/utm.ts";
 
 const FeaturePanel = () => {
+    const appName = getConfig("VITE_APP_NAME", "Friends of Repton Al Barsha");
+
     return (
         <div className={classes.rightPanel}>
             <div className={classes.checker} aria-hidden="true"/>
@@ -37,7 +39,7 @@ const FeaturePanel = () => {
 
                 <p className={classes.tagline}>
                     <Trans>
-                        Event ticketing @ Repton Al Barsha, supported by <strong>Friends of School</strong> — an
+                        Event ticketing @ {appName}, supported by <strong>Friends of School</strong> — an
                         initiative by Aqualeo Digecom, powered by Hi.Events.
                     </Trans>
                 </p>
@@ -51,8 +53,8 @@ const FeaturePanel = () => {
                                     <span>Admit One</span>
                                     <span>№ 000482</span>
                                 </div>
-                                <div className={classes.ticketTitle}>Repton Movie Night</div>
-                                <div className={classes.ticketMeta}>Sat, Aug 16 · 6:00 PM · Repton Al Barsha</div>
+                                <div className={classes.ticketTitle}>{t`Movie Night`}</div>
+                                <div className={classes.ticketMeta}>Sat, Aug 16 · 6:00 PM · {appName}</div>
                                 <div className={classes.ticketFields}>
                                     <div className={classes.ticketField}>
                                         <span>Door</span>

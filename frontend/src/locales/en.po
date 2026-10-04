@@ -597,7 +597,7 @@ msgstr "A short description of the event that will be displayed in search engine
 msgid "A short description of your organizer that will be displayed to your users."
 msgstr "A short description of your organizer that will be displayed to your users."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:318
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:357
 msgid "A short line about what you do"
 msgstr "A short line about what you do"
 
@@ -633,9 +633,22 @@ msgstr "Abandoned"
 msgid "About"
 msgstr "About"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+msgid "About & Contact"
+msgstr "About & Contact"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:593
+msgid "About Page Preview"
+msgstr "About Page Preview"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:410
+msgid "About Text"
+msgstr "About Text"
+
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:105
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:155
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:123
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:416
 msgid "About Us"
 msgstr "About Us"
 
@@ -1213,7 +1226,7 @@ msgstr "All Occurrences"
 msgid "All Products"
 msgstr "All Products"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:167
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:171
 msgid "All rights reserved."
 msgstr "All rights reserved."
 
@@ -2060,7 +2073,7 @@ msgid "Background Color"
 msgstr "Background Color"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:372
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:543
 msgid "Background Type"
 msgstr "Background Type"
 
@@ -2081,7 +2094,7 @@ msgstr "Banner"
 msgid "Banner content must be 200 characters or less"
 msgstr "Banner content must be 200 characters or less"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:292
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:331
 msgid "Banner Type"
 msgstr "Banner Type"
 
@@ -2190,12 +2203,12 @@ msgstr "Button label"
 msgid "Button Label"
 msgstr "Button Label"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:335
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:374
 msgid "Button Link"
 msgstr "Button Link"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:271
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:327
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:366
 msgid "Button Text"
 msgstr "Button Text"
 
@@ -2660,7 +2673,7 @@ msgstr "Checkout Settings"
 msgid "Children may submit original stories and poems and play our puzzles. By submitting work you confirm it is entirely your own and that you have the right to share it. Submissions are reviewed by our team before anything is published, and we may decline or remove any work at our discretion."
 msgstr "Children may submit original stories and poems and play our puzzles. By submitting work you confirm it is entirely your own and that you have the right to share it. Submissions are reviewed by our team before anything is published, and we may decline or remove any work at our discretion."
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:127
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:131
 msgid "Children's Stories"
 msgstr "Children's Stories"
 
@@ -2669,7 +2682,7 @@ msgid "Children's Stories & Poems"
 msgstr "Children's Stories & Poems"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:362
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:533
 msgid "Choose a color for your background"
 msgstr "Choose a color for your background"
 
@@ -2888,7 +2901,7 @@ msgid "Collect details per ticket"
 msgstr "Collect details per ticket"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:360
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:531
 msgid "Color"
 msgstr "Color"
 
@@ -3178,17 +3191,26 @@ msgstr "Contact"
 msgid "Contact {0}"
 msgstr "Contact {0}"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:491
+msgid "Contact Details"
+msgstr "Contact Details"
+
 #: src/components/forms/OrganizerForm/index.tsx:35
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:498
 msgid "Contact Email"
 msgstr "Contact Email"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:156
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:160
 msgid "Contact Us"
 msgstr "Contact Us"
 
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:32
+msgid "Contact us:"
+msgstr "Contact us:"
+
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:43
-msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
-msgstr "Contact us: <0>{CONTACT_EMAIL}</0>"
+#~ msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
+#~ msgstr "Contact us: <0>{CONTACT_EMAIL}</0>"
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
@@ -3252,7 +3274,7 @@ msgstr "Control who gets in for this date"
 msgid "Control who gets in, and when"
 msgstr "Control who gets in, and when"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:153
 #: src/components/routes/legal/CookiePolicy/index.tsx:8
 msgid "Cookie Policy"
 msgstr "Cookie Policy"
@@ -3405,7 +3427,7 @@ msgid "Cover"
 msgstr "Cover"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:221
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Cover Image"
 msgstr "Cover Image"
 
@@ -3417,7 +3439,7 @@ msgstr "Cover image added"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "Cover image will be displayed at the top of your event page"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:236
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:274
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "Cover image will be displayed at the top of your organizer page"
 
@@ -3684,7 +3706,7 @@ msgstr "Creative Colouring"
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:92
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:140
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:8
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:137
 msgid "Creative Corner"
 msgstr "Creative Corner"
 
@@ -3787,6 +3809,10 @@ msgstr "Customize the event homepage and checkout messaging"
 msgid "Customize the layout, colors, and branding of your event homepage."
 msgstr "Customize the layout, colors, and branding of your event homepage."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:230
+msgid "Customize the look and content of your public pages"
+msgstr "Customize the look and content of your public pages"
+
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:71
 msgid "Customize the miscellaneous settings for this event"
 msgstr "Customize the miscellaneous settings for this event"
@@ -3817,8 +3843,8 @@ msgid "Customize your event page"
 msgstr "Customize your event page"
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:203
-msgid "Customize your organizer page appearance"
-msgstr "Customize your organizer page appearance"
+#~ msgid "Customize your organizer page appearance"
+#~ msgstr "Customize your organizer page appearance"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:51
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:32
@@ -4201,7 +4227,7 @@ msgstr "Didn't receive the code?"
 msgid "Different location"
 msgstr "Different location"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:302
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:341
 msgid "Direct link to an .mp4 video file"
 msgstr "Direct link to an .mp4 video file"
 
@@ -5173,9 +5199,13 @@ msgstr "Event status update failed. Please try again later"
 msgid "Event status updated"
 msgstr "Event status updated"
 
+#: src/components/layouts/AuthLayout/index.tsx:41
+msgid "Event ticketing @ {appName}, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+msgstr "Event ticketing @ {appName}, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+
 #: src/components/layouts/AuthLayout/index.tsx:39
-msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
-msgstr "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+#~ msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+#~ msgstr "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
 
 #: src/components/common/AdminEventsTable/index.tsx:86
 msgid "Event Title"
@@ -5203,7 +5233,7 @@ msgstr "Event Updated"
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:84
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:133
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:118
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:120
 #: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:151
 #: src/components/routes/admin/Attribution/index.tsx:195
@@ -5613,7 +5643,7 @@ msgid "Failed to save VAT settings. Please try again."
 msgstr "Failed to save VAT settings. Please try again."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:57
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:44
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:45
 msgid "Failed to send message. Please try again."
 msgstr "Failed to send message. Please try again."
 
@@ -5919,7 +5949,7 @@ msgstr "Flash on"
 msgid "Flyer"
 msgstr "Flyer"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:15
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:18
 msgid "Follow us on Instagram"
 msgstr "Follow us on Instagram"
 
@@ -5984,17 +6014,17 @@ msgstr "Fri"
 msgid "Friday"
 msgstr "Friday"
 
-#: src/components/layouts/AuthLayout/index.tsx:164
+#: src/components/layouts/AuthLayout/index.tsx:166
 msgid "Friends of Repton Al Barsha logo"
 msgstr "Friends of Repton Al Barsha logo"
 
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:36
-msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
-msgstr "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
+#~ msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
+#~ msgstr "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
 
 #: src/components/common/ErrorDisplay/index.tsx:88
-#: src/components/layouts/AuthLayout/index.tsx:33
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:97
+#: src/components/layouts/AuthLayout/index.tsx:35
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:99
 msgid "Friends of School"
 msgstr "Friends of School"
 
@@ -6084,7 +6114,12 @@ msgstr "Geography"
 msgid "Get Directions"
 msgstr "Get Directions"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:62
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:462
+msgid "Get in Touch Section"
+msgstr "Get in Touch Section"
+
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:54
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:470
 msgid "Get involved - volunteer, sponsor or say hello"
 msgstr "Get involved - volunteer, sponsor or say hello"
 
@@ -6219,7 +6254,8 @@ msgstr "Hard delete"
 msgid "Have a promo code?"
 msgstr "Have a promo code?"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:309
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:348
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:469
 msgid "Heading"
 msgstr "Heading"
 
@@ -6264,7 +6300,7 @@ msgstr "Here is the React component you can use to embed the widget in your appl
 msgid "Here is your affiliate link"
 msgstr "Here is your affiliate link"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:267
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:306
 msgid "Hero Banner"
 msgstr "Hero Banner"
 
@@ -6429,24 +6465,27 @@ msgstr "Hobbies"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:81
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:126
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:115
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:117
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:237
 msgid "Home"
 msgstr "Home"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:202
 msgid "Homepage Design"
 msgstr "Homepage Design"
 
 #: src/components/layouts/Event/index.tsx:118
-#: src/components/layouts/OrganizerLayout/index.tsx:110
 msgid "Homepage Designer"
 msgstr "Homepage Designer"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:422
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:593
 msgid "Homepage Preview"
 msgstr "Homepage Preview"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:390
+msgid "Homepage Text"
+msgstr "Homepage Text"
 
 #: src/components/modals/ManageAttendeeModal/index.tsx:203
 #: src/components/modals/ManageOrderModal/index.tsx:230
@@ -6458,7 +6497,7 @@ msgstr "Homer"
 msgid "Hours"
 msgstr "Hours"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:68
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:69
 msgid "How can we help?"
 msgstr "How can we help?"
 
@@ -6615,7 +6654,7 @@ msgstr "If you have an account with us, you will receive an email with instructi
 msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
 msgstr "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:320
 msgid "Image"
 msgstr "Image"
 
@@ -6632,7 +6671,7 @@ msgid "Image URL"
 msgstr "Image URL"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:253
 msgid "Images"
 msgstr "Images"
 
@@ -6758,14 +6797,18 @@ msgstr "Insert Image"
 msgid "Insert Liquid Token"
 msgstr "Insert Liquid Token"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:127
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:53
 msgid "Instagram"
 msgstr "Instagram"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:26
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:29
 msgid "Instagram feed"
 msgstr "Instagram feed"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:506
+msgid "Instagram Handle"
+msgstr "Instagram Handle"
 
 #: src/components/layouts/Event/index.tsx:143
 #: src/components/layouts/OrganizerLayout/index.tsx:118
@@ -6775,6 +6818,10 @@ msgstr "Integrations"
 #: src/components/forms/CheckInListForm/index.tsx:190
 msgid "Internal notes on the attendee's ticket"
 msgstr "Internal notes on the attendee's ticket"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:476
+msgid "Introduction"
+msgstr "Introduction"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:35
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:33
@@ -7120,9 +7167,13 @@ msgstr "Leaderboard"
 msgid "Leave “from” as today to start right away."
 msgstr "Leave “from” as today to start right away."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:336
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:375
 msgid "Leave blank to link to your events page"
 msgstr "Leave blank to link to your events page"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:417
+msgid "Leave blank to show your organizer description"
+msgstr "Leave blank to show your organizer description"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:201
 msgid "Leave blank to use the default word \"Invoice\""
@@ -7140,7 +7191,7 @@ msgstr "Leave empty to apply this check-in list to all occurrences"
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:141
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:145
 msgid "Legal"
 msgstr "Legal"
 
@@ -7294,7 +7345,7 @@ msgid "Logging in"
 msgstr "Logging in"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:243
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "Logo"
@@ -7307,7 +7358,7 @@ msgstr "Logo & Cover"
 msgid "Logo and cover image for your organizer"
 msgstr "Logo and cover image for your organizer"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:295
 msgid "Logo will be displayed in the header"
 msgstr "Logo will be displayed in the header"
 
@@ -7489,13 +7540,18 @@ msgid "Medium"
 msgstr "Medium"
 
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:48
-msgid "Meet the Friends of Repton team"
-msgstr "Meet the Friends of Repton team"
+#~ msgid "Meet the Friends of Repton team"
+#~ msgstr "Meet the Friends of Repton team"
+
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:38
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:440
+msgid "Meet the team"
+msgstr "Meet the team"
 
 #: src/components/common/AttendeeTable/index.tsx:154
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:155
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:73
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:74
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:93
 #: src/components/modals/SendMessageModal/index.tsx:444
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:60
@@ -7674,6 +7730,10 @@ msgstr "Most Viewed Events (Last 14 Days)"
 msgid "Move all dates earlier or later"
 msgstr "Move all dates earlier or later"
 
+#: src/components/layouts/AuthLayout/index.tsx:56
+msgid "Movie Night"
+msgstr "Movie Night"
+
 #: src/components/forms/QuestionForm/index.tsx:106
 msgid "Multi line text box"
 msgstr "Multi line text box"
@@ -7692,7 +7752,7 @@ msgstr "Music"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:165
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:108
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:162
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:140
 msgid "My Account"
 msgstr "My Account"
 
@@ -7740,7 +7800,6 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/ProductCategoryForm/index.tsx:16
 #: src/components/forms/ProductForm/index.tsx:196
 #: src/components/forms/TaxAndFeeForm/index.tsx:61
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:55
 #: src/components/modals/DuplicateEventModal/index.tsx:110
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:235
@@ -8533,6 +8592,10 @@ msgstr "Once you create an event, you'll see it here."
 msgid "Once you start collecting data, you'll see it here."
 msgstr "Once you start collecting data, you'll see it here."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:447
+msgid "One name per line, up to 12. Leave blank to hide the team section"
+msgstr "One name per line, up to 12. Leave blank to hide the team section"
+
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:54
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:66
 msgid "One pool shared by every date."
@@ -9027,7 +9090,7 @@ msgstr "Other"
 msgid "Other Lists (Ticket Not Included)"
 msgstr "Other Lists (Ticket Not Included)"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:36
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "Our latest posts are on Instagram — tap below to see them."
 
@@ -9633,7 +9696,7 @@ msgstr "Please enter your username and password"
 msgid "Please enter your VAT number"
 msgstr "Please enter your VAT number"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:33
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:34
 msgid "Please fill in all fields"
 msgstr "Please fill in all fields"
 
@@ -9760,7 +9823,7 @@ msgstr "Position"
 msgid "Post Checkout message"
 msgstr "Post Checkout message"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:102
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:104
 msgid "Powered by Friends of School, an initiative by"
 msgstr "Powered by Friends of School, an initiative by"
 
@@ -9851,7 +9914,7 @@ msgstr "Print Tickets"
 msgid "Print to PDF"
 msgstr "Print to PDF"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:143
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:147
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
@@ -10169,7 +10232,7 @@ msgstr "Questions reordered"
 msgid "Queue"
 msgstr "Queue"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:115
 msgid "Quick Links"
 msgstr "Quick Links"
 
@@ -10810,7 +10873,7 @@ msgstr "Save"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:416
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:587
 msgid "Save Changes"
 msgstr "Save Changes"
 
@@ -11103,7 +11166,7 @@ msgstr "Secure Checkout"
 msgid "See schedule"
 msgstr "See schedule"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:17
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:20
 msgid "See the latest photos and updates from"
 msgstr "See the latest photos and updates from"
 
@@ -11331,7 +11394,7 @@ msgstr "Send emails to attendees, ticket holders, or order owners. Messages can 
 msgid "Send me a copy"
 msgstr "Send me a copy"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:79
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:80
 msgid "Send message"
 msgstr "Send message"
 
@@ -11676,6 +11739,10 @@ msgstr "Showing the first {0} — the remaining {1} session(s) will still be tar
 msgid "Shown bouncing at the top of the modal"
 msgstr "Shown bouncing at the top of the modal"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:499
+msgid "Shown in the footer and on the About page. Defaults to your organizer email"
+msgstr "Shown in the footer and on the About page. Defaults to your organizer email"
+
 #: src/components/forms/CheckInListForm/index.tsx:145
 msgid "Shown to staff the first time they open the check-in page."
 msgstr "Shown to staff the first time they open the check-in page."
@@ -11743,6 +11810,14 @@ msgstr "Single Event"
 #: src/components/forms/QuestionForm/index.tsx:100
 msgid "Single line text box"
 msgstr "Single line text box"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:229
+msgid "Site Design"
+msgstr "Site Design"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:110
+msgid "Site Designer"
+msgstr "Site Designer"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:358
 msgid "Skip manually edited dates"
@@ -12105,7 +12180,7 @@ msgstr "Stripe will need a few more details soon"
 msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe will walk you through a few quick questions to finish setup."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:356
 msgid "Subheading"
 msgstr "Subheading"
 
@@ -12234,7 +12309,6 @@ msgid "Successfully Updated Event Defaults"
 msgstr "Successfully Updated Event Defaults"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:109
 msgid "Successfully Updated Homepage Design"
 msgstr "Successfully Updated Homepage Design"
 
@@ -12293,6 +12367,10 @@ msgstr "Successfully Updated SEO Settings"
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:44
 msgid "Successfully Updated Settings"
 msgstr "Successfully Updated Settings"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:129
+msgid "Successfully Updated Site Design"
+msgstr "Successfully Updated Site Design"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:170
 msgid "Successfully Updated Social Links"
@@ -12449,6 +12527,18 @@ msgstr "Taxes & fees applied"
 msgid "Taxes and Fees"
 msgstr "Taxes and Fees"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:432
+msgid "Team"
+msgstr "Team"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:439
+msgid "Team Heading"
+msgstr "Team Heading"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:446
+msgid "Team Members"
+msgstr "Team Members"
+
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
 msgstr "Tech"
@@ -12501,7 +12591,7 @@ msgstr "Template saved successfully"
 msgid "Term"
 msgstr "Term"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:146
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:150
 #: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "Terms of Service"
@@ -12627,7 +12717,7 @@ msgstr "The language the attendee will receive emails in."
 msgid "The Lantern Garden"
 msgstr "The Lantern Garden"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:274
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:313
 msgid "The large banner at the top of your homepage. Leave fields blank to use sensible defaults."
 msgstr "The large banner at the top of your homepage. Leave fields blank to use sensible defaults."
 
@@ -12763,7 +12853,7 @@ msgid "their test results and points."
 msgstr "their test results and points."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:520
 msgid "Theme & Colors"
 msgstr "Theme & Colors"
 
@@ -13609,7 +13699,7 @@ msgid "Type to search..."
 msgstr "Type to search..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:391
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:562
 msgid "Typography"
 msgstr "Typography"
 
@@ -13787,6 +13877,10 @@ msgstr "Upcoming events"
 msgid "Upcoming Events"
 msgstr "Upcoming Events"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:396
+msgid "Upcoming Events Heading"
+msgstr "Upcoming Events Heading"
+
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:59
 msgid "Update {0}"
 msgstr "Update {0}"
@@ -13919,16 +14013,16 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Use <0>Liquid templating</0> to personalize your emails"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:368
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:539
 msgid "Use a blurred version of the cover image as the background"
 msgstr "Use a blurred version of the cover image as the background"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:289
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
 msgid "Use a looping background video instead"
 msgstr "Use a looping background video instead"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:366
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:537
 msgid "Use cover image"
 msgstr "Use cover image"
 
@@ -13949,7 +14043,7 @@ msgstr "Use the buyer's details for all attendees"
 msgid "Use this address"
 msgstr "Use this address"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:283
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
 msgid "Use your cover image as the banner background"
 msgstr "Use your cover image as the banner background"
 
@@ -14146,15 +14240,15 @@ msgstr "Verify your email so attendees can receive tickets"
 msgid "Verifying..."
 msgstr "Verifying..."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:287
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:326
 msgid "Video"
 msgstr "Video"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:300
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:339
 msgid "Video URL"
 msgstr "Video URL"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:36
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:39
 msgid "View @{handle} on Instagram"
 msgstr "View @{handle} on Instagram"
 
@@ -14216,7 +14310,7 @@ msgid "View Event Page"
 msgstr "View Event Page"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:34
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:367
 msgid "View Events"
 msgstr "View Events"
 
@@ -14455,11 +14549,11 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "We recommend a square logo with minimum dimensions of 200x200px"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:223
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:244
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:282
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 
@@ -14683,8 +14777,13 @@ msgid "What unauthenticated staff can see"
 msgstr "What unauthenticated staff can see"
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:46
-msgid "What's happening at RAB"
-msgstr "What's happening at RAB"
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:397
+msgid "What's happening"
+msgstr "What's happening"
+
+#: src/components/layouts/OrganizerHomepage/index.tsx:46
+#~ msgid "What's happening at RAB"
+#~ msgstr "What's happening at RAB"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:89
 msgid "WhatsApp"
@@ -14822,7 +14921,7 @@ msgstr "Where the button links to"
 msgid "whether they would like it published, and whether they are under 16;"
 msgstr "whether they would like it published, and whether they are under 16;"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:64
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:57
 msgid "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
 msgstr "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
 
@@ -14849,6 +14948,10 @@ msgstr "Widget Preview"
 #: src/components/common/WidgetEditor/index.tsx:160
 msgid "Widget Settings"
 msgstr "Widget Settings"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:507
+msgid "Without the @. Leave blank to hide Instagram links"
+msgstr "Without the @. Leave blank to hide Instagram links"
 
 #: src/components/layouts/PublicParentalConsent/index.tsx:96
 msgid "Without your permission they can still play and save their scores, but will not appear on the leaderboard."
@@ -15206,8 +15309,8 @@ msgstr "Your current order will be lost."
 msgid "Your Details"
 msgstr "Your Details"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:61
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:65
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:62
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:66
 msgid "Your email"
 msgstr "Your email"
 
@@ -15231,7 +15334,7 @@ msgstr "Your message has been sent"
 msgid "Your message has been sent successfully!"
 msgstr "Your message has been sent successfully!"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:41
 msgid "Your message has been sent. We'll be in touch soon!"
 msgstr "Your message has been sent. We'll be in touch soon!"
 
@@ -15239,8 +15342,8 @@ msgstr "Your message has been sent. We'll be in touch soon!"
 msgid "Your messages will appear here"
 msgstr "Your messages will appear here"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:53
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:54
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:58
 msgid "Your name"
 msgstr "Your name"
 
@@ -15280,7 +15383,7 @@ msgstr "Your orders have been exported successfully."
 msgid "Your orders will appear here once they start rolling in."
 msgstr "Your orders will appear here once they start rolling in."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:310
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
 msgid "Your organization name"
 msgstr "Your organization name"
 

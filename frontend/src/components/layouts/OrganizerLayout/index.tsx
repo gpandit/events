@@ -107,7 +107,7 @@ const OrganizerLayout = () => {
         { link: 'settings', label: t`Settings`, icon: IconSettings },
 
         { label: t`Tools` },
-        { link: 'organizer-homepage-designer', label: t`Homepage Designer`, icon: IconPaint },
+        { link: 'organizer-homepage-designer', label: t`Site Designer`, icon: IconPaint },
 
         { label: t`Community` },
         { link: 'child-story-submissions', label: t`Story Submissions`, icon: IconFeather },
