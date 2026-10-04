@@ -600,6 +600,15 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/events/:organizerId/:organizerSlug/puzzles",
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicPuzzles = await import("./components/layouts/PublicPuzzles");
+            return { Component: PublicPuzzles.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/events/:organizerId/:organizerSlug/account",
         loader: publicOrganizerRouteLoader,
         async lazy() {

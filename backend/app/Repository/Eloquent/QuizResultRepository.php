@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace HiEvents\Repository\Eloquent;
 
-use HiEvents\DomainObjects\Enums\ParentalConsentSubject;
 use HiEvents\DomainObjects\QuizResultDomainObject;
-use HiEvents\DomainObjects\Status\ParentalConsentStatus;
 use HiEvents\Models\QuizResult;
 use HiEvents\Repository\DTO\Quiz\QuizLeaderboardEntryDTO;
 use HiEvents\Repository\DTO\Quiz\QuizPlayerTotalsDTO;
 use HiEvents\Repository\Interfaces\QuizResultRepositoryInterface;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 
 /**
@@ -36,11 +33,6 @@ class QuizResultRepository extends BaseRepository implements QuizResultRepositor
                 ->join('quiz_players', 'quiz_players.id', '=', 'quiz_results.quiz_player_id')
                 ->where('quiz_results.organizer_id', $organizerId)
                 ->where('quiz_results.age_band', $ageBand)
-                ->whereNotExists(fn (Builder $query) => $query->selectRaw('1')
-                    ->from('parental_consents')
-                    ->whereColumn('parental_consents.subject_id', 'quiz_players.id')
-                    ->where('parental_consents.subject_type', ParentalConsentSubject::QUIZ_PLAYER->value)
-                    ->where('parental_consents.status', '!=', ParentalConsentStatus::GRANTED->value))
                 ->groupBy('quiz_players.id', 'quiz_players.username')
                 ->orderByDesc('total_points')
                 ->orderBy('tests_taken')

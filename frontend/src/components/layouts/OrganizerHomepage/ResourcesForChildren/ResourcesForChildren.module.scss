@@ -433,6 +433,86 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     color: var(--organizer-primary-text-color, #1a1a1a);
 }
 
+.puzzlesLayout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 24px;
+    align-items: start;
+    padding-top: 24px;
+
+    @include mixins.respond-below(md) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.puzzlesMain {
+    min-width: 0;
+
+    .tabPanel {
+        padding-top: 0;
+    }
+}
+
+.leaderboardPane {
+    position: sticky;
+    top: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 16px;
+    background: var(--organizer-content-bg-color, #ffffff);
+
+    @include mixins.respond-below(md) {
+        position: static;
+    }
+}
+
+.leaderboardTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-family: $font-display;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--organizer-primary-text-color, #1a1a1a);
+}
+
+.leaderboardAgeLabel {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--organizer-secondary-color, #525252);
+}
+
+.playerSummary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px 20px;
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    border: 1px solid var(--organizer-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    background: var(--organizer-content-bg-color, #ffffff);
+    color: var(--organizer-primary-text-color, #1a1a1a);
+}
+
+.playerGreeting {
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.playerScores {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    font-weight: 600;
+}
+
 .secondaryButton {
     display: inline-flex;
     align-items: center;

@@ -21,9 +21,13 @@ export const organizerAccountPath = (organizer: Organizer) => {
     return `${organizerHomepagePath(organizer)}/account`;
 }
 
-export const organizerResourcesPath = (organizer: Organizer, tab?: 'colouring-pages' | 'puzzles') => {
+export const organizerResourcesPath = (organizer: Organizer, tab?: 'colouring-pages') => {
     const base = `${organizerHomepagePath(organizer)}/resources`;
     return tab ? `${base}/${tab}` : base;
+}
+
+export const organizerPuzzlesPath = (organizer: Organizer) => {
+    return `${organizerHomepagePath(organizer)}/puzzles`;
 }
 
 export const organizerEventsPath = (organizer: Organizer) => {

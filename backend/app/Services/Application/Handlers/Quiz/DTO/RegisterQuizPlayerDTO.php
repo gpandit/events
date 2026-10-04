@@ -15,6 +15,5 @@ class RegisterQuizPlayerDTO extends BaseDataObject
         public string $email,
         public QuizAgeBand $age_band,
         public string $password,
-        public ?string $parent_email = null,
     ) {}
 }

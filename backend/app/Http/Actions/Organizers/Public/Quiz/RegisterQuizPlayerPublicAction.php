@@ -33,13 +33,6 @@ class RegisterQuizPlayerPublicAction extends BaseAction
             'first_name' => 'required|string|max:100',
             'email' => 'required|email|max:255',
             'age_band' => ['required', Rule::enum(QuizAgeBand::class)],
-            'parent_email' => [
-                Rule::requiredIf(fn () => QuizAgeBand::tryFrom((string) $request->input('age_band'))?->requiresParentalConsent() ?? false),
-                'nullable',
-                'email',
-                'max:255',
-                'different:email',
-            ],
             'password' => 'required|string|min:6|max:100',
         ]);
 
@@ -49,7 +42,6 @@ class RegisterQuizPlayerPublicAction extends BaseAction
                 'first_name' => $data['first_name'],
                 'email' => $data['email'],
                 'age_band' => $data['age_band'],
-                'parent_email' => $data['parent_email'] ?? null,
                 'password' => $data['password'],
             ]));
         } catch (QuizUsernameUnavailableException $exception) {

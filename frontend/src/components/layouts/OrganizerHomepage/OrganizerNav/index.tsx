@@ -9,6 +9,7 @@ import {
     organizerAccountPath,
     organizerEventsPath,
     organizerHomepagePath,
+    organizerPuzzlesPath,
     organizerResourcesPath,
 } from "../../../../utilites/urlHelper.ts";
 import classes from './OrganizerNav.module.scss';
@@ -35,7 +36,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
 
     const resourceLinks = [
         {to: organizerResourcesPath(organizer, 'colouring-pages'), label: t`Colouring Pages`},
-        {to: organizerResourcesPath(organizer, 'puzzles'), label: t`Puzzles`},
+        {to: organizerPuzzlesPath(organizer), label: t`Puzzles`},
         {to: `${homePath}/stories`, label: t`Prose & Poetry`, isStories: true},
     ];
 

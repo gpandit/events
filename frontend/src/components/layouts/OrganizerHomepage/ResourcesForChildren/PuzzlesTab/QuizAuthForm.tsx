@@ -16,10 +16,9 @@ interface QuizAuthFormProps {
 
 type AuthMode = 'signup' | 'signin' | 'forgot';
 
-const emptySignUp = {first_name: '', email: '', age_band: '', parent_email: '', password: ''};
+const emptySignUp = {first_name: '', email: '', age_band: '', password: ''};
 const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 
-const requiresParentalConsent = (ageBand: string) => ageBand !== '' && ageBand !== '14-17';
 const emptySignIn = {username: '', password: ''};
 
 const errorMessage = (error: any): string => {
@@ -37,7 +36,6 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
     const [signIn, setSignIn] = useState(emptySignIn);
     const [error, setError] = useState<string | null>(null);
     const [newPlayer, setNewPlayer] = useState<QuizPlayerSession | null>(null);
-    const [parentContacted, setParentContacted] = useState(false);
     const registerMutation = useRegisterQuizPlayer(organizerId);
     const loginMutation = useLoginQuizPlayer(organizerId);
     const resetMutation = useRequestQuizPasswordReset(organizerId);
@@ -52,8 +50,6 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
 
     const handleSignUp = (event: React.FormEvent) => {
         event.preventDefault();
-
-        const needsParent = requiresParentalConsent(signUp.age_band);
 
         if (!signUp.first_name.trim() || !signUp.password) {
             setError(t`Please fill in your first name and password`);
@@ -70,23 +66,14 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
             return;
         }
 
-        if (needsParent && !EMAIL_PATTERN.test(signUp.parent_email.trim())) {
-            setError(t`Please enter your parent or guardian's email address`);
-            return;
-        }
-
         setError(null);
         registerMutation.mutate({
             first_name: signUp.first_name,
             email: signUp.email.trim(),
             age_band: signUp.age_band,
-            parent_email: needsParent ? signUp.parent_email.trim() : undefined,
             password: signUp.password,
         }, {
-            onSuccess: (response) => {
-                setParentContacted(needsParent);
-                setNewPlayer(response.data);
-            },
+            onSuccess: (response) => setNewPlayer(response.data),
             onError: (err) => setError(errorMessage(err)),
         });
     };
@@ -130,11 +117,6 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                 <p className={classes.puzzleText}>
                     {t`Write it down! You will need it to sign in next time. Only this username is shown on the leaderboard, so your real name stays private.`}
                 </p>
-                {parentContacted && (
-                    <p className={classes.puzzleText} data-testid="puzzles-parent-contacted">
-                        {t`We have emailed your parent or guardian to ask for permission to show you on the leaderboard. You can play and save your scores in the meantime.`}
-                    </p>
-                )}
                 <button
                     type="button"
                     className={classes.primaryButton}
@@ -217,23 +199,6 @@ export const QuizAuthForm: React.FC<QuizAuthFormProps> = ({organizerId, onAuthen
                             </button>
                         ))}
                     </div>
-                    {requiresParentalConsent(signUp.age_band) && (
-                        <>
-                            <input
-                                type="email"
-                                className={classes.saveInput}
-                                placeholder={t`Parent or guardian's email`}
-                                aria-label={t`Parent or guardian's email`}
-                                autoComplete="off"
-                                value={signUp.parent_email}
-                                onChange={(e) => setSignUp({...signUp, parent_email: e.target.value})}
-                                data-testid="puzzles-signup-parent-email"
-                            />
-                            <p className={classes.fieldHint}>
-                                {t`We will email them to ask for permission to show you on the leaderboard. You can still play and save your scores without it.`}
-                            </p>
-                        </>
-                    )}
                     <input
                         type="password"
                         className={classes.saveInput}
