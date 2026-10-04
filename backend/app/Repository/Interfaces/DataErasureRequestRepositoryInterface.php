@@ -12,7 +12,7 @@ use HiEvents\DomainObjects\DataErasureRequestDomainObject;
 interface DataErasureRequestRepositoryInterface extends RepositoryInterface
 {
     /**
-     * @return int[] ids of the orders that were anonymised
+     * @return array<int, string> public order references keyed by order id
      */
     public function anonymiseOrders(string $email): array;
 
@@ -26,18 +26,18 @@ interface DataErasureRequestRepositoryInterface extends RepositoryInterface
      */
     public function scrubOrderRelatedRecords(array $orderIds): void;
 
-    public function anonymiseWaitlistEntries(string $email): void;
+    public function anonymiseWaitlistEntries(string $email): int;
 
-    public function anonymiseStripeCustomers(string $email): void;
+    public function anonymiseStripeCustomers(string $email): int;
 
-    public function deleteCustomerAccounts(string $email): void;
+    public function deleteCustomerAccounts(string $email): int;
 
     public function deleteTicketLookupTokens(string $email): void;
 
     /**
      * Deletes the stories and puzzle players of children whose parent used this email.
      *
-     * @return int number of child records removed
+     * @return array{stories: int, puzzle_accounts: int}
      */
-    public function deleteChildRecords(string $email): int;
+    public function deleteChildRecords(string $email): array;
 }

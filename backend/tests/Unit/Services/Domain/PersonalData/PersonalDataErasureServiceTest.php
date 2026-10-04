@@ -17,14 +17,14 @@ class PersonalDataErasureServiceTest extends TestCase
         $db = m::mock(DatabaseManager::class);
         $db->shouldReceive('transaction')->once()->andReturnUsing(fn (callable $callback) => $callback());
 
-        $repository->shouldReceive('anonymiseOrders')->once()->with('parent@example.com')->andReturn([4, 9]);
+        $repository->shouldReceive('anonymiseOrders')->once()->with('parent@example.com')->andReturn([4 => 'A1B2', 9 => 'C3D4']);
         $repository->shouldReceive('anonymiseAttendees')->once()->with('parent@example.com', [4, 9])->andReturn(3);
         $repository->shouldReceive('scrubOrderRelatedRecords')->once()->with([4, 9]);
-        $repository->shouldReceive('anonymiseWaitlistEntries')->once()->with('parent@example.com');
-        $repository->shouldReceive('anonymiseStripeCustomers')->once()->with('parent@example.com');
-        $repository->shouldReceive('deleteCustomerAccounts')->once()->with('parent@example.com');
+        $repository->shouldReceive('anonymiseWaitlistEntries')->once()->with('parent@example.com')->andReturn(1);
+        $repository->shouldReceive('anonymiseStripeCustomers')->once()->with('parent@example.com')->andReturn(2);
+        $repository->shouldReceive('deleteCustomerAccounts')->once()->with('parent@example.com')->andReturn(1);
         $repository->shouldReceive('deleteTicketLookupTokens')->once()->with('parent@example.com');
-        $repository->shouldReceive('deleteChildRecords')->once()->with('parent@example.com')->andReturn(2);
+        $repository->shouldReceive('deleteChildRecords')->once()->with('parent@example.com')->andReturn(['stories' => 1, 'puzzle_accounts' => 1]);
 
         $logged = new DataErasureRequestDomainObject;
         $repository->shouldReceive('create')
@@ -39,9 +39,15 @@ class PersonalDataErasureServiceTest extends TestCase
             }))
             ->andReturn($logged);
 
-        $result = (new PersonalDataErasureService($repository, $db))->erase(' Parent@Example.com ');
+        $report = (new PersonalDataErasureService($repository, $db))->erase(' Parent@Example.com ');
 
-        $this->assertSame($logged, $result);
+        $this->assertSame(['A1B2', 'C3D4'], $report->order_references);
+        $this->assertSame(3, $report->attendees_count);
+        $this->assertSame(1, $report->customer_accounts_count);
+        $this->assertSame(1, $report->waitlist_entries_count);
+        $this->assertSame(2, $report->payment_customer_records_count);
+        $this->assertSame(1, $report->stories_count);
+        $this->assertSame(1, $report->puzzle_accounts_count);
     }
 
     protected function tearDown(): void

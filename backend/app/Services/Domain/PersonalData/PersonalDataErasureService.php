@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace HiEvents\Services\Domain\PersonalData;
 
-use HiEvents\DomainObjects\DataErasureRequestDomainObject;
 use HiEvents\DomainObjects\Generated\DataErasureRequestDomainObjectAbstract;
 use HiEvents\Repository\Interfaces\DataErasureRequestRepositoryInterface;
+use HiEvents\Services\Domain\PersonalData\DTO\PersonalDataErasureReportDTO;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\Carbon;
 
@@ -17,31 +17,41 @@ class PersonalDataErasureService
         private readonly DatabaseManager $db,
     ) {}
 
-    public function erase(string $email): DataErasureRequestDomainObject
+    public function erase(string $email): PersonalDataErasureReportDTO
     {
         $email = mb_strtolower(trim($email));
 
-        return $this->db->transaction(function () use ($email): DataErasureRequestDomainObject {
-            $orderIds = $this->repository->anonymiseOrders($email);
+        return $this->db->transaction(function () use ($email): PersonalDataErasureReportDTO {
+            $orderReferences = $this->repository->anonymiseOrders($email);
+            $orderIds = array_keys($orderReferences);
             $attendeesCount = $this->repository->anonymiseAttendees($email, $orderIds);
             $this->repository->scrubOrderRelatedRecords($orderIds);
-            $this->repository->anonymiseWaitlistEntries($email);
-            $this->repository->anonymiseStripeCustomers($email);
-            $this->repository->deleteCustomerAccounts($email);
+            $waitlistEntriesCount = $this->repository->anonymiseWaitlistEntries($email);
+            $paymentCustomerRecordsCount = $this->repository->anonymiseStripeCustomers($email);
+            $customerAccountsCount = $this->repository->deleteCustomerAccounts($email);
             $this->repository->deleteTicketLookupTokens($email);
-            $childRecordsCount = $this->repository->deleteChildRecords($email);
+            $childRecords = $this->repository->deleteChildRecords($email);
+            $erasedAt = Carbon::now();
 
-            /** @var DataErasureRequestDomainObject $request */
-            $request = $this->repository->create([
+            $this->repository->create([
                 DataErasureRequestDomainObjectAbstract::EMAIL_HASH => $this->fingerprint($email),
                 DataErasureRequestDomainObjectAbstract::ORDER_IDS => json_encode($orderIds),
                 DataErasureRequestDomainObjectAbstract::ORDERS_COUNT => count($orderIds),
                 DataErasureRequestDomainObjectAbstract::ATTENDEES_COUNT => $attendeesCount,
-                DataErasureRequestDomainObjectAbstract::CHILD_RECORDS_COUNT => $childRecordsCount,
-                DataErasureRequestDomainObjectAbstract::ERASED_AT => Carbon::now(),
+                DataErasureRequestDomainObjectAbstract::CHILD_RECORDS_COUNT => $childRecords['stories'] + $childRecords['puzzle_accounts'],
+                DataErasureRequestDomainObjectAbstract::ERASED_AT => $erasedAt,
             ]);
 
-            return $request;
+            return new PersonalDataErasureReportDTO(
+                order_references: array_values($orderReferences),
+                attendees_count: $attendeesCount,
+                customer_accounts_count: $customerAccountsCount,
+                waitlist_entries_count: $waitlistEntriesCount,
+                payment_customer_records_count: $paymentCustomerRecordsCount,
+                stories_count: $childRecords['stories'],
+                puzzle_accounts_count: $childRecords['puzzle_accounts'],
+                erased_at: $erasedAt->toDateTimeString(),
+            );
         });
     }
 

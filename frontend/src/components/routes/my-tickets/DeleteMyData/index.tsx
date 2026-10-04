@@ -43,6 +43,9 @@ export const DeleteMyData = ({token}: DeleteMyDataProps) => {
                     <IconCheck size={20}/>
                     <Text fw={500} data-testid="delete-my-data-done">{t`Your personal data has been deleted.`}</Text>
                 </div>
+                <Text size="sm" c="dimmed">
+                    {t`We have emailed you a confirmation listing what was deleted, what we kept and what we could not delete, such as records held by our payment processor.`}
+                </Text>
             </Card>
         );
     }

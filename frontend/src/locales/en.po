@@ -3142,7 +3142,7 @@ msgstr "Confirm Spam"
 msgid "Confirm your email to access all features."
 msgstr "Confirm your email to access all features."
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:76
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:79
 msgid "Confirmation"
 msgstr "Confirmation"
 
@@ -4136,9 +4136,9 @@ msgstr "Delete Job"
 msgid "Delete location"
 msgstr "Delete location"
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:55
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:67
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:71
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:58
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:70
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:74
 msgid "Delete my data"
 msgstr "Delete my data"
 
@@ -9215,7 +9215,7 @@ msgstr "Pass to Buyer"
 msgid "Password"
 msgstr "Password"
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:83
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:86
 msgid "Password (if you have an account password)"
 msgstr "Password (if you have an account password)"
 
@@ -9462,11 +9462,11 @@ msgstr "Percentage of transaction amount"
 msgid "Performance"
 msgstr "Performance"
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:99
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:102
 msgid "Permanently delete my data"
 msgstr "Permanently delete my data"
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:58
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:61
 msgid "Permanently delete the personal information we hold for this email address, including your name, email, phone and address on orders and tickets, your account, and any stories or puzzle accounts created for your children. Payment records are kept without any personal details, as we are required to keep financial records."
 msgstr "Permanently delete the personal information we hold for this email address, including your name, email, phone and address on orders and tickets, your account, and any stories or puzzle accounts created for your children. Payment records are kept without any personal details, as we are required to keep financial records."
 
@@ -12940,7 +12940,7 @@ msgstr "This applies to every matching date in the event, including dates not cu
 msgid "This attendee has an unpaid order."
 msgstr "This attendee has an unpaid order."
 
-#: src/components/routes/my-tickets/DeleteMyData/index.tsx:73
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:76
 msgid "This cannot be undone. Your tickets will no longer be linked to you, so keep a copy of any ticket you still need. Type {CONFIRMATION_WORD} to confirm."
 msgstr "This cannot be undone. Your tickets will no longer be linked to you, so keep a copy of any ticket you still need. Type {CONFIRMATION_WORD} to confirm."
 
@@ -14498,6 +14498,10 @@ msgstr "We do not sell your personal information. We share information only with
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:139
 msgid "We email the parent or guardian to explain what will be shown and ask for their permission. We record their response and when it was given. Work from a child under 16 is only published if the parent or guardian agrees and our team approves it. If published, the page shows the child's first name, the initial of their last name, their class or year group, the date it was submitted and the work itself. Their full last name is never shown publicly. If the parent or guardian does not respond or declines, the work is not published."
 msgstr "We email the parent or guardian to explain what will be shown and ask for their permission. We record their response and when it was given. Work from a child under 16 is only published if the parent or guardian agrees and our team approves it. If published, the page shows the child's first name, the initial of their last name, their class or year group, the date it was submitted and the work itself. Their full last name is never shown publicly. If the parent or guardian does not respond or declines, the work is not published."
+
+#: src/components/routes/my-tickets/DeleteMyData/index.tsx:47
+msgid "We have emailed you a confirmation listing what was deleted, what we kept and what we could not delete, such as records held by our payment processor."
+msgstr "We have emailed you a confirmation listing what was deleted, what we kept and what we could not delete, such as records held by our payment processor."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:135
 msgid "We have emailed your parent or guardian to ask for permission to show you on the leaderboard. You can play and save your scores in the meantime."
