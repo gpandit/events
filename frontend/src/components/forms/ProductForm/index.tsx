@@ -50,6 +50,8 @@ import classNames from "classnames";
 import {InputLabelWithHelp} from "../../common/InputLabelWithHelp";
 import {CreateTaxOrFeeModal} from "../../modals/CreateTaxOrFeeModal";
 import {defaultQuantityAppliesTo, ProductPriceTierForm, QuantityField} from "./ProductPriceTierForm.tsx";
+import {ProductImagesField} from "./ProductImagesField.tsx";
+import {ProductSizesForm} from "./ProductSizesForm.tsx";
 import {LedgerRow, LedgerRowId} from "./LedgerRow.tsx";
 import {ProductSelector} from "../../common/ProductSelector";
 import {
@@ -103,6 +105,7 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
     const {data: event} = useGetEvent(eventId);
     const {data: taxesAndFees} = useGetTaxesAndFees();
     const isRecurring = event?.type === EventType.RECURRING;
+    const isShop = !!event?.is_shop;
     const typeLocked = Number(product?.quantity_sold) > 0;
     const seatMap = useGetEventSeatMap(eventId, !!event?.has_seat_map && !!product?.id).data;
     const isSeated = !!product?.id && seatedProductIds(seatMap?.band_products ?? []).has(Number(product.id));
@@ -141,6 +144,13 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
             }
         });
     }, [form.values.product_type]);
+
+    useEffect(() => {
+        if (isShop && form.values.product_type !== ProductType.General) {
+            form.setFieldValue('product_type', ProductType.General);
+            form.resetDirty();
+        }
+    }, [isShop]);
 
     useEffect(() => {
         if (event?.product_categories && event.product_categories.length === 1) {
@@ -211,7 +221,7 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
                 </Callout>
             )}
 
-            <div
+            {!isShop && <div
                 role="radiogroup"
                 aria-label={t`Product Type`}
                 aria-required
@@ -253,7 +263,7 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
                         </span>
                     </button>
                 ))}
-            </div>
+            </div>}
 
             {form.errors.product_type && (
                 <Alert title={t`Product Type`} mb={20} color={'red'}>
@@ -268,7 +278,9 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
                         {...form.getInputProps('product_category_id')}
                         label={<InputLabelWithHelp
                             label={t`Product Category`}
-                            helpText={t`Categories help you organize your products. This title will be displayed on the public event page.`}
+                            helpText={isShop
+                                ? t`Categories help you organize your products. This title will be displayed on the public shop page.`
+                                : t`Categories help you organize your products. This title will be displayed on the public event page.`}
                         />}
                         placeholder={t`Select category...`}
                         data={event?.product_categories?.map((category) => ({
@@ -279,6 +291,10 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
                 </InputGroup>
             ) : nameInput}
 
+            {form.values.product_type === ProductType.General && (
+                <ProductImagesField form={form} productId={product?.id}/>
+            )}
+
             <div className={classes.priceBlock}>
                 <div className={classes.priceBlockHeader}>
                     <span className={classes.priceBlockLabel}>{t`Pricing`}</span>
@@ -288,7 +304,10 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
                         onChange={(value) => form.setFieldValue('type', value as ProductPriceType)}
                         disabled={typeLocked}
                         data-testid="product-price-type"
-                        data={[
+                        data={isShop ? [
+                            {label: t`Single price`, value: ProductPriceType.Paid},
+                            {label: t`Sizes`, value: ProductPriceType.Tiered},
+                        ] : [
                             {label: t`Paid`, value: ProductPriceType.Paid},
                             {label: t`Free`, value: ProductPriceType.Free},
                             {label: t`Donation`, value: ProductPriceType.Donation},
@@ -334,10 +353,26 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
                                 testId="product-quantity-applies-to"
                             />
                         </InputGroup>
+                        {isShop && (
+                            <NumberInput decimalScale={2}
+                                         min={0}
+                                         fixedDecimalScale
+                                         leftSection={event?.currency ? getCurrencySymbol(event.currency) : ''}
+                                         {...form.getInputProps('prices.0.compare_at_price')}
+                                         label={<InputLabelWithHelp
+                                             label={t`Regular price (optional)`}
+                                             helpText={t`Only fill this in when the item is on sale. It is shown crossed out next to the price, so it must be higher than the price.`}
+                                         />}
+                                         placeholder={t`Original price before the sale`}/>
+                        )}
                     </>
                 )}
 
-                {form.values.type === ProductPriceType.Tiered && (
+                {isShop && form.values.type === ProductPriceType.Tiered && (
+                    <ProductSizesForm form={form} product={product} event={event}/>
+                )}
+
+                {!isShop && form.values.type === ProductPriceType.Tiered && (
                     <>
                         <Callout variant="info" title={t`What are Tiered Products?`}>
                             <Trans>
@@ -440,7 +475,7 @@ export const ProductForm = ({form, product}: ProductFormProps) => {
                 <LedgerRow
                     id="event-page"
                     icon={<IconEye size={16}/>}
-                    label={t`On the event page`}
+                    label={isShop ? t`On the shop page` : t`On the event page`}
                     summary={eventPageSummary(form.values)}
                     opened={openRows.has('event-page')}
                     onToggle={toggleRow}

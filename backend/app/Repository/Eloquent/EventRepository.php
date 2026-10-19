@@ -37,10 +37,11 @@ class EventRepository extends BaseRepository implements EventRepositoryInterface
         return EventDomainObject::class;
     }
 
-    public function findEventsForOrganizer(int $organizerId, int $accountId, QueryParamsDTO $params): LengthAwarePaginator
+    public function findEventsForOrganizer(int $organizerId, int $accountId, QueryParamsDTO $params, bool $isShop = false): LengthAwarePaginator
     {
-        $where[] = static function (Builder $builder) use ($accountId, $organizerId) {
+        $where[] = static function (Builder $builder) use ($accountId, $organizerId, $isShop) {
             $builder
+                ->where(EventDomainObjectAbstract::IS_SHOP, $isShop)
                 ->whereIn(EventDomainObjectAbstract::STATUS, [
                     EventStatus::LIVE->name,
                     EventStatus::DRAFT->name,
@@ -228,6 +229,7 @@ class EventRepository extends BaseRepository implements EventRepositoryInterface
             ])
             ->join('event_settings', 'events.id', '=', 'event_settings.event_id')
             ->where('events.'.EventDomainObjectAbstract::STATUS, EventStatus::LIVE->name)
+            ->where('events.'.EventDomainObjectAbstract::IS_SHOP, false)
             ->where('event_settings.'.EventSettingDomainObjectAbstract::ALLOW_SEARCH_ENGINE_INDEXING, true)
             ->whereNull('events.'.EventDomainObjectAbstract::DELETED_AT)
             ->orderBy('events.'.EventDomainObjectAbstract::ID)
@@ -250,6 +252,7 @@ class EventRepository extends BaseRepository implements EventRepositoryInterface
             ->newQuery()
             ->join('event_settings', 'events.id', '=', 'event_settings.event_id')
             ->where('events.'.EventDomainObjectAbstract::STATUS, EventStatus::LIVE->name)
+            ->where('events.'.EventDomainObjectAbstract::IS_SHOP, false)
             ->where('event_settings.'.EventSettingDomainObjectAbstract::ALLOW_SEARCH_ENGINE_INDEXING, true)
             ->whereNull('events.'.EventDomainObjectAbstract::DELETED_AT)
             ->count();

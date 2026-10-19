@@ -13,6 +13,7 @@ class ProductPrice extends BaseModel
     {
         return [
             'price' => 'float',
+            'compare_at_price' => 'float',
         ];
     }
 

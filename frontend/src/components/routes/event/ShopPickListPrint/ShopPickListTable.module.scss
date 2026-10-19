@@ -1,0 +1,34 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+
+  th,
+  td {
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  th {
+    font-weight: 600;
+  }
+}
+
+.selectCell {
+  width: 36px;
+}
+
+.tickBox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #333;
+  border-radius: 3px;
+}
+
+.detail {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}

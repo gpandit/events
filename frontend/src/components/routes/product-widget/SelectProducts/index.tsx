@@ -38,6 +38,8 @@ import {
     safeLocalStorageSet
 } from "../../../../utilites/helpers.ts";
 import {TieredPricing} from "./Prices/Tiered";
+import {ProductGallery} from "./ProductGallery";
+import {ShopProductCard} from "./ShopProductCard";
 import classNames from 'classnames';
 import '../../../../styles/widget/default.scss';
 import {ProductAvailabilityMessage} from "../../../common/ProductPriceAvailability";
@@ -852,7 +854,7 @@ const SelectProducts = (props: SelectProductsProps) => {
                                 </Spoiler>
                             </div>
                         )}
-                        <div className={'hi-product-rows'}>
+                        <div className={event?.is_shop ? 'hi-product-rows hi-shop-grid' : 'hi-product-rows'}>
                             {category.products?.length === 0 && (
                                 <div className={'hi-no-products'}>
                                     <p className={'hi-no-products-message'}>
@@ -861,7 +863,18 @@ const SelectProducts = (props: SelectProductsProps) => {
                                 </div>
                             )}
 
-                            {visibleProducts.map((product) => {
+                            {event?.is_shop && visibleProducts.map((product) => (
+                                <ShopProductCard
+                                    key={product.id}
+                                    product={product}
+                                    event={event}
+                                    form={form}
+                                    productIndex={getProductFormIndex(Number(product.id))}
+                                    eventOccurrenceId={selectedOccurrenceId}
+                                />
+                            ))}
+
+                            {!event?.is_shop && visibleProducts.map((product) => {
                                 const currentProductIndex = getProductFormIndex(Number(product.id));
                                 const addonIds = getResolvableAddonIds(product);
 
@@ -907,6 +920,13 @@ const SelectProducts = (props: SelectProductsProps) => {
                                             </div>
                                         )}
                                         <div className={'hi-title-row'}>
+                                            {product.images?.[0] && (
+                                                <UnstyledButton className={'hi-product-thumb'}
+                                                                onClick={toggleCollapse}>
+                                                    <img src={product.images[0].url} alt={product.title}
+                                                         loading={'lazy'}/>
+                                                </UnstyledButton>
+                                            )}
                                             <UnstyledButton className={'hi-product-title'}
                                                             onClick={toggleCollapse}
                                             >
@@ -969,6 +989,10 @@ const SelectProducts = (props: SelectProductsProps) => {
                                         )}
                                         <Collapse transitionDuration={100} expanded={!isProductCollapsed}
                                                   className={'hi-product-content'} hidden={isProductCollapsed}>
+                                            {!!product.images?.length && (
+                                                <ProductGallery images={product.images} alt={product.title}/>
+                                            )}
+
                                             {!isSimpleProduct && (
                                                 <div className={'hi-price-tiers-rows'}>
                                                     <TieredPricing

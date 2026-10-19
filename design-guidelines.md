@@ -15,7 +15,7 @@ Three brands appear on this site, each with a distinct role:
 - **Friends of School** — the parent initiative. Teal/amber wordmark logo
   (`/logos/friends-of-school-logo.webp`, `-white.webp` for dark backgrounds),
   shown in the site footer and the auth page's right-hand panel.
-- **Aqualeo Digecom FZ LLC** — the legal operator. Named in the footer
+- **Aqualeo Digecom FZ-LLC** — the legal operator. Named in the footer
   copyright line and the Privacy Policy / Terms of Service pages
   (`/privacy-policy`, `/terms-of-service`). Hi.Events itself keeps a
   "Powered by Hi.Events" credit per its AGPL license (see

@@ -4,6 +4,7 @@ namespace HiEvents\Services\Application\Handlers\ProductCategory;
 
 use HiEvents\DomainObjects\Generated\ProductCategoryDomainObjectAbstract;
 use HiEvents\DomainObjects\Generated\ProductDomainObjectAbstract;
+use HiEvents\DomainObjects\ImageDomainObject;
 use HiEvents\DomainObjects\ProductDomainObject;
 use HiEvents\DomainObjects\ProductPriceDomainObject;
 use HiEvents\DomainObjects\TaxAndFeesDomainObject;
@@ -28,6 +29,7 @@ class GetProductCategoriesHandler
                 nested: [
                     new Relationship(ProductPriceDomainObject::class),
                     new Relationship(TaxAndFeesDomainObject::class),
+                    new Relationship(ImageDomainObject::class),
                     new Relationship(domainObject: ProductDomainObject::class, name: 'addons'),
                 ],
                 orderAndDirections: [

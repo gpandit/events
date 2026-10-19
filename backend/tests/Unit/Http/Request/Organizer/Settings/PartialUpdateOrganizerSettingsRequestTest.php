@@ -141,4 +141,37 @@ class PartialUpdateOrganizerSettingsRequestTest extends TestCase
 
         $this->assertFalse($validator->errors()->has('tracking_pixels.0.provider'));
     }
+
+    public function test_page_content_fields_are_accepted(): void
+    {
+        $validator = Validator::make([
+            'homepage_theme_settings' => [
+                'upcoming_heading' => 'What is on',
+                'about_text' => 'We support the school.',
+                'team_heading' => 'Our team',
+                'team_members' => ['Ana', 'Ben'],
+                'contact_heading' => 'Get in touch',
+                'contact_intro' => 'Say hello.',
+                'contact_email' => 'pta@example.com',
+                'instagram_handle' => 'school.pta_1',
+            ],
+        ], PartialUpdateOrganizerSettingsRequest::rules());
+
+        $this->assertFalse($validator->fails());
+    }
+
+    public function test_page_content_fields_reject_invalid_values(): void
+    {
+        $validator = Validator::make([
+            'homepage_theme_settings' => [
+                'contact_email' => 'not-an-email',
+                'instagram_handle' => '@bad handle',
+                'team_members' => array_fill(0, 13, 'Name'),
+            ],
+        ], PartialUpdateOrganizerSettingsRequest::rules());
+
+        $this->assertTrue($validator->errors()->has('homepage_theme_settings.contact_email'));
+        $this->assertTrue($validator->errors()->has('homepage_theme_settings.instagram_handle'));
+        $this->assertTrue($validator->errors()->has('homepage_theme_settings.team_members'));
+    }
 }

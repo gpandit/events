@@ -77,9 +77,12 @@ export const EditProductModal = ({onClose, productId}: GenericModalProps & { pro
             waitlist_enabled: product.waitlist_enabled ?? null,
             product_type: product.product_type,
             product_category_id: String(product.product_category_id),
+            images: product.images ?? [],
+            pending_images: [],
             price: product.type === ProductPriceType.Free ? 0.00 : undefined,
             prices: product.prices?.map(p => ({
                 price: p.price ?? 0,
+                compare_at_price: p.compare_at_price ?? undefined,
                 label: p.label,
                 sale_start_date: utcToTz(p.sale_start_date, event.timezone),
                 sale_end_date: utcToTz(p.sale_end_date, event.timezone),
@@ -92,14 +95,16 @@ export const EditProductModal = ({onClose, productId}: GenericModalProps & { pro
         form.resetDirty();
     }, [product, event]);
 
-    const handleEditProduct = (product: Product) => {
+    const handleEditProduct = (values: Product) => {
+        const {images: _images, pending_images: _pendingImages, ...productData} = values;
+
         mutation.mutate({
-            productData: product,
+            productData: productData as Product,
             eventId: eventId,
             productId: productId
         }, {
             onSuccess: () => {
-                showSuccess(t`Successfully updated product ` + product.title);
+                showSuccess(t`Successfully updated product ` + values.title);
                 form.reset();
                 onClose();
             },

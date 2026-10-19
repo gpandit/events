@@ -13,13 +13,13 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
 
-#: src/components/layouts/Event/index.tsx:232
-#: src/components/layouts/OrganizerLayout/index.tsx:226
+#: src/components/layouts/Event/index.tsx:234
+#: src/components/layouts/OrganizerLayout/index.tsx:228
 msgid "- Click to Publish"
 msgstr "- انقر للنشر"
 
-#: src/components/layouts/Event/index.tsx:234
-#: src/components/layouts/OrganizerLayout/index.tsx:228
+#: src/components/layouts/Event/index.tsx:236
+#: src/components/layouts/OrganizerLayout/index.tsx:230
 msgid "- Click to Unpublish"
 msgstr "- انقر لإلغاء النشر"
 
@@ -80,7 +80,7 @@ msgstr ""
 msgid "{0} Active Webhooks"
 msgstr "{0} ويب هوك نشط"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:928
+#: src/components/routes/product-widget/SelectProducts/index.tsx:948
 msgid "{0} available"
 msgstr "{0} متاح"
 
@@ -409,6 +409,14 @@ msgstr ""
 msgid "{totalCount} ticket types"
 msgstr "{totalCount} نوع تذكرة"
 
+#: src/components/routes/event/ShopCollection/index.tsx:48
+msgid "{updated} orders marked collected"
+msgstr "تم تحديد {updated} طلبات كمستلمة"
+
+#: src/components/routes/event/ShopCollection/index.tsx:47
+msgid "{updated} orders marked ready and buyers emailed"
+msgstr "تم تحديد {updated} طلبات كجاهزة وإرسال بريد إلكتروني للمشترين"
+
 #: src/components/common/Currency/index.tsx:59
 msgid "+ {formattedAmount} fees"
 msgstr "+ {formattedAmount} رسوم"
@@ -461,11 +469,11 @@ msgstr "<0>الأساسية</0> — ضرورية لعمل الموقع، مثل 
 msgid "<0>https://</0>your-website.com"
 msgstr "<0>https://</0>موقعك.com"
 
-#: src/components/forms/ProductForm/index.tsx:318
+#: src/components/forms/ProductForm/index.tsx:337
 msgid "<0>Please enter the price excluding taxes and fees.</0><1>Taxes and fees can be added below.</1>"
 msgstr "<0>يرجى إدخال السعر باستثناء الضرائب والرسوم.</0><1>يمكن إضافة الضرائب والرسوم أدناه.</1>"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:148
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:167
 msgid "<0>Puzzles.</0> To save scores a child creates a puzzles account, for which we collect:"
 msgstr "<0>الألغاز.</0> لحفظ النتائج ينشئ الطفل حسابًا للألغاز، ونجمع فيه:"
 
@@ -473,7 +481,7 @@ msgstr "<0>الألغاز.</0> لحفظ النتائج ينشئ الطفل حس�
 msgid "<0>Set a single total attendance limit that applies to multiple ticket types at once.</0><1>For example, if you link a <2>Day Pass</2> and a <3>Full Weekend</3> ticket, they will both draw from the same pool of spots. Once the limit is reached, all linked tickets automatically stop selling.</1>"
 msgstr "<0>عيّن حدًا إجماليًا واحدًا للحضور ينطبق على عدة أنواع تذاكر في آن واحد.</0><1>على سبيل المثال، إذا ربطت تذكرة <2>يوم واحد</2> وتذكرة <3>عطلة نهاية الأسبوع الكاملة</3>، فستعتمد كلتاهما على نفس مجموعة المقاعد. وبمجرد بلوغ الحد، تتوقف جميع التذاكر المرتبطة تلقائيًا عن البيع.</1>"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:131
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:150
 msgid "<0>Stories and poems.</0> When a child submits a story or poem we collect:"
 msgstr "<0>القصص والقصائد.</0> عندما يقدّم الطفل قصة أو قصيدة نجمع:"
 
@@ -574,6 +582,14 @@ msgstr ""
 msgid "1 week before event"
 msgstr "أسبوع واحد قبل الفعالية"
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:16
+msgid "1. Delivery method"
+msgstr "1. طريقة التسليم"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:16
+msgid "1. General rule"
+msgstr "1. القاعدة العامة"
+
 #: src/components/routes/legal/CookiePolicy/index.tsx:17
 msgid "1. What cookies are"
 msgstr "1. ما هي ملفات تعريف الارتباط"
@@ -583,12 +599,13 @@ msgstr "1. ما هي ملفات تعريف الارتباط"
 msgid "1. Who we are"
 msgstr "1. من نحن"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:171
-#: src/components/routes/legal/TermsOfService/index.tsx:117
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:190
+#: src/components/routes/legal/RefundPolicy/index.tsx:93
+#: src/components/routes/legal/TermsOfService/index.tsx:119
 msgid "10. Contact us"
 msgstr "10. اتصل بنا"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:179
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:198
 msgid "11. Changes to this policy"
 msgstr "11. التغييرات على هذه السياسة"
 
@@ -605,11 +622,19 @@ msgstr "123 شارع نموذجي"
 msgid "135+ currencies & 40+ payment methods"
 msgstr "أكثر من 135 عملة و40 طريقة دفع"
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:26
+msgid "2. Delivery timeframe"
+msgstr "2. مدة التسليم"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:25
+msgid "2. Event cancelled by the organizer"
+msgstr "2. إلغاء الفعالية من قبل المنظم"
+
 #: src/components/routes/legal/TermsOfService/index.tsx:25
 msgid "2. Event registrations and tickets"
 msgstr "2. تسجيلات الفعاليات والتذاكر"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:27
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
 msgid "2. Information we collect"
 msgstr "2. المعلومات التي نجمعها"
 
@@ -625,11 +650,19 @@ msgstr "20"
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 مكانًا لكل تاريخ، بالإضافة إلى 30 قميصًا عبر الفترة بأكملها."
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:35
+msgid "3. Delivery and shipping costs"
+msgstr "3. تكاليف التسليم والشحن"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:34
+msgid "3. Event postponed or rescheduled"
+msgstr "3. تأجيل الفعالية أو إعادة جدولتها"
+
 #: src/components/routes/legal/CookiePolicy/index.tsx:49
 msgid "3. Google Analytics"
 msgstr "3. Google Analytics"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
 msgid "3. How we use your information"
 msgstr "3. كيف نستخدم معلوماتك"
 
@@ -637,11 +670,19 @@ msgstr "3. كيف نستخدم معلوماتك"
 msgid "3. Payments"
 msgstr "3. المدفوعات"
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:43
+msgid "4. Event materially changed"
+msgstr "4. تغيير جوهري في الفعالية"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:43
+msgid "4. If you have not received your tickets"
+msgstr "4. في حال لم تستلم تذاكرك"
+
 #: src/components/routes/legal/CookiePolicy/index.tsx:67
 msgid "4. Managing your preferences"
 msgstr "4. إدارة تفضيلاتك"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:63
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
 msgid "4. Payment processing"
 msgstr "4. معالجة المدفوعات"
 
@@ -649,7 +690,7 @@ msgstr "4. معالجة المدفوعات"
 msgid "4. Refunds and cancellations"
 msgstr "4. الاسترداد والإلغاء"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:52
+#: src/components/routes/legal/TermsOfService/index.tsx:54
 msgid "5. Acceptable use"
 msgstr "5. الاستخدام المقبول"
 
@@ -657,9 +698,17 @@ msgstr "5. الاستخدام المقبول"
 msgid "5. Browser controls"
 msgstr "5. ضوابط المتصفح"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:75
+#: src/components/routes/legal/RefundPolicy/index.tsx:51
+msgid "5. Cancellation by you"
+msgstr "5. الإلغاء من قبلك"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:87
 msgid "5. Cookies"
 msgstr "5. ملفات تعريف الارتباط"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:54
+msgid "5. Event access"
+msgstr "5. الدخول إلى الفعالية"
 
 #: src/components/common/ErrorDisplay/index.tsx:61
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:68
@@ -670,15 +719,23 @@ msgstr "خطأ 500."
 msgid "503 Service Unavailable."
 msgstr "503 الخدمة غير متاحة."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:61
+#: src/components/routes/legal/TermsOfService/index.tsx:63
 msgid "6. Children's stories, poems and puzzles"
 msgstr "6. قصص الأطفال وقصائدهم وألغازهم"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:62
+msgid "6. Contact us"
+msgstr "6. اتصل بنا"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:60
+msgid "6. Duplicate or incorrect charges"
+msgstr "6. الرسوم المكررة أو غير الصحيحة"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:84
 msgid "6. More information"
 msgstr "6. مزيد من المعلومات"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:84
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:96
 msgid "6. Sharing your information"
 msgstr "6. مشاركة معلوماتك"
 
@@ -686,29 +743,41 @@ msgstr "6. مشاركة معلوماتك"
 msgid "7. Changes to this policy"
 msgstr "7. التغييرات على هذه السياسة"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:93
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:112
 msgid "7. Data retention"
 msgstr "7. الاحتفاظ بالبيانات"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:91
+#: src/components/routes/legal/RefundPolicy/index.tsx:68
+msgid "7. How to request a refund"
+msgstr "7. كيفية طلب استرداد المبلغ"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:93
 msgid "7. Intellectual property"
 msgstr "7. الملكية الفكرية"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:100
+#: src/components/routes/legal/TermsOfService/index.tsx:102
 msgid "8. Limitation of liability"
 msgstr "8. حدود المسؤولية"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:113
+#: src/components/routes/legal/RefundPolicy/index.tsx:76
+msgid "8. Refund method and timing"
+msgstr "8. طريقة الاسترداد وموعده"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:132
 msgid "8. Your rights"
 msgstr "8. حقوقك"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:109
+#: src/components/routes/legal/TermsOfService/index.tsx:111
 msgid "9. Changes to these Terms"
 msgstr "9. التغييرات على هذه الشروط"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:123
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:142
 msgid "9. Children's privacy"
 msgstr "9. خصوصية الأطفال"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:84
+msgid "9. Please contact us first"
+msgstr "9. يرجى التواصل معنا أولاً"
 
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:297
 msgid "A box office lets staff sell tickets at the door with cash, comps, or a card reader. Share the link with your team, no account needed."
@@ -782,7 +851,7 @@ msgstr "نسبة مئوية من سعر المنتج. مثال: 3.5% من سعر
 msgid "A promo code with no discount can be used to reveal hidden products."
 msgstr "يمكن استخدام رمز ترويجي بدون خصم للكشف عن منتجات مخفية."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:82
+#: src/components/routes/legal/TermsOfService/index.tsx:84
 msgid "A puzzles account is for the child it is created for. Only an automatically generated username appears on the leaderboard. You must provide accurate details, keep your password private and not attempt to cheat, tamper with scores or misuse usernames. We may remove accounts or scores that break these rules. See our <0>Privacy Policy</0> for how children's information is handled."
 msgstr "حساب الألغاز مخصص للطفل الذي أُنشئ له. يظهر على لوحة المتصدرين اسم مستخدم مُنشأ تلقائياً فقط. يجب عليك تقديم بيانات صحيحة، والحفاظ على سرية كلمة المرور، وعدم محاولة الغش أو التلاعب بالنتائج أو إساءة استخدام أسماء المستخدمين. وقد نحذف الحسابات أو النتائج التي تخالف هذه القواعد. اطّلع على <0>سياسة الخصوصية</0> لمعرفة كيفية التعامل مع معلومات الأطفال."
 
@@ -807,7 +876,7 @@ msgstr "وصف موجز للفعالية سيظهر في نتائج محركات
 msgid "A short description of your organizer that will be displayed to your users."
 msgstr "وصف موجز لجهتك المنظمة سيُعرض لمستخدميك."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:318
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:357
 msgid "A short line about what you do"
 msgstr "سطر قصير عمّا تقوم به"
 
@@ -851,17 +920,30 @@ msgstr ""
 msgid "Abandoned"
 msgstr "مهجور"
 
-#: src/components/layouts/EventHomepage/index.tsx:479
+#: src/components/layouts/EventHomepage/index.tsx:496
 msgid "About"
 msgstr "حول"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:238
+msgid "About & Contact"
+msgstr "حول والتواصل"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:593
+msgid "About Page Preview"
+msgstr "معاينة صفحة من نحن"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:410
+msgid "About Text"
+msgstr "نص من نحن"
 
 #: src/ee/seating/components/SeatPicker/SeatPrices.tsx:166
 msgid "About the tickets"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:105
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:155
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:111
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:170
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:416
 msgid "About Us"
 msgstr "من نحن"
 
@@ -898,7 +980,7 @@ msgstr "قبول الدعوة"
 msgid "Accept Invitation"
 msgstr "قبول الدعوة"
 
-#: src/components/forms/ProductForm/index.tsx:599
+#: src/components/forms/ProductForm/index.tsx:634
 msgid "Access"
 msgstr "الوصول"
 
@@ -1051,7 +1133,7 @@ msgstr "طرق الدفع النشطة"
 msgid "Activity"
 msgstr "النشاط"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:501
+#: src/components/routes/product-widget/SelectProducts/index.tsx:503
 msgid "Add {0} first"
 msgstr "أضف {0} أولاً"
 
@@ -1198,6 +1280,10 @@ msgstr ""
 msgid "Add Option"
 msgstr "إضافة خيار"
 
+#: src/components/forms/ProductForm/ProductImagesField.tsx:107
+msgid "Add photos"
+msgstr "إضافة صور"
+
 #: src/components/common/ProductsTable/ProductsBlankSlate/index.tsx:68
 msgid "Add Product"
 msgstr "إضافة منتج"
@@ -1216,6 +1302,14 @@ msgstr "إضافة سؤال"
 msgid "Add reader"
 msgstr ""
 
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:131
+msgid "Add size"
+msgstr "إضافة مقاس"
+
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:59
+msgid "Add sizes:"
+msgstr "إضافة مقاسات:"
+
 #: src/ee/seating/components/SeatPicker/SeatListView.tsx:31
 msgid "Add standing tickets"
 msgstr ""
@@ -1223,6 +1317,10 @@ msgstr ""
 #: src/components/routes/account/ManageAccount/sections/TaxSettings/index.tsx:18
 msgid "Add Tax or Fee"
 msgstr "إضافة ضريبة أو رسم"
+
+#: src/components/layouts/EventHomepage/index.tsx:369
+msgid "Add the student's name at checkout"
+msgstr "أضف اسم الطالب عند إتمام الطلب"
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:291
 msgid "Add this attendee anyway (override capacity)"
@@ -1238,13 +1336,13 @@ msgstr "أضف هذه الفعالية إلى تقويمك"
 msgid "Add tickets"
 msgstr "إضافة تذاكر"
 
-#: src/components/forms/ProductForm/index.tsx:377
+#: src/components/forms/ProductForm/index.tsx:412
 msgid "Add tier"
 msgstr "إضافة مستوى"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:382
+#: src/components/layouts/EventHomepage/index.tsx:397
 msgid "Add to Calendar"
 msgstr "إضافة إلى التقويم"
 
@@ -1273,16 +1371,16 @@ msgstr "أضف حسابات التواصل الاجتماعي ورابط موق�
 msgid "Add-on only"
 msgstr "إضافة فقط"
 
-#: src/components/forms/ProductForm/index.tsx:555
+#: src/components/forms/ProductForm/index.tsx:590
 msgid "Add-on products"
 msgstr "منتجات إضافية"
 
-#: src/components/forms/ProductForm/index.tsx:536
-#: src/components/routes/product-widget/SelectProducts/index.tsx:498
+#: src/components/forms/ProductForm/index.tsx:571
+#: src/components/routes/product-widget/SelectProducts/index.tsx:500
 msgid "Add-ons"
 msgstr "الإضافات"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:81
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:91
 msgid "Added at checkout"
 msgstr "تمت الإضافة عند الدفع"
 
@@ -1357,7 +1455,7 @@ msgstr "لوحة تحكم المسؤول"
 msgid "Admin users have full access to events and account settings."
 msgstr "يتمتع مستخدمو الإدارة بوصول كامل إلى الفعاليات وإعدادات الحساب."
 
-#: src/components/forms/ProductForm/index.tsx:225
+#: src/components/forms/ProductForm/index.tsx:235
 msgid "Admits attendees to your event"
 msgstr "يمنح الدخول إلى فعاليتك"
 
@@ -1393,7 +1491,7 @@ msgstr "لن يتم تتبع مبيعات الشريك التابع. سيؤدي 
 msgid "Affiliate updated successfully"
 msgstr "تم تحديث الشريك التابع بنجاح"
 
-#: src/components/layouts/Event/index.tsx:134
+#: src/components/layouts/Event/index.tsx:136
 #: src/components/modals/DuplicateEventModal/index.tsx:58
 #: src/components/routes/event/Affiliates/index.tsx:64
 msgid "Affiliates"
@@ -1411,6 +1509,10 @@ msgstr "تساعدك برامج الشراكة على تتبع المبيعات 
 msgid "After your event is created, you can choose how often it repeats from the dashboard."
 msgstr "بعد إنشاء فعاليتك، يمكنك اختيار عدد مرات تكرارها من لوحة التحكم."
 
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:87
+msgid "Age 7-8"
+msgstr "العمر 7-8"
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:66
 msgid "Age group"
 msgstr "الفئة العمرية"
@@ -1422,6 +1524,10 @@ msgstr "من 11 إلى 13 سنة"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:13
 msgid "Ages 14 to 17"
 msgstr "من 14 إلى 17 سنة"
+
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:17
+msgid "Ages 3–14"
+msgstr "الأعمار 3–14"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:7
 msgid "Ages 5 to 7"
@@ -1552,13 +1658,17 @@ msgstr "جميع المناسبات"
 msgid "All Products"
 msgstr "جميع المنتجات"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:167
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:177
 msgid "All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:109
 msgid "All Statuses"
 msgstr "جميع الحالات"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:18
+msgid "All tickets are digital and we do not ship any physical goods. After your payment is confirmed, your tickets and order confirmation are emailed to the address you entered at checkout. Each ticket carries a unique QR code that you can show on your phone or print. You can also open your tickets at any time from the link in your confirmation email or from My Tickets."
+msgstr "جميع التذاكر رقمية ولا نقوم بشحن أي بضائع مادية. بعد تأكيد الدفع، يتم إرسال تذاكرك وتأكيد الطلب إلى عنوان البريد الإلكتروني الذي أدخلته عند الدفع. تحمل كل تذكرة رمز QR فريداً يمكنك عرضه على هاتفك أو طباعته. يمكنك أيضاً فتح تذاكرك في أي وقت من الرابط الموجود في رسالة التأكيد أو من صفحة تذاكري."
 
 #: src/components/routes/admin/Attribution/index.tsx:81
 #: src/ee/box-office/components/modals/BoxOfficeStatsModal/index.tsx:76
@@ -1590,11 +1700,11 @@ msgstr "السماح للحاضرين بتحديث معلومات تذكرتهم
 msgid "Allow buyers to copy their details to all attendees"
 msgstr "السماح للمشترين بنسخ بياناتهم إلى جميع الحاضرين"
 
-#: src/components/forms/ProductForm/index.tsx:470
+#: src/components/forms/ProductForm/index.tsx:505
 msgid "Allow customers to join a waitlist when this product is sold out"
 msgstr "السماح للعملاء بالانضمام إلى قائمة الانتظار عند نفاد هذا المنتج"
 
-#: src/components/forms/ProductForm/index.tsx:469
+#: src/components/forms/ProductForm/index.tsx:504
 msgid "Allow customers to join a waitlist when this product is sold out. Customers join the waitlist for a specific date."
 msgstr "السماح للعملاء بالانضمام إلى قائمة الانتظار عند نفاد هذا المنتج. ينضم العملاء إلى قائمة الانتظار لتاريخ محدد."
 
@@ -1663,7 +1773,7 @@ msgstr ""
 
 #: src/components/common/OrdersTable/index.tsx:275
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:212
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:222
 #: src/ee/box-office/components/layouts/BoxOffice/AmountSheet.tsx:69
 msgid "Amount"
 msgstr "المبلغ"
@@ -1704,7 +1814,7 @@ msgstr ""
 msgid "An optional description of this category to display on the event page."
 msgstr "وصف اختياري لهذه الفئة لعرضه في صفحة الفعالية."
 
-#: src/components/forms/ProductForm/index.tsx:589
+#: src/components/forms/ProductForm/index.tsx:624
 msgid "An optional message to display on the highlighted product, e.g. \"Selling fast 🔥\" or \"Best value\""
 msgstr "رسالة اختيارية تُعرض على المنتج المميز، مثل \"ينفد بسرعة 🔥\" أو \"الأفضل قيمة\""
 
@@ -1789,7 +1899,7 @@ msgstr ""
 msgid "Any dates you've manually customized will be kept."
 msgstr "سيتم الاحتفاظ بأي تواريخ قمت بتخصيصها يدويًا."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:39
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:40
 msgid "Any messages or information you submit through our contact forms."
 msgstr "أي رسائل أو معلومات ترسلها عبر نماذج الاتصال الخاصة بنا."
 
@@ -1817,11 +1927,11 @@ msgstr ""
 msgid "Appearance"
 msgstr "المظهر"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1152
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1176
 msgid "applied"
 msgstr "مُطبّق"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1151
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1175
 msgid "applied — {0} off your order"
 msgstr "مُطبّق — خصم {0} على طلبك"
 
@@ -1858,7 +1968,7 @@ msgid "Applies to every tier of this ticket"
 msgstr ""
 
 #: src/components/common/FilterModal/index.tsx:284
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1183
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1207
 #: src/ee/box-office/components/layouts/BoxOffice/AmountSheet.tsx:41
 #: src/ee/box-office/components/layouts/BoxOffice/AmountSheet.tsx:91
 msgid "Apply"
@@ -1903,6 +2013,11 @@ msgstr "تمت الموافقة"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:69
 msgid "April"
 msgstr "أبريل"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:64
+#: src/components/routes/legal/RefundPolicy/index.tsx:95
+msgid "Aqualeo Digecom FZ-LLC, CWEP4303, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates. Email: <0>fos@aqualeo.co</0>."
+msgstr "Aqualeo Digecom FZ-LLC، CWEP4303، مبنى كومباس، شارع الشهداء، المنطقة الصناعية الحمراء-FZ، رأس الخيمة، الإمارات العربية المتحدة. البريد الإلكتروني: <0>fos@aqualeo.co</0>."
 
 #: src/components/common/LanguageSwitcher/index.tsx:16
 msgid "Arabic"
@@ -2041,15 +2156,15 @@ msgstr "هل أنت متأكد من رغبتك في حذف هذا الويب ه�
 msgid "Are you sure you want to leave?"
 msgstr "هل أنت متأكد من رغبتك في المغادرة؟"
 
-#: src/components/layouts/Event/index.tsx:196
+#: src/components/layouts/Event/index.tsx:198
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "هل أنت متأكد من رغبتك في جعل هذه الفعالية مسودة؟ سيؤدي هذا إلى جعل الفعالية غير مرئية للجمهور"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:158
+#: src/components/layouts/OrganizerLayout/index.tsx:160
 msgid "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 msgstr "هل أنت متأكد من رغبتك في جعل هذه الجهة المنظمة مسودة؟ سيؤدي هذا إلى جعل صفحة الجهة المنظمة غير مرئية للجمهور"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:159
+#: src/components/layouts/OrganizerLayout/index.tsx:161
 msgid "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 msgstr "هل أنت متأكد من رغبتك في جعل هذه الجهة المنظمة عامة؟ سيؤدي هذا إلى جعل صفحة الجهة المنظمة مرئية للجمهور"
 
@@ -2303,7 +2418,7 @@ msgstr "حاضرون"
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:60
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:446
 #: src/components/common/StatBoxes/index.tsx:73
-#: src/components/layouts/Event/index.tsx:138
+#: src/components/layouts/Event/index.tsx:140
 #: src/components/modals/ManageOccurrenceModal/index.tsx:174
 #: src/components/modals/ManageOrderModal/index.tsx:312
 #: src/components/routes/admin/Messages/index.tsx:90
@@ -2535,7 +2650,7 @@ msgid "Background Color"
 msgstr "لون الخلفية"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:372
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:543
 msgid "Background Type"
 msgstr "نوع الخلفية"
 
@@ -2581,7 +2696,7 @@ msgstr "لافتة"
 msgid "Banner content must be 200 characters or less"
 msgstr "يجب ألا يتجاوز محتوى اللافتة 200 حرف"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:292
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:331
 msgid "Banner Type"
 msgstr "نوع اللافتة"
 
@@ -2602,7 +2717,7 @@ msgid "Bar"
 msgstr ""
 
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:306
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:87
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:97
 msgid "Base price"
 msgstr "السعر الأساسي"
 
@@ -2614,8 +2729,8 @@ msgstr "السعر الأساسي"
 msgid "Based on {0}. This event keeps its own copy."
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:434
-#: src/components/forms/ProductForm/index.tsx:437
+#: src/components/forms/ProductForm/index.tsx:469
+#: src/components/forms/ProductForm/index.tsx:472
 msgid "Based on the global sale period above, not per date"
 msgstr "بناءً على فترة البيع العامة أعلاه، وليس لكل تاريخ"
 
@@ -2623,6 +2738,10 @@ msgstr "بناءً على فترة البيع العامة أعلاه، وليس
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:63
 msgid "Basic Information"
 msgstr "المعلومات الأساسية"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:37
+msgid "Because delivery is electronic, there are no shipping or delivery charges. The total shown at checkout includes any applicable taxes and booking fees."
+msgstr "نظراً لأن التسليم إلكتروني، لا توجد رسوم شحن أو توصيل. يشمل الإجمالي المعروض عند الدفع أي ضرائب ورسوم حجز مطبقة."
 
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:126
 msgid "Because this account has completed orders, transaction records (amounts, dates, and invoice details) will be retained in an anonymized form for legal and tax purposes. All personal information will be permanently removed."
@@ -2657,7 +2776,7 @@ msgstr ""
 msgid "Billing Address"
 msgstr "عنوان الفوترة"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:35
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:36
 msgid "Billing information necessary to process ticket purchases (handled securely by our payment processor — see Section 4)."
 msgstr "معلومات الفوترة اللازمة لمعالجة عمليات شراء التذاكر (تتم معالجتها بأمان من قبل معالج الدفع لدينا — انظر القسم 4)."
 
@@ -2699,7 +2818,7 @@ msgstr ""
 msgid "Box office"
 msgstr ""
 
-#: src/components/layouts/Event/index.tsx:140
+#: src/components/layouts/Event/index.tsx:142
 #: src/components/routes/event/orders.tsx:72
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:71
 #: src/ee/box-office/components/routes/event/BoxOffices/index.tsx:50
@@ -2798,18 +2917,22 @@ msgstr "نص الزر"
 msgid "Button Label"
 msgstr "نص الزر"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:335
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:374
 msgid "Button Link"
 msgstr "رابط الزر"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:271
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:327
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:366
 msgid "Button Text"
 msgstr "نص الزر"
 
 #: src/components/routes/admin/Announcements/index.tsx:461
 msgid "Button URL"
 msgstr "رابط الزر"
+
+#: src/components/routes/event/ShopPickListPrint/ShopPickListTable.tsx:23
+msgid "Buyer"
+msgstr "المشتري"
 
 #: src/ee/box-office/components/layouts/BoxOffice/BuyerSheet.tsx:65
 msgid "Buyer details"
@@ -2819,7 +2942,7 @@ msgstr ""
 msgid "Buyer pays"
 msgstr "يدفع المشتري"
 
-#: src/components/forms/ProductForm/index.tsx:565
+#: src/components/forms/ProductForm/index.tsx:600
 msgid "Buyers can add these to their order when they select this product at checkout."
 msgstr "يمكن للمشترين إضافة هذه إلى طلبهم عند اختيار هذا المنتج عند الدفع."
 
@@ -3035,7 +3158,7 @@ msgstr "تم حذف تخصيص السعة بنجاح"
 msgid "Capacity Assignments"
 msgstr "تخصيصات السعة"
 
-#: src/components/layouts/Event/index.tsx:145
+#: src/components/layouts/Event/index.tsx:147
 msgid "Capacity Management"
 msgstr "إدارة السعة"
 
@@ -3104,9 +3227,13 @@ msgstr ""
 msgid "Categories allow you to group products together. For example, you might have a category for \"Tickets\" and another for \"Merchandise\"."
 msgstr "تتيح لك الفئات تجميع المنتجات معًا. على سبيل المثال، قد يكون لديك فئة لـ \"التذاكر\" وأخرى لـ \"البضائع\"."
 
-#: src/components/forms/ProductForm/index.tsx:271
+#: src/components/forms/ProductForm/index.tsx:283
 msgid "Categories help you organize your products. This title will be displayed on the public event page."
 msgstr "تساعدك الفئات على تنظيم منتجاتك. سيتم عرض هذا العنوان في صفحة الفعالية العامة."
+
+#: src/components/forms/ProductForm/index.tsx:282
+msgid "Categories help you organize your products. This title will be displayed on the public shop page."
+msgstr "تساعدك الفئات على تنظيم منتجاتك. سيظهر هذا العنوان في صفحة المتجر العامة."
 
 #: src/components/common/ProductsTable/SortableCategory/index.tsx:95
 msgid "Categories reordered successfully."
@@ -3246,8 +3373,8 @@ msgstr ""
 msgid "Check out"
 msgstr "تسجيل الخروج"
 
-#: src/components/layouts/EventHomepage/index.tsx:341
 #: src/components/layouts/EventHomepage/index.tsx:342
+#: src/components/layouts/EventHomepage/index.tsx:343
 msgid "Check out this event: {0}"
 msgstr "اطّلع على هذه الفعالية: {0}"
 
@@ -3331,15 +3458,11 @@ msgstr "قائمة تسجيل الدخول غير نشطة"
 msgid "Check-in list not found"
 msgstr "قائمة تسجيل الدخول غير موجودة"
 
-#: src/components/routes/event/CheckInLists/index.tsx:60
-#~ msgid "check-in lists"
-#~ msgstr "قوائم تسجيل الدخول"
-
 #: src/components/routes/organizer/Reports/CheckInSummaryReport/index.tsx:51
 msgid "Check-in Lists"
 msgstr "قوائم تسجيل الدخول"
 
-#: src/components/layouts/Event/index.tsx:139
+#: src/components/layouts/Event/index.tsx:141
 #: src/components/modals/DuplicateEventModal/index.tsx:54
 #: src/components/routes/event/CheckInLists/index.tsx:37
 msgid "Check-In Lists"
@@ -3420,11 +3543,11 @@ msgstr "الدفع · الخطوة {stepNumber} من {stepCount}"
 msgid "Checkout Settings"
 msgstr "إعدادات الدفع"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:63
+#: src/components/routes/legal/TermsOfService/index.tsx:65
 msgid "Children may submit original stories and poems and play our puzzles. By submitting work you confirm it is entirely your own and that you have the right to share it. Submissions are reviewed by our team before anything is published, and we may decline or remove any work at our discretion."
 msgstr "يمكن للأطفال تقديم قصص وقصائد أصلية واللعب بألغازنا. بتقديم عمل ما فإنك تؤكد أنه من تأليفك بالكامل وأن لديك الحق في مشاركته. يراجع فريقنا الأعمال المقدمة قبل نشر أي شيء، ويجوز لنا رفض أي عمل أو حذفه وفق تقديرنا."
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:127
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:137
 msgid "Children's Stories"
 msgstr "قصص الأطفال"
 
@@ -3449,7 +3572,7 @@ msgid "Choose 1 seat"
 msgstr ""
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:362
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:533
 msgid "Choose a color for your background"
 msgstr "اختر لونًا لخلفيتك"
 
@@ -3462,7 +3585,7 @@ msgstr "اختر إعدادًا"
 msgid "Choose a date"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1096
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1120
 msgid "Choose a date to see the seats"
 msgstr ""
 
@@ -3527,7 +3650,7 @@ msgstr "اختر جهة منظمة"
 msgid "Choose an Organizer"
 msgstr "اختر جهة منظمة"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1206
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1230
 msgid "Choose another date"
 msgstr "اختر تاريخًا آخر"
 
@@ -3674,7 +3797,7 @@ msgstr "انقر لإعادة الفتح لمبيعات جديدة"
 msgid "Click to view notes"
 msgstr "انقر لعرض الملاحظات"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1189
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1213
 msgid "close"
 msgstr "إغلاق"
 
@@ -3685,11 +3808,11 @@ msgstr "إغلاق"
 #: src/components/modals/JoinWaitlistModal/index.tsx:143
 #: src/components/modals/RefundOrderModal/index.tsx:172
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:873
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1190
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1214
 msgid "Close"
 msgstr "إغلاق"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:124
 msgid "Close menu"
 msgstr ""
 
@@ -3734,11 +3857,11 @@ msgstr "يجب أن يتراوح طول الرمز بين 3 و50 حرفًا"
 msgid "Code must be no more than 20 characters"
 msgstr "يجب ألا يتجاوز الرمز 20 حرفًا"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:197
+#: src/components/layouts/OrganizerLayout/index.tsx:199
 msgid "Collaborate with your team to create amazing events together."
 msgstr "تعاون مع فريقك لإنشاء فعاليات رائعة معًا."
 
-#: src/components/forms/ProductForm/index.tsx:454
+#: src/components/forms/ProductForm/index.tsx:489
 msgid "Collapse this product when the event page is initially loaded"
 msgstr "طي هذا المنتج عند التحميل الأولي لصفحة الفعالية"
 
@@ -3764,8 +3887,21 @@ msgstr "جمع التفاصيل لكل طلب"
 msgid "Collect details per ticket"
 msgstr "جمع التفاصيل لكل تذكرة"
 
+#: src/components/layouts/EventHomepage/index.tsx:367
+msgid "Collect from school reception"
+msgstr "الاستلام من مكتب استقبال المدرسة"
+
+#: src/constants/shop.ts:44
+msgid "Collected"
+msgstr "تم الاستلام"
+
+#: src/components/layouts/Event/index.tsx:134
+#: src/components/routes/event/ShopCollection/index.tsx:59
+msgid "Collection"
+msgstr "الاستلام"
+
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:360
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:531
 msgid "Color"
 msgstr "اللون"
 
@@ -3789,7 +3925,7 @@ msgstr ""
 msgid "Colouring pages"
 msgstr "صفحات التلوين"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:59
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
 msgid "Colouring Pages"
 msgstr "صفحات التلوين"
 
@@ -3818,7 +3954,7 @@ msgstr "كلمات مفتاحية مفصولة بفواصل تصف الفعال�
 msgid "Communication Preferences"
 msgstr "تفضيلات التواصل"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:116
+#: src/components/layouts/OrganizerLayout/index.tsx:118
 msgid "Community"
 msgstr "المجتمع"
 
@@ -4014,7 +4150,7 @@ msgstr "تأكيد كلمة المرور"
 msgid "Confirm Spam"
 msgstr "تأكيد كرسالة مزعجة"
 
-#: src/components/layouts/Event/index.tsx:309
+#: src/components/layouts/Event/index.tsx:311
 msgid "Confirm your email to access all features."
 msgstr "أكّد بريدك الإلكتروني للوصول إلى جميع الميزات."
 
@@ -4022,7 +4158,7 @@ msgstr "أكّد بريدك الإلكتروني للوصول إلى جميع ا
 msgid "Confirmation"
 msgstr "التأكيد"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:322
+#: src/components/layouts/OrganizerLayout/index.tsx:324
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "تم إرسال بريد التأكيد! يرجى التحقق من صندوق الوارد الخاص بك."
 
@@ -4099,7 +4235,7 @@ msgid "Consecutive"
 msgstr ""
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:681
+#: src/components/layouts/EventHomepage/index.tsx:698
 #: src/components/layouts/OrganizerHomepage/OrganizerProfileCard/index.tsx:116
 msgid "Contact"
 msgstr "اتصل بنا"
@@ -4108,17 +4244,26 @@ msgstr "اتصل بنا"
 msgid "Contact {0}"
 msgstr "اتصل بـ {0}"
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:491
+msgid "Contact Details"
+msgstr "بيانات التواصل"
+
 #: src/components/forms/OrganizerForm/index.tsx:35
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:498
 msgid "Contact Email"
 msgstr "بريد التواصل الإلكتروني"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:156
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:166
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:32
+msgid "Contact us:"
+msgstr "تواصلوا معنا:"
+
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:43
-msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
-msgstr ""
+#~ msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
+#~ msgstr ""
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
@@ -4133,9 +4278,9 @@ msgstr "المحتوى مطلوب"
 
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
-#: src/components/layouts/EventHomepage/index.tsx:205
+#: src/components/layouts/EventHomepage/index.tsx:206
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:163
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1127
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1151
 #: src/ee/seating/components/SeatPicker/Basket.tsx:196
 msgid "Continue"
 msgstr "متابعة"
@@ -4155,7 +4300,7 @@ msgstr "متابعة الإعداد"
 msgid "Continue to checkout"
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1291
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1315
 msgid "Continue to Checkout"
 msgstr "المتابعة إلى الدفع"
 
@@ -4195,7 +4340,7 @@ msgstr "تحكم في من يدخل لهذا التاريخ"
 msgid "Control who gets in, and when"
 msgstr "تحكم في من يدخل، ومتى"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
+d#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
 #: src/components/routes/legal/CookiePolicy/index.tsx:8
 msgid "Cookie Policy"
 msgstr "سياسة ملفات تعريف الارتباط"
@@ -4377,7 +4522,7 @@ msgid "Cover"
 msgstr "الغلاف"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:221
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Cover Image"
 msgstr "صورة الغلاف"
 
@@ -4389,7 +4534,7 @@ msgstr "تمت إضافة صورة الغلاف"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "ستُعرض صورة الغلاف أعلى صفحة فعاليتك"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:236
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:274
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "ستُعرض صورة الغلاف أعلى صفحة جهتك المنظمة"
 
@@ -4417,10 +4562,6 @@ msgstr "أنشئ أداة مخصصة لبيع التذاكر على موقعك."
 #: src/components/modals/SelectCheckInListModal/index.tsx:82
 msgid "Create a list for this date"
 msgstr "إنشاء قائمة لهذا التاريخ"
-
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:162
-#~ msgid "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
-#~ msgstr "أنشئ حساب دخول لحفظ نتائجك وكسب النقاط. سنمنحك اسم مستخدم من شخصية كرتونية ممتعة ليبقى اسمك الحقيقي خاصاً."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:199
 msgid "Create a login to save your scores and earn points. You will pick a fun character username so your name stays private."
@@ -4562,12 +4703,12 @@ msgid "Create event"
 msgstr "إنشاء فعالية"
 
 #: src/components/common/NoEventsBlankSlate/index.tsx:27
-#: src/components/layouts/OrganizerLayout/index.tsx:187
+#: src/components/layouts/OrganizerLayout/index.tsx:189
 #: src/components/routes/organizer/Events/index.tsx:62
 msgid "Create Event"
 msgstr "إنشاء فعالية"
 
-#: src/components/forms/ProductForm/index.tsx:562
+#: src/components/forms/ProductForm/index.tsx:597
 msgid "Create more tickets or products to offer them as add-ons"
 msgstr "أنشئ المزيد من التذاكر أو المنتجات لعرضها كإضافات"
 
@@ -4590,7 +4731,7 @@ msgstr "إنشاء كلمة مرور جديدة"
 msgid "Create Organizer"
 msgstr "إنشاء جهة منظمة"
 
-#: src/components/modals/CreateProductModal/index.tsx:91
+#: src/components/modals/CreateProductModal/index.tsx:94
 msgid "Create Product"
 msgstr "إنشاء منتج"
 
@@ -4613,12 +4754,18 @@ msgstr "إنشاء جدول"
 msgid "Create seat map"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:504
+#: src/components/modals/CreateShopModal/index.tsx:69
+#: src/components/modals/CreateShopModal/index.tsx:103
+#: src/components/routes/organizer/Shops/index.tsx:36
+msgid "Create shop"
+msgstr "إنشاء متجر"
+
+#: src/components/forms/ProductForm/index.tsx:539
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:53
 msgid "Create Tax or Fee"
 msgstr "إنشاء ضريبة أو رسم"
 
-#: src/components/modals/CreateProductModal/index.tsx:88
+#: src/components/modals/CreateProductModal/index.tsx:91
 msgid "Create Ticket or Product"
 msgstr "إنشاء تذكرة أو منتج"
 
@@ -4682,10 +4829,10 @@ msgid "Creative Colouring"
 msgstr "التلوين الإبداعي"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:42
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:92
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:140
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:98
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:155
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:8
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:143
 msgid "Creative Corner"
 msgstr "ركن الإبداع"
 
@@ -4797,6 +4944,10 @@ msgstr "خصص الصفحة الرئيسية للفعالية ورسائل ال�
 msgid "Customize the layout, colors, and branding of your event homepage."
 msgstr "خصص تخطيط وألوان وهوية صفحة فعاليتك الرئيسية."
 
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:230
+msgid "Customize the look and content of your public pages"
+msgstr "خصص مظهر ومحتوى صفحاتك العامة"
+
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:71
 msgid "Customize the miscellaneous settings for this event"
 msgstr "خصص الإعدادات المتنوعة لهذه الفعالية"
@@ -4827,8 +4978,8 @@ msgid "Customize your event page"
 msgstr "خصص صفحة فعاليتك"
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:203
-msgid "Customize your organizer page appearance"
-msgstr "خصص مظهر صفحة جهتك المنظمة"
+#~ msgid "Customize your organizer page appearance"
+#~ msgstr "خصص مظهر صفحة جهتك المنظمة"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:51
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:32
@@ -4886,7 +5037,7 @@ msgid "Dark"
 msgstr "داكن"
 
 #: src/components/layouts/Admin/index.tsx:15
-#: src/components/layouts/Event/index.tsx:107
+#: src/components/layouts/Event/index.tsx:108
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Dashboard"
@@ -5221,14 +5372,20 @@ msgstr "تم إلغاء طلب الحذف"
 msgid "Deletion Requests"
 msgstr "طلبات الحذف"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:152
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:8
+msgid "Delivery Policy"
+msgstr "سياسة التسليم"
+
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:83
 msgid "Depth"
 msgstr ""
 
 #: src/components/forms/ProductCategoryForm/index.tsx:29
-#: src/components/forms/ProductForm/index.tsx:398
-#: src/components/forms/ProductForm/index.tsx:404
+#: src/components/forms/ProductForm/index.tsx:433
+#: src/components/forms/ProductForm/index.tsx:439
 #: src/components/forms/TaxAndFeeForm/index.tsx:81
+#: src/components/modals/CreateShopModal/index.tsx:97
 #: src/components/modals/DuplicateEventModal/index.tsx:116
 #: src/components/routes/admin/SpamEvents/index.tsx:235
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:98
@@ -5263,7 +5420,8 @@ msgstr "عناصر التصميم"
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:103
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:412
 #: src/components/routes/product-widget/CollectInformation/index.tsx:422
-#: src/components/routes/product-widget/SelectProducts/index.tsx:556
+#: src/components/routes/product-widget/SelectProducts/index.tsx:558
+#: src/components/routes/product-widget/SelectProducts/ShopProductCard/index.tsx:41
 msgid "Details"
 msgstr "التفاصيل"
 
@@ -5292,7 +5450,7 @@ msgstr "ألم تستلم الرمز؟"
 msgid "Different location"
 msgstr "موقع مختلف"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:302
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:341
 msgid "Direct link to an .mp4 video file"
 msgstr "رابط مباشر لملف فيديو .mp4"
 
@@ -5361,7 +5519,7 @@ msgstr "تجاهل الإعلان"
 msgid "Dismiss setup checklist"
 msgstr "تجاهل قائمة الإعداد"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1308
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1332
 msgid "Dismiss this message"
 msgstr "تجاهل هذه الرسالة"
 
@@ -5403,7 +5561,7 @@ msgid "Don't let buyers leave a single empty seat"
 msgstr ""
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:341
-#: src/components/forms/ProductForm/index.tsx:294
+#: src/components/forms/ProductForm/index.tsx:313
 msgid "Donation"
 msgstr "تبرع"
 
@@ -5465,8 +5623,8 @@ msgid "Downloading Invoice"
 msgstr "جارٍ تنزيل الفاتورة"
 
 #: src/components/common/EventCard/index.tsx:97
-#: src/components/layouts/Event/index.tsx:231
-#: src/components/layouts/OrganizerLayout/index.tsx:225
+#: src/components/layouts/Event/index.tsx:233
+#: src/components/layouts/OrganizerLayout/index.tsx:227
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
 msgid "Draft"
@@ -5536,8 +5694,8 @@ msgstr "تكرار الفعالية"
 msgid "Duplicate Options"
 msgstr "خيارات التكرار"
 
-#: src/components/modals/DuplicateProductModal/index.tsx:128
-#: src/components/modals/DuplicateProductModal/index.tsx:132
+#: src/components/modals/DuplicateProductModal/index.tsx:131
+#: src/components/modals/DuplicateProductModal/index.tsx:135
 msgid "Duplicate Product"
 msgstr "تكرار المنتج"
 
@@ -5574,6 +5732,10 @@ msgstr "مثال: صيانة مجدولة هذا السبت من 2-4 صباحً�
 msgid "e.g. sepia-cerulean-orynx"
 msgstr ""
 
+#: src/components/modals/CreateShopModal/index.tsx:93
+msgid "e.g. the vendor or school shop name"
+msgstr "مثال: اسم البائع أو متجر المدرسة"
+
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:218
 msgid "e.g. Year 5 or Form 2"
 msgstr "مثال: السنة 5 أو الصف 2"
@@ -5590,7 +5752,7 @@ msgstr "مثال: تحديث مهم بخصوص تذاكرك"
 msgid "e.g., Standard, Premium, Enterprise"
 msgstr "مثال: قياسي، مميز، للمؤسسات"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:154
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:173
 msgid "Each child is given an automatically generated character username. Only this username, their points, tests taken and best score appear on the public leaderboard; their real name and email are never shown. A child's email address is used only to save their account and to send a password reset link."
 msgstr "يُمنح كل طفل اسم مستخدم مستعاراً يُنشأ تلقائياً. يظهر على لوحة المتصدرين العامة هذا الاسم فقط مع نقاطه وعدد الاختبارات وأفضل نتيجة؛ ولا يُعرض اسمه الحقيقي ولا بريده الإلكتروني أبداً. يُستخدم البريد الإلكتروني للطفل فقط لحفظ حسابه وإرسال رابط إعادة تعيين كلمة المرور."
 
@@ -5610,7 +5772,7 @@ msgstr "كل منتج"
 msgid "Each ticket keeps the price set on the ticket itself — only change it here if a band should cost more or less."
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:384
+#: src/components/forms/ProductForm/index.tsx:419
 msgid "Each tier goes on sale only after the tiers above it sell out or end. Every tier except the last needs a quantity."
 msgstr "يُطرح كل مستوى للبيع فقط بعد نفاد المستويات التي تسبقه أو انتهائها. يحتاج كل مستوى باستثناء الأخير إلى كمية."
 
@@ -5726,8 +5888,8 @@ msgstr "تعديل تفاصيل الطلب"
 msgid "Edit Organizer"
 msgstr "تعديل الجهة المنظمة"
 
-#: src/components/modals/EditProductModal/index.tsx:113
-#: src/components/modals/EditProductModal/index.tsx:117
+#: src/components/modals/EditProductModal/index.tsx:118
+#: src/components/modals/EditProductModal/index.tsx:122
 msgid "Edit Product"
 msgstr "تعديل المنتج"
 
@@ -5848,6 +6010,10 @@ msgstr "إعدادات البريد الإلكتروني والإشعارات"
 msgid "Email & Templates"
 msgstr "البريد الإلكتروني والقوالب"
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:70
+msgid "Email <0>fos@aqualeo.co</0> with your order reference, the email address used at purchase and the reason for your request. We will reply within 3 business days."
+msgstr "راسلنا على <0>fos@aqualeo.co</0> مع رقم مرجع طلبك وعنوان البريد الإلكتروني المستخدم عند الشراء وسبب طلبك. سنرد خلال 3 أيام عمل."
+
 #: src/components/modals/CreateAttendeeModal/index.tsx:228
 #: src/components/modals/ManageAttendeeModal/index.tsx:232
 #: src/components/modals/ManageOrderModal/index.tsx:271
@@ -5884,8 +6050,8 @@ msgstr "تغيير البريد الإلكتروني معلّق"
 msgid "Email confirmation resent"
 msgstr "تم إعادة إرسال تأكيد البريد الإلكتروني"
 
-#: src/components/layouts/Event/index.tsx:93
-#: src/components/layouts/OrganizerLayout/index.tsx:132
+#: src/components/layouts/Event/index.tsx:94
+#: src/components/layouts/OrganizerLayout/index.tsx:134
 #: src/components/routes/profile/ManageProfile/index.tsx:101
 msgid "Email confirmation resent successfully"
 msgstr "تم إعادة إرسال تأكيد البريد الإلكتروني بنجاح"
@@ -5926,7 +6092,7 @@ msgstr "قوالب البريد الإلكتروني"
 msgid "Email to send tickets"
 msgstr ""
 
-#: src/components/layouts/OrganizerLayout/index.tsx:301
+#: src/components/layouts/OrganizerLayout/index.tsx:303
 msgid "Email Verification Required"
 msgstr "التحقق من البريد الإلكتروني مطلوب"
 
@@ -5979,7 +6145,7 @@ msgstr "فعّل هذه السعة لإيقاف مبيعات المنتج عند
 msgid "Enable this template for sending emails"
 msgstr "فعّل هذا القالب لإرسال الرسائل"
 
-#: src/components/forms/ProductForm/index.tsx:472
+#: src/components/forms/ProductForm/index.tsx:507
 msgid "Enable Waitlist"
 msgstr "تفعيل قائمة الانتظار"
 
@@ -6166,6 +6332,10 @@ msgstr "إدخالات"
 msgid "Entries will appear here when customers join the waitlist for sold out products."
 msgstr "ستظهر الإدخالات هنا عندما ينضم العملاء إلى قائمة الانتظار للمنتجات النافدة."
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:56
+msgid "Entry requires a valid ticket. Each QR code can be used once, so please do not share it publicly."
+msgstr "يتطلب الدخول تذكرة صالحة. يمكن استخدام كل رمز QR مرة واحدة فقط، لذا يرجى عدم مشاركته علناً."
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:149
 #: src/components/layouts/Checkout/index.tsx:194
 #: src/hooks/useOrderActions.tsx:84
@@ -6336,7 +6506,7 @@ msgstr "الفعالية غير متاحة"
 msgid "Event not live"
 msgstr ""
 
-#: src/components/layouts/Event/index.tsx:298
+#: src/components/layouts/Event/index.tsx:300
 msgid "Event Page"
 msgstr "صفحة الفعالية"
 
@@ -6344,27 +6514,31 @@ msgstr "صفحة الفعالية"
 msgid "Event restored successfully"
 msgstr "تمت استعادة الفعالية بنجاح"
 
-#: src/components/layouts/Event/index.tsx:123
+#: src/components/layouts/Event/index.tsx:124
 #: src/components/routes/event/Settings/index.tsx:173
 msgid "Event Settings"
 msgstr "إعدادات الفعالية"
 
 #: src/components/common/EventCard/index.tsx:80
 #: src/components/common/StatusToggle/index.tsx:62
-#: src/components/layouts/Event/index.tsx:207
+#: src/components/layouts/Event/index.tsx:209
 #: src/components/modals/PublishEventModal/index.tsx:129
 msgid "Event status update failed. Please try again later"
 msgstr "فشل تحديث حالة الفعالية. يرجى المحاولة مرة أخرى لاحقًا"
 
 #: src/components/common/EventCard/index.tsx:77
 #: src/components/common/StatusToggle/index.tsx:54
-#: src/components/layouts/Event/index.tsx:204
+#: src/components/layouts/Event/index.tsx:206
 msgid "Event status updated"
 msgstr "تم تحديث حالة الفعالية"
 
+#: src/components/layouts/AuthLayout/index.tsx:41
+msgid "Event ticketing @ {appName}, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+msgstr "إصدار تذاكر الفعاليات في {appName}، بدعم من <0>أصدقاء المدرسة</0> — مبادرة من Aqualeo Digecom، مدعومة بتقنية Hi.Events."
+
 #: src/components/layouts/AuthLayout/index.tsx:39
-msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
-msgstr "إصدار تذاكر الفعاليات في ريبتون البرشاء، بدعم من <0>أصدقاء المدرسة</0> — مبادرة من Aqualeo Digecom، مدعومة بتقنية Hi.Events."
+#~ msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
+#~ msgstr "إصدار تذاكر الفعاليات في ريبتون البرشاء، بدعم من <0>أصدقاء المدرسة</0> — مبادرة من Aqualeo Digecom، مدعومة بتقنية Hi.Events."
 
 #: src/components/common/AdminEventsTable/index.tsx:86
 msgid "Event Title"
@@ -6390,10 +6564,10 @@ msgstr "تم تحديث الفعالية"
 
 #: src/components/common/AdminAccountsTable/index.tsx:82
 #: src/components/layouts/Admin/index.tsx:18
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:84
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:133
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:118
-#: src/components/layouts/OrganizerLayout/index.tsx:110
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:85
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:139
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
+#: src/components/layouts/OrganizerLayout/index.tsx:111
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:152
 #: src/components/routes/admin/Attribution/index.tsx:195
 #: src/components/routes/admin/Dashboard/index.tsx:403
@@ -6481,7 +6655,7 @@ msgstr ""
 msgid "Every year, when the evenings grew cool and the mango trees began to drop their last golden leaves, our school held the Lantern Garden Festival. I had waited the whole year for it."
 msgstr "كل عام، عندما تبرد الأمسيات وتبدأ أشجار المانجو بإسقاط آخر أوراقها الذهبية، كانت مدرستنا تقيم مهرجان حديقة الفوانيس. كنت أنتظره طوال العام."
 
-#: src/components/forms/ProductForm/index.tsx:393
+#: src/components/forms/ProductForm/index.tsx:428
 msgid "Everything else — tap to edit"
 msgstr "كل شيء آخر — اضغط للتعديل"
 
@@ -6584,6 +6758,10 @@ msgstr "اكتمل التصدير. جارٍ تنزيل الملف..."
 #: src/components/routes/event/orders.tsx:144
 msgid "Exporting Orders"
 msgstr "جارٍ تصدير الطلبات"
+
+#: src/constants/shop.ts:31
+msgid "External vendor"
+msgstr "بائع خارجي"
 
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:76
 msgid "Extra seats per row"
@@ -6839,7 +7017,7 @@ msgid "Failed to save VAT settings. Please try again."
 msgstr "فشل حفظ إعدادات ضريبة القيمة المضافة. يرجى المحاولة مرة أخرى."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:57
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:44
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:46
 msgid "Failed to send message. Please try again."
 msgstr "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
 
@@ -6978,9 +7156,9 @@ msgstr "تم حفظ تجاوز الرسم"
 
 #: src/components/common/InlineOrderSummary/index.tsx:168
 #: src/components/common/OrdersTable/index.tsx:286
-#: src/components/forms/ProductForm/index.tsx:493
+#: src/components/forms/ProductForm/index.tsx:528
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:99
 msgid "Fees"
 msgstr "الرسوم"
 
@@ -7001,6 +7179,7 @@ msgid "Fewer seats"
 msgstr ""
 
 #: src/components/common/ImageUploadDropzone/index.tsx:62
+#: src/components/forms/ProductForm/ProductImagesField.tsx:102
 #: src/utilites/imageUploadValidation.ts:7
 #: src/utilites/imageUploadValidation.ts:20
 msgid "File is too large. Maximum size is 5MB."
@@ -7207,7 +7386,7 @@ msgstr "الفلاش يعمل"
 msgid "Flyer"
 msgstr "محلّق"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:15
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:18
 msgid "Follow us on Instagram"
 msgstr "تابعنا على إنستغرام"
 
@@ -7259,11 +7438,11 @@ msgstr ""
 #: src/components/common/OrderSummary/index.tsx:111
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:124
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:134
-#: src/components/forms/ProductForm/index.tsx:293
+#: src/components/forms/ProductForm/index.tsx:312
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:191
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:155
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:157
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:228
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:167
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:238
 #: src/ee/box-office/components/layouts/BoxOffice/AmountSheet.tsx:37
 #: src/ee/box-office/components/layouts/BoxOffice/ProductTile.tsx:54
 #: src/ee/box-office/utilites/boxOfficeTender.ts:15
@@ -7285,17 +7464,17 @@ msgstr "الجمعة"
 msgid "Friday"
 msgstr "الجمعة"
 
-#: src/components/layouts/AuthLayout/index.tsx:164
+#: src/components/layouts/AuthLayout/index.tsx:166
 msgid "Friends of Repton Al Barsha logo"
 msgstr "شعار أصدقاء ريبتون البرشاء"
 
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:36
-msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
-msgstr "تدعم أصدقاء ريبتون المدرسة في تنظيم فعاليات متنوعة داخل الحرم المدرسي، بما في ذلك ليالي الأفلام والمناسبات الاجتماعية والنزهات وحفلات نهاية العام وفعاليات عيد الميلاد ونهاية العام. كما تشارك بفاعلية في ضمان إيجاد منزل جديد للزي المدرسي المستعمل."
+#~ msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
+#~ msgstr "تدعم أصدقاء ريبتون المدرسة في تنظيم فعاليات متنوعة داخل الحرم المدرسي، بما في ذلك ليالي الأفلام والمناسبات الاجتماعية والنزهات وحفلات نهاية العام وفعاليات عيد الميلاد ونهاية العام. كما تشارك بفاعلية في ضمان إيجاد منزل جديد للزي المدرسي المستعمل."
 
 #: src/components/common/ErrorDisplay/index.tsx:88
-#: src/components/layouts/AuthLayout/index.tsx:33
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:97
+#: src/components/layouts/AuthLayout/index.tsx:35
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:100
 msgid "Friends of School"
 msgstr "أصدقاء المدرسة"
 
@@ -7303,7 +7482,7 @@ msgstr "أصدقاء المدرسة"
 msgid "From"
 msgstr "من"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:967
+#: src/components/routes/product-widget/SelectProducts/index.tsx:987
 msgid "From {0}"
 msgstr "من {0}"
 
@@ -7415,15 +7594,20 @@ msgstr ""
 msgid "Get an Enterprise licence key."
 msgstr ""
 
-#: src/components/layouts/EventHomepage/index.tsx:514
+#: src/components/layouts/EventHomepage/index.tsx:531
 msgid "Get Directions"
 msgstr "الحصول على الاتجاهات"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:62
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:462
+msgid "Get in Touch Section"
+msgstr "قسم التواصل"
+
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:54
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:470
 msgid "Get involved - volunteer, sponsor or say hello"
 msgstr "شاركنا - تطوع أو ارعَ أو تواصل معنا"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:87
+#: src/components/layouts/OrganizerLayout/index.tsx:88
 msgid "Get Paid"
 msgstr "استلام المدفوعات"
 
@@ -7435,7 +7619,7 @@ msgstr "استلم مدفوعاتك عبر Stripe"
 msgid "Get started"
 msgstr "ابدأ الآن"
 
-#: src/components/layouts/EventHomepage/index.tsx:204
+#: src/components/layouts/EventHomepage/index.tsx:205
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:164
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
@@ -7552,7 +7736,7 @@ msgstr "المبيعات الإجمالية"
 msgid "Guest"
 msgstr "ضيف"
 
-#: src/components/layouts/Event/index.tsx:137
+#: src/components/layouts/Event/index.tsx:139
 msgid "Guest Management"
 msgstr "إدارة الضيوف"
 
@@ -7569,7 +7753,7 @@ msgstr "يحدث الآن"
 msgid "Hard delete"
 msgstr "حذف نهائي"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1139
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1163
 msgid "Have a promo code?"
 msgstr "هل لديك رمز ترويجي؟"
 
@@ -7577,7 +7761,8 @@ msgstr "هل لديك رمز ترويجي؟"
 msgid "Head"
 msgstr ""
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:309
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:348
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:469
 msgid "Heading"
 msgstr "العنوان"
 
@@ -7644,7 +7829,7 @@ msgstr "إليك مكوّن React الذي يمكنك استخدامه لتضم�
 msgid "Here is your affiliate link"
 msgstr "إليك رابط الشريك التابع الخاص بك"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:267
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:306
 msgid "Hero Banner"
 msgstr "لافتة البطل"
 
@@ -7702,8 +7887,8 @@ msgstr "الأسئلة المخفية مرئية فقط لمنظم الفعال�
 #: src/components/routes/admin/Configurations/index.tsx:108
 #: src/components/routes/admin/Configurations/index.tsx:284
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:550
-#: src/components/routes/product-widget/SelectProducts/index.tsx:850
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1082
+#: src/components/routes/product-widget/SelectProducts/index.tsx:852
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1106
 msgid "Hide"
 msgstr "إخفاء"
 
@@ -7727,19 +7912,19 @@ msgstr "إخفاء التفاصيل"
 msgid "Hide Preview"
 msgstr "إخفاء المعاينة"
 
-#: src/components/forms/ProductForm/index.tsx:436
+#: src/components/forms/ProductForm/index.tsx:471
 msgid "Hide product after sale end date"
 msgstr "إخفاء المنتج بعد تاريخ انتهاء البيع"
 
-#: src/components/forms/ProductForm/index.tsx:433
+#: src/components/forms/ProductForm/index.tsx:468
 msgid "Hide product before sale start date"
 msgstr "إخفاء المنتج قبل تاريخ بدء البيع"
 
-#: src/components/forms/ProductForm/index.tsx:611
+#: src/components/forms/ProductForm/index.tsx:646
 msgid "Hide product unless user has applicable promo code"
 msgstr "إخفاء المنتج ما لم يكن لدى المستخدم رمز ترويجي قابل للتطبيق"
 
-#: src/components/forms/ProductForm/index.tsx:452
+#: src/components/forms/ProductForm/index.tsx:487
 msgid "Hide product when sold out"
 msgstr "إخفاء المنتج عند نفاد الكمية"
 
@@ -7755,7 +7940,7 @@ msgstr "إخفاء التاريخ"
 msgid "Hide this category?"
 msgstr "إخفاء هذه الفئة؟"
 
-#: src/components/forms/ProductForm/index.tsx:616
+#: src/components/forms/ProductForm/index.tsx:651
 msgid "Hide this product from customers"
 msgstr "إخفاء هذا المنتج عن العملاء"
 
@@ -7787,15 +7972,15 @@ msgstr "محلّق متميز!"
 msgid "High score: {highScore}%"
 msgstr "أعلى نتيجة: {highScore}%"
 
-#: src/components/forms/ProductForm/index.tsx:574
+#: src/components/forms/ProductForm/index.tsx:609
 msgid "Highlight"
 msgstr "تمييز"
 
-#: src/components/forms/ProductForm/index.tsx:588
+#: src/components/forms/ProductForm/index.tsx:623
 msgid "Highlight Message"
 msgstr "رسالة التمييز"
 
-#: src/components/forms/ProductForm/index.tsx:581
+#: src/components/forms/ProductForm/index.tsx:616
 msgid "Highlight this product"
 msgstr "تمييز هذا المنتج"
 
@@ -7804,7 +7989,7 @@ msgstr "تمييز هذا المنتج"
 msgid "Highlighted"
 msgstr "مميّز"
 
-#: src/components/forms/ProductForm/index.tsx:582
+#: src/components/forms/ProductForm/index.tsx:617
 msgid "Highlighted products will have a different background color to make them stand out on the event page."
 msgstr "ستحمل المنتجات المميزة لون خلفية مختلفًا لتبرز في صفحة الفعالية."
 
@@ -7824,26 +8009,29 @@ msgstr ""
 msgid "Hold back {0} seats on {dateCount} dates"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:81
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:126
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:115
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:82
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:132
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:118
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:237
 msgid "Home"
 msgstr "الرئيسية"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:168
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:202
 msgid "Homepage Design"
 msgstr "تصميم الصفحة الرئيسية"
 
-#: src/components/layouts/Event/index.tsx:124
-#: src/components/layouts/OrganizerLayout/index.tsx:114
+#: src/components/layouts/Event/index.tsx:125
 msgid "Homepage Designer"
 msgstr "مصمم الصفحة الرئيسية"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:422
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:593
 msgid "Homepage Preview"
 msgstr "معاينة الصفحة الرئيسية"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:390
+msgid "Homepage Text"
+msgstr "نص الصفحة الرئيسية"
 
 #: src/components/modals/ManageAttendeeModal/index.tsx:227
 #: src/components/modals/ManageOrderModal/index.tsx:259
@@ -7868,7 +8056,7 @@ msgstr ""
 msgid "House right"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:68
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:70
 msgid "How can we help?"
 msgstr "كيف يمكننا مساعدتك؟"
 
@@ -7974,13 +8162,21 @@ msgstr "أرغب في تغطية رسوم معالجة الدفع ({formattedFee
 msgid "I'm interested in"
 msgstr "أنا مهتم بـ"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1263
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1287
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
 msgstr "إذا لم يتم فتح علامة تبويب جديدة تلقائيًا، يرجى النقر على الزر أدناه للمتابعة إلى الدفع."
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:138
 msgid "If an account exists for that email, we have sent a link to reset the password."
 msgstr "إذا كان هناك حساب لهذا البريد الإلكتروني فقد أرسلنا رابطاً لإعادة تعيين كلمة المرور."
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:27
+msgid "If an event is cancelled you will receive a full refund of the ticket price, including booking fees. We will notify you by email and refund your original payment method within 5 to 10 business days. Your bank may take longer to show the refund on your statement."
+msgstr "إذا تم إلغاء فعالية، فستحصل على استرداد كامل لسعر التذكرة، بما في ذلك رسوم الحجز. سنخطرك عبر البريد الإلكتروني ونعيد المبلغ إلى وسيلة الدفع الأصلية خلال 5 إلى 10 أيام عمل. قد يستغرق ظهور المبلغ المسترد في كشف حسابك لدى البنك وقتاً أطول."
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:36
+msgid "If an event is postponed or rescheduled, your ticket remains valid for the new date. If you cannot attend the new date, you may request a refund within 14 days of the change being announced."
+msgstr "إذا تم تأجيل فعالية أو إعادة جدولتها، تظل تذكرتك صالحة للموعد الجديد. وإذا لم تتمكن من الحضور في الموعد الجديد، يمكنك طلب استرداد المبلغ خلال 14 يوماً من الإعلان عن التغيير."
 
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:185
 msgid "If blank, the address will be used to generate a Google Maps link"
@@ -7998,6 +8194,10 @@ msgstr "عند التفعيل، يمكن لموظفي تسجيل الدخول إ
 msgid "If enabled, the organizer will receive an email notification when a new order is placed"
 msgstr "عند التفعيل، ستتلقى الجهة المنظمة إشعارًا عبر البريد الإلكتروني عند تقديم طلب جديد"
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:86
+msgid "If something is wrong with your order, please email us before raising a dispute with your bank or card issuer. We can usually resolve issues faster directly, and we will investigate every request promptly."
+msgstr "إذا كان هناك خطأ في طلبك، يرجى مراسلتنا قبل تقديم نزاع لدى البنك أو جهة إصدار البطاقة. يمكننا عادةً حل المشكلات بشكل أسرع مباشرةً، وسنتحقق من كل طلب على الفور."
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:227
 msgid "If that email address is registered, we have emailed the username to it."
 msgstr "إذا كان عنوان البريد الإلكتروني هذا مسجلاً، فقد أرسلنا اسم المستخدم إليه."
@@ -8006,11 +8206,15 @@ msgstr "إذا كان عنوان البريد الإلكتروني هذا مسج
 msgid "If that username has an email address saved, we have sent a link to reset the password. The link works for 60 minutes."
 msgstr "إذا كان لاسم المستخدم هذا بريد إلكتروني محفوظ فقد أرسلنا رابطاً لإعادة تعيين كلمة المرور. الرابط صالح لمدة 60 دقيقة."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:71
+#: src/components/routes/legal/TermsOfService/index.tsx:73
 msgid "If the author is under 16, a parent or guardian must give permission before their work is published, and by giving permission they agree to the publication of the work with the author's first name, last initial, class or year group and submission date. Permission is requested by email using the address provided with the submission. By publishing work you grant us a non-exclusive licence to display it on this website; the author keeps ownership. A parent or guardian may ask us at <0>fos@aqualeo.co</0> to remove published work at any time."
 msgstr "إذا كان عمر المؤلف أقل من 16 سنة، فيجب أن يمنح ولي الأمر الإذن قبل نشر عمله، وبمنح الإذن يوافق على نشر العمل مع الاسم الأول للمؤلف والحرف الأول من اسم عائلته وصفه أو مرحلته الدراسية وتاريخ التقديم. يُطلب الإذن عبر البريد الإلكتروني باستخدام العنوان المقدم مع العمل. بنشر العمل تمنحنا ترخيصًا غير حصري لعرضه على هذا الموقع؛ ويحتفظ المؤلف بالملكية. يجوز لولي الأمر مراسلتنا على <0>fos@aqualeo.co</0> لحذف العمل المنشور في أي وقت."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:135
+#: src/components/routes/legal/RefundPolicy/index.tsx:45
+msgid "If the venue, date or main programme of an event changes significantly, you may request a refund within 14 days of the change being announced."
+msgstr "إذا تغير مكان الفعالية أو موعدها أو برنامجها الرئيسي بشكل كبير، يمكنك طلب استرداد المبلغ خلال 14 يوماً من الإعلان عن التغيير."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:154
 msgid "if they would like it published and are under 16, a parent or guardian's email address."
 msgstr "إذا رغبوا في النشر وكان عمرهم أقل من 16 سنة، البريد الإلكتروني لولي الأمر."
 
@@ -8022,6 +8226,10 @@ msgstr "إذا وافقت واعتمده فريقنا، فسيظهر ما يلي
 msgid "If you agree, the public leaderboard will show only:"
 msgstr "إذا وافقت، فستعرض لوحة المتصدرين العامة ما يلي فقط:"
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:53
+msgid "If you are unable to attend, you may request a refund at least 7 days before the event. Approved requests are refunded less any payment-processing fees. Requests made less than 7 days before the event are not refunded."
+msgstr "إذا لم تتمكن من الحضور، يمكنك طلب استرداد المبلغ قبل 7 أيام على الأقل من الفعالية. يتم رد المبالغ للطلبات المعتمدة بعد خصم أي رسوم معالجة دفع. لا يتم رد المبالغ للطلبات المقدمة قبل أقل من 7 أيام من الفعالية."
+
 #: src/components/routes/profile/ManageProfile/index.tsx:133
 msgid "If you did not request this change, please immediately change your password."
 msgstr "إذا لم تطلب هذا التغيير، يرجى تغيير كلمة مرورك فورًا."
@@ -8030,11 +8238,15 @@ msgstr "إذا لم تطلب هذا التغيير، يرجى تغيير كلم�
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "إذا كان لديك حساب معنا، فستتلقى بريدًا إلكترونيًا يحتوي على تعليمات حول كيفية إعادة تعيين كلمة مرورك."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:173
-msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
-msgstr "إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، يرجى التواصل مع Aqualeo Digecom FZ LLC على <0>fos@aqualeo.co</0>."
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:192
+msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ-LLC at <0>fos@aqualeo.co</0>."
+msgstr "إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، يرجى التواصل مع Aqualeo Digecom FZ-LLC على <0>fos@aqualeo.co</0>."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
+#: src/components/routes/legal/RefundPolicy/index.tsx:62
+msgid "If you were charged twice or charged the wrong amount, contact us and we will refund the difference in full."
+msgstr "إذا تم خصم المبلغ منك مرتين أو خصم مبلغ خاطئ، تواصل معنا وسنقوم برد الفرق بالكامل."
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:320
 msgid "Image"
 msgstr "صورة"
 
@@ -8051,7 +8263,7 @@ msgid "Image URL"
 msgstr "رابط الصورة"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:215
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:253
 msgid "Images"
 msgstr "الصور"
 
@@ -8185,7 +8397,7 @@ msgstr "زيادة الكمية"
 msgid "Individual attendees"
 msgstr "حاضرون فرديون"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:42
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
 msgid "Information about children who submit stories or poems or use our puzzles, as described in Section 9."
 msgstr "معلومات عن الأطفال الذين يقدمون قصصًا أو قصائد أو يستخدمون ألغازنا، كما هو موضح في القسم 9."
 
@@ -8204,23 +8416,31 @@ msgstr "إدراج صورة"
 msgid "Insert Liquid Token"
 msgstr "إدراج رمز Liquid"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:53
 msgid "Instagram"
 msgstr "إنستغرام"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:26
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:29
 msgid "Instagram feed"
 msgstr "تغذية إنستغرام"
 
-#: src/components/layouts/Event/index.tsx:151
-#: src/components/layouts/OrganizerLayout/index.tsx:123
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:506
+msgid "Instagram Handle"
+msgstr "معرّف إنستغرام"
+
+#: src/components/layouts/Event/index.tsx:153
+#: src/components/layouts/OrganizerLayout/index.tsx:125
 msgid "Integrations"
 msgstr "التكاملات"
 
 #: src/components/forms/CheckInListForm/index.tsx:190
 msgid "Internal notes on the attendee's ticket"
 msgstr "ملاحظات داخلية على تذكرة الحاضر"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:476
+msgid "Introduction"
+msgstr "مقدمة"
 
 #: src/components/common/ContactOrganizerModal/index.tsx:35
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:35
@@ -8263,7 +8483,7 @@ msgstr "دعوة عضو فريق"
 msgid "Invite Team Member"
 msgstr "دعوة عضو فريق"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:199
+#: src/components/layouts/OrganizerLayout/index.tsx:201
 msgid "Invite Team Members"
 msgstr "دعوة أعضاء الفريق"
 
@@ -8271,7 +8491,7 @@ msgstr "دعوة أعضاء الفريق"
 msgid "Invite User"
 msgstr "دعوة مستخدم"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:196
+#: src/components/layouts/OrganizerLayout/index.tsx:198
 msgid "Invite Your Team"
 msgstr "دعوة فريقك"
 
@@ -8322,6 +8542,7 @@ msgstr "عنصر (عناصر)"
 
 #: src/components/common/OrdersTable/index.tsx:249
 #: src/components/modals/ManageOrderModal/index.tsx:118
+#: src/components/routes/event/ShopPickListPrint/ShopPickListTable.tsx:21
 msgid "Items"
 msgstr "عناصر"
 
@@ -8358,7 +8579,7 @@ msgstr "جون"
 msgid "Johnson"
 msgstr "جونسون"
 
-#: src/components/layouts/EventHomepage/index.tsx:410
+#: src/components/layouts/EventHomepage/index.tsx:427
 msgid "Join from anywhere"
 msgstr "انضم من أي مكان"
 
@@ -8586,9 +8807,13 @@ msgstr ""
 msgid "Leave “from” as today to start right away."
 msgstr "اترك \"من\" كاليوم للبدء فورًا."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:336
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:375
 msgid "Leave blank to link to your events page"
 msgstr "اتركه فارغًا للربط بصفحة فعالياتك"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:417
+msgid "Leave blank to show your organizer description"
+msgstr "اتركه فارغًا لعرض وصف جهتك المنظمة"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:201
 msgid "Leave blank to use the default word \"Invoice\""
@@ -8636,7 +8861,7 @@ msgstr ""
 msgid "Left wing"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:141
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:151
 msgid "Legal"
 msgstr "قانوني"
 
@@ -8672,7 +8897,7 @@ msgstr ""
 msgid "Letters skipping I and O"
 msgstr ""
 
-#: src/components/layouts/OrganizerLayout/index.tsx:119
+#: src/components/layouts/OrganizerLayout/index.tsx:121
 msgid "Library"
 msgstr "المكتبة"
 
@@ -8731,8 +8956,8 @@ msgid "List view"
 msgstr ""
 
 #: src/components/common/EventCard/index.tsx:100
-#: src/components/layouts/Event/index.tsx:233
-#: src/components/layouts/OrganizerLayout/index.tsx:227
+#: src/components/layouts/Event/index.tsx:235
+#: src/components/layouts/OrganizerLayout/index.tsx:229
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
 msgstr "مباشر"
@@ -8800,7 +9025,7 @@ msgstr "جارٍ التحميل..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:492
+#: src/components/layouts/EventHomepage/index.tsx:509
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:470
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -8829,7 +9054,7 @@ msgstr "تحديثات الموقع"
 msgid "locations"
 msgstr "مواقع"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:120
+#: src/components/layouts/OrganizerLayout/index.tsx:122
 #: src/components/routes/organizer/Locations/index.tsx:31
 msgid "Locations"
 msgstr "المواقع"
@@ -8844,7 +9069,7 @@ msgid "Logging in"
 msgstr "جارٍ تسجيل الدخول"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:243
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:281
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "الشعار"
@@ -8857,7 +9082,7 @@ msgstr "الشعار والغلاف"
 msgid "Logo and cover image for your organizer"
 msgstr "شعار وصورة غلاف لجهتك المنظمة"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:295
 msgid "Logo will be displayed in the header"
 msgstr "سيُعرض الشعار في الرأس"
 
@@ -8880,6 +9105,10 @@ msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat el
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:14
 msgid "Love colouring? Shop creative colouring sets at"
 msgstr "تحب التلوين؟ تسوق مجموعات تلوين إبداعية من"
+
+#: src/components/forms/ProductForm/ProductImagesField.tsx:83
+msgid "Main"
+msgstr "الرئيسية"
 
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:64
 msgid "Main auditorium"
@@ -8918,7 +9147,7 @@ msgstr "اجعل هذا السؤال إلزاميًا"
 #: src/components/common/OrganizerWebhookTable/index.tsx:96
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:537
 #: src/components/common/PromoCodeTable/index.tsx:175
-#: src/components/layouts/OrganizerLayout/index.tsx:109
+#: src/components/layouts/OrganizerLayout/index.tsx:110
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:276
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:84
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:241
@@ -9036,6 +9265,14 @@ msgstr "تعليم كمدفوع"
 msgid "Mark as validated (admin override)"
 msgstr "تعليم كمعتمد (تجاوز المسؤول)"
 
+#: src/components/routes/event/ShopCollection/index.tsx:93
+msgid "Mark collected"
+msgstr "تحديد كمستلم"
+
+#: src/components/routes/event/ShopCollection/index.tsx:81
+msgid "Mark ready and email buyer"
+msgstr "تحديد كجاهز وإرسال بريد للمشتري"
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:24
 msgid "Maths"
 msgstr "الرياضيات"
@@ -9048,11 +9285,11 @@ msgstr "الحد الأقصى للرسائل / 24 ساعة"
 msgid "Max Recipients / Message"
 msgstr "الحد الأقصى للمستلمين / رسالة"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:78
 msgid "Maximum {cap} per order"
 msgstr "الحد الأقصى {cap} لكل طلب"
 
-#: src/components/forms/ProductForm/index.tsx:528
+#: src/components/forms/ProductForm/index.tsx:563
 msgid "Maximum Per Order"
 msgstr "الحد الأقصى لكل طلب"
 
@@ -9069,13 +9306,18 @@ msgid "Medium"
 msgstr "متوسط"
 
 #: src/components/layouts/PublicOrganizerAbout/index.tsx:48
-msgid "Meet the Friends of Repton team"
-msgstr ""
+#~ msgid "Meet the Friends of Repton team"
+#~ msgstr ""
+
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:38
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:440
+msgid "Meet the team"
+msgstr "تعرّف على الفريق"
 
 #: src/components/common/AttendeeTable/index.tsx:161
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:163
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:73
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:75
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:93
 #: src/components/modals/SendMessageModal/index.tsx:446
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:60
@@ -9139,7 +9381,7 @@ msgid "Message Sent"
 msgstr "تم إرسال الرسالة"
 
 #: src/components/layouts/Admin/index.tsx:20
-#: src/components/layouts/Event/index.tsx:141
+#: src/components/layouts/Event/index.tsx:143
 #: src/components/routes/event/messages.tsx:225
 msgid "Messages"
 msgstr "الرسائل"
@@ -9169,11 +9411,11 @@ msgstr ""
 msgid "Min {min} per order"
 msgstr "الحد الأدنى {min} لكل طلب"
 
-#: src/components/forms/ProductForm/index.tsx:526
+#: src/components/forms/ProductForm/index.tsx:561
 msgid "Minimum Per Order"
 msgstr "الحد الأدنى لكل طلب"
 
-#: src/components/forms/ProductForm/index.tsx:316
+#: src/components/forms/ProductForm/index.tsx:335
 msgid "Minimum Price"
 msgstr "الحد الأدنى للسعر"
 
@@ -9294,12 +9536,16 @@ msgstr ""
 msgid "Move to area"
 msgstr ""
 
+#: src/components/layouts/AuthLayout/index.tsx:56
+msgid "Movie Night"
+msgstr "ليلة الأفلام"
+
 #: src/components/forms/QuestionForm/index.tsx:106
 msgid "Multi line text box"
 msgstr "مربع نص متعدد الأسطر"
 
 #: src/components/common/EventCard/index.tsx:109
-#: src/components/layouts/EventHomepage/index.tsx:176
+#: src/components/layouts/EventHomepage/index.tsx:177
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:47
 msgid "Multiple locations"
@@ -9310,9 +9556,9 @@ msgid "Music"
 msgstr "موسيقى"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:165
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:108
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:162
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:114
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:177
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:146
 msgid "My Account"
 msgstr "حسابي"
 
@@ -9358,9 +9604,8 @@ msgstr "Nam placerat elementum..."
 #: src/components/forms/CheckInListForm/index.tsx:99
 #: src/components/forms/ProductCategoryForm/index.tsx:15
 #: src/components/forms/ProductCategoryForm/index.tsx:16
-#: src/components/forms/ProductForm/index.tsx:200
+#: src/components/forms/ProductForm/index.tsx:210
 #: src/components/forms/TaxAndFeeForm/index.tsx:61
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:55
 #: src/components/modals/DuplicateEventModal/index.tsx:110
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:235
@@ -9477,6 +9722,10 @@ msgstr "الوقت الجديد:"
 #: src/ee/box-office/components/layouts/BoxOffice/AmountSheet.tsx:86
 msgid "New total"
 msgstr ""
+
+#: src/constants/shop.ts:16
+msgid "New uniform"
+msgstr "زي مدرسي جديد"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:72
 #: src/ee/seating/components/SeatPicker/index.tsx:122
@@ -9802,6 +10051,10 @@ msgstr "لا توجد أسئلة طلب بعد"
 msgid "No orders found"
 msgstr "لم يُعثر على طلبات"
 
+#: src/components/routes/event/ShopCollection/index.tsx:112
+msgid "No orders here yet."
+msgstr "لا توجد طلبات هنا بعد."
+
 #: src/components/common/OrdersTable/index.tsx:399
 msgid "No orders to show"
 msgstr "لا توجد طلبات لعرضها"
@@ -9949,6 +10202,14 @@ msgstr "لا توجد نتائج بحث."
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:156
 msgid "No seat maps yet"
 msgstr ""
+
+#: src/components/layouts/PublicOrganizerShops/index.tsx:30
+msgid "No shops are open yet. Please check back soon."
+msgstr "لا توجد متاجر مفتوحة بعد. يرجى المراجعة قريبًا."
+
+#: src/components/routes/organizer/Shops/index.tsx:43
+msgid "No shops yet. Create one for each vendor or school shop."
+msgstr "لا توجد متاجر بعد. أنشئ متجرًا لكل بائع أو لمتجر المدرسة."
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:52
 msgid "No stories have been published yet — check back soon!"
@@ -10177,7 +10438,7 @@ msgstr "المناسبة"
 msgid "Occurrence Cancelled"
 msgstr "تم إلغاء المناسبة"
 
-#: src/components/layouts/Event/index.tsx:119
+#: src/components/layouts/Event/index.tsx:120
 #: src/components/routes/event/OccurrencesTab/index.tsx:491
 msgid "Occurrence Schedule"
 msgstr "جدول المناسبات"
@@ -10331,13 +10592,17 @@ msgstr "في {position} {day}"
 msgid "On the evening of the festival, I carried my jar carefully across the field, my hands cupped around it so the wind wouldn't blow out the flame. The grass had just been cut, and it smelled like rain even though it hadn't rained in weeks. Hundreds of other lanterns bobbed across the lawn like a second set of stars that had come down to visit the first."
 msgstr "في مساء المهرجان، حملت برطماني بعناية عبر الحقل، ويداي محيطتان به حتى لا تطفئ الريح اللهب. كان العشب قد قُص للتو، وكانت رائحته كرائحة المطر رغم أنه لم تمطر منذ أسابيع. تمايلت مئات الفوانيس الأخرى عبر العشب كمجموعة ثانية من النجوم نزلت لزيارة الأولى."
 
-#: src/components/forms/ProductForm/index.tsx:443
+#: src/components/forms/ProductForm/index.tsx:478
 msgid "On the event page"
 msgstr "على صفحة الفعالية"
 
 #: src/ee/box-office/components/modals/AddTerminalReaderModal/index.tsx:54
 msgid "On the reader, swipe right from the left edge, enter the admin PIN 07139, then choose Generate pairing code."
 msgstr ""
+
+#: src/components/forms/ProductForm/index.tsx:478
+msgid "On the shop page"
+msgstr "في صفحة المتجر"
 
 #: src/components/common/CapacityHelp/index.tsx:57
 msgid "On the Tickets & Products page, give each section its quantity \"per date\". Leave capacity empty and the sections add up to the total."
@@ -10358,6 +10623,10 @@ msgstr "بمجرد إنشاء فعالية، سترى ذلك هنا."
 #: src/components/common/ReportTable/index.tsx:254
 msgid "Once you start collecting data, you'll see it here."
 msgstr "بمجرد أن تبدأ في جمع البيانات، سترى ذلك هنا."
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:447
+msgid "One name per line, up to 12. Leave blank to hide the team section"
+msgstr "اسم واحد في كل سطر، حتى 12 اسمًا. اتركه فارغًا لإخفاء قسم الفريق"
 
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:56
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:68
@@ -10394,7 +10663,7 @@ msgstr "عبر الإنترنت — قدّم تفاصيل الاتصال"
 msgid "Online & in-person"
 msgstr "عبر الإنترنت وحضوريًا"
 
-#: src/components/layouts/EventHomepage/index.tsx:177
+#: src/components/layouts/EventHomepage/index.tsx:178
 msgid "Online & in-person — see schedule"
 msgstr "عبر الإنترنت وحضوريًا — انظر الجدول"
 
@@ -10403,7 +10672,7 @@ msgstr "عبر الإنترنت وحضوريًا — انظر الجدول"
 msgid "Online event"
 msgstr "فعالية عبر الإنترنت"
 
-#: src/components/layouts/EventHomepage/index.tsx:408
+#: src/components/layouts/EventHomepage/index.tsx:425
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
 #: src/components/layouts/OrganizerHomepage/NextEventSpotlight/index.tsx:139
 msgid "Online Event"
@@ -10413,7 +10682,7 @@ msgstr "فعالية عبر الإنترنت"
 msgid "Online Event Details"
 msgstr "تفاصيل الفعالية عبر الإنترنت"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:78
 msgid "Only {cap} available"
 msgstr "{cap} فقط متاح"
 
@@ -10433,9 +10702,13 @@ msgstr "يمكن فقط لمسؤولي الحساب حذف أو أرشفة ال�
 msgid "Only account administrators can delete or archive organizers. Contact your account admin for assistance."
 msgstr "يمكن فقط لمسؤولي الحساب حذف أو أرشفة الجهات المنظمة. تواصل مع مسؤول حسابك للمساعدة."
 
-#: src/components/forms/ProductForm/index.tsx:549
+#: src/components/forms/ProductForm/index.tsx:584
 msgid "Only available as an add-on"
 msgstr "متاح فقط كإضافة"
+
+#: src/components/forms/ProductForm/index.tsx:364
+msgid "Only fill this in when the item is on sale. It is shown crossed out next to the price, so it must be higher than the price."
+msgstr "املأ هذا الحقل فقط عندما يكون المنتج معروضاً بخصم. سيظهر مشطوباً بجانب السعر، لذا يجب أن يكون أعلى من السعر."
 
 #: src/components/routes/admin/Announcements/index.tsx:470
 msgid "Only published announcements are shown to users"
@@ -10503,7 +10776,7 @@ msgstr "فتح تسجيل الدخول"
 msgid "Open Check-In Page"
 msgstr "فتح صفحة تسجيل الدخول"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:118
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:124
 msgid "Open menu"
 msgstr ""
 
@@ -10518,6 +10791,10 @@ msgstr "فتح الشريط الجانبي"
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
 msgstr "خيار {i}"
+
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:104
+msgid "Optional"
+msgstr "اختياري"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:263
 msgid "Optional additional information to appear on all invoices (e.g., payment terms, late payment fees, return policy)"
@@ -10575,6 +10852,7 @@ msgstr "طلب"
 #: src/components/common/QuestionsTable/index.tsx:448
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:261
 #: src/components/modals/ManageAttendeeModal/index.tsx:159
+#: src/components/routes/event/ShopPickListPrint/ShopPickListTable.tsx:22
 #: src/components/routes/my-tickets/index.tsx:71
 msgid "Order"
 msgstr "الطلب"
@@ -10653,7 +10931,7 @@ msgstr "أصحاب الطلبات"
 msgid "Order ID"
 msgstr "معرّف الطلب"
 
-#: src/components/forms/ProductForm/index.tsx:520
+#: src/components/forms/ProductForm/index.tsx:555
 msgid "Order limits"
 msgstr "حدود الطلب"
 
@@ -10726,6 +11004,10 @@ msgstr ""
 msgid "Order Total"
 msgstr "إجمالي الطلب"
 
+#: src/components/layouts/PublicOrganizerShops/index.tsx:27
+msgid "Order uniform, books, stationery and meals. Everything is collected from school reception - please give your child's name when you order."
+msgstr "اطلب الزي المدرسي والكتب والقرطاسية والوجبات. يتم استلام كل شيء من مكتب استقبال المدرسة - يرجى كتابة اسم طفلك عند الطلب."
+
 #: src/components/forms/WebhookForm/index.tsx:79
 msgid "Order Updated"
 msgstr "تم تحديث الطلب"
@@ -10740,12 +11022,13 @@ msgstr "تم إلغاء الطلب"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:443
 #: src/components/routes/event/orders.tsx:219
+#: src/components/routes/event/ShopPickListPrint/index.tsx:35
 msgid "orders"
 msgstr "طلبات"
 
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:65
 #: src/components/layouts/Admin/index.tsx:19
-#: src/components/layouts/Event/index.tsx:132
+#: src/components/layouts/Event/index.tsx:133
 #: src/components/modals/ManageOccurrenceModal/index.tsx:178
 #: src/components/routes/admin/Attribution/index.tsx:200
 #: src/components/routes/admin/Orders/index.tsx:44
@@ -10762,6 +11045,10 @@ msgstr "طلبات"
 #: src/ee/box-office/components/modals/BoxOfficeStatsModal/index.tsx:94
 msgid "Orders"
 msgstr "الطلبات"
+
+#: src/components/routes/event/ShopCollection/index.tsx:58
+msgid "Orders are collected from school reception using the student name."
+msgstr "يتم استلام الطلبات من مكتب استقبال المدرسة باستخدام اسم الطالب."
 
 #: src/components/routes/admin/Dashboard/index.tsx:189
 msgid "Orders Completed"
@@ -10797,7 +11084,7 @@ msgid "Organization Name"
 msgstr "اسم الجهة"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:593
+#: src/components/layouts/EventHomepage/index.tsx:610
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -10815,8 +11102,8 @@ msgstr "الجهة المنظمة"
 msgid "Organizer archived successfully"
 msgstr "تمت أرشفة الجهة المنظمة بنجاح"
 
-#: src/components/layouts/Event/index.tsx:103
-#: src/components/layouts/OrganizerLayout/index.tsx:98
+#: src/components/layouts/Event/index.tsx:104
+#: src/components/layouts/OrganizerLayout/index.tsx:99
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Organizer Dashboard"
 msgstr "لوحة تحكم الجهة المنظمة"
@@ -10847,12 +11134,12 @@ msgid "Organizer Settings"
 msgstr "إعدادات الجهة المنظمة"
 
 #: src/components/common/StatusToggle/index.tsx:63
-#: src/components/layouts/OrganizerLayout/index.tsx:170
+#: src/components/layouts/OrganizerLayout/index.tsx:172
 msgid "Organizer status update failed. Please try again later"
 msgstr "فشل تحديث حالة الجهة المنظمة. يرجى المحاولة مرة أخرى لاحقًا"
 
 #: src/components/common/StatusToggle/index.tsx:55
-#: src/components/layouts/OrganizerLayout/index.tsx:167
+#: src/components/layouts/OrganizerLayout/index.tsx:169
 msgid "Organizer status updated"
 msgstr "تم تحديث حالة الجهة المنظمة"
 
@@ -10869,6 +11156,10 @@ msgstr "الجهات المنظمة"
 msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
 msgstr "يمكن للجهات المنظمة إدارة الفعاليات والمنتجات فقط. لا يمكنها إدارة المستخدمين أو إعدادات الحساب أو معلومات الفوترة."
 
+#: src/components/forms/ProductForm/index.tsx:366
+msgid "Original price before the sale"
+msgstr "السعر الأصلي قبل الخصم"
+
 #: src/components/common/OrdersTable/index.tsx:327
 #: src/constants/eventCategories.ts:31
 msgid "Other"
@@ -10878,7 +11169,7 @@ msgstr "أخرى"
 msgid "Other Lists (Ticket Not Included)"
 msgstr "قوائم أخرى (التذكرة غير مدرجة)"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:33
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:36
 msgid "Our latest posts are on Instagram — tap below to see them."
 msgstr "أحدث منشوراتنا على إنستغرام — اضغط أدناه لمشاهدتها."
 
@@ -10919,7 +11210,7 @@ msgstr "تمت إزالة التجاوز"
 msgid "Override the global default for this account."
 msgstr ""
 
-#: src/components/layouts/Event/index.tsx:106
+#: src/components/layouts/Event/index.tsx:107
 msgid "Overview"
 msgstr "نظرة عامة"
 
@@ -10955,7 +11246,7 @@ msgstr ""
 msgid "paid"
 msgstr "مدفوع"
 
-#: src/components/forms/ProductForm/index.tsx:292
+#: src/components/forms/ProductForm/index.tsx:311
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:431
 msgid "Paid"
 msgstr "مدفوع"
@@ -10989,7 +11280,7 @@ msgstr ""
 msgid "Parent agreed"
 msgstr "وافق ولي الأمر"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:162
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:181
 msgid "Parent and guardian links expire after 14 days. A parent or guardian can ask us at <0>fos@aqualeo.co</0> to see, correct or delete their child's information, to remove a published story or poem, or to remove their child from the leaderboard, and we will act on the request promptly. We do not use children's information for advertising."
 msgstr "تنتهي صلاحية روابط أولياء الأمور بعد 14 يومًا. يمكن لولي الأمر مراسلتنا على <0>fos@aqualeo.co</0> للاطلاع على معلومات طفله أو تصحيحها أو حذفها، أو لحذف قصة أو قصيدة منشورة، أو لإزالة طفله من لوحة المتصدرين، وسننفذ الطلب بسرعة. لا نستخدم معلومات الأطفال في الإعلانات."
 
@@ -11099,7 +11390,7 @@ msgstr "متوقف مؤقتًا"
 msgid "Pay"
 msgstr "ادفع"
 
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:211
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:221
 msgid "Pay what you want"
 msgstr "ادفع ما تريد"
 
@@ -11216,7 +11507,7 @@ msgid "Pending review"
 msgstr "قيد المراجعة"
 
 #: src/components/common/EventCard/index.tsx:94
-#: src/components/layouts/Event/index.tsx:229
+#: src/components/layouts/Event/index.tsx:231
 #: src/components/routes/admin/Messages/index.tsx:124
 msgid "Pending Review"
 msgstr "قيد المراجعة"
@@ -11352,6 +11643,10 @@ msgstr "رقم الهاتف (اختياري)"
 msgid "Phone Number (optional)"
 msgstr "رقم الهاتف (اختياري)"
 
+#: src/components/forms/ProductForm/ProductImagesField.tsx:78
+msgid "Photos"
+msgstr "الصور"
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:531
 msgid "Pick an end date"
 msgstr "اختر تاريخ انتهاء"
@@ -11371,6 +11666,10 @@ msgstr ""
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:842
 msgid "Pick days to see your dates."
 msgstr "اختر الأيام لرؤية تواريخك."
+
+#: src/components/routes/event/ShopPickListPrint/index.tsx:33
+msgid "Pick list"
+msgstr "قائمة التجهيز"
 
 #: src/ee/box-office/components/layouts/BoxOffice/ReaderSwitchSheet.tsx:56
 #: src/ee/box-office/components/layouts/BoxOffice/StartSession.tsx:181
@@ -11479,6 +11778,10 @@ msgstr "يرجى التحقق من صحة بريدك الإلكتروني"
 msgid "Please check your email to confirm your email address"
 msgstr "يرجى التحقق من بريدك الإلكتروني لتأكيد عنوانك"
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:45
+msgid "Please check your spam or junk folder and confirm that you entered your email address correctly. If your tickets have not arrived within one hour of payment, contact us at <0>fos@aqualeo.co</0> with your order reference and we will re-send them or correct the email address on your order. A missed delivery caused by an incorrectly entered email address is not grounds for a refund."
+msgstr "يرجى التحقق من مجلد الرسائل غير المرغوب فيها والتأكد من إدخال عنوان بريدك الإلكتروني بشكل صحيح. إذا لم تصل تذاكرك خلال ساعة واحدة من الدفع، تواصل معنا على <0>fos@aqualeo.co</0> مع رقم مرجع طلبك وسنعيد إرسالها أو نصحح عنوان البريد الإلكتروني في طلبك. لا يُعد عدم الاستلام الناتج عن إدخال عنوان بريد إلكتروني غير صحيح سبباً لاسترداد المبلغ."
+
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:76
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
 msgstr "يرجى مراجعة تذكرتك للاطلاع على الوقت المحدث. تذاكرك لا تزال صالحة — لا حاجة لاتخاذ أي إجراء ما لم تكن الأوقات الجديدة لا تناسبك. يرجى الرد على هذا البريد الإلكتروني إذا كانت لديك أي أسئلة."
@@ -11495,7 +11798,7 @@ msgstr ""
 msgid "Please confirm this is your own original work before submitting."
 msgstr "يرجى تأكيد أن هذا عملك الأصلي قبل الإرسال."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1254
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1278
 msgid "Please continue in the new tab"
 msgstr "يرجى المتابعة في علامة التبويب الجديدة"
 
@@ -11557,7 +11860,7 @@ msgstr "يرجى إدخال اسم المستخدم وكلمة المرور"
 msgid "Please enter your VAT number"
 msgstr "يرجى إدخال رقم ضريبة القيمة المضافة الخاص بك"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:33
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:35
 msgid "Please fill in all fields"
 msgstr "يرجى ملء جميع الحقول"
 
@@ -11597,7 +11900,7 @@ msgstr "يرجى إعادة بدء عملية الدفع."
 msgid "Please return to the event page to start over."
 msgstr "يرجى العودة إلى صفحة الفعالية للبدء من جديد."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:735
+#: src/components/routes/product-widget/SelectProducts/index.tsx:737
 msgid "Please select a date and time"
 msgstr "يرجى اختيار تاريخ ووقت"
 
@@ -11609,7 +11912,7 @@ msgstr "يرجى اختيار نطاق تاريخ"
 msgid "Please select an image."
 msgstr "يرجى اختيار صورة."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:763
+#: src/components/routes/product-widget/SelectProducts/index.tsx:765
 msgid "Please select at least one product"
 msgstr "يرجى اختيار منتج واحد على الأقل"
 
@@ -11688,13 +11991,17 @@ msgstr "الموضع"
 msgid "Post Checkout message"
 msgstr "رسالة ما بعد الدفع"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:102
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:105
 msgid "Powered by Friends of School, an initiative by"
 msgstr "مدعوم من أصدقاء المدرسة، مبادرة من"
 
 #: src/components/routes/event/Settings/Sections/HomepageAndCheckoutSettings/index.tsx:90
 msgid "Pre Checkout message"
 msgstr "رسالة ما قبل الدفع"
+
+#: src/constants/shop.ts:18
+msgid "Preloved uniform"
+msgstr "زي مدرسي مستعمل"
 
 #: src/ee/seating/components/lib/templates.ts:28
 msgid "Premium"
@@ -11726,8 +12033,8 @@ msgstr "معاينة"
 msgid "Preview checkout form"
 msgstr "معاينة نموذج الدفع"
 
-#: src/components/layouts/Event/index.tsx:291
-#: src/components/layouts/Event/index.tsx:295
+#: src/components/layouts/Event/index.tsx:293
+#: src/components/layouts/Event/index.tsx:297
 msgid "Preview Event page"
 msgstr "معاينة صفحة الفعالية"
 
@@ -11737,8 +12044,10 @@ msgstr "الشهر السابق"
 
 #: src/components/common/AttendeeTicket/index.tsx:137
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:425
-#: src/components/forms/ProductForm/index.tsx:316
+#: src/components/forms/ProductForm/index.tsx:335
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:171
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:75
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:91
 msgid "Price"
 msgstr "السعر"
 
@@ -11774,11 +12083,11 @@ msgstr "سعر هذا التاريخ"
 msgid "Price Tier"
 msgstr "مستوى السعر"
 
-#: src/components/forms/ProductForm/index.tsx:349
+#: src/components/forms/ProductForm/index.tsx:384
 msgid "Price Tiers"
 msgstr "مستويات السعر"
 
-#: src/components/forms/ProductForm/index.tsx:284
+#: src/components/forms/ProductForm/index.tsx:300
 msgid "Pricing"
 msgstr "التسعير"
 
@@ -11802,6 +12111,10 @@ msgstr "طباعة جميع التذاكر"
 msgid "Print map"
 msgstr ""
 
+#: src/components/routes/event/ShopCollection/index.tsx:104
+msgid "Print pick list"
+msgstr "طباعة قائمة التجهيز"
+
 #: src/components/routes/event/TicketDesigner/index.tsx:223
 msgid "Print Preview"
 msgstr "معاينة الطباعة"
@@ -11823,7 +12136,7 @@ msgstr "طباعة كملف PDF"
 msgid "Printed {0}"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:143
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:153
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
@@ -11843,7 +12156,7 @@ msgstr "جارٍ معالجة الطلب"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:322
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:559
 #: src/components/common/WaitlistTable/index.tsx:173
-#: src/components/forms/ProductForm/index.tsx:231
+#: src/components/forms/ProductForm/index.tsx:241
 #: src/components/modals/ManageAttendeeModal/index.tsx:237
 #: src/components/modals/OfferWaitlistModal/index.tsx:167
 msgid "Product"
@@ -11853,7 +12166,7 @@ msgstr "المنتج"
 msgid "Product answers"
 msgstr "إجابات المنتج"
 
-#: src/components/forms/ProductForm/index.tsx:270
+#: src/components/forms/ProductForm/index.tsx:280
 msgid "Product Category"
 msgstr "فئة المنتج"
 
@@ -11873,7 +12186,7 @@ msgstr "تم حذف المنتج"
 msgid "Product deleted successfully"
 msgstr "تم حذف المنتج بنجاح"
 
-#: src/components/forms/ProductForm/index.tsx:301
+#: src/components/forms/ProductForm/index.tsx:320
 msgid "Product Price Type"
 msgstr "نوع سعر المنتج"
 
@@ -11898,8 +12211,8 @@ msgstr "تم حفظ إعدادات المنتج بنجاح"
 msgid "Product Tier"
 msgstr "مستوى المنتج"
 
-#: src/components/forms/ProductForm/index.tsx:216
-#: src/components/forms/ProductForm/index.tsx:259
+#: src/components/forms/ProductForm/index.tsx:226
+#: src/components/forms/ProductForm/index.tsx:269
 msgid "Product Type"
 msgstr "نوع المنتج"
 
@@ -11912,6 +12225,7 @@ msgid "Product(s)"
 msgstr "منتج (منتجات)"
 
 #: src/components/common/PromoCodeTable/index.tsx:72
+#: src/components/layouts/Event/index.tsx:132
 #: src/components/modals/DuplicateEventModal/index.tsx:49
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:416
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:55
@@ -11947,7 +12261,7 @@ msgstr "تم تحديث الملف الشخصي بنجاح"
 msgid "Progress"
 msgstr "التقدم"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:645
+#: src/components/routes/product-widget/SelectProducts/index.tsx:647
 msgid "Promo {promo_code} code applied"
 msgstr "تم تطبيق الرمز الترويجي {promo_code}"
 
@@ -11964,7 +12278,7 @@ msgstr "الرمز الترويجي"
 msgid "Promo code only"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:609
+#: src/components/forms/ProductForm/index.tsx:644
 msgid "Promo Code page"
 msgstr "صفحة الرمز الترويجي"
 
@@ -11980,7 +12294,7 @@ msgstr "استخدام الرموز الترويجية وتفصيل الخصوم
 msgid "promo codes"
 msgstr "رموز ترويجية"
 
-#: src/components/layouts/Event/index.tsx:133
+#: src/components/layouts/Event/index.tsx:135
 #: src/components/modals/DuplicateEventModal/index.tsx:52
 #: src/components/routes/event/promo-codes.tsx:34
 msgid "Promo Codes"
@@ -12004,7 +12318,7 @@ msgid "Promotional emails may result in account suspension"
 msgstr "قد تؤدي الرسائل الترويجية إلى تعليق الحساب"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:26
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:61
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:62
 msgid "Prose & Poetry"
 msgstr ""
 
@@ -12023,6 +12337,10 @@ msgstr "قدّم حقل عنوان واحدًا على الأقل (المكان�
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:438
 msgid "Provide the following before Stripe's next review to keep payouts flowing."
 msgstr "قدّم ما يلي قبل مراجعة Stripe القادمة للحفاظ على استمرار المدفوعات."
+
+#: src/constants/shop.ts:33
+msgid "PTA"
+msgstr "مجلس أولياء الأمور"
 
 #: src/components/forms/ProductForm/ledgerSummaries.ts:157
 msgid "Public"
@@ -12074,7 +12392,7 @@ msgid "Put the new key in <0>APP_LICENCE_KEY</0> and redeploy the backend."
 msgstr ""
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:34
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:61
 #: src/components/layouts/PublicPuzzles/index.tsx:23
 msgid "Puzzles"
 msgstr "ألغاز"
@@ -12136,7 +12454,7 @@ msgstr "الأسئلة"
 msgid "Questions & Answers"
 msgstr "الأسئلة والأجوبة"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:119
+#: src/components/routes/legal/TermsOfService/index.tsx:121
 msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
 msgstr "يمكن إرسال الأسئلة حول هذه الشروط إلى <0>fos@aqualeo.co</0>."
 
@@ -12149,7 +12467,7 @@ msgstr "تمت إعادة ترتيب الأسئلة"
 msgid "Queue"
 msgstr "قائمة الانتظار"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:113
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:116
 msgid "Quick Links"
 msgstr "روابط سريعة"
 
@@ -12200,6 +12518,10 @@ msgstr "اقرأ <0>سياسة الخصوصية</0> و<1>سياسة ملفات �
 #: src/ee/box-office/components/layouts/BoxOffice/CardTender.tsx:184
 msgid "Reader unavailable"
 msgstr ""
+
+#: src/constants/shop.ts:42
+msgid "Ready for collection"
+msgstr "جاهز للاستلام"
 
 #: src/components/modals/PublishEventModal/index.tsx:147
 msgid "Ready to go live?"
@@ -12305,7 +12627,7 @@ msgstr ""
 msgid "Recurring"
 msgstr "متكرر"
 
-#: src/components/layouts/EventHomepage/index.tsx:372
+#: src/components/layouts/EventHomepage/index.tsx:387
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -12364,9 +12686,10 @@ msgstr "استرداد جميع الطلبات لهذا التاريخ"
 msgid "Refund amount"
 msgstr "مبلغ الاسترداد"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:45
-msgid "Refund and cancellation terms are set by the individual event organizer and will be stated on the event page where applicable. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
-msgstr "تُحدد شروط الاسترداد والإلغاء من قبل منظم الفعالية الفردي وستُذكر في صفحة الفعالية عند الاقتضاء. في حال إلغاء الفعالية من قبل المنظم، سنبذل جهودًا معقولة لإشعار الحاضرين المسجلين."
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
+#: src/components/routes/legal/RefundPolicy/index.tsx:8
+msgid "Refund and Cancellation Policy"
+msgstr "سياسة الاسترداد والإلغاء"
 
 #: src/components/common/OrdersTable/index.tsx:293
 msgid "Refund failed"
@@ -12422,6 +12745,14 @@ msgstr "مُسترد: {0}"
 msgid "Refunds"
 msgstr "الاستردادات"
 
+#: src/components/routes/legal/TermsOfService/index.tsx:45
+msgid "Refunds and cancellations are governed by our <0>Refund and Cancellation Policy</0>, and ticket delivery by our <1>Delivery Policy</1>. If an event page states its own refund terms, those terms apply to that event. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
+msgstr "تخضع عمليات الاسترداد والإلغاء لـ<0>سياسة الاسترداد والإلغاء</0> لدينا، ويخضع تسليم التذاكر لـ<1>سياسة التسليم</1> لدينا. إذا نصت صفحة الفعالية على شروط استرداد خاصة بها، فإن تلك الشروط تنطبق على تلك الفعالية. وإذا ألغى المنظم الفعالية، فسنبذل جهوداً معقولة لإخطار الحاضرين المسجلين."
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:78
+msgid "Refunds are made to the original payment method only. Once a refund is approved it is processed within 5 to 10 business days."
+msgstr "يتم رد المبالغ إلى وسيلة الدفع الأصلية فقط. بعد الموافقة على الاسترداد، تتم معالجته خلال 5 إلى 10 أيام عمل."
+
 #: src/components/routes/profile/ManageProfile/index.tsx:179
 msgid "Regional Settings"
 msgstr "الإعدادات الإقليمية"
@@ -12431,9 +12762,18 @@ msgid "Register"
 msgstr "سجّل"
 
 #: src/components/common/QuestionsTable/index.tsx:413
-#: src/components/layouts/Event/index.tsx:127
+#: src/components/layouts/Event/index.tsx:128
 msgid "Registration Questions"
 msgstr "أسئلة التسجيل"
+
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:76
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:99
+msgid "Regular price"
+msgstr "السعر الأصلي"
+
+#: src/components/forms/ProductForm/index.tsx:363
+msgid "Regular price (optional)"
+msgstr "السعر الأصلي (اختياري)"
 
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:128
 msgid "Reject"
@@ -12455,7 +12795,7 @@ msgstr ""
 msgid "Release {0} seats on {dateCount} dates"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:383
+#: src/components/forms/ProductForm/index.tsx:418
 msgid "Release tiers in order"
 msgstr "طرح المستويات بالترتيب"
 
@@ -12469,7 +12809,7 @@ msgstr "المتبقي"
 msgid "Remaining Uses"
 msgstr "الاستخدامات المتبقية"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1158
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1182
 msgid "remove"
 msgstr "إزالة"
 
@@ -12477,7 +12817,7 @@ msgstr "إزالة"
 #: src/components/common/LocationPicker/index.tsx:210
 #: src/components/common/WaitlistTable/index.tsx:79
 #: src/components/common/WaitlistTable/index.tsx:114
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1159
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1183
 #: src/ee/box-office/components/layouts/BoxOffice/AmountSheet.tsx:89
 #: src/ee/seating/components/SeatPicker/Basket.tsx:120
 msgid "Remove"
@@ -12515,6 +12855,10 @@ msgstr ""
 msgid "Remove overrides for this date"
 msgstr "إزالة التجاوزات لهذا التاريخ"
 
+#: src/components/forms/ProductForm/ProductImagesField.tsx:89
+msgid "Remove photo"
+msgstr "إزالة الصورة"
+
 #: src/ee/box-office/components/layouts/BoxOffice/CartPanel.tsx:96
 msgid "Remove seat {0}"
 msgstr ""
@@ -12522,6 +12866,10 @@ msgstr ""
 #: src/ee/seating/components/routes/event/Seating/index.tsx:128
 msgid "Remove seat map"
 msgstr ""
+
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:115
+msgid "Remove size"
+msgstr "إزالة المقاس"
 
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:67
 msgid "Remove sold out dates and times from the event page entirely. When disabled, they remain visible and are labelled as sold out."
@@ -12568,8 +12916,8 @@ msgstr "يتكرر"
 msgid "Report not found"
 msgstr "التقرير غير موجود"
 
-#: src/components/layouts/Event/index.tsx:110
-#: src/components/layouts/OrganizerLayout/index.tsx:104
+#: src/components/layouts/Event/index.tsx:111
+#: src/components/layouts/OrganizerLayout/index.tsx:105
 #: src/components/routes/event/Reports/index.tsx:53
 #: src/components/routes/organizer/Reports/index.tsx:51
 msgid "Reports"
@@ -12615,11 +12963,11 @@ msgstr "إعادة إرسال الرمز"
 msgid "Resend Confirmation"
 msgstr "إعادة إرسال التأكيد"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:318
+#: src/components/layouts/OrganizerLayout/index.tsx:320
 msgid "Resend Confirmation Email"
 msgstr "إعادة إرسال بريد التأكيد"
 
-#: src/components/layouts/Event/index.tsx:311
+#: src/components/layouts/Event/index.tsx:313
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:162
 msgid "Resend email"
 msgstr "إعادة إرسال البريد الإلكتروني"
@@ -12893,7 +13241,7 @@ msgstr ""
 msgid "Sale complete"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:430
+#: src/components/forms/ProductForm/index.tsx:465
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:196
 msgid "Sale End Date"
 msgstr "تاريخ انتهاء البيع"
@@ -12918,11 +13266,11 @@ msgstr ""
 msgid "Sale Period"
 msgstr "فترة البيع"
 
-#: src/components/forms/ProductForm/index.tsx:421
+#: src/components/forms/ProductForm/index.tsx:456
 msgid "Sale period dates apply across all dates in your schedule. To adjust prices, per-date quantities or availability for individual dates, use the overrides on the <0>Occurrence Schedule page</0>."
 msgstr "تنطبق تواريخ فترة البيع على جميع التواريخ في جدولك. لتعديل الأسعار، أو الكميات الخاصة بكل تاريخ، أو التوفر لتواريخ فردية، استخدم التجاوزات في <0>صفحة جدول المناسبات</0>."
 
-#: src/components/forms/ProductForm/index.tsx:428
+#: src/components/forms/ProductForm/index.tsx:463
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:191
 msgid "Sale Start Date"
 msgstr "تاريخ بدء البيع"
@@ -12931,7 +13279,7 @@ msgstr "تاريخ بدء البيع"
 msgid "Sale starts {0}"
 msgstr "يبدأ البيع {0}"
 
-#: src/components/forms/ProductForm/index.tsx:414
+#: src/components/forms/ProductForm/index.tsx:449
 msgid "Sale window"
 msgstr "نافذة البيع"
 
@@ -12947,7 +13295,7 @@ msgstr "المبيعات متوقفة مؤقتًا"
 
 #: src/components/common/ProductPriceAvailability/index.tsx:24
 #: src/components/common/ProductPriceAvailability/index.tsx:63
-#: src/components/layouts/EventHomepage/index.tsx:191
+#: src/components/layouts/EventHomepage/index.tsx:192
 #: src/ee/seating/components/SeatPicker/SeatPrices.tsx:33
 #: src/ee/seating/components/SeatPicker/SeatPrices.tsx:54
 msgid "Sales ended"
@@ -13050,7 +13398,7 @@ msgstr ""
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:416
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:587
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
 
@@ -13199,6 +13547,18 @@ msgstr "حذف مجدول"
 msgid "Scheduled time"
 msgstr "الوقت المجدول"
 
+#: src/constants/shop.ts:29
+msgid "School"
+msgstr "المدرسة"
+
+#: src/constants/shop.ts:22
+msgid "School meals"
+msgstr "وجبات المدرسة"
+
+#: src/components/layouts/PublicOrganizerShops/index.tsx:25
+msgid "School Shop"
+msgstr "متجر المدرسة"
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:22
 msgid "Science"
 msgstr "العلوم"
@@ -13297,10 +13657,6 @@ msgstr "البحث بالعنوان..."
 #: src/components/routes/event/CapacityAssignments/index.tsx:41
 msgid "Search capacity assignments..."
 msgstr "البحث عن تخصيصات السعة..."
-
-#: src/components/routes/event/CheckInLists/index.tsx:43
-#~ msgid "Search check-in lists..."
-#~ msgstr "البحث عن قوائم تسجيل الدخول..."
 
 #: src/components/common/OccurrenceSelect/index.tsx:120
 msgid "Search dates..."
@@ -13401,7 +13757,7 @@ msgstr ""
 msgid "Seat map updated"
 msgstr ""
 
-#: src/components/layouts/OrganizerLayout/index.tsx:121
+#: src/components/layouts/OrganizerLayout/index.tsx:123
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:141
 msgid "Seat Maps"
 msgstr ""
@@ -13432,7 +13788,7 @@ msgstr ""
 msgid "Seated"
 msgstr ""
 
-#: src/components/layouts/Event/index.tsx:126
+#: src/components/layouts/Event/index.tsx:127
 #: src/ee/seating/components/routes/event/Seating/AttachSeatMap.tsx:37
 #: src/ee/seating/components/routes/event/Seating/index.tsx:62
 #: src/ee/seating/components/routes/event/Seating/index.tsx:67
@@ -13509,11 +13865,11 @@ msgstr "دفع آمن"
 msgid "See all prices"
 msgstr ""
 
-#: src/components/layouts/EventHomepage/index.tsx:435
+#: src/components/layouts/EventHomepage/index.tsx:452
 msgid "See schedule"
 msgstr "عرض الجدول"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:17
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:20
 msgid "See the latest photos and updates from"
 msgstr "اطّلع على أحدث الصور والتحديثات من"
 
@@ -13564,6 +13920,7 @@ msgid "Select Account"
 msgstr "اختر الحساب"
 
 #: src/components/routes/event/OccurrencesTab/GroupedOccurrenceTable/index.tsx:126
+#: src/components/routes/event/ShopCollection/index.tsx:132
 msgid "Select all"
 msgstr "تحديد الكل"
 
@@ -13599,7 +13956,7 @@ msgstr "اختر مجموعة الحاضرين"
 msgid "Select camera"
 msgstr "اختر الكاميرا"
 
-#: src/components/forms/ProductForm/index.tsx:273
+#: src/components/forms/ProductForm/index.tsx:285
 msgid "Select category..."
 msgstr "اختر فئة..."
 
@@ -13632,6 +13989,10 @@ msgstr "اختر أنواع الفعاليات"
 msgid "Select occurrence"
 msgstr "اختر المناسبة"
 
+#: src/components/routes/event/ShopCollection/index.tsx:124
+msgid "Select order"
+msgstr "اختيار الطلب"
+
 #: src/components/modals/CreateEventModal/index.tsx:159
 msgid "Select organizer"
 msgstr "اختر الجهة المنظمة"
@@ -13651,7 +14012,7 @@ msgstr "اختر مستوى المنتج"
 msgid "Select products"
 msgstr "اختر المنتجات"
 
-#: src/components/forms/ProductForm/index.tsx:556
+#: src/components/forms/ProductForm/index.tsx:591
 msgid "Select products..."
 msgstr "اختر المنتجات..."
 
@@ -13698,7 +14059,7 @@ msgstr "اختر الحاضرين الذين سيتلقون هذه الرسال�
 msgid "Select which events will trigger this webhook"
 msgstr "اختر الأحداث التي ستُفعّل هذا الويب هوك"
 
-#: src/components/forms/ProductForm/index.tsx:488
+#: src/components/forms/ProductForm/index.tsx:523
 msgid "Select..."
 msgstr "اختر..."
 
@@ -13764,7 +14125,7 @@ msgstr ""
 msgid "Selling as {signedInName}"
 msgstr ""
 
-#: src/components/forms/ProductForm/index.tsx:590
+#: src/components/forms/ProductForm/index.tsx:625
 msgid "Selling fast 🔥"
 msgstr "ينفد بسرعة 🔥"
 
@@ -13803,7 +14164,7 @@ msgstr "أرسل رسائل إلى الحاضرين أو حاملي التذاك
 msgid "Send me a copy"
 msgstr "أرسل لي نسخة"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:79
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:81
 msgid "Send message"
 msgstr "إرسال رسالة"
 
@@ -13974,7 +14335,7 @@ msgstr "أعدّ جدولًا متكررًا لإنشاء تواريخ تلقا�
 #~ msgid "Set up check-in lists for different entrances, sessions, or days."
 #~ msgstr "أعدّ قوائم تسجيل الدخول لمداخل أو جلسات أو أيام مختلفة."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:90
+#: src/components/layouts/OrganizerLayout/index.tsx:91
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
 msgstr "إعداد المدفوعات"
@@ -14013,12 +14374,12 @@ msgstr "تعيين أو تغيير أو إزالة موقع التاريخ أو 
 msgid "Setting updated"
 msgstr "تم تحديث الإعداد"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:111
+#: src/components/layouts/OrganizerLayout/index.tsx:113
 #: src/components/modals/DuplicateEventModal/index.tsx:51
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: src/components/layouts/Event/index.tsx:116
+#: src/components/layouts/Event/index.tsx:117
 msgid "Setup & Design"
 msgstr "الإعداد والتصميم"
 
@@ -14047,8 +14408,8 @@ msgid "Shape"
 msgstr ""
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:346
-#: src/components/layouts/OrganizerLayout/index.tsx:247
+#: src/components/layouts/EventHomepage/index.tsx:347
+#: src/components/layouts/OrganizerLayout/index.tsx:249
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
 #: src/components/modals/ShareModal/index.tsx:186
@@ -14061,15 +14422,15 @@ msgstr "مشاركة"
 msgid "Share Affiliate Link"
 msgstr "مشاركة رابط الشريك التابع"
 
-#: src/components/layouts/Event/index.tsx:249
-#: src/components/layouts/Event/index.tsx:255
+#: src/components/layouts/Event/index.tsx:251
+#: src/components/layouts/Event/index.tsx:257
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:102
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:131
 msgid "Share Event"
 msgstr "مشاركة الفعالية"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:244
-#: src/components/layouts/OrganizerLayout/index.tsx:286
+#: src/components/layouts/OrganizerLayout/index.tsx:246
+#: src/components/layouts/OrganizerLayout/index.tsx:288
 msgid "Share Organizer Page"
 msgstr "مشاركة صفحة الجهة المنظمة"
 
@@ -14101,6 +14462,37 @@ msgstr "إزاحة الأوقات"
 msgid "Shifted times for {count} date(s)"
 msgstr "تم إزاحة الأوقات لـ {count} تاريخ (تواريخ)"
 
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:19
+msgid "Shoes 10–6"
+msgstr "الأحذية 10–6"
+
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:89
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:147
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:125
+msgid "Shop"
+msgstr "المتجر"
+
+#: src/components/modals/CreateShopModal/index.tsx:73
+msgid "Shop category"
+msgstr "فئة المتجر"
+
+#: src/components/modals/CreateShopModal/index.tsx:92
+msgid "Shop name"
+msgstr "اسم المتجر"
+
+#: src/components/modals/CreateShopModal/index.tsx:40
+msgid "Shop name is required"
+msgstr "اسم المتجر مطلوب"
+
+#: src/components/routes/organizer/Shops/index.tsx:34
+msgid "shops"
+msgstr "متاجر"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:112
+#: src/components/routes/organizer/Shops/index.tsx:32
+msgid "Shops"
+msgstr "المتاجر"
+
 #: src/components/routes/admin/Configurations/index.tsx:108
 #: src/components/routes/admin/Configurations/index.tsx:285
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:549
@@ -14120,7 +14512,7 @@ msgstr "إظهار جميع المنصات ({0} أخرى بقيم)"
 msgid "Show attendee notes to non-logged-in staff"
 msgstr "إظهار ملاحظات الحاضر للموظفين غير المسجلين"
 
-#: src/components/forms/ProductForm/index.tsx:450
+#: src/components/forms/ProductForm/index.tsx:485
 msgid "Show available product quantity"
 msgstr "إظهار كمية المنتج المتاحة"
 
@@ -14144,8 +14536,8 @@ msgstr "إظهار مربع اشتراك التسويق"
 msgid "Show marketing opt-in checkbox by default"
 msgstr "إظهار مربع اشتراك التسويق افتراضيًا"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:850
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1082
+#: src/components/routes/product-widget/SelectProducts/index.tsx:852
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1106
 msgid "Show more"
 msgstr "عرض المزيد"
 
@@ -14193,6 +14585,10 @@ msgstr "عرض أول {0} — سيستمر استهداف الجلسات الم�
 #: src/components/routes/admin/Announcements/index.tsx:410
 msgid "Shown bouncing at the top of the modal"
 msgstr "يظهر مرتدًا أعلى النافذة المنبثقة"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:499
+msgid "Shown in the footer and on the About page. Defaults to your organizer email"
+msgstr "يظهر في التذييل وصفحة من نحن. الافتراضي هو البريد الإلكتروني لجهتك المنظمة"
 
 #: src/ee/box-office/components/layouts/BoxOffice/StartSession.tsx:138
 msgid "Shown on the orders you sell"
@@ -14283,9 +14679,27 @@ msgstr "فعالية فردية"
 msgid "Single line text box"
 msgstr "مربع نص بسطر واحد"
 
+#: src/components/forms/ProductForm/index.tsx:308
+msgid "Single price"
+msgstr "سعر واحد"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:229
+msgid "Site Design"
+msgstr "تصميم الموقع"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:116
+msgid "Site Designer"
+msgstr "مصمم الموقع"
+
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:74
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:86
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:99
 msgid "Size"
-msgstr ""
+msgstr "المقاس"
+
+#: src/components/forms/ProductForm/index.tsx:309
+msgid "Sizes"
+msgstr "المقاسات"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:358
 msgid "Skip manually edited dates"
@@ -14323,9 +14737,10 @@ msgstr "روابط التواصل الاجتماعي والموقع الإلكت
 msgid "Sold"
 msgstr "تم بيعه"
 
+#: src/components/modals/CreateShopModal/index.tsx:82
 #: src/components/routes/event/orders.tsx:77
 msgid "Sold by"
-msgstr ""
+msgstr "البائع"
 
 #: src/components/common/OrdersTable/index.tsx:214
 msgid "Sold by {operatorName}"
@@ -14349,7 +14764,7 @@ msgid "Sold out"
 msgstr "نفدت الكمية"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:92
-#: src/components/layouts/EventHomepage/index.tsx:197
+#: src/components/layouts/EventHomepage/index.tsx:198
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:215
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:22
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:128
@@ -14380,9 +14795,13 @@ msgstr ""
 msgid "Some details are hidden from public access. Log in to view everything."
 msgstr "بعض التفاصيل مخفية عن الوصول العام. سجّل الدخول لعرض كل شيء."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:125
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:144
 msgid "Some features of this site are used by children: submitting stories and poems, and playing our puzzles. We collect only what we need for these features and we ask for a parent or guardian's permission where it is required."
 msgstr "يستخدم الأطفال بعض ميزات هذا الموقع: تقديم القصص والقصائد، واللعب بالألغاز. نجمع فقط ما نحتاجه لهذه الميزات ونطلب إذن ولي الأمر حيثما يكون ذلك مطلوبًا."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:105
+msgid "Some of these service providers process data outside the United Arab Emirates. Where this happens we take steps to make sure your information remains protected, including contractual safeguards with those providers."
+msgstr "يقوم بعض مزودي الخدمة هؤلاء بمعالجة البيانات خارج دولة الإمارات العربية المتحدة. وفي هذه الحالة نتخذ خطوات لضمان بقاء معلوماتك محمية، بما في ذلك ضمانات تعاقدية مع هؤلاء المزودين."
 
 #: src/ee/seating/components/SeatPicker/Basket.tsx:95
 msgid "Someone just took {0}. Pick another seat, or let us find similar seats for you."
@@ -14400,6 +14819,7 @@ msgid "Something went wrong"
 msgstr "حدث خطأ ما"
 
 #: src/components/common/ImageUploadDropzone/index.tsx:130
+#: src/components/forms/ProductForm/ProductImagesField.tsx:63
 msgid "Something went wrong while deleting the image. Please try again."
 msgstr "حدث خطأ أثناء حذف الصورة. يرجى المحاولة مرة أخرى."
 
@@ -14424,27 +14844,28 @@ msgstr "حدث خطأ ما."
 msgid "Something went wrong. Please try again later."
 msgstr "حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقًا."
 
-#: src/components/layouts/Event/index.tsx:97
+#: src/components/layouts/Event/index.tsx:98
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:129
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:30
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:33
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizResetPasswordForm.tsx:34
-#: src/components/layouts/OrganizerLayout/index.tsx:136
+#: src/components/layouts/OrganizerLayout/index.tsx:138
 #: src/components/layouts/PublicParentalConsent/index.tsx:36
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:69
+#: src/components/routes/event/ShopCollection/index.tsx:50
 #: src/components/routes/my-tickets/DeleteMyData/index.tsx:34
 #: src/components/routes/my-tickets/index.tsx:163
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:52
-#: src/components/routes/product-widget/SelectProducts/index.tsx:362
+#: src/components/routes/product-widget/SelectProducts/index.tsx:364
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
 #: src/ee/seating/components/ChangeSeatButton/index.tsx:46
 msgid "Something went wrong. Please try again."
 msgstr "حدث خطأ ما. يرجى المحاولة مرة أخرى."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:772
+#: src/components/routes/product-widget/SelectProducts/index.tsx:774
 msgid "Sorry, this promo code is not recognized"
 msgstr "عذرًا، هذا الرمز الترويجي غير معروف"
 
@@ -14713,6 +15134,11 @@ msgstr ""
 msgid "Still waiting? Check the reader screen. If it shows nothing, cancel and try again."
 msgstr ""
 
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:77
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:108
+msgid "Stock"
+msgstr "المخزون"
+
 #: src/components/common/ImpersonationBanner/index.tsx:53
 msgid "Stop Impersonating"
 msgstr "إيقاف انتحال الهوية"
@@ -14736,7 +15162,7 @@ msgstr "تم نشر القصة"
 msgid "Story rejected"
 msgstr "تم رفض القصة"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:117
+#: src/components/layouts/OrganizerLayout/index.tsx:119
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:59
 msgid "Story Submissions"
 msgstr "مشاركات القصص"
@@ -14799,11 +15225,15 @@ msgstr "سيحتاج Stripe إلى بضعة تفاصيل إضافية قريبً
 msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "سيرشدك Stripe عبر بضعة أسئلة سريعة لإنهاء الإعداد."
 
+#: src/components/routes/event/ShopPickListPrint/ShopPickListTable.tsx:20
+msgid "Student"
+msgstr "الطالب"
+
 #: src/ee/seating/components/lib/templates.ts:184
 msgid "Studio"
 msgstr ""
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:317
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:356
 msgid "Subheading"
 msgstr "العنوان الفرعي"
 
@@ -14870,7 +15300,7 @@ msgstr "تم تأكيد تغيير البريد الإلكتروني بنجاح"
 msgid "Successfully created attendee"
 msgstr "تم إنشاء الحاضر بنجاح"
 
-#: src/components/modals/CreateProductModal/index.tsx:61
+#: src/components/modals/CreateProductModal/index.tsx:64
 msgid "Successfully Created Product"
 msgstr "تم إنشاء المنتج بنجاح"
 
@@ -14883,7 +15313,7 @@ msgstr "تم إنشاء الرمز الترويجي بنجاح"
 msgid "Successfully Created Question"
 msgstr "تم إنشاء السؤال بنجاح"
 
-#: src/components/modals/DuplicateProductModal/index.tsx:112
+#: src/components/modals/DuplicateProductModal/index.tsx:115
 msgid "Successfully Duplicated Product"
 msgstr "تم تكرار المنتج بنجاح"
 
@@ -14932,7 +15362,6 @@ msgid "Successfully Updated Event Defaults"
 msgstr "تم تحديث إعدادات الفعالية الافتراضية بنجاح"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:108
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:109
 msgid "Successfully Updated Homepage Design"
 msgstr "تم تحديث تصميم الصفحة الرئيسية بنجاح"
 
@@ -14968,7 +15397,7 @@ msgstr "تم تحديث إعدادات رسم المنصة الافتراضية 
 msgid "Successfully Updated Platform Fee Settings"
 msgstr "تم تحديث إعدادات رسم المنصة بنجاح"
 
-#: src/components/modals/EditProductModal/index.tsx:102
+#: src/components/modals/EditProductModal/index.tsx:107
 msgid "Successfully updated product"
 msgstr "تم تحديث المنتج بنجاح"
 
@@ -14991,6 +15420,10 @@ msgstr "تم تحديث إعدادات تحسين محركات البحث بنج
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:44
 msgid "Successfully Updated Settings"
 msgstr "تم تحديث الإعدادات بنجاح"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:129
+msgid "Successfully Updated Site Design"
+msgstr "تم تحديث تصميم الموقع بنجاح"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:170
 msgid "Successfully Updated Social Links"
@@ -15043,7 +15476,7 @@ msgstr ""
 msgid "Switch language"
 msgstr "تبديل اللغة"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:80
+#: src/components/layouts/OrganizerLayout/index.tsx:81
 #: src/components/modals/SwitchOrganizerModal/index.tsx:46
 msgid "Switch Organizer"
 msgstr "تبديل الجهة المنظمة"
@@ -15057,11 +15490,11 @@ msgid "System Default"
 msgstr "الإعداد الافتراضي للنظام"
 
 #: src/components/common/CapacityHelp/index.tsx:65
-#: src/components/forms/ProductForm/index.tsx:201
+#: src/components/forms/ProductForm/index.tsx:211
 msgid "T-shirt"
 msgstr "قميص"
 
-#: src/components/forms/ProductForm/index.tsx:232
+#: src/components/forms/ProductForm/index.tsx:242
 msgid "T-shirts, mugs and more"
 msgstr "قمصان وأكواب والمزيد"
 
@@ -15123,7 +15556,7 @@ msgstr "استهداف الحاضرين عبر {0} جلسة محددة."
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:52
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:59
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:89
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:92
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:102
 msgid "Tax"
 msgstr "الضريبة"
 
@@ -15158,12 +15591,12 @@ msgid "Tax Summary"
 msgstr "ملخص الضريبة"
 
 #: src/components/common/InlineOrderSummary/index.tsx:201
-#: src/components/forms/ProductForm/index.tsx:490
+#: src/components/forms/ProductForm/index.tsx:525
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:48
 msgid "Taxes"
 msgstr "الضرائب"
 
-#: src/components/forms/ProductForm/index.tsx:480
+#: src/components/forms/ProductForm/index.tsx:515
 msgid "Taxes & fees"
 msgstr "الضرائب والرسوم"
 
@@ -15171,9 +15604,21 @@ msgstr "الضرائب والرسوم"
 msgid "Taxes & fees applied"
 msgstr "الضرائب والرسوم المطبقة"
 
-#: src/components/forms/ProductForm/index.tsx:487
+#: src/components/forms/ProductForm/index.tsx:522
 msgid "Taxes and Fees"
 msgstr "الضرائب والرسوم"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:432
+msgid "Team"
+msgstr "الفريق"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:439
+msgid "Team Heading"
+msgstr "عنوان الفريق"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:446
+msgid "Team Members"
+msgstr "أعضاء الفريق"
 
 #: src/constants/eventCategories.ts:27
 msgid "Tech"
@@ -15235,7 +15680,7 @@ msgstr ""
 msgid "Term"
 msgstr "المدة"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:146
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:156
 #: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
@@ -15251,6 +15696,10 @@ msgstr ""
 #: src/components/common/ThemeColorControls/index.tsx:107
 msgid "Text may be hard to read"
 msgstr "قد يكون النص صعب القراءة"
+
+#: src/constants/shop.ts:20
+msgid "Textbooks & stationery"
+msgstr "الكتب المدرسية والقرطاسية"
 
 #: src/components/layouts/PublicParentalConsent/index.tsx:45
 msgid "Thank you"
@@ -15281,8 +15730,8 @@ msgstr "هذا الملف كبير جدًا. يرجى إبقائه أقل من 2
 msgid "That payment got sent to detention. If you used American Express, we can't accept it here. Please try Visa or Mastercard instead."
 msgstr "تم إرسال هذه الدفعة إلى غرفة العقاب. إذا كنت قد استخدمت بطاقة أمريكان إكسبريس، فلا يمكننا قبولها هنا. يرجى تجربة فيزا أو ماستركارد بدلاً من ذلك."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:338
-#: src/components/routes/product-widget/SelectProducts/index.tsx:689
+#: src/components/routes/product-widget/SelectProducts/index.tsx:340
+#: src/components/routes/product-widget/SelectProducts/index.tsx:691
 msgid "That promo code is invalid"
 msgstr "هذا الرمز الترويجي غير صالح"
 
@@ -15378,9 +15827,9 @@ msgstr ""
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "الفعالية التي تبحث عنها غير متاحة حاليًا. ربما تمت إزالتها أو انتهت صلاحيتها أو أن الرابط غير صحيح."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:93
-msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
-msgstr "اسم أصدقاء المدرسة وشعاره ومحتوى الموقع هي ملك لشركة Aqualeo Digecom FZ LLC ولا يجوز استخدامها دون إذن. يبقى محتوى الفعالية (مثل الأوصاف والصور) ملكًا للجهة المنظمة المعنية."
+#: src/components/routes/legal/TermsOfService/index.tsx:95
+msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ-LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
+msgstr "اسم أصدقاء المدرسة وشعاره ومحتوى الموقع هي ملك لشركة Aqualeo Digecom FZ-LLC ولا يجوز استخدامها دون إذن. يبقى محتوى الفعالية (مثل الأوصاف والصور) ملكًا للجهة المنظمة المعنية."
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -15398,7 +15847,7 @@ msgstr "اللغة التي سيتلقى بها الحاضر الرسائل."
 msgid "The Lantern Garden"
 msgstr "حديقة الفوانيس"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:274
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:313
 msgid "The large banner at the top of your homepage. Leave fields blank to use sensible defaults."
 msgstr "اللافتة الكبيرة أعلى صفحتك الرئيسية. اترك الحقول فارغة لاستخدام الإعدادات الافتراضية المنطقية."
 
@@ -15418,7 +15867,7 @@ msgstr "الرابط الذي تحاول الوصول إليه منتهي الص
 msgid "The link you clicked is invalid."
 msgstr "الرابط الذي نقرت عليه غير صالح."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:986
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1010
 msgid "The maximum number of products for {0}is {1}"
 msgstr "الحد الأقصى لعدد المنتجات لـ {0} هو {1}"
 
@@ -15575,11 +16024,11 @@ msgstr ""
 msgid "Theatre with sections"
 msgstr "مسرح بأقسام"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:133
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:152
 msgid "their first and last name, class or year group, and the text of their work;"
 msgstr "اسمهم الأول واسم العائلة وصفهم أو مرحلتهم الدراسية ونص عملهم؛"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:150
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:169
 msgid "their first name, email address, password (stored securely) and chosen age group;"
 msgstr "اسمهم الأول وبريدهم الإلكتروني وكلمة المرور (مخزنة بأمان) وفئتهم العمرية المختارة؛"
 
@@ -15587,28 +16036,28 @@ msgstr "اسمهم الأول وبريدهم الإلكتروني وكلمة ا�
 msgid "Their points, number of tests taken and best score"
 msgstr "نقاطهم وعدد الاختبارات التي أجروها وأفضل نتيجة"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:151
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:170
 msgid "their test results and points."
 msgstr "نتائج اختباراتهم ونقاطهم."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:520
 msgid "Theme & Colors"
 msgstr "السمة والألوان"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1203
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1227
 msgid "There are no products available for this date. Please choose another date."
 msgstr "لا توجد منتجات متاحة لهذا التاريخ. يرجى اختيار تاريخ آخر."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:794
+#: src/components/routes/product-widget/SelectProducts/index.tsx:796
 msgid "There are no products available for this event"
 msgstr "لا توجد منتجات متاحة لهذه الفعالية"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:859
+#: src/components/routes/product-widget/SelectProducts/index.tsx:861
 msgid "There are no products available in this category"
 msgstr "لا توجد منتجات متاحة في هذه الفئة"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:791
+#: src/components/routes/product-widget/SelectProducts/index.tsx:793
 msgid "There are no upcoming dates for this event"
 msgstr "لا توجد تواريخ قادمة لهذه الفعالية"
 
@@ -15640,7 +16089,7 @@ msgstr "ستُعرض هذه التفاصيل فقط إذا اكتمل الطلب
 msgid "These details will replace any existing location on the affected dates and show on attendee tickets."
 msgstr "ستحل هذه التفاصيل محل أي موقع موجود في التواريخ المتأثرة وتظهر على تذاكر الحاضرين."
 
-#: src/components/forms/ProductForm/index.tsx:352
+#: src/components/forms/ProductForm/index.tsx:387
 msgid "These prices apply across all dates in your schedule, and each tier's quantity can be per date or a total across all dates. Sale dates on tiers apply globally. You can override prices and per-date quantities for individual dates on the <0>Occurrence Schedule page</0>."
 msgstr "تنطبق هذه الأسعار على جميع التواريخ في جدولك، ويمكن أن تكون كمية كل مستوى لكل تاريخ أو إجماليًا عبر جميع التواريخ. تنطبق تواريخ البيع على المستويات عالميًا. يمكنك تجاوز الأسعار والكميات الخاصة بكل تاريخ لتواريخ فردية في <0>صفحة جدول المناسبات</0>."
 
@@ -15661,8 +16110,8 @@ msgid "These templates will override the organizer defaults for this event only.
 msgstr "ستتجاوز هذه القوالب الإعدادات الافتراضية للجهة المنظمة لهذه الفعالية فقط. إذا لم يُعيَّن قالب مخصص هنا، سيُستخدم قالب الجهة المنظمة بدلاً من ذلك."
 
 #: src/components/routes/legal/TermsOfService/index.tsx:10
-msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
-msgstr "تحكم شروط الخدمة هذه (\"الشروط\") استخدامك لهذا الموقع ومنصة أصدقاء المدرسة، التي تديرها شركة Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\"). بالوصول إلى هذا الموقع أو شراء تذكرة، فإنك توافق على هذه الشروط."
+msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
+msgstr "تحكم شروط الخدمة هذه (\"الشروط\") استخدامك لهذا الموقع ومنصة أصدقاء المدرسة، التي تديرها شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\"). بالوصول إلى هذا الموقع أو شراء تذكرة، فإنك توافق على هذه الشروط."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Third"
@@ -15757,8 +16206,8 @@ msgid "This color combination may be hard to read for some users"
 msgstr "قد يكون مزيج الألوان هذا صعب القراءة لبعض المستخدمين"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:10
-msgid "This Cookie Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, uses cookies and similar technologies, and the choices you have about them."
-msgstr "توضح سياسة ملفات تعريف الارتباط هذه كيف تستخدم شركة Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")، مشغّل منصة أصدقاء المدرسة وهذا الموقع، ملفات تعريف الارتباط والتقنيات المشابهة، والخيارات المتاحة لك بشأنها."
+msgid "This Cookie Policy explains how Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, uses cookies and similar technologies, and the choices you have about them."
+msgstr "توضح سياسة ملفات تعريف الارتباط هذه كيف تستخدم شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")، مشغّل منصة أصدقاء المدرسة وهذا الموقع، ملفات تعريف الارتباط والتقنيات المشابهة، والخيارات المتاحة لك بشأنها."
 
 #: src/ee/seating/components/routes/event/SeatingSales/index.tsx:181
 msgid "This date"
@@ -15782,13 +16231,17 @@ msgstr "هذا التاريخ في الماضي. سيتم إنشاؤه لكنه 
 msgid "This date is marked sold out."
 msgstr "هذا التاريخ معلّم كنافد."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:743
+#: src/components/routes/product-widget/SelectProducts/index.tsx:745
 msgid "This date is no longer available. Please select another date."
 msgstr "هذا التاريخ لم يعد متاحًا. يرجى اختيار تاريخ آخر."
 
 #: src/components/modals/SelectCheckInListModal/index.tsx:66
 msgid "This date only"
 msgstr "هذا التاريخ فقط"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:10
+msgid "This Delivery Policy applies to tickets and registrations purchased through this website, which is operated by Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\")."
+msgstr "تنطبق سياسة التسليم هذه على التذاكر وعمليات التسجيل المشتراة عبر هذا الموقع، الذي تديره شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:113
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
@@ -15798,7 +16251,7 @@ msgstr "سيؤدي هذا إلى فصل {stripeAccountId} عن هذه الجهة
 msgid "This email is already registered. You can <0>request your username</0> and we will email it to you."
 msgstr "هذا البريد الإلكتروني مسجل بالفعل. يمكنك <0>طلب اسم المستخدم الخاص بك</0> وسنرسله إليك بالبريد الإلكتروني."
 
-#: src/components/layouts/EventHomepage/index.tsx:396
+#: src/components/layouts/EventHomepage/index.tsx:413
 msgid "This event has ended"
 msgstr "انتهت هذه الفعالية"
 
@@ -15822,7 +16275,7 @@ msgstr "هذه الفعالية غير منشورة بعد"
 msgid "This event is not published. Sales are still recorded."
 msgstr ""
 
-#: src/components/layouts/Event/index.tsx:187
+#: src/components/layouts/Event/index.tsx:189
 msgid "This event is pending manual review and cannot be published until the review is complete."
 msgstr "هذه الفعالية قيد المراجعة اليدوية ولا يمكن نشرها حتى تكتمل المراجعة."
 
@@ -15838,7 +16291,7 @@ msgstr "هذه الفعالية قيد المراجعة اليدوية ولا ي
 msgid "This event is pending manual review. Its status cannot be changed until the review is complete."
 msgstr "هذه الفعالية قيد المراجعة اليدوية. لا يمكن تغيير حالتها حتى تكتمل المراجعة."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:790
+#: src/components/routes/product-widget/SelectProducts/index.tsx:792
 msgid "This event is sold out"
 msgstr "نفدت تذاكر هذه الفعالية"
 
@@ -15976,17 +16429,21 @@ msgstr "تم دفع هذا الطلب دون اتصال. سيؤدي استردا
 msgid "This organizer profile is not published yet"
 msgstr "ملف تعريف هذه الجهة المنظمة غير منشور بعد"
 
-#: src/components/forms/ProductForm/index.tsx:614
+#: src/components/forms/ProductForm/index.tsx:649
 msgid "This overrides all visibility settings and will hide the product from all customers."
 msgstr "يتجاوز هذا جميع إعدادات الرؤية وسيخفي المنتج عن جميع العملاء."
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:10
+msgid "This policy explains how refunds and cancellations work for tickets bought through this website, which is operated by Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\")."
+msgstr "توضح هذه السياسة كيفية عمل الاسترداد والإلغاء للتذاكر المشتراة عبر هذا الموقع، الذي تديره شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")."
 
 #: src/components/common/EmailTemplateEditor/EmailTemplatePreviewPane.tsx:69
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "تُظهر هذه المعاينة شكل رسالتك بالبيانات النموذجية. ستستخدم الرسائل الفعلية قيمًا حقيقية."
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:10
-msgid "This Privacy Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
-msgstr "توضح سياسة الخصوصية هذه كيف تجمع شركة Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")، مشغّل منصة أصدقاء المدرسة وهذا الموقع، معلوماتك الشخصية وتستخدمها وتحميها عند زيارتك لهذا الموقع، أو التسجيل في فعالية، أو التفاعل معنا بأي شكل آخر."
+msgid "This Privacy Policy explains how Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
+msgstr "توضح سياسة الخصوصية هذه كيف تجمع شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")، مشغّل منصة أصدقاء المدرسة وهذا الموقع، معلوماتك الشخصية وتستخدمها وتحميها عند زيارتك لهذا الموقع، أو التسجيل في فعالية، أو التفاعل معنا بأي شكل آخر."
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:81
 msgid "This product cannot be deleted because it is associated with an order. You can hide it instead."
@@ -16000,7 +16457,7 @@ msgstr "هذا المنتج مميّز في صفحة الفعالية"
 msgid "This product is sold out"
 msgstr "نفدت كمية هذا المنتج"
 
-#: src/components/forms/ProductForm/index.tsx:550
+#: src/components/forms/ProductForm/index.tsx:585
 msgid "This product won't appear on the event page on its own — buyers only see it as an add-on to the products it's attached to."
 msgstr "لن يظهر هذا المنتج في صفحة الفعالية بمفرده — يراه المشترون فقط كإضافة للمنتجات المرتبط بها."
 
@@ -16040,9 +16497,13 @@ msgstr ""
 msgid "This seat map was changed somewhere else. Load the latest version? Your unsaved edits will be lost."
 msgstr ""
 
-#: src/components/routes/legal/TermsOfService/index.tsx:102
-msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
-msgstr "يُقدَّم هذا الموقع \"كما هو\". إلى أقصى حد يسمح به القانون، لا تتحمل شركة Aqualeo Digecom FZ LLC المسؤولية عن أي أضرار غير مباشرة أو عرضية أو تبعية ناشئة عن استخدامك لهذا الموقع أو حضورك لأي فعالية مدرجة."
+#: src/components/routes/legal/TermsOfService/index.tsx:104
+msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ-LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
+msgstr "يُقدَّم هذا الموقع \"كما هو\". إلى أقصى حد يسمح به القانون، لا تتحمل شركة Aqualeo Digecom FZ-LLC المسؤولية عن أي أضرار غير مباشرة أو عرضية أو تبعية ناشئة عن استخدامك لهذا الموقع أو حضورك لأي فعالية مدرجة."
+
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:46
+msgid "This size has already been sold, so it can't be deleted. Hide it instead."
+msgstr "تم بيع هذا المقاس بالفعل، لذا لا يمكن حذفه. يمكنك إخفاؤه بدلاً من ذلك."
 
 #: src/ee/seating/components/SeatPicker/SeatSheet.tsx:43
 msgid "This space is reserved for wheelchair users and guests with access needs."
@@ -16064,13 +16525,13 @@ msgstr "كمية هذا المستوى مشتركة بين جميع التوار
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "هذا المستخدم غير نشط، لأنه لم يقبل دعوته."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:19
-msgid "This website is operated by Aqualeo Digecom FZ LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
-msgstr "يُدار هذا الموقع من قبل شركة Aqualeo Digecom FZ LLC. لأي أسئلة حول هذه الشروط، تواصل معنا على <0>fos@aqualeo.co</0>."
-
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:20
-msgid "This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
-msgstr "يُدار هذا الموقع من قبل شركة Aqualeo Digecom FZ LLC. إذا كانت لديك أي أسئلة حول هذه السياسة أو كيفية التعامل مع بياناتك، يمكنك التواصل معنا على <0>fos@aqualeo.co</0>."
+msgid "This website is operated by Aqualeo Digecom FZ-LLC, a free zone limited liability company registered at CWEP4303, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
+msgstr "يُدار هذا الموقع من قبل شركة Aqualeo Digecom FZ-LLC، وهي شركة ذات مسؤولية محدودة في المنطقة الحرة، مسجلة في CWEP4303، مبنى كومباس، شارع الشهداء، المنطقة الصناعية الحمراء-FZ، رأس الخيمة، الإمارات العربية المتحدة. إذا كانت لديك أي أسئلة حول هذه السياسة أو كيفية التعامل مع بياناتك، يمكنك التواصل معنا على <0>fos@aqualeo.co</0>."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:19
+msgid "This website is operated by Aqualeo Digecom FZ-LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
+msgstr "يُدار هذا الموقع من قبل شركة Aqualeo Digecom FZ-LLC. لأي أسئلة حول هذه الشروط، تواصل معنا على <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:369
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -16125,7 +16586,7 @@ msgstr "تذكرة"
 #: src/components/common/AttendeeTicket/index.tsx:130
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:313
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:559
-#: src/components/forms/ProductForm/index.tsx:224
+#: src/components/forms/ProductForm/index.tsx:234
 #: src/components/modals/CreateAttendeeModal/index.tsx:247
 #: src/components/modals/ManageAttendeeModal/index.tsx:147
 #: src/components/modals/ManageAttendeeModal/index.tsx:277
@@ -16145,7 +16606,7 @@ msgstr "تصميم التذكرة"
 msgid "Ticket design saved successfully"
 msgstr "تم حفظ تصميم التذكرة بنجاح"
 
-#: src/components/layouts/Event/index.tsx:125
+#: src/components/layouts/Event/index.tsx:126
 msgid "Ticket Designer"
 msgstr "مصمم التذاكر"
 
@@ -16182,9 +16643,9 @@ msgstr "التذكرة غير موجودة"
 msgid "Ticket or Product"
 msgstr "تذكرة أو منتج"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:65
-msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
-msgstr "تتم معالجة مدفوعات التذاكر في هذا الموقع بأمان عبر Stripe، معالج دفع خارجي متوافق مع معايير PCI. لا نخزن تفاصيل بطاقتك الكاملة على خوادمنا. يرجى الرجوع إلى <0>سياسة خصوصية Stripe</0> للاطلاع على تفاصيل كيفية تعامل Stripe مع معلومات دفعك."
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:75
+msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information. Our <1>Refund and Cancellation Policy</1> and <2>Delivery Policy</2> explain how refunds and ticket delivery work."
+msgstr "تتم معالجة مدفوعات التذاكر على هذا الموقع بشكل آمن بواسطة Stripe، وهي جهة معالجة مدفوعات خارجية متوافقة مع معيار PCI. نحن لا نخزن بيانات بطاقتك الكاملة على خوادمنا. يرجى الرجوع إلى <0>سياسة خصوصية Stripe</0> لمعرفة كيفية تعامل Stripe مع معلومات الدفع الخاصة بك. توضح <1>سياسة الاسترداد والإلغاء</1> و<2>سياسة التسليم</2> لدينا كيفية عمل الاسترداد وتسليم التذاكر."
 
 #: src/components/routes/event/TicketDesigner/TicketDesignerPrint.tsx:100
 msgid "Ticket Preview for"
@@ -16198,7 +16659,7 @@ msgstr "سعر التذكرة"
 msgid "Ticket resent successfully"
 msgstr "تمت إعادة إرسال التذكرة بنجاح"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:786
+#: src/components/routes/product-widget/SelectProducts/index.tsx:788
 msgid "Ticket sales have ended for this event"
 msgstr "انتهت مبيعات التذاكر لهذه الفعالية"
 
@@ -16211,7 +16672,7 @@ msgstr ""
 msgid "Ticket Type"
 msgstr "نوع التذكرة"
 
-#: src/components/layouts/Event/index.tsx:130
+#: src/components/layouts/Event/index.tsx:131
 msgid "Ticketing & Sales"
 msgstr "إصدار التذاكر والمبيعات"
 
@@ -16219,13 +16680,13 @@ msgstr "إصدار التذاكر والمبيعات"
 msgid "tickets"
 msgstr "تذاكر"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:139
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:146
 #: src/components/routes/my-tickets/index.tsx:102
 #: src/ee/box-office/components/layouts/BoxOffice/SaleComplete.tsx:111
 msgid "Tickets"
 msgstr "التذاكر"
 
-#: src/components/layouts/Event/index.tsx:131
+#: src/components/layouts/Event/index.tsx:132
 #: src/components/routes/event/products.tsx:48
 msgid "Tickets & Products"
 msgstr "التذاكر والمنتجات"
@@ -16233,6 +16694,10 @@ msgstr "التذاكر والمنتجات"
 #: src/components/modals/OfferWaitlistModal/index.tsx:94
 msgid "Tickets are automatically offered to waitlisted customers when capacity becomes available."
 msgstr "تُعرض التذاكر تلقائيًا على عملاء قائمة الانتظار عند توفر السعة."
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:28
+msgid "Tickets are normally delivered instantly, and in any case within 15 minutes of a successful payment. Some events issue tickets only after the organizer approves your registration. Where this applies it is stated on the event page, and your ticket is sent as soon as it is approved."
+msgstr "يتم تسليم التذاكر عادةً فوراً، وفي جميع الأحوال خلال 15 دقيقة من إتمام الدفع بنجاح. تصدر بعض الفعاليات التذاكر فقط بعد موافقة المنظم على تسجيلك. وعند انطباق ذلك يُذكر في صفحة الفعالية، ويتم إرسال تذكرتك فور الموافقة عليها."
 
 #: src/components/routes/product-widget/PrintOrder/index.tsx:49
 msgid "Tickets for"
@@ -16259,16 +16724,16 @@ msgstr "التذاكر المعينة على \"جميع التواريخ\" تش�
 msgid "Tickets Sold"
 msgstr "التذاكر المباعة"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:64
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:65
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:164
 msgid "Tier {0}"
 msgstr "المستوى {0}"
 
-#: src/components/forms/ProductForm/index.tsx:343
+#: src/components/forms/ProductForm/index.tsx:378
 msgid "Tiered products allow you to offer multiple price options for the same product. This is perfect for early bird products, or offering different price options for different groups of people."
 msgstr "تتيح لك المنتجات متعددة المستويات تقديم خيارات أسعار متعددة لنفس المنتج. هذا مثالي لمنتجات الحجز المبكر، أو تقديم خيارات أسعار مختلفة لمجموعات مختلفة من الأشخاص."
 
-#: src/components/forms/ProductForm/index.tsx:295
+#: src/components/forms/ProductForm/index.tsx:314
 msgid "Tiers"
 msgstr "المستويات"
 
@@ -16332,11 +16797,15 @@ msgstr "إلى"
 msgid "To"
 msgstr "إلى"
 
+#: src/constants/shop.ts:40
+msgid "To collect"
+msgstr "بانتظار الاستلام"
+
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:58
 msgid "To communicate with you about events you've registered for."
 msgstr "للتواصل معك بشأن الفعاليات التي سجّلت فيها."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:60
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
 msgid "To improve and secure our website and services."
 msgstr "لتحسين وتأمين موقعنا وخدماتنا."
 
@@ -16344,11 +16813,11 @@ msgstr "لتحسين وتأمين موقعنا وخدماتنا."
 msgid "To increase your limits, contact us at"
 msgstr "لزيادة حدودك، تواصل معنا على"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:57
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:58
 msgid "To process event registrations and ticket purchases."
 msgstr "لمعالجة تسجيلات الفعاليات وعمليات شراء التذاكر."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:60
 msgid "To respond to enquiries submitted through our contact form."
 msgstr "للرد على الاستفسارات المقدمة عبر نموذج التواصل لدينا."
 
@@ -16384,7 +16853,7 @@ msgstr "غدًا"
 msgid "Too many attempts. Please wait a minute and try again."
 msgstr ""
 
-#: src/components/layouts/OrganizerLayout/index.tsx:113
+#: src/components/layouts/OrganizerLayout/index.tsx:115
 #: src/ee/seating/components/SeatMapDesigner/index.tsx:372
 msgid "Tools"
 msgstr "الأدوات"
@@ -16407,7 +16876,7 @@ msgstr "الإجمالي"
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:114
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:352
-#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:94
+#: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:104
 #: src/ee/box-office/components/layouts/BoxOffice/tabs/OrdersTab.tsx:114
 msgid "Total"
 msgstr "الإجمالي"
@@ -16517,7 +16986,7 @@ msgstr "جرّب مصطلح بحث أو عامل تصفية مختلف"
 msgid "Try adjusting your filters to see more dates."
 msgstr "جرّب تعديل عوامل التصفية لرؤية المزيد من التواريخ."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1067
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1091
 #: src/ee/box-office/components/layouts/BoxOffice/CardTender.tsx:206
 #: src/ee/box-office/components/layouts/BoxOffice/index.tsx:88
 #: src/ee/box-office/components/layouts/BoxOffice/tabs/SellTab.tsx:449
@@ -16584,7 +17053,7 @@ msgid "Type to search..."
 msgstr "اكتب للبحث..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:391
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:562
 msgid "Typography"
 msgstr "الطباعة"
 
@@ -16623,11 +17092,11 @@ msgstr "تعذّر تسجيل خروج الحاضر"
 msgid "Unable to complete sale"
 msgstr ""
 
-#: src/components/modals/CreateProductModal/index.tsx:70
+#: src/components/modals/CreateProductModal/index.tsx:73
 msgid "Unable to create product. Please check the your details"
 msgstr "تعذّر إنشاء المنتج. يرجى التحقق من تفاصيلك"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:325
+#: src/components/routes/product-widget/SelectProducts/index.tsx:327
 msgid "Unable to create product. Please check your details"
 msgstr "تعذّر إنشاء المنتج. يرجى التحقق من تفاصيلك"
 
@@ -16635,7 +17104,7 @@ msgstr "تعذّر إنشاء المنتج. يرجى التحقق من تفاص�
 msgid "Unable to create question. Please check the your details"
 msgstr "تعذّر إنشاء السؤال. يرجى التحقق من تفاصيلك"
 
-#: src/components/modals/DuplicateProductModal/index.tsx:120
+#: src/components/modals/DuplicateProductModal/index.tsx:123
 msgid "Unable to duplicate product. Please check the your details"
 msgstr "تعذّر تكرار المنتج. يرجى التحقق من تفاصيلك"
 
@@ -16655,7 +17124,7 @@ msgstr "تعذّر الانضمام إلى قائمة الانتظار"
 msgid "Unable to load attendee details."
 msgstr "تعذّر تحميل تفاصيل الحاضر."
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:379
+#: src/components/routes/product-widget/SelectProducts/index.tsx:381
 msgid "Unable to load products for this date. Please try again."
 msgstr "تعذّر تحميل المنتجات لهذا التاريخ. يرجى المحاولة مرة أخرى."
 
@@ -16715,6 +17184,10 @@ msgstr ""
 msgid "Undo"
 msgstr "تراجع"
 
+#: src/components/routes/organizer/Shops/index.tsx:31
+msgid "Uniform, books, stationery and meals sold by the school and its vendors. Orders are collected from school reception."
+msgstr "الزي المدرسي والكتب والقرطاسية والوجبات التي تبيعها المدرسة وبائعوها. يتم استلام الطلبات من مكتب استقبال المدرسة."
+
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:30
 msgid "Unique Customers"
 msgstr "عملاء فريدون"
@@ -16737,11 +17210,16 @@ msgstr "غير معروف"
 msgid "Unknown Attendee"
 msgstr "حاضر غير معروف"
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:18
+msgid "Unless the event page says otherwise, all ticket sales are final. Tickets are for a specific date and time, so they are not covered by a cooling-off period. If an event page states its own refund terms, those terms apply to that event and take priority over this policy."
+msgstr "ما لم تنص صفحة الفعالية على خلاف ذلك، فإن جميع مبيعات التذاكر نهائية. التذاكر مخصصة لتاريخ ووقت محددين، لذا لا تشملها فترة التراجع. وإذا نصت صفحة الفعالية على شروط استرداد خاصة بها، فإن تلك الشروط تنطبق على تلك الفعالية وتكون لها الأولوية على هذه السياسة."
+
 #: src/components/common/CapacityHelp/index.tsx:31
 #: src/components/common/CapacityHelp/index.tsx:51
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:483
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:43
 #: src/components/forms/ProductForm/ProductPriceTierForm.tsx:101
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:110
 #: src/components/forms/PromoCodeForm/index.tsx:171
 #: src/components/modals/OfferWaitlistModal/index.tsx:195
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:30
@@ -16756,7 +17234,7 @@ msgstr "حاضر غير معروف"
 msgid "Unlimited"
 msgstr "غير محدود"
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:921
+#: src/components/routes/product-widget/SelectProducts/index.tsx:941
 msgid "Unlimited available"
 msgstr "متاح بلا حدود"
 
@@ -16794,11 +17272,11 @@ msgstr "حتى {end}"
 msgid "Until a date"
 msgstr "حتى تاريخ"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:109
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:115
 msgid "Untitled product"
 msgstr "منتج بدون عنوان"
 
-#: src/components/forms/ProductForm/buildPreviewEvent.ts:109
+#: src/components/forms/ProductForm/buildPreviewEvent.ts:115
 msgid "Untitled ticket"
 msgstr "تذكرة بدون عنوان"
 
@@ -16834,6 +17312,10 @@ msgstr "الفعاليات القادمة"
 #: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:38
 msgid "Upcoming Events"
 msgstr "الفعاليات القادمة"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:396
+msgid "Upcoming Events Heading"
+msgstr "عنوان الفعاليات القادمة"
 
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:59
 msgid "Update {0}"
@@ -16972,11 +17454,11 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "استخدم <0>قوالب Liquid</0> لتخصيص رسائلك"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:368
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:539
 msgid "Use a blurred version of the cover image as the background"
 msgstr "استخدم نسخة ضبابية من صورة الغلاف كخلفية"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:289
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
 msgid "Use a looping background video instead"
 msgstr "استخدم فيديو خلفية متكرر بدلاً من ذلك"
 
@@ -16985,7 +17467,7 @@ msgid "Use areas for separate parts of the venue, such as stalls and balcony. Be
 msgstr ""
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:366
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:537
 msgid "Use cover image"
 msgstr "استخدام صورة الغلاف"
 
@@ -17018,7 +17500,7 @@ msgstr ""
 msgid "Use ticket price"
 msgstr ""
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:283
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
 msgid "Use your cover image as the banner background"
 msgstr "استخدم صورة الغلاف الخاصة بك كخلفية اللافتة"
 
@@ -17214,7 +17696,7 @@ msgstr "يمكن للحسابات الموثّقة إرسال رسائل إلى 
 msgid "Verify Email"
 msgstr "توثيق البريد الإلكتروني"
 
-#: src/components/layouts/Event/index.tsx:308
+#: src/components/layouts/Event/index.tsx:310
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:156
 msgid "Verify your email"
 msgstr "وثّق بريدك الإلكتروني"
@@ -17227,15 +17709,15 @@ msgstr "وثّق بريدك الإلكتروني حتى يتمكن الحاضر�
 msgid "Verifying..."
 msgstr "جارٍ التوثيق..."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:287
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:326
 msgid "Video"
 msgstr "فيديو"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:300
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:339
 msgid "Video URL"
 msgstr "رابط الفيديو"
 
-#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:36
+#: src/components/layouts/OrganizerHomepage/InstagramSection/index.tsx:39
 msgid "View @{handle} on Instagram"
 msgstr "عرض @{handle} على إنستغرام"
 
@@ -17301,7 +17783,7 @@ msgid "View Event Page"
 msgstr "عرض صفحة الفعالية"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:34
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:328
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:367
 msgid "View Events"
 msgstr "عرض الفعاليات"
 
@@ -17310,7 +17792,7 @@ msgstr "عرض الفعاليات"
 msgid "View logs"
 msgstr "عرض السجلات"
 
-#: src/components/layouts/EventHomepage/index.tsx:555
+#: src/components/layouts/EventHomepage/index.tsx:572
 msgid "View Map"
 msgstr "عرض الخريطة"
 
@@ -17318,7 +17800,7 @@ msgstr "عرض الخريطة"
 msgid "View Message"
 msgstr "عرض الرسالة"
 
-#: src/components/layouts/EventHomepage/index.tsx:464
+#: src/components/layouts/EventHomepage/index.tsx:481
 msgid "View on Google Maps"
 msgstr "عرض على خرائط Google"
 
@@ -17339,8 +17821,8 @@ msgstr "عرض تفاصيل الطلب"
 msgid "View order details, issue refunds, and resend confirmations."
 msgstr "عرض تفاصيل الطلب، وإصدار الاستردادات، وإعادة إرسال التأكيدات."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:262
-#: src/components/layouts/OrganizerLayout/index.tsx:265
+#: src/components/layouts/OrganizerLayout/index.tsx:264
+#: src/components/layouts/OrganizerLayout/index.tsx:267
 msgid "View Organizer Homepage"
 msgstr "عرض الصفحة الرئيسية للجهة المنظمة"
 
@@ -17366,7 +17848,7 @@ msgstr "فيميو"
 msgid "VIP check-in list"
 msgstr "قائمة تسجيل دخول كبار الشخصيات"
 
-#: src/components/forms/ProductForm/index.tsx:201
+#: src/components/forms/ProductForm/index.tsx:211
 msgid "VIP Ticket"
 msgstr "تذكرة كبار الشخصيات"
 
@@ -17377,6 +17859,10 @@ msgstr "مرئي من {start} — مخفي حتى فتح المبيعات."
 #: src/components/forms/ProductForm/visibilityStatus.ts:56
 msgid "Visible to everyone on the event page."
 msgstr "مرئي للجميع في صفحة الفعالية."
+
+#: src/components/forms/ProductForm/visibilityStatus.ts:56
+msgid "Visible to everyone on the shop page."
+msgstr "ظاهر للجميع في صفحة المتجر."
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:104
 msgid "VK"
@@ -17414,8 +17900,8 @@ msgstr "في انتظار الدفع"
 msgid "Waiting for scan…"
 msgstr "في انتظار المسح…"
 
-#: src/components/forms/ProductForm/index.tsx:462
-#: src/components/layouts/Event/index.tsx:142
+#: src/components/forms/ProductForm/index.tsx:497
+#: src/components/layouts/Event/index.tsx:144
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:73
@@ -17447,11 +17933,11 @@ msgstr "تحذير: هذا هو الإعداد الافتراضي للنظام. 
 msgid "We accept"
 msgstr "نقبل"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:47
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:48
 msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
 msgstr "نجمع أيضًا تلقائيًا معلومات تقنية محدودة، مثل عنوان IP الخاص بك، ونوع المتصفح، والصفحات التي تمت زيارتها، لمساعدتنا على تشغيل الموقع وتحسينه. حيثما تُستخدم ملفات تعريف الارتباط لهذا الغرض، يمكنك التحكم في تفضيلاتك في أي وقت عبر رابط إعدادات ملفات تعريف الارتباط في التذييل."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:29
 msgid "We collect information you provide directly to us, including:"
 msgstr "نجمع المعلومات التي تقدمها لنا مباشرة، بما في ذلك:"
 
@@ -17519,7 +18005,7 @@ msgstr "تعذّر تحميل البيانات. يرجى المحاولة مرة
 msgid "We couldn't load the products. Please try again."
 msgstr ""
 
-#: src/components/routes/product-widget/SelectProducts/index.tsx:1064
+#: src/components/routes/product-widget/SelectProducts/index.tsx:1088
 #: src/ee/box-office/components/layouts/BoxOffice/tabs/SellTab.tsx:457
 msgid "We couldn't load the seating map. Please try again."
 msgstr ""
@@ -17540,13 +18026,17 @@ msgstr "تعذّرت قراءة هذا الملف. يرجى محاولة لصق 
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "تعذّرت إعادة ترتيب الفئات. يرجى المحاولة مرة أخرى."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:86
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:98
 msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
 msgstr "نحن لا نبيع معلوماتك الشخصية. نشارك المعلومات فقط مع مزودي الخدمات الذين يساعدوننا على تشغيل الموقع (مثل معالج الدفع ومزود البريد الإلكتروني)، أو عند اقتضاء القانون ذلك."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:139
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:158
 msgid "We email the parent or guardian to explain what will be shown and ask for their permission. We record their response and when it was given. Work from a child under 16 is only published if the parent or guardian agrees and our team approves it. If published, the page shows the child's first name, the initial of their last name, their class or year group, the date it was submitted and the work itself. Their full last name is never shown publicly. If the parent or guardian does not respond or declines, the work is not published."
 msgstr "نراسل ولي الأمر لنوضح ما سيُعرض ونطلب إذنه. ونسجل ردّه ووقت تقديمه. لا يُنشر عمل الطفل دون 16 سنة إلا إذا وافق ولي الأمر واعتمده فريقنا. وعند النشر تعرض الصفحة الاسم الأول للطفل والحرف الأول من اسم عائلته وصفه أو مرحلته الدراسية وتاريخ التقديم والعمل نفسه. ولا يُعرض اسم عائلته كاملًا علنًا أبدًا. وإذا لم يرد ولي الأمر أو رفض فلن يُنشر العمل."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:64
+msgid "We handle personal data in line with the UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data and, where it applies to you, the EU General Data Protection Regulation. We process your data to perform our contract with you (for example, delivering tickets), to meet our legal obligations, for our legitimate interests in running and securing the site, and, where required, with your consent."
+msgstr "نتعامل مع البيانات الشخصية وفقاً للمرسوم بقانون اتحادي رقم 45 لسنة 2021 بشأن حماية البيانات الشخصية في دولة الإمارات، وحيثما ينطبق عليك، اللائحة العامة لحماية البيانات في الاتحاد الأوروبي. نعالج بياناتك لتنفيذ عقدنا معك (مثل تسليم التذاكر)، وللوفاء بالتزاماتنا القانونية، ولمصالحنا المشروعة في تشغيل الموقع وتأمينه، وبموافقتك عند الحاجة."
 
 #: src/components/routes/my-tickets/DeleteMyData/index.tsx:47
 msgid "We have emailed you a confirmation listing what was deleted, what we kept and what we could not delete, such as records held by our payment processor."
@@ -17560,7 +18050,7 @@ msgstr "أرسلنا بريدًا إلكترونيًا إلى ولي أمرك ل
 msgid "We hit a snag loading this page. Please try again."
 msgstr "واجهنا عائقًا أثناء تحميل هذه الصفحة. يرجى المحاولة مرة أخرى."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:111
+#: src/components/routes/legal/TermsOfService/index.tsx:113
 msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 msgstr "قد نُحدّث هذه الشروط من وقت لآخر. يشكل استمرار استخدام الموقع بعد نشر التغييرات قبولاً للشروط المحدّثة."
 
@@ -17568,7 +18058,7 @@ msgstr "قد نُحدّث هذه الشروط من وقت لآخر. يشكل ا�
 msgid "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "قد نُحدّث سياسة ملفات تعريف الارتباط هذه من وقت لآخر. يعكس تاريخ \"آخر تحديث\" أعلى هذه الصفحة أحدث التغييرات."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:181
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:200
 msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "قد نُحدّث سياسة الخصوصية هذه من وقت لآخر. يعكس تاريخ \"آخر تحديث\" أعلى هذه الصفحة أحدث التغييرات."
 
@@ -17581,15 +18071,15 @@ msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "نوصي بشعار مربع بأبعاد لا تقل عن 200×200 بكسل"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:223
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "نوصي بأبعاد 1950×650 بكسل، بنسبة 3:1، وحجم ملف أقصى 5 ميغابايت"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:244
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:282
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "نوصي بأبعاد 400×400 بكسل، وحجم ملف أقصى 5 ميغابايت"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:95
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:114
 msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
 msgstr "نحتفظ بالمعلومات الشخصية طوال المدة اللازمة لتحقيق الأغراض الموضحة في هذه السياسة، بما في ذلك الامتثال للالتزامات القانونية أو المحاسبية أو التقارير."
 
@@ -17605,7 +18095,7 @@ msgstr "أرسلنا رابط تحقق إلى {0}"
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "نستخدم ملفات تعريف الارتباط لمساعدتنا على فهم كيفية استخدام الموقع ولتحسين تجربتك."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:77
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
 msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
 msgstr "نستخدم ملفات تعريف الارتباط الأساسية اللازمة لعمل الموقع، وبموافقتك، ملفات تعريف ارتباط اختيارية للتحليلات والإعلانات لمساعدتنا على فهم كيفية استخدام الموقع. يمكنك تغيير تفضيلات ملفات تعريف الارتباط في أي وقت باستخدام رابط \"إعدادات ملفات تعريف الارتباط\" في تذييل الموقع."
 
@@ -17698,8 +18188,8 @@ msgstr "لن يرسل الويب هوك إشعارات"
 msgid "Webhook will send notifications"
 msgstr "سيرسل الويب هوك إشعارات"
 
-#: src/components/layouts/Event/index.tsx:153
-#: src/components/layouts/OrganizerLayout/index.tsx:124
+#: src/components/layouts/Event/index.tsx:155
+#: src/components/layouts/OrganizerLayout/index.tsx:126
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
 #: src/components/routes/organizer/Webhooks/index.tsx:30
@@ -17772,7 +18262,7 @@ msgstr "أحسنت! لديك معلومات عامة رائعة."
 msgid "Wellness"
 msgstr "العافية"
 
-#: src/components/forms/ProductForm/index.tsx:342
+#: src/components/forms/ProductForm/index.tsx:377
 msgid "What are Tiered Products?"
 msgstr "ما هي المنتجات متعددة المستويات؟"
 
@@ -17815,8 +18305,13 @@ msgid "What unauthenticated staff can see"
 msgstr "ما يمكن للموظفين غير الموثّقين رؤيته"
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:46
-msgid "What's happening at RAB"
-msgstr "ماذا يحدث في RAB"
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:397
+msgid "What's happening"
+msgstr "ماذا يحدث"
+
+#: src/components/layouts/OrganizerHomepage/index.tsx:46
+#~ msgid "What's happening at RAB"
+#~ msgstr "ماذا يحدث في RAB"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:89
 msgid "WhatsApp"
@@ -17951,7 +18446,7 @@ msgstr ""
 msgid "When we finally walked home, my grandmother asked if the lantern had looked like the sea. I told her it had looked even better — it had looked like the sea at night, full of its own small, floating moons."
 msgstr "عندما مشينا أخيرًا إلى المنزل، سألتني جدتي إن كان الفانوس يبدو كالبحر. أخبرتها أنه بدا أفضل من ذلك — بدا كالبحر ليلاً، مليئًا بأقماره الصغيرة العائمة الخاصة."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:101
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:120
 msgid "When you delete your data (see Section 8) we remove your name, email address, phone number, address and similar details from your orders, tickets and account, and delete any stories or puzzle accounts created for your children. We keep the financial record of each payment (order reference, amounts, taxes, fees, dates, event and payment processor references) without any personal details, because we are required to retain financial records for accounting, tax and audit purposes. We also keep a minimal log that the deletion took place, which contains only a one-way code derived from your email address and the references of the orders affected, not the email address itself."
 msgstr "عند حذف بياناتك (راجع القسم 8) نزيل اسمك وبريدك الإلكتروني ورقم هاتفك وعنوانك وما شابه من طلباتك وتذاكرك وحسابك، ونحذف أي قصص أو حسابات ألغاز أُنشئت لأطفالك. نحتفظ بالسجل المالي لكل دفعة (رقم الطلب والمبالغ والضرائب والرسوم والتواريخ والحدث ومراجع معالج الدفع) دون أي بيانات شخصية، لأننا ملزمون بالاحتفاظ بالسجلات المالية لأغراض المحاسبة والضرائب والتدقيق. كما نحتفظ بسجل مختصر يثبت حدوث الحذف، ولا يحتوي إلا على رمز أحادي الاتجاه مشتق من بريدك الإلكتروني ومراجع الطلبات المتأثرة، وليس البريد الإلكتروني نفسه."
 
@@ -17967,11 +18462,11 @@ msgstr ""
 msgid "Where the button links to"
 msgstr "إلى أين يرتبط الزر"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:134
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:153
 msgid "whether they would like it published, and whether they are under 16;"
 msgstr "ما إذا كانوا يرغبون في النشر، وما إذا كان عمرهم أقل من 16 سنة؛"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:64
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:57
 msgid "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
 msgstr "سواء أردت التطوع أو استكشاف فرص الرعاية أو طرح سؤال، اترك بياناتك أدناه وسنتواصل معك."
 
@@ -18003,7 +18498,7 @@ msgstr "من ينظم هذه الفعالية؟"
 msgid "Who should be asked this question?"
 msgstr "من يجب أن يُسأل هذا السؤال؟"
 
-#: src/components/layouts/Event/index.tsx:152
+#: src/components/layouts/Event/index.tsx:154
 msgid "Widget Embed"
 msgstr "تضمين الأداة"
 
@@ -18019,6 +18514,10 @@ msgstr "إعدادات الأداة"
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:97
 msgid "Width"
 msgstr ""
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:507
+msgid "Without the @. Leave blank to hide Instagram links"
+msgstr "بدون @. اتركه فارغًا لإخفاء روابط إنستغرام"
 
 #: src/components/layouts/PublicParentalConsent/index.tsx:96
 msgid "Without your permission they can still play and save their scores, but will not appear on the leaderboard."
@@ -18065,6 +18564,10 @@ msgstr "اكتب رسالتك هنا..."
 msgid "X (Twitter)"
 msgstr "X (تويتر)"
 
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:18
+msgid "XS – XXL"
+msgstr "XS – XXL"
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:91
 msgid "year"
 msgstr "سنة"
@@ -18101,7 +18604,7 @@ msgstr "نعم - لدي رقم تسجيل ضريبة قيمة مضافة صال�
 msgid "Yes, cancel my order"
 msgstr "نعم، ألغِ طلبي"
 
-#: src/components/forms/ProductForm/index.tsx:512
+#: src/components/forms/ProductForm/index.tsx:547
 msgid "Yes, remove them"
 msgstr "نعم، أزلهم"
 
@@ -18113,7 +18616,7 @@ msgstr "نعم، احفظ نتيجتي"
 msgid "Yoga class"
 msgstr "حصة يوغا"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:54
+#: src/components/routes/legal/TermsOfService/index.tsx:56
 msgid "You agree not to misuse this website, including attempting to interfere with its normal operation, submitting false information when registering for an event, or using the contact form to send spam or unlawful content."
 msgstr "أنت توافق على عدم إساءة استخدام هذا الموقع، بما في ذلك محاولة التدخل في تشغيله الطبيعي، أو تقديم معلومات خاطئة عند التسجيل لفعالية، أو استخدام نموذج التواصل لإرسال رسائل مزعجة أو محتوى غير قانوني."
 
@@ -18162,7 +18665,7 @@ msgstr "يمكنك تهيئة رسوم خدمة وضرائب إضافية في �
 msgid "You can control the optional categories at any time using the cookie settings link in the website footer."
 msgstr "يمكنك التحكم في الفئات الاختيارية في أي وقت باستخدام رابط إعدادات ملفات تعريف الارتباط في تذييل الموقع."
 
-#: src/components/forms/ProductForm/index.tsx:606
+#: src/components/forms/ProductForm/index.tsx:641
 msgid "You can create a promo code which targets this product on the"
 msgstr "يمكنك إنشاء رمز ترويجي يستهدف هذا المنتج في"
 
@@ -18178,7 +18681,7 @@ msgstr "لا يزال بإمكانك عرض التذاكر يدويًا إذا �
 msgid "You cannot archive the last active organizer on your account."
 msgstr "لا يمكنك أرشفة الجهة المنظمة النشطة الأخيرة في حسابك."
 
-#: src/components/forms/ProductForm/index.tsx:210
+#: src/components/forms/ProductForm/index.tsx:220
 msgid "You cannot change the product type as there are attendees associated with this product."
 msgstr "لا يمكنك تغيير نوع المنتج لأن هناك حاضرين مرتبطين بهذا المنتج."
 
@@ -18235,7 +18738,7 @@ msgstr "لقد بلغت حد الرسائل الخاص بك."
 msgid "You have run out of time to complete your order."
 msgstr "نفد الوقت لإتمام طلبك."
 
-#: src/components/forms/ProductForm/index.tsx:510
+#: src/components/forms/ProductForm/index.tsx:545
 msgid "You have taxes and fees added to a Free Product. Would you like to remove them?"
 msgstr "لديك ضرائب ورسوم مضافة إلى منتج مجاني. هل ترغب في إزالتها؟"
 
@@ -18244,7 +18747,7 @@ msgstr "لديك ضرائب ورسوم مضافة إلى منتج مجاني. ه
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "لديك تغييرات غير محفوظة. هل أنت متأكد من رغبتك في تجاهلها؟"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:134
 msgid "You may request access to or correction of your personal information by contacting us at <0>fos@aqualeo.co</0>. You can delete your personal information yourself at any time using the \"Delete my data\" option in My Tickets, which you can reach by signing in to your account or from the link in your ticket emails."
 msgstr "يمكنك طلب الاطلاع على معلوماتك الشخصية أو تصحيحها بمراسلتنا على <0>fos@aqualeo.co</0>. ويمكنك حذف معلوماتك الشخصية بنفسك في أي وقت عبر خيار \"حذف بياناتي\" في صفحة تذاكري، التي يمكنك الوصول إليها بتسجيل الدخول إلى حسابك أو من الرابط في رسائل التذاكر."
 
@@ -18272,7 +18775,11 @@ msgstr "يجب عليك إنشاء تذكرة قبل أن تتمكن من إضا
 msgid "You must have at least one price tier"
 msgstr "يجب أن يكون لديك مستوى سعر واحد على الأقل"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:307
+#: src/components/forms/ProductForm/ProductSizesForm.tsx:50
+msgid "You must have at least one size"
+msgstr "يجب أن يكون لديك مقاس واحد على الأقل"
+
+#: src/components/layouts/OrganizerLayout/index.tsx:309
 msgid "You must verify your email address before you can update the organizer status."
 msgstr "يجب عليك توثيق عنوان بريدك الإلكتروني قبل أن تتمكن من تحديث حالة الجهة المنظمة."
 
@@ -18400,8 +18907,8 @@ msgstr "سيُفقد طلبك الحالي."
 msgid "Your Details"
 msgstr "تفاصيلك"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:61
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:65
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:63
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:67
 msgid "Your email"
 msgstr "بريدك الإلكتروني"
 
@@ -18434,7 +18941,7 @@ msgstr "تم إرسال رسالتك"
 msgid "Your message has been sent successfully!"
 msgstr "تم إرسال رسالتك بنجاح!"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:40
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:42
 msgid "Your message has been sent. We'll be in touch soon!"
 msgstr "تم إرسال رسالتك. سنتواصل معك قريبًا!"
 
@@ -18442,8 +18949,8 @@ msgstr "تم إرسال رسالتك. سنتواصل معك قريبًا!"
 msgid "Your messages will appear here"
 msgstr "ستظهر رسائلك هنا"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:53
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:57
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:55
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:59
 #: src/ee/box-office/components/layouts/BoxOffice/StartSession.tsx:137
 msgid "Your name"
 msgstr "اسمك"
@@ -18452,7 +18959,7 @@ msgstr "اسمك"
 msgid "Your Name"
 msgstr "اسمك"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:31
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:32
 msgid "Your name, email address, and contact details when you register for an event or contact us."
 msgstr "اسمك وبريدك الإلكتروني وتفاصيل التواصل الخاصة بك عند التسجيل في فعالية أو التواصل معنا."
 
@@ -18484,7 +18991,7 @@ msgstr "تم تصدير طلباتك بنجاح."
 msgid "Your orders will appear here once they start rolling in."
 msgstr "ستظهر طلباتك هنا بمجرد أن تبدأ بالتدفق."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:310
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
 msgid "Your organization name"
 msgstr "اسم جهتك"
 

@@ -142,6 +142,9 @@ class CreateEventService
             'attributes' => $eventData->getAttributes(),
             'type' => $eventData->getType() ?? EventType::SINGLE->name,
             'recurrence_rule' => $eventData->getRecurrenceRule(),
+            'is_shop' => $eventData->getIsShop(),
+            'shop_category' => $eventData->getShopCategory(),
+            'vendor_type' => $eventData->getVendorType(),
         ]);
 
         if (($eventData->getType() ?? EventType::SINGLE->name) === EventType::SINGLE->name && $startDate !== null) {
@@ -221,7 +224,9 @@ class CreateEventService
 
         $organizerSettings = $organizer->getOrganizerSettings();
         $organizerThemeSettings = $organizerSettings->getHomepageThemeSettings() ?? [];
-        $terminology = ProductTerminology::forCategory($event->getCategory());
+        $terminology = $event->getIsShop()
+            ? ProductTerminology::SHOP
+            : ProductTerminology::forCategory($event->getCategory());
 
         $homepageThemeSettings = [
             'accent' => $organizerThemeSettings['accent'] ?? '#8b5cf6',
@@ -265,7 +270,7 @@ class CreateEventService
             'organization_address' => null,
             'invoice_tax_details' => null,
 
-            'attendee_details_collection_method' => $event->getType() === EventType::RECURRING->name
+            'attendee_details_collection_method' => $event->getIsShop() || $event->getType() === EventType::RECURRING->name
                 ? AttendeeDetailsCollectionMethod::PER_ORDER->value
                 : $organizerSettings->getDefaultAttendeeDetailsCollectionMethod(),
             'show_marketing_opt_in' => $organizerSettings->getDefaultShowMarketingOptIn(),

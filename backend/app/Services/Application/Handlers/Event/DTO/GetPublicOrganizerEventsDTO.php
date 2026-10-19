@@ -11,5 +11,6 @@ class GetPublicOrganizerEventsDTO extends BaseDTO
         public int $organizerId,
         public QueryParamsDTO $queryParams,
         public ?int $authenticatedAccountId = null,
+        public bool $isShop = false,
     ) {}
 }

@@ -47,6 +47,7 @@ class ProductPriceUpdateService
                 initial_quantity_available: $productsData->prices->first()->initial_quantity_available,
                 id: $existingPrices->first()->getId(),
                 quantity_applies_to: $productsData->prices->first()->quantity_applies_to,
+                compare_at_price: $productsData->type === ProductPriceType::FREE ? null : $productsData->prices->first()->compare_at_price,
             )]);
         } else {
             $prices = $productsData->prices;
@@ -60,6 +61,7 @@ class ProductPriceUpdateService
             $attributes = [
                 'product_id' => $product->getId(),
                 'price' => $price->price,
+                'compare_at_price' => $price->compare_at_price,
                 'label' => $price->label,
                 'sale_start_date' => $price->sale_start_date
                     ? DateHelper::convertToUTC($price->sale_start_date, $event->getTimezone())

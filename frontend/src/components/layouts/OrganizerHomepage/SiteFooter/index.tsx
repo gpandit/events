@@ -8,8 +8,10 @@ import {
     organizerEventsPath,
     organizerHomepagePath,
     organizerResourcesPath,
+    organizerShopPath,
 } from "../../../../utilites/urlHelper.ts";
 import {getConfig} from "../../../../utilites/config.ts";
+import {getOrganizerContactEmail, getOrganizerInstagramHandle} from "../../../../utilites/organizerContent.ts";
 import {PoweredByFooter} from "../../../common/PoweredByFooter";
 import {PaymentIcons} from "../../../common/PaymentIcons";
 import {CookieSettingsLink} from "../../../common/CookieSettingsLink";
@@ -84,7 +86,8 @@ const ContactForm: React.FC = () => {
 
 export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
     const year = new Date().getFullYear();
-    const instagramHandle = getConfig('VITE_INSTAGRAM_HANDLE', 'friendsofreptonab');
+    const instagramHandle = getOrganizerInstagramHandle(organizer);
+    const contactEmail = getOrganizerContactEmail(organizer);
 
     return (
         <footer className={classes.footer}>
@@ -117,12 +120,19 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <Link to={organizerEventsPath(organizer)} className={classes.footerNavLink}>
                             {t`Events`}
                         </Link>
+                        {organizer.has_live_shops && (
+                            <Link to={organizerShopPath(organizer)} className={classes.footerNavLink}>
+                                {t`Shop`}
+                            </Link>
+                        )}
                         <Link to={`${organizerHomepagePath(organizer)}/about`} className={classes.footerNavLink}>
                             {t`About Us`}
                         </Link>
-                        <Link to={`${organizerHomepagePath(organizer)}/instagram`} className={classes.footerNavLink}>
-                            <IconBrandInstagram size={14}/> {t`Instagram`}
-                        </Link>
+                        {instagramHandle && (
+                            <Link to={`${organizerHomepagePath(organizer)}/instagram`} className={classes.footerNavLink}>
+                                <IconBrandInstagram size={14}/> {t`Instagram`}
+                            </Link>
+                        )}
                         <Link to={`${organizerHomepagePath(organizer)}/stories`} className={classes.footerNavLink}>
                             <IconBook2 size={14}/> {t`Children's Stories`}
                         </Link>
@@ -145,6 +155,12 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <a href={getConfig('VITE_TOS_URL', '/terms-of-service')} className={classes.footerNavLink}>
                             {t`Terms of Service`}
                         </a>
+                        <a href="/refund-policy" className={classes.footerNavLink}>
+                            {t`Refund and Cancellation Policy`}
+                        </a>
+                        <a href="/delivery-policy" className={classes.footerNavLink}>
+                            {t`Delivery Policy`}
+                        </a>
                         <a href="/cookie-policy" className={classes.footerNavLink}>
                             {t`Cookie Policy`}
                         </a>
@@ -155,8 +171,8 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <h3 className={classes.columnTitle}>
                             <IconMail size={16}/> {t`Contact Us`}
                         </h3>
-                        <a href="mailto:friendsofreptonalbarsha@gmail.com" className={classes.footerNavLink}>
-                            friendsofreptonalbarsha@gmail.com
+                        <a href={`mailto:${contactEmail}`} className={classes.footerNavLink}>
+                            {contactEmail}
                         </a>
                         <ContactForm/>
                     </div>
@@ -164,12 +180,12 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
 
                 <div className={classes.bottomBar}>
                     <p className={classes.copyright}>
-                        © {year} Aqualeo Digecom FZ LLC. {t`All rights reserved.`}
+                        © {year} Aqualeo Digecom FZ-LLC. {t`All rights reserved.`}
                     </p>
                     <PoweredByFooter className={classes.poweredBy}/>
                 </div>
 
-                <p className={classes.instagramHint}>@{instagramHandle}</p>
+                {instagramHandle && <p className={classes.instagramHint}>@{instagramHandle}</p>}
             </div>
         </footer>
     );

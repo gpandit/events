@@ -8,7 +8,7 @@ export const CookiePolicy = () => {
         <LegalPageLayout title={t`Cookie Policy`} updatedDate={UPDATED_DATE}>
             <p>
                 <Trans>
-                    This Cookie Policy explains how Aqualeo Digecom FZ LLC ("Aqualeo Digecom", "we", "us", or "our"),
+                    This Cookie Policy explains how Aqualeo Digecom FZ-LLC ("Aqualeo Digecom", "we", "us", or "our"),
                     the operator of the Friends of School platform and this website, uses cookies and similar
                     technologies, and the choices you have about them.
                 </Trans>

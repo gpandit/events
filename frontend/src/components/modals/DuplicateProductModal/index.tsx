@@ -46,6 +46,8 @@ export const DuplicateProductModal = ({onClose, originalProductId}: DuplicatePro
             addon_product_ids: [],
             is_addon_only: false,
             product_category_id: undefined,
+            images: [],
+            pending_images: [],
             prices: [{
                 price: 0,
                 label: undefined,
@@ -88,6 +90,7 @@ export const DuplicateProductModal = ({onClose, originalProductId}: DuplicatePro
             price: originalProduct.type === ProductPriceType.Free ? 0.00 : undefined,
             prices: originalProduct.prices?.map(price => ({
                 price: price.price,
+                compare_at_price: price.compare_at_price ?? undefined,
                 label: price.label,
                 sale_start_date: price.sale_start_date,
                 sale_end_date: price.sale_end_date,
