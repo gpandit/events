@@ -223,6 +223,14 @@ export function validateThemeSettings(
         hero_subheading: settings.hero_subheading || undefined,
         hero_cta_text: settings.hero_cta_text || undefined,
         hero_cta_url: settings.hero_cta_url || undefined,
+        upcoming_heading: settings.upcoming_heading || undefined,
+        about_text: settings.about_text || undefined,
+        team_heading: settings.team_heading || undefined,
+        team_members: settings.team_members?.map((name) => name.trim()).filter(Boolean),
+        contact_heading: settings.contact_heading || undefined,
+        contact_intro: settings.contact_intro || undefined,
+        contact_email: settings.contact_email || undefined,
+        instagram_handle: settings.instagram_handle || undefined,
     };
 }
 

@@ -20,9 +20,15 @@ class PurgeOrdersCommand extends Command
         'order_payment_platform_fees',
         'stripe_payments',
         'messages',
+        'seat_claims',
         'order_items',
         'attendees',
         'orders',
+    ];
+
+    private const TABLES_WITH_ROWS_NOT_TIED_TO_ORDERS = [
+        'messages',
+        'seat_claims',
     ];
 
     private const TABLES_ALLOWED_TO_HAVE_ORDER_ID_WITHOUT_BEING_PURGED = [
@@ -108,7 +114,7 @@ class PurgeOrdersCommand extends Command
     {
         return array_map(
             fn (string $table) => [$table, DB::table($table)->when(
-                $table === 'messages',
+                in_array($table, self::TABLES_WITH_ROWS_NOT_TIED_TO_ORDERS, true),
                 fn ($query) => $query->whereNotNull('order_id')
             )->count()],
             self::ORDER_TABLES_CHILDREN_FIRST,
@@ -120,7 +126,7 @@ class PurgeOrdersCommand extends Command
         foreach (self::ORDER_TABLES_CHILDREN_FIRST as $table) {
             $query = DB::table($table);
 
-            if ($table === 'messages') {
+            if (in_array($table, self::TABLES_WITH_ROWS_NOT_TIED_TO_ORDERS, true)) {
                 $query->whereNotNull('order_id');
             }
 

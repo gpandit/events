@@ -26,6 +26,20 @@ class OrganizerDomainObject extends Generated\OrganizerDomainObjectAbstract
 
     private ?LocationDomainObject $locationRecord = null;
 
+    private ?bool $hasLiveShops = null;
+
+    public function getHasLiveShops(): ?bool
+    {
+        return $this->hasLiveShops;
+    }
+
+    public function setHasLiveShops(?bool $hasLiveShops): self
+    {
+        $this->hasLiveShops = $hasLiveShops;
+
+        return $this;
+    }
+
     public function getImages(): ?Collection
     {
         return $this->images;

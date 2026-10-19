@@ -13,6 +13,7 @@ import {
     IconMailForward,
     IconPaint,
     IconQrcode,
+    IconPackage,
     IconReceipt,
     IconSend,
     IconSettings,
@@ -122,21 +123,22 @@ const EventLayout = () => {
         },
         {link: 'settings', label: t`Event Settings`, icon: IconSettings},
         {link: 'homepage-designer', label: t`Homepage Designer`, icon: IconPaint},
-        {link: 'ticket-designer', label: t`Ticket Designer`, icon: IconTicket},
+        {link: 'ticket-designer', label: t`Ticket Designer`, icon: IconTicket, showWhen: () => !event?.is_shop},
         {link: 'seating', label: t`Seating`, icon: IconArmchair, showWhen: () => seating.isEnabled || !!event?.has_seat_map},
         {link: 'questions', label: t`Registration Questions`, icon: IconUserQuestion},
 
         // 3. Ticketing & Sales
         {label: t`Ticketing & Sales`},
-        {link: 'products', label: t`Tickets & Products`, icon: IconTicket},
+        {link: 'products', label: event?.is_shop ? t`Products` : t`Tickets & Products`, icon: IconTicket},
         {link: 'orders', label: t`Orders`, icon: IconReceipt, badge: eventCounts?.total_orders},
+        {link: 'collection', label: t`Collection`, icon: IconPackage, showWhen: () => !!event?.is_shop},
         {link: 'promo-codes', label: t`Promo Codes`, icon: IconDiscount2},
         {link: 'affiliates', label: t`Affiliates`, icon: IconTrendingUp},
 
         // 4. GUESTS
         {label: t`Guest Management`},
         {link: 'attendees', label: t`Attendees`, icon: IconUsers, badge: eventCounts?.total_attendees_registered},
-        {link: 'check-in', label: t`Check-In Lists`, icon: IconQrcode},
+        {link: 'check-in', label: t`Check-In Lists`, icon: IconQrcode, showWhen: () => !event?.is_shop},
         {link: 'box-office', label: t`Box Office`, icon: IconCashRegister, showWhen: () => boxOffice.isVisible},
         {link: 'messages', label: t`Messages`, icon: IconSend},
         {link: 'sold-out-waitlist', label: t`Waitlist`, icon: IconListCheck},

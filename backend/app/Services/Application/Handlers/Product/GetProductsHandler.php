@@ -3,6 +3,7 @@
 namespace HiEvents\Services\Application\Handlers\Product;
 
 use HiEvents\DomainObjects\ProductDomainObject;
+use HiEvents\DomainObjects\ImageDomainObject;
 use HiEvents\DomainObjects\ProductPriceDomainObject;
 use HiEvents\DomainObjects\TaxAndFeesDomainObject;
 use HiEvents\Repository\Eloquent\Value\Relationship;
@@ -22,6 +23,7 @@ class GetProductsHandler
     {
         $productPaginator = $this->productRepository
             ->loadRelation(ProductPriceDomainObject::class)
+            ->loadRelation(ImageDomainObject::class)
             ->loadRelation(TaxAndFeesDomainObject::class)
             ->loadRelation(new Relationship(domainObject: ProductDomainObject::class, name: 'addons'))
             ->findByEventId($eventId, $queryParamsDTO);

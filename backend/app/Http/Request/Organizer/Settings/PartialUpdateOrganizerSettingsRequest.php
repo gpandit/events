@@ -112,6 +112,17 @@ class PartialUpdateOrganizerSettingsRequest extends BaseRequest
             'homepage_theme_settings.hero_cta_text' => ['nullable', 'string', 'max:50'],
             'homepage_theme_settings.hero_cta_url' => ['nullable', 'string', 'max:2048'],
 
+            // Homepage, about and contact page content
+            'homepage_theme_settings.upcoming_heading' => ['nullable', 'string', 'max:100'],
+            'homepage_theme_settings.about_text' => ['nullable', 'string', 'max:2000'],
+            'homepage_theme_settings.team_heading' => ['nullable', 'string', 'max:100'],
+            'homepage_theme_settings.team_members' => ['nullable', 'array', 'max:12'],
+            'homepage_theme_settings.team_members.*' => ['nullable', 'string', 'max:100'],
+            'homepage_theme_settings.contact_heading' => ['nullable', 'string', 'max:100'],
+            'homepage_theme_settings.contact_intro' => ['nullable', 'string', 'max:300'],
+            'homepage_theme_settings.contact_email' => ['nullable', 'email', 'max:255'],
+            'homepage_theme_settings.instagram_handle' => ['nullable', 'string', 'regex:/^[A-Za-z0-9._]{1,30}$/'],
+
             // SEO
             'seo_keywords' => ['sometimes', 'nullable', 'string', 'max:255'],
             'seo_title' => ['sometimes', 'nullable', 'string', 'max:255'],

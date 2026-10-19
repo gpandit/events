@@ -31,6 +31,7 @@ export const clientBuildEnv: { [K in ConfigKeys]: string } = {
     'VITE_DEFAULT_ORGANIZER_ID': import.meta.env.VITE_DEFAULT_ORGANIZER_ID,
     'VITE_INSTAGRAM_HANDLE': import.meta.env.VITE_INSTAGRAM_HANDLE,
     'VITE_INSTAGRAM_EMBED_URL': import.meta.env.VITE_INSTAGRAM_EMBED_URL,
+    'VITE_DEFAULT_SHARE_IMAGE_PATH': import.meta.env.VITE_DEFAULT_SHARE_IMAGE_PATH,
 }
 
 export const getConfig = (key: ConfigKeys, fallback?: string): string | undefined => {

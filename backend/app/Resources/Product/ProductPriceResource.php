@@ -17,6 +17,7 @@ class ProductPriceResource extends BaseResource
             'id' => $this->getId(),
             'label' => $this->getLabel(),
             'price' => $this->getPrice(),
+            'compare_at_price' => $this->getCompareAtPrice(),
             'sale_start_date' => $this->getSaleStartDate(),
             'sale_end_date' => $this->getSaleEndDate(),
             'is_before_sale_start_date' => $this->isBeforeSaleStartDate(),

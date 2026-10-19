@@ -18,5 +18,6 @@ class ProductPriceDTO extends BaseDTO
         public readonly ?int $id = null,
         public readonly ProductStatus $status = ProductStatus::ACTIVE,
         public readonly ?ProductQuantityAppliesTo $quantity_applies_to = null,
+        public readonly ?float $compare_at_price = null,
     ) {}
 }

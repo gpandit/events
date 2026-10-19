@@ -30,6 +30,10 @@ export const organizerPuzzlesPath = (organizer: Organizer) => {
     return `${organizerHomepagePath(organizer)}/puzzles`;
 }
 
+export const organizerShopPath = (organizer: Organizer) => {
+    return `${organizerHomepagePath(organizer)}/shop`;
+}
+
 export const organizerEventsPath = (organizer: Organizer) => {
     return `${organizerHomepagePath(organizer)}/events`;
 }
@@ -66,10 +70,13 @@ export const imageUrl = (imageType: ImageType, images?: Image[], fallbackUrl?: s
     return fallbackUrl || getConfig('VITE_DEFAULT_IMAGE_URL');
 }
 
-export const organizerPreviewPath = (organizerId: IdParam) => {
-    return `/organizer/${organizerId}/preview`;
+export type OrganizerPreviewPage = 'home' | 'about';
+
+export const organizerPreviewPath = (organizerId: IdParam, page: OrganizerPreviewPage = 'home') => {
+    const base = `/organizer/${organizerId}/preview`;
+    return page === 'about' ? `${base}/about` : base;
 }
 
 export const defaultShareImageUrl = () => {
-    return getConfig('VITE_FRONTEND_URL', '') + '/logos/friends-of-repton-logo.png';
+    return getConfig('VITE_FRONTEND_URL', '') + (getConfig('VITE_DEFAULT_SHARE_IMAGE_PATH') || '/logos/friends-of-repton-logo.png');
 }

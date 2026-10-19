@@ -60,7 +60,8 @@ class GetPublicEventsHandler
             return $query->findEventsForOrganizer(
                 organizerId: $dto->organizerId,
                 accountId: $dto->authenticatedAccountId,
-                params: $dto->queryParams
+                params: $dto->queryParams,
+                isShop: $dto->isShop,
             );
         }
 
@@ -68,6 +69,7 @@ class GetPublicEventsHandler
             where: [
                 'organizer_id' => $dto->organizerId,
                 'status' => EventStatus::LIVE->name,
+                'is_shop' => $dto->isShop,
             ],
             params: $dto->queryParams
         );

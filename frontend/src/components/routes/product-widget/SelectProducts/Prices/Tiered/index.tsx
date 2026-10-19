@@ -22,6 +22,16 @@ interface TieredPricingProps {
     showStepper?: boolean;
 }
 
+const getStrikePrice = (price: ProductPrice): number | undefined => {
+    if (price.is_discounted && price.price_before_discount) {
+        return price.price_before_discount;
+    }
+
+    return price.compare_at_price && Number(price.compare_at_price) > Number(price.price)
+        ? Number(price.compare_at_price)
+        : undefined;
+};
+
 const getFeesAndTaxTotal = (price: ProductPrice): number => (price.tax_total || 0) + (price.fee_total || 0);
 
 const getAvailabilityReason = (product: Product, price: ProductPrice): string => {
@@ -158,10 +168,10 @@ export const TieredPricing = ({
                                 taxAndServiceFeeDisplayType={priceDisplayMode}
                                 feeDisplay={'none'}
                             />
-                            {price.is_discounted && (
+                            {getStrikePrice(price) !== undefined && (
                                 <div className={'hi-price-strike'}>
                                     <Currency
-                                        price={price.price_before_discount}
+                                        price={getStrikePrice(price)}
                                         currency={event?.currency}
                                         className={'hi-price-tier-price-amount'}
                                     />
@@ -246,10 +256,10 @@ export const TieredPricing = ({
                             />
                         )}
 
-                        {price.is_discounted && (
+                        {getStrikePrice(price) !== undefined && (
                             <div className={'hi-price-strike'}>
                                 <Currency
-                                    price={price.price_before_discount}
+                                    price={getStrikePrice(price)}
                                     currency={event?.currency}
                                     className={'hi-price-tier-price-amount'}
                                 />

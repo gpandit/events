@@ -45,6 +45,7 @@ class OrderDomainObject extends Generated\OrderDomainObjectAbstract implements I
             self::STATUS,
             self::PAYMENT_STATUS,
             self::REFUND_STATUS,
+            self::COLLECTION_STATUS,
             self::CREATED_AT,
             self::FIRST_NAME,
             self::LAST_NAME,

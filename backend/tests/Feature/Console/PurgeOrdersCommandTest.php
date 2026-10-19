@@ -29,8 +29,10 @@ class PurgeOrdersCommandTest extends TestCase
         $this->occurrenceId = $this->insertOccurrence();
         $this->productId = $this->insertProduct();
         $this->priceId = $this->insertPrice($this->productId, initialQuantity: 10);
-        $this->sellTickets($this->productId, $this->priceId, $this->occurrenceId, 2);
+        $soldOrderId = $this->sellTickets($this->productId, $this->priceId, $this->occurrenceId, 2);
         $this->sellTickets($this->productId, $this->priceId, $this->occurrenceId, 1);
+        $this->insertSeatClaim('A1', $soldOrderId);
+        $this->insertSeatClaim('A2', null);
         DB::table('product_prices')->where('id', $this->priceId)->update(['quantity_sold' => 3]);
         DB::table('products')->where('id', $this->productId)->update(['sales_volume' => 90]);
     }
@@ -62,7 +64,23 @@ class PurgeOrdersCommandTest extends TestCase
         $this->assertSame(0, DB::table('attendees')->count());
         $this->assertSame(0, (int) DB::table('product_prices')->where('id', $this->priceId)->value('quantity_sold'));
         $this->assertEquals(0, DB::table('products')->where('id', $this->productId)->value('sales_volume'));
+        $this->assertSame(0, DB::table('seat_claims')->whereNotNull('order_id')->count());
+        $this->assertSame(1, DB::table('seat_claims')->whereNull('order_id')->count());
         $this->assertSame(1, DB::table('products')->where('id', $this->productId)->count());
         $this->assertSame(1, DB::table('events')->where('id', $this->eventId)->count());
+    }
+
+    private function insertSeatClaim(string $seatUid, ?int $orderId): void
+    {
+        DB::table('seat_claims')->insert([
+            'event_id' => $this->eventId,
+            'event_occurrence_id' => $this->occurrenceId,
+            'seat_uid' => $seatUid,
+            'band_key' => 'band',
+            'seat_label' => $seatUid,
+            'order_id' => $orderId,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }

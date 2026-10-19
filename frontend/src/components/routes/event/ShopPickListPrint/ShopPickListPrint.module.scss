@@ -1,0 +1,21 @@
+.container {
+  padding: 24px;
+  color: #111;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.title {
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  opacity: 0.7;
+}
+
+@media print {
+  .container {
+    padding: 0;
+  }
+}
