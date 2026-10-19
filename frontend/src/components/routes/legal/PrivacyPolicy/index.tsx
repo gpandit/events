@@ -1,14 +1,14 @@
 import {t, Trans} from "@lingui/macro";
 import {LegalPageLayout} from "../../../common/LegalPageLayout";
 
-const UPDATED_DATE = "October 5, 2026";
+const UPDATED_DATE = "October 19, 2026";
 
 export const PrivacyPolicy = () => {
     return (
         <LegalPageLayout title={t`Privacy Policy`} updatedDate={UPDATED_DATE}>
             <p>
                 <Trans>
-                    This Privacy Policy explains how Aqualeo Digecom FZ LLC ("Aqualeo Digecom", "we", "us", or
+                    This Privacy Policy explains how Aqualeo Digecom FZ-LLC ("Aqualeo Digecom", "we", "us", or
                     "our"), the operator of the Friends of School platform and this website, collects, uses, and
                     protects your personal information when you visit this site, register for an event, or
                     otherwise interact with us.
@@ -18,9 +18,10 @@ export const PrivacyPolicy = () => {
             <h2><Trans>1. Who we are</Trans></h2>
             <p>
                 <Trans>
-                    This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy
-                    or how your data is handled, you can reach us at{" "}
-                    <a href="mailto:fos@aqualeo.co">fos@aqualeo.co</a>.
+                    This website is operated by Aqualeo Digecom FZ-LLC, a free zone limited liability company
+                    registered at CWEP4303, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al
+                    Khaimah, United Arab Emirates. If you have any questions about this policy or how your data is
+                    handled, you can reach us at <a href="mailto:fos@aqualeo.co">fos@aqualeo.co</a>.
                 </Trans>
             </p>
 
@@ -59,6 +60,15 @@ export const PrivacyPolicy = () => {
                 <li><Trans>To respond to enquiries submitted through our contact form.</Trans></li>
                 <li><Trans>To improve and secure our website and services.</Trans></li>
             </ul>
+            <p>
+                <Trans>
+                    We handle personal data in line with the UAE Federal Decree-Law No. 45 of 2021 on the Protection
+                    of Personal Data and, where it applies to you, the EU General Data Protection Regulation. We
+                    process your data to perform our contract with you (for example, delivering tickets), to meet
+                    our legal obligations, for our legitimate interests in running and securing the site, and,
+                    where required, with your consent.
+                </Trans>
+            </p>
 
             <h2><Trans>4. Payment processing</Trans></h2>
             <p>
@@ -68,7 +78,9 @@ export const PrivacyPolicy = () => {
                     <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">
                         Stripe's Privacy Policy
                     </a>{" "}
-                    for details on how Stripe handles your payment information.
+                    for details on how Stripe handles your payment information. Our{" "}
+                    <a href="/refund-policy">Refund and Cancellation Policy</a> and{" "}
+                    <a href="/delivery-policy">Delivery Policy</a> explain how refunds and ticket delivery work.
                 </Trans>
             </p>
 
@@ -87,6 +99,13 @@ export const PrivacyPolicy = () => {
                     We do not sell your personal information. We share information only with service providers who
                     help us operate the site (such as our payment processor and email delivery provider), or where
                     required by law.
+                </Trans>
+            </p>
+            <p>
+                <Trans>
+                    Some of these service providers process data outside the United Arab Emirates. Where this
+                    happens we take steps to make sure your information remains protected, including contractual
+                    safeguards with those providers.
                 </Trans>
             </p>
 
@@ -171,7 +190,7 @@ export const PrivacyPolicy = () => {
             <h2><Trans>10. Contact us</Trans></h2>
             <p>
                 <Trans>
-                    If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at{" "}
+                    If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ-LLC at{" "}
                     <a href="mailto:fos@aqualeo.co">fos@aqualeo.co</a>.
                 </Trans>
             </p>
