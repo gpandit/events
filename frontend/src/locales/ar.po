@@ -473,7 +473,7 @@ msgstr "<0>https://</0>موقعك.com"
 msgid "<0>Please enter the price excluding taxes and fees.</0><1>Taxes and fees can be added below.</1>"
 msgstr "<0>يرجى إدخال السعر باستثناء الضرائب والرسوم.</0><1>يمكن إضافة الضرائب والرسوم أدناه.</1>"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:148
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:167
 msgid "<0>Puzzles.</0> To save scores a child creates a puzzles account, for which we collect:"
 msgstr "<0>الألغاز.</0> لحفظ النتائج ينشئ الطفل حسابًا للألغاز، ونجمع فيه:"
 
@@ -481,7 +481,7 @@ msgstr "<0>الألغاز.</0> لحفظ النتائج ينشئ الطفل حس�
 msgid "<0>Set a single total attendance limit that applies to multiple ticket types at once.</0><1>For example, if you link a <2>Day Pass</2> and a <3>Full Weekend</3> ticket, they will both draw from the same pool of spots. Once the limit is reached, all linked tickets automatically stop selling.</1>"
 msgstr "<0>عيّن حدًا إجماليًا واحدًا للحضور ينطبق على عدة أنواع تذاكر في آن واحد.</0><1>على سبيل المثال، إذا ربطت تذكرة <2>يوم واحد</2> وتذكرة <3>عطلة نهاية الأسبوع الكاملة</3>، فستعتمد كلتاهما على نفس مجموعة المقاعد. وبمجرد بلوغ الحد، تتوقف جميع التذاكر المرتبطة تلقائيًا عن البيع.</1>"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:131
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:150
 msgid "<0>Stories and poems.</0> When a child submits a story or poem we collect:"
 msgstr "<0>القصص والقصائد.</0> عندما يقدّم الطفل قصة أو قصيدة نجمع:"
 
@@ -582,6 +582,14 @@ msgstr ""
 msgid "1 week before event"
 msgstr "أسبوع واحد قبل الفعالية"
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:16
+msgid "1. Delivery method"
+msgstr "1. طريقة التسليم"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:16
+msgid "1. General rule"
+msgstr "1. القاعدة العامة"
+
 #: src/components/routes/legal/CookiePolicy/index.tsx:17
 msgid "1. What cookies are"
 msgstr "1. ما هي ملفات تعريف الارتباط"
@@ -591,12 +599,13 @@ msgstr "1. ما هي ملفات تعريف الارتباط"
 msgid "1. Who we are"
 msgstr "1. من نحن"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:171
-#: src/components/routes/legal/TermsOfService/index.tsx:117
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:190
+#: src/components/routes/legal/RefundPolicy/index.tsx:93
+#: src/components/routes/legal/TermsOfService/index.tsx:119
 msgid "10. Contact us"
 msgstr "10. اتصل بنا"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:179
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:198
 msgid "11. Changes to this policy"
 msgstr "11. التغييرات على هذه السياسة"
 
@@ -613,11 +622,19 @@ msgstr "123 شارع نموذجي"
 msgid "135+ currencies & 40+ payment methods"
 msgstr "أكثر من 135 عملة و40 طريقة دفع"
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:26
+msgid "2. Delivery timeframe"
+msgstr "2. مدة التسليم"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:25
+msgid "2. Event cancelled by the organizer"
+msgstr "2. إلغاء الفعالية من قبل المنظم"
+
 #: src/components/routes/legal/TermsOfService/index.tsx:25
 msgid "2. Event registrations and tickets"
 msgstr "2. تسجيلات الفعاليات والتذاكر"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:27
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
 msgid "2. Information we collect"
 msgstr "2. المعلومات التي نجمعها"
 
@@ -633,11 +650,19 @@ msgstr "20"
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 مكانًا لكل تاريخ، بالإضافة إلى 30 قميصًا عبر الفترة بأكملها."
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:35
+msgid "3. Delivery and shipping costs"
+msgstr "3. تكاليف التسليم والشحن"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:34
+msgid "3. Event postponed or rescheduled"
+msgstr "3. تأجيل الفعالية أو إعادة جدولتها"
+
 #: src/components/routes/legal/CookiePolicy/index.tsx:49
 msgid "3. Google Analytics"
 msgstr "3. Google Analytics"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:55
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:56
 msgid "3. How we use your information"
 msgstr "3. كيف نستخدم معلوماتك"
 
@@ -645,11 +670,19 @@ msgstr "3. كيف نستخدم معلوماتك"
 msgid "3. Payments"
 msgstr "3. المدفوعات"
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:43
+msgid "4. Event materially changed"
+msgstr "4. تغيير جوهري في الفعالية"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:43
+msgid "4. If you have not received your tickets"
+msgstr "4. في حال لم تستلم تذاكرك"
+
 #: src/components/routes/legal/CookiePolicy/index.tsx:67
 msgid "4. Managing your preferences"
 msgstr "4. إدارة تفضيلاتك"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:63
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:73
 msgid "4. Payment processing"
 msgstr "4. معالجة المدفوعات"
 
@@ -657,7 +690,7 @@ msgstr "4. معالجة المدفوعات"
 msgid "4. Refunds and cancellations"
 msgstr "4. الاسترداد والإلغاء"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:52
+#: src/components/routes/legal/TermsOfService/index.tsx:54
 msgid "5. Acceptable use"
 msgstr "5. الاستخدام المقبول"
 
@@ -665,9 +698,17 @@ msgstr "5. الاستخدام المقبول"
 msgid "5. Browser controls"
 msgstr "5. ضوابط المتصفح"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:75
+#: src/components/routes/legal/RefundPolicy/index.tsx:51
+msgid "5. Cancellation by you"
+msgstr "5. الإلغاء من قبلك"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:87
 msgid "5. Cookies"
 msgstr "5. ملفات تعريف الارتباط"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:54
+msgid "5. Event access"
+msgstr "5. الدخول إلى الفعالية"
 
 #: src/components/common/ErrorDisplay/index.tsx:61
 #: src/components/routes/product-widget/Payment/PaymentMethods/Stripe/index.tsx:68
@@ -678,15 +719,23 @@ msgstr "خطأ 500."
 msgid "503 Service Unavailable."
 msgstr "503 الخدمة غير متاحة."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:61
+#: src/components/routes/legal/TermsOfService/index.tsx:63
 msgid "6. Children's stories, poems and puzzles"
 msgstr "6. قصص الأطفال وقصائدهم وألغازهم"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:62
+msgid "6. Contact us"
+msgstr "6. اتصل بنا"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:60
+msgid "6. Duplicate or incorrect charges"
+msgstr "6. الرسوم المكررة أو غير الصحيحة"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:84
 msgid "6. More information"
 msgstr "6. مزيد من المعلومات"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:84
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:96
 msgid "6. Sharing your information"
 msgstr "6. مشاركة معلوماتك"
 
@@ -694,29 +743,41 @@ msgstr "6. مشاركة معلوماتك"
 msgid "7. Changes to this policy"
 msgstr "7. التغييرات على هذه السياسة"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:93
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:112
 msgid "7. Data retention"
 msgstr "7. الاحتفاظ بالبيانات"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:91
+#: src/components/routes/legal/RefundPolicy/index.tsx:68
+msgid "7. How to request a refund"
+msgstr "7. كيفية طلب استرداد المبلغ"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:93
 msgid "7. Intellectual property"
 msgstr "7. الملكية الفكرية"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:100
+#: src/components/routes/legal/TermsOfService/index.tsx:102
 msgid "8. Limitation of liability"
 msgstr "8. حدود المسؤولية"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:113
+#: src/components/routes/legal/RefundPolicy/index.tsx:76
+msgid "8. Refund method and timing"
+msgstr "8. طريقة الاسترداد وموعده"
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:132
 msgid "8. Your rights"
 msgstr "8. حقوقك"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:109
+#: src/components/routes/legal/TermsOfService/index.tsx:111
 msgid "9. Changes to these Terms"
 msgstr "9. التغييرات على هذه الشروط"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:123
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:142
 msgid "9. Children's privacy"
 msgstr "9. خصوصية الأطفال"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:84
+msgid "9. Please contact us first"
+msgstr "9. يرجى التواصل معنا أولاً"
 
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:297
 msgid "A box office lets staff sell tickets at the door with cash, comps, or a card reader. Share the link with your team, no account needed."
@@ -790,7 +851,7 @@ msgstr "نسبة مئوية من سعر المنتج. مثال: 3.5% من سعر
 msgid "A promo code with no discount can be used to reveal hidden products."
 msgstr "يمكن استخدام رمز ترويجي بدون خصم للكشف عن منتجات مخفية."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:82
+#: src/components/routes/legal/TermsOfService/index.tsx:84
 msgid "A puzzles account is for the child it is created for. Only an automatically generated username appears on the leaderboard. You must provide accurate details, keep your password private and not attempt to cheat, tamper with scores or misuse usernames. We may remove accounts or scores that break these rules. See our <0>Privacy Policy</0> for how children's information is handled."
 msgstr "حساب الألغاز مخصص للطفل الذي أُنشئ له. يظهر على لوحة المتصدرين اسم مستخدم مُنشأ تلقائياً فقط. يجب عليك تقديم بيانات صحيحة، والحفاظ على سرية كلمة المرور، وعدم محاولة الغش أو التلاعب بالنتائج أو إساءة استخدام أسماء المستخدمين. وقد نحذف الحسابات أو النتائج التي تخالف هذه القواعد. اطّلع على <0>سياسة الخصوصية</0> لمعرفة كيفية التعامل مع معلومات الأطفال."
 
@@ -1605,6 +1666,10 @@ msgstr "جميع الحقوق محفوظة."
 msgid "All Statuses"
 msgstr "جميع الحالات"
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:18
+msgid "All tickets are digital and we do not ship any physical goods. After your payment is confirmed, your tickets and order confirmation are emailed to the address you entered at checkout. Each ticket carries a unique QR code that you can show on your phone or print. You can also open your tickets at any time from the link in your confirmation email or from My Tickets."
+msgstr "جميع التذاكر رقمية ولا نقوم بشحن أي بضائع مادية. بعد تأكيد الدفع، يتم إرسال تذاكرك وتأكيد الطلب إلى عنوان البريد الإلكتروني الذي أدخلته عند الدفع. تحمل كل تذكرة رمز QR فريداً يمكنك عرضه على هاتفك أو طباعته. يمكنك أيضاً فتح تذاكرك في أي وقت من الرابط الموجود في رسالة التأكيد أو من صفحة تذاكري."
+
 #: src/components/routes/admin/Attribution/index.tsx:81
 #: src/ee/box-office/components/modals/BoxOfficeStatsModal/index.tsx:76
 msgid "All time"
@@ -1834,7 +1899,7 @@ msgstr ""
 msgid "Any dates you've manually customized will be kept."
 msgstr "سيتم الاحتفاظ بأي تواريخ قمت بتخصيصها يدويًا."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:39
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:40
 msgid "Any messages or information you submit through our contact forms."
 msgstr "أي رسائل أو معلومات ترسلها عبر نماذج الاتصال الخاصة بنا."
 
@@ -1948,6 +2013,11 @@ msgstr "تمت الموافقة"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:69
 msgid "April"
 msgstr "أبريل"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:64
+#: src/components/routes/legal/RefundPolicy/index.tsx:95
+msgid "Aqualeo Digecom FZ-LLC, CWEP4303, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates. Email: <0>fos@aqualeo.co</0>."
+msgstr "Aqualeo Digecom FZ-LLC، CWEP4303، مبنى كومباس، شارع الشهداء، المنطقة الصناعية الحمراء-FZ، رأس الخيمة، الإمارات العربية المتحدة. البريد الإلكتروني: <0>fos@aqualeo.co</0>."
 
 #: src/components/common/LanguageSwitcher/index.tsx:16
 msgid "Arabic"
@@ -2669,6 +2739,10 @@ msgstr "بناءً على فترة البيع العامة أعلاه، وليس
 msgid "Basic Information"
 msgstr "المعلومات الأساسية"
 
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:37
+msgid "Because delivery is electronic, there are no shipping or delivery charges. The total shown at checkout includes any applicable taxes and booking fees."
+msgstr "نظراً لأن التسليم إلكتروني، لا توجد رسوم شحن أو توصيل. يشمل الإجمالي المعروض عند الدفع أي ضرائب ورسوم حجز مطبقة."
+
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:126
 msgid "Because this account has completed orders, transaction records (amounts, dates, and invoice details) will be retained in an anonymized form for legal and tax purposes. All personal information will be permanently removed."
 msgstr "نظرًا لأن هذا الحساب أكمل طلبات، ستُحفظ سجلات المعاملات (المبالغ والتواريخ وتفاصيل الفواتير) بصيغة مجهّلة الهوية لأغراض قانونية وضريبية. ستتم إزالة جميع المعلومات الشخصية نهائيًا."
@@ -2702,7 +2776,7 @@ msgstr ""
 msgid "Billing Address"
 msgstr "عنوان الفوترة"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:35
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:36
 msgid "Billing information necessary to process ticket purchases (handled securely by our payment processor — see Section 4)."
 msgstr "معلومات الفوترة اللازمة لمعالجة عمليات شراء التذاكر (تتم معالجتها بأمان من قبل معالج الدفع لدينا — انظر القسم 4)."
 
@@ -3384,10 +3458,6 @@ msgstr "قائمة تسجيل الدخول غير نشطة"
 msgid "Check-in list not found"
 msgstr "قائمة تسجيل الدخول غير موجودة"
 
-#: src/components/routes/event/CheckInLists/index.tsx:60
-#~ msgid "check-in lists"
-#~ msgstr "قوائم تسجيل الدخول"
-
 #: src/components/routes/organizer/Reports/CheckInSummaryReport/index.tsx:51
 msgid "Check-in Lists"
 msgstr "قوائم تسجيل الدخول"
@@ -3473,7 +3543,7 @@ msgstr "الدفع · الخطوة {stepNumber} من {stepCount}"
 msgid "Checkout Settings"
 msgstr "إعدادات الدفع"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:63
+#: src/components/routes/legal/TermsOfService/index.tsx:65
 msgid "Children may submit original stories and poems and play our puzzles. By submitting work you confirm it is entirely your own and that you have the right to share it. Submissions are reviewed by our team before anything is published, and we may decline or remove any work at our discretion."
 msgstr "يمكن للأطفال تقديم قصص وقصائد أصلية واللعب بألغازنا. بتقديم عمل ما فإنك تؤكد أنه من تأليفك بالكامل وأن لديك الحق في مشاركته. يراجع فريقنا الأعمال المقدمة قبل نشر أي شيء، ويجوز لنا رفض أي عمل أو حذفه وفق تقديرنا."
 
@@ -4270,7 +4340,7 @@ msgstr "تحكم في من يدخل لهذا التاريخ"
 msgid "Control who gets in, and when"
 msgstr "تحكم في من يدخل، ومتى"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
+d#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
 #: src/components/routes/legal/CookiePolicy/index.tsx:8
 msgid "Cookie Policy"
 msgstr "سياسة ملفات تعريف الارتباط"
@@ -4492,10 +4562,6 @@ msgstr "أنشئ أداة مخصصة لبيع التذاكر على موقعك."
 #: src/components/modals/SelectCheckInListModal/index.tsx:82
 msgid "Create a list for this date"
 msgstr "إنشاء قائمة لهذا التاريخ"
-
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:162
-#~ msgid "Create a login to save your scores and earn points. We will give you a fun character username so your name stays private."
-#~ msgstr "أنشئ حساب دخول لحفظ نتائجك وكسب النقاط. سنمنحك اسم مستخدم من شخصية كرتونية ممتعة ليبقى اسمك الحقيقي خاصاً."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:199
 msgid "Create a login to save your scores and earn points. You will pick a fun character username so your name stays private."
@@ -5306,6 +5372,11 @@ msgstr "تم إلغاء طلب الحذف"
 msgid "Deletion Requests"
 msgstr "طلبات الحذف"
 
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:152
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:8
+msgid "Delivery Policy"
+msgstr "سياسة التسليم"
+
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:83
 msgid "Depth"
 msgstr ""
@@ -5681,7 +5752,7 @@ msgstr "مثال: تحديث مهم بخصوص تذاكرك"
 msgid "e.g., Standard, Premium, Enterprise"
 msgstr "مثال: قياسي، مميز، للمؤسسات"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:154
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:173
 msgid "Each child is given an automatically generated character username. Only this username, their points, tests taken and best score appear on the public leaderboard; their real name and email are never shown. A child's email address is used only to save their account and to send a password reset link."
 msgstr "يُمنح كل طفل اسم مستخدم مستعاراً يُنشأ تلقائياً. يظهر على لوحة المتصدرين العامة هذا الاسم فقط مع نقاطه وعدد الاختبارات وأفضل نتيجة؛ ولا يُعرض اسمه الحقيقي ولا بريده الإلكتروني أبداً. يُستخدم البريد الإلكتروني للطفل فقط لحفظ حسابه وإرسال رابط إعادة تعيين كلمة المرور."
 
@@ -5938,6 +6009,10 @@ msgstr "إعدادات البريد الإلكتروني والإشعارات"
 #: src/components/routes/event/Settings/index.tsx:78
 msgid "Email & Templates"
 msgstr "البريد الإلكتروني والقوالب"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:70
+msgid "Email <0>fos@aqualeo.co</0> with your order reference, the email address used at purchase and the reason for your request. We will reply within 3 business days."
+msgstr "راسلنا على <0>fos@aqualeo.co</0> مع رقم مرجع طلبك وعنوان البريد الإلكتروني المستخدم عند الشراء وسبب طلبك. سنرد خلال 3 أيام عمل."
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:228
 #: src/components/modals/ManageAttendeeModal/index.tsx:232
@@ -6256,6 +6331,10 @@ msgstr "إدخالات"
 #: src/components/common/WaitlistTable/index.tsx:264
 msgid "Entries will appear here when customers join the waitlist for sold out products."
 msgstr "ستظهر الإدخالات هنا عندما ينضم العملاء إلى قائمة الانتظار للمنتجات النافدة."
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:56
+msgid "Entry requires a valid ticket. Each QR code can be used once, so please do not share it publicly."
+msgstr "يتطلب الدخول تذكرة صالحة. يمكن استخدام كل رمز QR مرة واحدة فقط، لذا يرجى عدم مشاركته علناً."
 
 #: src/components/common/OrganizerWebhookTable/index.tsx:149
 #: src/components/layouts/Checkout/index.tsx:194
@@ -8091,6 +8170,14 @@ msgstr "إذا لم يتم فتح علامة تبويب جديدة تلقائي�
 msgid "If an account exists for that email, we have sent a link to reset the password."
 msgstr "إذا كان هناك حساب لهذا البريد الإلكتروني فقد أرسلنا رابطاً لإعادة تعيين كلمة المرور."
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:27
+msgid "If an event is cancelled you will receive a full refund of the ticket price, including booking fees. We will notify you by email and refund your original payment method within 5 to 10 business days. Your bank may take longer to show the refund on your statement."
+msgstr "إذا تم إلغاء فعالية، فستحصل على استرداد كامل لسعر التذكرة، بما في ذلك رسوم الحجز. سنخطرك عبر البريد الإلكتروني ونعيد المبلغ إلى وسيلة الدفع الأصلية خلال 5 إلى 10 أيام عمل. قد يستغرق ظهور المبلغ المسترد في كشف حسابك لدى البنك وقتاً أطول."
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:36
+msgid "If an event is postponed or rescheduled, your ticket remains valid for the new date. If you cannot attend the new date, you may request a refund within 14 days of the change being announced."
+msgstr "إذا تم تأجيل فعالية أو إعادة جدولتها، تظل تذكرتك صالحة للموعد الجديد. وإذا لم تتمكن من الحضور في الموعد الجديد، يمكنك طلب استرداد المبلغ خلال 14 يوماً من الإعلان عن التغيير."
+
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:185
 msgid "If blank, the address will be used to generate a Google Maps link"
 msgstr "إذا تُرك فارغًا، سيُستخدم العنوان لإنشاء رابط خرائط Google"
@@ -8107,6 +8194,10 @@ msgstr "عند التفعيل، يمكن لموظفي تسجيل الدخول إ
 msgid "If enabled, the organizer will receive an email notification when a new order is placed"
 msgstr "عند التفعيل، ستتلقى الجهة المنظمة إشعارًا عبر البريد الإلكتروني عند تقديم طلب جديد"
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:86
+msgid "If something is wrong with your order, please email us before raising a dispute with your bank or card issuer. We can usually resolve issues faster directly, and we will investigate every request promptly."
+msgstr "إذا كان هناك خطأ في طلبك، يرجى مراسلتنا قبل تقديم نزاع لدى البنك أو جهة إصدار البطاقة. يمكننا عادةً حل المشكلات بشكل أسرع مباشرةً، وسنتحقق من كل طلب على الفور."
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:227
 msgid "If that email address is registered, we have emailed the username to it."
 msgstr "إذا كان عنوان البريد الإلكتروني هذا مسجلاً، فقد أرسلنا اسم المستخدم إليه."
@@ -8115,11 +8206,15 @@ msgstr "إذا كان عنوان البريد الإلكتروني هذا مسج
 msgid "If that username has an email address saved, we have sent a link to reset the password. The link works for 60 minutes."
 msgstr "إذا كان لاسم المستخدم هذا بريد إلكتروني محفوظ فقد أرسلنا رابطاً لإعادة تعيين كلمة المرور. الرابط صالح لمدة 60 دقيقة."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:71
+#: src/components/routes/legal/TermsOfService/index.tsx:73
 msgid "If the author is under 16, a parent or guardian must give permission before their work is published, and by giving permission they agree to the publication of the work with the author's first name, last initial, class or year group and submission date. Permission is requested by email using the address provided with the submission. By publishing work you grant us a non-exclusive licence to display it on this website; the author keeps ownership. A parent or guardian may ask us at <0>fos@aqualeo.co</0> to remove published work at any time."
 msgstr "إذا كان عمر المؤلف أقل من 16 سنة، فيجب أن يمنح ولي الأمر الإذن قبل نشر عمله، وبمنح الإذن يوافق على نشر العمل مع الاسم الأول للمؤلف والحرف الأول من اسم عائلته وصفه أو مرحلته الدراسية وتاريخ التقديم. يُطلب الإذن عبر البريد الإلكتروني باستخدام العنوان المقدم مع العمل. بنشر العمل تمنحنا ترخيصًا غير حصري لعرضه على هذا الموقع؛ ويحتفظ المؤلف بالملكية. يجوز لولي الأمر مراسلتنا على <0>fos@aqualeo.co</0> لحذف العمل المنشور في أي وقت."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:135
+#: src/components/routes/legal/RefundPolicy/index.tsx:45
+msgid "If the venue, date or main programme of an event changes significantly, you may request a refund within 14 days of the change being announced."
+msgstr "إذا تغير مكان الفعالية أو موعدها أو برنامجها الرئيسي بشكل كبير، يمكنك طلب استرداد المبلغ خلال 14 يوماً من الإعلان عن التغيير."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:154
 msgid "if they would like it published and are under 16, a parent or guardian's email address."
 msgstr "إذا رغبوا في النشر وكان عمرهم أقل من 16 سنة، البريد الإلكتروني لولي الأمر."
 
@@ -8131,6 +8226,10 @@ msgstr "إذا وافقت واعتمده فريقنا، فسيظهر ما يلي
 msgid "If you agree, the public leaderboard will show only:"
 msgstr "إذا وافقت، فستعرض لوحة المتصدرين العامة ما يلي فقط:"
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:53
+msgid "If you are unable to attend, you may request a refund at least 7 days before the event. Approved requests are refunded less any payment-processing fees. Requests made less than 7 days before the event are not refunded."
+msgstr "إذا لم تتمكن من الحضور، يمكنك طلب استرداد المبلغ قبل 7 أيام على الأقل من الفعالية. يتم رد المبالغ للطلبات المعتمدة بعد خصم أي رسوم معالجة دفع. لا يتم رد المبالغ للطلبات المقدمة قبل أقل من 7 أيام من الفعالية."
+
 #: src/components/routes/profile/ManageProfile/index.tsx:133
 msgid "If you did not request this change, please immediately change your password."
 msgstr "إذا لم تطلب هذا التغيير، يرجى تغيير كلمة مرورك فورًا."
@@ -8139,9 +8238,13 @@ msgstr "إذا لم تطلب هذا التغيير، يرجى تغيير كلم�
 msgid "If you have an account with us, you will receive an email with instructions on how to reset your password."
 msgstr "إذا كان لديك حساب معنا، فستتلقى بريدًا إلكترونيًا يحتوي على تعليمات حول كيفية إعادة تعيين كلمة مرورك."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:173
-msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ LLC at <0>fos@aqualeo.co</0>."
-msgstr "إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، يرجى التواصل مع Aqualeo Digecom FZ LLC على <0>fos@aqualeo.co</0>."
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:192
+msgid "If you have questions about this Privacy Policy, please contact Aqualeo Digecom FZ-LLC at <0>fos@aqualeo.co</0>."
+msgstr "إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، يرجى التواصل مع Aqualeo Digecom FZ-LLC على <0>fos@aqualeo.co</0>."
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:62
+msgid "If you were charged twice or charged the wrong amount, contact us and we will refund the difference in full."
+msgstr "إذا تم خصم المبلغ منك مرتين أو خصم مبلغ خاطئ، تواصل معنا وسنقوم برد الفرق بالكامل."
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:320
 msgid "Image"
@@ -8294,7 +8397,7 @@ msgstr "زيادة الكمية"
 msgid "Individual attendees"
 msgstr "حاضرون فرديون"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:42
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:43
 msgid "Information about children who submit stories or poems or use our puzzles, as described in Section 9."
 msgstr "معلومات عن الأطفال الذين يقدمون قصصًا أو قصائد أو يستخدمون ألغازنا، كما هو موضح في القسم 9."
 
@@ -11177,7 +11280,7 @@ msgstr ""
 msgid "Parent agreed"
 msgstr "وافق ولي الأمر"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:162
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:181
 msgid "Parent and guardian links expire after 14 days. A parent or guardian can ask us at <0>fos@aqualeo.co</0> to see, correct or delete their child's information, to remove a published story or poem, or to remove their child from the leaderboard, and we will act on the request promptly. We do not use children's information for advertising."
 msgstr "تنتهي صلاحية روابط أولياء الأمور بعد 14 يومًا. يمكن لولي الأمر مراسلتنا على <0>fos@aqualeo.co</0> للاطلاع على معلومات طفله أو تصحيحها أو حذفها، أو لحذف قصة أو قصيدة منشورة، أو لإزالة طفله من لوحة المتصدرين، وسننفذ الطلب بسرعة. لا نستخدم معلومات الأطفال في الإعلانات."
 
@@ -11674,6 +11777,10 @@ msgstr "يرجى التحقق من صحة بريدك الإلكتروني"
 #: src/components/routes/profile/ManageProfile/index.tsx:171
 msgid "Please check your email to confirm your email address"
 msgstr "يرجى التحقق من بريدك الإلكتروني لتأكيد عنوانك"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:45
+msgid "Please check your spam or junk folder and confirm that you entered your email address correctly. If your tickets have not arrived within one hour of payment, contact us at <0>fos@aqualeo.co</0> with your order reference and we will re-send them or correct the email address on your order. A missed delivery caused by an incorrectly entered email address is not grounds for a refund."
+msgstr "يرجى التحقق من مجلد الرسائل غير المرغوب فيها والتأكد من إدخال عنوان بريدك الإلكتروني بشكل صحيح. إذا لم تصل تذاكرك خلال ساعة واحدة من الدفع، تواصل معنا على <0>fos@aqualeo.co</0> مع رقم مرجع طلبك وسنعيد إرسالها أو نصحح عنوان البريد الإلكتروني في طلبك. لا يُعد عدم الاستلام الناتج عن إدخال عنوان بريد إلكتروني غير صحيح سبباً لاسترداد المبلغ."
 
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:76
 msgid "Please check your ticket for the updated time. Your tickets are still valid — no action is needed unless the new times don't work for you. Reply to this email if you have any questions."
@@ -12347,7 +12454,7 @@ msgstr "الأسئلة"
 msgid "Questions & Answers"
 msgstr "الأسئلة والأجوبة"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:119
+#: src/components/routes/legal/TermsOfService/index.tsx:121
 msgid "Questions about these Terms can be sent to <0>fos@aqualeo.co</0>."
 msgstr "يمكن إرسال الأسئلة حول هذه الشروط إلى <0>fos@aqualeo.co</0>."
 
@@ -12579,9 +12686,10 @@ msgstr "استرداد جميع الطلبات لهذا التاريخ"
 msgid "Refund amount"
 msgstr "مبلغ الاسترداد"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:45
-msgid "Refund and cancellation terms are set by the individual event organizer and will be stated on the event page where applicable. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
-msgstr "تُحدد شروط الاسترداد والإلغاء من قبل منظم الفعالية الفردي وستُذكر في صفحة الفعالية عند الاقتضاء. في حال إلغاء الفعالية من قبل المنظم، سنبذل جهودًا معقولة لإشعار الحاضرين المسجلين."
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
+#: src/components/routes/legal/RefundPolicy/index.tsx:8
+msgid "Refund and Cancellation Policy"
+msgstr "سياسة الاسترداد والإلغاء"
 
 #: src/components/common/OrdersTable/index.tsx:293
 msgid "Refund failed"
@@ -12636,6 +12744,14 @@ msgstr "مُسترد: {0}"
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:42
 msgid "Refunds"
 msgstr "الاستردادات"
+
+#: src/components/routes/legal/TermsOfService/index.tsx:45
+msgid "Refunds and cancellations are governed by our <0>Refund and Cancellation Policy</0>, and ticket delivery by our <1>Delivery Policy</1>. If an event page states its own refund terms, those terms apply to that event. If an event is cancelled by the organizer, we will make reasonable efforts to notify registered attendees."
+msgstr "تخضع عمليات الاسترداد والإلغاء لـ<0>سياسة الاسترداد والإلغاء</0> لدينا، ويخضع تسليم التذاكر لـ<1>سياسة التسليم</1> لدينا. إذا نصت صفحة الفعالية على شروط استرداد خاصة بها، فإن تلك الشروط تنطبق على تلك الفعالية. وإذا ألغى المنظم الفعالية، فسنبذل جهوداً معقولة لإخطار الحاضرين المسجلين."
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:78
+msgid "Refunds are made to the original payment method only. Once a refund is approved it is processed within 5 to 10 business days."
+msgstr "يتم رد المبالغ إلى وسيلة الدفع الأصلية فقط. بعد الموافقة على الاسترداد، تتم معالجته خلال 5 إلى 10 أيام عمل."
 
 #: src/components/routes/profile/ManageProfile/index.tsx:179
 msgid "Regional Settings"
@@ -13541,10 +13657,6 @@ msgstr "البحث بالعنوان..."
 #: src/components/routes/event/CapacityAssignments/index.tsx:41
 msgid "Search capacity assignments..."
 msgstr "البحث عن تخصيصات السعة..."
-
-#: src/components/routes/event/CheckInLists/index.tsx:43
-#~ msgid "Search check-in lists..."
-#~ msgstr "البحث عن قوائم تسجيل الدخول..."
 
 #: src/components/common/OccurrenceSelect/index.tsx:120
 msgid "Search dates..."
@@ -14683,9 +14795,13 @@ msgstr ""
 msgid "Some details are hidden from public access. Log in to view everything."
 msgstr "بعض التفاصيل مخفية عن الوصول العام. سجّل الدخول لعرض كل شيء."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:125
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:144
 msgid "Some features of this site are used by children: submitting stories and poems, and playing our puzzles. We collect only what we need for these features and we ask for a parent or guardian's permission where it is required."
 msgstr "يستخدم الأطفال بعض ميزات هذا الموقع: تقديم القصص والقصائد، واللعب بالألغاز. نجمع فقط ما نحتاجه لهذه الميزات ونطلب إذن ولي الأمر حيثما يكون ذلك مطلوبًا."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:105
+msgid "Some of these service providers process data outside the United Arab Emirates. Where this happens we take steps to make sure your information remains protected, including contractual safeguards with those providers."
+msgstr "يقوم بعض مزودي الخدمة هؤلاء بمعالجة البيانات خارج دولة الإمارات العربية المتحدة. وفي هذه الحالة نتخذ خطوات لضمان بقاء معلوماتك محمية، بما في ذلك ضمانات تعاقدية مع هؤلاء المزودين."
 
 #: src/ee/seating/components/SeatPicker/Basket.tsx:95
 msgid "Someone just took {0}. Pick another seat, or let us find similar seats for you."
@@ -15711,9 +15827,9 @@ msgstr ""
 msgid "The event you're looking for is not available at the moment. It may have been removed, expired, or the URL might be incorrect."
 msgstr "الفعالية التي تبحث عنها غير متاحة حاليًا. ربما تمت إزالتها أو انتهت صلاحيتها أو أن الرابط غير صحيح."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:93
-msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
-msgstr "اسم أصدقاء المدرسة وشعاره ومحتوى الموقع هي ملك لشركة Aqualeo Digecom FZ LLC ولا يجوز استخدامها دون إذن. يبقى محتوى الفعالية (مثل الأوصاف والصور) ملكًا للجهة المنظمة المعنية."
+#: src/components/routes/legal/TermsOfService/index.tsx:95
+msgid "The Friends of School name, logo, and site content are the property of Aqualeo Digecom FZ-LLC and may not be used without permission. Event content (such as descriptions and images) remains the property of the respective organizer."
+msgstr "اسم أصدقاء المدرسة وشعاره ومحتوى الموقع هي ملك لشركة Aqualeo Digecom FZ-LLC ولا يجوز استخدامها دون إذن. يبقى محتوى الفعالية (مثل الأوصاف والصور) ملكًا للجهة المنظمة المعنية."
 
 #: src/components/modals/CancelOrderModal/index.tsx:76
 msgid "The full order amount will be refunded to the customer's original payment method."
@@ -15908,11 +16024,11 @@ msgstr ""
 msgid "Theatre with sections"
 msgstr "مسرح بأقسام"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:133
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:152
 msgid "their first and last name, class or year group, and the text of their work;"
 msgstr "اسمهم الأول واسم العائلة وصفهم أو مرحلتهم الدراسية ونص عملهم؛"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:150
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:169
 msgid "their first name, email address, password (stored securely) and chosen age group;"
 msgstr "اسمهم الأول وبريدهم الإلكتروني وكلمة المرور (مخزنة بأمان) وفئتهم العمرية المختارة؛"
 
@@ -15920,7 +16036,7 @@ msgstr "اسمهم الأول وبريدهم الإلكتروني وكلمة ا�
 msgid "Their points, number of tests taken and best score"
 msgstr "نقاطهم وعدد الاختبارات التي أجروها وأفضل نتيجة"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:151
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:170
 msgid "their test results and points."
 msgstr "نتائج اختباراتهم ونقاطهم."
 
@@ -15994,8 +16110,8 @@ msgid "These templates will override the organizer defaults for this event only.
 msgstr "ستتجاوز هذه القوالب الإعدادات الافتراضية للجهة المنظمة لهذه الفعالية فقط. إذا لم يُعيَّن قالب مخصص هنا، سيُستخدم قالب الجهة المنظمة بدلاً من ذلك."
 
 #: src/components/routes/legal/TermsOfService/index.tsx:10
-msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
-msgstr "تحكم شروط الخدمة هذه (\"الشروط\") استخدامك لهذا الموقع ومنصة أصدقاء المدرسة، التي تديرها شركة Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\"). بالوصول إلى هذا الموقع أو شراء تذكرة، فإنك توافق على هذه الشروط."
+msgid "These Terms of Service (\"Terms\") govern your use of this website and the Friends of School platform, operated by Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"). By accessing this site or purchasing a ticket, you agree to these Terms."
+msgstr "تحكم شروط الخدمة هذه (\"الشروط\") استخدامك لهذا الموقع ومنصة أصدقاء المدرسة، التي تديرها شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\"). بالوصول إلى هذا الموقع أو شراء تذكرة، فإنك توافق على هذه الشروط."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:60
 msgid "Third"
@@ -16090,8 +16206,8 @@ msgid "This color combination may be hard to read for some users"
 msgstr "قد يكون مزيج الألوان هذا صعب القراءة لبعض المستخدمين"
 
 #: src/components/routes/legal/CookiePolicy/index.tsx:10
-msgid "This Cookie Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, uses cookies and similar technologies, and the choices you have about them."
-msgstr "توضح سياسة ملفات تعريف الارتباط هذه كيف تستخدم شركة Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")، مشغّل منصة أصدقاء المدرسة وهذا الموقع، ملفات تعريف الارتباط والتقنيات المشابهة، والخيارات المتاحة لك بشأنها."
+msgid "This Cookie Policy explains how Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, uses cookies and similar technologies, and the choices you have about them."
+msgstr "توضح سياسة ملفات تعريف الارتباط هذه كيف تستخدم شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")، مشغّل منصة أصدقاء المدرسة وهذا الموقع، ملفات تعريف الارتباط والتقنيات المشابهة، والخيارات المتاحة لك بشأنها."
 
 #: src/ee/seating/components/routes/event/SeatingSales/index.tsx:181
 msgid "This date"
@@ -16122,6 +16238,10 @@ msgstr "هذا التاريخ لم يعد متاحًا. يرجى اختيار ت
 #: src/components/modals/SelectCheckInListModal/index.tsx:66
 msgid "This date only"
 msgstr "هذا التاريخ فقط"
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:10
+msgid "This Delivery Policy applies to tickets and registrations purchased through this website, which is operated by Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\")."
+msgstr "تنطبق سياسة التسليم هذه على التذاكر وعمليات التسجيل المشتراة عبر هذا الموقع، الذي تديره شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:113
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
@@ -16313,13 +16433,17 @@ msgstr "ملف تعريف هذه الجهة المنظمة غير منشور ب�
 msgid "This overrides all visibility settings and will hide the product from all customers."
 msgstr "يتجاوز هذا جميع إعدادات الرؤية وسيخفي المنتج عن جميع العملاء."
 
+#: src/components/routes/legal/RefundPolicy/index.tsx:10
+msgid "This policy explains how refunds and cancellations work for tickets bought through this website, which is operated by Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\")."
+msgstr "توضح هذه السياسة كيفية عمل الاسترداد والإلغاء للتذاكر المشتراة عبر هذا الموقع، الذي تديره شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")."
+
 #: src/components/common/EmailTemplateEditor/EmailTemplatePreviewPane.tsx:69
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "تُظهر هذه المعاينة شكل رسالتك بالبيانات النموذجية. ستستخدم الرسائل الفعلية قيمًا حقيقية."
 
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:10
-msgid "This Privacy Policy explains how Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
-msgstr "توضح سياسة الخصوصية هذه كيف تجمع شركة Aqualeo Digecom FZ LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")، مشغّل منصة أصدقاء المدرسة وهذا الموقع، معلوماتك الشخصية وتستخدمها وتحميها عند زيارتك لهذا الموقع، أو التسجيل في فعالية، أو التفاعل معنا بأي شكل آخر."
+msgid "This Privacy Policy explains how Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\", \"we\", \"us\", or \"our\"), the operator of the Friends of School platform and this website, collects, uses, and protects your personal information when you visit this site, register for an event, or otherwise interact with us."
+msgstr "توضح سياسة الخصوصية هذه كيف تجمع شركة Aqualeo Digecom FZ-LLC (\"Aqualeo Digecom\" أو \"نحن\" أو \"لنا\")، مشغّل منصة أصدقاء المدرسة وهذا الموقع، معلوماتك الشخصية وتستخدمها وتحميها عند زيارتك لهذا الموقع، أو التسجيل في فعالية، أو التفاعل معنا بأي شكل آخر."
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:81
 msgid "This product cannot be deleted because it is associated with an order. You can hide it instead."
@@ -16373,9 +16497,9 @@ msgstr ""
 msgid "This seat map was changed somewhere else. Load the latest version? Your unsaved edits will be lost."
 msgstr ""
 
-#: src/components/routes/legal/TermsOfService/index.tsx:102
-msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
-msgstr "يُقدَّم هذا الموقع \"كما هو\". إلى أقصى حد يسمح به القانون، لا تتحمل شركة Aqualeo Digecom FZ LLC المسؤولية عن أي أضرار غير مباشرة أو عرضية أو تبعية ناشئة عن استخدامك لهذا الموقع أو حضورك لأي فعالية مدرجة."
+#: src/components/routes/legal/TermsOfService/index.tsx:104
+msgid "This site is provided on an \"as is\" basis. To the fullest extent permitted by law, Aqualeo Digecom FZ-LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this site or attendance at any listed event."
+msgstr "يُقدَّم هذا الموقع \"كما هو\". إلى أقصى حد يسمح به القانون، لا تتحمل شركة Aqualeo Digecom FZ-LLC المسؤولية عن أي أضرار غير مباشرة أو عرضية أو تبعية ناشئة عن استخدامك لهذا الموقع أو حضورك لأي فعالية مدرجة."
 
 #: src/components/forms/ProductForm/ProductSizesForm.tsx:46
 msgid "This size has already been sold, so it can't be deleted. Hide it instead."
@@ -16401,13 +16525,13 @@ msgstr "كمية هذا المستوى مشتركة بين جميع التوار
 msgid "This user is not active, as they have not accepted their invitation."
 msgstr "هذا المستخدم غير نشط، لأنه لم يقبل دعوته."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:19
-msgid "This website is operated by Aqualeo Digecom FZ LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
-msgstr "يُدار هذا الموقع من قبل شركة Aqualeo Digecom FZ LLC. لأي أسئلة حول هذه الشروط، تواصل معنا على <0>fos@aqualeo.co</0>."
-
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:20
-msgid "This website is operated by Aqualeo Digecom FZ LLC. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
-msgstr "يُدار هذا الموقع من قبل شركة Aqualeo Digecom FZ LLC. إذا كانت لديك أي أسئلة حول هذه السياسة أو كيفية التعامل مع بياناتك، يمكنك التواصل معنا على <0>fos@aqualeo.co</0>."
+msgid "This website is operated by Aqualeo Digecom FZ-LLC, a free zone limited liability company registered at CWEP4303, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates. If you have any questions about this policy or how your data is handled, you can reach us at <0>fos@aqualeo.co</0>."
+msgstr "يُدار هذا الموقع من قبل شركة Aqualeo Digecom FZ-LLC، وهي شركة ذات مسؤولية محدودة في المنطقة الحرة، مسجلة في CWEP4303، مبنى كومباس، شارع الشهداء، المنطقة الصناعية الحمراء-FZ، رأس الخيمة، الإمارات العربية المتحدة. إذا كانت لديك أي أسئلة حول هذه السياسة أو كيفية التعامل مع بياناتك، يمكنك التواصل معنا على <0>fos@aqualeo.co</0>."
+
+#: src/components/routes/legal/TermsOfService/index.tsx:19
+msgid "This website is operated by Aqualeo Digecom FZ-LLC. For any questions about these Terms, contact us at <0>fos@aqualeo.co</0>."
+msgstr "يُدار هذا الموقع من قبل شركة Aqualeo Digecom FZ-LLC. لأي أسئلة حول هذه الشروط، تواصل معنا على <0>fos@aqualeo.co</0>."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:369
 msgid "This will affect {loadedAffectedCount} date(s)."
@@ -16519,9 +16643,9 @@ msgstr "التذكرة غير موجودة"
 msgid "Ticket or Product"
 msgstr "تذكرة أو منتج"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:65
-msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information."
-msgstr "تتم معالجة مدفوعات التذاكر في هذا الموقع بأمان عبر Stripe، معالج دفع خارجي متوافق مع معايير PCI. لا نخزن تفاصيل بطاقتك الكاملة على خوادمنا. يرجى الرجوع إلى <0>سياسة خصوصية Stripe</0> للاطلاع على تفاصيل كيفية تعامل Stripe مع معلومات دفعك."
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:75
+msgid "Ticket payments on this site are processed securely by Stripe, a PCI-compliant third-party payment processor. We do not store your full card details on our servers. Please refer to <0>Stripe's Privacy Policy</0> for details on how Stripe handles your payment information. Our <1>Refund and Cancellation Policy</1> and <2>Delivery Policy</2> explain how refunds and ticket delivery work."
+msgstr "تتم معالجة مدفوعات التذاكر على هذا الموقع بشكل آمن بواسطة Stripe، وهي جهة معالجة مدفوعات خارجية متوافقة مع معيار PCI. نحن لا نخزن بيانات بطاقتك الكاملة على خوادمنا. يرجى الرجوع إلى <0>سياسة خصوصية Stripe</0> لمعرفة كيفية تعامل Stripe مع معلومات الدفع الخاصة بك. توضح <1>سياسة الاسترداد والإلغاء</1> و<2>سياسة التسليم</2> لدينا كيفية عمل الاسترداد وتسليم التذاكر."
 
 #: src/components/routes/event/TicketDesigner/TicketDesignerPrint.tsx:100
 msgid "Ticket Preview for"
@@ -16570,6 +16694,10 @@ msgstr "التذاكر والمنتجات"
 #: src/components/modals/OfferWaitlistModal/index.tsx:94
 msgid "Tickets are automatically offered to waitlisted customers when capacity becomes available."
 msgstr "تُعرض التذاكر تلقائيًا على عملاء قائمة الانتظار عند توفر السعة."
+
+#: src/components/routes/legal/DeliveryPolicy/index.tsx:28
+msgid "Tickets are normally delivered instantly, and in any case within 15 minutes of a successful payment. Some events issue tickets only after the organizer approves your registration. Where this applies it is stated on the event page, and your ticket is sent as soon as it is approved."
+msgstr "يتم تسليم التذاكر عادةً فوراً، وفي جميع الأحوال خلال 15 دقيقة من إتمام الدفع بنجاح. تصدر بعض الفعاليات التذاكر فقط بعد موافقة المنظم على تسجيلك. وعند انطباق ذلك يُذكر في صفحة الفعالية، ويتم إرسال تذكرتك فور الموافقة عليها."
 
 #: src/components/routes/product-widget/PrintOrder/index.tsx:49
 msgid "Tickets for"
@@ -16677,7 +16805,7 @@ msgstr "بانتظار الاستلام"
 msgid "To communicate with you about events you've registered for."
 msgstr "للتواصل معك بشأن الفعاليات التي سجّلت فيها."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:60
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:61
 msgid "To improve and secure our website and services."
 msgstr "لتحسين وتأمين موقعنا وخدماتنا."
 
@@ -16685,11 +16813,11 @@ msgstr "لتحسين وتأمين موقعنا وخدماتنا."
 msgid "To increase your limits, contact us at"
 msgstr "لزيادة حدودك، تواصل معنا على"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:57
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:58
 msgid "To process event registrations and ticket purchases."
 msgstr "لمعالجة تسجيلات الفعاليات وعمليات شراء التذاكر."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:60
 msgid "To respond to enquiries submitted through our contact form."
 msgstr "للرد على الاستفسارات المقدمة عبر نموذج التواصل لدينا."
 
@@ -17081,6 +17209,10 @@ msgstr "غير معروف"
 #: src/components/common/QuestionAndAnswerList/index.tsx:191
 msgid "Unknown Attendee"
 msgstr "حاضر غير معروف"
+
+#: src/components/routes/legal/RefundPolicy/index.tsx:18
+msgid "Unless the event page says otherwise, all ticket sales are final. Tickets are for a specific date and time, so they are not covered by a cooling-off period. If an event page states its own refund terms, those terms apply to that event and take priority over this policy."
+msgstr "ما لم تنص صفحة الفعالية على خلاف ذلك، فإن جميع مبيعات التذاكر نهائية. التذاكر مخصصة لتاريخ ووقت محددين، لذا لا تشملها فترة التراجع. وإذا نصت صفحة الفعالية على شروط استرداد خاصة بها، فإن تلك الشروط تنطبق على تلك الفعالية وتكون لها الأولوية على هذه السياسة."
 
 #: src/components/common/CapacityHelp/index.tsx:31
 #: src/components/common/CapacityHelp/index.tsx:51
@@ -17801,11 +17933,11 @@ msgstr "تحذير: هذا هو الإعداد الافتراضي للنظام. 
 msgid "We accept"
 msgstr "نقبل"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:47
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:48
 msgid "We also automatically collect limited technical information, such as your IP address, browser type, and pages visited, to help us operate and improve the site. Where cookies are used for this purpose, you can control your preferences at any time via the cookie settings link in the footer."
 msgstr "نجمع أيضًا تلقائيًا معلومات تقنية محدودة، مثل عنوان IP الخاص بك، ونوع المتصفح، والصفحات التي تمت زيارتها، لمساعدتنا على تشغيل الموقع وتحسينه. حيثما تُستخدم ملفات تعريف الارتباط لهذا الغرض، يمكنك التحكم في تفضيلاتك في أي وقت عبر رابط إعدادات ملفات تعريف الارتباط في التذييل."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:28
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:29
 msgid "We collect information you provide directly to us, including:"
 msgstr "نجمع المعلومات التي تقدمها لنا مباشرة، بما في ذلك:"
 
@@ -17894,13 +18026,17 @@ msgstr "تعذّرت قراءة هذا الملف. يرجى محاولة لصق 
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "تعذّرت إعادة ترتيب الفئات. يرجى المحاولة مرة أخرى."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:86
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:98
 msgid "We do not sell your personal information. We share information only with service providers who help us operate the site (such as our payment processor and email delivery provider), or where required by law."
 msgstr "نحن لا نبيع معلوماتك الشخصية. نشارك المعلومات فقط مع مزودي الخدمات الذين يساعدوننا على تشغيل الموقع (مثل معالج الدفع ومزود البريد الإلكتروني)، أو عند اقتضاء القانون ذلك."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:139
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:158
 msgid "We email the parent or guardian to explain what will be shown and ask for their permission. We record their response and when it was given. Work from a child under 16 is only published if the parent or guardian agrees and our team approves it. If published, the page shows the child's first name, the initial of their last name, their class or year group, the date it was submitted and the work itself. Their full last name is never shown publicly. If the parent or guardian does not respond or declines, the work is not published."
 msgstr "نراسل ولي الأمر لنوضح ما سيُعرض ونطلب إذنه. ونسجل ردّه ووقت تقديمه. لا يُنشر عمل الطفل دون 16 سنة إلا إذا وافق ولي الأمر واعتمده فريقنا. وعند النشر تعرض الصفحة الاسم الأول للطفل والحرف الأول من اسم عائلته وصفه أو مرحلته الدراسية وتاريخ التقديم والعمل نفسه. ولا يُعرض اسم عائلته كاملًا علنًا أبدًا. وإذا لم يرد ولي الأمر أو رفض فلن يُنشر العمل."
+
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:64
+msgid "We handle personal data in line with the UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data and, where it applies to you, the EU General Data Protection Regulation. We process your data to perform our contract with you (for example, delivering tickets), to meet our legal obligations, for our legitimate interests in running and securing the site, and, where required, with your consent."
+msgstr "نتعامل مع البيانات الشخصية وفقاً للمرسوم بقانون اتحادي رقم 45 لسنة 2021 بشأن حماية البيانات الشخصية في دولة الإمارات، وحيثما ينطبق عليك، اللائحة العامة لحماية البيانات في الاتحاد الأوروبي. نعالج بياناتك لتنفيذ عقدنا معك (مثل تسليم التذاكر)، وللوفاء بالتزاماتنا القانونية، ولمصالحنا المشروعة في تشغيل الموقع وتأمينه، وبموافقتك عند الحاجة."
 
 #: src/components/routes/my-tickets/DeleteMyData/index.tsx:47
 msgid "We have emailed you a confirmation listing what was deleted, what we kept and what we could not delete, such as records held by our payment processor."
@@ -17914,7 +18050,7 @@ msgstr "أرسلنا بريدًا إلكترونيًا إلى ولي أمرك ل
 msgid "We hit a snag loading this page. Please try again."
 msgstr "واجهنا عائقًا أثناء تحميل هذه الصفحة. يرجى المحاولة مرة أخرى."
 
-#: src/components/routes/legal/TermsOfService/index.tsx:111
+#: src/components/routes/legal/TermsOfService/index.tsx:113
 msgid "We may update these Terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the updated Terms."
 msgstr "قد نُحدّث هذه الشروط من وقت لآخر. يشكل استمرار استخدام الموقع بعد نشر التغييرات قبولاً للشروط المحدّثة."
 
@@ -17922,7 +18058,7 @@ msgstr "قد نُحدّث هذه الشروط من وقت لآخر. يشكل ا�
 msgid "We may update this Cookie Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "قد نُحدّث سياسة ملفات تعريف الارتباط هذه من وقت لآخر. يعكس تاريخ \"آخر تحديث\" أعلى هذه الصفحة أحدث التغييرات."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:181
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:200
 msgid "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent changes."
 msgstr "قد نُحدّث سياسة الخصوصية هذه من وقت لآخر. يعكس تاريخ \"آخر تحديث\" أعلى هذه الصفحة أحدث التغييرات."
 
@@ -17943,7 +18079,7 @@ msgstr "نوصي بأبعاد 1950×650 بكسل، بنسبة 3:1، وحجم م�
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "نوصي بأبعاد 400×400 بكسل، وحجم ملف أقصى 5 ميغابايت"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:95
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:114
 msgid "We retain personal information for as long as necessary to fulfil the purposes described in this policy, including to comply with legal, accounting, or reporting obligations."
 msgstr "نحتفظ بالمعلومات الشخصية طوال المدة اللازمة لتحقيق الأغراض الموضحة في هذه السياسة، بما في ذلك الامتثال للالتزامات القانونية أو المحاسبية أو التقارير."
 
@@ -17959,7 +18095,7 @@ msgstr "أرسلنا رابط تحقق إلى {0}"
 msgid "We use cookies to help us understand how the site is used and to improve your experience."
 msgstr "نستخدم ملفات تعريف الارتباط لمساعدتنا على فهم كيفية استخدام الموقع ولتحسين تجربتك."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:77
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:89
 msgid "We use essential cookies required for the site to function, and, where you consent, optional analytics and advertising cookies to help us understand how the site is used. You can change your cookie preferences at any time using the \"Cookie settings\" link in the website footer."
 msgstr "نستخدم ملفات تعريف الارتباط الأساسية اللازمة لعمل الموقع، وبموافقتك، ملفات تعريف ارتباط اختيارية للتحليلات والإعلانات لمساعدتنا على فهم كيفية استخدام الموقع. يمكنك تغيير تفضيلات ملفات تعريف الارتباط في أي وقت باستخدام رابط \"إعدادات ملفات تعريف الارتباط\" في تذييل الموقع."
 
@@ -18310,7 +18446,7 @@ msgstr ""
 msgid "When we finally walked home, my grandmother asked if the lantern had looked like the sea. I told her it had looked even better — it had looked like the sea at night, full of its own small, floating moons."
 msgstr "عندما مشينا أخيرًا إلى المنزل، سألتني جدتي إن كان الفانوس يبدو كالبحر. أخبرتها أنه بدا أفضل من ذلك — بدا كالبحر ليلاً، مليئًا بأقماره الصغيرة العائمة الخاصة."
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:101
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:120
 msgid "When you delete your data (see Section 8) we remove your name, email address, phone number, address and similar details from your orders, tickets and account, and delete any stories or puzzle accounts created for your children. We keep the financial record of each payment (order reference, amounts, taxes, fees, dates, event and payment processor references) without any personal details, because we are required to retain financial records for accounting, tax and audit purposes. We also keep a minimal log that the deletion took place, which contains only a one-way code derived from your email address and the references of the orders affected, not the email address itself."
 msgstr "عند حذف بياناتك (راجع القسم 8) نزيل اسمك وبريدك الإلكتروني ورقم هاتفك وعنوانك وما شابه من طلباتك وتذاكرك وحسابك، ونحذف أي قصص أو حسابات ألغاز أُنشئت لأطفالك. نحتفظ بالسجل المالي لكل دفعة (رقم الطلب والمبالغ والضرائب والرسوم والتواريخ والحدث ومراجع معالج الدفع) دون أي بيانات شخصية، لأننا ملزمون بالاحتفاظ بالسجلات المالية لأغراض المحاسبة والضرائب والتدقيق. كما نحتفظ بسجل مختصر يثبت حدوث الحذف، ولا يحتوي إلا على رمز أحادي الاتجاه مشتق من بريدك الإلكتروني ومراجع الطلبات المتأثرة، وليس البريد الإلكتروني نفسه."
 
@@ -18326,7 +18462,7 @@ msgstr ""
 msgid "Where the button links to"
 msgstr "إلى أين يرتبط الزر"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:134
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:153
 msgid "whether they would like it published, and whether they are under 16;"
 msgstr "ما إذا كانوا يرغبون في النشر، وما إذا كان عمرهم أقل من 16 سنة؛"
 
@@ -18480,7 +18616,7 @@ msgstr "نعم، احفظ نتيجتي"
 msgid "Yoga class"
 msgstr "حصة يوغا"
 
-#: src/components/routes/legal/TermsOfService/index.tsx:54
+#: src/components/routes/legal/TermsOfService/index.tsx:56
 msgid "You agree not to misuse this website, including attempting to interfere with its normal operation, submitting false information when registering for an event, or using the contact form to send spam or unlawful content."
 msgstr "أنت توافق على عدم إساءة استخدام هذا الموقع، بما في ذلك محاولة التدخل في تشغيله الطبيعي، أو تقديم معلومات خاطئة عند التسجيل لفعالية، أو استخدام نموذج التواصل لإرسال رسائل مزعجة أو محتوى غير قانوني."
 
@@ -18611,7 +18747,7 @@ msgstr "لديك ضرائب ورسوم مضافة إلى منتج مجاني. ه
 msgid "You have unsaved changes. Are you sure you want to discard them?"
 msgstr "لديك تغييرات غير محفوظة. هل أنت متأكد من رغبتك في تجاهلها؟"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:115
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:134
 msgid "You may request access to or correction of your personal information by contacting us at <0>fos@aqualeo.co</0>. You can delete your personal information yourself at any time using the \"Delete my data\" option in My Tickets, which you can reach by signing in to your account or from the link in your ticket emails."
 msgstr "يمكنك طلب الاطلاع على معلوماتك الشخصية أو تصحيحها بمراسلتنا على <0>fos@aqualeo.co</0>. ويمكنك حذف معلوماتك الشخصية بنفسك في أي وقت عبر خيار \"حذف بياناتي\" في صفحة تذاكري، التي يمكنك الوصول إليها بتسجيل الدخول إلى حسابك أو من الرابط في رسائل التذاكر."
 
@@ -18823,7 +18959,7 @@ msgstr "اسمك"
 msgid "Your Name"
 msgstr "اسمك"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:31
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:32
 msgid "Your name, email address, and contact details when you register for an event or contact us."
 msgstr "اسمك وبريدك الإلكتروني وتفاصيل التواصل الخاصة بك عند التسجيل في فعالية أو التواصل معنا."
 

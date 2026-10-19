@@ -155,6 +155,12 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                         <a href={getConfig('VITE_TOS_URL', '/terms-of-service')} className={classes.footerNavLink}>
                             {t`Terms of Service`}
                         </a>
+                        <a href="/refund-policy" className={classes.footerNavLink}>
+                            {t`Refund and Cancellation Policy`}
+                        </a>
+                        <a href="/delivery-policy" className={classes.footerNavLink}>
+                            {t`Delivery Policy`}
+                        </a>
                         <a href="/cookie-policy" className={classes.footerNavLink}>
                             {t`Cookie Policy`}
                         </a>
@@ -174,7 +180,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
 
                 <div className={classes.bottomBar}>
                     <p className={classes.copyright}>
-                        © {year} Aqualeo Digecom FZ LLC. {t`All rights reserved.`}
+                        © {year} Aqualeo Digecom FZ-LLC. {t`All rights reserved.`}
                     </p>
                     <PoweredByFooter className={classes.poweredBy}/>
                 </div>
