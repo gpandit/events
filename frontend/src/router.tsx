@@ -699,6 +699,22 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
+        path: "/delivery-policy",
+        async lazy() {
+            const DeliveryPolicy = await import("./components/routes/legal/DeliveryPolicy");
+            return { Component: DeliveryPolicy.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/refund-policy",
+        async lazy() {
+            const RefundPolicy = await import("./components/routes/legal/RefundPolicy");
+            return { Component: RefundPolicy.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: "/cookie-policy",
         async lazy() {
             const CookiePolicy = await import("./components/routes/legal/CookiePolicy");
