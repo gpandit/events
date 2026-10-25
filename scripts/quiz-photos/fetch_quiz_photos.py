@@ -5,6 +5,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from io import BytesIO
@@ -14,11 +15,14 @@ from PIL import Image
 
 WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
 USER_AGENT = "FriendsOfSchoolQuizPhotos/1.0 (https://friendsofschool.com; self-hosting quiz photos)"
-BATCH_SIZE = 40
+BATCH_SIZE = 25
+MAX_ATTEMPTS = 8
+MAX_RETRY_WAIT_SECONDS = 120
+RETRYABLE_STATUSES = (429, 500, 502, 503, 504)
 SOURCE_WIDTH = 640
 OUTPUT_WIDTH = 400
 WEBP_QUALITY = 72
-REQUEST_PAUSE_SECONDS = 0.2
+REQUEST_PAUSE_SECONDS = 1.0
 
 ROOT = Path(__file__).resolve().parents[2]
 TITLES_PATH = Path(__file__).with_name("titles.json")
@@ -27,17 +31,27 @@ MANIFEST_PATH = ROOT / "frontend" / "src" / "components" / "layouts" / "Organize
 CREDITS_PATH = PHOTOS_DIR / "credits.html"
 
 
+def fetch(url):
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                return response.read()
+        except urllib.error.HTTPError as error:
+            if error.code not in RETRYABLE_STATUSES or attempt == MAX_ATTEMPTS:
+                raise
+            retry_after = error.headers.get("Retry-After", "")
+            wait = int(retry_after) if retry_after.isdigit() else 2 ** attempt
+            time.sleep(min(wait, MAX_RETRY_WAIT_SECONDS))
+
+
 def api_get(params):
     query = urllib.parse.urlencode({"format": "json", "formatversion": "2", "redirects": "1", **params})
-    request = urllib.request.Request(f"{WIKIPEDIA_API}?{query}", headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.load(response)
+    return json.loads(fetch(f"{WIKIPEDIA_API}?{query}"))
 
 
 def download(url):
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=60) as response:
-        return response.read()
+    return fetch(url)
 
 
 def slugify(title):
@@ -135,32 +149,39 @@ def run(titles, photos_dir, manifest_path, credits_path, pause=REQUEST_PAUSE_SEC
     credit_entries = load_existing(photos_dir / "credits.json")
     failed = []
 
-    pending = [title for title in titles if not (title in manifest and (photos_dir / manifest[title]).exists())]
-    for start in range(0, len(pending), BATCH_SIZE):
-        batch = pending[start:start + BATCH_SIZE]
-        resolved = resolve_titles(batch)
-        credits = fetch_credits([entry["file"] for entry in resolved.values()]) if resolved else {}
-        time.sleep(pause)
+    def save():
+        manifest_path.write_text(json.dumps(dict(sorted(manifest.items())), indent=1) + "\n")
+        (photos_dir / "credits.json").write_text(json.dumps(dict(sorted(credit_entries.items())), indent=1) + "\n")
+        credits_path.write_text(render_credits(credit_entries))
 
-        for title in batch:
-            if title not in resolved:
-                failed.append(title)
-                continue
-            try:
-                webp = to_webp(download(resolved[title]["thumbnail"]))
-            except Exception as error:
-                print(f"FAILED {title}: {error}", file=sys.stderr)
-                failed.append(title)
-                continue
-            filename = f"{slugify(title)}.webp"
-            (photos_dir / filename).write_bytes(webp)
-            manifest[title] = filename
-            credit_entries[title] = credits[resolved[title]["file"]]
+    pending = [title for title in titles if not (title in manifest and (photos_dir / manifest[title]).exists())]
+    try:
+        for start in range(0, len(pending), BATCH_SIZE):
+            batch = pending[start:start + BATCH_SIZE]
+            resolved = resolve_titles(batch)
+            credits = fetch_credits([entry["file"] for entry in resolved.values()]) if resolved else {}
             time.sleep(pause)
 
-    manifest_path.write_text(json.dumps(dict(sorted(manifest.items())), indent=1) + "\n")
-    (photos_dir / "credits.json").write_text(json.dumps(dict(sorted(credit_entries.items())), indent=1) + "\n")
-    credits_path.write_text(render_credits(credit_entries))
+            for title in batch:
+                if title not in resolved:
+                    failed.append(title)
+                    continue
+                try:
+                    webp = to_webp(download(resolved[title]["thumbnail"]))
+                except Exception as error:
+                    print(f"FAILED {title}: {error}", file=sys.stderr)
+                    failed.append(title)
+                    continue
+                filename = f"{slugify(title)}.webp"
+                (photos_dir / filename).write_bytes(webp)
+                manifest[title] = filename
+                credit_entries[title] = credits[resolved[title]["file"]]
+                time.sleep(pause)
+
+            save()
+            print(f"{min(start + BATCH_SIZE, len(pending))}/{len(pending)} processed", flush=True)
+    finally:
+        save()
 
     total_bytes = sum((photos_dir / name).stat().st_size for name in manifest.values())
     print(f"{len(manifest)} photos, {total_bytes / 1024 / 1024:.1f} MB, {len(failed)} failed")

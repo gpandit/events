@@ -1,5 +1,6 @@
 import json
 import tempfile
+import urllib.error
 import unittest
 from io import BytesIO
 from pathlib import Path
@@ -70,6 +71,26 @@ class FetchQuizPhotosTest(unittest.TestCase):
             _, _, _, download = self.run_fetch(["albert_einstein"], directory)
 
             download.assert_not_called()
+
+    def test_fetch_waits_for_retry_after_then_succeeds(self):
+        throttled = urllib.error.HTTPError("https://x", 429, "Too Many Requests", {"Retry-After": "7"}, None)
+        ok = mock.MagicMock()
+        ok.__enter__.return_value.read.return_value = b"data"
+
+        with mock.patch.object(fetcher.urllib.request, "urlopen", side_effect=[throttled, ok]), \
+                mock.patch.object(fetcher.time, "sleep") as sleep:
+            self.assertEqual(b"data", fetcher.fetch("https://x"))
+
+        sleep.assert_called_once_with(7)
+
+    def test_fetch_does_not_retry_a_missing_file(self):
+        missing = urllib.error.HTTPError("https://x", 404, "Not Found", {}, None)
+
+        with mock.patch.object(fetcher.urllib.request, "urlopen", side_effect=missing) as urlopen:
+            with self.assertRaises(urllib.error.HTTPError):
+                fetcher.fetch("https://x")
+
+        self.assertEqual(1, urlopen.call_count)
 
     def test_strip_markup_removes_tags_and_entities(self):
         self.assertEqual("A & B", fetcher.strip_markup('<b>A</b> &amp; B'))
