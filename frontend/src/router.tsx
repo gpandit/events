@@ -12,7 +12,7 @@ const RedirectToOrganizerEvents = ({pastEvents}: {pastEvents?: boolean}) => {
     return <Navigate to={`/events/${organizerId}/${organizerSlug}${suffix}`} replace={true} />;
 };
 
-const organizerPageRoutes = (prefix: string): RouteObject[] => [
+const organizerPageRoutes = (prefix: string, accountSegment: string): RouteObject[] => [
     {
         path: `${prefix}/events`,
         loader: publicOrganizerRouteLoader,
@@ -86,7 +86,7 @@ const organizerPageRoutes = (prefix: string): RouteObject[] => [
         errorElement: <ErrorPage />,
     },
     {
-        path: `${prefix}/account`,
+        path: `${prefix}/${accountSegment}`,
         loader: publicOrganizerRouteLoader,
         async lazy() {
             const PublicCustomerAccount = await import("./components/layouts/PublicCustomerAccount");
@@ -716,8 +716,8 @@ export const router: RouteObject[] = [
         element: <RedirectToOrganizerEvents pastEvents/>,
         errorElement: <ErrorPage />,
     },
-    ...organizerPageRoutes("/events/:organizerId/:organizerSlug"),
-    ...organizerPageRoutes(""),
+    ...organizerPageRoutes("/events/:organizerId/:organizerSlug", "account"),
+    ...organizerPageRoutes("", "my-account"),
     {
         path: "/privacy-policy",
         async lazy() {

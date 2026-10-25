@@ -27,7 +27,7 @@ export const organizerHomepagePath = (organizer: Organizer) => {
 }
 
 export const organizerAccountPath = (organizer: Organizer) => {
-    return `${organizerBasePath(organizer)}/account`;
+    return isDefaultOrganizer(organizer?.id) ? '/my-account' : `${organizerBasePath(organizer)}/account`;
 }
 
 export const organizerResourcesPath = (organizer: Organizer, tab?: 'colouring-pages') => {
