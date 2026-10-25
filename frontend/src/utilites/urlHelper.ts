@@ -13,29 +13,50 @@ export const eventHomepagePath = (event: Event) => {
     return `/event/${event?.id}/${event?.slug}`;
 }
 
+export const isDefaultOrganizer = (organizerId?: IdParam) => {
+    const defaultOrganizerId = getConfig('VITE_DEFAULT_ORGANIZER_ID');
+    return Boolean(defaultOrganizerId) && organizerId !== undefined && String(organizerId) === String(defaultOrganizerId);
+}
+
+export const organizerBasePath = (organizer: Organizer) => {
+    return isDefaultOrganizer(organizer?.id) ? '' : `/events/${organizer?.id}/${organizer?.slug}`;
+}
+
 export const organizerHomepagePath = (organizer: Organizer) => {
-    return `/events/${organizer?.id}/${organizer?.slug}`;
+    return organizerBasePath(organizer) || '/';
 }
 
 export const organizerAccountPath = (organizer: Organizer) => {
-    return `${organizerHomepagePath(organizer)}/account`;
+    return isDefaultOrganizer(organizer?.id) ? '/my-account' : `${organizerBasePath(organizer)}/account`;
 }
 
 export const organizerResourcesPath = (organizer: Organizer, tab?: 'colouring-pages') => {
-    const base = `${organizerHomepagePath(organizer)}/resources`;
+    const base = `${organizerBasePath(organizer)}/resources`;
     return tab ? `${base}/${tab}` : base;
 }
 
 export const organizerPuzzlesPath = (organizer: Organizer) => {
-    return `${organizerHomepagePath(organizer)}/puzzles`;
+    return `${organizerBasePath(organizer)}/puzzles`;
 }
 
 export const organizerShopPath = (organizer: Organizer) => {
-    return `${organizerHomepagePath(organizer)}/shop`;
+    return `${organizerBasePath(organizer)}/shop`;
+}
+
+export const organizerAboutPath = (organizer: Organizer) => {
+    return `${organizerBasePath(organizer)}/about`;
+}
+
+export const organizerInstagramPath = (organizer: Organizer) => {
+    return `${organizerBasePath(organizer)}/instagram`;
+}
+
+export const organizerStoriesPath = (organizer: Organizer) => {
+    return `${organizerBasePath(organizer)}/stories`;
 }
 
 export const organizerEventsPath = (organizer: Organizer) => {
-    return `${organizerHomepagePath(organizer)}/events`;
+    return `${organizerBasePath(organizer)}/events`;
 }
 
 export const organizerHomepageUrl = (organizer: Organizer) => {

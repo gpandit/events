@@ -44,7 +44,7 @@ Blank fields fall back to neutral defaults. The team section and Instagram links
 2. Fill in the Site Designer pages above.
 3. Set the environment variables and run `php artisan migrate`.
 4. Review the legal pages (privacy policy, terms, cookie policy) with the school's own details.
-5. Set `VITE_DEFAULT_ORGANIZER_ID` to the organizer so the root URL opens its site.
+5. Set `VITE_DEFAULT_ORGANIZER_ID` to the organizer so the root URL opens its site. The default organizer's pages use clean URLs (`/resources`, `/shop`, `/puzzles`, `/about` ...); old `/events/<id>/<slug>/...` links redirect to them.
 
 ## 4. School shop
 
