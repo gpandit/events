@@ -4,7 +4,7 @@ import {useParams} from "react-router";
 import {useGetOrganizerSettings} from "../../../../queries/useGetOrganizerSettings.ts";
 import {useUpdateOrganizerSettings} from "../../../../mutations/useUpdateOrganizerSettings.ts";
 import {useFormErrorResponseHandler} from "../../../../hooks/useFormErrorResponseHandler.tsx";
-import {HomepageThemeSettings, IdParam, OrganizerSettings} from "../../../../types.ts";
+import {HomepageThemeSettings, IdParam, OrganizerSettings, TeamMember} from "../../../../types.ts";
 import {showSuccess} from "../../../../utilites/notifications.tsx";
 import {t} from "@lingui/macro";
 import {useForm} from "@mantine/form";
@@ -27,6 +27,7 @@ import {LoadingMask} from "../../../common/LoadingMask";
 import {CustomSelect} from "../../../common/CustomSelect";
 import {GET_ORGANIZER_QUERY_KEY, useGetOrganizer} from "../../../../queries/useGetOrganizer.ts";
 import {ImageUploadDropzone} from "../../../common/ImageUploadDropzone";
+import {TeamMembersEditor} from "./TeamMembersEditor";
 import {OrganizerPreviewPage, organizerPreviewPath} from "../../../../utilites/urlHelper.ts";
 import {queryClient} from "../../../../utilites/queryClient.ts";
 import {GET_ORGANIZER_PUBLIC_QUERY_KEY} from "../../../../queries/useGetOrganizerPublic.ts";
@@ -58,9 +59,11 @@ const OrganizerHomepageDesigner = () => {
     const [page, setPage] = useState<OrganizerPreviewPage>('home');
     const [lastCoverId, setLastCoverId] = useState<IdParam | null>(null);
     const [lastLogoId, setLastLogoId] = useState<IdParam | null>(null);
+    const [lastTeamImagesKey, setLastTeamImagesKey] = useState('');
 
     const existingLogo = organizerData?.images?.find((image) => image.type === 'ORGANIZER_LOGO');
     const existingCover = organizerData?.images?.find((image) => image.type === 'ORGANIZER_COVER');
+    const existingGroupPhoto = organizerData?.images?.find((image) => image.type === 'TEAM_GROUP_PHOTO');
 
     const form = useForm<FormValues>({
         initialValues: {
@@ -82,6 +85,12 @@ const OrganizerHomepageDesigner = () => {
 
     const formErrorHandle = useFormErrorResponseHandler();
 
+    const teamImagesKey = [
+        existingGroupPhoto?.id,
+        ...(form.values.homepage_theme_settings.team_members ?? []).map((member) => member.image_id),
+        ...(form.values.homepage_theme_settings.technical_team_members ?? []).map((member) => member.image_id),
+    ].filter(Boolean).join('-');
+
     useEffect(() => {
         if (organizerSettingsQuery?.isFetched && organizerSettingsQuery?.data) {
             const settings = organizerSettingsQuery.data;
@@ -93,9 +102,11 @@ const OrganizerHomepageDesigner = () => {
         }
     }, [organizerSettingsQuery.isFetched, organizerSettingsQuery.data]);
 
-    const buildPreviewSrc = (previewPage: OrganizerPreviewPage, coverId?: IdParam, logoId?: IdParam) => {
+    const buildPreviewSrc = (previewPage: OrganizerPreviewPage, coverId?: IdParam, logoId?: IdParam, teamImages = '') => {
         const path = organizerPreviewPath(organizerId, previewPage);
-        return coverId || logoId ? `${path}?cover_image_id=${coverId}&logo_image_id=${logoId}` : path;
+        return coverId || logoId || teamImages
+            ? `${path}?cover_image_id=${coverId}&logo_image_id=${logoId}&team_images=${teamImages}`
+            : path;
     };
 
     useEffect(() => {
@@ -109,7 +120,7 @@ const OrganizerHomepageDesigner = () => {
         setPage(nextPage);
         setIframeLoaded(false);
         lastSentSettings.current = null;
-        setIframeSrc(buildPreviewSrc(nextPage, existingCover?.id, existingLogo?.id));
+        setIframeSrc(buildPreviewSrc(nextPage, existingCover?.id, existingLogo?.id, teamImagesKey));
     };
 
     const handleSubmit = (values: FormValues) => {
@@ -170,13 +181,14 @@ const OrganizerHomepageDesigner = () => {
     }, [iframeLoaded, form.values, existingLogo?.url, existingCover?.url]);
 
     useEffect(() => {
-        if (((existingCover?.id !== lastCoverId) || existingLogo?.id !== lastLogoId) && iframeSrc) {
+        if (((existingCover?.id !== lastCoverId) || existingLogo?.id !== lastLogoId || teamImagesKey !== lastTeamImagesKey) && iframeSrc) {
             setLastCoverId(existingCover?.id);
             setLastLogoId(existingLogo?.id);
-            setIframeSrc(buildPreviewSrc(page, existingCover?.id, existingLogo?.id));
+            setLastTeamImagesKey(teamImagesKey);
+            setIframeSrc(buildPreviewSrc(page, existingCover?.id, existingLogo?.id, teamImagesKey));
             setIframeLoaded(false);
         }
-    }, [existingCover?.id, existingLogo?.id]);
+    }, [existingCover?.id, existingLogo?.id, teamImagesKey]);
 
     const handleImageChange = () => {
         queryClient.invalidateQueries({
@@ -206,10 +218,10 @@ const OrganizerHomepageDesigner = () => {
         });
     };
 
-    const updateTeamMembers = (value: string) => {
+    const updateTeamField = (field: 'team_members' | 'technical_team_members', members: TeamMember[]) => {
         form.setFieldValue('homepage_theme_settings', {
             ...form.values.homepage_theme_settings,
-            team_members: value.split('\n').slice(0, MAX_TEAM_MEMBERS),
+            [field]: members,
         });
     };
 
@@ -442,13 +454,53 @@ const OrganizerHomepageDesigner = () => {
                                             onChange={(event) => updateHeroField('team_heading', event.currentTarget.value)}
                                             maxLength={100}
                                         />
-                                        <Textarea
+                                        <div>
+                                            <Group justify={'space-between'} mb="xs">
+                                                <Text fw={500} size="sm">{t`Group Photo`}</Text>
+                                                <Tooltip
+                                                    label={t`We recommend a wide photo of at least 1200px, and a maximum file size of 5MB`}>
+                                                    <IconHelp size={16} style={{color: 'var(--mantine-color-gray-6)'}}/>
+                                                </Tooltip>
+                                            </Group>
+                                            <ImageUploadDropzone
+                                                imageType="TEAM_GROUP_PHOTO"
+                                                entityId={organizerId}
+                                                onUploadSuccess={handleImageChange}
+                                                onDeleteSuccess={handleImageChange}
+                                                existingImageData={{
+                                                    url: existingGroupPhoto?.url,
+                                                    id: existingGroupPhoto?.id,
+                                                }}
+                                                helpText={t`Group photo is displayed above the team members`}
+                                                displayMode="compact"
+                                            />
+                                        </div>
+                                        <TeamMembersEditor
                                             label={t`Team Members`}
-                                            description={t`One name per line, up to 12. Leave blank to hide the team section`}
-                                            value={(form.values.homepage_theme_settings.team_members || []).join('\n')}
-                                            onChange={(event) => updateTeamMembers(event.currentTarget.value)}
-                                            autosize
-                                            minRows={4}
+                                            description={t`Up to 12 people. Leave empty to hide the team section`}
+                                            members={form.values.homepage_theme_settings.team_members || []}
+                                            images={organizerData?.images || []}
+                                            organizerId={organizerId}
+                                            maxMembers={MAX_TEAM_MEMBERS}
+                                            onChange={(members) => updateTeamField('team_members', members)}
+                                            onImagesChange={handleImageChange}
+                                        />
+                                        <TextInput
+                                            label={t`Technical Team Heading`}
+                                            placeholder={t`Technical Team`}
+                                            value={form.values.homepage_theme_settings.technical_team_heading || ''}
+                                            onChange={(event) => updateHeroField('technical_team_heading', event.currentTarget.value)}
+                                            maxLength={100}
+                                        />
+                                        <TeamMembersEditor
+                                            label={t`Technical Team Members`}
+                                            description={t`Up to 12 people. Leave empty to hide the technical team section`}
+                                            members={form.values.homepage_theme_settings.technical_team_members || []}
+                                            images={organizerData?.images || []}
+                                            organizerId={organizerId}
+                                            maxMembers={MAX_TEAM_MEMBERS}
+                                            onChange={(members) => updateTeamField('technical_team_members', members)}
+                                            onImagesChange={handleImageChange}
                                         />
                                     </Stack>
                                 </fieldset>

@@ -1,15 +1,13 @@
 import {useEffect} from "react";
 import {t} from "@lingui/macro";
-import {IconUser} from "@tabler/icons-react";
 import {Organizer} from "../../../types.ts";
 import {OrganizerPageShell} from "../OrganizerHomepage/OrganizerPageShell";
 import {OrganizerProfileCard} from "../OrganizerHomepage/OrganizerProfileCard";
+import {TeamSection} from "./TeamSection.tsx";
 import {VolunteerForm} from "./VolunteerForm";
 import {validateThemeSettings} from "../../../utilites/themeUtils.ts";
 import {getOrganizerContactEmail} from "../../../utilites/organizerContent.ts";
 import classes from './PublicOrganizerAbout.module.scss';
-
-const TECHNICAL_CONTACT = 'Guru Pandit';
 
 interface OrganizerAboutPageProps {
     organizer: Organizer;
@@ -19,6 +17,8 @@ export const OrganizerAboutPage = ({organizer}: OrganizerAboutPageProps) => {
     const themeSettings = validateThemeSettings(organizer.settings?.homepage_theme_settings);
     const contactEmail = getOrganizerContactEmail(organizer);
     const teamMembers = themeSettings.team_members ?? [];
+    const technicalTeamMembers = themeSettings.technical_team_members ?? [];
+    const images = organizer.images ?? [];
 
     useEffect(() => {
         if (window.location.hash === '#get-in-touch') {
@@ -33,29 +33,20 @@ export const OrganizerAboutPage = ({organizer}: OrganizerAboutPageProps) => {
                 <p className={classes.contactEmail}>
                     {t`Contact us:`} <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
                 </p>
-                <p className={classes.contactEmail}>
-                    {t`Technical Contact:`} {TECHNICAL_CONTACT}
-                </p>
             </OrganizerProfileCard>
 
-            {teamMembers.length > 0 && (
-                <section className={classes.teamSection}>
-                    <h2 className={classes.heading}>{themeSettings.team_heading || t`Meet the team`}</h2>
-                    <div className={classes.teamGrid}>
-                        {teamMembers.map((memberName, position) => (
-                            <div key={position} className={classes.member}>
-                                <div className={classes.photo}>
-                                    <IconUser size={48}/>
-                                </div>
-                                <div className={classes.memberDetails}>
-                                    <span className={classes.memberName}>{memberName}</span>
-                                    <span className={classes.memberRole}>{t`Parent`}</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            )}
+            <TeamSection
+                heading={themeSettings.team_heading || t`Meet the team`}
+                members={teamMembers}
+                images={images}
+                groupPhoto={images.find((image) => image.type === 'TEAM_GROUP_PHOTO')}
+            />
+
+            <TeamSection
+                heading={themeSettings.technical_team_heading || t`Technical Team`}
+                members={technicalTeamMembers}
+                images={images}
+            />
 
             <section id="get-in-touch" className={classes.volunteerSection}>
                 <h2 className={classes.heading}>

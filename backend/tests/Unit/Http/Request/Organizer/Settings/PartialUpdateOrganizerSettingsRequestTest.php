@@ -149,7 +149,9 @@ class PartialUpdateOrganizerSettingsRequestTest extends TestCase
                 'upcoming_heading' => 'What is on',
                 'about_text' => 'We support the school.',
                 'team_heading' => 'Our team',
-                'team_members' => ['Ana', 'Ben'],
+                'team_members' => [['name' => 'Ana'], ['name' => 'Ben', 'image_id' => 12]],
+                'technical_team_heading' => 'Technical Team',
+                'technical_team_members' => [['name' => 'Guru Pandit']],
                 'contact_heading' => 'Get in touch',
                 'contact_intro' => 'Say hello.',
                 'contact_email' => 'pta@example.com',
@@ -166,12 +168,14 @@ class PartialUpdateOrganizerSettingsRequestTest extends TestCase
             'homepage_theme_settings' => [
                 'contact_email' => 'not-an-email',
                 'instagram_handle' => '@bad handle',
-                'team_members' => array_fill(0, 13, 'Name'),
+                'team_members' => array_fill(0, 13, ['name' => 'Name']),
+                'technical_team_members' => [['name' => '']],
             ],
         ], PartialUpdateOrganizerSettingsRequest::rules());
 
         $this->assertTrue($validator->errors()->has('homepage_theme_settings.contact_email'));
         $this->assertTrue($validator->errors()->has('homepage_theme_settings.instagram_handle'));
         $this->assertTrue($validator->errors()->has('homepage_theme_settings.team_members'));
+        $this->assertTrue($validator->errors()->has('homepage_theme_settings.technical_team_members.0.name'));
     }
 }
