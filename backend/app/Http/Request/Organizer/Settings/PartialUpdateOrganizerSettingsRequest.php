@@ -5,10 +5,16 @@ namespace HiEvents\Http\Request\Organizer\Settings;
 use HiEvents\DomainObjects\Enums\AttendeeDetailsCollectionMethod;
 use HiEvents\DomainObjects\Enums\HomepageBackgroundType;
 use HiEvents\DomainObjects\Enums\HomepageFontFamily;
+use HiEvents\DomainObjects\Enums\ImageType;
 use HiEvents\DomainObjects\Enums\OrganizerHomepageVisibility;
 use HiEvents\DomainObjects\Enums\TrackingPixelProvider;
+use HiEvents\DomainObjects\Generated\ImageDomainObjectAbstract;
+use HiEvents\DomainObjects\ImageDomainObject;
+use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\Http\Request\BaseRequest;
+use HiEvents\Repository\Interfaces\ImageRepositoryInterface;
 use HiEvents\Validators\Rules\RulesHelper;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Validation\Rule;
 
 class PartialUpdateOrganizerSettingsRequest extends BaseRequest
@@ -16,6 +22,7 @@ class PartialUpdateOrganizerSettingsRequest extends BaseRequest
     public function after(): array
     {
         return [
+            fn ($validator) => $this->validateTeamPhotosBelongToOrganizer($validator),
             function ($validator) {
                 $pixels = $this->input('tracking_pixels', []);
                 if (! is_array($pixels)) {
@@ -57,6 +64,38 @@ class PartialUpdateOrganizerSettingsRequest extends BaseRequest
                 }
             },
         ];
+    }
+
+    private function validateTeamPhotosBelongToOrganizer(Validator $validator): void
+    {
+        $imageIds = [];
+        foreach (['team_members', 'technical_team_members'] as $listKey) {
+            foreach ((array) $this->input("homepage_theme_settings.{$listKey}", []) as $position => $member) {
+                if (is_array($member) && isset($member['image_id']) && is_numeric($member['image_id'])) {
+                    $imageIds["homepage_theme_settings.{$listKey}.{$position}.image_id"] = (int) $member['image_id'];
+                }
+            }
+        }
+
+        if ($imageIds === []) {
+            return;
+        }
+
+        $ownedIds = app(ImageRepositoryInterface::class)->findWhereIn(
+            ImageDomainObjectAbstract::ID,
+            array_values($imageIds),
+            [
+                ImageDomainObjectAbstract::ENTITY_TYPE => OrganizerDomainObject::class,
+                ImageDomainObjectAbstract::ENTITY_ID => (int) $this->route('organizer_id'),
+                ImageDomainObjectAbstract::TYPE => ImageType::TEAM_MEMBER_PHOTO->name,
+            ],
+        )->map(fn (ImageDomainObject $image) => $image->getId());
+
+        foreach ($imageIds as $field => $imageId) {
+            if (! $ownedIds->contains($imageId)) {
+                $validator->errors()->add($field, __('This photo does not belong to this organizer.'));
+            }
+        }
     }
 
     public static function rules(): array
@@ -118,10 +157,12 @@ class PartialUpdateOrganizerSettingsRequest extends BaseRequest
             'homepage_theme_settings.team_heading' => ['nullable', 'string', 'max:100'],
             'homepage_theme_settings.team_members' => ['nullable', 'array', 'max:12'],
             'homepage_theme_settings.team_members.*.name' => ['required', 'string', 'max:100'],
+            'homepage_theme_settings.team_members.*.role' => ['nullable', 'string', 'max:100'],
             'homepage_theme_settings.team_members.*.image_id' => ['nullable', 'integer'],
             'homepage_theme_settings.technical_team_heading' => ['nullable', 'string', 'max:100'],
             'homepage_theme_settings.technical_team_members' => ['nullable', 'array', 'max:12'],
             'homepage_theme_settings.technical_team_members.*.name' => ['required', 'string', 'max:100'],
+            'homepage_theme_settings.technical_team_members.*.role' => ['nullable', 'string', 'max:100'],
             'homepage_theme_settings.technical_team_members.*.image_id' => ['nullable', 'integer'],
             'homepage_theme_settings.contact_heading' => ['nullable', 'string', 'max:100'],
             'homepage_theme_settings.contact_intro' => ['nullable', 'string', 'max:300'],

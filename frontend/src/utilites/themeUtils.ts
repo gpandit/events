@@ -204,7 +204,11 @@ export function getDefaultThemeSettings(): HomepageThemeSettings {
 
 const cleanTeamMembers = (members: TeamMember[] | undefined): TeamMember[] | undefined =>
     members
-        ?.map((member) => ({...member, name: member.name.trim()}))
+        ?.map(({role, ...member}) => ({
+            ...member,
+            name: member.name.trim(),
+            ...(role?.trim() ? {role: role.trim()} : {}),
+        }))
         .filter((member) => member.name);
 
 export function validateThemeSettings(

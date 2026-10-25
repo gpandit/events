@@ -87,6 +87,7 @@ export interface ColorTheme {
 
 export interface TeamMember {
     name: string;
+    role?: string;
     image_id?: IdParam;
 }
 

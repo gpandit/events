@@ -880,7 +880,7 @@ msgstr "وصف موجز للفعالية سيظهر في نتائج محركات
 msgid "A short description of your organizer that will be displayed to your users."
 msgstr "وصف موجز لجهتك المنظمة سيُعرض لمستخدميك."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:384
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:387
 msgid "A short line about what you do"
 msgstr "سطر قصير عمّا تقوم به"
 
@@ -928,15 +928,15 @@ msgstr "مهجور"
 msgid "About"
 msgstr "حول"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:265
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:268
 msgid "About & Contact"
 msgstr "حول والتواصل"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:660
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:663
 msgid "About Page Preview"
 msgstr "معاينة صفحة من نحن"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:437
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:440
 msgid "About Text"
 msgstr "نص من نحن"
 
@@ -944,10 +944,10 @@ msgstr "نص من نحن"
 msgid "About the tickets"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:111
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:170
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:129
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:443
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:113
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:172
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:132
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:446
 msgid "About Us"
 msgstr "من نحن"
 
@@ -1285,7 +1285,7 @@ msgstr ""
 msgid "Add Option"
 msgstr "إضافة خيار"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:146
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:154
 msgid "Add person"
 msgstr "إضافة شخص"
 
@@ -1681,7 +1681,7 @@ msgstr "جميع المناسبات"
 msgid "All Products"
 msgstr "جميع المنتجات"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:183
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:186
 msgid "All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
@@ -2678,7 +2678,7 @@ msgid "Background Color"
 msgstr "لون الخلفية"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:234
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:610
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:613
 msgid "Background Type"
 msgstr "نوع الخلفية"
 
@@ -2724,7 +2724,7 @@ msgstr "لافتة"
 msgid "Banner content must be 200 characters or less"
 msgstr "يجب ألا يتجاوز محتوى اللافتة 200 حرف"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:358
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:361
 msgid "Banner Type"
 msgstr "نوع اللافتة"
 
@@ -2949,12 +2949,12 @@ msgstr "نص الزر"
 msgid "Button Label"
 msgstr "نص الزر"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:401
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:404
 msgid "Button Link"
 msgstr "رابط الزر"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:271
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:393
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:396
 msgid "Button Text"
 msgstr "نص الزر"
 
@@ -3584,7 +3584,7 @@ msgstr "إعدادات الدفع"
 msgid "Children may submit original stories and poems and play our puzzles. By submitting work you confirm it is entirely your own and that you have the right to share it. Submissions are reviewed by our team before anything is published, and we may decline or remove any work at our discretion."
 msgstr "يمكن للأطفال تقديم قصص وقصائد أصلية واللعب بألغازنا. بتقديم عمل ما فإنك تؤكد أنه من تأليفك بالكامل وأن لديك الحق في مشاركته. يراجع فريقنا الأعمال المقدمة قبل نشر أي شيء، ويجوز لنا رفض أي عمل أو حذفه وفق تقديرنا."
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:137
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:140
 msgid "Children's Stories"
 msgstr "قصص الأطفال"
 
@@ -3609,7 +3609,7 @@ msgid "Choose 1 seat"
 msgstr ""
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:224
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:600
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:603
 msgid "Choose a color for your background"
 msgstr "اختر لونًا لخلفيتك"
 
@@ -3853,7 +3853,7 @@ msgstr "إغلاق"
 msgid "Close"
 msgstr "إغلاق"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:124
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:126
 msgid "Close menu"
 msgstr ""
 
@@ -3942,7 +3942,7 @@ msgid "Collection"
 msgstr "الاستلام"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:222
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:598
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:601
 msgid "Color"
 msgstr "اللون"
 
@@ -3988,7 +3988,7 @@ msgid "Colouring pages"
 msgstr "صفحات التلوين"
 
 #: src/components/layouts/Admin/index.tsx:27
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:62
 #: src/components/layouts/OrganizerLayout/index.tsx:121
 msgid "Colouring Pages"
 msgstr "صفحات التلوين"
@@ -4308,16 +4308,16 @@ msgstr "اتصل بنا"
 msgid "Contact {0}"
 msgstr "اتصل بـ {0}"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:558
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:561
 msgid "Contact Details"
 msgstr "بيانات التواصل"
 
 #: src/components/forms/OrganizerForm/index.tsx:35
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:565
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:568
 msgid "Contact Email"
 msgstr "بريد التواصل الإلكتروني"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:172
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:175
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
@@ -4400,7 +4400,7 @@ msgstr "تحكم في من يدخل لهذا التاريخ"
 msgid "Control who gets in, and when"
 msgstr "تحكم في من يدخل، ومتىd#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:165
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:168
 #: src/components/routes/legal/CookiePolicy/index.tsx:8
 msgid "Cookie Policy"
 msgstr "سياسة ملفات تعريف الارتباط"
@@ -4586,7 +4586,7 @@ msgid "Cover"
 msgstr "الغلاف"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:187
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:286
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:289
 msgid "Cover Image"
 msgstr "صورة الغلاف"
 
@@ -4598,7 +4598,7 @@ msgstr "تمت إضافة صورة الغلاف"
 msgid "Cover image will be displayed at the top of your event page"
 msgstr "ستُعرض صورة الغلاف أعلى صفحة فعاليتك"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:301
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:304
 msgid "Cover image will be displayed at the top of your organizer page"
 msgstr "ستُعرض صورة الغلاف أعلى صفحة جهتك المنظمة"
 
@@ -4897,10 +4897,10 @@ msgid "Creative Colouring"
 msgstr "التلوين الإبداعي"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:42
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:98
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:155
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:100
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:157
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:13
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:143
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:146
 msgid "Creative Corner"
 msgstr "ركن الإبداع"
 
@@ -5016,7 +5016,7 @@ msgstr "خصص الصفحة الرئيسية للفعالية ورسائل ال�
 msgid "Customize the layout, colors, and branding of your event homepage."
 msgstr "خصص تخطيط وألوان وهوية صفحة فعاليتك الرئيسية."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:257
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:260
 msgid "Customize the look and content of your public pages"
 msgstr "خصص مظهر ومحتوى صفحاتك العامة"
 
@@ -5451,7 +5451,7 @@ msgstr "تم إلغاء طلب الحذف"
 msgid "Deletion Requests"
 msgstr "طلبات الحذف"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:162
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:165
 #: src/components/routes/legal/DeliveryPolicy/index.tsx:8
 msgid "Delivery Policy"
 msgstr "سياسة التسليم"
@@ -5529,7 +5529,7 @@ msgstr "ألم تستلم الرمز؟"
 msgid "Different location"
 msgstr "موقع مختلف"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:368
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:371
 msgid "Direct link to an .mp4 video file"
 msgstr "رابط مباشر لملف فيديو .mp4"
 
@@ -6645,9 +6645,9 @@ msgstr "تم تحديث الفعالية"
 
 #: src/components/common/AdminAccountsTable/index.tsx:83
 #: src/components/layouts/Admin/index.tsx:18
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:85
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:139
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:87
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:141
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:124
 #: src/components/layouts/OrganizerLayout/index.tsx:112
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:152
 #: src/components/routes/admin/Attribution/index.tsx:195
@@ -7098,7 +7098,7 @@ msgid "Failed to save VAT settings. Please try again."
 msgstr "فشل حفظ إعدادات ضريبة القيمة المضافة. يرجى المحاولة مرة أخرى."
 
 #: src/components/common/ContactOrganizerModal/index.tsx:57
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:46
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:49
 msgid "Failed to send message. Please try again."
 msgstr "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
 
@@ -7555,7 +7555,7 @@ msgstr "شعار أصدقاء ريبتون البرشاء"
 
 #: src/components/common/ErrorDisplay/index.tsx:88
 #: src/components/layouts/AuthLayout/index.tsx:35
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:100
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:103
 msgid "Friends of School"
 msgstr "أصدقاء المدرسة"
 
@@ -7679,12 +7679,12 @@ msgstr ""
 msgid "Get Directions"
 msgstr "الحصول على الاتجاهات"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:529
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:532
 msgid "Get in Touch Section"
 msgstr "قسم التواصل"
 
 #: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:53
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:537
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:540
 msgid "Get involved - volunteer, sponsor or say hello"
 msgstr "شاركنا - تطوع أو ارعَ أو تواصل معنا"
 
@@ -7821,11 +7821,11 @@ msgstr "المبيعات الإجمالية"
 msgid "Gross Sales"
 msgstr "المبيعات الإجمالية"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:474
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:477
 msgid "Group Photo"
 msgstr "الصورة الجماعية"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:489
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:492
 msgid "Group photo is displayed above the team members"
 msgstr "تُعرض الصورة الجماعية فوق أعضاء الفريق"
 
@@ -7858,8 +7858,8 @@ msgstr "هل لديك رمز ترويجي؟"
 msgid "Head"
 msgstr ""
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:375
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:536
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:378
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:539
 msgid "Heading"
 msgstr "العنوان"
 
@@ -7926,7 +7926,7 @@ msgstr "إليك مكوّن React الذي يمكنك استخدامه لتضم�
 msgid "Here is your affiliate link"
 msgstr "إليك رابط الشريك التابع الخاص بك"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:333
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:336
 msgid "Hero Banner"
 msgstr "لافتة البطل"
 
@@ -8106,10 +8106,10 @@ msgstr ""
 msgid "Hold back {0} seats on {dateCount} dates"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:82
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:132
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:118
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:264
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:84
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:134
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:267
 msgid "Home"
 msgstr "الرئيسية"
 
@@ -8122,11 +8122,11 @@ msgid "Homepage Designer"
 msgstr "مصمم الصفحة الرئيسية"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:311
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:660
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:663
 msgid "Homepage Preview"
 msgstr "معاينة الصفحة الرئيسية"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:417
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:420
 msgid "Homepage Text"
 msgstr "نص الصفحة الرئيسية"
 
@@ -8153,7 +8153,7 @@ msgstr ""
 msgid "House right"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:70
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:73
 msgid "How can we help?"
 msgstr "كيف يمكننا مساعدتك؟"
 
@@ -8343,7 +8343,7 @@ msgstr "إذا كانت لديك أسئلة حول سياسة الخصوصية �
 msgid "If you were charged twice or charged the wrong amount, contact us and we will refund the difference in full."
 msgstr "إذا تم خصم المبلغ منك مرتين أو خصم مبلغ خاطئ، تواصل معنا وسنقوم برد الفرق بالكامل."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:347
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:350
 msgid "Image"
 msgstr "صورة"
 
@@ -8360,7 +8360,7 @@ msgid "Image URL"
 msgstr "رابط الصورة"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:181
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:280
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:283
 msgid "Images"
 msgstr "الصور"
 
@@ -8513,7 +8513,7 @@ msgstr "إدراج صورة"
 msgid "Insert Liquid Token"
 msgstr "إدراج رمز Liquid"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:133
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:136
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:53
 msgid "Instagram"
 msgstr "إنستغرام"
@@ -8522,7 +8522,7 @@ msgstr "إنستغرام"
 msgid "Instagram feed"
 msgstr "تغذية إنستغرام"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:573
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:576
 msgid "Instagram Handle"
 msgstr "معرّف إنستغرام"
 
@@ -8535,7 +8535,7 @@ msgstr "التكاملات"
 msgid "Internal notes on the attendee's ticket"
 msgstr "ملاحظات داخلية على تذكرة الحاضر"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:543
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:546
 msgid "Introduction"
 msgstr "مقدمة"
 
@@ -8909,11 +8909,11 @@ msgstr ""
 msgid "Leave “from” as today to start right away."
 msgstr "اترك \"من\" كاليوم للبدء فورًا."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:402
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:405
 msgid "Leave blank to link to your events page"
 msgstr "اتركه فارغًا للربط بصفحة فعالياتك"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:444
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:447
 msgid "Leave blank to show your organizer description"
 msgstr "اتركه فارغًا لعرض وصف جهتك المنظمة"
 
@@ -8963,7 +8963,7 @@ msgstr ""
 msgid "Left wing"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:151
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:154
 msgid "Legal"
 msgstr "قانوني"
 
@@ -9128,7 +9128,7 @@ msgstr "جارٍ تحميل الويب هوكس"
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/index.tsx:48
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboardPanel.tsx:62
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:40
-#: src/components/layouts/PublicParentalConsent/index.tsx:141
+#: src/components/layouts/PublicParentalConsent/index.tsx:142
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
@@ -9183,7 +9183,7 @@ msgid "Logging in"
 msgstr "جارٍ تسجيل الدخول"
 
 #: src/components/routes/event/TicketDesigner/index.tsx:142
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:308
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:311
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:26
 msgid "Logo"
 msgstr "الشعار"
@@ -9196,7 +9196,7 @@ msgstr "الشعار والغلاف"
 msgid "Logo and cover image for your organizer"
 msgstr "شعار وصورة غلاف لجهتك المنظمة"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:322
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:325
 msgid "Logo will be displayed in the header"
 msgstr "سيُعرض الشعار في الرأس"
 
@@ -9424,14 +9424,14 @@ msgid "Medium"
 msgstr "متوسط"
 
 #: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:39
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:467
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:470
 msgid "Meet the team"
 msgstr "تعرّف على الفريق"
 
 #: src/components/common/AttendeeTable/index.tsx:161
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:163
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:75
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:78
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:93
 #: src/components/modals/SendMessageModal/index.tsx:446
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:60
@@ -9684,9 +9684,9 @@ msgid "Music"
 msgstr "موسيقى"
 
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:165
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:114
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:177
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:146
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:116
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:179
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
 msgid "My Account"
 msgstr "حسابي"
 
@@ -10911,7 +10911,7 @@ msgstr "فتح تسجيل الدخول"
 msgid "Open Check-In Page"
 msgstr "فتح صفحة تسجيل الدخول"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:124
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:126
 msgid "Open menu"
 msgstr ""
 
@@ -11429,8 +11429,8 @@ msgid "Paper"
 msgstr ""
 
 #: src/components/layouts/PublicOrganizerAbout/TeamSection.tsx:37
-msgid "Parent"
-msgstr "ولي أمر"
+#~ msgid "Parent"
+#~ msgstr "ولي أمر"
 
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:24
 msgid "Parent agreed"
@@ -11941,7 +11941,7 @@ msgstr "يرجى إضافة خيار واحد على الأقل"
 msgid "Please ask {childName} to submit again so we can send you a new request."
 msgstr "يرجى أن يطلب من {childName} التقديم مرة أخرى لنرسل لك طلبًا جديدًا."
 
-#: src/components/layouts/PublicParentalConsent/index.tsx:145
+#: src/components/layouts/PublicParentalConsent/index.tsx:146
 msgid "Please check the link in the email we sent you."
 msgstr "يرجى التحقق من الرابط في البريد الإلكتروني الذي أرسلناه إليك."
 
@@ -12045,7 +12045,7 @@ msgstr "يرجى إدخال اسم المستخدم وكلمة المرور"
 msgid "Please enter your VAT number"
 msgstr "يرجى إدخال رقم ضريبة القيمة المضافة الخاص بك"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:35
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:38
 msgid "Please fill in all fields"
 msgstr "يرجى ملء جميع الحقول"
 
@@ -12176,7 +12176,7 @@ msgstr "الموضع"
 msgid "Post Checkout message"
 msgstr "رسالة ما بعد الدفع"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:105
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:108
 msgid "Powered by Friends of School, an initiative by"
 msgstr "مدعوم من أصدقاء المدرسة، مبادرة من"
 
@@ -12326,7 +12326,7 @@ msgstr "طباعة كملف PDF"
 msgid "Printed {0}"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:153
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:156
 #: src/components/routes/legal/PrivacyPolicy/index.tsx:8
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
@@ -12508,7 +12508,7 @@ msgid "Promotional emails may result in account suspension"
 msgstr "قد تؤدي الرسائل الترويجية إلى تعليق الحساب"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:26
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:62
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:64
 msgid "Prose & Poetry"
 msgstr ""
 
@@ -12591,7 +12591,7 @@ msgid "Put the new key in <0>APP_LICENCE_KEY</0> and redeploy the backend."
 msgstr ""
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:34
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:61
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:63
 #: src/components/layouts/PublicPuzzles/index.tsx:23
 msgid "Puzzles"
 msgstr "ألغاز"
@@ -12666,7 +12666,7 @@ msgstr "تمت إعادة ترتيب الأسئلة"
 msgid "Queue"
 msgstr "قائمة الانتظار"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:116
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:119
 msgid "Quick Links"
 msgstr "روابط سريعة"
 
@@ -12889,7 +12889,7 @@ msgstr "استرداد جميع الطلبات لهذا التاريخ"
 msgid "Refund amount"
 msgstr "مبلغ الاسترداد"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:162
 #: src/components/routes/legal/RefundPolicy/index.tsx:8
 msgid "Refund and Cancellation Policy"
 msgstr "سياسة الاسترداد والإلغاء"
@@ -13058,12 +13058,12 @@ msgstr ""
 msgid "Remove overrides for this date"
 msgstr "إزالة التجاوزات لهذا التاريخ"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:128
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:136
 msgid "Remove person"
 msgstr "إزالة الشخص"
 
 #: src/components/forms/ProductForm/ProductImagesField.tsx:89
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:118
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:126
 msgid "Remove photo"
 msgstr "إزالة الصورة"
 
@@ -13120,7 +13120,7 @@ msgstr "إعادة فتح هذا التاريخ لمبيعات جديدة؟ لن
 msgid "Repeats"
 msgstr "يتكرر"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:112
 msgid "Replace photo"
 msgstr "استبدال الصورة"
 
@@ -13405,8 +13405,13 @@ msgstr ""
 #: src/components/modals/EditUserModal/index.tsx:94
 #: src/components/modals/InviteUserModal/index.tsx:64
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:160
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
 msgid "Role"
 msgstr "الدور"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:105
+msgid "Role (optional)"
+msgstr "الدور (اختياري)"
 
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:62
 msgid "Rotation"
@@ -13614,7 +13619,7 @@ msgstr "حفظ التغييرات"
 #: src/components/routes/event/HomepageDesigner/index.tsx:305
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:563
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:362
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:654
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:657
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
 
@@ -14395,7 +14400,7 @@ msgstr "أرسل رسائل إلى الحاضرين أو حاملي التذاك
 msgid "Send me a copy"
 msgstr "أرسل لي نسخة"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:81
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:84
 msgid "Send message"
 msgstr "إرسال رسالة"
 
@@ -14701,10 +14706,10 @@ msgstr "تم إزاحة الأوقات لـ {count} تاريخ (تواريخ)"
 msgid "Shoes 10–6"
 msgstr "الأحذية 10–6"
 
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:89
-#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:147
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:91
+#: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:149
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductCard.tsx:26
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:125
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:128
 msgid "Shop"
 msgstr "المتجر"
 
@@ -14826,7 +14831,7 @@ msgstr "عرض أول {0} — سيستمر استهداف الجلسات الم�
 msgid "Shown bouncing at the top of the modal"
 msgstr "يظهر مرتدًا أعلى النافذة المنبثقة"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:566
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:569
 msgid "Shown in the footer and on the About page. Defaults to your organizer email"
 msgstr "يظهر في التذييل وصفحة من نحن. الافتراضي هو البريد الإلكتروني لجهتك المنظمة"
 
@@ -14923,7 +14928,7 @@ msgstr "مربع نص بسطر واحد"
 msgid "Single price"
 msgstr "سعر واحد"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:256
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:259
 msgid "Site Design"
 msgstr "تصميم الموقع"
 
@@ -15482,7 +15487,7 @@ msgstr "الطالب"
 msgid "Studio"
 msgstr ""
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:383
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:386
 msgid "Subheading"
 msgstr "العنوان الفرعي"
 
@@ -15670,7 +15675,7 @@ msgstr "تم تحديث إعدادات تحسين محركات البحث بنج
 msgid "Successfully Updated Settings"
 msgstr "تم تحديث الإعدادات بنجاح"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:154
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:157
 msgid "Successfully Updated Site Design"
 msgstr "تم تحديث تصميم الموقع بنجاح"
 
@@ -15857,15 +15862,15 @@ msgstr "الضرائب والرسوم المطبقة"
 msgid "Taxes and Fees"
 msgstr "الضرائب والرسوم"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:459
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:462
 msgid "Team"
 msgstr "الفريق"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:466
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:469
 msgid "Team Heading"
 msgstr "عنوان الفريق"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:494
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:497
 msgid "Team Members"
 msgstr "أعضاء الفريق"
 
@@ -15874,15 +15879,15 @@ msgid "Tech"
 msgstr "تقنية"
 
 #: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:46
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:505
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:508
 msgid "Technical Team"
 msgstr "الفريق التقني"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:504
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:507
 msgid "Technical Team Heading"
 msgstr "عنوان الفريق التقني"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:511
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:514
 msgid "Technical Team Members"
 msgstr "أعضاء الفريق التقني"
 
@@ -15942,7 +15947,7 @@ msgstr ""
 msgid "Term"
 msgstr "المدة"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:156
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
 #: src/components/routes/legal/TermsOfService/index.tsx:8
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
@@ -16109,7 +16114,7 @@ msgstr "اللغة التي سيتلقى بها الحاضر الرسائل."
 msgid "The Lantern Garden"
 msgstr "حديقة الفوانيس"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:340
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:343
 msgid "The large banner at the top of your homepage. Leave fields blank to use sensible defaults."
 msgstr "اللافتة الكبيرة أعلى صفحتك الرئيسية. اترك الحقول فارغة لاستخدام الإعدادات الافتراضية المنطقية."
 
@@ -16303,7 +16308,7 @@ msgid "their test results and points."
 msgstr "نتائج اختباراتهم ونقاطهم."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:212
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:587
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:590
 msgid "Theme & Colors"
 msgstr "السمة والألوان"
 
@@ -16627,7 +16632,7 @@ msgstr "هذا الرابط غير صالح أو انتهت صلاحيته."
 msgid "This link is no longer valid"
 msgstr "هذا الرابط لم يعد صالحًا"
 
-#: src/components/layouts/PublicParentalConsent/index.tsx:144
+#: src/components/layouts/PublicParentalConsent/index.tsx:145
 msgid "This link is not valid"
 msgstr "هذا الرابط غير صالح"
 
@@ -17322,7 +17327,7 @@ msgid "Type to search..."
 msgstr "اكتب للبحث..."
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:253
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:629
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:632
 msgid "Typography"
 msgstr "الطباعة"
 
@@ -17569,11 +17574,11 @@ msgstr "حتى {perDateAllocation} لكل تاريخ"
 msgid "Up to 10 MB. The first page becomes the thumbnail."
 msgstr ""
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:495
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:498
 msgid "Up to 12 people. Leave empty to hide the team section"
 msgstr "حتى 12 شخصاً. اتركه فارغاً لإخفاء قسم الفريق"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:512
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:515
 msgid "Up to 12 people. Leave empty to hide the technical team section"
 msgstr "حتى 12 شخصاً. اتركه فارغاً لإخفاء قسم الفريق التقني"
 
@@ -17594,7 +17599,7 @@ msgstr "الفعاليات القادمة"
 msgid "Upcoming Events"
 msgstr "الفعاليات القادمة"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:423
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:426
 msgid "Upcoming Events Heading"
 msgstr "عنوان الفعاليات القادمة"
 
@@ -17697,7 +17702,7 @@ msgstr "رفع صفحة تلوين"
 msgid "Upload Image"
 msgstr "تحميل صورة"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:112
 msgid "Upload photo"
 msgstr "رفع صورة"
 
@@ -17748,11 +17753,11 @@ msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "استخدم <0>قوالب Liquid</0> لتخصيص رسائلك"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:230
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:606
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:609
 msgid "Use a blurred version of the cover image as the background"
 msgstr "استخدم نسخة ضبابية من صورة الغلاف كخلفية"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:355
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:358
 msgid "Use a looping background video instead"
 msgstr "استخدم فيديو خلفية متكرر بدلاً من ذلك"
 
@@ -17761,7 +17766,7 @@ msgid "Use areas for separate parts of the venue, such as stalls and balcony. Be
 msgstr ""
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:228
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:604
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:607
 msgid "Use cover image"
 msgstr "استخدام صورة الغلاف"
 
@@ -17794,7 +17799,7 @@ msgstr ""
 msgid "Use ticket price"
 msgstr ""
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:349
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:352
 msgid "Use your cover image as the banner background"
 msgstr "استخدم صورة الغلاف الخاصة بك كخلفية اللافتة"
 
@@ -18003,11 +18008,11 @@ msgstr "وثّق بريدك الإلكتروني حتى يتمكن الحاضر�
 msgid "Verifying..."
 msgstr "جارٍ التوثيق..."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:353
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:356
 msgid "Video"
 msgstr "فيديو"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:366
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:369
 msgid "Video URL"
 msgstr "رابط الفيديو"
 
@@ -18077,7 +18082,7 @@ msgid "View Event Page"
 msgstr "عرض صفحة الفعالية"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerHero/index.tsx:34
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:394
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:397
 msgid "View Events"
 msgstr "عرض الفعاليات"
 
@@ -18372,16 +18377,16 @@ msgstr "نتعاون مع Stripe لإرسال المدفوعات مباشرة إ
 msgid "We recommend a square logo with minimum dimensions of 200x200px"
 msgstr "نوصي بشعار مربع بأبعاد لا تقل عن 200×200 بكسل"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:476
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:479
 msgid "We recommend a wide photo of at least 1200px, and a maximum file size of 5MB"
 msgstr "نوصي بصورة عريضة بعرض 1200 بكسل على الأقل وحجم أقصى للملف 5 ميغابايت"
 
 #: src/components/routes/event/HomepageDesigner/index.tsx:189
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:288
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:291
 msgid "We recommend dimensions of 1950px by 650px, a ratio of 3:1, and a maximum file size of 5MB"
 msgstr "نوصي بأبعاد 1950×650 بكسل، بنسبة 3:1، وحجم ملف أقصى 5 ميغابايت"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:309
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:312
 msgid "We recommend dimensions of 400px by 400px, and a maximum file size of 5MB"
 msgstr "نوصي بأبعاد 400×400 بكسل، وحجم ملف أقصى 5 ميغابايت"
 
@@ -18611,7 +18616,7 @@ msgid "What unauthenticated staff can see"
 msgstr "ما يمكن للموظفين غير الموثّقين رؤيته"
 
 #: src/components/layouts/OrganizerHomepage/index.tsx:46
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:424
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:427
 msgid "What's happening"
 msgstr "ماذا يحدث"
 
@@ -18817,7 +18822,7 @@ msgstr "إعدادات الأداة"
 msgid "Width"
 msgstr ""
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:574
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:577
 msgid "Without the @. Leave blank to hide Instagram links"
 msgstr "بدون @. اتركه فارغًا لإخفاء روابط إنستغرام"
 
@@ -19217,8 +19222,8 @@ msgstr "سيُفقد طلبك الحالي."
 msgid "Your Details"
 msgstr "تفاصيلك"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:63
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:67
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:66
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:70
 msgid "Your email"
 msgstr "بريدك الإلكتروني"
 
@@ -19251,7 +19256,7 @@ msgstr "تم إرسال رسالتك"
 msgid "Your message has been sent successfully!"
 msgstr "تم إرسال رسالتك بنجاح!"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:42
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:45
 msgid "Your message has been sent. We'll be in touch soon!"
 msgstr "تم إرسال رسالتك. سنتواصل معك قريبًا!"
 
@@ -19259,8 +19264,8 @@ msgstr "تم إرسال رسالتك. سنتواصل معك قريبًا!"
 msgid "Your messages will appear here"
 msgstr "ستظهر رسائلك هنا"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:55
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:59
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:58
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:62
 #: src/ee/box-office/components/layouts/BoxOffice/StartSession.tsx:137
 msgid "Your name"
 msgstr "اسمك"
@@ -19301,7 +19306,7 @@ msgstr "تم تصدير طلباتك بنجاح."
 msgid "Your orders will appear here once they start rolling in."
 msgstr "ستظهر طلباتك هنا بمجرد أن تبدأ بالتدفق."
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:376
+#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:379
 msgid "Your organization name"
 msgstr "اسم جهتك"
 
