@@ -31,7 +31,14 @@ export type ConfigKeys =
     | 'VITE_DEFAULT_ORGANIZER_ID'
     | 'VITE_INSTAGRAM_HANDLE'
     | 'VITE_INSTAGRAM_EMBED_URL'
-    | 'VITE_DEFAULT_SHARE_IMAGE_PATH';
+    | 'VITE_DEFAULT_SHARE_IMAGE_PATH'
+    | 'VITE_SHOPIFY_STORE_DOMAIN'
+    | 'VITE_SHOPIFY_STOREFRONT_TOKEN'
+    | 'VITE_SHOPIFY_COLLECTION_AGE_2_5'
+    | 'VITE_SHOPIFY_COLLECTION_AGE_6_10'
+    | 'VITE_SHOPIFY_COLLECTION_AGE_11_13'
+    | 'VITE_SHOPIFY_COLLECTION_AGE_14_18'
+    | 'VITE_SHOPIFY_PUBLIC_DOMAIN';
 
 export enum StripePlatform {
     Canada = 'ca',
@@ -891,6 +898,32 @@ export interface PublishedChildStorySubmission {
     content: string;
     submitted_at: string;
     published_at: string;
+}
+
+export type ColouringPageAgeGroup = 'AGE_2_5' | 'AGE_6_10' | 'AGE_11_13' | 'AGE_14_18';
+export type ColouringPageTint = 'PEACH' | 'SKY' | 'MINT' | 'LILAC';
+export type ColouringPageStatus = 'DRAFT' | 'PUBLISHED';
+
+export interface ColouringPage {
+    id: number;
+    organizer_id: number;
+    title: string;
+    age_group: ColouringPageAgeGroup;
+    tint: ColouringPageTint;
+    status: ColouringPageStatus;
+    sort_order: number;
+    pdf_url: string;
+    thumbnail_url: string;
+    created_at: string;
+}
+
+export interface PublicColouringPage {
+    id: number;
+    title: string;
+    age_group: ColouringPageAgeGroup;
+    tint: ColouringPageTint;
+    pdf_url: string;
+    thumbnail_url: string;
 }
 
 export interface ParentalConsentDetails {

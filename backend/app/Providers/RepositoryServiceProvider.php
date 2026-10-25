@@ -31,6 +31,7 @@ use HiEvents\Repository\Eloquent\AttendeeRepository;
 use HiEvents\Repository\Eloquent\CapacityAssignmentRepository;
 use HiEvents\Repository\Eloquent\CheckInListRepository;
 use HiEvents\Repository\Eloquent\ChildStorySubmissionRepository;
+use HiEvents\Repository\Eloquent\ColouringPageRepository;
 use HiEvents\Repository\Eloquent\EmailTemplateRepository;
 use HiEvents\Repository\Eloquent\EventDailyStatisticRepository;
 use HiEvents\Repository\Eloquent\EventLocationRepository;
@@ -100,6 +101,7 @@ use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\CapacityAssignmentRepositoryInterface;
 use HiEvents\Repository\Interfaces\CheckInListRepositoryInterface;
 use HiEvents\Repository\Interfaces\ChildStorySubmissionRepositoryInterface;
+use HiEvents\Repository\Interfaces\ColouringPageRepositoryInterface;
 use HiEvents\Repository\Interfaces\EmailTemplateRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventDailyStatisticRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventLocationRepositoryInterface;
@@ -194,6 +196,7 @@ class RepositoryServiceProvider extends ServiceProvider
         StripeCustomerRepositoryInterface::class => StripeCustomerRepository::class,
         CheckInListRepositoryInterface::class => CheckInListRepository::class,
         ChildStorySubmissionRepositoryInterface::class => ChildStorySubmissionRepository::class,
+        ColouringPageRepositoryInterface::class => ColouringPageRepository::class,
         QuizResultRepositoryInterface::class => QuizResultRepository::class,
         QuizPlayerRepositoryInterface::class => QuizPlayerRepository::class,
         CustomerRepositoryInterface::class => CustomerRepository::class,

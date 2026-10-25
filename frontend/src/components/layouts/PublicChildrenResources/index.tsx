@@ -23,7 +23,7 @@ export const PublicChildrenResources = () => {
 
     return (
         <OrganizerPageShell organizer={loaderData.organizer} activeNav="resources">
-            <ResourcesForChildren/>
+            <ResourcesForChildren organizerId={loaderData.organizer.id}/>
         </OrganizerPageShell>
     );
 };
