@@ -287,6 +287,54 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     }
 }
 
+.shopCard {
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    align-items: stretch;
+}
+
+.shopTile {
+    position: relative;
+    background: var(--organizer-accent-soft, rgba(139, 92, 246, 0.08));
+}
+
+.shopBadge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-contrast, #ffffff);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.shopPrice {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
+}
+
+.shopModalBody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shopModalImage {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+}
+
+.shopModalPrice {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
 .shopBanner {
     grid-column: 1 / -1;
     grid-row: 3;

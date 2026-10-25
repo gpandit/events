@@ -32,6 +32,10 @@ export const clientBuildEnv: { [K in ConfigKeys]: string } = {
     'VITE_INSTAGRAM_HANDLE': import.meta.env.VITE_INSTAGRAM_HANDLE,
     'VITE_INSTAGRAM_EMBED_URL': import.meta.env.VITE_INSTAGRAM_EMBED_URL,
     'VITE_DEFAULT_SHARE_IMAGE_PATH': import.meta.env.VITE_DEFAULT_SHARE_IMAGE_PATH,
+    'VITE_SHOPIFY_STORE_DOMAIN': import.meta.env.VITE_SHOPIFY_STORE_DOMAIN,
+    'VITE_SHOPIFY_STOREFRONT_TOKEN': import.meta.env.VITE_SHOPIFY_STOREFRONT_TOKEN,
+    'VITE_SHOPIFY_COLLECTION_HANDLE': import.meta.env.VITE_SHOPIFY_COLLECTION_HANDLE,
+    'VITE_SHOPIFY_PUBLIC_DOMAIN': import.meta.env.VITE_SHOPIFY_PUBLIC_DOMAIN,
 }
 
 export const getConfig = (key: ConfigKeys, fallback?: string): string | undefined => {

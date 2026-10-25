@@ -1658,7 +1658,7 @@ msgstr "All Occurrences"
 msgid "All Products"
 msgstr "All Products"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:177
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:183
 msgid "All rights reserved."
 msgstr "All rights reserved."
 
@@ -2929,6 +2929,10 @@ msgstr "Button Text"
 #: src/components/routes/admin/Announcements/index.tsx:461
 msgid "Button URL"
 msgstr "Button URL"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:79
+msgid "Buy now"
+msgstr "Buy now"
 
 #: src/components/routes/event/ShopPickListPrint/ShopPickListTable.tsx:23
 msgid "Buyer"
@@ -4253,17 +4257,13 @@ msgstr "Contact Details"
 msgid "Contact Email"
 msgstr "Contact Email"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:166
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:172
 msgid "Contact Us"
 msgstr "Contact Us"
 
 #: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:32
 msgid "Contact us:"
 msgstr "Contact us:"
-
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:43
-#~ msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
-#~ msgstr "Contact us: <0>{CONTACT_EMAIL}</0>"
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
@@ -4340,7 +4340,7 @@ msgstr "Control who gets in for this date"
 msgid "Control who gets in, and when"
 msgstr "Control who gets in, and when"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:165
 #: src/components/routes/legal/CookiePolicy/index.tsx:8
 msgid "Cookie Policy"
 msgstr "Cookie Policy"
@@ -4492,6 +4492,10 @@ msgstr "Could not retrieve address details"
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:280
 msgid "Could not save date"
 msgstr "Could not save date"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:42
+msgid "Could not start checkout. Please try again."
+msgstr "Could not start checkout. Please try again."
 
 #: src/components/routes/product-widget/Payment/PaymentProcessingFee/index.tsx:41
 msgid "Could not update the payment processing fee. Please try again."
@@ -4977,10 +4981,6 @@ msgstr "Customize your email template using Liquid templating"
 msgid "Customize your event page"
 msgstr "Customize your event page"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:203
-#~ msgid "Customize your organizer page appearance"
-#~ msgstr "Customize your organizer page appearance"
-
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:51
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:32
 msgid "Daily"
@@ -5372,7 +5372,7 @@ msgstr "Deletion request cancelled"
 msgid "Deletion Requests"
 msgstr "Deletion Requests"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:152
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:162
 #: src/components/routes/legal/DeliveryPolicy/index.tsx:8
 msgid "Delivery Policy"
 msgstr "Delivery Policy"
@@ -5605,7 +5605,7 @@ msgstr "Download invoice"
 msgid "Download Invoice"
 msgstr "Download Invoice"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:37
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:51
 msgid "Download PDF"
 msgstr "Download PDF"
 
@@ -6536,10 +6536,6 @@ msgstr "Event status updated"
 msgid "Event ticketing @ {appName}, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
 msgstr "Event ticketing @ {appName}, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
 
-#: src/components/layouts/AuthLayout/index.tsx:39
-#~ msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
-#~ msgstr "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
-
 #: src/components/common/AdminEventsTable/index.tsx:86
 msgid "Event Title"
 msgstr "Event Title"
@@ -7468,10 +7464,6 @@ msgstr "Friday"
 msgid "Friends of Repton Al Barsha logo"
 msgstr "Friends of Repton Al Barsha logo"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:36
-#~ msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
-#~ msgstr "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
-
 #: src/components/common/ErrorDisplay/index.tsx:88
 #: src/components/layouts/AuthLayout/index.tsx:35
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:100
@@ -8134,7 +8126,7 @@ msgstr "I confirm this is a transactional message related to this event"
 msgid "I confirm this is entirely my own original work."
 msgstr "I confirm this is entirely my own original work."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:15
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:22
 msgid "I Create"
 msgstr "I Create"
 
@@ -9102,7 +9094,7 @@ msgstr "Look Up My Tickets"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:14
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:21
 msgid "Love colouring? Shop creative colouring sets at"
 msgstr "Love colouring? Shop creative colouring sets at"
 
@@ -9304,10 +9296,6 @@ msgstr "May"
 #: src/components/routes/admin/Attribution/index.tsx:166
 msgid "Medium"
 msgstr "Medium"
-
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:48
-#~ msgid "Meet the Friends of Repton team"
-#~ msgstr "Meet the Friends of Repton team"
 
 #: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:38
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:440
@@ -9671,7 +9659,7 @@ msgstr "New band"
 msgid "New capacity"
 msgstr "New capacity"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:47
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:61
 msgid "New colouring sheets are on their way — check back soon!"
 msgstr "New colouring sheets are on their way — check back soon!"
 
@@ -10787,6 +10775,10 @@ msgstr "Open occurrence"
 #: src/components/layouts/AppLayout/index.tsx:31
 msgid "Open sidebar"
 msgstr "Open sidebar"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:64
+msgid "Option"
+msgstr "Option"
 
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
@@ -12686,7 +12678,7 @@ msgstr "Refund all orders for this date"
 msgid "Refund amount"
 msgstr "Refund amount"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
 #: src/components/routes/legal/RefundPolicy/index.tsx:8
 msgid "Refund and Cancellation Policy"
 msgstr "Refund and Cancellation Policy"
@@ -13861,6 +13853,10 @@ msgstr "Section name"
 msgid "Secure Checkout"
 msgstr "Secure Checkout"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:81
+msgid "Secure checkout opens in a new tab"
+msgstr "Secure checkout opens in a new tab"
+
 #: src/ee/seating/components/SeatPicker/SeatPrices.tsx:129
 msgid "See all prices"
 msgstr "See all prices"
@@ -14331,10 +14327,6 @@ msgstr "Set to unlimited (remove limit)"
 msgid "Set up a recurring schedule to automatically create dates, or add them one at a time."
 msgstr "Set up a recurring schedule to automatically create dates, or add them one at a time."
 
-#: src/components/routes/event/CheckInLists/index.tsx:35
-#~ msgid "Set up check-in lists for different entrances, sessions, or days."
-#~ msgstr "Set up check-in lists for different entrances, sessions, or days."
-
 #: src/components/layouts/OrganizerLayout/index.tsx:91
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
@@ -14468,6 +14460,7 @@ msgstr "Shoes 10–6"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:89
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:147
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductCard.tsx:26
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:125
 msgid "Shop"
 msgstr "Shop"
@@ -16801,7 +16794,7 @@ msgstr "To"
 msgid "To collect"
 msgstr "To collect"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:58
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
 msgid "To communicate with you about events you've registered for."
 msgstr "To communicate with you about events you've registered for."
 
@@ -18308,10 +18301,6 @@ msgstr "What unauthenticated staff can see"
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:397
 msgid "What's happening"
 msgstr "What's happening"
-
-#: src/components/layouts/OrganizerHomepage/index.tsx:46
-#~ msgid "What's happening at RAB"
-#~ msgstr "What's happening at RAB"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:89
 msgid "WhatsApp"
