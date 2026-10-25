@@ -2599,7 +2599,7 @@ msgstr "Awesome Events Ltd."
 msgid "Awesome Organizer Ltd."
 msgstr "Awesome Organizer Ltd."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:230
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:231
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:86
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:62
 #: src/ee/box-office/components/layouts/BoxOffice/AttendeeQuestionsStage.tsx:87
@@ -2791,7 +2791,7 @@ msgstr ""
 msgid "Best available"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:323
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:324
 msgid "Best: {0}%"
 msgstr "الأفضل: {0}%"
 
@@ -3634,7 +3634,7 @@ msgstr ""
 msgid "Choose a different action"
 msgstr "اختر إجراءً مختلفًا"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:386
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:390
 msgid "Choose a different age group"
 msgstr "اختر فئة عمرية أخرى"
 
@@ -3735,8 +3735,8 @@ msgstr ""
 msgid "Choose who pays the platform fee. This does not affect additional fees you've configured in your account settings."
 msgstr "اختر من يدفع رسم المنصة. هذا لا يؤثر على الرسوم الإضافية التي قمت بتهيئتها في إعدادات حسابك."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:309
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:310
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:311
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:248
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:249
 msgid "Choose your age group"
@@ -7467,7 +7467,7 @@ msgstr "الفلاش متوقف"
 msgid "Flash on"
 msgstr "الفلاش يعمل"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:80
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:81
 msgid "Flyer"
 msgstr "محلّق"
 
@@ -7645,7 +7645,7 @@ msgstr "استفسار عام"
 msgid "General information about your organizer"
 msgstr "معلومات عامة عن جهتك المنظمة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:305
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:306
 msgid "General Knowledge Challenge"
 msgstr "تحدي المعلومات العامة"
 
@@ -7714,7 +7714,7 @@ msgstr "نص زر الحصول على التذاكر"
 msgid "Get your event ready"
 msgstr "جهّز فعاليتك"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:255
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:256
 msgid "Getting your questions ready…"
 msgstr "جارٍ تجهيز أسئلتك…"
 
@@ -7755,7 +7755,7 @@ msgstr "الذهاب إلى الجدول"
 msgid "Go to seating settings"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:82
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:83
 msgid "Good effort! A little more practice and you'll soar."
 msgstr "جهد جيد! القليل من التدريب وستحلّق عالياً."
 
@@ -8061,7 +8061,7 @@ msgstr "يخفي النافد"
 msgid "Hiding a product will prevent users from seeing it on the event page."
 msgstr "سيمنع إخفاء المنتج المستخدمين من رؤيته في صفحة الفعالية."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:78
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:79
 msgid "High Flyer!"
 msgstr "محلّق متميز!"
 
@@ -8701,7 +8701,7 @@ msgstr "يوليو"
 msgid "June"
 msgstr "يونيو"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:82
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:83
 msgid "Just a Flyer"
 msgstr "محلّق مبتدئ"
 
@@ -8730,7 +8730,7 @@ msgstr "الحفاظ على الاتصال"
 msgid "Keep editing"
 msgstr "متابعة التعديل"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:86
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:87
 msgid "Keep exploring and learning new things, then try the test again."
 msgstr "واصل الاستكشاف وتعلّم أشياء جديدة، ثم حاول الاختبار مرة أخرى."
 
@@ -8738,7 +8738,7 @@ msgstr "واصل الاستكشاف وتعلّم أشياء جديدة، ثم ح
 msgid "Keep it short — banners show a single line. {0}/200"
 msgstr "اجعلها موجزة — تعرض اللافتات سطرًا واحدًا. {0}/200"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:85
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:86
 msgid "Keep Learning"
 msgstr "واصل التعلّم"
 
@@ -8775,7 +8775,7 @@ msgstr ""
 msgid "Language"
 msgstr "اللغة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:307
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:308
 msgid "Language, science, maths, geography and history questions, plus picture rounds with animals, places and famous people. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
 msgstr "أسئلة في اللغة والعلوم والرياضيات والجغرافيا والتاريخ، إضافةً إلى جولات بالصور عن الحيوانات والأماكن والمشاهير. اختر فئتك العمرية ثم أجب عن {QUESTIONS_PER_TEST} سؤالاً. اختر الإجابة الصحيحة من بين 4 خيارات. لديك {SECONDS_PER_QUESTION} ثانية لكل سؤال."
 
@@ -9712,7 +9712,7 @@ msgstr "طفا فانوسي ببطء، يدور في دائرة متكاسلة،
 msgid "My Profile"
 msgstr "ملفي الشخصي"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:286
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:287
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:37
 msgid "My scores"
 msgstr "نتائجي"
@@ -11341,7 +11341,7 @@ msgstr "في الهواء الطلق"
 msgid "Outgoing Messages"
 msgstr "الرسائل الصادرة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:78
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:79
 msgid "Outstanding! You really know your stuff."
 msgstr "رائع! أنت تعرف الكثير حقاً."
 
@@ -11810,6 +11810,10 @@ msgstr "رقم الهاتف (اختياري)"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:496
 msgid "Phone Number (optional)"
 msgstr "رقم الهاتف (اختياري)"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:339
+msgid "Photo credits"
+msgstr "حقوق الصور"
 
 #: src/components/forms/ProductForm/ProductImagesField.tsx:78
 msgid "Photos"
@@ -12624,7 +12628,7 @@ msgstr "كمية هذا التاريخ"
 msgid "Question {0}"
 msgstr "السؤال {0}"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:399
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:403
 msgid "Question {0} of {total}"
 msgstr "السؤال {0} من {total}"
 
@@ -14109,7 +14113,7 @@ msgstr "عرض الجدول"
 msgid "See the latest photos and updates from"
 msgstr "اطّلع على أحدث الصور والتحديثات من"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:363
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:367
 msgid "See what I got wrong"
 msgstr "اعرف أين أخطأت"
 
@@ -14870,7 +14874,7 @@ msgstr "يُظهر المتبقي"
 msgid "Sign in"
 msgstr "تسجيل الدخول"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:297
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:298
 msgid "Sign in / Sign up"
 msgstr "تسجيل الدخول / إنشاء حساب"
 
@@ -14878,7 +14882,7 @@ msgstr "تسجيل الدخول / إنشاء حساب"
 msgid "Sign in again to keep selling"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:227
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:228
 msgid "Sign in or sign up"
 msgstr "تسجيل الدخول أو إنشاء حساب"
 
@@ -14886,7 +14890,7 @@ msgstr "تسجيل الدخول أو إنشاء حساب"
 msgid "Sign in to manage your events, or to see your tickets and other purchases."
 msgstr "سجّل الدخول لإدارة فعالياتك، أو لمشاهدة تذاكرك ومشترياتك الأخرى."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:290
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:291
 msgid "Sign in to save your scores and earn points."
 msgstr "سجّل الدخول لحفظ نتائجك وكسب النقاط."
 
@@ -15277,7 +15281,7 @@ msgstr ""
 msgid "Start selling as {signedInName}"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:335
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:336
 msgid "Start the test"
 msgstr "ابدأ الاختبار"
 
@@ -15756,7 +15760,7 @@ msgstr "قمصان وأكواب والمزيد"
 msgid "Table name"
 msgstr ""
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:378
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:382
 msgid "Take the test again"
 msgstr "أعد الاختبار"
 
@@ -18565,7 +18569,7 @@ msgstr "مرحبًا بك في {0}، {1} 👋"
 msgid "Welcome to {0}, here's a listing of all your events"
 msgstr "مرحبًا بك في {0}، إليك قائمة بجميع فعالياتك"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:80
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:81
 msgid "Well done! You have great general knowledge."
 msgstr "أحسنت! لديك معلومات عامة رائعة."
 
@@ -19110,7 +19114,7 @@ msgstr "يجب عليك توثيق بريد حسابك الإلكتروني قب
 msgid "You receive"
 msgstr "تستلم"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:351
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:355
 msgid "You scored {score} out of {total} ({percentage}%)"
 msgstr "حصلت على {score} من {total} ({percentage}%)"
 
@@ -19206,7 +19210,7 @@ msgstr "سيظهر حاضروك هنا بمجرد تسجيلهم في فعالي
 msgid "Your awesome website 🎉"
 msgstr "موقعك الرائع 🎉"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:354
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:358
 msgid "Your best score: {bestPercentage}%"
 msgstr "أفضل نتيجة لك: {bestPercentage}%"
 
