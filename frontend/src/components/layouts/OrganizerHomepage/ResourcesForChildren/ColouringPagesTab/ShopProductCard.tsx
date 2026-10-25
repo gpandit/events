@@ -4,14 +4,14 @@ import classes from '../ResourcesForChildren.module.scss';
 
 interface ShopProductCardProps {
     product: ShopifyProduct;
-    onSelect: (product: ShopifyProduct) => void;
+    onOpen: () => void;
 }
 
-export const ShopProductCard = ({product, onSelect}: ShopProductCardProps) => (
+export const ShopProductCard = ({product, onOpen}: ShopProductCardProps) => (
     <button
         type="button"
         className={`${classes.colouringCard} ${classes.shopCard}`}
-        onClick={() => onSelect(product)}
+        onClick={onOpen}
         data-testid="shop-product-card"
     >
         <div className={`${classes.colouringTile} ${classes.shopTile}`}>

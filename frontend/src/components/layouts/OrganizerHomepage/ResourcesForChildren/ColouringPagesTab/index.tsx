@@ -5,10 +5,10 @@ import {t} from '@lingui/macro';
 import {ColouringPageAgeGroup, IdParam} from '../../../../../types.ts';
 import {useGetPublishedColouringPages} from '../../../../../queries/useGetPublishedColouringPages.ts';
 import {useGetShopifyCollection} from '../../../../../queries/useGetShopifyCollection.ts';
-import {interleaveShopProducts, ShopifyProduct} from '../../../../../utilites/shopify.ts';
+import {interleaveShopProducts} from '../../../../../utilites/shopify.ts';
 import {colouringTintClassName, ColouringAgeGroupOption, getColouringAgeGroups} from '../../../../../utilites/colouringPages.ts';
 import {ShopProductCard} from './ShopProductCard.tsx';
-import {ShopProductModal} from './ShopProductModal.tsx';
+import {GridItemViewer} from './GridItemViewer.tsx';
 import classes from '../ResourcesForChildren.module.scss';
 
 const PAGES_PER_SHOP_PRODUCT = 3;
@@ -36,10 +36,10 @@ const ShopBanner = () => (
 interface AgeGroupPanelProps {
     ageGroup: ColouringAgeGroupOption;
     organizerId: IdParam;
-    onSelectProduct: (product: ShopifyProduct) => void;
 }
 
-const AgeGroupPanel = ({ageGroup, organizerId, onSelectProduct}: AgeGroupPanelProps) => {
+const AgeGroupPanel = ({ageGroup, organizerId}: AgeGroupPanelProps) => {
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
     const pagesQuery = useGetPublishedColouringPages(organizerId);
     const {data: shopProducts = []} = useGetShopifyCollection(ageGroup.shopCollectionConfigKey);
 
@@ -63,18 +63,24 @@ const AgeGroupPanel = ({ageGroup, organizerId, onSelectProduct}: AgeGroupPanelPr
 
     return (
         <div className={classes.colouringGrid}>
-            {gridItems.map((item) => item.type === 'product' ? (
-                <ShopProductCard key={item.product.id} product={item.product} onSelect={onSelectProduct}/>
+            {gridItems.map((item, index) => item.type === 'product' ? (
+                <ShopProductCard key={item.product.id} product={item.product} onOpen={() => setOpenIndex(index)}/>
             ) : (
                 <div key={item.page.id} className={classes.colouringCard}>
-                    <div className={`${classes.colouringTile} ${classes[colouringTintClassName(item.page.tint)]}`}>
+                    <button
+                        type="button"
+                        className={`${classes.colouringTile} ${classes.tileButton} ${classes[colouringTintClassName(item.page.tint)]}`}
+                        onClick={() => setOpenIndex(index)}
+                        aria-label={item.page.title}
+                        data-testid="colouring-page-open-button"
+                    >
                         <img
                             src={item.page.thumbnail_url}
                             alt={item.page.title}
                             className={classes.colouringThumbnail}
                             loading="lazy"
                         />
-                    </div>
+                    </button>
                     <p className={classes.colouringTitle}>{item.page.title}</p>
                     <a
                         href={item.page.pdf_url}
@@ -89,13 +95,19 @@ const AgeGroupPanel = ({ageGroup, organizerId, onSelectProduct}: AgeGroupPanelPr
             ))}
 
             <ShopBanner/>
+
+            <GridItemViewer
+                items={gridItems}
+                index={openIndex}
+                onIndexChange={setOpenIndex}
+                onClose={() => setOpenIndex(null)}
+            />
         </div>
     );
 };
 
 export const ColouringPagesTab = ({organizerId}: ColouringPagesTabProps) => {
     const [activeAgeGroup, setActiveAgeGroup] = useState<string | null>(DEFAULT_AGE_GROUP);
-    const [selectedProduct, setSelectedProduct] = useState<ShopifyProduct | null>(null);
     const ageGroups = getColouringAgeGroups();
 
     return (
@@ -115,16 +127,10 @@ export const ColouringPagesTab = ({organizerId}: ColouringPagesTabProps) => {
 
                 {ageGroups.map((ageGroup) => (
                     <Tabs.Panel key={ageGroup.value} value={ageGroup.value} className={classes.tabPanel}>
-                        <AgeGroupPanel
-                            ageGroup={ageGroup}
-                            organizerId={organizerId}
-                            onSelectProduct={setSelectedProduct}
-                        />
+                        <AgeGroupPanel ageGroup={ageGroup} organizerId={organizerId}/>
                     </Tabs.Panel>
                 ))}
             </Tabs>
-
-            <ShopProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)}/>
         </div>
     );
 };
