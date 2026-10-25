@@ -3,7 +3,8 @@ import {t} from '@lingui/macro';
 import {Button, FileInput, Group, Image, Loader, Select, Stack, Switch, Text, TextInput} from '@mantine/core';
 import {useForm} from '@mantine/form';
 import {Modal} from '../../../common/Modal';
-import {ColouringPage, ColouringPageAgeGroup, ColouringPageTint, IdParam} from '../../../../types.ts';
+import {ColouringPage, ColouringPageAgeGroup, ColouringPageTint} from '../../../../types.ts';
+import {ColouringPageScope} from '../../../../api/colouring-page.client.ts';
 import {useCreateColouringPage} from '../../../../mutations/useCreateColouringPage.ts';
 import {useUpdateColouringPage} from '../../../../mutations/useUpdateColouringPage.ts';
 import {useFormErrorResponseHandler} from '../../../../hooks/useFormErrorResponseHandler.tsx';
@@ -13,7 +14,7 @@ import {renderPdfThumbnail} from '../../../../utilites/pdfThumbnail.ts';
 import {ColourByNumber, createColourByNumber} from '../../../../utilites/colourByNumber';
 
 interface ColouringPageModalProps {
-    organizerId: IdParam;
+    scope: ColouringPageScope;
     page?: ColouringPage;
     onClose: () => void;
 }
@@ -28,13 +29,13 @@ interface ColouringPageFormValues {
 
 const titleFromFilename = (filename: string) => filename.replace(/\.pdf$/i, '').replace(/[-_]+/g, ' ').trim();
 
-export const ColouringPageModal = ({organizerId, page, onClose}: ColouringPageModalProps) => {
+export const ColouringPageModal = ({scope, page, onClose}: ColouringPageModalProps) => {
     const [isPreparingFiles, setIsPreparingFiles] = useState(false);
     const [wantsColourByNumber, setWantsColourByNumber] = useState(false);
     const [isConverting, setIsConverting] = useState(false);
     const [colourByNumber, setColourByNumber] = useState<ColourByNumber | null>(null);
-    const createMutation = useCreateColouringPage(organizerId);
-    const updateMutation = useUpdateColouringPage(organizerId);
+    const createMutation = useCreateColouringPage(scope);
+    const updateMutation = useUpdateColouringPage(scope);
     const errorHandler = useFormErrorResponseHandler();
 
     const form = useForm<ColouringPageFormValues>({

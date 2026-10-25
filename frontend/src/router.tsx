@@ -294,6 +294,13 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "colouring-pages",
+                async lazy() {
+                    const SharedColouringPages = await import("./components/routes/admin/ColouringPages");
+                    return { Component: SharedColouringPages.default };
+                }
+            },
+            {
                 path: "feature-flags",
                 async lazy() {
                     const FeatureFlags = await import("./components/routes/admin/FeatureFlags");

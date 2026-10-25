@@ -5,6 +5,7 @@ import {IconCalendar, IconWorld, IconBuildingBank, IconUsers, IconEye, IconMessa
 import classes from "./AdminAccountsTable.module.scss";
 import {IdParam} from "../../../types";
 import {useNavigate} from "react-router";
+import {getUserRoleLabel} from "../../../utilites/userRoles.ts";
 
 interface AdminAccountsTableProps {
     accounts: AdminAccount[];
@@ -120,7 +121,7 @@ const AdminAccountsTable = ({accounts, onImpersonate, isLoading}: AdminAccountsT
                                                     color={getRoleBadgeColor(user.role)}
                                                     mt={4}
                                                 >
-                                                    {user.role}
+                                                    {getUserRoleLabel(user.role)}
                                                 </Badge>
                                             </div>
                                             {canImpersonate(user.role) && (

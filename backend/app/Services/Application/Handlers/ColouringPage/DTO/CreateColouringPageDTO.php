@@ -13,7 +13,7 @@ use Illuminate\Http\UploadedFile;
 class CreateColouringPageDTO extends BaseDataObject
 {
     public function __construct(
-        public readonly int $organizerId,
+        public readonly ?int $organizerId,
         public readonly string $title,
         public readonly ColouringPageAgeGroup $ageGroup,
         public readonly ColouringPageTint $tint,

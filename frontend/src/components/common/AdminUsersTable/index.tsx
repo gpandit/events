@@ -4,6 +4,7 @@ import {AdminUser} from "../../../api/admin.client";
 import {IconChevronDown, IconCalendar, IconWorld} from "@tabler/icons-react";
 import classes from "./AdminUsersTable.module.scss";
 import {IdParam} from "../../../types";
+import {getUserRoleLabel} from "../../../utilites/userRoles.ts";
 
 interface AdminUsersTableProps {
     users: AdminUser[];
@@ -109,7 +110,7 @@ const AdminUsersTable = ({users, onImpersonate, isLoading}: AdminUsersTableProps
                                                                     size="xs"
                                                                     color={getRoleBadgeColor(account.role)}
                                                                 >
-                                                                    {account.role}
+                                                                    {getUserRoleLabel(account.role)}
                                                                 </Badge>
                                                             </Stack>
                                                         </Menu.Item>
@@ -134,7 +135,7 @@ const AdminUsersTable = ({users, onImpersonate, isLoading}: AdminUsersTableProps
                                                 size="sm"
                                                 color={getRoleBadgeColor(account.role)}
                                             >
-                                                {account.role}
+                                                {getUserRoleLabel(account.role)}
                                             </Badge>
                                         </div>
                                     ))}

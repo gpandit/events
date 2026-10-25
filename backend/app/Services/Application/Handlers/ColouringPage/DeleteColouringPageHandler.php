@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace HiEvents\Services\Application\Handlers\ColouringPage;
 
-use HiEvents\DomainObjects\ColouringPageDomainObject;
-use HiEvents\DomainObjects\Generated\ColouringPageDomainObjectAbstract;
 use HiEvents\Exceptions\ResourceNotFoundException;
 use HiEvents\Repository\Interfaces\ColouringPageRepositoryInterface;
 use HiEvents\Services\Infrastructure\ColouringPage\ColouringPageFileStorageService;
@@ -20,13 +18,9 @@ class DeleteColouringPageHandler
     /**
      * @throws ResourceNotFoundException
      */
-    public function handle(int $pageId, int $organizerId): void
+    public function handle(int $pageId, ?int $organizerId): void
     {
-        /** @var ColouringPageDomainObject|null $page */
-        $page = $this->repository->findFirstWhere([
-            ColouringPageDomainObjectAbstract::ID => $pageId,
-            ColouringPageDomainObjectAbstract::ORGANIZER_ID => $organizerId,
-        ]);
+        $page = $this->repository->findOwnedPage($pageId, $organizerId);
 
         if ($page === null) {
             throw new ResourceNotFoundException(__('Colouring page not found'));
