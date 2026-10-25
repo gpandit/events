@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {canvasToPngFile, renderPdfFirstPage} from '../pdfThumbnail.ts';
+import {canvasToThumbnailFile, renderPdfFirstPage, scaleCanvasToWidth} from '../pdfThumbnail.ts';
 import {assignColours, getPalette} from './colours.ts';
 import {findRegions, toGrayscale} from './regions.ts';
 import {composeWithKey, drawAnswer, drawNumbers} from './render.ts';
@@ -16,20 +16,6 @@ export interface ColourByNumber {
     thumbnail: File;
     previewUrl: string;
 }
-
-const scaleToWidth = (source: HTMLCanvasElement, width: number): HTMLCanvasElement => {
-    const canvas = window.document.createElement('canvas');
-    canvas.width = width;
-    canvas.height = Math.round(source.height * (width / source.width));
-    const context = canvas.getContext('2d');
-    if (!context) {
-        throw new ColourByNumberError();
-    }
-    context.imageSmoothingQuality = 'high';
-    context.drawImage(source, 0, 0, canvas.width, canvas.height);
-
-    return canvas;
-};
 
 export const createColourByNumber = async (source: File): Promise<ColourByNumber> => {
     const page = await renderPdfFirstPage(source, RENDER_WIDTH);
@@ -61,11 +47,11 @@ export const createColourByNumber = async (source: File): Promise<ColourByNumber
     document.addImage(answer, 'PNG', 0, 0, pageWidth, pageHeight, undefined, 'FAST');
 
     const baseName = source.name.replace(/\.pdf$/i, '');
-    const preview = scaleToWidth(numbered, PREVIEW_WIDTH);
+    const preview = scaleCanvasToWidth(numbered, PREVIEW_WIDTH);
 
     return {
         pdf: new File([document.output('blob')], `${baseName}-colour-by-number.pdf`, {type: 'application/pdf'}),
-        thumbnail: await canvasToPngFile(preview, 'thumbnail.png'),
+        thumbnail: await canvasToThumbnailFile(preview, 'thumbnail'),
         previewUrl: preview.toDataURL('image/png'),
     };
 };
