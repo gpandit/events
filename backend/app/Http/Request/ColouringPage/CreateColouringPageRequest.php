@@ -20,7 +20,7 @@ class CreateColouringPageRequest extends BaseRequest
             'tint' => ['required', Rule::in(ColouringPageTint::valuesArray())],
             'status' => ['required', Rule::in(ColouringPageStatus::valuesArray())],
             'pdf' => ['required', 'file', 'mimes:pdf', 'mimetypes:application/pdf', 'max:10240'],
-            'thumbnail' => ['required', 'image', 'mimes:png,jpg,jpeg,webp', 'max:1024'],
+            'thumbnail' => ['required', 'image', 'mimes:png,jpg,jpeg,webp', 'max:2048'],
         ];
     }
 }

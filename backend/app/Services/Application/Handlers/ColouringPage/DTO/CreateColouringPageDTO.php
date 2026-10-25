@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace HiEvents\Services\Application\Handlers\ColouringPage\DTO;
 
+use HiEvents\DataTransferObjects\BaseDataObject;
 use HiEvents\DomainObjects\Enums\ColouringPageAgeGroup;
 use HiEvents\DomainObjects\Enums\ColouringPageTint;
 use HiEvents\DomainObjects\Status\ColouringPageStatus;
 use Illuminate\Http\UploadedFile;
 
-class CreateColouringPageDTO
+class CreateColouringPageDTO extends BaseDataObject
 {
     public function __construct(
         public readonly int $organizerId,
