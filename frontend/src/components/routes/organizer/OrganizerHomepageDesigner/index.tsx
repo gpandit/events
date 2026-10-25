@@ -133,8 +133,14 @@ const OrganizerHomepageDesigner = () => {
     const deleteReplacedTeamPhotos = (previousTheme: Partial<HomepageThemeSettings> | null | undefined, savedTheme: Partial<HomepageThemeSettings>) => {
         const stillUsed = teamPhotoIds(savedTheme);
 
+        const organizerTeamPhotoIds = new Set(
+            organizerData?.images
+                ?.filter((image) => image.type === 'TEAM_MEMBER_PHOTO')
+                .map((image) => image.id)
+        );
+
         [...teamPhotoIds(previousTheme)]
-            .filter((imageId) => !stillUsed.has(imageId))
+            .filter((imageId) => organizerTeamPhotoIds.has(imageId) && !stillUsed.has(imageId))
             .forEach((imageId) => deleteImageMutation.mutate({imageId}, {onSuccess: handleImageChange}));
     };
 
