@@ -65,6 +65,11 @@ use HiEvents\Http\Actions\Admin\Announcements\DeleteAnnouncementAction;
 use HiEvents\Http\Actions\Admin\Announcements\GetAllAnnouncementsAction;
 use HiEvents\Http\Actions\Admin\Announcements\UpdateAnnouncementAction;
 use HiEvents\Http\Actions\Admin\Attribution\GetUtmAttributionStatsAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\CreateSharedColouringPageAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\DeleteSharedColouringPageAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\GetSharedColouringPagesAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\ReorderSharedColouringPagesAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\UpdateSharedColouringPageAction;
 use HiEvents\Http\Actions\Admin\Configurations\CreateConfigurationAction;
 use HiEvents\Http\Actions\Admin\Configurations\DeleteConfigurationAction;
 use HiEvents\Http\Actions\Admin\Configurations\GetAllConfigurationsAction;
@@ -356,11 +361,6 @@ use HiEvents\Http\Actions\Webhooks\GetWebhookLogsAction;
 use HiEvents\Http\Actions\Webhooks\GetWebhooksAction;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Routing\Router;
-use HiEvents\Http\Actions\Admin\ColouringPages\CreateSharedColouringPageAction;
-use HiEvents\Http\Actions\Admin\ColouringPages\DeleteSharedColouringPageAction;
-use HiEvents\Http\Actions\Admin\ColouringPages\GetSharedColouringPagesAction;
-use HiEvents\Http\Actions\Admin\ColouringPages\ReorderSharedColouringPagesAction;
-use HiEvents\Http\Actions\Admin\ColouringPages\UpdateSharedColouringPageAction;
 
 /** @var Router|Router $router */
 $router = app()->get('router');

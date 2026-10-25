@@ -145,9 +145,9 @@ class SharedColouringPagesTest extends TestCase
             $this->headers($this->schoolOrganizerToken),
         )->assertStatus(ResponseCodes::HTTP_FORBIDDEN);
 
-        $this->postJson(
+        $this->post(
             "/organizers/{$this->organizerId}/colouring-pages",
-            $this->details('New'),
+            $this->details('New') + $this->files(),
             $this->headers($this->schoolOrganizerToken),
         )->assertStatus(ResponseCodes::HTTP_FORBIDDEN);
     }
@@ -168,7 +168,7 @@ class SharedColouringPagesTest extends TestCase
     {
         $this->getJson('/admin/colouring-pages', $this->headers($this->schoolAdminToken))
             ->assertStatus(ResponseCodes::HTTP_FORBIDDEN);
-        $this->postJson('/admin/colouring-pages', $this->details('New'), $this->headers($this->schoolAdminToken))
+        $this->post('/admin/colouring-pages', $this->details('New') + $this->files(), $this->headers($this->schoolAdminToken))
             ->assertStatus(ResponseCodes::HTTP_FORBIDDEN);
     }
 
