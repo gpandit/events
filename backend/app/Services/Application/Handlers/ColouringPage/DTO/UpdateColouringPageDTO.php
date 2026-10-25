@@ -12,7 +12,7 @@ use HiEvents\DomainObjects\Status\ColouringPageStatus;
 class UpdateColouringPageDTO extends BaseDataObject
 {
     public function __construct(
-        public readonly int $organizerId,
+        public readonly ?int $organizerId,
         public readonly int $pageId,
         public readonly string $title,
         public readonly ColouringPageAgeGroup $ageGroup,

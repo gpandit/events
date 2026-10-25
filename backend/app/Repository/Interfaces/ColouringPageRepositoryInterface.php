@@ -15,7 +15,20 @@ interface ColouringPageRepositoryInterface extends RepositoryInterface
     /**
      * @return Collection<int, ColouringPageDomainObject>
      */
-    public function findByOrganizerId(int $organizerId, ?string $status = null): Collection;
+    public function findVisibleToOrganizer(int $organizerId, ?string $status = null): Collection;
 
-    public function findNextSortOrder(int $organizerId): int;
+    /**
+     * @return Collection<int, ColouringPageDomainObject>
+     */
+    public function findOwnedBy(?int $organizerId, ?string $status = null): Collection;
+
+    public function findOwnedPage(int $pageId, ?int $organizerId): ?ColouringPageDomainObject;
+
+    /**
+     * @param  int[]  $pageIds
+     * @return Collection<int, ColouringPageDomainObject>
+     */
+    public function findOwnedPages(array $pageIds, ?int $organizerId): Collection;
+
+    public function findNextSortOrder(?int $organizerId): int;
 }

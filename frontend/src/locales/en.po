@@ -1070,7 +1070,7 @@ msgstr "Account updated successfully"
 msgid "Account verification revoked"
 msgstr "Account verification revoked"
 
-#: src/components/common/AdminUsersTable/index.tsx:127
+#: src/components/common/AdminUsersTable/index.tsx:128
 #: src/components/layouts/Admin/index.tsx:16
 #: src/components/routes/admin/Accounts/index.tsx:57
 #: src/components/routes/admin/Attribution/index.tsx:194
@@ -1094,7 +1094,7 @@ msgstr "Action Required: VAT Information Needed"
 #: src/components/common/WaitlistTable/index.tsx:234
 #: src/components/routes/admin/FailedJobs/index.tsx:167
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:84
-#: src/components/routes/organizer/ColouringPages/index.tsx:93
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:105
 msgid "Actions"
 msgstr "Actions"
 
@@ -1116,7 +1116,7 @@ msgstr "Activation date"
 #: src/components/forms/AffiliateForm/index.tsx:21
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:19
 #: src/components/modals/EditUserModal/index.tsx:111
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:108
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:109
 #: src/components/routes/event/attendees.tsx:29
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:211
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:20
@@ -1441,9 +1441,6 @@ msgid "Adds a page, names attendees"
 msgstr "Adds a page, names attendees"
 
 #: src/components/layouts/Admin/index.tsx:14
-#: src/components/modals/EditUserModal/index.tsx:50
-#: src/components/modals/InviteUserModal/index.tsx:41
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
 #: src/components/routes/admin/DeletionRequests/index.tsx:150
 msgid "Admin"
 msgstr "Admin"
@@ -1454,15 +1451,15 @@ msgid "Admin Access Required"
 msgstr "Admin Access Required"
 
 #: src/components/common/GlobalMenu/index.tsx:71
-#: src/components/layouts/Admin/index.tsx:34
+#: src/components/layouts/Admin/index.tsx:35
 #: src/components/routes/admin/Dashboard/index.tsx:70
 msgid "Admin Dashboard"
 msgstr "Admin Dashboard"
 
 #: src/components/modals/EditUserModal/index.tsx:52
 #: src/components/modals/InviteUserModal/index.tsx:43
-msgid "Admin users have full access to events and account settings."
-msgstr "Admin users have full access to events and account settings."
+#~ msgid "Admin users have full access to events and account settings."
+#~ msgstr "Admin users have full access to events and account settings."
 
 #: src/components/forms/ProductForm/index.tsx:235
 msgid "Admits attendees to your event"
@@ -1523,7 +1520,7 @@ msgid "Age 7-8"
 msgstr "Age 7-8"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:66
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:171
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:172
 msgid "Age group"
 msgstr "Age group"
 
@@ -2238,7 +2235,7 @@ msgstr "Are you sure you want to restore this event? It will be restored as a dr
 msgid "Are you sure you want to restore this organizer?"
 msgstr "Are you sure you want to restore this organizer?"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:50
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:51
 msgid "Are you sure you want to revoke this invitation?"
 msgstr "Are you sure you want to revoke this invitation?"
 
@@ -3080,7 +3077,7 @@ msgstr "Can't check in"
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:64
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1156
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:64
-#: src/components/routes/organizer/ColouringPages/index.tsx:51
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:56
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:69
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:85
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:85
@@ -3653,7 +3650,7 @@ msgstr "Choose a new seat for {0}"
 msgid "Choose a password (at least 6 characters)"
 msgstr "Choose a password (at least 6 characters)"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:50
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:51
 msgid "Choose a PDF file"
 msgstr "Choose a PDF file"
 
@@ -3961,7 +3958,7 @@ msgstr "Color must be a valid hex color code. Example: #ffffff"
 msgid "Colors"
 msgstr "Colors"
 
-#: src/utilites/colourByNumber/index.ts:52
+#: src/utilites/colourByNumber/index.ts:38
 msgid "Colour by number: match each number to its colour"
 msgstr "Colour by number: match each number to its colour"
 
@@ -3969,27 +3966,28 @@ msgstr "Colour by number: match each number to its colour"
 msgid "Colour for {0}"
 msgstr "Colour for {0}"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:161
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:162
 msgid "Colour-by-number preview"
 msgstr "Colour-by-number preview"
 
-#: src/components/routes/organizer/ColouringPages/index.tsx:54
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:59
 msgid "Colouring page deleted"
 msgstr "Colouring page deleted"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:98
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:99
 msgid "Colouring page updated"
 msgstr "Colouring page updated"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:113
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:114
 msgid "Colouring page uploaded"
 msgstr "Colouring page uploaded"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:18
-#: src/components/routes/organizer/ColouringPages/index.tsx:62
+#: src/components/routes/organizer/ColouringPages/index.tsx:15
 msgid "Colouring pages"
 msgstr "Colouring pages"
 
+#: src/components/layouts/Admin/index.tsx:27
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
 #: src/components/layouts/OrganizerLayout/index.tsx:121
 msgid "Colouring Pages"
@@ -4882,7 +4880,7 @@ msgstr "Creating Event..."
 msgid "Creating Organizer..."
 msgstr "Creating Organizer..."
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:155
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:156
 msgid "Creating the colour-by-number page…"
 msgstr "Creating the colour-by-number page…"
 
@@ -5298,9 +5296,9 @@ msgstr "delete"
 #: src/components/routes/admin/FailedJobs/index.tsx:209
 #: src/components/routes/event/OccurrencesTab/index.tsx:540
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:65
-#: src/components/routes/organizer/ColouringPages/index.tsx:51
-#: src/components/routes/organizer/ColouringPages/index.tsx:151
-#: src/components/routes/organizer/ColouringPages/index.tsx:155
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:56
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:176
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:180
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:245
 msgid "Delete"
 msgstr "Delete"
@@ -5309,7 +5307,7 @@ msgstr "Delete"
 msgid "Delete \"{0}\"?"
 msgstr "Delete \"{0}\"?"
 
-#: src/components/routes/organizer/ColouringPages/index.tsx:50
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:55
 msgid "Delete \"{title}\"? Parents will no longer be able to download it."
 msgstr "Delete \"{title}\"? Parents will no longer be able to download it."
 
@@ -5362,7 +5360,7 @@ msgstr "Delete Check-In List"
 msgid "Delete code"
 msgstr "Delete code"
 
-#: src/components/routes/organizer/ColouringPages/index.tsx:49
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:54
 msgid "Delete colouring page"
 msgstr "Delete colouring page"
 
@@ -5688,8 +5686,8 @@ msgstr "Download Invoice"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:87
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:92
-#: src/components/routes/organizer/ColouringPages/index.tsx:130
-#: src/components/routes/organizer/ColouringPages/index.tsx:136
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:153
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:159
 msgid "Download PDF"
 msgstr "Download PDF"
 
@@ -5711,7 +5709,7 @@ msgstr "Downloading Invoice"
 #: src/components/layouts/OrganizerLayout/index.tsx:229
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
-#: src/components/routes/organizer/ColouringPages/index.tsx:105
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:124
 msgid "Draft"
 msgstr "Draft"
 
@@ -5875,8 +5873,8 @@ msgstr "Early bird"
 #: src/components/common/TaxAndFeeList/index.tsx:73
 #: src/components/routes/admin/Announcements/index.tsx:211
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:54
-#: src/components/routes/organizer/ColouringPages/index.tsx:141
-#: src/components/routes/organizer/ColouringPages/index.tsx:144
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:166
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:169
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:252
 #: src/ee/box-office/components/layouts/BoxOffice/CartPanel.tsx:147
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:191
@@ -5947,7 +5945,7 @@ msgstr "Edit Check-In List"
 msgid "Edit Code"
 msgstr "Edit Code"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:128
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:129
 msgid "Edit colouring page"
 msgstr "Edit colouring page"
 
@@ -6011,7 +6009,7 @@ msgstr "Edit Schedule"
 msgid "Edit this event's seat map"
 msgstr "Edit this event's seat map"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:122
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:123
 msgid "Edit user"
 msgstr "Edit user"
 
@@ -6645,7 +6643,7 @@ msgstr "Event Types"
 msgid "Event Updated"
 msgstr "Event Updated"
 
-#: src/components/common/AdminAccountsTable/index.tsx:82
+#: src/components/common/AdminAccountsTable/index.tsx:83
 #: src/components/layouts/Admin/index.tsx:18
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:85
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:139
@@ -7202,7 +7200,7 @@ msgstr "Feature flag updated"
 msgid "Feature flags"
 msgstr "Feature flags"
 
-#: src/components/layouts/Admin/index.tsx:27
+#: src/components/layouts/Admin/index.tsx:28
 #: src/components/routes/admin/FeatureFlags/index.tsx:127
 msgid "Feature Flags"
 msgstr "Feature Flags"
@@ -7331,7 +7329,7 @@ msgstr "Finish setting up Stripe"
 msgid "Finish setup"
 msgstr "Finish setup"
 
-#: src/utilites/colourByNumber/index.ts:53
+#: src/utilites/colourByNumber/index.ts:39
 msgid "Finished picture"
 msgstr "Finished picture"
 
@@ -8366,9 +8364,9 @@ msgstr "Image URL"
 msgid "Images"
 msgstr "Images"
 
-#: src/components/common/AdminAccountsTable/index.tsx:134
-#: src/components/common/AdminUsersTable/index.tsx:84
-#: src/components/common/AdminUsersTable/index.tsx:96
+#: src/components/common/AdminAccountsTable/index.tsx:135
+#: src/components/common/AdminUsersTable/index.tsx:85
+#: src/components/common/AdminUsersTable/index.tsx:97
 msgid "Impersonate"
 msgstr "Impersonate"
 
@@ -8436,7 +8434,7 @@ msgstr "In use"
 #: src/components/forms/AffiliateForm/index.tsx:27
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:25
 #: src/components/modals/EditUserModal/index.tsx:112
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:108
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:109
 #: src/components/routes/organizer/Payments/CapabilityList.tsx:62
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:187
 msgid "Inactive"
@@ -8566,11 +8564,11 @@ msgstr "Invalid Liquid syntax. Please correct it and try again."
 msgid "Invalid VAT number format"
 msgstr "Invalid VAT number format"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:40
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:41
 msgid "Invitation resent!"
 msgstr "Invitation resent!"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:55
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:56
 msgid "Invitation revoked!"
 msgstr "Invitation revoked!"
 
@@ -8586,7 +8584,7 @@ msgstr "Invite Team Member"
 msgid "Invite Team Members"
 msgstr "Invite Team Members"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:147
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:148
 msgid "Invite User"
 msgstr "Invite User"
 
@@ -8594,7 +8592,7 @@ msgstr "Invite User"
 msgid "Invite Your Team"
 msgstr "Invite Your Team"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:108
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:109
 msgid "Invited"
 msgstr "Invited"
 
@@ -8836,7 +8834,7 @@ msgstr "Last 7 days"
 msgid "Last 90 days"
 msgstr "Last 90 days"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:160
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:161
 msgid "Last login"
 msgstr "Last login"
 
@@ -9006,7 +9004,7 @@ msgid "Library"
 msgstr "Library"
 
 #: src/components/common/GlobalMenu/index.tsx:79
-#: src/components/layouts/Admin/index.tsx:28
+#: src/components/layouts/Admin/index.tsx:29
 #: src/ee/licensing/components/routes/admin/Licence/index.tsx:51
 msgid "Licence"
 msgstr "Licence"
@@ -9243,7 +9241,7 @@ msgstr "Main floor"
 msgid "Main Office"
 msgstr "Main Office"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:145
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:146
 msgid "Make a colour-by-number version"
 msgstr "Make a colour-by-number version"
 
@@ -9339,7 +9337,7 @@ msgstr "Manage your account details and default settings"
 msgid "Manage your event's waitlist, view stats, and offer tickets to attendees."
 msgstr "Manage your event's waitlist, view stats, and offer tickets to attendees."
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:146
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:147
 msgid "Manage your users and their permissions"
 msgstr "Manage your users and their permissions"
 
@@ -9502,7 +9500,7 @@ msgstr "Message Sent"
 msgid "Messages"
 msgstr "Messages"
 
-#: src/components/common/AdminAccountsTable/index.tsx:96
+#: src/components/common/AdminAccountsTable/index.tsx:97
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:192
 msgid "Messaging Tier"
 msgstr "Messaging Tier"
@@ -9648,8 +9646,8 @@ msgstr "Move all dates earlier or later"
 msgid "Move attendee"
 msgstr "Move attendee"
 
-#: src/components/routes/organizer/ColouringPages/index.tsx:120
-#: src/components/routes/organizer/ColouringPages/index.tsx:123
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:141
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:144
 msgid "Move down"
 msgstr "Move down"
 
@@ -9661,8 +9659,8 @@ msgstr "Move its seats to another band first"
 msgid "Move to area"
 msgstr "Move to area"
 
-#: src/components/routes/organizer/ColouringPages/index.tsx:110
-#: src/components/routes/organizer/ColouringPages/index.tsx:113
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:131
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:134
 msgid "Move up"
 msgstr "Move up"
 
@@ -9787,7 +9785,7 @@ msgstr "Net Revenue"
 #: src/components/common/OrganizerWebhookTable/index.tsx:266
 #: src/components/common/PromoCodeTable/index.tsx:166
 #: src/components/common/WebhookTable/index.tsx:266
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:104
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:105
 msgid "Never"
 msgstr "Never"
 
@@ -9913,11 +9911,11 @@ msgstr "No - I'm an individual or non-VAT registered business"
 msgid "No account overrides. Add one from an account's admin page."
 msgstr "No account overrides. Add one from an account's admin page."
 
-#: src/components/common/AdminUsersTable/index.tsx:143
+#: src/components/common/AdminUsersTable/index.tsx:144
 msgid "No accounts"
 msgstr "No accounts"
 
-#: src/components/common/AdminAccountsTable/index.tsx:21
+#: src/components/common/AdminAccountsTable/index.tsx:22
 msgid "No accounts found"
 msgstr "No accounts found"
 
@@ -10020,7 +10018,7 @@ msgstr "No check-in lists available for this event."
 msgid "No check-ins yet"
 msgstr "No check-ins yet"
 
-#: src/components/routes/organizer/ColouringPages/index.tsx:83
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:95
 msgid "No colouring pages in this age group yet."
 msgstr "No colouring pages in this age group yet."
 
@@ -10393,7 +10391,7 @@ msgstr "No upcoming dates"
 msgid "No upcoming events"
 msgstr "No upcoming events"
 
-#: src/components/common/AdminUsersTable/index.tsx:18
+#: src/components/common/AdminUsersTable/index.tsx:19
 msgid "No users found"
 msgstr "No users found"
 
@@ -10562,7 +10560,7 @@ msgstr "Number Prefix"
 msgid "Numbers"
 msgstr "Numbers"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:146
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:147
 msgid "Numbers each area of a line-art page and adds a colour key and a finished-picture page. Colours are chosen automatically."
 msgstr "Numbers each area of a line-art page and adds a colour key and a finished-picture page. Colours are chosen automatically."
 
@@ -11232,7 +11230,6 @@ msgstr "Organization Name"
 #: src/components/layouts/EventHomepage/index.tsx:610
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
 #: src/components/routes/admin/Dashboard/index.tsx:257
 #: src/components/routes/admin/Dashboard/index.tsx:306
 #: src/components/routes/admin/Dashboard/index.tsx:352
@@ -11240,6 +11237,7 @@ msgstr "Organization Name"
 #: src/components/routes/admin/SpamEvents/index.tsx:245
 #: src/components/routes/events/Dashboard/index.tsx:194
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:368
+#: src/utilites/userRoles.ts:10
 msgid "Organizer"
 msgstr "Organizer"
 
@@ -11298,8 +11296,13 @@ msgstr "Organizers"
 
 #: src/components/modals/EditUserModal/index.tsx:58
 #: src/components/modals/InviteUserModal/index.tsx:49
-msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
-msgstr "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
+#~ msgid "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
+#~ msgstr "Organizers can only manage events and products. They cannot manage users, account settings or billing information."
+
+#: src/components/modals/EditUserModal/index.tsx:58
+#: src/components/modals/InviteUserModal/index.tsx:49
+msgid "Organizers can only manage events and products. They cannot manage users, colouring pages, account settings or billing information."
+msgstr "Organizers can only manage events and products. They cannot manage users, colouring pages, account settings or billing information."
 
 #: src/components/forms/ProductForm/index.tsx:366
 msgid "Original price before the sale"
@@ -11382,6 +11385,10 @@ msgstr "Page views"
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:113
 msgid "Page Views"
 msgstr "Page Views"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:88
+msgid "Pages marked Shared are provided for every school and appear on your site automatically."
+msgstr "Pages marked Shared are provided for every school and appear on your site automatically."
 
 #: src/ee/seating/components/routes/event/SeatingPrint/index.tsx:224
 msgid "Pages: {pageCount}"
@@ -11644,7 +11651,7 @@ msgstr "Payments not available"
 msgid "Payouts"
 msgstr "Payouts"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:133
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:134
 msgid "PDF file"
 msgstr "PDF file"
 
@@ -11888,6 +11895,10 @@ msgstr "Plan"
 #: src/components/common/PoweredByFooter/index.tsx:67
 msgid "Planning an event?"
 msgstr "Planning an event?"
+
+#: src/utilites/userRoles.ts:6
+msgid "Platform admin"
+msgstr "Platform admin"
 
 #: src/components/common/PlatformFeesSettings/index.tsx:57
 #: src/components/common/PlatformFeesSettings/index.tsx:153
@@ -12200,7 +12211,7 @@ msgstr "Prevent overselling by sharing inventory across multiple ticket types."
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:143
 #: src/components/routes/admin/Announcements/index.tsx:495
 #: src/components/routes/event/TicketDesigner/index.tsx:216
-#: src/components/routes/organizer/ColouringPages/index.tsx:90
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:102
 msgid "Preview"
 msgstr "Preview"
 
@@ -12544,9 +12555,13 @@ msgstr "Publish your event"
 
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:473
-#: src/components/routes/organizer/ColouringPages/index.tsx:105
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:124
 msgid "Published"
 msgstr "Published"
+
+#: src/components/routes/admin/ColouringPages/index.tsx:13
+msgid "Published pages here appear on every school's site next to the pages that school uploads itself."
+msgstr "Published pages here appear on every school's site next to the pages that school uploads itself."
 
 #: src/components/modals/PublishEventModal/index.tsx:151
 msgid "Publishing makes your event page public and opens it up for registrations."
@@ -13177,7 +13192,7 @@ msgstr "Resend email confirmation"
 msgid "Resend in {resendCooldown}s"
 msgstr "Resend in {resendCooldown}s"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:127
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:128
 msgid "Resend invitation"
 msgstr "Resend invitation"
 
@@ -13369,7 +13384,7 @@ msgstr "Review events flagged as potential spam by the automated check"
 msgid "Review your answers"
 msgstr "Review your answers"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:133
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:134
 msgid "Revoke invitation"
 msgstr "Revoke invitation"
 
@@ -13389,7 +13404,7 @@ msgstr "Right wing"
 
 #: src/components/modals/EditUserModal/index.tsx:94
 #: src/components/modals/InviteUserModal/index.tsx:64
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:159
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:160
 msgid "Role"
 msgstr "Role"
 
@@ -13587,7 +13602,7 @@ msgstr "Save"
 msgid "Save Box Office"
 msgstr "Save Box Office"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:192
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:193
 msgid "Save changes"
 msgstr "Save changes"
 
@@ -13751,6 +13766,17 @@ msgstr "Scheduled time"
 #: src/constants/shop.ts:29
 msgid "School"
 msgstr "School"
+
+#: src/components/modals/EditUserModal/index.tsx:50
+#: src/components/modals/InviteUserModal/index.tsx:41
+#: src/utilites/userRoles.ts:8
+msgid "School admin"
+msgstr "School admin"
+
+#: src/components/modals/EditUserModal/index.tsx:52
+#: src/components/modals/InviteUserModal/index.tsx:43
+msgid "School admins have full access to their school's events, colouring pages and account settings."
+msgstr "School admins have full access to their school's events, colouring pages and account settings."
 
 #: src/constants/shop.ts:22
 msgid "School meals"
@@ -14120,7 +14146,7 @@ msgstr "Select a message to view its contents"
 msgid "Select a tier"
 msgstr "Select a tier"
 
-#: src/components/common/AdminUsersTable/index.tsx:100
+#: src/components/common/AdminUsersTable/index.tsx:101
 msgid "Select Account"
 msgstr "Select Account"
 
@@ -14651,9 +14677,17 @@ msgstr "Share your own short story or poem with the Friends of Repton community!
 msgid "Share your own stories and poems with everyone."
 msgstr "Share your own stories and poems with everyone."
 
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:118
+msgid "Shared"
+msgstr "Shared"
+
 #: src/components/routes/event/CapacityAssignments/index.tsx:35
 msgid "Shared Capacity Management"
 msgstr "Shared Capacity Management"
+
+#: src/components/routes/admin/ColouringPages/index.tsx:11
+msgid "Shared colouring pages"
+msgstr "Shared colouring pages"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:34
 msgid "Shift times"
@@ -14747,7 +14781,7 @@ msgstr "Show more"
 msgid "Show more platforms"
 msgstr "Show more platforms"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:183
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:184
 msgid "Show on the website"
 msgstr "Show on the website"
 
@@ -15042,8 +15076,8 @@ msgstr "Something went wrong while deleting the Tax or Fee"
 msgid "Something went wrong, please try again, or contact support if the problem persists"
 msgstr "Something went wrong, please try again, or contact support if the problem persists"
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:44
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:59
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:45
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:60
 msgid "Something went wrong! Please try again"
 msgstr "Something went wrong! Please try again"
 
@@ -15069,8 +15103,8 @@ msgstr "Something went wrong. Please try again later."
 #: src/components/routes/my-tickets/DeleteMyData/index.tsx:34
 #: src/components/routes/my-tickets/index.tsx:163
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:52
-#: src/components/routes/organizer/ColouringPages/index.tsx:41
-#: src/components/routes/organizer/ColouringPages/index.tsx:55
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:46
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:60
 #: src/components/routes/product-widget/SelectProducts/index.tsx:364
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
@@ -15310,7 +15344,7 @@ msgstr "Stats"
 #: src/components/modals/EditUserModal/index.tsx:104
 #: src/components/modals/ManageAttendeeModal/index.tsx:151
 #: src/components/modals/ManageOrderModal/index.tsx:122
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:161
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:162
 #: src/components/routes/admin/Announcements/index.tsx:159
 #: src/components/routes/admin/Announcements/index.tsx:469
 #: src/components/routes/admin/Dashboard/index.tsx:405
@@ -15321,7 +15355,7 @@ msgstr "Stats"
 #: src/components/routes/event/OccurrencesTab/index.tsx:343
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:51
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:88
-#: src/components/routes/organizer/ColouringPages/index.tsx:92
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:104
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:62
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:172
 #: src/ee/licensing/components/routes/admin/Licence/index.tsx:79
@@ -16969,7 +17003,7 @@ msgstr "Tiers"
 msgid "TikTok"
 msgstr "TikTok"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:177
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:178
 msgid "Tile colour"
 msgstr "Tile colour"
 
@@ -17014,13 +17048,13 @@ msgstr "Timezone"
 
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:169
-#: src/components/routes/organizer/ColouringPages/index.tsx:91
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:170
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:103
 msgid "Title"
 msgstr "Title"
 
 #: src/components/routes/admin/Announcements/index.tsx:299
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:49
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:50
 msgid "Title is required"
 msgstr "Title is required"
 
@@ -17515,7 +17549,7 @@ msgstr "Untitled product"
 msgid "Untitled ticket"
 msgstr "Untitled ticket"
 
-#: src/components/common/AdminAccountsTable/index.tsx:101
+#: src/components/common/AdminAccountsTable/index.tsx:102
 msgid "Untrusted"
 msgstr "Untrusted"
 
@@ -17531,7 +17565,7 @@ msgstr "Up to {max} per order"
 msgid "up to {perDateAllocation} per date"
 msgstr "up to {perDateAllocation} per date"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:134
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:135
 msgid "Up to 10 MB. The first page becomes the thumbnail."
 msgstr "Up to 10 MB. The first page becomes the thumbnail."
 
@@ -17637,7 +17671,7 @@ msgstr "Updates as you build the rule. Flip through months to sanity-check dates
 msgid "Updates as you type."
 msgstr "Updates as you type."
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:192
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:193
 msgid "Upload"
 msgstr "Upload"
 
@@ -17653,8 +17687,8 @@ msgstr "Upload a cover image for your organizer"
 msgid "Upload a logo for your organizer"
 msgstr "Upload a logo for your organizer"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:128
-#: src/components/routes/organizer/ColouringPages/index.tsx:76
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:129
+#: src/components/routes/organizer/ColouringPages/ColouringPagesManager.tsx:81
 msgid "Upload colouring page"
 msgstr "Upload colouring page"
 
@@ -17776,12 +17810,12 @@ msgstr "Used for the Scan tab and for checking attendees in after a sale"
 msgid "Used to measure and personalise ads."
 msgstr "Used to measure and personalise ads."
 
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:158
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:159
 msgid "User"
 msgstr "User"
 
 #: src/components/common/GlobalMenu/index.tsx:63
-#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:145
+#: src/components/routes/account/ManageAccount/sections/Users/index.tsx:146
 msgid "User Management"
 msgstr "User Management"
 
@@ -17795,8 +17829,8 @@ msgstr "Username"
 msgid "Username (e.g. Simba42)"
 msgstr "Username (e.g. Simba42)"
 
-#: src/components/common/AdminAccountsTable/index.tsx:89
-#: src/components/common/AdminAccountsTable/index.tsx:109
+#: src/components/common/AdminAccountsTable/index.tsx:90
+#: src/components/common/AdminAccountsTable/index.tsx:110
 #: src/components/layouts/Admin/index.tsx:17
 #: src/components/routes/account/ManageAccount/index.tsx:30
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:159
@@ -18017,7 +18051,7 @@ msgstr "View attendee"
 msgid "View Attendee Details"
 msgstr "View Attendee Details"
 
-#: src/components/common/AdminAccountsTable/index.tsx:73
+#: src/components/common/AdminAccountsTable/index.tsx:74
 #: src/components/routes/admin/FailedJobs/index.tsx:190
 #: src/components/routes/admin/SpamEvents/index.tsx:167
 msgid "View Details"
@@ -18201,7 +18235,7 @@ msgstr "We also automatically collect limited technical information, such as you
 msgid "We collect information you provide directly to us, including:"
 msgstr "We collect information you provide directly to us, including:"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:69
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:70
 msgid "We could not create the colour-by-number version. Please check the PDF and try again."
 msgstr "We could not create the colour-by-number version. Please check the PDF and try again."
 
@@ -18213,7 +18247,7 @@ msgstr "We could not load usernames. Try again"
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "We could not process your payment. Please try again or contact support."
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:119
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:120
 msgid "We could not read that PDF. Please check the file and try again."
 msgstr "We could not read that PDF. Please check the file and try again."
 

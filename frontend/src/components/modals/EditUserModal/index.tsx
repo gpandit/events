@@ -47,15 +47,15 @@ export const EditUserModal = ({onClose, user}: EditUserModalProps) => {
     const calcTypeOptions: ItemProps[] = [
         {
             icon: <IconUserShield/>,
-            label: t`Admin`,
+            label: t`School admin`,
             value: 'ADMIN',
-            description: t`Admin users have full access to events and account settings.`,
+            description: t`School admins have full access to their school's events, colouring pages and account settings.`,
         },
         {
             icon: <IconUser/>,
             label: t`Organizer`,
             value: 'ORGANIZER',
-            description: t`Organizers can only manage events and products. They cannot manage users, account settings or billing information.`,
+            description: t`Organizers can only manage events and products. They cannot manage users, colouring pages, account settings or billing information.`,
         },
     ];
 

@@ -17,6 +17,7 @@ class ColouringPageResource extends BaseResource
         return [
             'id' => $this->getId(),
             'organizer_id' => $this->getOrganizerId(),
+            'is_shared' => $this->getOrganizerId() === null,
             'title' => $this->getTitle(),
             /** @var 'AGE_2_5'|'AGE_6_10'|'AGE_11_13'|'AGE_14_18' */
             'age_group' => $this->getAgeGroup(),

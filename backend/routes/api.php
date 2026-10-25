@@ -356,6 +356,11 @@ use HiEvents\Http\Actions\Webhooks\GetWebhookLogsAction;
 use HiEvents\Http\Actions\Webhooks\GetWebhooksAction;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Routing\Router;
+use HiEvents\Http\Actions\Admin\ColouringPages\CreateSharedColouringPageAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\DeleteSharedColouringPageAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\GetSharedColouringPagesAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\ReorderSharedColouringPagesAction;
+use HiEvents\Http\Actions\Admin\ColouringPages\UpdateSharedColouringPageAction;
 
 /** @var Router|Router $router */
 $router = app()->get('router');
@@ -702,6 +707,11 @@ $router->prefix('/admin')->middleware(['auth:api'])->group(
         $router->get('/events', GetAllAdminEventsAction::class);
         $router->get('/events/upcoming', GetUpcomingEventsAction::class);
         $router->get('/orders', GetAllOrdersAction::class);
+        $router->get('/colouring-pages', GetSharedColouringPagesAction::class);
+        $router->post('/colouring-pages', CreateSharedColouringPageAction::class);
+        $router->put('/colouring-pages/order', ReorderSharedColouringPagesAction::class);
+        $router->put('/colouring-pages/{pageId}', UpdateSharedColouringPageAction::class);
+        $router->delete('/colouring-pages/{pageId}', DeleteSharedColouringPageAction::class);
         $router->post('/impersonate/{user_id}', StartImpersonationAction::class);
         $router->post('/stop-impersonation', StopImpersonationAction::class);
 
