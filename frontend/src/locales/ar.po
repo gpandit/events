@@ -1519,7 +1519,7 @@ msgid "Age 7-8"
 msgstr "العمر 7-8"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:66
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:112
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:171
 msgid "Age group"
 msgstr "الفئة العمرية"
 
@@ -2811,6 +2811,10 @@ msgstr "معلومات الفوترة اللازمة لمعالجة عمليات
 msgid "Billing Settings"
 msgstr "إعدادات الفوترة"
 
+#: src/utilites/colourByNumber/colours.ts:18
+msgid "Blue"
+msgstr "أزرق"
+
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:47
 msgid "Body is required"
 msgstr "النص مطلوب"
@@ -3645,7 +3649,7 @@ msgstr ""
 msgid "Choose a password (at least 6 characters)"
 msgstr "اختر كلمة مرور (6 أحرف على الأقل)"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:46
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:50
 msgid "Choose a PDF file"
 msgstr "اختر ملف PDF"
 
@@ -3953,19 +3957,27 @@ msgstr "يجب أن يكون اللون رمز لون سداسي عشري صال
 msgid "Colors"
 msgstr "الألوان"
 
+#: src/utilites/colourByNumber/index.ts:52
+msgid "Colour by number: match each number to its colour"
+msgstr "لوّن حسب الأرقام: طابق كل رقم مع لونه"
+
 #: src/ee/seating/components/SeatMapDesigner/BandsPanel.tsx:29
 msgid "Colour for {0}"
 msgstr ""
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:161
+msgid "Colour-by-number preview"
+msgstr "معاينة التلوين حسب الأرقام"
 
 #: src/components/routes/organizer/ColouringPages/index.tsx:54
 msgid "Colouring page deleted"
 msgstr "تم حذف صفحة التلوين"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:68
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:98
 msgid "Colouring page updated"
 msgstr "تم تحديث صفحة التلوين"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:81
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:113
 msgid "Colouring page uploaded"
 msgstr "تم رفع صفحة التلوين"
 
@@ -4865,6 +4877,10 @@ msgstr "جارٍ إنشاء الفعالية..."
 #: src/components/forms/OrganizerForm/index.tsx:130
 msgid "Creating Organizer..."
 msgstr "جارٍ إنشاء الجهة المنظمة..."
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:155
+msgid "Creating the colour-by-number page…"
+msgstr "جارٍ إنشاء صفحة التلوين حسب الأرقام…"
 
 #: src/components/routes/welcome/index.tsx:470
 msgid "Creating your event, please wait"
@@ -5926,7 +5942,7 @@ msgstr "تعديل قائمة تسجيل الدخول"
 msgid "Edit Code"
 msgstr "تعديل الرمز"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:96
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:128
 msgid "Edit colouring page"
 msgstr "تعديل صفحة التلوين"
 
@@ -7310,6 +7326,10 @@ msgstr "أكمل إعداد Stripe"
 msgid "Finish setup"
 msgstr "إنهاء الإعداد"
 
+#: src/utilites/colourByNumber/index.ts:53
+msgid "Finished picture"
+msgstr "الصورة المكتملة"
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:58
 msgid "First"
 msgstr "الأول"
@@ -7765,6 +7785,10 @@ msgstr ""
 #: src/components/layouts/OrganizerHomepage/ExampleStoryCard/ExamplePoemCard.tsx:28
 msgid "Grandpa says the rain is only visiting,"
 msgstr ""
+
+#: src/utilites/colourByNumber/colours.ts:16
+msgid "Green"
+msgstr "أخضر"
 
 #: src/ee/box-office/components/modals/BoxOfficeStatsModal/index.tsx:36
 #: src/ee/box-office/components/modals/BoxOfficeStatsModal/index.tsx:98
@@ -9002,6 +9026,10 @@ msgstr "فاتح"
 msgid "Lilac"
 msgstr "أرجواني فاتح"
 
+#: src/utilites/colourByNumber/colours.ts:15
+msgid "Lime"
+msgstr "أخضر فاتح"
+
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:56
 msgid "Limited by capacity"
 msgstr "محدود بالسعة"
@@ -9209,6 +9237,10 @@ msgstr ""
 #: src/components/modals/LocationEditModal/index.tsx:136
 msgid "Main Office"
 msgstr "المكتب الرئيسي"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:145
+msgid "Make a colour-by-number version"
+msgstr "إنشاء نسخة للتلوين حسب الأرقام"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:180
 msgid "Make billing address mandatory during checkout"
@@ -10524,6 +10556,10 @@ msgstr "بادئة الرقم"
 msgid "Numbers"
 msgstr ""
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:146
+msgid "Numbers each area of a line-art page and adds a colour key and a finished-picture page. Colours are chosen automatically."
+msgstr "يرقّم كل منطقة في صفحة الرسم الخطي ويضيف مفتاح الألوان وصفحة الصورة المكتملة. تُختار الألوان تلقائيًا."
+
 #: src/components/common/OrderDetails/index.tsx:57
 #: src/components/forms/CheckInListForm/index.tsx:130
 #: src/components/modals/CreateAttendeeModal/index.tsx:258
@@ -10942,6 +10978,10 @@ msgstr "أو فعّل المدفوعات غير المتصلة وعطّل Stripe
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:81
 msgid "Or start from a venue like yours"
 msgstr ""
+
+#: src/utilites/colourByNumber/colours.ts:13
+msgid "Orange"
+msgstr "برتقالي"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:443
 msgid "order"
@@ -11598,7 +11638,7 @@ msgstr "المدفوعات غير متاحة"
 msgid "Payouts"
 msgstr "الدفعات"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:101
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:133
 msgid "PDF file"
 msgstr "ملف PDF"
 
@@ -11809,6 +11849,10 @@ msgstr ""
 #: src/ee/box-office/components/modals/BoxOfficePinModal/index.tsx:60
 msgid "PIN"
 msgstr ""
+
+#: src/utilites/colourByNumber/colours.ts:20
+msgid "Pink"
+msgstr "وردي"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:82
 msgid "Pinterest"
@@ -12513,6 +12557,10 @@ msgstr "المشتري"
 msgid "Purchaser email"
 msgstr "بريد المشتري الإلكتروني"
 
+#: src/utilites/colourByNumber/colours.ts:19
+msgid "Purple"
+msgstr "بنفسجي"
+
 #: src/ee/licensing/components/LicenceModal/index.tsx:44
 msgid "Put the new key in <0>APP_LICENCE_KEY</0> and redeploy the backend."
 msgstr ""
@@ -12762,6 +12810,10 @@ msgstr "فعالية متكررة"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:52
 msgid "Recurring Event Settings"
 msgstr "إعدادات الفعالية المتكررة"
+
+#: src/utilites/colourByNumber/colours.ts:12
+msgid "Red"
+msgstr "أحمر"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -13525,7 +13577,7 @@ msgstr "حفظ"
 msgid "Save Box Office"
 msgstr ""
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:132
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:192
 msgid "Save changes"
 msgstr "حفظ التغييرات"
 
@@ -14685,7 +14737,7 @@ msgstr "عرض المزيد"
 msgid "Show more platforms"
 msgstr "إظهار المزيد من المنصات"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:124
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:183
 msgid "Show on the website"
 msgstr "عرض على الموقع"
 
@@ -14853,6 +14905,7 @@ msgstr "تخطي التواريخ المعدّلة يدويًا"
 msgid "Skip this step"
 msgstr "تخطي هذه الخطوة"
 
+#: src/utilites/colourByNumber/colours.ts:17
 #: src/utilites/colouringPages.ts:21
 msgid "Sky"
 msgstr "سماوي"
@@ -16906,7 +16959,7 @@ msgstr "المستويات"
 msgid "TikTok"
 msgstr "تيك توك"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:118
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:177
 msgid "Tile colour"
 msgstr "لون البطاقة"
 
@@ -16951,13 +17004,13 @@ msgstr "المنطقة الزمنية"
 
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:110
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:169
 #: src/components/routes/organizer/ColouringPages/index.tsx:91
 msgid "Title"
 msgstr "العنوان"
 
 #: src/components/routes/admin/Announcements/index.tsx:299
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:45
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:49
 msgid "Title is required"
 msgstr "العنوان مطلوب"
 
@@ -17468,7 +17521,7 @@ msgstr "حتى {max} لكل طلب"
 msgid "up to {perDateAllocation} per date"
 msgstr "حتى {perDateAllocation} لكل تاريخ"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:102
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:134
 msgid "Up to 10 MB. The first page becomes the thumbnail."
 msgstr ""
 
@@ -17574,7 +17627,7 @@ msgstr "تحديثات أثناء إنشاء القاعدة. تنقّل بين �
 msgid "Updates as you type."
 msgstr "تحديثات أثناء الكتابة."
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:132
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:192
 msgid "Upload"
 msgstr "رفع"
 
@@ -17590,7 +17643,7 @@ msgstr "تحميل صورة غلاف لجهتك المنظمة"
 msgid "Upload a logo for your organizer"
 msgstr "تحميل شعار لجهتك المنظمة"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:96
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:128
 #: src/components/routes/organizer/ColouringPages/index.tsx:76
 msgid "Upload colouring page"
 msgstr "رفع صفحة تلوين"
@@ -18138,6 +18191,10 @@ msgstr "نجمع أيضًا تلقائيًا معلومات تقنية محدو�
 msgid "We collect information you provide directly to us, including:"
 msgstr "نجمع المعلومات التي تقدمها لنا مباشرة، بما في ذلك:"
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:69
+msgid "We could not create the colour-by-number version. Please check the PDF and try again."
+msgstr "تعذّر إنشاء نسخة التلوين حسب الأرقام. يرجى التحقق من ملف PDF والمحاولة مرة أخرى."
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:27
 msgid "We could not load usernames. Try again"
 msgstr "تعذر تحميل أسماء المستخدمين. حاول مرة أخرى"
@@ -18146,7 +18203,7 @@ msgstr "تعذر تحميل أسماء المستخدمين. حاول مرة أ�
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "تعذّرت معالجة دفعتك. يرجى المحاولة مرة أخرى أو التواصل مع الدعم."
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:87
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:119
 msgid "We could not read that PDF. Please check the file and try again."
 msgstr "تعذّرت قراءة ملف PDF هذا. يرجى التحقق من الملف والمحاولة مرة أخرى."
 
@@ -18791,6 +18848,10 @@ msgstr "سنويًا"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:99
 msgid "years"
 msgstr "سنوات"
+
+#: src/utilites/colourByNumber/colours.ts:14
+msgid "Yellow"
+msgstr "أصفر"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:282
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:227

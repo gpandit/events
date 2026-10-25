@@ -1519,7 +1519,7 @@ msgid "Age 7-8"
 msgstr "Age 7-8"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:66
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:112
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:171
 msgid "Age group"
 msgstr "Age group"
 
@@ -2811,6 +2811,10 @@ msgstr "Billing information necessary to process ticket purchases (handled secur
 msgid "Billing Settings"
 msgstr "Billing Settings"
 
+#: src/utilites/colourByNumber/colours.ts:18
+msgid "Blue"
+msgstr "Blue"
+
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:47
 msgid "Body is required"
 msgstr "Body is required"
@@ -3645,7 +3649,7 @@ msgstr "Choose a new seat for {0}"
 msgid "Choose a password (at least 6 characters)"
 msgstr "Choose a password (at least 6 characters)"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:46
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:50
 msgid "Choose a PDF file"
 msgstr "Choose a PDF file"
 
@@ -3953,19 +3957,27 @@ msgstr "Color must be a valid hex color code. Example: #ffffff"
 msgid "Colors"
 msgstr "Colors"
 
+#: src/utilites/colourByNumber/index.ts:52
+msgid "Colour by number: match each number to its colour"
+msgstr "Colour by number: match each number to its colour"
+
 #: src/ee/seating/components/SeatMapDesigner/BandsPanel.tsx:29
 msgid "Colour for {0}"
 msgstr "Colour for {0}"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:161
+msgid "Colour-by-number preview"
+msgstr "Colour-by-number preview"
 
 #: src/components/routes/organizer/ColouringPages/index.tsx:54
 msgid "Colouring page deleted"
 msgstr "Colouring page deleted"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:68
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:98
 msgid "Colouring page updated"
 msgstr "Colouring page updated"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:81
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:113
 msgid "Colouring page uploaded"
 msgstr "Colouring page uploaded"
 
@@ -4865,6 +4877,10 @@ msgstr "Creating Event..."
 #: src/components/forms/OrganizerForm/index.tsx:130
 msgid "Creating Organizer..."
 msgstr "Creating Organizer..."
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:155
+msgid "Creating the colour-by-number page…"
+msgstr "Creating the colour-by-number page…"
 
 #: src/components/routes/welcome/index.tsx:470
 msgid "Creating your event, please wait"
@@ -5926,7 +5942,7 @@ msgstr "Edit Check-In List"
 msgid "Edit Code"
 msgstr "Edit Code"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:96
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:128
 msgid "Edit colouring page"
 msgstr "Edit colouring page"
 
@@ -7310,6 +7326,10 @@ msgstr "Finish setting up Stripe"
 msgid "Finish setup"
 msgstr "Finish setup"
 
+#: src/utilites/colourByNumber/index.ts:53
+msgid "Finished picture"
+msgstr "Finished picture"
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:58
 msgid "First"
 msgstr "First"
@@ -7765,6 +7785,10 @@ msgstr "Grace period ends"
 #: src/components/layouts/OrganizerHomepage/ExampleStoryCard/ExamplePoemCard.tsx:28
 msgid "Grandpa says the rain is only visiting,"
 msgstr "Grandpa says the rain is only visiting,"
+
+#: src/utilites/colourByNumber/colours.ts:16
+msgid "Green"
+msgstr "Green"
 
 #: src/ee/box-office/components/modals/BoxOfficeStatsModal/index.tsx:36
 #: src/ee/box-office/components/modals/BoxOfficeStatsModal/index.tsx:98
@@ -9002,6 +9026,10 @@ msgstr "Light"
 msgid "Lilac"
 msgstr "Lilac"
 
+#: src/utilites/colourByNumber/colours.ts:15
+msgid "Lime"
+msgstr "Lime"
+
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:56
 msgid "Limited by capacity"
 msgstr "Limited by capacity"
@@ -9209,6 +9237,10 @@ msgstr "Main floor"
 #: src/components/modals/LocationEditModal/index.tsx:136
 msgid "Main Office"
 msgstr "Main Office"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:145
+msgid "Make a colour-by-number version"
+msgstr "Make a colour-by-number version"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:180
 msgid "Make billing address mandatory during checkout"
@@ -10524,6 +10556,10 @@ msgstr "Number Prefix"
 msgid "Numbers"
 msgstr "Numbers"
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:146
+msgid "Numbers each area of a line-art page and adds a colour key and a finished-picture page. Colours are chosen automatically."
+msgstr "Numbers each area of a line-art page and adds a colour key and a finished-picture page. Colours are chosen automatically."
+
 #: src/components/common/OrderDetails/index.tsx:57
 #: src/components/forms/CheckInListForm/index.tsx:130
 #: src/components/modals/CreateAttendeeModal/index.tsx:258
@@ -10942,6 +10978,10 @@ msgstr "Or enable offline payments and disable Stripe"
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:81
 msgid "Or start from a venue like yours"
 msgstr "Or start from a venue like yours"
+
+#: src/utilites/colourByNumber/colours.ts:13
+msgid "Orange"
+msgstr "Orange"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:443
 msgid "order"
@@ -11598,7 +11638,7 @@ msgstr "Payments not available"
 msgid "Payouts"
 msgstr "Payouts"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:101
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:133
 msgid "PDF file"
 msgstr "PDF file"
 
@@ -11809,6 +11849,10 @@ msgstr "Pillar"
 #: src/ee/box-office/components/modals/BoxOfficePinModal/index.tsx:60
 msgid "PIN"
 msgstr "PIN"
+
+#: src/utilites/colourByNumber/colours.ts:20
+msgid "Pink"
+msgstr "Pink"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:82
 msgid "Pinterest"
@@ -12513,6 +12557,10 @@ msgstr "Purchaser"
 msgid "Purchaser email"
 msgstr "Purchaser email"
 
+#: src/utilites/colourByNumber/colours.ts:19
+msgid "Purple"
+msgstr "Purple"
+
 #: src/ee/licensing/components/LicenceModal/index.tsx:44
 msgid "Put the new key in <0>APP_LICENCE_KEY</0> and redeploy the backend."
 msgstr "Put the new key in <0>APP_LICENCE_KEY</0> and redeploy the backend."
@@ -12762,6 +12810,10 @@ msgstr "Recurring Event"
 #: src/components/routes/event/Settings/Sections/RecurringEventSettings/index.tsx:52
 msgid "Recurring Event Settings"
 msgstr "Recurring Event Settings"
+
+#: src/utilites/colourByNumber/colours.ts:12
+msgid "Red"
+msgstr "Red"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:80
 msgid "Reddit"
@@ -13525,7 +13577,7 @@ msgstr "Save"
 msgid "Save Box Office"
 msgstr "Save Box Office"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:132
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:192
 msgid "Save changes"
 msgstr "Save changes"
 
@@ -14685,7 +14737,7 @@ msgstr "Show more"
 msgid "Show more platforms"
 msgstr "Show more platforms"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:124
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:183
 msgid "Show on the website"
 msgstr "Show on the website"
 
@@ -14853,6 +14905,7 @@ msgstr "Skip manually edited dates"
 msgid "Skip this step"
 msgstr "Skip this step"
 
+#: src/utilites/colourByNumber/colours.ts:17
 #: src/utilites/colouringPages.ts:21
 msgid "Sky"
 msgstr "Sky"
@@ -16906,7 +16959,7 @@ msgstr "Tiers"
 msgid "TikTok"
 msgstr "TikTok"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:118
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:177
 msgid "Tile colour"
 msgstr "Tile colour"
 
@@ -16951,13 +17004,13 @@ msgstr "Timezone"
 
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:110
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:169
 #: src/components/routes/organizer/ColouringPages/index.tsx:91
 msgid "Title"
 msgstr "Title"
 
 #: src/components/routes/admin/Announcements/index.tsx:299
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:45
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:49
 msgid "Title is required"
 msgstr "Title is required"
 
@@ -17468,7 +17521,7 @@ msgstr "Up to {max} per order"
 msgid "up to {perDateAllocation} per date"
 msgstr "up to {perDateAllocation} per date"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:102
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:134
 msgid "Up to 10 MB. The first page becomes the thumbnail."
 msgstr "Up to 10 MB. The first page becomes the thumbnail."
 
@@ -17574,7 +17627,7 @@ msgstr "Updates as you build the rule. Flip through months to sanity-check dates
 msgid "Updates as you type."
 msgstr "Updates as you type."
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:132
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:192
 msgid "Upload"
 msgstr "Upload"
 
@@ -17590,7 +17643,7 @@ msgstr "Upload a cover image for your organizer"
 msgid "Upload a logo for your organizer"
 msgstr "Upload a logo for your organizer"
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:96
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:128
 #: src/components/routes/organizer/ColouringPages/index.tsx:76
 msgid "Upload colouring page"
 msgstr "Upload colouring page"
@@ -18138,6 +18191,10 @@ msgstr "We also automatically collect limited technical information, such as you
 msgid "We collect information you provide directly to us, including:"
 msgstr "We collect information you provide directly to us, including:"
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:69
+msgid "We could not create the colour-by-number version. Please check the PDF and try again."
+msgstr "We could not create the colour-by-number version. Please check the PDF and try again."
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:27
 msgid "We could not load usernames. Try again"
 msgstr "We could not load usernames. Try again"
@@ -18146,7 +18203,7 @@ msgstr "We could not load usernames. Try again"
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "We could not process your payment. Please try again or contact support."
 
-#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:87
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:119
 msgid "We could not read that PDF. Please check the file and try again."
 msgstr "We could not read that PDF. Please check the file and try again."
 
@@ -18791,6 +18848,10 @@ msgstr "Yearly"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:99
 msgid "years"
 msgstr "years"
+
+#: src/utilites/colourByNumber/colours.ts:14
+msgid "Yellow"
+msgstr "Yellow"
 
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:282
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:227
