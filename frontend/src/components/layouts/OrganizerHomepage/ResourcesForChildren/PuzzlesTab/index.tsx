@@ -6,7 +6,7 @@ import {Organizer, QuizPlayerSession} from '../../../../../types.ts';
 import {AGE_BANDS, AgeBand, Puzzle, PUZZLES_BY_AGE_BAND} from './generalKnowledgePuzzles.ts';
 import {getQuizPercentage, getQuizRank, QuizRank, rememberTest, shuffle} from './quizScoring.ts';
 import {prepareQuiz} from './prepareQuiz.ts';
-import {QUIZ_PHOTO_CREDITS_PATH} from './quizPhotos.ts';
+import {HAS_QUIZ_PHOTOS, QUIZ_PHOTO_CREDITS_PATH} from './quizPhotos.ts';
 import {QuestionPicture} from './QuestionPicture.tsx';
 import {SaveScorePrompt} from './SaveScorePrompt.tsx';
 import {AnswerReview} from './AnswerReview.tsx';
@@ -335,9 +335,11 @@ const PuzzlesStage = ({organizer, session, signIn, signOut, onAgeBandChange}: Pu
                     >
                         {t`Start the test`}
                     </button>
-                    <a href={QUIZ_PHOTO_CREDITS_PATH} target="_blank" rel="noopener noreferrer" className={classes.photoCredits}>
-                        {t`Photo credits`}
-                    </a>
+                    {HAS_QUIZ_PHOTOS && (
+                        <a href={QUIZ_PHOTO_CREDITS_PATH} target="_blank" rel="noopener noreferrer" className={classes.photoCredits}>
+                            {t`Photo credits`}
+                        </a>
+                    )}
                 </div>
             </div>
         );
