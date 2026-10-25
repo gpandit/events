@@ -238,11 +238,17 @@ use HiEvents\Http\Actions\Organizers\GetOrganizerAction;
 use HiEvents\Http\Actions\Organizers\GetOrganizerDeletionStatusAction;
 use HiEvents\Http\Actions\Organizers\ChildStorySubmissions\GetChildStorySubmissionsAction;
 use HiEvents\Http\Actions\Organizers\ChildStorySubmissions\ReviewChildStorySubmissionAction;
+use HiEvents\Http\Actions\Organizers\ColouringPages\CreateColouringPageAction;
+use HiEvents\Http\Actions\Organizers\ColouringPages\DeleteColouringPageAction;
+use HiEvents\Http\Actions\Organizers\ColouringPages\GetColouringPagesAction;
+use HiEvents\Http\Actions\Organizers\ColouringPages\ReorderColouringPagesAction;
+use HiEvents\Http\Actions\Organizers\ColouringPages\UpdateColouringPageAction;
 use HiEvents\Http\Actions\Organizers\GetOrganizerEventsAction;
 use HiEvents\Http\Actions\Organizers\GetOrganizersAction;
 use HiEvents\Http\Actions\Organizers\GetPublicOrganizerAction;
 use HiEvents\Http\Actions\Organizers\Orders\GetOrganizerOrdersAction;
 use HiEvents\Http\Actions\Organizers\Public\GetPublishedChildStorySubmissionsPublicAction;
+use HiEvents\Http\Actions\Organizers\Public\GetPublishedColouringPagesPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\ParentalConsent\GetParentalConsentPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\ParentalConsent\RespondToParentalConsentPublicAction;
 use HiEvents\Http\Actions\Organizers\Public\SendOrganizerContactMessagePublicAction;
@@ -432,6 +438,11 @@ $router->middleware(['auth:api'])->group(
         $router->get('/organizers/{organizer_id}/webhooks/{webhook_id}/logs', GetOrganizerWebhookLogsAction::class);
         $router->get('/organizers/{organizerId}/child-story-submissions', GetChildStorySubmissionsAction::class);
         $router->put('/organizers/{organizerId}/child-story-submissions/{submissionId}/review', ReviewChildStorySubmissionAction::class);
+        $router->get('/organizers/{organizerId}/colouring-pages', GetColouringPagesAction::class);
+        $router->post('/organizers/{organizerId}/colouring-pages', CreateColouringPageAction::class);
+        $router->put('/organizers/{organizerId}/colouring-pages/order', ReorderColouringPagesAction::class);
+        $router->put('/organizers/{organizerId}/colouring-pages/{pageId}', UpdateColouringPageAction::class);
+        $router->delete('/organizers/{organizerId}/colouring-pages/{pageId}', DeleteColouringPageAction::class);
 
         // Locations - Organizer level
         $router->get('/organizers/{organizer_id}/locations', GetLocationsAction::class);
@@ -775,6 +786,7 @@ $router->prefix('/public')->group(
         $router->post('/organizers/{organizerId}/child-story-submissions', SubmitChildStorySubmissionPublicAction::class)
             ->middleware('throttle:5,1');
         $router->get('/organizers/{organizerId}/child-story-submissions', GetPublishedChildStorySubmissionsPublicAction::class);
+        $router->get('/organizers/{organizerId}/colouring-pages', GetPublishedColouringPagesPublicAction::class);
         $router->get('/organizers/{organizerId}/parental-consents/{token}', GetParentalConsentPublicAction::class)
             ->middleware('throttle:30,1');
         $router->post('/organizers/{organizerId}/parental-consents/{token}', RespondToParentalConsentPublicAction::class)

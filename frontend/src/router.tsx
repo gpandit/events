@@ -342,6 +342,13 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "colouring-pages",
+                async lazy() {
+                    const ColouringPages = await import("./components/routes/organizer/ColouringPages");
+                    return { Component: ColouringPages.default };
+                }
+            },
+            {
                 path: "child-story-submissions",
                 async lazy() {
                     const ChildStorySubmissions = await import("./components/routes/organizer/ChildStorySubmissions");
