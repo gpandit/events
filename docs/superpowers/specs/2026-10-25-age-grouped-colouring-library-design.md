@@ -26,3 +26,6 @@ Backend unit tests for the handlers and the file storage service; `php artisan s
 
 ## Out of scope
 The digital colouring canvas (separate spec), drag-and-drop reordering, replacing a PDF in place (delete and re-upload).
+
+## Addendum: colour-by-number conversion
+The upload modal has a "Make a colour-by-number version" switch. It runs entirely in the browser (`frontend/src/utilites/colourByNumber/`): page 1 of the line-art PDF is rendered with PDF.js at 1700px wide, each enclosed area becomes a region (flood fill and a distance transform find the best spot for its number), regions are coloured from a 9-colour palette so neighbours never match, and a two-page PDF is built with jsPDF: the numbered picture with a colour key, then a finished-picture preview. That PDF and a thumbnail of the numbered page are uploaded in place of the original. Colours are chosen automatically by position, not by what the picture shows. Areas with an inscribed radius under 12px at 200 dpi are left white and unnumbered.
