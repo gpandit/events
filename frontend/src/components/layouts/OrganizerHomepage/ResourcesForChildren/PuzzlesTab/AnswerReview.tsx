@@ -2,17 +2,19 @@ import React from 'react';
 import {t} from '@lingui/macro';
 import {IconArrowLeft, IconCheck, IconX} from '@tabler/icons-react';
 import {Puzzle} from './puzzleTypes.ts';
+import {QuestionPicture} from './QuestionPicture.tsx';
 import {subjectLabel} from './quizLabels.ts';
 import classes from '../ResourcesForChildren.module.scss';
 
 interface AnswerReviewProps {
     puzzles: Puzzle[];
+    photos: Record<string, string>;
     questionOptions: string[][];
     answers: (string | null)[];
     onBack: () => void;
 }
 
-export const AnswerReview: React.FC<AnswerReviewProps> = ({puzzles, questionOptions, answers, onBack}) => {
+export const AnswerReview: React.FC<AnswerReviewProps> = ({puzzles, photos, questionOptions, answers, onBack}) => {
     const mistakes = puzzles
         .map((puzzle, index) => ({puzzle, index, chosen: answers[index] ?? null}))
         .filter(({puzzle, chosen}) => chosen !== puzzle.answer);
@@ -30,6 +32,7 @@ export const AnswerReview: React.FC<AnswerReviewProps> = ({puzzles, questionOpti
                         <span className={classes.reviewMeta}>
                             {t`Question ${index + 1}`} · {subjectLabel(puzzle.subject)}
                         </span>
+                        {puzzle.visual && <QuestionPicture visual={puzzle.visual} photos={photos} small/>}
                         <p className={classes.reviewQuestion}>{puzzle.question}</p>
                         <div className={classes.reviewOptions}>
                             {questionOptions[index].map((option) => {
