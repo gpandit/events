@@ -1,22 +1,21 @@
-import {LoaderFunctionArgs, redirect} from "react-router";
+import {LoaderFunctionArgs} from "react-router";
+import {getConfig} from "../utilites/config.ts";
+import {redirectToCanonicalOrganizerPath} from "./redirectToCanonicalOrganizerPath.ts";
 import {getQueryClient} from "../utilites/ssrQueryClient.ts";
 import {getOrganizerPublicQuery} from "../queries/useGetOrganizerPublic.ts";
 import {getOrganizerPublicShopsQuery} from "../queries/useGetOrganizerShopsPublic.ts";
 
 export const publicOrganizerShopsRouteLoader = async ({params, request}: LoaderFunctionArgs) => {
-    const {organizerId, organizerSlug} = params;
+    const organizerId = params.organizerId ?? getConfig('VITE_DEFAULT_ORGANIZER_ID');
 
     if (!organizerId) {
-        throw new Error('Organizer ID is required');
+        return {organizer: null, shopsData: null};
     }
 
     try {
         const organizer = await getQueryClient().fetchQuery(getOrganizerPublicQuery(organizerId));
 
-        if (organizer && organizer.slug && organizerSlug !== organizer.slug) {
-            const url = new URL(request.url);
-            throw redirect(`/events/${organizer.id}/${organizer.slug}/shop${url.search}`);
-        }
+        redirectToCanonicalOrganizerPath(organizer, request.url);
 
         const shopsData = await getQueryClient().fetchQuery(
             getOrganizerPublicShopsQuery(organizerId, {pageNumber: 1, perPage: 100})

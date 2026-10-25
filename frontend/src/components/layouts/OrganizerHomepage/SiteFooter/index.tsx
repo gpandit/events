@@ -6,7 +6,10 @@ import {Organizer} from "../../../../types.ts";
 import {
     organizerAccountPath,
     organizerEventsPath,
+    organizerAboutPath,
     organizerHomepagePath,
+    organizerInstagramPath,
+    organizerStoriesPath,
     organizerResourcesPath,
     organizerShopPath,
 } from "../../../../utilites/urlHelper.ts";
@@ -125,15 +128,15 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({organizer}) => {
                                 {t`Shop`}
                             </Link>
                         )}
-                        <Link to={`${organizerHomepagePath(organizer)}/about`} className={classes.footerNavLink}>
+                        <Link to={organizerAboutPath(organizer)} className={classes.footerNavLink}>
                             {t`About Us`}
                         </Link>
                         {instagramHandle && (
-                            <Link to={`${organizerHomepagePath(organizer)}/instagram`} className={classes.footerNavLink}>
+                            <Link to={organizerInstagramPath(organizer)} className={classes.footerNavLink}>
                                 <IconBrandInstagram size={14}/> {t`Instagram`}
                             </Link>
                         )}
-                        <Link to={`${organizerHomepagePath(organizer)}/stories`} className={classes.footerNavLink}>
+                        <Link to={organizerStoriesPath(organizer)} className={classes.footerNavLink}>
                             <IconBook2 size={14}/> {t`Children's Stories`}
                         </Link>
                         <Link

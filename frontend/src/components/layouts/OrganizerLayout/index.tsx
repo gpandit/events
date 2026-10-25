@@ -41,7 +41,7 @@ import { useGetAccount } from "../../../queries/useGetAccount.ts";
 import { useLicensedFeature } from "../../../ee/licensing/hooks/useLicensedFeature.ts";
 import { FeatureFlag } from "../../../constants/featureFlags.ts";
 import { ShareModal } from "../../modals/ShareModal";
-import { organizerHomepageUrl } from "../../../utilites/urlHelper";
+import { organizerHomepagePath, organizerHomepageUrl } from "../../../utilites/urlHelper";
 import { useUpdateOrganizerStatus } from "../../../mutations/useUpdateOrganizerStatus.ts";
 import { confirmationDialog } from "../../../utilites/confirmationDialog.tsx";
 import { showError, showSuccess } from "../../../utilites/notifications.tsx";
@@ -258,7 +258,7 @@ const OrganizerLayout = () => {
                 actionGroupContent={(
                     <Button
                         component={NavLink}
-                        to={`/events/${organizerId}/${organizer?.slug || ''}`}
+                        to={organizer ? organizerHomepagePath(organizer) : '/'}
                         target={'_blank'}
                         variant={'transparent'}
                         className={classes.viewHomepageButton}
