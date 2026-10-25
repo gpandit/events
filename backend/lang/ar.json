@@ -749,5 +749,6 @@
     "Collection for:": "الاستلام لـ:",
     "Please quote the student name or order number at reception.": "يرجى ذكر اسم الطالب أو رقم الطلب عند مكتب الاستقبال.",
     "The regular price must be higher than the sale price.": "يجب أن يكون السعر الأصلي أعلى من سعر البيع.",
-    "A product can have at most :max images.": "يمكن أن يحتوي المنتج على :max صور كحد أقصى."
+    "A product can have at most :max images.": "يمكن أن يحتوي المنتج على :max صور كحد أقصى.",
+    "This photo does not belong to this organizer.": "هذه الصورة لا تنتمي إلى هذا المنظم."
 }

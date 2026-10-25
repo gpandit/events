@@ -21,7 +21,9 @@ class UpdateColouringPageHandler
      */
     public function handle(UpdateColouringPageDTO $dto): ColouringPageDomainObject
     {
-        $this->assertBelongsToOrganizer($dto->pageId, $dto->organizerId);
+        if ($this->repository->findOwnedPage($dto->pageId, $dto->organizerId) === null) {
+            throw new ResourceNotFoundException(__('Colouring page not found'));
+        }
 
         /** @var ColouringPageDomainObject $page */
         $page = $this->repository->updateFromArray($dto->pageId, [
@@ -32,20 +34,5 @@ class UpdateColouringPageHandler
         ]);
 
         return $page;
-    }
-
-    /**
-     * @throws ResourceNotFoundException
-     */
-    private function assertBelongsToOrganizer(int $pageId, int $organizerId): void
-    {
-        $page = $this->repository->findFirstWhere([
-            ColouringPageDomainObjectAbstract::ID => $pageId,
-            ColouringPageDomainObjectAbstract::ORGANIZER_ID => $organizerId,
-        ]);
-
-        if ($page === null) {
-            throw new ResourceNotFoundException(__('Colouring page not found'));
-        }
     }
 }

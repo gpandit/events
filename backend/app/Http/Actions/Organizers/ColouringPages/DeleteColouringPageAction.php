@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace HiEvents\Http\Actions\Organizers\ColouringPages;
 
+use HiEvents\DomainObjects\Enums\Role;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\Exceptions\ResourceNotFoundException;
 use HiEvents\Http\Actions\BaseAction;
@@ -21,7 +22,7 @@ class DeleteColouringPageAction extends BaseAction
      */
     public function __invoke(int $organizerId, int $pageId): Response
     {
-        $this->isActionAuthorized($organizerId, OrganizerDomainObject::class);
+        $this->isActionAuthorized($organizerId, OrganizerDomainObject::class, Role::ADMIN);
 
         $this->handler->handle($pageId, $organizerId);
 

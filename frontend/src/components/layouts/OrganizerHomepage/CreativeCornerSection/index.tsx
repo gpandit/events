@@ -2,7 +2,7 @@ import {Link} from "react-router";
 import {t} from "@lingui/macro";
 import {IconBulb, IconFeather, IconPalette} from "@tabler/icons-react";
 import {Organizer} from "../../../../types.ts";
-import {organizerHomepagePath, organizerPuzzlesPath, organizerResourcesPath} from "../../../../utilites/urlHelper.ts";
+import {organizerPuzzlesPath, organizerResourcesPath, organizerStoriesPath} from "../../../../utilites/urlHelper.ts";
 import classes from './CreativeCornerSection.module.scss';
 
 interface CreativeCornerSectionProps {
@@ -24,7 +24,7 @@ export const CreativeCornerSection = ({organizer}: CreativeCornerSectionProps) =
             title: t`Creative Writers`,
             description: t`Share your own stories and poems with everyone.`,
             cta: t`Prose & Poetry`,
-            to: `${organizerHomepagePath(organizer)}/stories`,
+            to: organizerStoriesPath(organizer),
             testId: 'creative-writers-link',
         },
         {

@@ -6,6 +6,7 @@ namespace HiEvents\Http\Actions\Organizers\ColouringPages;
 
 use HiEvents\DomainObjects\Enums\ColouringPageAgeGroup;
 use HiEvents\DomainObjects\Enums\ColouringPageTint;
+use HiEvents\DomainObjects\Enums\Role;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\DomainObjects\Status\ColouringPageStatus;
 use HiEvents\Exceptions\CouldNotStoreColouringPageFilesException;
@@ -31,7 +32,7 @@ class CreateColouringPageAction extends BaseAction
      */
     public function __invoke(CreateColouringPageRequest $request, int $organizerId): JsonResponse
     {
-        $this->isActionAuthorized($organizerId, OrganizerDomainObject::class);
+        $this->isActionAuthorized($organizerId, OrganizerDomainObject::class, Role::ADMIN);
 
         try {
             $page = $this->handler->handle(new CreateColouringPageDTO(

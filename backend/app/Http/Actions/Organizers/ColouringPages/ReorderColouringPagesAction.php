@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace HiEvents\Http\Actions\Organizers\ColouringPages;
 
+use HiEvents\DomainObjects\Enums\Role;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\Exceptions\ResourceNotFoundException;
 use HiEvents\Http\Actions\BaseAction;
@@ -24,7 +25,7 @@ class ReorderColouringPagesAction extends BaseAction
      */
     public function __invoke(ReorderColouringPagesRequest $request, int $organizerId): Response
     {
-        $this->isActionAuthorized($organizerId, OrganizerDomainObject::class);
+        $this->isActionAuthorized($organizerId, OrganizerDomainObject::class, Role::ADMIN);
 
         $this->handler->handle($organizerId, array_map('intval', $request->validated('page_ids')));
 

@@ -17,6 +17,7 @@ import {showError, showSuccess} from "../../../../../../utilites/notifications.t
 import {useDeleteUserInvitation} from "../../../../../../mutations/useDeleteUserInvitation.ts";
 import {LoadingMask} from "../../../../../common/LoadingMask";
 import {confirmationDialog} from "../../../../../../utilites/confirmationDialog.tsx";
+import {getUserRoleLabel} from "../../../../../../utilites/userRoles.ts";
 
 const Users = () => {
     const usersQuery = useGetUsers();
@@ -96,7 +97,7 @@ const Users = () => {
                 <Badge variant="outline">
                     <Group gap={5}>
                         {user.role === 'ORGANIZER' && <IconUser size={14}/>}
-                        {user.role === 'ADMIN' && <IconUserShield size={14}/>} {user.role === 'ADMIN' ? t`Admin` : user.role === 'ORGANIZER' ? t`Organizer` : user.role}
+                        {user.role === 'ADMIN' && <IconUserShield size={14}/>} {getUserRoleLabel(user.role ?? "")}
                     </Group>
                 </Badge>
             </Table.Td>

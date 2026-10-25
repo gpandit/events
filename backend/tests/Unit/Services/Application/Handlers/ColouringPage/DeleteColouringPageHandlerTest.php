@@ -34,9 +34,9 @@ class DeleteColouringPageHandlerTest extends TestCase
 
     public function test_handle_deletes_the_page_and_its_uploaded_files(): void
     {
-        $this->repository->shouldReceive('findFirstWhere')
+        $this->repository->shouldReceive('findOwnedPage')
             ->once()
-            ->with(['id' => 5, 'organizer_id' => 10])
+            ->with(5, 10)
             ->andReturn($this->page('colouring-pages/a.pdf', 'colouring-pages/a.png'));
         $this->repository->shouldReceive('deleteById')->once()->with(5);
         $this->fileStorage->shouldReceive('delete')->once()->with('colouring-pages/a.pdf', 'colouring-pages/a.png');
@@ -46,9 +46,23 @@ class DeleteColouringPageHandlerTest extends TestCase
         $this->addToAssertionCount(1);
     }
 
+    public function test_handle_deletes_a_shared_page_when_no_organizer_is_given(): void
+    {
+        $this->repository->shouldReceive('findOwnedPage')
+            ->once()
+            ->with(5, null)
+            ->andReturn($this->page('colouring-pages/a.pdf', 'colouring-pages/a.png'));
+        $this->repository->shouldReceive('deleteById')->once()->with(5);
+        $this->fileStorage->shouldReceive('delete')->once();
+
+        $this->handler->handle(5, null);
+
+        $this->addToAssertionCount(1);
+    }
+
     public function test_handle_leaves_bundled_assets_in_place(): void
     {
-        $this->repository->shouldReceive('findFirstWhere')
+        $this->repository->shouldReceive('findOwnedPage')
             ->once()
             ->andReturn($this->page('/pdf/kawaii-cat-coloring-page.pdf', '/pdf-thumbnails/kawaii-cat-coloring-page.png'));
         $this->repository->shouldReceive('deleteById')->once()->with(5);
@@ -61,9 +75,9 @@ class DeleteColouringPageHandlerTest extends TestCase
 
     public function test_handle_throws_when_the_page_belongs_to_another_organizer(): void
     {
-        $this->repository->shouldReceive('findFirstWhere')
+        $this->repository->shouldReceive('findOwnedPage')
             ->once()
-            ->with(['id' => 5, 'organizer_id' => 10])
+            ->with(5, 10)
             ->andReturn(null);
         $this->repository->shouldNotReceive('deleteById');
         $this->fileStorage->shouldNotReceive('delete');

@@ -9,7 +9,9 @@ import {
     organizerAccountPath,
     organizerEventsPath,
     organizerShopPath,
+    organizerAboutPath,
     organizerHomepagePath,
+    organizerStoriesPath,
     organizerPuzzlesPath,
     organizerResourcesPath,
 } from "../../../../utilites/urlHelper.ts";
@@ -59,7 +61,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
     const resourceLinks = [
         {to: organizerResourcesPath(organizer, 'colouring-pages'), label: t`Colouring Pages`},
         {to: organizerPuzzlesPath(organizer), label: t`Puzzles`},
-        {to: `${homePath}/stories`, label: t`Prose & Poetry`, isStories: true},
+        {to: organizerStoriesPath(organizer), label: t`Prose & Poetry`, isStories: true},
     ];
 
     const linkClass = (isActive: boolean) => `${classes.link} ${isActive ? classes.linkActive : ''}`;
@@ -107,7 +109,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                             ))}
                         </Menu.Dropdown>
                     </Menu>
-                    <Link to={`${homePath}/about`} className={linkClass(active === 'about')}>
+                    <Link to={organizerAboutPath(organizer)} className={linkClass(active === 'about')}>
                         {t`About Us`}
                     </Link>
                     <Link to={organizerAccountPath(organizer)} className={linkClass(active === 'account')}>
@@ -166,7 +168,7 @@ export const OrganizerNav: React.FC<OrganizerNavProps> = ({organizer, active}) =
                             </Link>
                         ))}
                     </div>
-                    <Link to={`${homePath}/about`} className={linkClass(active === 'about')} onClick={closeMenu}>
+                    <Link to={organizerAboutPath(organizer)} className={linkClass(active === 'about')} onClick={closeMenu}>
                         {t`About Us`}
                     </Link>
                     <Link

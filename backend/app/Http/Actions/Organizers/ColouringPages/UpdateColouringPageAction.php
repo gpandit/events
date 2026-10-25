@@ -6,6 +6,7 @@ namespace HiEvents\Http\Actions\Organizers\ColouringPages;
 
 use HiEvents\DomainObjects\Enums\ColouringPageAgeGroup;
 use HiEvents\DomainObjects\Enums\ColouringPageTint;
+use HiEvents\DomainObjects\Enums\Role;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\DomainObjects\Status\ColouringPageStatus;
 use HiEvents\Exceptions\ResourceNotFoundException;
@@ -27,7 +28,7 @@ class UpdateColouringPageAction extends BaseAction
      */
     public function __invoke(UpdateColouringPageRequest $request, int $organizerId, int $pageId): JsonResponse
     {
-        $this->isActionAuthorized($organizerId, OrganizerDomainObject::class);
+        $this->isActionAuthorized($organizerId, OrganizerDomainObject::class, Role::ADMIN);
 
         $page = $this->handler->handle(new UpdateColouringPageDTO(
             organizerId: $organizerId,

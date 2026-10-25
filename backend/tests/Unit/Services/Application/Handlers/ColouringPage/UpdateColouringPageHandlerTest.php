@@ -43,9 +43,9 @@ class UpdateColouringPageHandlerTest extends TestCase
     {
         $updated = new ColouringPageDomainObject;
 
-        $this->repository->shouldReceive('findFirstWhere')
+        $this->repository->shouldReceive('findOwnedPage')
             ->once()
-            ->with(['id' => 5, 'organizer_id' => 10])
+            ->with(5, 10)
             ->andReturn(new ColouringPageDomainObject);
         $this->repository->shouldReceive('updateFromArray')
             ->once()
@@ -60,9 +60,28 @@ class UpdateColouringPageHandlerTest extends TestCase
         $this->assertSame($updated, $this->handler->handle($this->dto()));
     }
 
+    public function test_handle_updates_a_shared_page_when_no_organizer_is_given(): void
+    {
+        $updated = new ColouringPageDomainObject;
+
+        $this->repository->shouldReceive('findOwnedPage')->once()->with(5, null)->andReturn(new ColouringPageDomainObject);
+        $this->repository->shouldReceive('updateFromArray')->once()->andReturn($updated);
+
+        $dto = new UpdateColouringPageDTO(
+            organizerId: null,
+            pageId: 5,
+            title: 'Shared',
+            ageGroup: ColouringPageAgeGroup::AGE_6_10,
+            tint: ColouringPageTint::MINT,
+            status: ColouringPageStatus::PUBLISHED,
+        );
+
+        $this->assertSame($updated, $this->handler->handle($dto));
+    }
+
     public function test_handle_throws_when_the_page_belongs_to_another_organizer(): void
     {
-        $this->repository->shouldReceive('findFirstWhere')->once()->andReturn(null);
+        $this->repository->shouldReceive('findOwnedPage')->once()->with(5, 10)->andReturn(null);
         $this->repository->shouldNotReceive('updateFromArray');
 
         $this->expectException(ResourceNotFoundException::class);

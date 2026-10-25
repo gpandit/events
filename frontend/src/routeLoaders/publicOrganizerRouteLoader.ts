@@ -1,30 +1,24 @@
-import {LoaderFunctionArgs, redirect} from "react-router";
+import {LoaderFunctionArgs} from "react-router";
+import {getConfig} from "../utilites/config.ts";
+import {redirectToCanonicalOrganizerPath} from "./redirectToCanonicalOrganizerPath.ts";
 import {getQueryClient} from "../utilites/ssrQueryClient.ts";
 import {getOrganizerPublicQuery} from "../queries/useGetOrganizerPublic.ts";
 import {getOrganizerPublicEventsQuery} from "../queries/useGetOrganizerEventsPublic.ts";
 
 export const publicOrganizerRouteLoader = async ({params, request}: LoaderFunctionArgs) => {
-    const {organizerId, organizerSlug} = params;
+    const organizerId = params.organizerId ?? getConfig('VITE_DEFAULT_ORGANIZER_ID');
     const url = new URL(request.url);
-    const queryParams = new URLSearchParams(url.search);
     const isPastEvents = url.pathname.endsWith('/past-events');
     const pageNumber = url.searchParams.get('page') ? parseInt(url.searchParams.get('page')!) : 1;
 
     if (!organizerId) {
-        throw new Error('Organizer ID is required');
+        return {organizer: null, eventsData: null, isPastEvents};
     }
 
     try {
         const organizer = await getQueryClient().fetchQuery(getOrganizerPublicQuery(organizerId));
 
-        if (organizer && organizer.slug && organizerSlug !== organizer.slug) {
-            const searchString = queryParams.toString();
-            const pathMatch = url.pathname.match(/^\/events\/[^/]+\/[^/]+(\/.*)?$/);
-            const pathSuffix = pathMatch?.[1] || '';
-            throw redirect(
-                `/events/${organizer.id}/${organizer.slug}${pathSuffix}${searchString ? `?${searchString}` : ''}`
-            );
-        }
+        redirectToCanonicalOrganizerPath(organizer, request.url);
 
         let filter = {};
         if (!isPastEvents) {

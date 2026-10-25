@@ -14,7 +14,7 @@ class GetColouringPagesHandlerTest extends TestCase
     {
         $repository = m::mock(ColouringPageRepositoryInterface::class);
         $pages = new Collection;
-        $repository->shouldReceive('findByOrganizerId')->once()->with(10, null)->andReturn($pages);
+        $repository->shouldReceive('findVisibleToOrganizer')->once()->with(10, null)->andReturn($pages);
 
         $this->assertSame($pages, (new GetColouringPagesHandler($repository))->handle(10));
     }
@@ -23,7 +23,7 @@ class GetColouringPagesHandlerTest extends TestCase
     {
         $repository = m::mock(ColouringPageRepositoryInterface::class);
         $pages = new Collection;
-        $repository->shouldReceive('findByOrganizerId')->once()->with(10, 'PUBLISHED')->andReturn($pages);
+        $repository->shouldReceive('findVisibleToOrganizer')->once()->with(10, 'PUBLISHED')->andReturn($pages);
 
         $this->assertSame($pages, (new GetColouringPagesHandler($repository))->handle(10, publishedOnly: true));
     }

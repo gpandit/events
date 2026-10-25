@@ -12,6 +12,99 @@ const RedirectToOrganizerEvents = ({pastEvents}: {pastEvents?: boolean}) => {
     return <Navigate to={`/events/${organizerId}/${organizerSlug}${suffix}`} replace={true} />;
 };
 
+const organizerPageRoutes = (prefix: string, accountSegment: string): RouteObject[] => [
+    {
+        path: `${prefix}/events`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicOrganizerEvents = await import("./components/layouts/PublicOrganizerEvents");
+            return { Component: PublicOrganizerEvents.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/events/past-events`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicOrganizerEvents = await import("./components/layouts/PublicOrganizerEvents");
+            return { Component: PublicOrganizerEvents.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/shop`,
+        loader: publicOrganizerShopsRouteLoader,
+        async lazy() {
+            const PublicOrganizerShops = await import("./components/layouts/PublicOrganizerShops");
+            return { Component: PublicOrganizerShops.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/instagram`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicOrganizerInstagram = await import("./components/layouts/PublicOrganizerInstagram");
+            return { Component: PublicOrganizerInstagram.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/stories`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicChildrenStories = await import("./components/layouts/PublicChildrenStories");
+            return { Component: PublicChildrenStories.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/parental-consent/:token`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicParentalConsent = await import("./components/layouts/PublicParentalConsent");
+            return { Component: PublicParentalConsent.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/resources/:tab?`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicChildrenResources = await import("./components/layouts/PublicChildrenResources");
+            return { Component: PublicChildrenResources.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/puzzles`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicPuzzles = await import("./components/layouts/PublicPuzzles");
+            return { Component: PublicPuzzles.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/${accountSegment}`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicCustomerAccount = await import("./components/layouts/PublicCustomerAccount");
+            return { Component: PublicCustomerAccount.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: `${prefix}/about`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicOrganizerAbout = await import("./components/layouts/PublicOrganizerAbout");
+            return { Component: PublicOrganizerAbout.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+];
+
 export const router: RouteObject[] = [
     {
         path: "",
@@ -198,6 +291,13 @@ export const router: RouteObject[] = [
                 async lazy() {
                     const Configurations = await import("./components/routes/admin/Configurations");
                     return { Component: Configurations.default };
+                }
+            },
+            {
+                path: "colouring-pages",
+                async lazy() {
+                    const SharedColouringPages = await import("./components/routes/admin/ColouringPages");
+                    return { Component: SharedColouringPages.default };
                 }
             },
             {
@@ -623,96 +723,8 @@ export const router: RouteObject[] = [
         element: <RedirectToOrganizerEvents pastEvents/>,
         errorElement: <ErrorPage />,
     },
-    {
-        path: "/events/:organizerId/:organizerSlug/events",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicOrganizerEvents = await import("./components/layouts/PublicOrganizerEvents");
-            return { Component: PublicOrganizerEvents.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/events/past-events",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicOrganizerEvents = await import("./components/layouts/PublicOrganizerEvents");
-            return { Component: PublicOrganizerEvents.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/shop",
-        loader: publicOrganizerShopsRouteLoader,
-        async lazy() {
-            const PublicOrganizerShops = await import("./components/layouts/PublicOrganizerShops");
-            return { Component: PublicOrganizerShops.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/instagram",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicOrganizerInstagram = await import("./components/layouts/PublicOrganizerInstagram");
-            return { Component: PublicOrganizerInstagram.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/stories",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicChildrenStories = await import("./components/layouts/PublicChildrenStories");
-            return { Component: PublicChildrenStories.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/parental-consent/:token",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicParentalConsent = await import("./components/layouts/PublicParentalConsent");
-            return { Component: PublicParentalConsent.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/resources/:tab?",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicChildrenResources = await import("./components/layouts/PublicChildrenResources");
-            return { Component: PublicChildrenResources.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/puzzles",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicPuzzles = await import("./components/layouts/PublicPuzzles");
-            return { Component: PublicPuzzles.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/account",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicCustomerAccount = await import("./components/layouts/PublicCustomerAccount");
-            return { Component: PublicCustomerAccount.default };
-        },
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/events/:organizerId/:organizerSlug/about",
-        loader: publicOrganizerRouteLoader,
-        async lazy() {
-            const PublicOrganizerAbout = await import("./components/layouts/PublicOrganizerAbout");
-            return { Component: PublicOrganizerAbout.default };
-        },
-        errorElement: <ErrorPage />,
-    },
+    ...organizerPageRoutes("/events/:organizerId/:organizerSlug", "account"),
+    ...organizerPageRoutes("", "my-account"),
     {
         path: "/privacy-policy",
         async lazy() {

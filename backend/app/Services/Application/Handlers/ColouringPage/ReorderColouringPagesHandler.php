@@ -23,15 +23,9 @@ class ReorderColouringPagesHandler
      * @throws ResourceNotFoundException
      * @throws Throwable
      */
-    public function handle(int $organizerId, array $orderedPageIds): void
+    public function handle(?int $organizerId, array $orderedPageIds): void
     {
-        $owned = $this->repository->findWhereIn(
-            ColouringPageDomainObjectAbstract::ID,
-            $orderedPageIds,
-            [ColouringPageDomainObjectAbstract::ORGANIZER_ID => $organizerId],
-        );
-
-        if ($owned->count() !== count($orderedPageIds)) {
+        if ($this->repository->findOwnedPages($orderedPageIds, $organizerId)->count() !== count($orderedPageIds)) {
             throw new ResourceNotFoundException(__('Colouring page not found'));
         }
 

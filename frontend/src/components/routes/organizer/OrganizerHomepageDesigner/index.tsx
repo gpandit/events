@@ -125,19 +125,28 @@ const OrganizerHomepageDesigner = () => {
         setIframeSrc(buildPreviewSrc(nextPage, existingCover?.id, existingLogo?.id, teamImagesKey));
     };
 
-    const deleteUnusedTeamPhotos = (savedTheme: Partial<HomepageThemeSettings>) => {
-        const usedImageIds = new Set(
-            [...(savedTheme.team_members ?? []), ...(savedTheme.technical_team_members ?? [])]
-                .map((member) => member.image_id)
+    const teamPhotoIds = (theme: Partial<HomepageThemeSettings> | null | undefined) => new Set(
+        [...(theme?.team_members ?? []), ...(theme?.technical_team_members ?? [])]
+            .flatMap((member) => member.image_id ?? [])
+    );
+
+    const deleteReplacedTeamPhotos = (previousTheme: Partial<HomepageThemeSettings> | null | undefined, savedTheme: Partial<HomepageThemeSettings>) => {
+        const stillUsed = teamPhotoIds(savedTheme);
+
+        const organizerTeamPhotoIds = new Set(
+            organizerData?.images
+                ?.filter((image) => image.type === 'TEAM_MEMBER_PHOTO')
+                .map((image) => image.id)
         );
 
-        organizerData?.images
-            ?.filter((image) => image.type === 'TEAM_MEMBER_PHOTO' && !usedImageIds.has(image.id))
-            .forEach((image) => deleteImageMutation.mutate({imageId: image.id}, {onSuccess: handleImageChange}));
+        [...teamPhotoIds(previousTheme)]
+            .filter((imageId) => organizerTeamPhotoIds.has(imageId) && !stillUsed.has(imageId))
+            .forEach((imageId) => deleteImageMutation.mutate({imageId}, {onSuccess: handleImageChange}));
     };
 
     const handleSubmit = (values: FormValues) => {
         const validatedTheme = validateThemeSettings(values.homepage_theme_settings);
+        const previousTheme = organizerSettingsQuery.data?.homepage_theme_settings;
 
         const organizerSettings: Partial<OrganizerSettings> = {
             homepage_theme_settings: validatedTheme,
@@ -150,7 +159,7 @@ const OrganizerHomepageDesigner = () => {
             },
             {
                 onSuccess: () => {
-                    deleteUnusedTeamPhotos(validatedTheme);
+                    deleteReplacedTeamPhotos(previousTheme, validatedTheme);
                     showSuccess(t`Successfully Updated Site Design`);
                 },
                 onError: (error) => {
