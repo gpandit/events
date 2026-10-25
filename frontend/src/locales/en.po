@@ -364,6 +364,10 @@ msgstr "{open} to seat"
 msgid "{organizerName}'s first event"
 msgstr "{organizerName}'s first event"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:91
+msgid "{position} of {total}"
+msgstr "{position} of {total}"
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:95
 msgid "{productCount} ticket types configured"
 msgstr "{productCount} ticket types configured"
@@ -2961,7 +2965,7 @@ msgstr "Button Text"
 msgid "Button URL"
 msgstr "Button URL"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:79
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductDetails.tsx:66
 msgid "Buy now"
 msgstr "Buy now"
 
@@ -4551,7 +4555,7 @@ msgstr "Could not retrieve address details"
 msgid "Could not save date"
 msgstr "Could not save date"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:42
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductDetails.tsx:36
 msgid "Could not start checkout. Please try again."
 msgstr "Could not start checkout. Please try again."
 
@@ -5682,7 +5686,8 @@ msgstr "Download invoice"
 msgid "Download Invoice"
 msgstr "Download Invoice"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:86
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:87
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:92
 #: src/components/routes/organizer/ColouringPages/index.tsx:130
 #: src/components/routes/organizer/ColouringPages/index.tsx:136
 msgid "Download PDF"
@@ -9214,8 +9219,8 @@ msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat ele
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:29
-msgid "Love colouring? Shop creative colouring sets at"
-msgstr "Love colouring? Shop creative colouring sets at"
+msgid "Love colouring? Shop colouring sets at"
+msgstr "Love colouring? Shop colouring sets at"
 
 #: src/components/forms/ProductForm/ProductImagesField.tsx:83
 msgid "Main"
@@ -9854,6 +9859,7 @@ msgstr "New total"
 msgid "New uniform"
 msgstr "New uniform"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:100
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:72
 #: src/ee/seating/components/SeatPicker/index.tsx:122
 msgid "Next"
@@ -10919,7 +10925,7 @@ msgstr "Open occurrence"
 msgid "Open sidebar"
 msgstr "Open sidebar"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:64
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductDetails.tsx:51
 msgid "Option"
 msgstr "Option"
 
@@ -12206,6 +12212,10 @@ msgstr "Preview checkout form"
 #: src/components/layouts/Event/index.tsx:297
 msgid "Preview Event page"
 msgstr "Preview Event page"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:64
+msgid "Previous"
+msgstr "Previous"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:421
 msgid "Previous month"
@@ -14052,7 +14062,7 @@ msgstr "Section name"
 msgid "Secure Checkout"
 msgstr "Secure Checkout"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:81
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductDetails.tsx:68
 msgid "Secure checkout opens in a new tab"
 msgstr "Secure checkout opens in a new tab"
 

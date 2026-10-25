@@ -364,6 +364,10 @@ msgstr ""
 msgid "{organizerName}'s first event"
 msgstr "أول فعالية لـ {organizerName}"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:91
+msgid "{position} of {total}"
+msgstr "{position} من {total}"
+
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:95
 msgid "{productCount} ticket types configured"
 msgstr "{productCount} نوع تذكرة تم تهيئته"
@@ -2961,7 +2965,7 @@ msgstr "نص الزر"
 msgid "Button URL"
 msgstr "رابط الزر"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:79
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductDetails.tsx:66
 msgid "Buy now"
 msgstr "اشترِ الآن"
 
@@ -4551,7 +4555,7 @@ msgstr "تعذّر استرداد تفاصيل العنوان"
 msgid "Could not save date"
 msgstr "تعذّر حفظ التاريخ"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:42
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductDetails.tsx:36
 msgid "Could not start checkout. Please try again."
 msgstr "تعذّر بدء عملية الدفع. يرجى المحاولة مرة أخرى."
 
@@ -5682,7 +5686,8 @@ msgstr "تنزيل الفاتورة"
 msgid "Download Invoice"
 msgstr "تنزيل الفاتورة"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:86
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:87
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:92
 #: src/components/routes/organizer/ColouringPages/index.tsx:130
 #: src/components/routes/organizer/ColouringPages/index.tsx:136
 msgid "Download PDF"
@@ -9214,8 +9219,8 @@ msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat ele
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:29
-msgid "Love colouring? Shop creative colouring sets at"
-msgstr "تحب التلوين؟ تسوق مجموعات تلوين إبداعية من"
+msgid "Love colouring? Shop colouring sets at"
+msgstr "تحب التلوين؟ تسوق مجموعات التلوين من"
 
 #: src/components/forms/ProductForm/ProductImagesField.tsx:83
 msgid "Main"
@@ -9854,6 +9859,7 @@ msgstr ""
 msgid "New uniform"
 msgstr "زي مدرسي جديد"
 
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:100
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizUsernamePicker.tsx:72
 #: src/ee/seating/components/SeatPicker/index.tsx:122
 msgid "Next"
@@ -10919,7 +10925,7 @@ msgstr "فتح المناسبة"
 msgid "Open sidebar"
 msgstr "فتح الشريط الجانبي"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:64
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductDetails.tsx:51
 msgid "Option"
 msgstr "الخيار"
 
@@ -12206,6 +12212,10 @@ msgstr "معاينة نموذج الدفع"
 #: src/components/layouts/Event/index.tsx:297
 msgid "Preview Event page"
 msgstr "معاينة صفحة الفعالية"
+
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/GridItemViewer.tsx:64
+msgid "Previous"
+msgstr "السابق"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:421
 msgid "Previous month"
@@ -14052,7 +14062,7 @@ msgstr ""
 msgid "Secure Checkout"
 msgstr "دفع آمن"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductModal.tsx:81
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/ShopProductDetails.tsx:68
 msgid "Secure checkout opens in a new tab"
 msgstr "يفتح الدفع الآمن في علامة تبويب جديدة"
 

@@ -364,6 +364,46 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     font-weight: 700;
 }
 
+.tileButton {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.viewer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.viewerArrow {
+    flex-shrink: 0;
+}
+
+.viewerContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.viewerImage {
+    width: 100%;
+    max-height: 62vh;
+    object-fit: contain;
+}
+
+.viewerDownload {
+    align-self: center;
+    text-decoration: none;
+}
+
+.viewerCounter {
+    margin: 8px 0 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--organizer-secondary-color, #525252);
+}
+
 .shopBanner {
     grid-column: 1 / -1;
     grid-row: 3;
@@ -440,12 +480,17 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 .shopLink {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
     color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     text-decoration: none;
     font-weight: 600;
     font-size: 1.15rem;
+
+    @include mixins.respond-below(sm) {
+        font-size: 1rem;
+    }
 
     &:hover {
         text-decoration: underline;

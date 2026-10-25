@@ -27,7 +27,7 @@ export interface ShopifyProduct {
     variants: ShopifyVariant[];
 }
 
-type GridItem<P> =
+export type GridItem<P> =
     | { type: 'page'; page: P }
     | { type: 'product'; product: ShopifyProduct };
 
