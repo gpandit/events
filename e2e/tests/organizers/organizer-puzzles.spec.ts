@@ -3,6 +3,10 @@ import { createFreshOrganizer } from '../../api/factory';
 import { uniqueName } from '../../utils/unique';
 
 test.describe('organizer puzzles page', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.route('https://en.wikipedia.org/**', (route) => route.abort());
+  });
+
   test('a visitor picks an age group and starts the general knowledge test', async ({ page, api }) => {
     const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Org'));
     await api.updateOrganizerStatus(organizer.id, 'LIVE');
@@ -19,6 +23,25 @@ test.describe('organizer puzzles page', () => {
     await startButton.click();
 
     await expect(page.getByText(/Question 1 of 20/)).toBeVisible();
+  });
+
+  test('a test includes picture questions and still works when photos cannot load', async ({ page, api }) => {
+    const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Pictures Org'));
+    await api.updateOrganizerStatus(organizer.id, 'LIVE');
+
+    await page.goto(`/events/${organizer.id}/${organizer.slug}/puzzles`);
+    await page.getByTestId('puzzles-age-5-7').click();
+    await page.getByTestId('puzzles-start-button').click();
+
+    let pictureQuestions = 0;
+    for (let question = 1; question <= 20; question++) {
+      await expect(page.getByText(new RegExp(`Question ${question} of 20`))).toBeVisible();
+      pictureQuestions += await page.getByTestId('puzzles-emoji').count();
+      await page.getByTestId('puzzles-option').first().click();
+    }
+
+    expect(pictureQuestions).toBeGreaterThanOrEqual(3);
+    await expect(page.getByTestId('puzzles-photo')).toHaveCount(0);
   });
 
   test('a child reviews their mistakes, signs up, earns points and appears on the leaderboard', async ({ page, api }) => {

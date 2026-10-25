@@ -21,16 +21,21 @@ export const shuffle = <T, >(items: readonly T[]): T[] => {
 
 export const RECENT_TESTS_TO_AVOID = 4;
 
-export const selectQuizQuestions = <T extends { id: string }>(
-    pool: readonly T[],
-    recentTests: readonly (readonly string[])[],
-    count: number,
-): T[] => {
-    const recentIds = new Set(recentTests.flat());
-    return shuffle(pool.filter((item) => !recentIds.has(item.id))).slice(0, count);
-};
-
 export const rememberTest = (
     recentTests: readonly (readonly string[])[],
     questionIds: readonly string[],
 ): string[][] => [...recentTests, questionIds].slice(-RECENT_TESTS_TO_AVOID).map((ids) => [...ids]);
+
+export const selectMixedQuestions = <T extends { id: string }>(
+    pool: readonly T[],
+    recentTests: readonly (readonly string[])[],
+    count: number,
+    isFeatured: (item: T) => boolean,
+    featuredCount: number,
+): T[] => {
+    const recentIds = new Set(recentTests.flat());
+    const fresh = pool.filter((item) => !recentIds.has(item.id));
+    const featured = shuffle(fresh.filter(isFeatured)).slice(0, featuredCount);
+    const others = shuffle(fresh.filter((item) => !isFeatured(item))).slice(0, count - featured.length);
+    return shuffle([...featured, ...others]);
+};

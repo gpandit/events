@@ -24,6 +24,16 @@ export const subjectLabel = (subject: PuzzleSubject) => {
             return t`Maths`;
         case 'Geography':
             return t`Geography`;
+        case 'Language':
+            return t`Language`;
+        case 'Animals':
+            return t`Animals`;
+        case 'Places':
+            return t`Places`;
+        case 'People':
+            return t`People`;
+        case 'Art':
+            return t`Art`;
         default:
             return t`History`;
     }
