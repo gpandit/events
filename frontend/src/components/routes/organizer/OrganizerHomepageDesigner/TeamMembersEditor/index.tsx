@@ -99,6 +99,14 @@ export const TeamMembersEditor = ({
                             maxLength={100}
                             onChange={(event) => updateMember(position, {...member, name: event.currentTarget.value})}
                         />
+                        <TextInput
+                            style={{flex: 1}}
+                            aria-label={t`Role`}
+                            placeholder={t`Role (optional)`}
+                            value={member.role ?? ''}
+                            maxLength={100}
+                            onChange={(event) => updateMember(position, {...member, role: event.currentTarget.value})}
+                        />
                         <ActionIcon
                             variant="light"
                             title={photo ? t`Replace photo` : t`Upload photo`}

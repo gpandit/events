@@ -1285,7 +1285,7 @@ msgstr "Add one"
 msgid "Add Option"
 msgstr "Add Option"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:146
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:154
 msgid "Add person"
 msgstr "Add person"
 
@@ -11422,8 +11422,8 @@ msgid "Paper"
 msgstr "Paper"
 
 #: src/components/layouts/PublicOrganizerAbout/TeamSection.tsx:37
-msgid "Parent"
-msgstr "Parent"
+#~ msgid "Parent"
+#~ msgstr "Parent"
 
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:24
 msgid "Parent agreed"
@@ -13043,12 +13043,12 @@ msgstr "Remove override"
 msgid "Remove overrides for this date"
 msgstr "Remove overrides for this date"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:128
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:136
 msgid "Remove person"
 msgstr "Remove person"
 
 #: src/components/forms/ProductForm/ProductImagesField.tsx:89
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:118
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:126
 msgid "Remove photo"
 msgstr "Remove photo"
 
@@ -13105,7 +13105,7 @@ msgstr "Reopen this date for new sales? Previously cancelled tickets will not be
 msgid "Repeats"
 msgstr "Repeats"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:112
 msgid "Replace photo"
 msgstr "Replace photo"
 
@@ -13390,8 +13390,13 @@ msgstr "Right wing"
 #: src/components/modals/EditUserModal/index.tsx:94
 #: src/components/modals/InviteUserModal/index.tsx:64
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:159
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
 msgid "Role"
 msgstr "Role"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:105
+msgid "Role (optional)"
+msgstr "Role (optional)"
 
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:62
 msgid "Rotation"
@@ -17663,7 +17668,7 @@ msgstr "Upload colouring page"
 msgid "Upload Image"
 msgstr "Upload Image"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:112
 msgid "Upload photo"
 msgstr "Upload photo"
 

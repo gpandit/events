@@ -1,4 +1,3 @@
-import {t} from "@lingui/macro";
 import {IconUser} from "@tabler/icons-react";
 import {Image, TeamMember} from "../../../types.ts";
 import classes from './PublicOrganizerAbout.module.scss';
@@ -34,7 +33,7 @@ export const TeamSection = ({heading, members, images, groupPhoto}: TeamSectionP
                             </div>
                             <div className={classes.memberDetails}>
                                 <span className={classes.memberName}>{member.name}</span>
-                                <span className={classes.memberRole}>{t`Parent`}</span>
+                                {member.role && <span className={classes.memberRole}>{member.role}</span>}
                             </div>
                         </div>
                     );

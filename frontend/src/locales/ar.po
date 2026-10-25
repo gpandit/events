@@ -1285,7 +1285,7 @@ msgstr ""
 msgid "Add Option"
 msgstr "إضافة خيار"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:146
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:154
 msgid "Add person"
 msgstr "إضافة شخص"
 
@@ -11422,8 +11422,8 @@ msgid "Paper"
 msgstr ""
 
 #: src/components/layouts/PublicOrganizerAbout/TeamSection.tsx:37
-msgid "Parent"
-msgstr "ولي أمر"
+#~ msgid "Parent"
+#~ msgstr "ولي أمر"
 
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:24
 msgid "Parent agreed"
@@ -13043,12 +13043,12 @@ msgstr ""
 msgid "Remove overrides for this date"
 msgstr "إزالة التجاوزات لهذا التاريخ"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:128
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:136
 msgid "Remove person"
 msgstr "إزالة الشخص"
 
 #: src/components/forms/ProductForm/ProductImagesField.tsx:89
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:118
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:126
 msgid "Remove photo"
 msgstr "إزالة الصورة"
 
@@ -13105,7 +13105,7 @@ msgstr "إعادة فتح هذا التاريخ لمبيعات جديدة؟ لن
 msgid "Repeats"
 msgstr "يتكرر"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:112
 msgid "Replace photo"
 msgstr "استبدال الصورة"
 
@@ -13390,8 +13390,13 @@ msgstr ""
 #: src/components/modals/EditUserModal/index.tsx:94
 #: src/components/modals/InviteUserModal/index.tsx:64
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:159
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
 msgid "Role"
 msgstr "الدور"
+
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:105
+msgid "Role (optional)"
+msgstr "الدور (اختياري)"
 
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:62
 msgid "Rotation"
@@ -17663,7 +17668,7 @@ msgstr "رفع صفحة تلوين"
 msgid "Upload Image"
 msgstr "تحميل صورة"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:104
+#: src/components/routes/organizer/OrganizerHomepageDesigner/TeamMembersEditor/index.tsx:112
 msgid "Upload photo"
 msgstr "رفع صورة"
 
