@@ -15,7 +15,7 @@ COPY ./VERSION /app/VERSION
 RUN yarn install --network-timeout 600000 --frozen-lockfile && yarn build
 
 # Use stable multi-arch serversideup/php image
-FROM serversideup/php:8.5-fpm-alpine
+FROM serversideup/php:8.5.12-fpm-alpine
 
 ENV PHP_OPCACHE_ENABLE=1
 
