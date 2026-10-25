@@ -3,6 +3,7 @@ import classes from './OrganizerHomepageDesigner.module.scss';
 import {useParams} from "react-router";
 import {useGetOrganizerSettings} from "../../../../queries/useGetOrganizerSettings.ts";
 import {useUpdateOrganizerSettings} from "../../../../mutations/useUpdateOrganizerSettings.ts";
+import {useDeleteImage} from "../../../../mutations/useDeleteImage.ts";
 import {useFormErrorResponseHandler} from "../../../../hooks/useFormErrorResponseHandler.tsx";
 import {HomepageThemeSettings, IdParam, OrganizerSettings, TeamMember} from "../../../../types.ts";
 import {showSuccess} from "../../../../utilites/notifications.tsx";
@@ -47,6 +48,7 @@ const OrganizerHomepageDesigner = () => {
     const organizerSettingsQuery = useGetOrganizerSettings(organizerId);
     const organizerQuery = useGetOrganizer(organizerId);
     const updateMutation = useUpdateOrganizerSettings();
+    const deleteImageMutation = useDeleteImage();
 
     const organizerData = organizerQuery.data;
 
@@ -123,6 +125,17 @@ const OrganizerHomepageDesigner = () => {
         setIframeSrc(buildPreviewSrc(nextPage, existingCover?.id, existingLogo?.id, teamImagesKey));
     };
 
+    const deleteUnusedTeamPhotos = (savedTheme: Partial<HomepageThemeSettings>) => {
+        const usedImageIds = new Set(
+            [...(savedTheme.team_members ?? []), ...(savedTheme.technical_team_members ?? [])]
+                .map((member) => member.image_id)
+        );
+
+        organizerData?.images
+            ?.filter((image) => image.type === 'TEAM_MEMBER_PHOTO' && !usedImageIds.has(image.id))
+            .forEach((image) => deleteImageMutation.mutate({imageId: image.id}, {onSuccess: handleImageChange}));
+    };
+
     const handleSubmit = (values: FormValues) => {
         const validatedTheme = validateThemeSettings(values.homepage_theme_settings);
 
@@ -137,6 +150,7 @@ const OrganizerHomepageDesigner = () => {
             },
             {
                 onSuccess: () => {
+                    deleteUnusedTeamPhotos(validatedTheme);
                     showSuccess(t`Successfully Updated Site Design`);
                 },
                 onError: (error) => {
@@ -185,6 +199,7 @@ const OrganizerHomepageDesigner = () => {
             setLastCoverId(existingCover?.id);
             setLastLogoId(existingLogo?.id);
             setLastTeamImagesKey(teamImagesKey);
+            lastSentSettings.current = null;
             setIframeSrc(buildPreviewSrc(page, existingCover?.id, existingLogo?.id, teamImagesKey));
             setIframeLoaded(false);
         }
