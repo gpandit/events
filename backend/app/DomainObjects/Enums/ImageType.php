@@ -21,6 +21,8 @@ enum ImageType
     // Organizer images
     case ORGANIZER_LOGO;
     case ORGANIZER_COVER;
+    case TEAM_GROUP_PHOTO;
+    case TEAM_MEMBER_PHOTO;
 
     // Product images
     case PRODUCT_IMAGE;
@@ -38,6 +40,8 @@ enum ImageType
         return [
             self::ORGANIZER_LOGO,
             self::ORGANIZER_COVER,
+            self::TEAM_GROUP_PHOTO,
+            self::TEAM_MEMBER_PHOTO,
         ];
     }
 
@@ -63,6 +67,8 @@ enum ImageType
             self::TICKET_LOGO->name => [100, 100],
             self::ORGANIZER_LOGO->name => [100, 100],
             self::ORGANIZER_COVER->name => [600, 50],
+            self::TEAM_GROUP_PHOTO->name => [300, 100],
+            self::TEAM_MEMBER_PHOTO->name => [100, 100],
             self::PRODUCT_IMAGE->name => [200, 200],
         ];
 

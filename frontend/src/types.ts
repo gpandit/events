@@ -85,6 +85,11 @@ export interface ColorTheme {
     homepage_secondary_text_color: string;
 }
 
+export interface TeamMember {
+    name: string;
+    image_id?: IdParam;
+}
+
 export interface HomepageThemeSettings {
     accent: string;
     background: string;
@@ -100,7 +105,9 @@ export interface HomepageThemeSettings {
     upcoming_heading?: string;
     about_text?: string;
     team_heading?: string;
-    team_members?: string[];
+    team_members?: TeamMember[];
+    technical_team_heading?: string;
+    technical_team_members?: TeamMember[];
     contact_heading?: string;
     contact_intro?: string;
     contact_email?: string;
@@ -261,7 +268,7 @@ export interface Image {
     lqip_base64?: string | null;
 }
 
-export type ImageType = 'EVENT_COVER' | 'EDITOR_IMAGE' | 'ORGANIZER_LOGO' | 'ORGANIZER_COVER' | 'ORGANIZER_IMAGE' | 'TICKET_LOGO' | 'PRODUCT_IMAGE';
+export type ImageType = 'EVENT_COVER' | 'EDITOR_IMAGE' | 'ORGANIZER_LOGO' | 'ORGANIZER_COVER' | 'TEAM_GROUP_PHOTO' | 'TEAM_MEMBER_PHOTO' | 'ORGANIZER_IMAGE' | 'TICKET_LOGO' | 'PRODUCT_IMAGE';
 
 export type PaymentProvider = 'STRIPE' | 'OFFLINE';
 
