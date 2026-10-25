@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Http\Request\ColouringPage;
+namespace Tests\Feature\Http\Request\ColouringPage;
 
 use HiEvents\Http\Request\ColouringPage\CreateColouringPageRequest;
 use Illuminate\Http\UploadedFile;
