@@ -14,12 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layouts/Event/index.tsx:234
-#: src/components/layouts/OrganizerLayout/index.tsx:228
+#: src/components/layouts/OrganizerLayout/index.tsx:230
 msgid "- Click to Publish"
 msgstr "- Click to Publish"
 
 #: src/components/layouts/Event/index.tsx:236
-#: src/components/layouts/OrganizerLayout/index.tsx:230
+#: src/components/layouts/OrganizerLayout/index.tsx:232
 msgid "- Click to Unpublish"
 msgstr "- Click to Unpublish"
 
@@ -1090,6 +1090,7 @@ msgstr "Action Required: VAT Information Needed"
 #: src/components/common/WaitlistTable/index.tsx:234
 #: src/components/routes/admin/FailedJobs/index.tsx:167
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:84
+#: src/components/routes/organizer/ColouringPages/index.tsx:93
 msgid "Actions"
 msgstr "Actions"
 
@@ -1514,6 +1515,7 @@ msgid "Age 7-8"
 msgstr "Age 7-8"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:66
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:112
 msgid "Age group"
 msgstr "Age group"
 
@@ -1521,9 +1523,21 @@ msgstr "Age group"
 msgid "Ages 11 to 13"
 msgstr "Ages 11 to 13"
 
+#: src/utilites/colouringPages.ts:15
+msgid "Ages 11-13"
+msgstr "Ages 11-13"
+
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:13
 msgid "Ages 14 to 17"
 msgstr "Ages 14 to 17"
+
+#: src/utilites/colouringPages.ts:16
+msgid "Ages 14-18"
+msgstr "Ages 14-18"
+
+#: src/utilites/colouringPages.ts:13
+msgid "Ages 2-5"
+msgstr "Ages 2-5"
 
 #: src/components/forms/ProductForm/ProductSizesForm.tsx:17
 msgid "Ages 3–14"
@@ -1532,6 +1546,10 @@ msgstr "Ages 3–14"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:7
 msgid "Ages 5 to 7"
 msgstr "Ages 5 to 7"
+
+#: src/utilites/colouringPages.ts:14
+msgid "Ages 6-10"
+msgstr "Ages 6-10"
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/quizLabels.ts:9
 msgid "Ages 8 to 10"
@@ -2160,11 +2178,11 @@ msgstr "Are you sure you want to leave?"
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "Are you sure you want to make this event draft? This will make the event invisible to the public"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:160
+#: src/components/layouts/OrganizerLayout/index.tsx:162
 msgid "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 msgstr "Are you sure you want to make this organizer draft? This will make the organizer page invisible to the public"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:161
+#: src/components/layouts/OrganizerLayout/index.tsx:163
 msgid "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 msgstr "Are you sure you want to make this organizer public? This will make the organizer page visible to the public"
 
@@ -3045,6 +3063,7 @@ msgstr "Can't check in"
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:64
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1156
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:64
+#: src/components/routes/organizer/ColouringPages/index.tsx:51
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:69
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:85
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:85
@@ -3617,6 +3636,10 @@ msgstr "Choose a new seat for {0}"
 msgid "Choose a password (at least 6 characters)"
 msgstr "Choose a password (at least 6 characters)"
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:46
+msgid "Choose a PDF file"
+msgstr "Choose a PDF file"
+
 #: src/ee/seating/components/ManualSeatField/index.tsx:46
 #: src/ee/seating/components/ManualSeatField/index.tsx:51
 msgid "Choose a seat"
@@ -3861,7 +3884,7 @@ msgstr "Code must be between 3 and 50 characters long"
 msgid "Code must be no more than 20 characters"
 msgstr "Code must be no more than 20 characters"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:199
+#: src/components/layouts/OrganizerLayout/index.tsx:201
 msgid "Collaborate with your team to create amazing events together."
 msgstr "Collaborate with your team to create amazing events together."
 
@@ -3925,15 +3948,29 @@ msgstr "Colors"
 msgid "Colour for {0}"
 msgstr "Colour for {0}"
 
+#: src/components/routes/organizer/ColouringPages/index.tsx:54
+msgid "Colouring page deleted"
+msgstr "Colouring page deleted"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:68
+msgid "Colouring page updated"
+msgstr "Colouring page updated"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:81
+msgid "Colouring page uploaded"
+msgstr "Colouring page uploaded"
+
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:18
+#: src/components/routes/organizer/ColouringPages/index.tsx:62
 msgid "Colouring pages"
 msgstr "Colouring pages"
 
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:60
+#: src/components/layouts/OrganizerLayout/index.tsx:121
 msgid "Colouring Pages"
 msgstr "Colouring Pages"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:10
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:15
 msgid "Colouring sheets for children."
 msgstr "Colouring sheets for children."
 
@@ -3958,7 +3995,7 @@ msgstr "Comma seperated keywords that describe the event. These will be used by 
 msgid "Communication Preferences"
 msgstr "Communication Preferences"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:118
+#: src/components/layouts/OrganizerLayout/index.tsx:119
 msgid "Community"
 msgstr "Community"
 
@@ -4162,7 +4199,7 @@ msgstr "Confirm your email to access all features."
 msgid "Confirmation"
 msgstr "Confirmation"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:324
+#: src/components/layouts/OrganizerLayout/index.tsx:326
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "Confirmation email sent! Please check your inbox."
 
@@ -4707,7 +4744,7 @@ msgid "Create event"
 msgstr "Create event"
 
 #: src/components/common/NoEventsBlankSlate/index.tsx:27
-#: src/components/layouts/OrganizerLayout/index.tsx:189
+#: src/components/layouts/OrganizerLayout/index.tsx:191
 #: src/components/routes/organizer/Events/index.tsx:62
 msgid "Create Event"
 msgstr "Create Event"
@@ -4835,10 +4872,14 @@ msgstr "Creative Colouring"
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:42
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:98
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:155
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:8
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/index.tsx:13
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:143
 msgid "Creative Corner"
 msgstr "Creative Corner"
+
+#: src/utilites/colouringPages.ts:15
+msgid "Creative Explorers"
+msgstr "Creative Explorers"
 
 #: src/components/layouts/OrganizerHomepage/CreativeCornerSection/index.tsx:32
 msgid "Creative Minds"
@@ -5228,6 +5269,9 @@ msgstr "delete"
 #: src/components/routes/admin/FailedJobs/index.tsx:209
 #: src/components/routes/event/OccurrencesTab/index.tsx:540
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:65
+#: src/components/routes/organizer/ColouringPages/index.tsx:51
+#: src/components/routes/organizer/ColouringPages/index.tsx:151
+#: src/components/routes/organizer/ColouringPages/index.tsx:155
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:245
 msgid "Delete"
 msgstr "Delete"
@@ -5235,6 +5279,10 @@ msgstr "Delete"
 #: src/components/common/LocationsTable/index.tsx:34
 msgid "Delete \"{0}\"?"
 msgstr "Delete \"{0}\"?"
+
+#: src/components/routes/organizer/ColouringPages/index.tsx:50
+msgid "Delete \"{title}\"? Parents will no longer be able to download it."
+msgstr "Delete \"{title}\"? Parents will no longer be able to download it."
 
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:194
 #: src/ee/seating/components/SeatMapDesigner/BandsPanel.tsx:36
@@ -5284,6 +5332,10 @@ msgstr "Delete Check-In List"
 #: src/components/common/PromoCodeTable/index.tsx:193
 msgid "Delete code"
 msgstr "Delete code"
+
+#: src/components/routes/organizer/ColouringPages/index.tsx:49
+msgid "Delete colouring page"
+msgstr "Delete colouring page"
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:362
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:599
@@ -5605,7 +5657,9 @@ msgstr "Download invoice"
 msgid "Download Invoice"
 msgstr "Download Invoice"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:51
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:86
+#: src/components/routes/organizer/ColouringPages/index.tsx:130
+#: src/components/routes/organizer/ColouringPages/index.tsx:136
 msgid "Download PDF"
 msgstr "Download PDF"
 
@@ -5624,9 +5678,10 @@ msgstr "Downloading Invoice"
 
 #: src/components/common/EventCard/index.tsx:97
 #: src/components/layouts/Event/index.tsx:233
-#: src/components/layouts/OrganizerLayout/index.tsx:227
+#: src/components/layouts/OrganizerLayout/index.tsx:229
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
+#: src/components/routes/organizer/ColouringPages/index.tsx:105
 msgid "Draft"
 msgstr "Draft"
 
@@ -5790,6 +5845,8 @@ msgstr "Early bird"
 #: src/components/common/TaxAndFeeList/index.tsx:73
 #: src/components/routes/admin/Announcements/index.tsx:211
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:54
+#: src/components/routes/organizer/ColouringPages/index.tsx:141
+#: src/components/routes/organizer/ColouringPages/index.tsx:144
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:252
 #: src/ee/box-office/components/layouts/BoxOffice/CartPanel.tsx:147
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:191
@@ -5859,6 +5916,10 @@ msgstr "Edit Check-In List"
 #: src/components/common/PromoCodeTable/index.tsx:178
 msgid "Edit Code"
 msgstr "Edit Code"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:96
+msgid "Edit colouring page"
+msgstr "Edit colouring page"
 
 #: src/components/routes/admin/Configurations/index.tsx:216
 msgid "Edit Configuration"
@@ -6051,7 +6112,7 @@ msgid "Email confirmation resent"
 msgstr "Email confirmation resent"
 
 #: src/components/layouts/Event/index.tsx:94
-#: src/components/layouts/OrganizerLayout/index.tsx:134
+#: src/components/layouts/OrganizerLayout/index.tsx:136
 #: src/components/routes/profile/ManageProfile/index.tsx:101
 msgid "Email confirmation resent successfully"
 msgstr "Email confirmation resent successfully"
@@ -6092,7 +6153,7 @@ msgstr "Email Templates"
 msgid "Email to send tickets"
 msgstr "Email to send tickets"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:303
+#: src/components/layouts/OrganizerLayout/index.tsx:305
 msgid "Email Verification Required"
 msgstr "Email Verification Required"
 
@@ -6563,7 +6624,7 @@ msgstr "Event Updated"
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:85
 #: src/components/layouts/OrganizerHomepage/OrganizerNav/index.tsx:139
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:121
-#: src/components/layouts/OrganizerLayout/index.tsx:111
+#: src/components/layouts/OrganizerLayout/index.tsx:112
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:152
 #: src/components/routes/admin/Attribution/index.tsx:195
 #: src/components/routes/admin/Dashboard/index.tsx:403
@@ -7599,7 +7660,7 @@ msgstr "Get in Touch Section"
 msgid "Get involved - volunteer, sponsor or say hello"
 msgstr "Get involved - volunteer, sponsor or say hello"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:88
+#: src/components/layouts/OrganizerLayout/index.tsx:89
 msgid "Get Paid"
 msgstr "Get Paid"
 
@@ -8126,7 +8187,7 @@ msgstr "I confirm this is a transactional message related to this event"
 msgid "I confirm this is entirely my own original work."
 msgstr "I confirm this is entirely my own original work."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:22
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:30
 msgid "I Create"
 msgstr "I Create"
 
@@ -8422,7 +8483,7 @@ msgid "Instagram Handle"
 msgstr "Instagram Handle"
 
 #: src/components/layouts/Event/index.tsx:153
-#: src/components/layouts/OrganizerLayout/index.tsx:125
+#: src/components/layouts/OrganizerLayout/index.tsx:127
 msgid "Integrations"
 msgstr "Integrations"
 
@@ -8475,7 +8536,7 @@ msgstr "Invite a team member"
 msgid "Invite Team Member"
 msgstr "Invite Team Member"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:201
+#: src/components/layouts/OrganizerLayout/index.tsx:203
 msgid "Invite Team Members"
 msgstr "Invite Team Members"
 
@@ -8483,7 +8544,7 @@ msgstr "Invite Team Members"
 msgid "Invite User"
 msgstr "Invite User"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:198
+#: src/components/layouts/OrganizerLayout/index.tsx:200
 msgid "Invite Your Team"
 msgstr "Invite Your Team"
 
@@ -8889,7 +8950,7 @@ msgstr "Letters"
 msgid "Letters skipping I and O"
 msgstr "Letters skipping I and O"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:121
+#: src/components/layouts/OrganizerLayout/index.tsx:123
 msgid "Library"
 msgstr "Library"
 
@@ -8914,6 +8975,10 @@ msgstr "Licence key not recognised"
 #: src/components/common/ThemeColorControls/index.tsx:84
 msgid "Light"
 msgstr "Light"
+
+#: src/utilites/colouringPages.ts:23
+msgid "Lilac"
+msgstr "Lilac"
 
 #: src/components/routes/event/OccurrencesTab/BookingSummary/index.tsx:56
 msgid "Limited by capacity"
@@ -8947,9 +9012,13 @@ msgstr "List"
 msgid "List view"
 msgstr "List view"
 
+#: src/utilites/colouringPages.ts:13
+msgid "Little Colourers"
+msgstr "Little Colourers"
+
 #: src/components/common/EventCard/index.tsx:100
 #: src/components/layouts/Event/index.tsx:235
-#: src/components/layouts/OrganizerLayout/index.tsx:229
+#: src/components/layouts/OrganizerLayout/index.tsx:231
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
 msgstr "Live"
@@ -9046,7 +9115,7 @@ msgstr "location updates"
 msgid "locations"
 msgstr "locations"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:122
+#: src/components/layouts/OrganizerLayout/index.tsx:124
 #: src/components/routes/organizer/Locations/index.tsx:31
 msgid "Locations"
 msgstr "Locations"
@@ -9094,7 +9163,7 @@ msgstr "Look Up My Tickets"
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:21
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:29
 msgid "Love colouring? Shop creative colouring sets at"
 msgstr "Love colouring? Shop creative colouring sets at"
 
@@ -9139,7 +9208,7 @@ msgstr "Make this question mandatory"
 #: src/components/common/OrganizerWebhookTable/index.tsx:96
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:537
 #: src/components/common/PromoCodeTable/index.tsx:175
-#: src/components/layouts/OrganizerLayout/index.tsx:110
+#: src/components/layouts/OrganizerLayout/index.tsx:111
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:276
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:84
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:241
@@ -9407,6 +9476,10 @@ msgstr "Minimum Per Order"
 msgid "Minimum Price"
 msgstr "Minimum Price"
 
+#: src/utilites/colouringPages.ts:22
+msgid "Mint"
+msgstr "Mint"
+
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:75
 msgid "minutes"
 msgstr "minutes"
@@ -9516,6 +9589,11 @@ msgstr "Move all dates earlier or later"
 msgid "Move attendee"
 msgstr "Move attendee"
 
+#: src/components/routes/organizer/ColouringPages/index.tsx:120
+#: src/components/routes/organizer/ColouringPages/index.tsx:123
+msgid "Move down"
+msgstr "Move down"
+
 #: src/ee/seating/components/SeatMapDesigner/BandsPanel.tsx:35
 msgid "Move its seats to another band first"
 msgstr "Move its seats to another band first"
@@ -9523,6 +9601,11 @@ msgstr "Move its seats to another band first"
 #: src/ee/seating/components/SeatMapDesigner/Inspector.tsx:234
 msgid "Move to area"
 msgstr "Move to area"
+
+#: src/components/routes/organizer/ColouringPages/index.tsx:110
+#: src/components/routes/organizer/ColouringPages/index.tsx:113
+msgid "Move up"
+msgstr "Move up"
 
 #: src/components/layouts/AuthLayout/index.tsx:56
 msgid "Movie Night"
@@ -9659,7 +9742,7 @@ msgstr "New band"
 msgid "New capacity"
 msgstr "New capacity"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:61
+#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:57
 msgid "New colouring sheets are on their way — check back soon!"
 msgstr "New colouring sheets are on their way — check back soon!"
 
@@ -9874,6 +9957,10 @@ msgstr "No check-in lists available for this event."
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:155
 msgid "No check-ins yet"
 msgstr "No check-ins yet"
+
+#: src/components/routes/organizer/ColouringPages/index.tsx:83
+msgid "No colouring pages in this age group yet."
+msgstr "No colouring pages in this age group yet."
 
 #: src/components/routes/admin/Configurations/index.tsx:134
 msgid "No configurations found"
@@ -11095,7 +11182,7 @@ msgid "Organizer archived successfully"
 msgstr "Organizer archived successfully"
 
 #: src/components/layouts/Event/index.tsx:104
-#: src/components/layouts/OrganizerLayout/index.tsx:99
+#: src/components/layouts/OrganizerLayout/index.tsx:100
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Organizer Dashboard"
 msgstr "Organizer Dashboard"
@@ -11126,12 +11213,12 @@ msgid "Organizer Settings"
 msgstr "Organizer Settings"
 
 #: src/components/common/StatusToggle/index.tsx:63
-#: src/components/layouts/OrganizerLayout/index.tsx:172
+#: src/components/layouts/OrganizerLayout/index.tsx:174
 msgid "Organizer status update failed. Please try again later"
 msgstr "Organizer status update failed. Please try again later"
 
 #: src/components/common/StatusToggle/index.tsx:55
-#: src/components/layouts/OrganizerLayout/index.tsx:169
+#: src/components/layouts/OrganizerLayout/index.tsx:171
 msgid "Organizer status updated"
 msgstr "Organizer status updated"
 
@@ -11486,6 +11573,14 @@ msgstr "Payments not available"
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:463
 msgid "Payouts"
 msgstr "Payouts"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:101
+msgid "PDF file"
+msgstr "PDF file"
+
+#: src/utilites/colouringPages.ts:20
+msgid "Peach"
+msgstr "Peach"
 
 #: src/components/routes/admin/DeletionRequests/index.tsx:85
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:16
@@ -12018,6 +12113,7 @@ msgstr "Prevent overselling by sharing inventory across multiple ticket types."
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:143
 #: src/components/routes/admin/Announcements/index.tsx:495
 #: src/components/routes/event/TicketDesigner/index.tsx:216
+#: src/components/routes/organizer/ColouringPages/index.tsx:90
 msgid "Preview"
 msgstr "Preview"
 
@@ -12357,6 +12453,7 @@ msgstr "Publish your event"
 
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:473
+#: src/components/routes/organizer/ColouringPages/index.tsx:105
 msgid "Published"
 msgstr "Published"
 
@@ -12909,7 +13006,7 @@ msgid "Report not found"
 msgstr "Report not found"
 
 #: src/components/layouts/Event/index.tsx:111
-#: src/components/layouts/OrganizerLayout/index.tsx:105
+#: src/components/layouts/OrganizerLayout/index.tsx:106
 #: src/components/routes/event/Reports/index.tsx:53
 #: src/components/routes/organizer/Reports/index.tsx:51
 msgid "Reports"
@@ -12955,7 +13052,7 @@ msgstr "Resend code"
 msgid "Resend Confirmation"
 msgstr "Resend Confirmation"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:320
+#: src/components/layouts/OrganizerLayout/index.tsx:322
 msgid "Resend Confirmation Email"
 msgstr "Resend Confirmation Email"
 
@@ -13382,6 +13479,10 @@ msgstr "Save"
 msgid "Save Box Office"
 msgstr "Save Box Office"
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:132
+msgid "Save changes"
+msgstr "Save changes"
+
 #: src/components/modals/LocationEditModal/index.tsx:162
 #: src/components/modals/ManageAttendeeModal/index.tsx:211
 #: src/components/modals/ManageOrderModal/index.tsx:241
@@ -13749,7 +13850,7 @@ msgstr "Seat map saved"
 msgid "Seat map updated"
 msgstr "Seat map updated"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:123
+#: src/components/layouts/OrganizerLayout/index.tsx:125
 #: src/ee/seating/components/routes/organizer/SeatMaps/index.tsx:141
 msgid "Seat Maps"
 msgstr "Seat Maps"
@@ -14327,7 +14428,7 @@ msgstr "Set to unlimited (remove limit)"
 msgid "Set up a recurring schedule to automatically create dates, or add them one at a time."
 msgstr "Set up a recurring schedule to automatically create dates, or add them one at a time."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:91
+#: src/components/layouts/OrganizerLayout/index.tsx:92
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
 msgstr "Set up payouts"
@@ -14366,7 +14467,7 @@ msgstr "Set, change, or remove the date's location or online details"
 msgid "Setting updated"
 msgstr "Setting updated"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:113
+#: src/components/layouts/OrganizerLayout/index.tsx:114
 #: src/components/modals/DuplicateEventModal/index.tsx:51
 msgid "Settings"
 msgstr "Settings"
@@ -14401,7 +14502,7 @@ msgstr "Shape"
 
 #: src/components/common/ShareIcon/index.tsx:30
 #: src/components/layouts/EventHomepage/index.tsx:347
-#: src/components/layouts/OrganizerLayout/index.tsx:249
+#: src/components/layouts/OrganizerLayout/index.tsx:251
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
 #: src/components/modals/ShareModal/index.tsx:186
@@ -14421,8 +14522,8 @@ msgstr "Share Affiliate Link"
 msgid "Share Event"
 msgstr "Share Event"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:246
-#: src/components/layouts/OrganizerLayout/index.tsx:288
+#: src/components/layouts/OrganizerLayout/index.tsx:248
+#: src/components/layouts/OrganizerLayout/index.tsx:290
 msgid "Share Organizer Page"
 msgstr "Share Organizer Page"
 
@@ -14481,7 +14582,7 @@ msgstr "Shop name is required"
 msgid "shops"
 msgstr "shops"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:112
+#: src/components/layouts/OrganizerLayout/index.tsx:113
 #: src/components/routes/organizer/Shops/index.tsx:32
 msgid "Shops"
 msgstr "Shops"
@@ -14537,6 +14638,10 @@ msgstr "Show more"
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:233
 msgid "Show more platforms"
 msgstr "Show more platforms"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:124
+msgid "Show on the website"
+msgstr "Show on the website"
 
 #: src/components/forms/CheckInListForm/index.tsx:230
 msgid "Show order details to non-logged-in staff"
@@ -14680,7 +14785,7 @@ msgstr "Single price"
 msgid "Site Design"
 msgstr "Site Design"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:116
+#: src/components/layouts/OrganizerLayout/index.tsx:117
 msgid "Site Designer"
 msgstr "Site Designer"
 
@@ -14701,6 +14806,10 @@ msgstr "Skip manually edited dates"
 #: src/components/routes/welcome/index.tsx:559
 msgid "Skip this step"
 msgstr "Skip this step"
+
+#: src/utilites/colouringPages.ts:21
+msgid "Sky"
+msgstr "Sky"
 
 #: src/components/routes/auth/AcceptInvitation/index.tsx:103
 #: src/components/routes/auth/Register/index.tsx:95
@@ -14842,7 +14951,7 @@ msgstr "Something went wrong. Please try again later."
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:30
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:33
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizResetPasswordForm.tsx:34
-#: src/components/layouts/OrganizerLayout/index.tsx:138
+#: src/components/layouts/OrganizerLayout/index.tsx:140
 #: src/components/layouts/PublicParentalConsent/index.tsx:36
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
@@ -14851,6 +14960,8 @@ msgstr "Something went wrong. Please try again later."
 #: src/components/routes/my-tickets/DeleteMyData/index.tsx:34
 #: src/components/routes/my-tickets/index.tsx:163
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:52
+#: src/components/routes/organizer/ColouringPages/index.tsx:41
+#: src/components/routes/organizer/ColouringPages/index.tsx:55
 #: src/components/routes/product-widget/SelectProducts/index.tsx:364
 #: src/components/routes/profile/ManageProfile/index.tsx:91
 #: src/components/routes/profile/ManageProfile/index.tsx:105
@@ -15101,6 +15212,7 @@ msgstr "Stats"
 #: src/components/routes/event/OccurrencesTab/index.tsx:343
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:51
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:88
+#: src/components/routes/organizer/ColouringPages/index.tsx:92
 #: src/components/routes/organizer/Reports/EventsPerformanceReport/index.tsx:62
 #: src/ee/box-office/components/common/BoxOfficeTable/index.tsx:172
 #: src/ee/licensing/components/routes/admin/Licence/index.tsx:79
@@ -15155,7 +15267,7 @@ msgstr "Story published"
 msgid "Story rejected"
 msgstr "Story rejected"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:119
+#: src/components/layouts/OrganizerLayout/index.tsx:120
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:59
 msgid "Story Submissions"
 msgstr "Story Submissions"
@@ -15223,6 +15335,7 @@ msgid "Student"
 msgstr "Student"
 
 #: src/ee/seating/components/lib/templates.ts:184
+#: src/utilites/colouringPages.ts:16
 msgid "Studio"
 msgstr "Studio"
 
@@ -15469,7 +15582,7 @@ msgstr "Switch date"
 msgid "Switch language"
 msgstr "Switch language"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:81
+#: src/components/layouts/OrganizerLayout/index.tsx:82
 #: src/components/modals/SwitchOrganizerModal/index.tsx:46
 msgid "Switch Organizer"
 msgstr "Switch Organizer"
@@ -16734,6 +16847,10 @@ msgstr "Tiers"
 msgid "TikTok"
 msgstr "TikTok"
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:118
+msgid "Tile colour"
+msgstr "Tile colour"
+
 #: src/components/routes/event/OccurrencesTab/index.tsx:307
 msgid "Time"
 msgstr "Time"
@@ -16775,10 +16892,13 @@ msgstr "Timezone"
 
 #: src/components/routes/admin/Announcements/index.tsx:157
 #: src/components/routes/admin/Announcements/index.tsx:381
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:110
+#: src/components/routes/organizer/ColouringPages/index.tsx:91
 msgid "Title"
 msgstr "Title"
 
 #: src/components/routes/admin/Announcements/index.tsx:299
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:45
 msgid "Title is required"
 msgstr "Title is required"
 
@@ -16846,7 +16966,7 @@ msgstr "Tomorrow"
 msgid "Too many attempts. Please wait a minute and try again."
 msgstr "Too many attempts. Please wait a minute and try again."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:115
+#: src/components/layouts/OrganizerLayout/index.tsx:116
 #: src/ee/seating/components/SeatMapDesigner/index.tsx:372
 msgid "Tools"
 msgstr "Tools"
@@ -17289,6 +17409,10 @@ msgstr "Up to {max} per order"
 msgid "up to {perDateAllocation} per date"
 msgstr "up to {perDateAllocation} per date"
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:102
+msgid "Up to 10 MB. The first page becomes the thumbnail."
+msgstr "Up to 10 MB. The first page becomes the thumbnail."
+
 #: src/components/common/EventsDashboardStatusButtons/index.tsx:20
 #: src/components/common/EventStatusBadge/index.tsx:16
 #: src/components/layouts/OrganizerHomepage/OrganizerEventsSection/index.tsx:45
@@ -17383,6 +17507,10 @@ msgstr "Updates as you build the rule. Flip through months to sanity-check dates
 msgid "Updates as you type."
 msgstr "Updates as you type."
 
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:132
+msgid "Upload"
+msgstr "Upload"
+
 #: src/components/layouts/OrganizerHomepage/ChildrenStoriesSection/SubmitStoryForm/index.tsx:230
 msgid "Upload a .txt file"
 msgstr "Upload a .txt file"
@@ -17394,6 +17522,11 @@ msgstr "Upload a cover image for your organizer"
 #: src/components/routes/organizer/Settings/Sections/ImageAssetSettings/index.tsx:28
 msgid "Upload a logo for your organizer"
 msgstr "Upload a logo for your organizer"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:96
+#: src/components/routes/organizer/ColouringPages/index.tsx:76
+msgid "Upload colouring page"
+msgstr "Upload colouring page"
 
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:109
 #: src/components/common/Editor/Controls/InsertImageControl/index.tsx:163
@@ -17814,8 +17947,8 @@ msgstr "View Order Details"
 msgid "View order details, issue refunds, and resend confirmations."
 msgstr "View order details, issue refunds, and resend confirmations."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:264
-#: src/components/layouts/OrganizerLayout/index.tsx:267
+#: src/components/layouts/OrganizerLayout/index.tsx:266
+#: src/components/layouts/OrganizerLayout/index.tsx:269
 msgid "View Organizer Homepage"
 msgstr "View Organizer Homepage"
 
@@ -17941,6 +18074,10 @@ msgstr "We could not load usernames. Try again"
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:89
 msgid "We could not process your payment. Please try again or contact support."
 msgstr "We could not process your payment. Please try again or contact support."
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:87
+msgid "We could not read that PDF. Please check the file and try again."
+msgstr "We could not read that PDF. Please check the file and try again."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/SaveScorePrompt.tsx:41
 msgid "We could not save your score. Please try again later."
@@ -18182,7 +18319,7 @@ msgid "Webhook will send notifications"
 msgstr "Webhook will send notifications"
 
 #: src/components/layouts/Event/index.tsx:155
-#: src/components/layouts/OrganizerLayout/index.tsx:126
+#: src/components/layouts/OrganizerLayout/index.tsx:128
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
 #: src/components/routes/organizer/Webhooks/index.tsx:30
@@ -18768,7 +18905,7 @@ msgstr "You must have at least one price tier"
 msgid "You must have at least one size"
 msgstr "You must have at least one size"
 
-#: src/components/layouts/OrganizerLayout/index.tsx:309
+#: src/components/layouts/OrganizerLayout/index.tsx:311
 msgid "You must verify your email address before you can update the organizer status."
 msgstr "You must verify your email address before you can update the organizer status."
 
@@ -18843,6 +18980,10 @@ msgstr "You've changed the session time"
 #: src/components/common/ErrorDisplay/index.tsx:50
 msgid "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
 msgstr "You've officially wandered into the digital Teachers' Lounge. No parents or students allowed!"
+
+#: src/utilites/colouringPages.ts:14
+msgid "Young Artists"
+msgstr "Young Artists"
 
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:92
 msgid "Your account has been deactivated and will be permanently deleted on <0>{0}</0>."

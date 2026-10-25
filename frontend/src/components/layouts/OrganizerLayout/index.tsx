@@ -14,6 +14,7 @@ import {
     IconArmchair,
     IconMapPin,
     IconPaint,
+    IconPalette,
     IconSettings,
     IconShare,
     IconUsersGroup,
@@ -117,6 +118,7 @@ const OrganizerLayout = () => {
 
         { label: t`Community` },
         { link: 'child-story-submissions', label: t`Story Submissions`, icon: IconFeather },
+        { link: 'colouring-pages', label: t`Colouring Pages`, icon: IconPalette },
 
         { label: t`Library` },
         { link: 'locations', label: t`Locations`, icon: IconMapPin },

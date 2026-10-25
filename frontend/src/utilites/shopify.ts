@@ -1,3 +1,4 @@
+import {ConfigKeys} from "../types.ts";
 import {getConfig} from "./config.ts";
 
 const SHOPIFY_API_VERSION = '2025-07';
@@ -30,10 +31,11 @@ type GridItem<P> =
     | { type: 'page'; page: P }
     | { type: 'product'; product: ShopifyProduct };
 
+export type ShopifyCollectionConfigKey = Extract<ConfigKeys, `VITE_SHOPIFY_COLLECTION_AGE_${string}`>;
+
 interface ShopifyConfig {
     storeDomain: string;
     storefrontToken: string;
-    collectionHandle: string;
     publicDomain: string;
 }
 
@@ -97,19 +99,19 @@ class ShopifyRequestError extends Error {}
 export const getShopifyConfig = (): ShopifyConfig | null => {
     const storeDomain = getConfig('VITE_SHOPIFY_STORE_DOMAIN');
     const storefrontToken = getConfig('VITE_SHOPIFY_STOREFRONT_TOKEN');
-    const collectionHandle = getConfig('VITE_SHOPIFY_COLLECTION_HANDLE');
 
-    if (!storeDomain || !storefrontToken || !collectionHandle) {
+    if (!storeDomain || !storefrontToken) {
         return null;
     }
 
     return {
         storeDomain,
         storefrontToken,
-        collectionHandle,
         publicDomain: getConfig('VITE_SHOPIFY_PUBLIC_DOMAIN') || storeDomain,
     };
 };
+
+export const getShopifyCollectionHandle = (key: ShopifyCollectionConfigKey): string | undefined => getConfig(key);
 
 const shopifyRequest = async <T>(query: string, variables: Record<string, unknown>): Promise<T> => {
     const config = getShopifyConfig();
@@ -200,6 +202,10 @@ export const interleaveShopProducts = <P>(
             items.push({type: 'product', product: products[nextProduct++]});
         }
     });
+
+    if (nextProduct === 0 && products.length > 0) {
+        items.push({type: 'product', product: products[0]});
+    }
 
     return items;
 };

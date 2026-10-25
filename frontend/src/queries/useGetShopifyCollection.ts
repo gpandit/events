@@ -1,10 +1,10 @@
 import {useQuery} from "@tanstack/react-query";
-import {fetchShopifyCollection, getShopifyConfig} from "../utilites/shopify.ts";
+import {fetchShopifyCollection, getShopifyConfig, ShopifyCollectionConfigKey, getShopifyCollectionHandle} from "../utilites/shopify.ts";
 
 export const GET_SHOPIFY_COLLECTION_QUERY_KEY = 'getShopifyCollection';
 
-export const useGetShopifyCollection = () => {
-    const collectionHandle = getShopifyConfig()?.collectionHandle;
+export const useGetShopifyCollection = (collectionConfigKey: ShopifyCollectionConfigKey) => {
+    const collectionHandle = getShopifyConfig() ? getShopifyCollectionHandle(collectionConfigKey) : undefined;
 
     return useQuery({
         queryKey: [GET_SHOPIFY_COLLECTION_QUERY_KEY, collectionHandle],
