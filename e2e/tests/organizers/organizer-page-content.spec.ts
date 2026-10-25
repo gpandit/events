@@ -13,7 +13,8 @@ test.describe('organizer page content', () => {
       background_type: 'COLOR',
       about_text: 'We raise funds for the library.',
       team_heading: 'Our committee',
-      team_members: ['Priya Shah', 'Omar Haddad'],
+      team_members: [{ name: 'Priya Shah' }, { name: 'Omar Haddad' }],
+      technical_team_members: [{ name: 'Guru Pandit' }],
       contact_heading: 'Join the committee',
       contact_intro: 'Tell us how you can help.',
       contact_email: 'committee@example.com',
@@ -26,6 +27,9 @@ test.describe('organizer page content', () => {
     await expect(page.getByRole('heading', { name: 'Our committee' })).toBeVisible();
     await expect(page.getByText('Priya Shah')).toBeVisible();
     await expect(page.getByText('Omar Haddad')).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Technical Team' })).toBeVisible();
+    await expect(page.getByText('Guru Pandit')).toBeVisible();
+    await expect(page.getByText('Parent')).toHaveCount(3);
     await expect(page.getByRole('heading', { name: 'Join the committee' })).toBeVisible();
     await expect(page.getByText('Tell us how you can help.')).toBeVisible();
     await expect(page.getByRole('link', { name: 'committee@example.com' }).first()).toBeVisible();

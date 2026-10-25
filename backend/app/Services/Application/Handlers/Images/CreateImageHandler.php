@@ -21,6 +21,7 @@ class CreateImageHandler
     private const IMAGES_TYPES_WITH_ONLY_ONE_IMAGE_ALLOWED = [
         ImageType::ORGANIZER_LOGO,
         ImageType::ORGANIZER_COVER,
+        ImageType::TEAM_GROUP_PHOTO,
         ImageType::EVENT_COVER,
         ImageType::TICKET_LOGO,
     ];

@@ -1,4 +1,4 @@
-import {HomepageThemeSettings} from "../types.ts";
+import {HomepageThemeSettings, TeamMember} from "../types.ts";
 import {buildHomepageFontStack, DEFAULT_HOMEPAGE_FONT} from "../constants/homepageFonts.ts";
 
 export interface DerivedThemeColors {
@@ -202,6 +202,11 @@ export function getDefaultThemeSettings(): HomepageThemeSettings {
     };
 }
 
+const cleanTeamMembers = (members: TeamMember[] | undefined): TeamMember[] | undefined =>
+    members
+        ?.map((member) => ({...member, name: member.name.trim()}))
+        .filter((member) => member.name);
+
 export function validateThemeSettings(
     settings: Partial<HomepageThemeSettings> | null | undefined
 ): HomepageThemeSettings {
@@ -226,7 +231,9 @@ export function validateThemeSettings(
         upcoming_heading: settings.upcoming_heading || undefined,
         about_text: settings.about_text || undefined,
         team_heading: settings.team_heading || undefined,
-        team_members: settings.team_members?.map((name) => name.trim()).filter(Boolean),
+        team_members: cleanTeamMembers(settings.team_members),
+        technical_team_heading: settings.technical_team_heading || undefined,
+        technical_team_members: cleanTeamMembers(settings.technical_team_members),
         contact_heading: settings.contact_heading || undefined,
         contact_intro: settings.contact_intro || undefined,
         contact_email: settings.contact_email || undefined,
