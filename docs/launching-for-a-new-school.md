@@ -85,3 +85,14 @@ This duplicates `staging` (new Postgres and Redis for that school) and sets ever
 3. Attach the school's domain to the `app` service. Migrations run automatically on start (`docker/all-in-one/scripts/startup.sh`).
 4. Create the organizer, then set `VITE_DEFAULT_ORGANIZER_ID` to its id and redeploy.
 5. Delete the environment when the school no longer needs it - each environment bills for its own database and cache.
+
+## 6. Roles and shared colouring pages
+
+| Role in the UI | Stored as | Can do |
+| --- | --- | --- |
+| Platform admin | `SUPERADMIN` | Everything, across all schools. Manages the shared colouring page library under Admin > Colouring Pages. |
+| School admin | `ADMIN` | Everything for their own school: events, shop, Site Designer, users, and uploading, editing, ordering and deleting the school's own colouring pages. |
+| Organizer | `ORGANIZER` | Manage events and products. Can view colouring pages but not change them. |
+
+- Pages uploaded by a platform admin have no school. They appear on every school's Creative Corner next to the school's own pages, after them, and school admins see them marked Shared but cannot change them.
+- The 12 pages that used to be copied into each school are now part of the shared library, so a new school gets them without any set-up.
