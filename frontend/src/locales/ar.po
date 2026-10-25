@@ -1658,7 +1658,7 @@ msgstr "جميع المناسبات"
 msgid "All Products"
 msgstr "جميع المنتجات"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:177
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:183
 msgid "All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
@@ -4253,17 +4253,13 @@ msgstr "بيانات التواصل"
 msgid "Contact Email"
 msgstr "بريد التواصل الإلكتروني"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:166
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:172
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:32
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:34
 msgid "Contact us:"
 msgstr "تواصلوا معنا:"
-
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:43
-#~ msgid "Contact us: <0>{CONTACT_EMAIL}</0>"
-#~ msgstr ""
 
 #: src/components/routes/admin/Announcements/index.tsx:389
 #: src/components/routes/admin/Announcements/index.tsx:398
@@ -4338,9 +4334,9 @@ msgstr "تحكم في من يدخل لهذا التاريخ"
 
 #: src/components/forms/CheckInListForm/index.tsx:84
 msgid "Control who gets in, and when"
-msgstr "تحكم في من يدخل، ومتى"
+msgstr "تحكم في من يدخل، ومتىd#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159"
 
-d#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:165
 #: src/components/routes/legal/CookiePolicy/index.tsx:8
 msgid "Cookie Policy"
 msgstr "سياسة ملفات تعريف الارتباط"
@@ -4977,10 +4973,6 @@ msgstr "خصص قالب بريدك الإلكتروني باستخدام قوا�
 msgid "Customize your event page"
 msgstr "خصص صفحة فعاليتك"
 
-#: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:203
-#~ msgid "Customize your organizer page appearance"
-#~ msgstr "خصص مظهر صفحة جهتك المنظمة"
-
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:51
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:32
 msgid "Daily"
@@ -5372,7 +5364,7 @@ msgstr "تم إلغاء طلب الحذف"
 msgid "Deletion Requests"
 msgstr "طلبات الحذف"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:152
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:162
 #: src/components/routes/legal/DeliveryPolicy/index.tsx:8
 msgid "Delivery Policy"
 msgstr "سياسة التسليم"
@@ -6536,10 +6528,6 @@ msgstr "تم تحديث حالة الفعالية"
 msgid "Event ticketing @ {appName}, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
 msgstr "إصدار تذاكر الفعاليات في {appName}، بدعم من <0>أصدقاء المدرسة</0> — مبادرة من Aqualeo Digecom، مدعومة بتقنية Hi.Events."
 
-#: src/components/layouts/AuthLayout/index.tsx:39
-#~ msgid "Event ticketing @ Repton Al Barsha, supported by <0>Friends of School</0> — an initiative by Aqualeo Digecom, powered by Hi.Events."
-#~ msgstr "إصدار تذاكر الفعاليات في ريبتون البرشاء، بدعم من <0>أصدقاء المدرسة</0> — مبادرة من Aqualeo Digecom، مدعومة بتقنية Hi.Events."
-
 #: src/components/common/AdminEventsTable/index.tsx:86
 msgid "Event Title"
 msgstr "عنوان الفعالية"
@@ -7468,10 +7456,6 @@ msgstr "الجمعة"
 msgid "Friends of Repton Al Barsha logo"
 msgstr "شعار أصدقاء ريبتون البرشاء"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:36
-#~ msgid "Friends of Repton has been supporting the school in managing various events onsite, including movie nights, socials, picnics, year-end balls, and Christmas and year-end events. It also takes an active part in making sure preloved uniforms find a good home."
-#~ msgstr "تدعم أصدقاء ريبتون المدرسة في تنظيم فعاليات متنوعة داخل الحرم المدرسي، بما في ذلك ليالي الأفلام والمناسبات الاجتماعية والنزهات وحفلات نهاية العام وفعاليات عيد الميلاد ونهاية العام. كما تشارك بفاعلية في ضمان إيجاد منزل جديد للزي المدرسي المستعمل."
-
 #: src/components/common/ErrorDisplay/index.tsx:88
 #: src/components/layouts/AuthLayout/index.tsx:35
 #: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:100
@@ -7602,7 +7586,7 @@ msgstr "الحصول على الاتجاهات"
 msgid "Get in Touch Section"
 msgstr "قسم التواصل"
 
-#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:54
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:62
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:470
 msgid "Get involved - volunteer, sponsor or say hello"
 msgstr "شاركنا - تطوع أو ارعَ أو تواصل معنا"
@@ -9305,11 +9289,7 @@ msgstr "مايو"
 msgid "Medium"
 msgstr "متوسط"
 
-#: src/components/layouts/PublicOrganizerAbout/index.tsx:48
-#~ msgid "Meet the Friends of Repton team"
-#~ msgstr ""
-
-#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:38
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:43
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:440
 msgid "Meet the team"
 msgstr "تعرّف على الفريق"
@@ -11276,6 +11256,10 @@ msgstr ""
 msgid "Paper"
 msgstr ""
 
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:52
+msgid "Parent"
+msgstr "ولي أمر"
+
 #: src/components/routes/organizer/ChildStorySubmissions/index.tsx:24
 msgid "Parent agreed"
 msgstr "وافق ولي الأمر"
@@ -12686,7 +12670,7 @@ msgstr "استرداد جميع الطلبات لهذا التاريخ"
 msgid "Refund amount"
 msgstr "مبلغ الاسترداد"
 
-#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:149
+#: src/components/layouts/OrganizerHomepage/SiteFooter/index.tsx:159
 #: src/components/routes/legal/RefundPolicy/index.tsx:8
 msgid "Refund and Cancellation Policy"
 msgstr "سياسة الاسترداد والإلغاء"
@@ -14331,10 +14315,6 @@ msgstr "عيّن إلى غير محدود (إزالة الحد)"
 msgid "Set up a recurring schedule to automatically create dates, or add them one at a time."
 msgstr "أعدّ جدولًا متكررًا لإنشاء تواريخ تلقائيًا، أو أضفها واحدًا تلو الآخر."
 
-#: src/components/routes/event/CheckInLists/index.tsx:35
-#~ msgid "Set up check-in lists for different entrances, sessions, or days."
-#~ msgstr "أعدّ قوائم تسجيل الدخول لمداخل أو جلسات أو أيام مختلفة."
-
 #: src/components/layouts/OrganizerLayout/index.tsx:91
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
@@ -15624,6 +15604,10 @@ msgstr "أعضاء الفريق"
 msgid "Tech"
 msgstr "تقنية"
 
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:37
+msgid "Technical Contact:"
+msgstr "جهة الاتصال التقنية:"
+
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:96
 msgid "Telegram"
 msgstr "تيليجرام"
@@ -16801,7 +16785,7 @@ msgstr "إلى"
 msgid "To collect"
 msgstr "بانتظار الاستلام"
 
-#: src/components/routes/legal/PrivacyPolicy/index.tsx:58
+#: src/components/routes/legal/PrivacyPolicy/index.tsx:59
 msgid "To communicate with you about events you've registered for."
 msgstr "للتواصل معك بشأن الفعاليات التي سجّلت فيها."
 
@@ -18309,10 +18293,6 @@ msgstr "ما يمكن للموظفين غير الموثّقين رؤيته"
 msgid "What's happening"
 msgstr "ماذا يحدث"
 
-#: src/components/layouts/OrganizerHomepage/index.tsx:46
-#~ msgid "What's happening at RAB"
-#~ msgstr "ماذا يحدث في RAB"
-
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:89
 msgid "WhatsApp"
 msgstr "واتساب"
@@ -18466,7 +18446,7 @@ msgstr "إلى أين يرتبط الزر"
 msgid "whether they would like it published, and whether they are under 16;"
 msgstr "ما إذا كانوا يرغبون في النشر، وما إذا كان عمرهم أقل من 16 سنة؛"
 
-#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:57
+#: src/components/layouts/PublicOrganizerAbout/OrganizerAboutPage.tsx:65
 msgid "Whether you'd like to volunteer, explore sponsorship opportunities or just ask a question, leave your details below and we'll get in touch."
 msgstr "سواء أردت التطوع أو استكشاف فرص الرعاية أو طرح سؤال، اترك بياناتك أدناه وسنتواصل معك."
 

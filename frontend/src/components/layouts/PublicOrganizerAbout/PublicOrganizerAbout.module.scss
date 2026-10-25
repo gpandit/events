@@ -60,9 +60,21 @@
   justify-content: center;
 }
 
+.memberDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
 .memberName {
   font-weight: 600;
   font-size: 1rem;
+}
+
+.memberRole {
+  font-size: 0.85rem;
+  opacity: .7;
 }
 
 .volunteerIntro {

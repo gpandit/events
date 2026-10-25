@@ -9,6 +9,8 @@ import {validateThemeSettings} from "../../../utilites/themeUtils.ts";
 import {getOrganizerContactEmail} from "../../../utilites/organizerContent.ts";
 import classes from './PublicOrganizerAbout.module.scss';
 
+const TECHNICAL_CONTACT = 'Guru Pandit';
+
 interface OrganizerAboutPageProps {
     organizer: Organizer;
 }
@@ -31,6 +33,9 @@ export const OrganizerAboutPage = ({organizer}: OrganizerAboutPageProps) => {
                 <p className={classes.contactEmail}>
                     {t`Contact us:`} <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
                 </p>
+                <p className={classes.contactEmail}>
+                    {t`Technical Contact:`} {TECHNICAL_CONTACT}
+                </p>
             </OrganizerProfileCard>
 
             {teamMembers.length > 0 && (
@@ -42,7 +47,10 @@ export const OrganizerAboutPage = ({organizer}: OrganizerAboutPageProps) => {
                                 <div className={classes.photo}>
                                     <IconUser size={48}/>
                                 </div>
-                                <span className={classes.memberName}>{memberName}</span>
+                                <div className={classes.memberDetails}>
+                                    <span className={classes.memberName}>{memberName}</span>
+                                    <span className={classes.memberRole}>{t`Parent`}</span>
+                                </div>
                             </div>
                         ))}
                     </div>
