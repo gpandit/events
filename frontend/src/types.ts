@@ -31,7 +31,14 @@ export type ConfigKeys =
     | 'VITE_DEFAULT_ORGANIZER_ID'
     | 'VITE_INSTAGRAM_HANDLE'
     | 'VITE_INSTAGRAM_EMBED_URL'
-    | 'VITE_DEFAULT_SHARE_IMAGE_PATH';
+    | 'VITE_DEFAULT_SHARE_IMAGE_PATH'
+    | 'VITE_SHOPIFY_STORE_DOMAIN'
+    | 'VITE_SHOPIFY_STOREFRONT_TOKEN'
+    | 'VITE_SHOPIFY_COLLECTION_AGE_2_5'
+    | 'VITE_SHOPIFY_COLLECTION_AGE_6_10'
+    | 'VITE_SHOPIFY_COLLECTION_AGE_11_13'
+    | 'VITE_SHOPIFY_COLLECTION_AGE_14_18'
+    | 'VITE_SHOPIFY_PUBLIC_DOMAIN';
 
 export enum StripePlatform {
     Canada = 'ca',
@@ -78,6 +85,11 @@ export interface ColorTheme {
     homepage_secondary_text_color: string;
 }
 
+export interface TeamMember {
+    name: string;
+    image_id?: IdParam;
+}
+
 export interface HomepageThemeSettings {
     accent: string;
     background: string;
@@ -93,7 +105,9 @@ export interface HomepageThemeSettings {
     upcoming_heading?: string;
     about_text?: string;
     team_heading?: string;
-    team_members?: string[];
+    team_members?: TeamMember[];
+    technical_team_heading?: string;
+    technical_team_members?: TeamMember[];
     contact_heading?: string;
     contact_intro?: string;
     contact_email?: string;
@@ -254,7 +268,7 @@ export interface Image {
     lqip_base64?: string | null;
 }
 
-export type ImageType = 'EVENT_COVER' | 'EDITOR_IMAGE' | 'ORGANIZER_LOGO' | 'ORGANIZER_COVER' | 'ORGANIZER_IMAGE' | 'TICKET_LOGO' | 'PRODUCT_IMAGE';
+export type ImageType = 'EVENT_COVER' | 'EDITOR_IMAGE' | 'ORGANIZER_LOGO' | 'ORGANIZER_COVER' | 'TEAM_GROUP_PHOTO' | 'TEAM_MEMBER_PHOTO' | 'ORGANIZER_IMAGE' | 'TICKET_LOGO' | 'PRODUCT_IMAGE';
 
 export type PaymentProvider = 'STRIPE' | 'OFFLINE';
 
@@ -891,6 +905,32 @@ export interface PublishedChildStorySubmission {
     content: string;
     submitted_at: string;
     published_at: string;
+}
+
+export type ColouringPageAgeGroup = 'AGE_2_5' | 'AGE_6_10' | 'AGE_11_13' | 'AGE_14_18';
+export type ColouringPageTint = 'PEACH' | 'SKY' | 'MINT' | 'LILAC';
+export type ColouringPageStatus = 'DRAFT' | 'PUBLISHED';
+
+export interface ColouringPage {
+    id: number;
+    organizer_id: number;
+    title: string;
+    age_group: ColouringPageAgeGroup;
+    tint: ColouringPageTint;
+    status: ColouringPageStatus;
+    sort_order: number;
+    pdf_url: string;
+    thumbnail_url: string;
+    created_at: string;
+}
+
+export interface PublicColouringPage {
+    id: number;
+    title: string;
+    age_group: ColouringPageAgeGroup;
+    tint: ColouringPageTint;
+    pdf_url: string;
+    thumbnail_url: string;
 }
 
 export interface ParentalConsentDetails {

@@ -1,9 +1,14 @@
 import React from 'react';
 import {t} from '@lingui/macro';
+import {IdParam} from '../../../../types.ts';
 import {ColouringPagesTab} from './ColouringPagesTab';
 import classes from './ResourcesForChildren.module.scss';
 
-export const ResourcesForChildren: React.FC = () => (
+interface ResourcesForChildrenProps {
+    organizerId: IdParam;
+}
+
+export const ResourcesForChildren: React.FC<ResourcesForChildrenProps> = ({organizerId}) => (
     <section className={classes.section}>
         <h2 className={classes.heading}>{t`Creative Corner`}</h2>
         <p className={classes.subheading}>
@@ -11,7 +16,7 @@ export const ResourcesForChildren: React.FC = () => (
         </p>
 
         <div className={classes.tabPanel}>
-            <ColouringPagesTab/>
+            <ColouringPagesTab organizerId={organizerId}/>
         </div>
     </section>
 );

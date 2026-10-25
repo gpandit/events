@@ -4,7 +4,9 @@ import {t} from '@lingui/macro';
 import {IconClock, IconListCheck, IconPuzzle, IconRefresh, IconTrophy, IconUser} from '@tabler/icons-react';
 import {Organizer, QuizPlayerSession} from '../../../../../types.ts';
 import {AGE_BANDS, AgeBand, Puzzle, PUZZLES_BY_AGE_BAND} from './generalKnowledgePuzzles.ts';
-import {getQuizPercentage, getQuizRank, QuizRank, rememberTest, selectQuizQuestions, shuffle} from './quizScoring.ts';
+import {getQuizPercentage, getQuizRank, QuizRank, rememberTest, shuffle} from './quizScoring.ts';
+import {prepareQuiz} from './prepareQuiz.ts';
+import {QuestionPicture} from './QuestionPicture.tsx';
 import {SaveScorePrompt} from './SaveScorePrompt.tsx';
 import {AnswerReview} from './AnswerReview.tsx';
 import {QuizAuthForm} from './QuizAuthForm.tsx';
@@ -18,10 +20,11 @@ import classes from '../ResourcesForChildren.module.scss';
 
 const SECONDS_PER_QUESTION = 30;
 const QUESTIONS_PER_TEST = 20;
+const PICTURE_QUESTIONS_PER_TEST = 5;
 const BEST_SCORE_STORAGE_KEY = 'fos_general_knowledge_quiz_best';
 const RECENT_TESTS_STORAGE_KEY = 'fos_general_knowledge_quiz_recent';
 
-type QuizStage = 'intro' | 'playing' | 'result' | 'review' | 'auth' | 'profile';
+type QuizStage = 'intro' | 'loading' | 'playing' | 'result' | 'review' | 'auth' | 'profile';
 
 type BestScores = Partial<Record<AgeBand, number>>;
 
@@ -90,6 +93,7 @@ const PuzzlesStage = ({organizer, session, signIn, signOut, onAgeBandChange}: Pu
     const [ageBand, setAgeBand] = useState<AgeBand | null>(null);
     const [puzzles, setPuzzles] = useState<Puzzle[]>([]);
     const [questionOptions, setQuestionOptions] = useState<string[][]>([]);
+    const [photos, setPhotos] = useState<Record<string, string>>({});
     const [hoveredQuestion, setHoveredQuestion] = useState<number | null>(null);
     const [current, setCurrent] = useState(0);
     const [score, setScore] = useState(0);
@@ -155,13 +159,23 @@ const PuzzlesStage = ({organizer, session, signIn, signOut, onAgeBandChange}: Pu
         return () => window.clearTimeout(timer);
     }, [stage, timeLeft, answer]);
 
-    const start = (band: AgeBand) => {
-        const recent = readRecentTests();
-        const selected = selectQuizQuestions(PUZZLES_BY_AGE_BAND[band], recent[band] ?? [], QUESTIONS_PER_TEST);
-        writeRecentTests({...recent, [band]: rememberTest(recent[band] ?? [], selected.map((puzzle) => puzzle.id))});
+    const start = async (band: AgeBand) => {
         setAgeBand(band);
-        setPuzzles(selected);
-        setQuestionOptions(selected.map((puzzle) => shuffle(puzzle.options)));
+        setStage('loading');
+        const recent = readRecentTests();
+        const prepared = await prepareQuiz(
+            PUZZLES_BY_AGE_BAND[band],
+            recent[band] ?? [],
+            QUESTIONS_PER_TEST,
+            PICTURE_QUESTIONS_PER_TEST,
+        );
+        writeRecentTests({
+            ...recent,
+            [band]: rememberTest(recent[band] ?? [], prepared.puzzles.map((puzzle) => puzzle.id)),
+        });
+        setPuzzles(prepared.puzzles);
+        setPhotos(prepared.photos);
+        setQuestionOptions(prepared.puzzles.map((puzzle) => shuffle(puzzle.options)));
         setCurrent(0);
         setScore(0);
         setAnswers([]);
@@ -233,11 +247,23 @@ const PuzzlesStage = ({organizer, session, signIn, signOut, onAgeBandChange}: Pu
         );
     }
 
+    if (stage === 'loading') {
+        return (
+            <div className={classes.tabPanel}>
+                <div className={classes.puzzleCard} data-testid="puzzles-loading">
+                    <IconPuzzle size={40} className={classes.puzzleIcon}/>
+                    <h3 className={classes.puzzleTitle}>{t`Getting your questions ready…`}</h3>
+                </div>
+            </div>
+        );
+    }
+
     if (stage === 'review') {
         return (
             <div className={classes.tabPanel}>
                 <AnswerReview
                     puzzles={puzzles}
+                    photos={photos}
                     questionOptions={questionOptions}
                     answers={answers}
                     onBack={() => setStage('result')}
@@ -278,7 +304,7 @@ const PuzzlesStage = ({organizer, session, signIn, signOut, onAgeBandChange}: Pu
                     <IconPuzzle size={40} className={classes.puzzleIcon}/>
                     <h3 className={classes.puzzleTitle}>{t`General Knowledge Challenge`}</h3>
                     <p className={classes.puzzleText}>
-                        {t`English, Science, Maths, Geography and History questions. Choose your age group, then answer ${QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have ${SECONDS_PER_QUESTION} seconds for each question.`}
+                        {t`Language, science, maths, geography and history questions, plus picture rounds with animals, places and famous people. Choose your age group, then answer ${QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have ${SECONDS_PER_QUESTION} seconds for each question.`}
                     </p>
                     <p className={classes.puzzleSubtitle}>{t`Choose your age group`}</p>
                     <div className={classes.ageOptions} role="radiogroup" aria-label={t`Choose your age group`}>
@@ -381,6 +407,7 @@ const PuzzlesStage = ({organizer, session, signIn, signOut, onAgeBandChange}: Pu
                         style={{width: `${(timeLeft / SECONDS_PER_QUESTION) * 100}%`}}
                     />
                 </div>
+                {puzzle.visual && <QuestionPicture visual={puzzle.visual} photos={photos}/>}
                 <h3 className={classes.puzzleQuestion}>{puzzle.question}</h3>
                 <div
                     className={`${classes.puzzleOptions} ${hoveredQuestion === current ? classes.puzzleOptionsHoverable : ''}`}

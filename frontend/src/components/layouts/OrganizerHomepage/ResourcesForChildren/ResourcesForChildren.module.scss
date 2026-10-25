@@ -187,6 +187,35 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     color: var(--organizer-primary-text-color, #1a1a1a);
 }
 
+.puzzleEmoji {
+    width: 100%;
+    font-size: clamp(3.5rem, 14vw, 6rem);
+    line-height: 1.15;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.puzzlePhoto {
+    max-width: 100%;
+    max-height: 260px;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.reviewEmoji {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.reviewPhoto {
+    align-self: flex-start;
+    max-width: 100%;
+    max-height: 160px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
 .quizHeader {
     display: flex;
     justify-content: space-between;
@@ -287,6 +316,94 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     }
 }
 
+.shopCard {
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    align-items: stretch;
+}
+
+.shopTile {
+    position: relative;
+    background: var(--organizer-accent-soft, rgba(139, 92, 246, 0.08));
+}
+
+.shopBadge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--organizer-primary-color, #8b5cf6);
+    color: var(--organizer-accent-contrast, #ffffff);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.shopPrice {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
+}
+
+.shopModalBody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shopModalImage {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+}
+
+.shopModalPrice {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.tileButton {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.viewer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.viewerArrow {
+    flex-shrink: 0;
+}
+
+.viewerContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.viewerImage {
+    width: 100%;
+    max-height: 62vh;
+    object-fit: contain;
+}
+
+.viewerDownload {
+    align-self: center;
+    text-decoration: none;
+}
+
+.viewerCounter {
+    margin: 8px 0 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--organizer-secondary-color, #525252);
+}
+
 .shopBanner {
     grid-column: 1 / -1;
     grid-row: 3;
@@ -363,12 +480,17 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 .shopLink {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
     color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     text-decoration: none;
     font-weight: 600;
     font-size: 1.15rem;
+
+    @include mixins.respond-below(sm) {
+        font-size: 1rem;
+    }
 
     &:hover {
         text-decoration: underline;
