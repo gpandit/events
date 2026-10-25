@@ -17,6 +17,10 @@ export const redirectToCanonicalOrganizerPath = (organizer: Organizer | null | u
         return;
     }
 
+    if (!legacyMatch[1] && isDefaultOrganizer(organizer.id)) {
+        return;
+    }
+
     const suffix = isDefaultOrganizer(organizer.id)
         ? (legacyMatch[1] ?? '').replace(LEGACY_ACCOUNT_SEGMENT, '/my-account')
         : legacyMatch[1] ?? '';
