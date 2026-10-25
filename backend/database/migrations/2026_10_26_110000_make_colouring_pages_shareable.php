@@ -27,13 +27,15 @@ return new class extends Migration
     {
         DB::statement('ALTER TABLE colouring_pages ALTER COLUMN organizer_id DROP NOT NULL');
 
-        foreach (self::BUNDLED_PAGES as $page) {
+        foreach (self::BUNDLED_PAGES as $index => $page) {
             DB::table('colouring_pages')
                 ->whereNotNull('organizer_id')
                 ->where('pdf_path', $this->pdfPath($page))
                 ->where('title', $page['title'])
                 ->where('age_group', ColouringPageAgeGroup::AGE_6_10->value)
+                ->where('tint', $page['tint'])
                 ->where('status', ColouringPageStatus::PUBLISHED->value)
+                ->where('sort_order', $index)
                 ->delete();
         }
 
