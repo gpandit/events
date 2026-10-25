@@ -944,3 +944,10 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
     font-size: 0.85rem;
     color: var(--organizer-secondary-color, #525252);
 }
+
+.photoCredits {
+    font-size: 0.8rem;
+    color: var(--organizer-primary-text-color, #1a1a1a);
+    opacity: 0.7;
+    width: fit-content;
+}

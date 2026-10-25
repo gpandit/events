@@ -3,10 +3,6 @@ import { createFreshOrganizer } from '../../api/factory';
 import { uniqueName } from '../../utils/unique';
 
 test.describe('organizer puzzles page', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.route('https://en.wikipedia.org/**', (route) => route.abort());
-  });
-
   test('a visitor picks an age group and starts the general knowledge test', async ({ page, api }) => {
     const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Org'));
     await api.updateOrganizerStatus(organizer.id, 'LIVE');
@@ -25,7 +21,14 @@ test.describe('organizer puzzles page', () => {
     await expect(page.getByText(/Question 1 of 20/)).toBeVisible();
   });
 
-  test('a test includes picture questions and still works when photos cannot load', async ({ page, api }) => {
+  test('a test includes picture questions without calling any third-party photo host', async ({ page, api }) => {
+    const thirdPartyRequests: string[] = [];
+    page.on('request', (request) => {
+      if (/wikipedia\.org|wikimedia\.org/.test(request.url())) {
+        thirdPartyRequests.push(request.url());
+      }
+    });
+
     const organizer = await createFreshOrganizer(api, uniqueName('E2E Puzzles Pictures Org'));
     await api.updateOrganizerStatus(organizer.id, 'LIVE');
 
@@ -41,7 +44,7 @@ test.describe('organizer puzzles page', () => {
     }
 
     expect(pictureQuestions).toBeGreaterThanOrEqual(3);
-    await expect(page.getByTestId('puzzles-photo')).toHaveCount(0);
+    expect(thirdPartyRequests).toEqual([]);
   });
 
   test('a child reviews their mistakes, signs up, earns points and appears on the leaderboard', async ({ page, api }) => {
