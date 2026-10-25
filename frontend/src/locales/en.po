@@ -6277,10 +6277,6 @@ msgstr "Ends {0}"
 msgid "English"
 msgstr "English"
 
-#: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/index.tsx:281
-#~ msgid "English, Science, Maths, Geography and History questions. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
-#~ msgstr "English, Science, Maths, Geography and History questions. Choose your age group, then answer {QUESTIONS_PER_TEST} questions. Pick the right answer from 4 choices. You have {SECONDS_PER_QUESTION} seconds for each question."
-
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:132
 msgid "Enter a capacity value or choose unlimited."
 msgstr "Enter a capacity value or choose unlimited."
@@ -14478,7 +14474,7 @@ msgstr "Set to unlimited (remove limit)"
 msgid "Set up a recurring schedule to automatically create dates, or add them one at a time."
 msgstr "Set up a recurring schedule to automatically create dates, or add them one at a time."
 
-#: src/components/layouts/OrganizerLayout/index.tsx:91
+#: src/components/layouts/OrganizerLayout/index.tsx:92
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:126
 msgid "Set up payouts"
 msgstr "Set up payouts"
@@ -17471,6 +17467,10 @@ msgstr "Up to {max} per order"
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:457
 msgid "up to {perDateAllocation} per date"
 msgstr "up to {perDateAllocation} per date"
+
+#: src/components/routes/organizer/ColouringPages/ColouringPageModal.tsx:102
+msgid "Up to 10 MB. The first page becomes the thumbnail."
+msgstr "Up to 10 MB. The first page becomes the thumbnail."
 
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:495
 msgid "Up to 12 people. Leave empty to hide the team section"
