@@ -480,12 +480,17 @@ $font-display: var(--theme-font-family, 'Outfit', -apple-system, BlinkMacSystemF
 .shopLink {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
     color: var(--organizer-accent-text, var(--organizer-primary-color, #8b5cf6));
     text-decoration: none;
     font-weight: 600;
     font-size: 1.15rem;
+
+    @include mixins.respond-below(sm) {
+        font-size: 1rem;
+    }
 
     &:hover {
         text-decoration: underline;

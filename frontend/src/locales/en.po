@@ -9219,8 +9219,8 @@ msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat ele
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/ColouringPagesTab/index.tsx:29
-msgid "Love colouring? Shop creative colouring sets at"
-msgstr "Love colouring? Shop creative colouring sets at"
+msgid "Love colouring? Shop colouring sets at"
+msgstr "Love colouring? Shop colouring sets at"
 
 #: src/components/forms/ProductForm/ProductImagesField.tsx:83
 msgid "Main"

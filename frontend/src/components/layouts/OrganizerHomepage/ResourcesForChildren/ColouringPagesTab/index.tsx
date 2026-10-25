@@ -26,7 +26,7 @@ const ShopBanner = () => (
             rel="noopener noreferrer"
             className={classes.shopLink}
         >
-            {t`Love colouring? Shop creative colouring sets at`}{' '}
+            {t`Love colouring? Shop colouring sets at`}{' '}
             <img src="/logos/icreate-logo.webp" alt={t`I Create`} className={classes.shopLinkLogo}/>
             <IconExternalLink size={16}/>
         </a>
