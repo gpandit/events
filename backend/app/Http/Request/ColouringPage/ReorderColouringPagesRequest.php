@@ -12,7 +12,7 @@ class ReorderColouringPagesRequest extends BaseRequest
     public function rules(): array
     {
         return [
-            'page_ids' => ['required', 'array', 'min:1', 'max:200'],
+            'page_ids' => ['required', 'array', 'min:1', 'max:1000'],
             'page_ids.*' => ['required', 'integer'],
         ];
     }

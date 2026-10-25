@@ -6,16 +6,16 @@ export const moveWithinAgeGroup = (pages: ColouringPage[], pageId: number, direc
         return null;
     }
 
-    const group = pages.filter((candidate) => candidate.age_group === page.age_group);
-    const neighbour = group[group.findIndex((candidate) => candidate.id === pageId) + direction];
-    if (!neighbour) {
+    const groupIds = pages
+        .filter((candidate) => candidate.age_group === page.age_group)
+        .map((candidate) => candidate.id);
+    const from = groupIds.indexOf(pageId);
+    const to = from + direction;
+    if (to < 0 || to >= groupIds.length) {
         return null;
     }
 
-    const ids = pages.map((candidate) => candidate.id);
-    const from = ids.indexOf(pageId);
-    const to = ids.indexOf(neighbour.id);
-    [ids[from], ids[to]] = [ids[to], ids[from]];
+    [groupIds[from], groupIds[to]] = [groupIds[to], groupIds[from]];
 
-    return ids;
+    return groupIds;
 };
