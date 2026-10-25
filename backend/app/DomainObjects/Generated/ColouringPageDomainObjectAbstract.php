@@ -23,7 +23,7 @@ abstract class ColouringPageDomainObjectAbstract extends \HiEvents\DomainObjects
     final public const UPDATED_AT = 'updated_at';
 
     protected int $id;
-    protected int $organizer_id;
+    protected ?int $organizer_id = null;
     protected string $title;
     protected string $age_group;
     protected string $tint;
@@ -62,13 +62,13 @@ abstract class ColouringPageDomainObjectAbstract extends \HiEvents\DomainObjects
         return $this->id;
     }
 
-    public function setOrganizerId(int $organizer_id): self
+    public function setOrganizerId(?int $organizer_id): self
     {
         $this->organizer_id = $organizer_id;
         return $this;
     }
 
-    public function getOrganizerId(): int
+    public function getOrganizerId(): ?int
     {
         return $this->organizer_id;
     }

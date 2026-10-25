@@ -149,9 +149,9 @@ class PartialUpdateOrganizerSettingsRequestTest extends TestCase
                 'upcoming_heading' => 'What is on',
                 'about_text' => 'We support the school.',
                 'team_heading' => 'Our team',
-                'team_members' => [['name' => 'Ana'], ['name' => 'Ben', 'image_id' => 12]],
+                'team_members' => [['name' => 'Ana', 'role' => 'Chair'], ['name' => 'Ben', 'image_id' => 12]],
                 'technical_team_heading' => 'Technical Team',
-                'technical_team_members' => [['name' => 'Guru Pandit']],
+                'technical_team_members' => [['name' => 'Sam Lee', 'role' => 'Technical contact']],
                 'contact_heading' => 'Get in touch',
                 'contact_intro' => 'Say hello.',
                 'contact_email' => 'pta@example.com',
@@ -169,7 +169,7 @@ class PartialUpdateOrganizerSettingsRequestTest extends TestCase
                 'contact_email' => 'not-an-email',
                 'instagram_handle' => '@bad handle',
                 'team_members' => array_fill(0, 13, ['name' => 'Name']),
-                'technical_team_members' => [['name' => '']],
+                'technical_team_members' => [['name' => '', 'role' => str_repeat('r', 101)]],
             ],
         ], PartialUpdateOrganizerSettingsRequest::rules());
 
@@ -177,5 +177,6 @@ class PartialUpdateOrganizerSettingsRequestTest extends TestCase
         $this->assertTrue($validator->errors()->has('homepage_theme_settings.instagram_handle'));
         $this->assertTrue($validator->errors()->has('homepage_theme_settings.team_members'));
         $this->assertTrue($validator->errors()->has('homepage_theme_settings.technical_team_members.0.name'));
+        $this->assertTrue($validator->errors()->has('homepage_theme_settings.technical_team_members.0.role'));
     }
 }

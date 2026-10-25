@@ -128,8 +128,9 @@ export const PublicParentalConsent = () => {
         eventsData?: GenericPaginatedResponse<Event>;
         isPastEvents: boolean;
     };
-    const {organizerId, token} = useParams();
-    const {data: details, isLoading, isError} = useGetParentalConsent(organizerId as string, token as string);
+    const {token} = useParams();
+    const organizerId = String(loaderData?.organizer?.id ?? '');
+    const {data: details, isLoading, isError} = useGetParentalConsent(organizerId, token as string);
 
     if (!loaderData?.organizer) {
         return <OrganizerNotFound/>;
@@ -145,7 +146,7 @@ export const PublicParentalConsent = () => {
                         <p className={classes.text}>{t`Please check the link in the email we sent you.`}</p>
                     </>
                 )}
-                {details && <ConsentBody details={details} organizerId={organizerId as string} token={token as string}/>}
+                {details && <ConsentBody details={details} organizerId={organizerId} token={token as string}/>}
             </div>
         </OrganizerPageShell>
     );

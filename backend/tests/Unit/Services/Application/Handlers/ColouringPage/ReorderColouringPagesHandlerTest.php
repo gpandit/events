@@ -30,9 +30,9 @@ class ReorderColouringPagesHandlerTest extends TestCase
 
     public function test_handle_stores_the_position_of_each_page(): void
     {
-        $this->repository->shouldReceive('findWhereIn')
+        $this->repository->shouldReceive('findOwnedPages')
             ->once()
-            ->with('id', [3, 1, 2], ['organizer_id' => 10])
+            ->with([3, 1, 2], 10)
             ->andReturn(new Collection([new ColouringPageDomainObject, new ColouringPageDomainObject, new ColouringPageDomainObject]));
         $this->databaseManager->shouldReceive('transaction')->once()->andReturnUsing(fn (callable $callback) => $callback());
         $this->repository->shouldReceive('updateFromArray')->once()->with(3, ['sort_order' => 0]);
@@ -44,10 +44,25 @@ class ReorderColouringPagesHandlerTest extends TestCase
         $this->addToAssertionCount(1);
     }
 
+    public function test_handle_reorders_shared_pages_when_no_organizer_is_given(): void
+    {
+        $this->repository->shouldReceive('findOwnedPages')
+            ->once()
+            ->with([2, 1], null)
+            ->andReturn(new Collection([new ColouringPageDomainObject, new ColouringPageDomainObject]));
+        $this->databaseManager->shouldReceive('transaction')->once()->andReturnUsing(fn (callable $callback) => $callback());
+        $this->repository->shouldReceive('updateFromArray')->twice();
+
+        $this->handler->handle(null, [2, 1]);
+
+        $this->addToAssertionCount(1);
+    }
+
     public function test_handle_throws_when_a_page_belongs_to_another_organizer(): void
     {
-        $this->repository->shouldReceive('findWhereIn')
+        $this->repository->shouldReceive('findOwnedPages')
             ->once()
+            ->with([1, 2], 10)
             ->andReturn(new Collection([new ColouringPageDomainObject]));
         $this->databaseManager->shouldNotReceive('transaction');
         $this->repository->shouldNotReceive('updateFromArray');

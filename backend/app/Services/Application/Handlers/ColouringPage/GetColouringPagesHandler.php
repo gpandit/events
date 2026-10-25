@@ -20,7 +20,7 @@ class GetColouringPagesHandler
      */
     public function handle(int $organizerId, bool $publishedOnly = false): Collection
     {
-        return $this->repository->findByOrganizerId(
+        return $this->repository->findVisibleToOrganizer(
             $organizerId,
             $publishedOnly ? ColouringPageStatus::PUBLISHED->value : null,
         );

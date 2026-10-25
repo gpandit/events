@@ -1,4 +1,4 @@
-import {IconUsers, IconBuildingBank, IconLayoutDashboard, IconCalendar, IconReceipt, IconSettings, IconChartBar, IconAlertTriangle, IconFlag, IconMail, IconSpeakerphone, IconTrash, IconToggleRight, IconLicense} from "@tabler/icons-react";
+import {IconUsers, IconBuildingBank, IconLayoutDashboard, IconCalendar, IconReceipt, IconSettings, IconChartBar, IconAlertTriangle, IconFlag, IconMail, IconSpeakerphone, IconTrash, IconToggleRight, IconLicense, IconPalette} from "@tabler/icons-react";
 import {t} from "@lingui/macro";
 import {NavItem, BreadcrumbItem} from "../AppLayout/types";
 import AppLayout from "../AppLayout";
@@ -24,6 +24,7 @@ const AdminLayout = () => {
         {link: 'deletion-requests', label: t`Deletion Requests`, icon: IconTrash},
         {link: 'failed-jobs', label: t`Failed Jobs`, icon: IconAlertTriangle},
         {link: 'configurations', label: t`Configurations`, icon: IconSettings},
+        {link: 'colouring-pages', label: t`Colouring Pages`, icon: IconPalette},
         {link: 'feature-flags', label: t`Feature Flags`, icon: IconToggleRight, showWhen: () => !!featureFlags?.data?.length},
         {link: 'licence', label: t`Licence`, icon: IconLicense},
     ];

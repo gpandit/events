@@ -87,6 +87,7 @@ export interface ColorTheme {
 
 export interface TeamMember {
     name: string;
+    role?: string;
     image_id?: IdParam;
 }
 
@@ -913,7 +914,8 @@ export type ColouringPageStatus = 'DRAFT' | 'PUBLISHED';
 
 export interface ColouringPage {
     id: number;
-    organizer_id: number;
+    organizer_id: number | null;
+    is_shared: boolean;
     title: string;
     age_group: ColouringPageAgeGroup;
     tint: ColouringPageTint;
