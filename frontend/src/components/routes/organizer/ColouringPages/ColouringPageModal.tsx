@@ -56,6 +56,7 @@ export const ColouringPageModal = ({organizerId, page, onClose}: ColouringPageMo
     useEffect(() => {
         setColourByNumber(null);
         if (!wantsColourByNumber || !sourcePdf) {
+            setIsConverting(false);
             return;
         }
 

@@ -2,6 +2,7 @@ import {PaletteColour} from './colours.ts';
 import {Region, toGrayscale} from './regions.ts';
 
 const KEY_STRIP_SHARE = 0.14;
+const KEY_STRIP_MIN_UNIT_SHARE = 0.17;
 const ARTWORK_MARGIN = 0.03;
 const CROP_THRESHOLD = 245;
 const TEXT_COLOUR = 'rgb(60, 60, 60)';
@@ -122,8 +123,9 @@ export const composeWithKey = (
     context.fillStyle = PAGE_COLOUR;
     context.fillRect(0, 0, width, height);
 
+    const unit = Math.min(width, height);
     const bounds = findContentBounds(artwork);
-    const stripHeight = height * KEY_STRIP_SHARE;
+    const stripHeight = Math.max(height * KEY_STRIP_SHARE, unit * KEY_STRIP_MIN_UNIT_SHARE);
     const availableWidth = width * (1 - 2 * ARTWORK_MARGIN);
     const availableHeight = height - stripHeight - height * ARTWORK_MARGIN;
     const ratio = Math.min(availableWidth / bounds.width, availableHeight / bounds.height);
@@ -137,11 +139,11 @@ export const composeWithKey = (
     context.textAlign = 'center';
     context.textBaseline = 'middle';
     context.fillStyle = TEXT_COLOUR;
-    context.font = boldFont(Math.round(width * 0.026));
+    context.font = boldFont(Math.round(unit * 0.026));
     context.fillText(title, width / 2, stripTop + height * 0.012);
 
     const slot = (width * 0.88) / Math.max(usedColours.length, 1);
-    const radius = Math.min(slot * 0.34, width * 0.04);
+    const radius = Math.min(slot * 0.34, unit * 0.04);
     const left = (width - slot * usedColours.length) / 2;
 
     usedColours.forEach((colourIndex, position) => {
@@ -159,11 +161,11 @@ export const composeWithKey = (
 
         const luminance = 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2];
         context.fillStyle = luminance < 150 ? LIGHT_LABEL_COLOUR : DARK_LABEL_COLOUR;
-        context.font = boldFont(Math.round(width * 0.03));
+        context.font = boldFont(Math.round(unit * 0.03));
         context.fillText(String(colourIndex + 1), x, y);
 
         context.fillStyle = TEXT_COLOUR;
-        context.font = boldFont(Math.round(width * 0.021));
+        context.font = boldFont(Math.round(unit * 0.021));
         context.fillText(name, x, y + radius + height * 0.014);
     });
 
