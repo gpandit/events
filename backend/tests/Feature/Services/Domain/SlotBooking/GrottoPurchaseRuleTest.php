@@ -40,7 +40,7 @@ class GrottoPurchaseRuleTest extends TestCase
             'event_id' => $this->ticketEventId, 'name' => 'Tickets', 'is_hidden' => false, 'order' => 1,
             'created_at' => now(), 'updated_at' => now(),
         ]);
-        $this->grottoProductId = $this->insertProductRow($category, 'Grotto', 'GENERAL');
+        $this->grottoProductId = $this->insertProductRow($category, 'Grotto', 'TICKET');
         $this->childProductId = $this->insertProductRow($category, 'Child', 'TICKET');
 
         $this->childPriceId = DB::table('product_prices')->insertGetId([

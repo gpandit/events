@@ -153,8 +153,16 @@ class SlotGeneratorService
         $productIds = array_merge([$dto->grotto_product_id], $childProductIds);
 
         foreach ($productIds as $productId) {
-            if ($productId === null || $this->productRepository->findFirstWhere(['id' => $productId, 'event_id' => $ticketEvent->getId()]) === null) {
+            $product = $productId === null
+                ? null
+                : $this->productRepository->findFirstWhere(['id' => $productId, 'event_id' => $ticketEvent->getId()]);
+
+            if ($product === null) {
                 throw new InvalidSlotConfigurationException(__('The Grotto and child products must belong to the ticket event'));
+            }
+
+            if ($productId === $dto->grotto_product_id && $product->getProductType() !== ProductType::TICKET->name) {
+                throw new InvalidSlotConfigurationException(__('The Grotto add-on must be a Ticket product so each child is recorded'));
             }
         }
 

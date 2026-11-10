@@ -75,7 +75,7 @@ class GrottoGatedBookingTest extends TestCase
         ]);
         $this->grottoProductId = DB::table('products')->insertGetId([
             'event_id' => $this->ticketEventId, 'product_category_id' => $category, 'title' => 'Grotto', 'type' => 'TIERED',
-            'product_type' => 'GENERAL', 'order' => 1, 'created_at' => now(), 'updated_at' => now(),
+            'product_type' => 'TICKET', 'order' => 1, 'created_at' => now(), 'updated_at' => now(),
         ]);
         $this->childProductId = DB::table('products')->insertGetId([
             'event_id' => $this->ticketEventId, 'product_category_id' => $category, 'title' => 'Child', 'type' => 'PAID',

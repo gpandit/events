@@ -110,7 +110,7 @@ class SlotGeneratorServiceTest extends TestCase
         ]);
         $grotto = DB::table('products')->insertGetId([
             'event_id' => $ticketEventId, 'product_category_id' => $category, 'title' => 'Grotto', 'type' => 'TIERED',
-            'product_type' => 'GENERAL', 'order' => 1, 'created_at' => now(), 'updated_at' => now(),
+            'product_type' => 'TICKET', 'order' => 1, 'created_at' => now(), 'updated_at' => now(),
         ]);
         $child = DB::table('products')->insertGetId([
             'event_id' => $ticketEventId, 'product_category_id' => $category, 'title' => 'Child', 'type' => 'PAID',
@@ -149,5 +149,15 @@ class SlotGeneratorServiceTest extends TestCase
         $this->expectException(InvalidSlotConfigurationException::class);
 
         $this->generate(['ticket_event_id' => $otherEvent, 'grotto_product_id' => $grotto, 'child_product_ids' => [$grotto]]);
+    }
+
+    public function test_linked_mode_rejects_a_grotto_product_that_is_not_a_ticket(): void
+    {
+        [$ticketEventId, $grotto, $child] = $this->insertTicketEventWithGrotto();
+        DB::table('products')->where('id', $grotto)->update(['product_type' => 'GENERAL']);
+
+        $this->expectException(InvalidSlotConfigurationException::class);
+
+        $this->generate(['ticket_event_id' => $ticketEventId, 'grotto_product_id' => $grotto, 'child_product_ids' => [$child]]);
     }
 }
