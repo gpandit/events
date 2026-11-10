@@ -111,7 +111,7 @@ class WaitlistEntryRepository extends BaseRepository implements WaitlistEntryRep
     /**
      * @return Collection<int, WaitlistEntryDomainObject>
      */
-    public function getNextWaitingEntries(int $productPriceId, ?int $limit = null, ?int $eventOccurrenceId = null): Collection
+    public function getNextWaitingEntries(int $productPriceId, ?int $limit = null, ?int $eventOccurrenceId = null, bool $includeUnassigned = false): Collection
     {
         $query = WaitlistEntry::query()
             ->where('product_price_id', $productPriceId)
@@ -120,7 +120,7 @@ class WaitlistEntryRepository extends BaseRepository implements WaitlistEntryRep
             ->orderBy('created_at')
             ->orderBy('id');
 
-        $this->applyOccurrenceScope($query, $eventOccurrenceId);
+        $this->applyOccurrenceScope($query, $eventOccurrenceId, $includeUnassigned);
 
         if ($limit !== null) {
             $query->limit($limit);
@@ -205,9 +205,17 @@ class WaitlistEntryRepository extends BaseRepository implements WaitlistEntryRep
             );
     }
 
-    private function applyOccurrenceScope($query, ?int $eventOccurrenceId): void
+    private function applyOccurrenceScope($query, ?int $eventOccurrenceId, bool $includeUnassigned = false): void
     {
         if ($eventOccurrenceId === null) {
+            return;
+        }
+
+        if ($includeUnassigned) {
+            $query->where(fn ($inner) => $inner
+                ->where('event_occurrence_id', $eventOccurrenceId)
+                ->orWhereNull('event_occurrence_id'));
+
             return;
         }
 

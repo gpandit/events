@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Feature\Http\Actions\SlotBooking;
 
 use HiEvents\DomainObjects\Status\EventStatus;
+use HiEvents\Models\User;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Services\Application\Handlers\EventOccurrence\DTO\GenerateSlotsDTO;
 use HiEvents\Services\Domain\EventOccurrence\SlotGeneratorService;
@@ -12,6 +13,7 @@ use HiEvents\Services\Domain\ProductCategory\CreateProductCategoryService;
 use HiEvents\Services\Domain\TicketLookup\TicketLookupTokenService;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
+use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 use Tests\Feature\Support\InsertsRecurringEventRows;
 use Tests\TestCase;
 
@@ -95,5 +97,53 @@ class BookSlotActionPublicTest extends TestCase
 
         $this->postJson($url, $this->payload(), $headers)->assertStatus(201);
         $this->postJson($url, $this->payload(['event_occurrence_id' => $secondSlot]), $headers)->assertStatus(409);
+    }
+
+    public function test_waitlist_requires_login(): void
+    {
+        $this->postJson("/public/events/{$this->eventId}/slot-waitlist")->assertStatus(401);
+    }
+
+    public function test_waitlist_is_closed_while_a_slot_has_room(): void
+    {
+        $this->postJson("/public/events/{$this->eventId}/slot-waitlist", [], ['X-Customer-Token' => $this->token])
+            ->assertStatus(409);
+    }
+
+    public function test_waitlist_opens_once_every_slot_is_full(): void
+    {
+        DB::table('event_occurrences')->where('event_id', $this->eventId)->update(['used_capacity' => 2]);
+
+        $this->postJson("/public/events/{$this->eventId}/slot-waitlist", [], ['X-Customer-Token' => $this->token])
+            ->assertStatus(201);
+
+        $this->assertSame(1, DB::table('waitlist_entries')->where('event_id', $this->eventId)->whereNull('event_occurrence_id')->count());
+    }
+
+    public function test_staff_can_book_a_family_without_an_email_or_a_customer_token(): void
+    {
+        $staffToken = JWTAuth::claims(['account_id' => $this->accountId])->fromUser(User::find($this->userId));
+        $this->app['auth']->forgetGuards();
+
+        $this->withHeader('Authorization', 'Bearer '.$staffToken)
+            ->postJson("/events/{$this->eventId}/slot-bookings", [
+                'event_occurrence_id' => $this->slotId,
+                'parent_first_name' => 'Walk',
+                'parent_last_name' => 'In',
+                'children' => [['first_name' => 'Ella']],
+            ])
+            ->assertStatus(201);
+
+        $this->assertSame(1, DB::table('attendees')->where('event_id', $this->eventId)->where('first_name', 'Ella')->count());
+    }
+
+    public function test_staff_booking_requires_authentication(): void
+    {
+        $this->postJson("/events/{$this->eventId}/slot-bookings", [
+            'event_occurrence_id' => $this->slotId,
+            'parent_first_name' => 'Walk',
+            'parent_last_name' => 'In',
+            'children' => [['first_name' => 'Ella']],
+        ])->assertStatus(401);
     }
 }

@@ -153,7 +153,7 @@ class SlotGeneratorService
                 ->setShowQuantityRemaining(false)
                 ->setIsHiddenWithoutPromoCode(false)
                 ->setIsHighlighted(false)
-                ->setWaitlistEnabled(false)
+                ->setWaitlistEnabled(true)
                 ->setIsAddonOnly(false)
                 ->setProductPrices(collect([$price])),
             accountId: $dto->account_id,

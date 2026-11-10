@@ -232,6 +232,8 @@ use HiEvents\Http\Actions\Orders\Public\AbandonOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\CompleteOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\CreateOrderActionPublic;
 use HiEvents\Http\Actions\SlotBooking\BookSlotActionPublic;
+use HiEvents\Http\Actions\SlotBooking\JoinSlotWaitlistActionPublic;
+use HiEvents\Http\Actions\SlotBooking\StaffBookFamilyAction;
 use HiEvents\Http\Actions\Orders\Public\DownloadOrderInvoicePublicAction;
 use HiEvents\Http\Actions\Orders\Public\GetOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\GetPaymentProcessingFeeActionPublic;
@@ -670,6 +672,7 @@ $router->middleware(['auth:api'])->group(
         // Event Occurrences
         $router->post('/events/{event_id}/occurrences/generate', GenerateOccurrencesAction::class);
         $router->post('/events/{event_id}/occurrences/generate-slots', GenerateSlotsAction::class);
+        $router->post('/events/{event_id}/slot-bookings', StaffBookFamilyAction::class);
         $router->get('/events/{event_id}/occurrences/generate/status', GetOccurrenceGenerationStatusAction::class);
         $router->post('/events/{event_id}/occurrences/bulk-update', BulkUpdateOccurrencesAction::class);
         $router->post('/events/{event_id}/occurrences', CreateEventOccurrenceAction::class);
@@ -856,6 +859,8 @@ $router->prefix('/public')->group(
         // Waitlist
         $router->post('/events/{event_id}/slot-bookings', BookSlotActionPublic::class)
             ->middleware('throttle:10,1,public-slot-book');
+        $router->post('/events/{event_id}/slot-waitlist', JoinSlotWaitlistActionPublic::class)
+            ->middleware('throttle:10,1,public-slot-waitlist');
         $router->post('/events/{event_id}/waitlist', CreateWaitlistEntryActionPublic::class)
             ->middleware('throttle:10,1,public-waitlist');
         $router->delete('/events/{event_id}/waitlist/{token}', CancelWaitlistEntryActionPublic::class)

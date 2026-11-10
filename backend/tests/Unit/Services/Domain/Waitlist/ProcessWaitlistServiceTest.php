@@ -21,6 +21,7 @@ use HiEvents\Jobs\Waitlist\SendWaitlistOfferEmailJob;
 use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductPriceRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductRepositoryInterface;
+use HiEvents\Repository\Interfaces\SlotBookingConfigRepositoryInterface;
 use HiEvents\Repository\Interfaces\WaitlistEntryRepositoryInterface;
 use HiEvents\Services\Domain\EventOccurrence\OccurrencePurchaseEligibilityService;
 use HiEvents\Services\Domain\Order\DTO\ProcessedOrderItemDTO;
@@ -135,6 +136,7 @@ class ProcessWaitlistServiceTest extends TestCase
             eligibilityService: $this->eligibilityService,
             seatedProductLookup: $this->seatedProductLookup,
             transactionLockService: new TransactionLockService($this->databaseManager),
+            slotBookingConfigRepository: Mockery::mock(SlotBookingConfigRepositoryInterface::class)->shouldReceive('findFirstWhere')->andReturnNull()->byDefault()->getMock(),
         );
     }
 
