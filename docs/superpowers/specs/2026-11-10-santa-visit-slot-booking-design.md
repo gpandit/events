@@ -64,6 +64,20 @@ Staff action on a recurring event: "Generate time slots".
 
 QR tickets scan into the existing check-in list; no new work.
 
+### 7. Grotto as a paid child add-on (supersedes the free-ticket assumption)
+
+- The slot event stays separate from the general admission (GA) event. A slot booking is unlocked by buying the **Grotto add-on** on the GA event.
+- Config: `slot_booking_configs` gains nullable `ticket_event_id` (GA event), `grotto_product_id` (the paid add-on on the GA event, tiered: "Grotto + photo", "Grotto + photo magnet") and `child_product_ids` (GA child ticket products). When `ticket_event_id` is null the event stays in free mode (current behaviour).
+- Child only: the add-on is linked as an add-on of the child ticket(s) only.
+- Purchase flows:
+  - Same checkout: the add-on appears under the child ticket (existing add-on UI). Grotto quantity may not exceed the child tickets in the order plus child tickets held in the customer's earlier completed GA orders, minus Grotto tickets already bought.
+  - Later: a signed-in customer holding completed child-ticket orders buys the add-on alone in a new order. Order validation accepts the add-on without a parent in the same order when a valid `X-Customer-Token` proves enough unused child tickets (matched by order email).
+- Entitlement = Grotto attendees in the customer's completed GA orders (email match). A slot booking may not have more children than purchased Grotto tickets.
+- Photo option: the slot product has the same two price labels (free). Each child in a slot booking takes the tier they bought, magnets first, so the check-in list and ticket show photo or magnet.
+- Waitlist: joining also requires at least one purchased Grotto ticket.
+- Staff booking is not gated by a purchase.
+- One visit: one active slot per customer (siblings share it), as in section 3.
+
 ## Error handling
 
 - Slot full at confirm time: error, nothing changes (replace flow keeps old booking).
@@ -80,4 +94,4 @@ QR tickets scan into the existing check-in list; no new work.
 
 ## Out of scope
 
-Payments, per-slot waitlists, SMS reminders, multiple slots per booking, and group/sibling booking across slots.
+Taking payment for the Grotto in the slot flow itself (payment happens on the GA event), per-slot waitlists, SMS reminders, multiple slots per booking, and group/sibling booking across slots.
