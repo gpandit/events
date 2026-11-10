@@ -1,10 +1,10 @@
 import {FormEvent, useEffect, useState} from "react";
-import {useLoaderData, useParams} from "react-router";
+import {useLoaderData, useNavigate, useParams} from "react-router";
 import {useQuery} from "@tanstack/react-query";
 import {t} from "@lingui/macro";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
-import {Event, EventOccurrence, GenericPaginatedResponse, Organizer, SlotChild} from "../../../types.ts";
+import {Event, EventOccurrence, GenericPaginatedResponse, Organizer, SlotChild, SlotEntitlement} from "../../../types.ts";
 import {OrganizerPageShell} from "../OrganizerHomepage/OrganizerPageShell";
 import {OrganizerNotFound} from "../PublicOrganizer/OrganizerNotFound";
 import {useGetEventPublic} from "../../../queries/useGetEventPublic.ts";
@@ -12,6 +12,9 @@ import {eventOccurrenceClientPublic} from "../../../api/event-occurrence.client.
 import {useLoginCustomer} from "../../../mutations/useLoginCustomer.ts";
 import {useBookSlot} from "../../../mutations/useBookSlot.ts";
 import {useJoinSlotWaitlist} from "../../../mutations/useJoinSlotWaitlist.ts";
+import {useBuyGrotto} from "../../../mutations/useBuyGrotto.ts";
+import {useGetSlotEntitlement} from "../../../queries/useGetSlotEntitlement.ts";
+import {formatCurrency} from "../../../utilites/currency.ts";
 import {formatDateWithLocale} from "../../../utilites/dates.ts";
 import classes from "./PublicSantaVisit.module.scss";
 
@@ -94,9 +97,76 @@ const SignIn = ({organizerId, onSignedIn}: { organizerId: string; onSignedIn: (t
     );
 };
 
+const BuyGrotto = ({entitlement, event, token}: { entitlement: SlotEntitlement; event: Event; token: string }) => {
+    const navigate = useNavigate();
+    const buyMutation = useBuyGrotto(entitlement.ticket_event_id as number, token);
+    const prices = entitlement.grotto_prices ?? [];
+    const remaining = entitlement.remaining_purchasable ?? 0;
+    const [quantities, setQuantities] = useState<Record<number, number>>({});
+    const [error, setError] = useState<string | null>(null);
+    const total = Object.values(quantities).reduce((sum, quantity) => sum + quantity, 0);
+
+    const setQuantity = (priceId: number, value: number) => {
+        const others = total - (quantities[priceId] ?? 0);
+        setQuantities({...quantities, [priceId]: Math.max(0, Math.min(value, remaining - others))});
+    };
+
+    const checkout = () => {
+        setError(null);
+        buyMutation.mutate({
+            grottoProductId: entitlement.grotto_product_id as number,
+            quantities: prices
+                .filter((price) => (quantities[price.id] ?? 0) > 0)
+                .map((price) => ({price_id: price.id, quantity: quantities[price.id]})),
+        }, {
+            onSuccess: (order) => navigate(`/checkout/${entitlement.ticket_event_id}/${order.short_id}/details`),
+            onError: (err: any) => setError(errorText(err)),
+        });
+    };
+
+    if (remaining <= 0) {
+        return (
+            <p className={classes.text} data-testid="santa-visit-no-child-tickets">
+                {t`Grotto tickets are for children. Buy a child ticket first, then come back to add a Grotto visit.`}
+            </p>
+        );
+    }
+
+    return (
+        <div className={classes.notice} data-testid="santa-visit-buy">
+            <h2 className={classes.title}>{t`Add Grotto tickets`}</h2>
+            <p className={classes.text}>{t`You can add up to ${remaining} Grotto ticket(s), one per child ticket.`}</p>
+            {prices.map((price) => (
+                <label key={price.id} className={classes.field}>
+                    {price.label ?? t`Grotto visit`} · {formatCurrency(price.price, event.currency ?? 'GBP')}
+                    <input
+                        type="number"
+                        min={0}
+                        max={remaining}
+                        value={quantities[price.id] ?? 0}
+                        onChange={(e) => setQuantity(price.id, Number(e.target.value))}
+                        data-testid={`santa-visit-buy-price-${price.id}`}
+                    />
+                </label>
+            ))}
+            {error && <p className={classes.error} role="alert">{error}</p>}
+            <button
+                type="button"
+                className={classes.primaryButton}
+                disabled={buyMutation.isPending || total === 0}
+                onClick={checkout}
+                data-testid="santa-visit-buy-checkout"
+            >
+                {t`Continue to checkout`}
+            </button>
+        </div>
+    );
+};
+
 const SlotPicker = ({event, token, onSignedOut}: { event: Event; token: string; onSignedOut: () => void }) => {
     const eventId = event.id as number;
     const timezone = event.timezone ?? 'UTC';
+    const {data: entitlement, isLoading: entitlementLoading, error: entitlementError} = useGetSlotEntitlement(eventId, token);
     const bookMutation = useBookSlot(eventId, token);
     const waitlistMutation = useJoinSlotWaitlist(eventId, token);
     const [selected, setSelected] = useState<EventOccurrence | null>(null);
@@ -119,7 +189,17 @@ const SlotPicker = ({event, token, onSignedOut}: { event: Event; token: string; 
     const slots = (occurrences ?? []).filter((occurrence) => occurrence.is_active && occurrence.is_future);
     const isBookable = (slot: EventOccurrence) => (slot.available_capacity ?? 1) > 0;
     const allFull = slots.length > 0 && slots.every((slot) => !isBookable(slot));
-    const maxChildren = Math.max(1, selected?.available_capacity ?? selected?.capacity ?? 1);
+    const isGated = entitlement?.gated === true;
+    const purchased = entitlement?.purchased ?? 0;
+    const slotLimit = Math.max(1, selected?.available_capacity ?? selected?.capacity ?? 1);
+    const maxChildren = isGated ? Math.max(1, Math.min(slotLimit, purchased)) : slotLimit;
+
+    useEffect(() => {
+        if ((entitlementError as any)?.response?.status === 401) {
+            storeToken(String(event.organizer_id), null);
+            onSignedOut();
+        }
+    }, [entitlementError]);
 
     const handleError = (err: any) => {
         if (err?.response?.status === 401) {
@@ -174,8 +254,17 @@ const SlotPicker = ({event, token, onSignedOut}: { event: Event; token: string; 
         );
     }
 
-    if (isLoading) {
+    if (isLoading || entitlementLoading) {
         return <p className={classes.text}>{t`Loading...`}</p>;
+    }
+
+    if (isGated && purchased === 0) {
+        return (
+            <>
+                <p className={classes.text}>{t`A Grotto ticket is needed to book a visit with Santa.`}</p>
+                {entitlement && <BuyGrotto entitlement={entitlement} event={event} token={token}/>}
+            </>
+        );
     }
 
     if (allFull) {
@@ -198,6 +287,11 @@ const SlotPicker = ({event, token, onSignedOut}: { event: Event; token: string; 
 
     return (
         <>
+            {isGated && (
+                <p className={classes.text} data-testid="santa-visit-ticket-count">
+                    {t`You have ${purchased} Grotto ticket(s).`}
+                </p>
+            )}
             <p className={classes.text}>{t`Choose a time for your visit.`}</p>
             <div className={classes.slotGrid}>
                 {slots.map((slot) => (
@@ -265,6 +359,9 @@ const SlotPicker = ({event, token, onSignedOut}: { event: Event; token: string; 
                         )}
                     </div>
                 </>
+            )}
+            {isGated && (entitlement?.remaining_purchasable ?? 0) > 0 && entitlement && (
+                <BuyGrotto entitlement={entitlement} event={event} token={token}/>
             )}
         </>
     );

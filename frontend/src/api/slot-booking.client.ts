@@ -1,6 +1,6 @@
 import {api} from "./client";
 import {publicApi} from "./public-client";
-import {BookSlotRequest, GenerateSlotsRequest, IdParam, StaffBookFamilyRequest} from "../types";
+import {BookSlotRequest, GenerateSlotsRequest, GenericDataResponse, IdParam, Order, SlotEntitlement, StaffBookFamilyRequest} from "../types";
 
 const CUSTOMER_TOKEN_HEADER = 'X-Customer-Token';
 
@@ -22,6 +22,30 @@ export const slotBookingClientPublic = {
             headers: {[CUSTOMER_TOKEN_HEADER]: customerToken},
         });
         return response.data;
+    },
+
+    entitlement: async (eventId: IdParam, customerToken: string) => {
+        const response = await publicApi.get<GenericDataResponse<SlotEntitlement>>(`events/${eventId}/slot-entitlement`, {
+            headers: {[CUSTOMER_TOKEN_HEADER]: customerToken},
+        });
+        return response.data.data;
+    },
+
+    buyGrotto: async (
+        ticketEventId: IdParam,
+        customerToken: string,
+        grottoProductId: IdParam,
+        quantities: { price_id: number; quantity: number }[],
+    ) => {
+        const response = await publicApi.post<GenericDataResponse<Order>>(
+            `events/${ticketEventId}/order`,
+            {
+                products: [{product_id: grottoProductId, quantities}],
+                promo_code: null,
+            },
+            {headers: {[CUSTOMER_TOKEN_HEADER]: customerToken}},
+        );
+        return response.data.data;
     },
 
     joinWaitlist: async (eventId: IdParam, customerToken: string) => {
