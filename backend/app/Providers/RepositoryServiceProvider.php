@@ -80,6 +80,7 @@ use HiEvents\Repository\Eloquent\WaitlistEntryRepository;
 use HiEvents\Repository\Eloquent\WebhookLogRepository;
 use HiEvents\Repository\Eloquent\WebhookRepository;
 use HiEvents\Repository\Eloquent\CustomerRepository;
+use HiEvents\Repository\Eloquent\SlotBookingConfigRepository;
 use HiEvents\Repository\Eloquent\DataErasureRequestRepository;
 use HiEvents\Repository\Eloquent\ParentalConsentRepository;
 use HiEvents\Repository\Eloquent\PasswordSetupTokenRepository;
@@ -150,6 +151,7 @@ use HiEvents\Repository\Interfaces\WaitlistEntryRepositoryInterface;
 use HiEvents\Repository\Interfaces\WebhookLogRepositoryInterface;
 use HiEvents\Repository\Interfaces\WebhookRepositoryInterface;
 use HiEvents\Repository\Interfaces\CustomerRepositoryInterface;
+use HiEvents\Repository\Interfaces\SlotBookingConfigRepositoryInterface;
 use HiEvents\Repository\Interfaces\DataErasureRequestRepositoryInterface;
 use HiEvents\Repository\Interfaces\ParentalConsentRepositoryInterface;
 use HiEvents\Repository\Interfaces\PasswordSetupTokenRepositoryInterface;
@@ -200,6 +202,7 @@ class RepositoryServiceProvider extends ServiceProvider
         QuizResultRepositoryInterface::class => QuizResultRepository::class,
         QuizPlayerRepositoryInterface::class => QuizPlayerRepository::class,
         CustomerRepositoryInterface::class => CustomerRepository::class,
+        SlotBookingConfigRepositoryInterface::class => SlotBookingConfigRepository::class,
         DataErasureRequestRepositoryInterface::class => DataErasureRequestRepository::class,
         ParentalConsentRepositoryInterface::class => ParentalConsentRepository::class,
         PasswordSetupTokenRepositoryInterface::class => PasswordSetupTokenRepository::class,

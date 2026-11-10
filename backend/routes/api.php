@@ -168,6 +168,7 @@ use HiEvents\Http\Actions\EventOccurrences\CreateEventOccurrenceAction;
 use HiEvents\Http\Actions\EventOccurrences\DeleteEventOccurrenceAction;
 use HiEvents\Http\Actions\EventOccurrences\DeletePriceOverrideAction;
 use HiEvents\Http\Actions\EventOccurrences\GenerateOccurrencesAction;
+use HiEvents\Http\Actions\EventOccurrences\GenerateSlotsAction;
 use HiEvents\Http\Actions\EventOccurrences\GetEventOccurrenceAction;
 use HiEvents\Http\Actions\EventOccurrences\GetEventOccurrencesAction;
 use HiEvents\Http\Actions\EventOccurrences\GetEventOccurrencesPublicAction;
@@ -667,6 +668,7 @@ $router->middleware(['auth:api'])->group(
 
         // Event Occurrences
         $router->post('/events/{event_id}/occurrences/generate', GenerateOccurrencesAction::class);
+        $router->post('/events/{event_id}/occurrences/generate-slots', GenerateSlotsAction::class);
         $router->get('/events/{event_id}/occurrences/generate/status', GetOccurrenceGenerationStatusAction::class);
         $router->post('/events/{event_id}/occurrences/bulk-update', BulkUpdateOccurrencesAction::class);
         $router->post('/events/{event_id}/occurrences', CreateEventOccurrenceAction::class);
