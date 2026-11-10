@@ -56,7 +56,10 @@ class SlotGeneratorService
         return $this->databaseManager->transaction(function () use ($event, $dto, $slots) {
             $this->upsertConfig($event, $dto);
             $this->eventSettingsRepository->updateWhere(
-                attributes: ['attendee_details_collection_method' => AttendeeDetailsCollectionMethod::PER_TICKET->name],
+                attributes: [
+                    'attendee_details_collection_method' => AttendeeDetailsCollectionMethod::PER_TICKET->name,
+                    'show_available_occurrence_capacity' => true,
+                ],
                 where: ['event_id' => $event->getId()],
             );
 

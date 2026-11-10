@@ -1902,3 +1902,30 @@ export interface WaitlistStats {
     expired: number;
     products: WaitlistProductStats[];
 }
+
+export interface SlotChild {
+    first_name: string;
+    last_name?: string;
+}
+
+export interface GenerateSlotsRequest {
+    date: string;
+    start_time: string;
+    end_time: string;
+    slot_minutes: number;
+    children_per_slot: number;
+}
+
+export interface StaffBookFamilyRequest {
+    event_occurrence_id: IdParam;
+    parent_first_name: string;
+    parent_last_name: string;
+    email?: string;
+    children: SlotChild[];
+}
+
+export interface BookSlotRequest {
+    event_occurrence_id: IdParam;
+    children: SlotChild[];
+    replace?: boolean;
+}

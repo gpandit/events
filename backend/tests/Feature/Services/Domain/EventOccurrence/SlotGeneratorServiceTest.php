@@ -75,6 +75,17 @@ class SlotGeneratorServiceTest extends TestCase
         $this->assertSame(2, $product->max_per_order);
     }
 
+    public function test_configures_event_settings_for_named_tickets_and_visible_capacity(): void
+    {
+        DB::table('event_settings')->insert(['event_id' => $this->eventId, 'created_at' => now(), 'updated_at' => now()]);
+
+        $this->generate();
+
+        $settings = DB::table('event_settings')->where('event_id', $this->eventId)->first();
+        $this->assertSame('PER_TICKET', $settings->attendee_details_collection_method);
+        $this->assertTrue((bool) $settings->show_available_occurrence_capacity);
+    }
+
     public function test_running_twice_does_not_duplicate_slots_or_products(): void
     {
         $this->generate();
