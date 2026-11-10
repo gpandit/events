@@ -13,18 +13,24 @@ abstract class SlotBookingConfigDomainObjectAbstract extends \HiEvents\DomainObj
     final public const ID = 'id';
     final public const EVENT_ID = 'event_id';
     final public const PRODUCT_ID = 'product_id';
+    final public const TICKET_EVENT_ID = 'ticket_event_id';
+    final public const GROTTO_PRODUCT_ID = 'grotto_product_id';
     final public const SLOT_MINUTES = 'slot_minutes';
     final public const CHILDREN_PER_SLOT = 'children_per_slot';
     final public const CREATED_AT = 'created_at';
     final public const UPDATED_AT = 'updated_at';
+    final public const CHILD_PRODUCT_IDS = 'child_product_ids';
 
     protected int $id;
     protected int $event_id;
     protected int $product_id;
+    protected ?int $ticket_event_id = null;
+    protected ?int $grotto_product_id = null;
     protected int $slot_minutes;
     protected int $children_per_slot;
     protected ?string $created_at = null;
     protected ?string $updated_at = null;
+    protected array|string|null $child_product_ids = null;
 
     public function toArray(): array
     {
@@ -32,10 +38,13 @@ abstract class SlotBookingConfigDomainObjectAbstract extends \HiEvents\DomainObj
                     'id' => $this->id ?? null,
                     'event_id' => $this->event_id ?? null,
                     'product_id' => $this->product_id ?? null,
+                    'ticket_event_id' => $this->ticket_event_id ?? null,
+                    'grotto_product_id' => $this->grotto_product_id ?? null,
                     'slot_minutes' => $this->slot_minutes ?? null,
                     'children_per_slot' => $this->children_per_slot ?? null,
                     'created_at' => $this->created_at ?? null,
                     'updated_at' => $this->updated_at ?? null,
+                    'child_product_ids' => $this->child_product_ids ?? null,
                 ];
     }
 
@@ -70,6 +79,28 @@ abstract class SlotBookingConfigDomainObjectAbstract extends \HiEvents\DomainObj
     public function getProductId(): int
     {
         return $this->product_id;
+    }
+
+    public function setTicketEventId(?int $ticket_event_id): self
+    {
+        $this->ticket_event_id = $ticket_event_id;
+        return $this;
+    }
+
+    public function getTicketEventId(): ?int
+    {
+        return $this->ticket_event_id;
+    }
+
+    public function setGrottoProductId(?int $grotto_product_id): self
+    {
+        $this->grotto_product_id = $grotto_product_id;
+        return $this;
+    }
+
+    public function getGrottoProductId(): ?int
+    {
+        return $this->grotto_product_id;
     }
 
     public function setSlotMinutes(int $slot_minutes): self
@@ -114,5 +145,16 @@ abstract class SlotBookingConfigDomainObjectAbstract extends \HiEvents\DomainObj
     public function getUpdatedAt(): ?string
     {
         return $this->updated_at;
+    }
+
+    public function setChildProductIds(array|string|null $child_product_ids): self
+    {
+        $this->child_product_ids = $child_product_ids;
+        return $this;
+    }
+
+    public function getChildProductIds(): array|string|null
+    {
+        return $this->child_product_ids;
     }
 }

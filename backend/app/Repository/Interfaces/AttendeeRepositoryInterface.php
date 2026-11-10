@@ -25,6 +25,12 @@ interface AttendeeRepositoryInterface extends RepositoryInterface
     public function getSoldQuantitiesByPriceForOccurrence(int $occurrenceId): array;
 
     /**
+     * @param  list<int>  $productIds
+     * @return list<int> one product price id per active attendee in the email's completed orders
+     */
+    public function getProductPriceIdsForOrderEmail(int $eventId, array $productIds, string $email): array;
+
+    /**
      * @return array<int, int> product_price_id => highest quantity sold on any single occurrence
      */
     public function getMaxSoldPerOccurrenceByPrice(array $productPriceIds): array;

@@ -174,6 +174,23 @@ class AttendeeRepository extends BaseRepository implements AttendeeRepositoryInt
         );
     }
 
+    public function getProductPriceIdsForOrderEmail(int $eventId, array $productIds, string $email): array
+    {
+        return $this->runQuery(fn () => Attendee::query()
+            ->join('orders', 'orders.id', '=', 'attendees.order_id')
+            ->whereNull('attendees.deleted_at')
+            ->whereNull('orders.deleted_at')
+            ->where('attendees.event_id', $eventId)
+            ->whereIn('attendees.product_id', $productIds)
+            ->where('attendees.status', AttendeeStatus::ACTIVE->name)
+            ->where('orders.status', OrderStatus::COMPLETED->name)
+            ->whereRaw('LOWER(orders.email) = ?', [mb_strtolower(trim($email))])
+            ->orderBy('attendees.id')
+            ->pluck('attendees.product_price_id')
+            ->map(fn ($priceId) => (int) $priceId)
+            ->all());
+    }
+
     public function getSoldQuantitiesByPriceForOccurrence(int $occurrenceId): array
     {
         return $this->runQuery(fn () => $this->soldAttendeesQuery()
