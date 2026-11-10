@@ -43,14 +43,24 @@ Staff action on a recurring event: "Generate time slots".
 - Parents can also cancel their slot from their order page (existing self-service cancel), which frees it.
 - Implemented as `ReplaceSantaVisitBookingService` calling the existing order cancel and create services inside `DB::transaction`, under the existing event-level lock ordering.
 
-### 4. Staff booking
+### 4. Event-wide waitlist (logged-in customers only)
+
+- The waitlist belongs to the Santa Visit event as a whole, not to any slot. Entries are created with no occurrence (`event_occurrence_id = null`) on the existing waitlist.
+- A logged-in customer can join only when no slot has room: every non-cancelled future slot is full. If any slot has capacity, the join is rejected and the page shows the slot picker instead of the waitlist button. The server enforces this, not just the UI.
+- Join requires login. Name and email come from the customer account. One waitlist entry per customer per event, and a customer who already holds a booked slot cannot join (they swap via section 3 instead).
+- When a slot frees (parent cancels, swap, staff cancel), the existing `ProcessWaitlistService` offers it to the first waiting entry by email, with an offer link and expiry. Accepting the offer books that slot and takes the customer off the waitlist. An expired or declined offer passes to the next entry.
+- Accepting an offer follows the same one-slot rule and goes through the same transaction and lock as normal booking.
+- Parents can leave the waitlist from the existing cancel link.
+- Staff can see the waitlist and offer manually using the existing organizer waitlist screens.
+
+### 5. Staff booking
 
 - Event dashboard action "Book a family": slot, child name(s), parent name, optional email.
 - Creates a completed free order irrespective of the public sales window; honours capacity under the same lock as parent bookings.
 - Staff are not subject to the one-slot rule, since walk-ups have no account. If an email is given and it matches a customer who already holds a slot, the staff form warns and requires confirmation.
 - If an email is given, the ticket is emailed; otherwise staff open or print the QR from the attendee page.
 
-### 5. Door check-in
+### 6. Door check-in
 
 QR tickets scan into the existing check-in list; no new work.
 
@@ -64,9 +74,10 @@ QR tickets scan into the existing check-in list; no new work.
 
 - Unit: slot arithmetic (defaults, non-dividing window, end before start, idempotent regenerate); replace-booking rules with mocked collaborators.
 - Feature: generator creates 48 occurrences with capacity; unauthenticated booking rejected; second booking without replace rejected; replace swaps atomically and rolls back when target is full; staff booking respects capacity.
-- E2E (Playwright): parent logs in, books a slot, swaps to another, old slot becomes available again.
+- Feature (waitlist): join rejected while any slot has room, allowed when all are full, rejected when the customer already holds a slot or is not logged in; freeing a slot offers it to the first entry; accepting the offer books the slot.
+- E2E (Playwright): parent logs in, books a slot, swaps to another, old slot becomes available again; with all slots full a second parent joins the waitlist and receives an offer when a slot is cancelled.
 - Frontend strings translated for all supported languages.
 
 ## Out of scope
 
-Payments, waitlists, SMS reminders, multiple slots per booking, and group/sibling booking across slots.
+Payments, per-slot waitlists, SMS reminders, multiple slots per booking, and group/sibling booking across slots.
