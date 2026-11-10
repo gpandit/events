@@ -27,6 +27,7 @@ use HiEvents\Services\Domain\Product\AvailableProductQuantitiesFetchService;
 use HiEvents\Services\Domain\Product\DTO\AvailableProductQuantitiesDTO;
 use HiEvents\Services\Domain\Product\DTO\AvailableProductQuantitiesResponseDTO;
 use HiEvents\Services\Domain\Product\ProductPriceService;
+use HiEvents\Services\Domain\SlotBooking\GrottoPurchaseRule;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
@@ -45,13 +46,14 @@ class OrderCreateRequestValidationService
         private readonly OccurrencePurchaseEligibilityService $occurrenceEligibilityService,
         private readonly ProductPriceService $productPriceService,
         private readonly SeatSelectionValidationService $seatSelectionValidationService,
+        private readonly GrottoPurchaseRule $grottoPurchaseRule,
     ) {}
 
     /**
      * @throws ValidationException
      * @throws Exception
      */
-    public function validateRequestData(int $eventId, array $data = []): array
+    public function validateRequestData(int $eventId, array $data = [], ?string $customerEmail = null): array
     {
         $event = $this->eventRepository->findById($eventId);
         $data = $this->normalizeOccurrenceIds($event, $data);
@@ -59,7 +61,8 @@ class OrderCreateRequestValidationService
         $this->validateTypes($data);
         $promoCode = $this->validatePromoCode($eventId, $data);
         $this->validateProductSelection($data);
-        $this->validateAddonProducts($data);
+        $this->validateAddonProducts($data, $this->grottoPurchaseRule->grottoProductIds($eventId));
+        $this->grottoPurchaseRule->assertWithinEntitlement($eventId, $data, $customerEmail);
         $this->validateOccurrence($eventId, $data);
 
         $this->availableProductQuantities = $this->fetchAvailableProductQuantitiesService
@@ -285,7 +288,7 @@ class OrderCreateRequestValidationService
     /**
      * @throws ValidationException
      */
-    private function validateAddonProducts(array $data): void
+    private function validateAddonProducts(array $data, array $grottoProductIds = []): void
     {
         $productLines = collect($data['products']);
 
@@ -297,6 +300,7 @@ class OrderCreateRequestValidationService
 
         $selectedAddonOnlyProducts = $this->getProducts($data)
             ->filter(fn (ProductDomainObject $product) => $product->getIsAddonOnly()
+                && ! in_array($product->getId(), $grottoProductIds, true)
                 && $selectedProductIds->contains($product->getId()));
 
         if ($selectedAddonOnlyProducts->isEmpty()) {

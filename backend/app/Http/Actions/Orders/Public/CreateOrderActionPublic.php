@@ -7,6 +7,7 @@ namespace HiEvents\Http\Actions\Orders\Public;
 use HiEvents\Enterprise\Seating\Exceptions\SeatSelectionInvalidException;
 use HiEvents\Enterprise\Seating\Exceptions\SeatsUnavailableException;
 use HiEvents\Http\Actions\BaseAction;
+use HiEvents\Http\Actions\SlotBooking\BookSlotActionPublic;
 use HiEvents\Http\Request\Order\CreateOrderRequest;
 use HiEvents\Http\ResponseCodes;
 use HiEvents\Resources\Order\OrderResourcePublic;
@@ -14,6 +15,7 @@ use HiEvents\Services\Application\Handlers\Order\CreateOrderHandler;
 use HiEvents\Services\Application\Handlers\Order\DTO\CreateOrderPublicDTO;
 use HiEvents\Services\Application\Handlers\Order\DTO\ProductOrderDetailsDTO;
 use HiEvents\Services\Application\Locale\LocaleService;
+use HiEvents\Services\Domain\Customer\CustomerTokenResolver;
 use HiEvents\Services\Domain\Order\OrderCreateRequestValidationService;
 use HiEvents\Services\Infrastructure\Session\CheckoutSessionManagementService;
 use Illuminate\Http\JsonResponse;
@@ -27,7 +29,7 @@ class CreateOrderActionPublic extends BaseAction
         private readonly OrderCreateRequestValidationService $orderCreateRequestValidationService,
         private readonly CheckoutSessionManagementService $sessionIdentifierService,
         private readonly LocaleService $localeService,
-
+        private readonly CustomerTokenResolver $customerTokenResolver,
     ) {}
 
     /**
@@ -41,7 +43,11 @@ class CreateOrderActionPublic extends BaseAction
      */
     public function __invoke(CreateOrderRequest $request, int $eventId): JsonResponse
     {
-        $validatedData = $this->orderCreateRequestValidationService->validateRequestData($eventId, $request->all());
+        $validatedData = $this->orderCreateRequestValidationService->validateRequestData(
+            $eventId,
+            $request->all(),
+            $this->customerTokenResolver->emailFromToken($request->header(BookSlotActionPublic::CUSTOMER_TOKEN_HEADER)),
+        );
         $sessionId = $this->sessionIdentifierService->getSessionId();
 
         try {

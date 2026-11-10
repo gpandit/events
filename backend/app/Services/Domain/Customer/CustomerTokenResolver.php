@@ -15,6 +15,19 @@ class CustomerTokenResolver
         private readonly CustomerService $customerService,
     ) {}
 
+    public function emailFromToken(?string $token): ?string
+    {
+        if ($token === null || $token === '') {
+            return null;
+        }
+
+        try {
+            return $this->ticketLookupTokenService->findValid($token)->getEmail();
+        } catch (InvalidTicketLookupTokenException) {
+            return null;
+        }
+    }
+
     /**
      * @throws InvalidTicketLookupTokenException
      */
