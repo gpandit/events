@@ -14,6 +14,7 @@ use HiEvents\Services\Domain\ProductCategory\CreateProductCategoryService;
 use HiEvents\Services\Domain\SlotBooking\BookSlotService;
 use HiEvents\Services\Domain\SlotBooking\DTO\BookSlotDTO;
 use HiEvents\Services\Domain\SlotBooking\SlotWaitlistService;
+use HiEvents\Services\Domain\TicketLookup\TicketLookupTokenService;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
@@ -204,5 +205,51 @@ class GrottoGatedBookingTest extends TestCase
         $entry = $this->joinWaitlist('buyer@example.test');
 
         $this->assertNull($entry->getEventOccurrenceId());
+    }
+
+    private function tokenFor(string $email): string
+    {
+        $this->app->make(CustomerService::class)->findOrCreate($this->organizerId, 'Pat', 'Parent', $email);
+
+        return $this->app->make(TicketLookupTokenService::class)->issue($email);
+    }
+
+    public function test_entitlement_endpoint_reports_purchases_and_remaining_child_tickets(): void
+    {
+        $this->purchaseGrotto('buyer@example.test', [$this->photoPriceId]);
+        $this->purchaseChildTickets('buyer@example.test', 3);
+
+        $response = $this->getJson("/public/events/{$this->eventId}/slot-entitlement", ['X-Customer-Token' => $this->tokenFor('buyer@example.test')]);
+
+        $response->assertOk()
+            ->assertJsonPath('data.gated', true)
+            ->assertJsonPath('data.purchased', 1)
+            ->assertJsonPath('data.remaining_purchasable', 2)
+            ->assertJsonPath('data.ticket_event_id', $this->ticketEventId)
+            ->assertJsonPath('data.grotto_prices.1.label', 'Photo magnet');
+    }
+
+    public function test_entitlement_endpoint_requires_login(): void
+    {
+        $this->getJson("/public/events/{$this->eventId}/slot-entitlement")->assertStatus(401);
+    }
+
+    private function purchaseChildTickets(string $email, int $count): void
+    {
+        $orderId = DB::table('orders')->insertGetId([
+            'short_id' => 'ord_'.uniqid(), 'event_id' => $this->ticketEventId, 'currency' => 'USD', 'status' => 'COMPLETED',
+            'email' => $email, 'public_id' => 'PUB_'.uniqid(), 'created_at' => now(), 'updated_at' => now(),
+        ]);
+        $childPriceId = DB::table('product_prices')->insertGetId([
+            'product_id' => $this->childProductId, 'price' => 10, 'created_at' => now(), 'updated_at' => now(),
+        ]);
+
+        for ($i = 0; $i < $count; $i++) {
+            DB::table('attendees')->insert([
+                'short_id' => 'att_'.uniqid(), 'email' => $email, 'order_id' => $orderId, 'product_id' => $this->childProductId,
+                'product_price_id' => $childPriceId, 'event_id' => $this->ticketEventId, 'public_id' => 'ATT_'.uniqid(),
+                'status' => 'ACTIVE', 'created_at' => now(), 'updated_at' => now(),
+            ]);
+        }
     }
 }
