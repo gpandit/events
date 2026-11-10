@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace HiEvents\Services\Domain\EventOccurrence;
 
 use Carbon\CarbonImmutable;
+use HiEvents\DomainObjects\Enums\AttendeeDetailsCollectionMethod;
 use HiEvents\DomainObjects\Enums\ProductPriceType;
 use HiEvents\DomainObjects\Enums\ProductQuantityAppliesTo;
 use HiEvents\DomainObjects\Enums\ProductType;
@@ -19,6 +20,7 @@ use HiEvents\DomainObjects\SlotBookingConfigDomainObject;
 use HiEvents\DomainObjects\Status\EventOccurrenceStatus;
 use HiEvents\Helper\IdHelper;
 use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
+use HiEvents\Repository\Interfaces\EventSettingsRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductCategoryRepositoryInterface;
 use HiEvents\Repository\Interfaces\SlotBookingConfigRepositoryInterface;
 use HiEvents\Services\Application\Handlers\EventOccurrence\DTO\GenerateSlotsDTO;
@@ -32,6 +34,7 @@ class SlotGeneratorService
         private readonly SlotWindowCalculator $calculator,
         private readonly EventOccurrenceRepositoryInterface $occurrenceRepository,
         private readonly SlotBookingConfigRepositoryInterface $configRepository,
+        private readonly EventSettingsRepositoryInterface $eventSettingsRepository,
         private readonly ProductCategoryRepositoryInterface $productCategoryRepository,
         private readonly CreateProductService $createProductService,
         private readonly DatabaseManager $databaseManager,
@@ -52,6 +55,10 @@ class SlotGeneratorService
 
         return $this->databaseManager->transaction(function () use ($event, $dto, $slots) {
             $this->upsertConfig($event, $dto);
+            $this->eventSettingsRepository->updateWhere(
+                attributes: ['attendee_details_collection_method' => AttendeeDetailsCollectionMethod::PER_TICKET->name],
+                where: ['event_id' => $event->getId()],
+            );
 
             $existingStarts = collect($this->occurrenceRepository->findWhere([
                 EventOccurrenceDomainObjectAbstract::EVENT_ID => $event->getId(),

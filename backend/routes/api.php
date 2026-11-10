@@ -231,6 +231,7 @@ use HiEvents\Http\Actions\Orders\Payment\Stripe\GetPaymentIntentActionPublic;
 use HiEvents\Http\Actions\Orders\Public\AbandonOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\CompleteOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\CreateOrderActionPublic;
+use HiEvents\Http\Actions\SlotBooking\BookSlotActionPublic;
 use HiEvents\Http\Actions\Orders\Public\DownloadOrderInvoicePublicAction;
 use HiEvents\Http\Actions\Orders\Public\GetOrderActionPublic;
 use HiEvents\Http\Actions\Orders\Public\GetPaymentProcessingFeeActionPublic;
@@ -853,6 +854,8 @@ $router->prefix('/public')->group(
         $router->get('/events/{event_id}/attendees/{attendee_short_id}', GetAttendeeActionPublic::class);
 
         // Waitlist
+        $router->post('/events/{event_id}/slot-bookings', BookSlotActionPublic::class)
+            ->middleware('throttle:10,1,public-slot-book');
         $router->post('/events/{event_id}/waitlist', CreateWaitlistEntryActionPublic::class)
             ->middleware('throttle:10,1,public-waitlist');
         $router->delete('/events/{event_id}/waitlist/{token}', CancelWaitlistEntryActionPublic::class)
