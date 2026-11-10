@@ -12,6 +12,7 @@ use HiEvents\DomainObjects\Generated\ProductPriceDomainObjectAbstract;
 use HiEvents\DomainObjects\Generated\SlotBookingConfigDomainObjectAbstract;
 use HiEvents\DomainObjects\Status\EventOccurrenceStatus;
 use HiEvents\DomainObjects\WaitlistEntryDomainObject;
+use HiEvents\Exceptions\GrottoNotPurchasedException;
 use HiEvents\Exceptions\ResourceConflictException;
 use HiEvents\Exceptions\SlotAlreadyBookedException;
 use HiEvents\Exceptions\SlotBookingNotEnabledException;
@@ -35,12 +36,14 @@ class SlotWaitlistService
         private readonly ProductPriceRepositoryInterface $productPriceRepository,
         private readonly ActiveSlotBookingFinder $activeBookingFinder,
         private readonly CreateWaitlistEntryService $createWaitlistEntryService,
+        private readonly GrottoEntitlementService $entitlementService,
     ) {}
 
     /**
      * @throws SlotBookingNotEnabledException
      * @throws SlotsStillAvailableException
      * @throws SlotAlreadyBookedException
+     * @throws GrottoNotPurchasedException
      * @throws ResourceConflictException
      */
     public function join(CustomerDomainObject $customer, int $eventId, string $locale): WaitlistEntryDomainObject
@@ -51,6 +54,11 @@ class SlotWaitlistService
 
         if ($config === null) {
             throw new SlotBookingNotEnabledException(__('Slot booking is not enabled for this event'));
+        }
+
+        if ($this->entitlementService->isGated($config)
+            && $this->entitlementService->purchasedPriceIds($config, $customer->getEmail()) === []) {
+            throw new GrottoNotPurchasedException(__('Buy a Grotto ticket to join the waitlist'));
         }
 
         if ($this->hasAvailableSlot($eventId)) {

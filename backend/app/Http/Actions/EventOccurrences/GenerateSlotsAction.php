@@ -42,6 +42,9 @@ class GenerateSlotsAction extends BaseAction
                 end_time: $request->validated('end_time'),
                 slot_minutes: $request->validated('slot_minutes'),
                 children_per_slot: $request->validated('children_per_slot'),
+                ticket_event_id: $request->validated('ticket_event_id'),
+                grotto_product_id: $request->validated('grotto_product_id'),
+                child_product_ids: $request->validated('child_product_ids'),
             ));
         } catch (InvalidSlotConfigurationException $exception) {
             throw ValidationException::withMessages(['slot_minutes' => [$exception->getMessage()]]);

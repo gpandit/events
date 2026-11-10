@@ -101,4 +101,53 @@ class SlotGeneratorServiceTest extends TestCase
 
         $this->generate(['end_time' => '18:07']);
     }
+
+    private function insertTicketEventWithGrotto(): array
+    {
+        $ticketEventId = $this->insertEvent();
+        $category = DB::table('product_categories')->where('event_id', $ticketEventId)->value('id') ?? DB::table('product_categories')->insertGetId([
+            'event_id' => $ticketEventId, 'name' => 'Tickets', 'is_hidden' => false, 'order' => 1, 'created_at' => now(), 'updated_at' => now(),
+        ]);
+        $grotto = DB::table('products')->insertGetId([
+            'event_id' => $ticketEventId, 'product_category_id' => $category, 'title' => 'Grotto', 'type' => 'TIERED',
+            'product_type' => 'GENERAL', 'order' => 1, 'created_at' => now(), 'updated_at' => now(),
+        ]);
+        $child = DB::table('products')->insertGetId([
+            'event_id' => $ticketEventId, 'product_category_id' => $category, 'title' => 'Child', 'type' => 'PAID',
+            'product_type' => 'TICKET', 'order' => 2, 'created_at' => now(), 'updated_at' => now(),
+        ]);
+        foreach ([['Photo', 5], ['Photo magnet', 8]] as [$label, $price]) {
+            DB::table('product_prices')->insert([
+                'product_id' => $grotto, 'label' => $label, 'price' => $price, 'created_at' => now(), 'updated_at' => now(),
+            ]);
+        }
+
+        return [$ticketEventId, $grotto, $child];
+    }
+
+    public function test_linked_mode_mirrors_grotto_price_labels_and_stores_links(): void
+    {
+        [$ticketEventId, $grotto, $child] = $this->insertTicketEventWithGrotto();
+
+        $this->generate(['ticket_event_id' => $ticketEventId, 'grotto_product_id' => $grotto, 'child_product_ids' => [$child]]);
+
+        $config = DB::table('slot_booking_configs')->where('event_id', $this->eventId)->first();
+        $this->assertSame($ticketEventId, (int) $config->ticket_event_id);
+        $this->assertSame($grotto, (int) $config->grotto_product_id);
+        $this->assertSame([$child], json_decode($config->child_product_ids, true));
+
+        $labels = DB::table('product_prices')->where('product_id', $config->product_id)->orderBy('id')->pluck('label')->all();
+        $this->assertSame(['Photo', 'Photo magnet'], $labels);
+        $this->assertSame([0.0, 0.0], DB::table('product_prices')->where('product_id', $config->product_id)->orderBy('id')->pluck('price')->map(fn ($p) => (float) $p)->all());
+    }
+
+    public function test_linked_mode_rejects_products_from_another_event(): void
+    {
+        [$ticketEventId, $grotto] = $this->insertTicketEventWithGrotto();
+        $otherEvent = $this->insertEvent();
+
+        $this->expectException(InvalidSlotConfigurationException::class);
+
+        $this->generate(['ticket_event_id' => $otherEvent, 'grotto_product_id' => $grotto, 'child_product_ids' => [$grotto]]);
+    }
 }

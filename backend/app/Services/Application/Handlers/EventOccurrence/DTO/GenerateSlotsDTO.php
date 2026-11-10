@@ -16,5 +16,8 @@ class GenerateSlotsDTO extends BaseDataObject
         public readonly string $end_time,
         public readonly int $slot_minutes,
         public readonly int $children_per_slot,
+        public readonly ?int $ticket_event_id = null,
+        public readonly ?int $grotto_product_id = null,
+        public readonly ?array $child_product_ids = null,
     ) {}
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace HiEvents\Http\Actions\SlotBooking;
 
+use HiEvents\Exceptions\GrottoNotPurchasedException;
 use HiEvents\Exceptions\InvalidTicketLookupTokenException;
 use HiEvents\Exceptions\SlotAlreadyBookedException;
 use HiEvents\Exceptions\SlotBookingNotEnabledException;
@@ -62,6 +63,8 @@ class BookSlotActionPublic extends BaseAction
             return $this->errorResponse($exception->getMessage(), ResponseCodes::HTTP_UNAUTHORIZED);
         } catch (SlotAlreadyBookedException $exception) {
             return $this->errorResponse($exception->getMessage(), ResponseCodes::HTTP_CONFLICT);
+        } catch (GrottoNotPurchasedException $exception) {
+            return $this->errorResponse($exception->getMessage(), ResponseCodes::HTTP_FORBIDDEN);
         } catch (SlotBookingNotEnabledException $exception) {
             return $this->errorResponse($exception->getMessage(), ResponseCodes::HTTP_NOT_FOUND);
         }

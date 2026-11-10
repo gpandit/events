@@ -46,7 +46,7 @@ class SubmitChildStorySubmissionPublicAction extends BaseAction
             'turnstile_token' => 'nullable|string|max:2048',
         ]);
 
-        if (!$this->turnstileVerifier->verify($data['turnstile_token'] ?? null, $request->ip())) {
+        if (! $this->turnstileVerifier->verify($data['turnstile_token'] ?? null, $request->ip())) {
             throw ValidationException::withMessages([
                 'turnstile_token' => __('Please complete the security check and try again.'),
             ]);

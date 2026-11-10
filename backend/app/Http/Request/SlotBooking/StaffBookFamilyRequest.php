@@ -27,6 +27,7 @@ class StaffBookFamilyRequest extends BaseRequest
             'children' => ['required', 'array', 'min:1', 'max:50'],
             'children.*.first_name' => ['required', 'string', 'max:255'],
             'children.*.last_name' => ['nullable', 'string', 'max:255'],
+            'children.*.price_label' => ['nullable', 'string', 'max:255'],
         ];
     }
 }

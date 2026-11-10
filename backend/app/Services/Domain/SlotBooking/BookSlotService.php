@@ -7,8 +7,10 @@ namespace HiEvents\Services\Domain\SlotBooking;
 use HiEvents\DomainObjects\Generated\ProductPriceDomainObjectAbstract;
 use HiEvents\DomainObjects\Generated\SlotBookingConfigDomainObjectAbstract;
 use HiEvents\DomainObjects\OrderDomainObject;
+use HiEvents\DomainObjects\ProductPriceDomainObject;
 use HiEvents\DomainObjects\SlotBookingConfigDomainObject;
 use HiEvents\Enterprise\Seating\Services\Domain\SeatingEventLockService;
+use HiEvents\Exceptions\GrottoNotPurchasedException;
 use HiEvents\Exceptions\SlotAlreadyBookedException;
 use HiEvents\Exceptions\SlotBookingNotEnabledException;
 use HiEvents\Repository\Interfaces\ProductPriceRepositoryInterface;
@@ -25,6 +27,7 @@ use HiEvents\Services\Domain\Product\DTO\OrderProductPriceDTO;
 use HiEvents\Services\Domain\SlotBooking\DTO\BookSlotDTO;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Throwable;
@@ -41,6 +44,7 @@ class BookSlotService
         private readonly CreateOrderHandler $createOrderHandler,
         private readonly CompleteOrderHandler $completeOrderHandler,
         private readonly Request $request,
+        private readonly GrottoEntitlementService $entitlementService,
     ) {}
 
     /**
@@ -56,23 +60,22 @@ class BookSlotService
 
             $config = $this->getConfig($dto->event_id);
             $this->assertChildCount($dto, $config);
+            $childPriceIds = $this->resolveChildPriceIds($dto, $config);
             $this->releaseExistingBooking($dto);
 
             $sessionId = $this->pinCheckoutSession();
-
-            $priceId = $this->productPriceRepository->findFirstWhere([
-                ProductPriceDomainObjectAbstract::PRODUCT_ID => $config->getProductId(),
-            ])->getId();
 
             $order = $this->createOrderHandler->handle(
                 eventId: $dto->event_id,
                 createOrderPublicDTO: new CreateOrderPublicDTO(
                     products: collect([new ProductOrderDetailsDTO(
                         product_id: $config->getProductId(),
-                        quantities: collect([new OrderProductPriceDTO(
-                            quantity: count($dto->children),
-                            price_id: $priceId,
-                        )]),
+                        quantities: collect(array_count_values($childPriceIds))
+                            ->map(fn (int $quantity, int $priceId) => new OrderProductPriceDTO(
+                                quantity: $quantity,
+                                price_id: $priceId,
+                            ))
+                            ->values(),
                         event_occurrence_id: $dto->event_occurrence_id,
                     )]),
                     is_user_authenticated: $dto->is_staff,
@@ -84,7 +87,7 @@ class BookSlotService
 
             return $this->completeOrderHandler->handle(
                 $order->getShortId(),
-                $this->buildCompleteOrderDTO($dto, $priceId),
+                $this->buildCompleteOrderDTO($dto, $childPriceIds),
             );
         });
     }
@@ -152,7 +155,73 @@ class BookSlotService
         $this->orderCancelService->cancelOrder($existing);
     }
 
-    private function buildCompleteOrderDTO(BookSlotDTO $dto, int $priceId): CompleteOrderDTO
+    /**
+     * @return list<int> slot-product price id for each child, in child order
+     *
+     * @throws GrottoNotPurchasedException
+     * @throws ValidationException
+     */
+    private function resolveChildPriceIds(BookSlotDTO $dto, SlotBookingConfigDomainObject $config): array
+    {
+        $slotPrices = $this->productPriceRepository
+            ->findWhere([ProductPriceDomainObjectAbstract::PRODUCT_ID => $config->getProductId()])
+            ->sortBy(fn (ProductPriceDomainObject $price) => $price->getId())
+            ->values();
+
+        $basePriceId = $slotPrices->first()->getId();
+        $priceIdForLabel = fn (?string $label): int => $slotPrices
+            ->first(fn (ProductPriceDomainObject $price) => $price->getLabel() === $label)?->getId() ?? $basePriceId;
+
+        $children = array_values($dto->children);
+
+        if ($dto->is_staff || ! $this->entitlementService->isGated($config)) {
+            return array_map(fn (array $child) => $priceIdForLabel($child['price_label'] ?? null), $children);
+        }
+
+        $purchased = $this->purchasedPricesHighestFirst($config, $dto->email);
+
+        if ($purchased->isEmpty()) {
+            throw new GrottoNotPurchasedException(__('Buy a Grotto ticket to book a visit'));
+        }
+
+        if (count($children) > $purchased->count()) {
+            throw ValidationException::withMessages([
+                'children' => [__('You have :count Grotto ticket(s), so you can book up to :count child(ren)', ['count' => $purchased->count()])],
+            ]);
+        }
+
+        return $purchased->take(count($children))
+            ->map(fn (ProductPriceDomainObject $price) => $priceIdForLabel($price->getLabel()))
+            ->values()
+            ->all();
+    }
+
+    /**
+     * @return Collection<int, ProductPriceDomainObject>
+     */
+    private function purchasedPricesHighestFirst(SlotBookingConfigDomainObject $config, string $email): Collection
+    {
+        $purchasedIds = $this->entitlementService->purchasedPriceIds($config, $email);
+
+        if ($purchasedIds === []) {
+            return collect();
+        }
+
+        $pricesById = $this->productPriceRepository
+            ->findWhereIn(ProductPriceDomainObjectAbstract::ID, array_values(array_unique($purchasedIds)))
+            ->keyBy(fn (ProductPriceDomainObject $price) => $price->getId());
+
+        return collect($purchasedIds)
+            ->map(fn (int $priceId) => $pricesById->get($priceId))
+            ->filter()
+            ->sortByDesc(fn (ProductPriceDomainObject $price) => $price->getPrice())
+            ->values();
+    }
+
+    /**
+     * @param  list<int>  $childPriceIds
+     */
+    private function buildCompleteOrderDTO(BookSlotDTO $dto, array $childPriceIds): CompleteOrderDTO
     {
         $email = mb_strtolower(trim($dto->email));
 
@@ -163,8 +232,8 @@ class BookSlotService
                 email: $email,
                 questions: null,
             ),
-            products: collect($dto->children)->map(fn (array $child) => new CompleteOrderProductDataDTO(
-                product_price_id: $priceId,
+            products: collect(array_values($dto->children))->map(fn (array $child, int $index) => new CompleteOrderProductDataDTO(
+                product_price_id: $childPriceIds[$index],
                 first_name: $child['first_name'],
                 last_name: ($child['last_name'] ?? null) ?: $dto->last_name,
                 email: $email,
