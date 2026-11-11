@@ -202,7 +202,11 @@ const SlotPicker = ({event, organizerId, token, onSignedOut}: {
     const isGated = entitlement?.gated === true;
     const purchased = entitlement?.purchased ?? 0;
     const slotLimit = Math.max(1, selected?.available_capacity ?? selected?.capacity ?? 1);
-    const maxChildren = isGated ? Math.max(1, Math.min(slotLimit, purchased)) : slotLimit;
+    const slotIsEmpty = selected?.capacity != null && selected.available_capacity === selected.capacity;
+    const maxChildren = isGated
+        ? Math.max(1, slotIsEmpty ? purchased : Math.min(slotLimit, purchased))
+        : slotLimit;
+    const groupExceedsSlot = isGated && selected !== null && !slotIsEmpty && purchased > slotLimit;
 
     useEffect(() => {
         if ((entitlementError as any)?.response?.status === 401) {
@@ -324,6 +328,11 @@ const SlotPicker = ({event, organizerId, token, onSignedOut}: {
 
             {selected && (
                 <>
+                    {groupExceedsSlot && (
+                        <p className={classes.text} data-testid="santa-visit-group-hint">
+                            {t`This slot has room for ${slotLimit} of your ${purchased} children. Pick a slot nobody else has booked to bring everyone together.`}
+                        </p>
+                    )}
                     {children.slice(0, maxChildren).map((child, index) => (
                         <label key={index} className={classes.field}>
                             {t`Child's name`}

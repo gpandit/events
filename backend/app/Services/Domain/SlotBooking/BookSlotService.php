@@ -14,6 +14,7 @@ use HiEvents\Exceptions\GrottoNotPurchasedException;
 use HiEvents\Exceptions\SlotAlreadyBookedException;
 use HiEvents\Exceptions\SlotBookingMisconfiguredException;
 use HiEvents\Exceptions\SlotBookingNotEnabledException;
+use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductPriceRepositoryInterface;
 use HiEvents\Repository\Interfaces\SlotBookingConfigRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Order\CompleteOrderHandler;
@@ -25,6 +26,7 @@ use HiEvents\Services\Application\Handlers\Order\DTO\CreateOrderPublicDTO;
 use HiEvents\Services\Application\Handlers\Order\DTO\ProductOrderDetailsDTO;
 use HiEvents\Services\Domain\Order\OrderCancelService;
 use HiEvents\Services\Domain\Product\DTO\OrderProductPriceDTO;
+use HiEvents\Services\Domain\Product\SoldAndReservedQuantitiesService;
 use HiEvents\Services\Domain\SlotBooking\DTO\BookSlotDTO;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Http\Request;
@@ -46,6 +48,9 @@ class BookSlotService
         private readonly CompleteOrderHandler $completeOrderHandler,
         private readonly Request $request,
         private readonly GrottoEntitlementService $entitlementService,
+        private readonly EventOccurrenceRepositoryInterface $occurrenceRepository,
+        private readonly SlotWaitlistEntryCanceller $waitlistEntryCanceller,
+        private readonly SoldAndReservedQuantitiesService $soldAndReservedQuantities,
     ) {}
 
     /**
@@ -60,9 +65,11 @@ class BookSlotService
             $this->eventLock->lock($dto->event_id);
 
             $config = $this->getConfig($dto->event_id);
-            $this->assertChildCount($dto, $config);
+            $this->assertChildCount($dto);
             $childPriceIds = $this->resolveChildPriceIds($dto, $config);
             $this->releaseExistingBooking($dto);
+            $this->releaseWaitlistPlaces($dto);
+            $allowOvercapacity = $this->groupNeedsEmptySlot($dto);
 
             $sessionId = $this->pinCheckoutSession();
 
@@ -84,6 +91,7 @@ class BookSlotService
                     order_locale: $dto->locale,
                 ),
                 deleteExistingOrdersForSession: false,
+                allowOccurrenceOvercapacity: $allowOvercapacity,
             );
 
             return $this->completeOrderHandler->handle(
@@ -120,14 +128,49 @@ class BookSlotService
     /**
      * @throws ValidationException
      */
-    private function assertChildCount(BookSlotDTO $dto, SlotBookingConfigDomainObject $config): void
+    private function assertChildCount(BookSlotDTO $dto): void
     {
-        $count = count($dto->children);
-
-        if ($count < 1 || $count > $config->getChildrenPerSlot()) {
+        if (count($dto->children) < 1) {
             throw ValidationException::withMessages([
-                'children' => [__('You can book between 1 and :max children per slot', ['max' => $config->getChildrenPerSlot()])],
+                'children' => [__('Add at least one child')],
             ]);
+        }
+    }
+
+    /**
+     * @throws ValidationException
+     */
+    private function groupNeedsEmptySlot(BookSlotDTO $dto): bool
+    {
+        $occurrence = $this->occurrenceRepository->findFirstWhere([
+            'id' => $dto->event_occurrence_id,
+            'event_id' => $dto->event_id,
+        ]);
+
+        if ($occurrence === null || $occurrence->getCapacity() === null) {
+            return false;
+        }
+
+        $reserved = $this->soldAndReservedQuantities->getReservedTicketsForOccurrence($occurrence->getId());
+        $available = $occurrence->getCapacity() - $occurrence->getUsedCapacity() - $reserved;
+
+        if (count($dto->children) <= $available) {
+            return false;
+        }
+
+        if ($occurrence->getUsedCapacity() === 0 && $reserved === 0) {
+            return true;
+        }
+
+        throw ValidationException::withMessages([
+            'children' => [__('This slot can take :available more child(ren). Choose an empty slot to bring your whole group.', ['available' => max(0, $available)])],
+        ]);
+    }
+
+    private function releaseWaitlistPlaces(BookSlotDTO $dto): void
+    {
+        if (! $dto->is_staff) {
+            $this->waitlistEntryCanceller->cancelFor($dto->event_id, $dto->email);
         }
     }
 

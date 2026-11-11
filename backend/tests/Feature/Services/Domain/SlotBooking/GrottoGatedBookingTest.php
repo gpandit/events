@@ -7,12 +7,14 @@ namespace Tests\Feature\Services\Domain\SlotBooking;
 use HiEvents\DomainObjects\Status\EventStatus;
 use HiEvents\Exceptions\GrottoNotPurchasedException;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
+use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Services\Application\Handlers\EventOccurrence\DTO\GenerateSlotsDTO;
 use HiEvents\Services\Domain\Customer\CustomerService;
 use HiEvents\Services\Domain\EventOccurrence\SlotGeneratorService;
 use HiEvents\Services\Domain\ProductCategory\CreateProductCategoryService;
 use HiEvents\Services\Domain\SlotBooking\BookSlotService;
 use HiEvents\Services\Domain\SlotBooking\DTO\BookSlotDTO;
+use HiEvents\Services\Domain\SlotBooking\SlotBookingReleaseService;
 use HiEvents\Services\Domain\SlotBooking\SlotWaitlistService;
 use HiEvents\Services\Domain\TicketLookup\TicketLookupTokenService;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -251,5 +253,65 @@ class GrottoGatedBookingTest extends TestCase
                 'status' => 'ACTIVE', 'created_at' => now(), 'updated_at' => now(),
             ]);
         }
+    }
+
+    private function purchaseGrottoOrder(string $email, array $grottoPriceIds): int
+    {
+        $this->purchaseGrotto($email, $grottoPriceIds);
+
+        return (int) DB::table('orders')->where('event_id', $this->ticketEventId)->where('email', $email)->orderByDesc('id')->value('id');
+    }
+
+    private function cancelTicketOrderRows(int $orderId): void
+    {
+        DB::table('orders')->where('id', $orderId)->update(['status' => 'CANCELLED']);
+        DB::table('attendees')->where('order_id', $orderId)->update(['status' => 'CANCELLED']);
+    }
+
+    private function release(int $orderId): void
+    {
+        $order = $this->app->make(OrderRepositoryInterface::class)->findById($orderId);
+        $this->app->make(SlotBookingReleaseService::class)->releaseForCancelledOrder($order);
+    }
+
+    private function slotOrderStatus(string $email): ?string
+    {
+        return DB::table('orders')->where('event_id', $this->eventId)->where('email', $email)->orderByDesc('id')->value('status');
+    }
+
+    public function test_cancelling_the_grotto_order_releases_the_slot_booking(): void
+    {
+        $ticketOrderId = $this->purchaseGrottoOrder('buyer@example.test', [$this->photoPriceId, $this->magnetPriceId]);
+        $this->book([['first_name' => 'Emma'], ['first_name' => 'Noah']]);
+
+        $this->cancelTicketOrderRows($ticketOrderId);
+        $this->release($ticketOrderId);
+
+        $this->assertSame('CANCELLED', $this->slotOrderStatus('buyer@example.test'));
+    }
+
+    public function test_the_slot_booking_stays_when_the_remaining_grotto_tickets_still_cover_it(): void
+    {
+        $this->purchaseGrottoOrder('buyer@example.test', [$this->photoPriceId, $this->photoPriceId]);
+        $secondOrderId = $this->purchaseGrottoOrder('buyer@example.test', [$this->magnetPriceId]);
+        $this->book([['first_name' => 'Emma'], ['first_name' => 'Noah']]);
+
+        $this->cancelTicketOrderRows($secondOrderId);
+        $this->release($secondOrderId);
+
+        $this->assertSame('COMPLETED', $this->slotOrderStatus('buyer@example.test'));
+    }
+
+    public function test_cancelling_a_ticket_order_without_grotto_tickets_does_not_touch_the_slot_booking(): void
+    {
+        $this->purchaseGrotto('buyer@example.test', [$this->photoPriceId]);
+        $this->book([['first_name' => 'Emma']]);
+        $this->purchaseChildTickets('buyer@example.test', 1);
+        $childOrderId = (int) DB::table('orders')->where('event_id', $this->ticketEventId)->orderByDesc('id')->value('id');
+
+        $this->cancelTicketOrderRows($childOrderId);
+        $this->release($childOrderId);
+
+        $this->assertSame('COMPLETED', $this->slotOrderStatus('buyer@example.test'));
     }
 }

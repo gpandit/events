@@ -56,9 +56,10 @@ class CreateOrderHandler
     public function handle(
         int $eventId,
         CreateOrderPublicDTO $createOrderPublicDTO,
-        bool $deleteExistingOrdersForSession = true
+        bool $deleteExistingOrdersForSession = true,
+        bool $allowOccurrenceOvercapacity = false,
     ): OrderDomainObject {
-        return $this->databaseManager->transaction(function () use ($eventId, $createOrderPublicDTO, $deleteExistingOrdersForSession) {
+        return $this->databaseManager->transaction(function () use ($eventId, $createOrderPublicDTO, $deleteExistingOrdersForSession, $allowOccurrenceOvercapacity) {
             $this->seatingEventLock->lock($eventId);
 
             $event = $this->eventRepository
@@ -74,7 +75,7 @@ class CreateOrderHandler
             $promoCode = $this->getPromoCode($createOrderPublicDTO, $eventId);
             $affiliate = $this->getAffiliate($createOrderPublicDTO, $eventId);
 
-            $this->validateProductAvailability($eventId, $createOrderPublicDTO);
+            $this->validateProductAvailability($eventId, $createOrderPublicDTO, $allowOccurrenceOvercapacity);
 
             $order = $this->orderManagementService->createNewOrder(
                 eventId: $eventId,
@@ -145,7 +146,7 @@ class CreateOrderHandler
     /**
      * @throws ValidationException
      */
-    private function validateProductAvailability(int $eventId, CreateOrderPublicDTO $createOrderPublicDTO): void
+    private function validateProductAvailability(int $eventId, CreateOrderPublicDTO $createOrderPublicDTO, bool $allowOccurrenceOvercapacity = false): void
     {
         $productsByOccurrence = $createOrderPublicDTO->products->groupBy(
             fn (DTO\ProductOrderDetailsDTO $p) => $p->event_occurrence_id
@@ -156,7 +157,7 @@ class CreateOrderHandler
                 ->getAvailableProductQuantities(
                     $eventId,
                     ignoreCache: true,
-                    eventOccurrenceId: $occurrenceId ?: null,
+                    eventOccurrenceId: $allowOccurrenceOvercapacity ? null : ($occurrenceId ?: null),
                 );
 
             if ($occurrenceId) {
@@ -164,6 +165,7 @@ class CreateOrderHandler
                     eventId: $eventId,
                     occurrenceId: (int) $occurrenceId,
                     additionalQuantity: $this->sumTicketQuantities($products, $availability),
+                    overrideCapacity: $allowOccurrenceOvercapacity,
                     occurrence: $availability->occurrence,
                     reservedQuantity: $availability->occurrenceReservedQuantity,
                 );

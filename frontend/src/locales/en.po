@@ -831,7 +831,7 @@ msgstr "A few quick steps and you're ready to start selling."
 msgid "A fixed amount per product. E.g, $0.50 per product"
 msgstr "A fixed amount per product. E.g, $0.50 per product"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:264
+#: src/components/layouts/PublicSantaVisit/index.tsx:278
 msgid "A Grotto ticket is needed to book a visit with Santa."
 msgstr "A Grotto ticket is needed to book a visit with Santa."
 
@@ -1186,7 +1186,7 @@ msgstr "Add an area"
 msgid "Add an email to send the tickets"
 msgstr "Add an email to send the tickets"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:334
+#: src/components/layouts/PublicSantaVisit/index.tsx:353
 msgid "Add another child"
 msgstr "Add another child"
 
@@ -1270,7 +1270,7 @@ msgstr "Add discount"
 msgid "Add event details"
 msgstr "Add event details"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:137
+#: src/components/layouts/PublicSantaVisit/index.tsx:139
 msgid "Add Grotto tickets"
 msgstr "Add Grotto tickets"
 
@@ -1701,7 +1701,7 @@ msgstr "All Products"
 msgid "All rights reserved."
 msgstr "All rights reserved."
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:273
+#: src/components/layouts/PublicSantaVisit/index.tsx:287
 msgid "All Santa visit slots are currently full."
 msgstr "All Santa visit slots are currently full."
 
@@ -2849,7 +2849,7 @@ msgstr "Book a Family"
 msgid "Book family"
 msgstr "Book family"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:357
+#: src/components/layouts/PublicSantaVisit/index.tsx:376
 msgid "Book this slot"
 msgstr "Book this slot"
 
@@ -3621,7 +3621,7 @@ msgstr "Child name"
 msgid "Child ticket products"
 msgstr "Child ticket products"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:319
+#: src/components/layouts/PublicSantaVisit/index.tsx:338
 msgid "Child's name"
 msgstr "Child's name"
 
@@ -3720,7 +3720,7 @@ msgstr "Choose a seat on the map"
 msgid "Choose a seat on the map to add it to your order"
 msgstr "Choose a seat on the map to add it to your order"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:295
+#: src/components/layouts/PublicSantaVisit/index.tsx:309
 msgid "Choose a time for your visit."
 msgstr "Choose a time for your visit."
 
@@ -4409,7 +4409,7 @@ msgstr "Continue Button Text"
 msgid "Continue Setup"
 msgstr "Continue Setup"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:160
+#: src/components/layouts/PublicSantaVisit/index.tsx:162
 #: src/ee/seating/components/SeatPicker/index.tsx:74
 msgid "Continue to checkout"
 msgstr "Continue to checkout"
@@ -6130,7 +6130,7 @@ msgstr "Eligible Check-In Lists"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:214
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:76
 #: src/components/layouts/PublicOrganizerAbout/VolunteerForm/index.tsx:77
-#: src/components/layouts/PublicSantaVisit/index.tsx:68
+#: src/components/layouts/PublicSantaVisit/index.tsx:70
 #: src/components/modals/EditUserModal/index.tsx:81
 #: src/components/modals/InviteUserModal/index.tsx:61
 #: src/components/modals/JoinWaitlistModal/index.tsx:189
@@ -7899,7 +7899,7 @@ msgstr "Gross Sales"
 msgid "Grotto add-on product"
 msgstr "Grotto add-on product"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:130
+#: src/components/layouts/PublicSantaVisit/index.tsx:132
 msgid "Grotto tickets are for children. Buy a child ticket first, then come back to add a Grotto visit."
 msgstr "Grotto tickets are for children. Buy a child ticket first, then come back to add a Grotto visit."
 
@@ -7907,7 +7907,7 @@ msgstr "Grotto tickets are for children. Buy a child ticket first, then come bac
 msgid "Grotto tickets are limited to the number of child tickets held."
 msgstr "Grotto tickets are limited to the number of child tickets held."
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:141
+#: src/components/layouts/PublicSantaVisit/index.tsx:143
 msgid "Grotto visit"
 msgstr "Grotto visit"
 
@@ -8353,7 +8353,7 @@ msgstr "I'm interested in"
 msgid "If a new tab did not open automatically, please click the button below to continue to checkout."
 msgstr "If a new tab did not open automatically, please click the button below to continue to checkout."
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:252
+#: src/components/layouts/PublicSantaVisit/index.tsx:266
 msgid "If a slot opens up, we'll email you an offer."
 msgstr "If a slot opens up, we'll email you an offer."
 
@@ -8778,7 +8778,7 @@ msgstr "Johnson"
 msgid "Join from anywhere"
 msgstr "Join from anywhere"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:282
+#: src/components/layouts/PublicSantaVisit/index.tsx:296
 msgid "Join the waitlist"
 msgstr "Join the waitlist"
 
@@ -9231,8 +9231,8 @@ msgstr "Loading Webhooks"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizLeaderboardPanel.tsx:62
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizProfile.tsx:40
 #: src/components/layouts/PublicParentalConsent/index.tsx:142
-#: src/components/layouts/PublicSantaVisit/index.tsx:258
-#: src/components/layouts/PublicSantaVisit/index.tsx:397
+#: src/components/layouts/PublicSantaVisit/index.tsx:272
+#: src/components/layouts/PublicSantaVisit/index.tsx:416
 #: src/components/routes/event/Settings/Sections/DangerZoneSettings/index.tsx:89
 #: src/components/routes/organizer/Settings/Sections/DangerZoneSettings/index.tsx:94
 msgid "Loading..."
@@ -11595,7 +11595,7 @@ msgstr "Pass to Buyer"
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:276
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:345
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:346
-#: src/components/layouts/PublicSantaVisit/index.tsx:78
+#: src/components/layouts/PublicSantaVisit/index.tsx:80
 #: src/components/routes/auth/AcceptInvitation/index.tsx:127
 #: src/components/routes/auth/Login/index.tsx:95
 #: src/components/routes/auth/Register/index.tsx:110
@@ -12222,7 +12222,7 @@ msgstr "Please select an image."
 msgid "Please select at least one product"
 msgstr "Please select at least one product"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:66
+#: src/components/layouts/PublicSantaVisit/index.tsx:68
 msgid "Please sign in to book a visit with Santa."
 msgstr "Please sign in to book a visit with Santa."
 
@@ -13249,7 +13249,7 @@ msgstr "Reopen this date for new sales? Previously cancelled tickets will not be
 msgid "Repeats"
 msgstr "Repeats"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:347
+#: src/components/layouts/PublicSantaVisit/index.tsx:366
 msgid "Replace my existing booking"
 msgstr "Replace my existing booking"
 
@@ -15004,7 +15004,7 @@ msgstr "Shows remaining"
 #: src/components/layouts/OrganizerHomepage/CustomerAccount/index.tsx:257
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:191
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizAuthForm.tsx:359
-#: src/components/layouts/PublicSantaVisit/index.tsx:94
+#: src/components/layouts/PublicSantaVisit/index.tsx:96
 msgid "Sign in"
 msgstr "Sign in"
 
@@ -15243,7 +15243,7 @@ msgstr "Something went wrong. Please try again later."
 #: src/components/layouts/OrganizerHomepage/ResourcesForChildren/PuzzlesTab/QuizResetPasswordForm.tsx:34
 #: src/components/layouts/OrganizerLayout/index.tsx:140
 #: src/components/layouts/PublicParentalConsent/index.tsx:36
-#: src/components/layouts/PublicSantaVisit/index.tsx:48
+#: src/components/layouts/PublicSantaVisit/index.tsx:50
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
 #: src/components/routes/auth/Login/index.tsx:69
@@ -16662,7 +16662,7 @@ msgstr "This disconnects {stripeAccountId} from this organizer. Paid ticket sale
 msgid "This email is already registered. You can <0>request your username</0> and we will email it to you."
 msgstr "This email is already registered. You can <0>request your username</0> and we will email it to you."
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:398
+#: src/components/layouts/PublicSantaVisit/index.tsx:417
 msgid "This event could not be found."
 msgstr "This event could not be found."
 
@@ -16919,6 +16919,10 @@ msgstr "This site is provided on an \"as is\" basis. To the fullest extent permi
 #: src/components/forms/ProductForm/ProductSizesForm.tsx:46
 msgid "This size has already been sold, so it can't be deleted. Hide it instead."
 msgstr "This size has already been sold, so it can't be deleted. Hide it instead."
+
+#: src/components/layouts/PublicSantaVisit/index.tsx:333
+msgid "This slot has room for {slotLimit} of your {purchased} children. Pick a slot nobody else has booked to bring everyone together."
+msgstr "This slot has room for {slotLimit} of your {purchased} children. Pick a slot nobody else has booked to bring everyone together."
 
 #: src/ee/seating/components/SeatPicker/SeatSheet.tsx:43
 msgid "This space is reserved for wheelchair users and guests with access needs."
@@ -19108,7 +19112,7 @@ msgstr "You are offline"
 msgid "You can add up to {maxQuantity}"
 msgstr "You can add up to {maxQuantity}"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:138
+#: src/components/layouts/PublicSantaVisit/index.tsx:140
 msgid "You can add up to {remaining} Grotto ticket(s), one per child ticket."
 msgstr "You can add up to {remaining} Grotto ticket(s), one per child ticket."
 
@@ -19181,7 +19185,7 @@ msgstr "You cannot refund a manually created order."
 msgid "You earned {0} points!"
 msgstr "You earned {0} points!"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:292
+#: src/components/layouts/PublicSantaVisit/index.tsx:306
 msgid "You have {purchased} Grotto ticket(s)."
 msgstr "You have {purchased} Grotto ticket(s)."
 
@@ -19302,7 +19306,7 @@ msgstr "You'll need at a product before you can create a capacity assignment."
 msgid "You'll need at least one product to get started. Free, paid or let the user decide what to pay."
 msgstr "You'll need at least one product to get started. Free, paid or let the user decide what to pay."
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:242
+#: src/components/layouts/PublicSantaVisit/index.tsx:256
 msgid "You're booked!"
 msgstr "You're booked!"
 
@@ -19318,7 +19322,7 @@ msgstr "You're going to {0}!"
 msgid "You're joining the waitlist for {occurrenceDate}."
 msgstr "You're joining the waitlist for {occurrenceDate}."
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:251
+#: src/components/layouts/PublicSantaVisit/index.tsx:265
 msgid "You're on the waitlist"
 msgstr "You're on the waitlist"
 
@@ -19535,7 +19539,7 @@ msgstr "Your personal data has been deleted."
 msgid "Your Plan"
 msgstr "Your Plan"
 
-#: src/components/layouts/PublicSantaVisit/index.tsx:243
+#: src/components/layouts/PublicSantaVisit/index.tsx:257
 msgid "Your QR ticket has been emailed to you. Show it at the Grotto."
 msgstr "Your QR ticket has been emailed to you. Show it at the Grotto."
 

@@ -12,6 +12,7 @@ use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\DomainObjects\Status\AttendeeStatus;
 use HiEvents\DomainObjects\Status\OrderStatus;
 use HiEvents\Events\CapacityChangedEvent;
+use HiEvents\Events\OrderCancelledEvent;
 use HiEvents\Mail\Order\OrderCancelled;
 use HiEvents\Repository\Eloquent\Value\Relationship;
 use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
@@ -65,10 +66,12 @@ class OrderCancelService
 
             $this->dispatchCapacityChangedEvents($order);
 
-            $this->databaseManager->connection()->afterCommit(static function () use ($capacityEvents) {
+            $this->databaseManager->connection()->afterCommit(static function () use ($capacityEvents, $order) {
                 foreach ($capacityEvents as $capacityEvent) {
                     event($capacityEvent);
                 }
+
+                event(new OrderCancelledEvent(eventId: $order->getEventId(), orderId: $order->getId()));
             });
         });
     }
