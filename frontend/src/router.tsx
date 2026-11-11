@@ -68,6 +68,15 @@ const organizerPageRoutes = (prefix: string, accountSegment: string): RouteObjec
         errorElement: <ErrorPage />,
     },
     {
+        path: `${prefix}/santa-visit/:eventId`,
+        loader: publicOrganizerRouteLoader,
+        async lazy() {
+            const PublicSantaVisit = await import("./components/layouts/PublicSantaVisit");
+            return { Component: PublicSantaVisit.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
         path: `${prefix}/resources/:tab?`,
         loader: publicOrganizerRouteLoader,
         async lazy() {

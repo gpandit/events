@@ -4,6 +4,8 @@ import {Anchor, Button, Checkbox, Group, HoverCard, Menu, Paper, Progress, Segme
 import {
     IconCalendar,
     IconCalendarEvent,
+    IconClockPlay,
+    IconUsersGroup,
     IconCalendarPlus,
     IconDotsVertical,
     IconList,
@@ -30,6 +32,8 @@ import {formatCurrency} from "../../../../utilites/currency.ts";
 import {OccurrenceEditModal, OccurrenceEditTab} from "./OccurrenceEditModal";
 import {OccurrenceBulkEditModal} from "./OccurrenceBulkEditModal";
 import {RecurrenceScheduleDrawer} from "./RecurrenceScheduleDrawer";
+import {GenerateSlotsModal} from "./GenerateSlotsModal";
+import {BookFamilyModal} from "./BookFamilyModal";
 import {CalendarView} from "./CalendarView";
 import {useCancelOccurrence} from "../../../../mutations/useCancelOccurrence.ts";
 import {useDeleteEventOccurrence} from "../../../../mutations/useDeleteEventOccurrence.ts";
@@ -124,6 +128,8 @@ const OccurrencesTab = () => {
     const [editModalOpen, {open: openEditModal, close: closeEditModal}] = useDisclosure(false);
     const [bulkEditOpen, {open: openBulkEdit, close: closeBulkEdit}] = useDisclosure(false);
     const [generateOpen, {open: openGenerate, close: closeGenerate}] = useDisclosure(false);
+    const [generateSlotsOpen, {open: openGenerateSlots, close: closeGenerateSlots}] = useDisclosure(false);
+    const [bookFamilyOpen, {open: openBookFamily, close: closeBookFamily}] = useDisclosure(false);
     const [selectedOccurrenceId, setSelectedOccurrenceId] = useState<number | undefined>();
     const [slideoutOccurrenceId, setSlideoutOccurrenceId] = useState<number | undefined>();
     const [duplicateFrom, setDuplicateFrom] = useState<EventOccurrence | undefined>();
@@ -584,6 +590,20 @@ const OccurrencesTab = () => {
                         >
                             {t`Add a Single Date`}
                         </Menu.Item>
+                        <Menu.Item
+                            leftSection={<IconClockPlay size={16}/>}
+                            onClick={openGenerateSlots}
+                            data-testid="occurrence-generate-slots-menu-item"
+                        >
+                            {t`Generate Time Slots`}
+                        </Menu.Item>
+                        <Menu.Item
+                            leftSection={<IconUsersGroup size={16}/>}
+                            onClick={openBookFamily}
+                            data-testid="occurrence-book-family-menu-item"
+                        >
+                            {t`Book a Family`}
+                        </Menu.Item>
                     </Menu.Dropdown>
                 </Menu>
             </div>
@@ -709,6 +729,14 @@ const OccurrencesTab = () => {
 
             {generateOpen && (
                 <RecurrenceScheduleDrawer onClose={closeGenerate} onGenerationStarted={generationPolling.start}/>
+            )}
+
+            {generateSlotsOpen && (
+                <GenerateSlotsModal onClose={closeGenerateSlots}/>
+            )}
+
+            {bookFamilyOpen && (
+                <BookFamilyModal onClose={closeBookFamily} occurrences={occurrences ?? []}/>
             )}
 
             {slideoutOccurrenceId && (

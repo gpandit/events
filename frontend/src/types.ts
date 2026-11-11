@@ -1902,3 +1902,44 @@ export interface WaitlistStats {
     expired: number;
     products: WaitlistProductStats[];
 }
+
+export interface SlotChild {
+    first_name: string;
+    last_name?: string;
+    price_label?: string;
+}
+
+export interface GenerateSlotsRequest {
+    date: string;
+    start_time: string;
+    end_time: string;
+    slot_minutes: number;
+    children_per_slot: number;
+    ticket_event_id?: number | null;
+    grotto_product_id?: number | null;
+    child_product_ids?: number[];
+}
+
+export interface SlotEntitlement {
+    gated: boolean;
+    children_per_slot: number;
+    purchased?: number;
+    remaining_purchasable?: number;
+    ticket_event_id?: number;
+    grotto_product_id?: number;
+    grotto_prices?: { id: number; label: string | null; price: number }[];
+}
+
+export interface StaffBookFamilyRequest {
+    event_occurrence_id: IdParam;
+    parent_first_name: string;
+    parent_last_name: string;
+    email?: string;
+    children: SlotChild[];
+}
+
+export interface BookSlotRequest {
+    event_occurrence_id: IdParam;
+    children: SlotChild[];
+    replace?: boolean;
+}

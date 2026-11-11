@@ -20,6 +20,7 @@ use HiEvents\Repository\Eloquent\Value\OrderAndDirection;
 use HiEvents\Repository\Interfaces\EventOccurrenceRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductPriceRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductRepositoryInterface;
+use HiEvents\Repository\Interfaces\SlotBookingConfigRepositoryInterface;
 use HiEvents\Repository\Interfaces\WaitlistEntryRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Order\DTO\ProductOrderDetailsDTO;
 use HiEvents\Services\Domain\EventOccurrence\OccurrencePurchaseEligibilityService;
@@ -50,6 +51,7 @@ class ProcessWaitlistService
         private readonly OccurrencePurchaseEligibilityService $eligibilityService,
         private readonly SeatedProductLookupService $seatedProductLookup,
         private readonly TransactionLockService $transactionLockService,
+        private readonly SlotBookingConfigRepositoryInterface $slotBookingConfigRepository,
     ) {}
 
     /**
@@ -70,10 +72,12 @@ class ProcessWaitlistService
 
         return $this->databaseManager->transaction(function () use ($productPriceId, $quantity, $event, $eventSettings, $eventOccurrenceId) {
             $this->transactionLockService->lockEvent($event->getId());
-            $this->waitlistEntryRepository->lockForProductPrice($productPriceId, $eventOccurrenceId);
+            $includeUnassigned = $eventOccurrenceId !== null && $this->isSlotBookedEvent($event);
+
+            $this->waitlistEntryRepository->lockForProductPrice($productPriceId, $includeUnassigned ? null : $eventOccurrenceId);
 
             $entries = $eventOccurrenceId !== null
-                ? $this->waitlistEntryRepository->getNextWaitingEntries($productPriceId, eventOccurrenceId: $eventOccurrenceId)
+                ? $this->waitlistEntryRepository->getNextWaitingEntries($productPriceId, eventOccurrenceId: $eventOccurrenceId, includeUnassigned: $includeUnassigned)
                 : $this->waitlistEntryRepository->getNextWaitingEntries($productPriceId);
 
             if ($entries->isEmpty()) {
@@ -93,7 +97,9 @@ class ProcessWaitlistService
 
             foreach ($entries as $entry) {
                 try {
-                    $occurrenceId = $this->resolveEventOccurrenceId($event, $entry);
+                    $occurrenceId = $includeUnassigned && $entry->getEventOccurrenceId() === null
+                        ? $eventOccurrenceId
+                        : $this->resolveEventOccurrenceId($event, $entry);
                 } catch (ResourceConflictException|ResourceNotFoundException) {
                     continue;
                 }
@@ -117,7 +123,7 @@ class ProcessWaitlistService
                     continue;
                 }
 
-                $updatedEntry = $this->offerEntry($entry, $event, $eventSettings);
+                $updatedEntry = $this->offerEntry($includeUnassigned ? $this->assignOccurrence($entry, $occurrenceId) : $entry, $event, $eventSettings);
                 $offeredEntries->push($updatedEntry);
 
                 if ($remainingByOccurrenceAndPrice[$occurrenceId][$priceId] !== Constants::INFINITE) {
@@ -233,6 +239,26 @@ class ProcessWaitlistService
         }
 
         return true;
+    }
+
+    private function isSlotBookedEvent(EventDomainObject $event): bool
+    {
+        return $event->isRecurring()
+            && $this->slotBookingConfigRepository->findFirstWhere(['event_id' => $event->getId()]) !== null;
+    }
+
+    private function assignOccurrence(WaitlistEntryDomainObject $entry, int $occurrenceId): WaitlistEntryDomainObject
+    {
+        if ($entry->getEventOccurrenceId() !== null) {
+            return $entry;
+        }
+
+        $this->waitlistEntryRepository->updateWhere(
+            attributes: ['event_occurrence_id' => $occurrenceId],
+            where: ['id' => $entry->getId()],
+        );
+
+        return $this->waitlistEntryRepository->findById($entry->getId());
     }
 
     private function offerEntry(

@@ -24,6 +24,7 @@ use HiEvents\Services\Domain\Product\DTO\AvailableProductQuantitiesDTO;
 use HiEvents\Services\Domain\Product\DTO\AvailableProductQuantitiesResponseDTO;
 use HiEvents\Services\Domain\Product\ProductPriceService;
 use HiEvents\Services\Domain\Product\SoldAndReservedQuantitiesService;
+use HiEvents\Services\Domain\SlotBooking\GrottoPurchaseRule;
 use Illuminate\Support\Collection;
 use Illuminate\Validation\ValidationException;
 use Mockery;
@@ -109,6 +110,7 @@ class OrderCreateRequestValidationServiceTest extends TestCase
             $eligibilityService,
             $this->productPriceService,
             Mockery::mock(SeatSelectionValidationService::class)->shouldIgnoreMissing(),
+            Mockery::mock(GrottoPurchaseRule::class)->shouldReceive('grottoProductIds')->andReturn([])->byDefault()->getMock()->shouldIgnoreMissing(),
         );
     }
 
