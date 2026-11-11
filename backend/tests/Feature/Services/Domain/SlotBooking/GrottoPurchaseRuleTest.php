@@ -26,6 +26,8 @@ class GrottoPurchaseRuleTest extends TestCase
 
     private int $grottoPriceId;
 
+    private int $slotEventId;
+
     private GrottoPurchaseRule $rule;
 
     protected function setUp(): void
@@ -34,7 +36,7 @@ class GrottoPurchaseRuleTest extends TestCase
 
         $this->insertAccountAndOrganizer();
         $this->ticketEventId = $this->insertEvent();
-        $slotEventId = $this->insertEvent();
+        $this->slotEventId = $this->insertEvent();
 
         $category = DB::table('product_categories')->insertGetId([
             'event_id' => $this->ticketEventId, 'name' => 'Tickets', 'is_hidden' => false, 'order' => 1,
@@ -51,7 +53,7 @@ class GrottoPurchaseRuleTest extends TestCase
         ]);
 
         DB::table('slot_booking_configs')->insert([
-            'event_id' => $slotEventId, 'product_id' => $this->grottoProductId, 'slot_minutes' => 5, 'children_per_slot' => 1,
+            'event_id' => $this->slotEventId, 'product_id' => $this->grottoProductId, 'slot_minutes' => 5, 'children_per_slot' => 1,
             'ticket_event_id' => $this->ticketEventId, 'grotto_product_id' => $this->grottoProductId,
             'child_product_ids' => json_encode([$this->childProductId]), 'created_at' => now(), 'updated_at' => now(),
         ]);
@@ -145,6 +147,20 @@ class GrottoPurchaseRuleTest extends TestCase
     public function test_orders_without_grotto_are_untouched(): void
     {
         $this->rule->assertWithinEntitlement($this->ticketEventId, $this->order(children: 3, grotto: 0), null);
+
+        $this->addToAssertionCount(1);
+    }
+
+    public function test_the_slot_product_cannot_be_bought_through_the_normal_checkout(): void
+    {
+        $this->expectException(ValidationException::class);
+
+        $this->rule->assertNotDirectSlotPurchase($this->slotEventId, $this->order(children: 0, grotto: 1));
+    }
+
+    public function test_other_events_are_not_affected_by_the_direct_purchase_block(): void
+    {
+        $this->rule->assertNotDirectSlotPurchase($this->ticketEventId, $this->order(children: 1, grotto: 1));
 
         $this->addToAssertionCount(1);
     }

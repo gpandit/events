@@ -7,6 +7,7 @@ namespace Tests\Feature\Services\Domain\SlotBooking;
 use HiEvents\DomainObjects\OrderDomainObject;
 use HiEvents\DomainObjects\Status\EventStatus;
 use HiEvents\Exceptions\SlotAlreadyBookedException;
+use HiEvents\Exceptions\SlotBookingMisconfiguredException;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Services\Application\Handlers\EventOccurrence\DTO\GenerateSlotsDTO;
 use HiEvents\Services\Domain\EventOccurrence\SlotGeneratorService;
@@ -127,5 +128,19 @@ class BookSlotServiceTest extends TestCase
         $this->expectException(ValidationException::class);
 
         $this->book($this->dto($this->slotIds[0], ['children' => [['first_name' => 'A'], ['first_name' => 'B'], ['first_name' => 'C']]]));
+    }
+
+    public function test_refuses_to_book_when_the_slot_ticket_has_been_made_paid(): void
+    {
+        $productId = (int) DB::table('slot_booking_configs')->where('event_id', $this->eventId)->value('product_id');
+        DB::table('product_prices')->where('product_id', $productId)->update(['price' => 25]);
+
+        try {
+            $this->book($this->dto($this->slotIds[0]));
+            $this->fail('Expected the paid slot ticket to be rejected');
+        } catch (SlotBookingMisconfiguredException) {
+        }
+
+        $this->assertSame(0, DB::table('orders')->where('event_id', $this->eventId)->where('status', 'COMPLETED')->count());
     }
 }

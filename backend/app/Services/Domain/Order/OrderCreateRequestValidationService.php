@@ -62,6 +62,7 @@ class OrderCreateRequestValidationService
         $promoCode = $this->validatePromoCode($eventId, $data);
         $this->validateProductSelection($data);
         $this->validateAddonProducts($data, $this->grottoPurchaseRule->grottoProductIds($eventId));
+        $this->grottoPurchaseRule->assertNotDirectSlotPurchase($eventId, $data);
         $this->grottoPurchaseRule->assertWithinEntitlement($eventId, $data, $customerEmail);
         $this->validateOccurrence($eventId, $data);
 

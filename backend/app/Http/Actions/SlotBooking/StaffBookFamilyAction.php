@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace HiEvents\Http\Actions\SlotBooking;
 
 use HiEvents\DomainObjects\EventDomainObject;
+use HiEvents\Exceptions\SlotBookingMisconfiguredException;
 use HiEvents\Exceptions\SlotBookingNotEnabledException;
 use HiEvents\Http\Actions\BaseAction;
 use HiEvents\Http\Request\SlotBooking\StaffBookFamilyRequest;
@@ -43,6 +44,8 @@ class StaffBookFamilyAction extends BaseAction
                 children: $request->validated('children'),
                 is_staff: true,
             ));
+        } catch (SlotBookingMisconfiguredException $exception) {
+            return $this->errorResponse($exception->getMessage(), ResponseCodes::HTTP_UNPROCESSABLE_ENTITY);
         } catch (SlotBookingNotEnabledException $exception) {
             return $this->errorResponse($exception->getMessage(), ResponseCodes::HTTP_NOT_FOUND);
         }

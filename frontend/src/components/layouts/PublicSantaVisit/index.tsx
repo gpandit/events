@@ -20,6 +20,8 @@ import classes from "./PublicSantaVisit.module.scss";
 
 dayjs.extend(utc);
 
+const MAX_RANGE_DAYS = 44;
+
 const tokenStorageKey = (organizerId: string) => `slot_customer_token_${organizerId}`;
 
 const readStoredToken = (organizerId: string): string | null => {
@@ -163,7 +165,12 @@ const BuyGrotto = ({entitlement, event, token}: { entitlement: SlotEntitlement; 
     );
 };
 
-const SlotPicker = ({event, token, onSignedOut}: { event: Event; token: string; onSignedOut: () => void }) => {
+const SlotPicker = ({event, organizerId, token, onSignedOut}: {
+    event: Event;
+    organizerId: string;
+    token: string;
+    onSignedOut: () => void;
+}) => {
     const eventId = event.id as number;
     const timezone = event.timezone ?? 'UTC';
     const {data: entitlement, isLoading: entitlementLoading, error: entitlementError} = useGetSlotEntitlement(eventId, token);
@@ -176,11 +183,14 @@ const SlotPicker = ({event, token, onSignedOut}: { event: Event; token: string; 
     const [result, setResult] = useState<'booked' | 'waitlisted' | null>(null);
 
     const {data: occurrences, isLoading} = useQuery<EventOccurrence[]>({
-        queryKey: ['santaVisitSlots', eventId, result],
+        queryKey: ['santaVisitSlots', eventId, event.start_date, result],
         queryFn: async () => {
-            const from = dayjs.utc().format('YYYY-MM-DD HH:mm:ss');
-            const to = dayjs.utc().add(2, 'year').format('YYYY-MM-DD HH:mm:ss');
-            const {data} = await eventOccurrenceClientPublic.all(eventId, from, to);
+            const rangeStart = dayjs.utc(event.start_date).subtract(1, 'day');
+            const {data} = await eventOccurrenceClientPublic.all(
+                eventId,
+                rangeStart.format('YYYY-MM-DD HH:mm:ss'),
+                rangeStart.add(MAX_RANGE_DAYS, 'day').format('YYYY-MM-DD HH:mm:ss'),
+            );
             return data;
         },
         refetchOnWindowFocus: false,
@@ -196,14 +206,14 @@ const SlotPicker = ({event, token, onSignedOut}: { event: Event; token: string; 
 
     useEffect(() => {
         if ((entitlementError as any)?.response?.status === 401) {
-            storeToken(String(event.organizer_id), null);
+            storeToken(organizerId, null);
             onSignedOut();
         }
     }, [entitlementError]);
 
     const handleError = (err: any) => {
         if (err?.response?.status === 401) {
-            storeToken(String(event.organizer_id), null);
+            storeToken(organizerId, null);
             onSignedOut();
             return;
         }
@@ -400,7 +410,7 @@ export const PublicSantaVisit = () => {
                     <>
                         <h1 className={classes.title}>{event.title}</h1>
                         {token
-                            ? <SlotPicker event={event} token={token} onSignedOut={() => setToken(null)}/>
+                            ? <SlotPicker event={event} organizerId={organizerId} token={token} onSignedOut={() => setToken(null)}/>
                             : <SignIn organizerId={organizerId} onSignedIn={signedIn}/>}
                     </>
                 )}

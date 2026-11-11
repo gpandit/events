@@ -27,6 +27,28 @@ class GrottoPurchaseRule
     /**
      * @throws ValidationException
      */
+    public function assertNotDirectSlotPurchase(int $eventId, array $data): void
+    {
+        $config = $this->configRepository->findFirstWhere(['event_id' => $eventId]);
+
+        if ($config === null) {
+            return;
+        }
+
+        $lines = collect($data['products']);
+        $lineIndex = $lines->search(fn ($line) => (int) $line['product_id'] === $config->getProductId()
+            && collect($line['quantities'])->sum('quantity') > 0);
+
+        if ($lineIndex !== false) {
+            throw ValidationException::withMessages([
+                'products.'.$lineIndex => __('Santa visits are booked from the visit booking page, not from the ticket page'),
+            ]);
+        }
+    }
+
+    /**
+     * @throws ValidationException
+     */
     public function assertWithinEntitlement(int $eventId, array $data, ?string $customerEmail): void
     {
         $configs = $this->configsByGrottoProductId($eventId);

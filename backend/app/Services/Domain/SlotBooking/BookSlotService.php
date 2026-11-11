@@ -12,6 +12,7 @@ use HiEvents\DomainObjects\SlotBookingConfigDomainObject;
 use HiEvents\Enterprise\Seating\Services\Domain\SeatingEventLockService;
 use HiEvents\Exceptions\GrottoNotPurchasedException;
 use HiEvents\Exceptions\SlotAlreadyBookedException;
+use HiEvents\Exceptions\SlotBookingMisconfiguredException;
 use HiEvents\Exceptions\SlotBookingNotEnabledException;
 use HiEvents\Repository\Interfaces\ProductPriceRepositoryInterface;
 use HiEvents\Repository\Interfaces\SlotBookingConfigRepositoryInterface;
@@ -159,6 +160,7 @@ class BookSlotService
      * @return list<int> slot-product price id for each child, in child order
      *
      * @throws GrottoNotPurchasedException
+     * @throws SlotBookingMisconfiguredException
      * @throws ValidationException
      */
     private function resolveChildPriceIds(BookSlotDTO $dto, SlotBookingConfigDomainObject $config): array
@@ -167,6 +169,12 @@ class BookSlotService
             ->findWhere([ProductPriceDomainObjectAbstract::PRODUCT_ID => $config->getProductId()])
             ->sortBy(fn (ProductPriceDomainObject $price) => $price->getId())
             ->values();
+
+        if ($slotPrices->contains(fn (ProductPriceDomainObject $price) => (float) $price->getPrice() > 0)) {
+            throw new SlotBookingMisconfiguredException(
+                __('The Santa Visit ticket on this event must be free. Ask the organiser to set its prices to 0.')
+            );
+        }
 
         $basePriceId = $slotPrices->first()->getId();
         $priceIdForLabel = fn (?string $label): int => $slotPrices
